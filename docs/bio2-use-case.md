@@ -88,3 +88,15 @@ Het CIP (Centrum voor Informatiebeveiliging en Privacybescherming) beheert de BI
 | CI gates | 14 (9 PASS, 5 SKIP) |
 | API endpoints | 7 |
 | ISO bronverwijzingen | 162 (alle regels) |
+
+## Functiehuis Rijksoverheid Rollen
+
+| Rol | Probleem | Oplossing |
+|---|---|---|
+| CISO | 167 maatregelen handmatig bijhouden | Rule API checkt per maatregel: compliant ja/nee |
+| Bestuurder | Onduidelijk welke maatregelen open staan | Compliance rapport per categorie met score |
+| CIP | Geen gestandaardiseerd controle-instrument | JuraRegel als open-source compliance tool |
+| ENSIA-verantwoordelijke | Handmatige rapportage is inconsistent | GET /v1/bio2/rapport/{orgId} |
+| Auditor | Geen audit trail van compliance | Elke check heeft calculationId + hashes |
+| Security Expert | ISO 27002 koppeling ontbreekt | Elke maatregel heeft ISO 27002 sourceRef |
+

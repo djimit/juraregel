@@ -18,3 +18,14 @@
 Bron: [ncsc.nl/documenten](https://www.ncsc.nl/documenten/publicaties/2025/juni/01/ict-beveiligingsrichtlijnen-voor-transport-layer-security-2025-05) | [ncsc.nl/onderwerpen](https://www.ncsc.nl/onderwerpen/ict-beveiligingsrichtlijnen-voor-webapplicaties) | [ncsc.nl/basisprincipes](https://www.ncsc.nl/basisprincipes)
 
 Rule API op `localhost:8500`. 17 tests. 14 CI gates.
+
+## Functiehuis Rijksoverheid Rollen
+
+| Rol | Probleem | Oplossing |
+|---|---|---|
+| Security engineer | 32 NCSC richtlijnen handmatig checken | Rule API checkt per richtlijn |
+| CISO | Onbekend wat open staat | Compliance rapport per categorie (TLS, webapp, basisprincipes) |
+| Web developer | Webapp richtlijnen onduidelijk | Check input validatie, XSS, CSRF, CSP, rate limiting |
+| SRE-er | TLS richtlijnen niet systematisch | Check TLS 1.2+, cipher suites, HSTS, cert pinning |
+| DevSecOps | Basisprincipes niet in CI/CD | Check B1-B10 + Cybersecuritybeeld 2025 in pipeline |
+

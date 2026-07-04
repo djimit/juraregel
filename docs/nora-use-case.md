@@ -44,3 +44,13 @@ NORA is niet use case #8 — NORA is de **overkoepelende architectuurlaag** die 
 | POST /v1/nora/calculate | Check NORA principe compliance |
 | GET /v1/nora/principes | Lijst alle 15 principes (filter op categorie) |
 | GET /v1/nora/matrix | NORA compliance matrix met use case mapping |
+
+## Functiehuis Rijksoverheid Rollen
+
+| Rol | Probleem | Oplossing |
+|---|---|---|
+| Enterprise architect | NORA compliance handmatig per principe | Rule API checkt 15 NORA principes |
+| CIO | Onduidelijk welke principes open staan | NORA compliance matrix met use case mapping |
+| TOGAF architect | Principes niet gekoppeld aan implementatie | Matrix mapped principes naar JuraRegel use cases |
+| Bestuurder | NORA compliance niet aantoonbaar | Audit trail per principe met bronverwijzing |
+

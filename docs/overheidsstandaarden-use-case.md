@@ -30,3 +30,13 @@
 | POST /v1/overheidsstandaarden/calculate | Check standaard compliance |
 | GET /v1/os/standaarden | Lijst alle standaarden (filter op categorie/bron) |
 | GET /v1/os/rapport/{orgId} | Compliance rapport per organisatie |
+
+## Functiehuis Rijksoverheid Rollen
+
+| Rol | Probleem | Oplossing |
+|---|---|---|
+| API architect | API Design Rules handmatig per endpoint | Rule API checkt 14 API regels |
+| Security engineer | OAuth/OIDC profiel incompleet | Check NL GOV Assurance Profile OAuth 2.0 |
+| Event architect | CloudEvents niet conforme | Check NL GOV Profile for CloudEvents |
+| Integratie architect | Digikoppeling protocol onduidelijk | Check WUS/ebMS/certificaat regels |
+

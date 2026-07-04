@@ -33,3 +33,13 @@ De Forum Standaardisatie use case voegt de verplichte open standaarden toe als z
 | GET /v1/fs/standaarden | Lijst alle standaarden met filter |
 | GET /v1/fs/rapport/{orgId} | Monitor Open Standaarden aligned rapport |
 | GET /v1/health | Healthcheck |
+
+## Functiehuis Rijksoverheid Rollen
+
+| Rol | Probleem | Oplossing |
+|---|---|---|
+| Architect | 22 standaarden handmatig bijhouden | Rule API checkt per standaard: compliant ja/nee |
+| CIO | Onduidelijk welke verplichte standaarden ontbreken | Compliance rapport per categorie |
+| Forum Standaardisatie | Geen gestandaardiseerd controle-instrument | JuraRegel als open-source compliance tool |
+| Monitor-verantwoordelijke | Handmatige rapportage inconsistent | GET /v1/fs/rapport/{orgId} — Monitor aligned |
+
