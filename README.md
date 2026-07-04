@@ -168,6 +168,29 @@ curl http://127.0.0.1:8496/v1/os/rapport/ministerie-bzk
 
 NORA is de **overkoepelende architectuurlaag** die alle use cases verbindt. 15 principes in 5 categorieën (architectuur, serviceorientatie, beveiliging, identiteit, data). Rule API op `localhost:8497` met `GET /v1/nora/matrix` voor compliance matrix.
 
+## Use Case: EU AI Act — AI-systeem Compliance
+
+**Als** AI-developer **wil ik** automatisch valideren of mijn AI-systeem voldoet aan de EU AI Act **zodat** ik niet handmatig 12 artikelen hoef te checken.
+
+| Rol | Probleem | Oplossing |
+|---|---|---|
+| AI developer | Onbekend welke verplichtingen van toepassing zijn | Rule API classificeert: verboden/hoog/beperkt/minimaal |
+| Compliance officer | Conformity assessment onduidelijk | Check art. 9-12 + 43 |
+
+12 regels (classificatie, conformity, transparantie, rechten). Rule API op `localhost:8498`. Bron: EUR-Lex.
+
+## Use Case: AVG/GDPR — Privacy Compliance
+
+**Als** privacy officer of FG **wil ik** automatisch valideren of mijn organisatie voldoet aan de AVG **zodat** ik niet handmatig 10 artikelen hoef te checken.
+
+| Rol | Probleem | Oplossing |
+|---|---|---|
+| Privacy officer | DPIA vereisten onduidelijk | Check art. 35 |
+| FG | Bewaartermijnen niet systematisch | Check art. 5 lid 1e |
+| Web developer | Rechten van betrokkenen onbekend | Check art. 12-22 |
+
+10 regels (DPIA, bewaartermijn, rechten, minimisation). Rule API op `localhost:8499`. Bron: wetten.overheid.nl (UAVG).
+
 ## Product Features
 
 ### Docker Compose
@@ -179,6 +202,19 @@ docker compose up  # Start alle 8 Rule APIs
 ```bash
 bash juraregel-init.sh avg 8498  # Scaffold een AVG use case op port 8498
 ```
+
+### GitHub Actions CI
+```yaml
+# In je eigen repo:
+jobs:
+  juraregel:
+    uses: djimit/juraregel/.github/workflows/juraregel-ci.yml@main
+    with:
+      use-case: 'all'
+```
+
+### Dashboard
+Open `dashboard/index.html` voor een visueel overzicht van alle 10 use cases met poorten, regels en status.
 
 ### Contributing
 Zie [CONTRIBUTING.md](CONTRIBUTING.md) voor de use case template en bijdrage richtlijnen.
@@ -255,7 +291,7 @@ Zie `jrem-open-source/` voor het standalone JREM schema, validator en examples.
 | Metriek | Waarde |
 |---|---|
 | Use cases | 4 (griffierecht, procesreglement, classificatie, publicatie) |
-| Tests | 183 (alle groen) |
+| Tests | 207 (alle groen) |
 | CI gates | 14 per use case |
 | JREM regels | 46 |
 | Pseudonimisering engine | V4.2 — 100% op 25.127 uitspraken |

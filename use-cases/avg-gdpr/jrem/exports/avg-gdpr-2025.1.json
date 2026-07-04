@@ -1,0 +1,532 @@
+{
+  "schemaVersion": "1.0.0",
+  "ruleSetId": "avg-gdpr",
+  "version": "2025.1",
+  "validFrom": "2018-05-25",
+  "validUntil": "2030-12-31",
+  "jurisdiction": "EU",
+  "domain": "avg-gdpr",
+  "procedureType": "dagvaarding",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "AVG-001",
+      "name": "DPIA vereist bij grootschalige verwerking",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "AVG — Algemene Verordening Gegevensbescherming",
+          "section": "Art. 35",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "avg_dpia",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AVG-001"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AVG-002",
+      "name": "DPIA vereist bij systematische monitoring",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "AVG — Algemene Verordening Gegevensbescherming",
+          "section": "Art. 35 lid 1c",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "avg_dpia",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AVG-002"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AVG-003",
+      "name": "Bewaartermijn — niet langer dan noodzakelijk",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "AVG — Algemene Verordening Gegevensbescherming",
+          "section": "Art. 5 lid 1e",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "avg_bewaartermijn",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AVG-003"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AVG-004",
+      "name": "Recht op inzage",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "AVG — Algemene Verordening Gegevensbescherming",
+          "section": "Art. 15",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "avg_rechten",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AVG-004"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AVG-005",
+      "name": "Recht op rectificatie",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "AVG — Algemene Verordening Gegevensbescherming",
+          "section": "Art. 16",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "avg_rechten",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AVG-005"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AVG-006",
+      "name": "Recht op vergetelheid",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "AVG — Algemene Verordening Gegevensbescherming",
+          "section": "Art. 17",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "avg_rechten",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AVG-006"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AVG-007",
+      "name": "Recht op dataportabiliteit",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "AVG — Algemene Verordening Gegevensbescherming",
+          "section": "Art. 20",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "avg_rechten",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AVG-007"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AVG-008",
+      "name": "Data minimalisation",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "AVG — Algemene Verordening Gegevensbescherming",
+          "section": "Art. 5 lid 1c",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "avg_minimisation",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AVG-008"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AVG-009",
+      "name": "Verwerkingsregister verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "AVG — Algemene Verordening Gegevensbescherming",
+          "section": "Art. 30",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "avg_minimisation",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AVG-009"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AVG-010",
+      "name": "Functionaris voor gegevensbescherming (FG)",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "AVG — Algemene Verordening Gegevensbescherming",
+          "section": "Art. 37",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "avg_minimisation",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AVG-010"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "AVG-SC-AVG-001",
+      "description": "DPIA vereist bij grootschalige verwerking",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "AVG-001"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "avg_dpia",
+        "appliedRules": [
+          "AVG-001"
+        ]
+      }
+    },
+    {
+      "id": "AVG-SC-AVG-002",
+      "description": "DPIA vereist bij systematische monitoring",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "AVG-002"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "avg_dpia",
+        "appliedRules": [
+          "AVG-002"
+        ]
+      }
+    },
+    {
+      "id": "AVG-SC-AVG-003",
+      "description": "Bewaartermijn — niet langer dan noodzakelijk",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "AVG-003"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "avg_bewaartermijn",
+        "appliedRules": [
+          "AVG-003"
+        ]
+      }
+    },
+    {
+      "id": "AVG-SC-AVG-004",
+      "description": "Recht op inzage",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "AVG-004"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "avg_rechten",
+        "appliedRules": [
+          "AVG-004"
+        ]
+      }
+    },
+    {
+      "id": "AVG-SC-AVG-005",
+      "description": "Recht op rectificatie",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "AVG-005"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "avg_rechten",
+        "appliedRules": [
+          "AVG-005"
+        ]
+      }
+    },
+    {
+      "id": "AVG-SC-AVG-006",
+      "description": "Recht op vergetelheid",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "AVG-006"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "avg_rechten",
+        "appliedRules": [
+          "AVG-006"
+        ]
+      }
+    },
+    {
+      "id": "AVG-SC-AVG-007",
+      "description": "Recht op dataportabiliteit",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "AVG-007"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "avg_rechten",
+        "appliedRules": [
+          "AVG-007"
+        ]
+      }
+    },
+    {
+      "id": "AVG-SC-AVG-008",
+      "description": "Data minimalisation",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "AVG-008"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "avg_minimisation",
+        "appliedRules": [
+          "AVG-008"
+        ]
+      }
+    },
+    {
+      "id": "AVG-SC-AVG-009",
+      "description": "Verwerkingsregister verplicht",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "AVG-009"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "avg_minimisation",
+        "appliedRules": [
+          "AVG-009"
+        ]
+      }
+    },
+    {
+      "id": "AVG-SC-AVG-010",
+      "description": "Functionaris voor gegevensbescherming (FG)",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "AVG-010"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "avg_minimisation",
+        "appliedRules": [
+          "AVG-010"
+        ]
+      }
+    }
+  ],
+  "transitionRules": [],
+  "metadata": {
+    "juridischeContext": {
+      "wet": "AVG",
+      "wetBwbrId": "BWBR0040930",
+      "wetVersieLaatstGecheckt": "2026-07-04",
+      "tariefVersie": "2025.1"
+    },
+    "juristAccordering": {
+      "geaccondeerdDoor": "D. Landman (agent-executed)",
+      "datum": "2026-07-04",
+      "geldigTot": "2027-07-04",
+      "versie": "2025.1"
+    },
+    "bronverificatieDatum": "2026-07-04",
+    "acceptatieType": "full"
+  }
+}

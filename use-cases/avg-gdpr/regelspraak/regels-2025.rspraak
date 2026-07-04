@@ -1,0 +1,62 @@
+// AVG/GDPR — RegelSpraak CNL
+
+regel AVG-001 "DPIA vereist bij grootschalige verwerking":
+  als regelId is "AVG-001"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "dpia".
+
+regel AVG-002 "DPIA vereist bij systematische monitoring":
+  als regelId is "AVG-002"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "dpia".
+
+regel AVG-003 "Bewaartermijn — niet langer dan noodzakelijk":
+  als regelId is "AVG-003"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "bewaartermijn".
+
+regel AVG-004 "Recht op inzage":
+  als regelId is "AVG-004"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "rechten".
+
+regel AVG-005 "Recht op rectificatie":
+  als regelId is "AVG-005"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "rechten".
+
+regel AVG-006 "Recht op vergetelheid":
+  als regelId is "AVG-006"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "rechten".
+
+regel AVG-007 "Recht op dataportabiliteit":
+  als regelId is "AVG-007"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "rechten".
+
+regel AVG-008 "Data minimalisation":
+  als regelId is "AVG-008"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "minimisation".
+
+regel AVG-009 "Verwerkingsregister verplicht":
+  als regelId is "AVG-009"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "minimisation".
+
+regel AVG-010 "Functionaris voor gegevensbescherming (FG)":
+  als regelId is "AVG-010"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "minimisation".
+

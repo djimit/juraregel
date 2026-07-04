@@ -32,3 +32,11 @@ services:
     build: .
     command: python use-cases/nora/api/app.py
     ports: ["8497:8497"]
+  eu-ai-act:
+    build: .
+    command: python use-cases/eu-ai-act/api/app.py
+    ports: ["8498:8498"]
+  avg-gdpr:
+    build: .
+    command: python use-cases/avg-gdpr/api/app.py
+    ports: ["8499:8499"]

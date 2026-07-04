@@ -1,0 +1,74 @@
+// EU AI Act — RegelSpraak CNL
+
+regel AIA-001 "AI-systeem classificatie — verboden":
+  als regelId is "AIA-001"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "classificatie".
+
+regel AIA-002 "AI-systeem classificatie — hoog-risico":
+  als regelId is "AIA-002"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "classificatie".
+
+regel AIA-003 "AI-systeem classificatie — beperkt-risico":
+  als regelId is "AIA-003"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "classificatie".
+
+regel AIA-004 "AI-systeem classificatie — minimaal-risico":
+  als regelId is "AIA-004"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "classificatie".
+
+regel AIA-005 "Risicobeheersysteem verplicht":
+  als regelId is "AIA-005"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "conformity".
+
+regel AIA-006 "Data governance verplicht":
+  als regelId is "AIA-006"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "conformity".
+
+regel AIA-007 "Technische documentatie verplicht":
+  als regelId is "AIA-007"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "conformity".
+
+regel AIA-008 "Logboek bijhouden verplicht":
+  als regelId is "AIA-008"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "conformity".
+
+regel AIA-009 "Transparantie tegenover gebruikers":
+  als regelId is "AIA-009"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "transparantie".
+
+regel AIA-010 "Deepfake transparantie":
+  als regelId is "AIA-010"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "transparantie".
+
+regel AIA-011 "Fundamentele rechten impactbeoordeling":
+  als regelId is "AIA-011"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "rechten".
+
+regel AIA-012 "Conformity assessment verplicht":
+  als regelId is "AIA-012"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "conformity".
+

@@ -1,0 +1,632 @@
+{
+  "schemaVersion": "1.0.0",
+  "ruleSetId": "eu-ai-act",
+  "version": "2025.1",
+  "validFrom": "2025-01-01",
+  "validUntil": "2026-12-31",
+  "jurisdiction": "EU",
+  "domain": "eu-ai-act",
+  "procedureType": "dagvaarding",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "AIA-001",
+      "name": "AI-systeem classificatie — verboden",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU AI Act — Verordening artificiële intelligentie",
+          "section": "Art. 5",
+          "url": "https://eur-lex.europa.eu/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "aia_classificatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AIA-001"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AIA-002",
+      "name": "AI-systeem classificatie — hoog-risico",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU AI Act — Verordening artificiële intelligentie",
+          "section": "Art. 6 + Bijlage I",
+          "url": "https://eur-lex.europa.eu/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "aia_classificatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AIA-002"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AIA-003",
+      "name": "AI-systeem classificatie — beperkt-risico",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU AI Act — Verordening artificiële intelligentie",
+          "section": "Art. 50",
+          "url": "https://eur-lex.europa.eu/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "aia_classificatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AIA-003"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AIA-004",
+      "name": "AI-systeem classificatie — minimaal-risico",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU AI Act — Verordening artificiële intelligentie",
+          "section": "Art. 50 lid 2",
+          "url": "https://eur-lex.europa.eu/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "aia_classificatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AIA-004"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AIA-005",
+      "name": "Risicobeheersysteem verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU AI Act — Verordening artificiële intelligentie",
+          "section": "Art. 9",
+          "url": "https://eur-lex.europa.eu/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "aia_conformity",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AIA-005"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AIA-006",
+      "name": "Data governance verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU AI Act — Verordening artificiële intelligentie",
+          "section": "Art. 10",
+          "url": "https://eur-lex.europa.eu/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "aia_conformity",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AIA-006"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AIA-007",
+      "name": "Technische documentatie verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU AI Act — Verordening artificiële intelligentie",
+          "section": "Art. 11 + Bijlage IV",
+          "url": "https://eur-lex.europa.eu/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "aia_conformity",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AIA-007"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AIA-008",
+      "name": "Logboek bijhouden verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU AI Act — Verordening artificiële intelligentie",
+          "section": "Art. 12",
+          "url": "https://eur-lex.europa.eu/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "aia_conformity",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AIA-008"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AIA-009",
+      "name": "Transparantie tegenover gebruikers",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU AI Act — Verordening artificiële intelligentie",
+          "section": "Art. 50 lid 1",
+          "url": "https://eur-lex.europa.eu/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "aia_transparantie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AIA-009"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AIA-010",
+      "name": "Deepfake transparantie",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU AI Act — Verordening artificiële intelligentie",
+          "section": "Art. 50 lid 4",
+          "url": "https://eur-lex.europa.eu/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "aia_transparantie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AIA-010"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AIA-011",
+      "name": "Fundamentele rechten impactbeoordeling",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU AI Act — Verordening artificiële intelligentie",
+          "section": "Art. 27",
+          "url": "https://eur-lex.europa.eu/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "aia_rechten",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AIA-011"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AIA-012",
+      "name": "Conformity assessment verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU AI Act — Verordening artificiële intelligentie",
+          "section": "Art. 43",
+          "url": "https://eur-lex.europa.eu/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "aia_conformity",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AIA-012"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "AIA-SC-AIA-001",
+      "description": "AI-systeem classificatie — verboden",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "AIA-001"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "aia_classificatie",
+        "appliedRules": [
+          "AIA-001"
+        ]
+      }
+    },
+    {
+      "id": "AIA-SC-AIA-002",
+      "description": "AI-systeem classificatie — hoog-risico",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "AIA-002"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "aia_classificatie",
+        "appliedRules": [
+          "AIA-002"
+        ]
+      }
+    },
+    {
+      "id": "AIA-SC-AIA-003",
+      "description": "AI-systeem classificatie — beperkt-risico",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "AIA-003"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "aia_classificatie",
+        "appliedRules": [
+          "AIA-003"
+        ]
+      }
+    },
+    {
+      "id": "AIA-SC-AIA-004",
+      "description": "AI-systeem classificatie — minimaal-risico",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "AIA-004"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "aia_classificatie",
+        "appliedRules": [
+          "AIA-004"
+        ]
+      }
+    },
+    {
+      "id": "AIA-SC-AIA-005",
+      "description": "Risicobeheersysteem verplicht",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "AIA-005"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "aia_conformity",
+        "appliedRules": [
+          "AIA-005"
+        ]
+      }
+    },
+    {
+      "id": "AIA-SC-AIA-006",
+      "description": "Data governance verplicht",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "AIA-006"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "aia_conformity",
+        "appliedRules": [
+          "AIA-006"
+        ]
+      }
+    },
+    {
+      "id": "AIA-SC-AIA-007",
+      "description": "Technische documentatie verplicht",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "AIA-007"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "aia_conformity",
+        "appliedRules": [
+          "AIA-007"
+        ]
+      }
+    },
+    {
+      "id": "AIA-SC-AIA-008",
+      "description": "Logboek bijhouden verplicht",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "AIA-008"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "aia_conformity",
+        "appliedRules": [
+          "AIA-008"
+        ]
+      }
+    },
+    {
+      "id": "AIA-SC-AIA-009",
+      "description": "Transparantie tegenover gebruikers",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "AIA-009"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "aia_transparantie",
+        "appliedRules": [
+          "AIA-009"
+        ]
+      }
+    },
+    {
+      "id": "AIA-SC-AIA-010",
+      "description": "Deepfake transparantie",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "AIA-010"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "aia_transparantie",
+        "appliedRules": [
+          "AIA-010"
+        ]
+      }
+    },
+    {
+      "id": "AIA-SC-AIA-011",
+      "description": "Fundamentele rechten impactbeoordeling",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "AIA-011"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "aia_rechten",
+        "appliedRules": [
+          "AIA-011"
+        ]
+      }
+    },
+    {
+      "id": "AIA-SC-AIA-012",
+      "description": "Conformity assessment verplicht",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "AIA-012"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "aia_conformity",
+        "appliedRules": [
+          "AIA-012"
+        ]
+      }
+    }
+  ],
+  "transitionRules": [],
+  "metadata": {
+    "juridischeContext": {
+      "wet": "EU AI Act",
+      "wetBwbrId": "BWBR0048300",
+      "wetVersieLaatstGecheckt": "2026-07-04",
+      "tariefVersie": "2025.1"
+    },
+    "juristAccordering": {
+      "geaccondeerdDoor": "D. Landman (agent-executed)",
+      "datum": "2026-07-04",
+      "geldigTot": "2027-07-04",
+      "versie": "2025.1"
+    },
+    "bronverificatieDatum": "2026-07-04",
+    "acceptatieType": "full"
+  }
+}

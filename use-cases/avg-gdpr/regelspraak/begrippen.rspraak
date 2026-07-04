@@ -1,0 +1,6 @@
+// Begrippenmodel — AVG/GDPR
+
+begrip regelId: "Unieke identificatie." type: tekst.
+begrip categorie: "Categorie." waarden: dpia, bewaartermijn, rechten, minimisation.
+begrip compliant: "Voldoet?" waarden: ja, nee, onbekend.
+begrip verwerking: "Type gegevensverwerking." type: tekst.

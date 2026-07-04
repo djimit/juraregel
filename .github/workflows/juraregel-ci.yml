@@ -1,0 +1,28 @@
+name: JuraRegel CI Gates
+
+on:
+  workflow_call:
+    inputs:
+      use-case:
+        required: false
+        type: string
+        default: 'all'
+
+jobs:
+  ci-gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+      - run: pip install fastapi uvicorn pydantic jsonschema pytest httpx
+      - name: Run CI gates
+        run: |
+          if [ "${{ inputs.use-case }}" = "all" ]; then
+            bash ci/run-all-gates.sh
+          else
+            bash ci/run-gates.sh "use-cases/${{ inputs.use-case }}"
+          fi
+      - name: Run tests
+        run: python3 -m pytest use-cases/*/tests/ -q --no-header

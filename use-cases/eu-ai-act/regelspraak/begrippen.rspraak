@@ -1,0 +1,6 @@
+// Begrippenmodel — EU AI Act
+
+begrip regelId: "Unieke identificatie." type: tekst.
+begrip categorie: "Categorie." waarden: classificatie, transparantie, conformity, rechten.
+begrip compliant: "Voldoet?" waarden: ja, nee, onbekend.
+begrip risicoNiveau: "Risiconiveau AI-systeem." waarden: verboden, hoog, beperkt, minimaal.
