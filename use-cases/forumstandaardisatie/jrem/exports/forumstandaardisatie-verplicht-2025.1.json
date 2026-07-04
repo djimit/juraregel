@@ -1,0 +1,1096 @@
+{
+  "schemaVersion": "1.0.0",
+  "ruleSetId": "forumstandaardisatie-verplicht",
+  "version": "2025.1",
+  "validFrom": "2025-01-01",
+  "validUntil": "2025-12-31",
+  "jurisdiction": "NL",
+  "domain": "forumstandaardisatie",
+  "procedureType": "dagvaarding",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "FS-FS-001",
+      "name": "OAuth 2.0 — verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Forum Standaardisatie — Verplichte standaarden",
+          "section": "OAuth 2.0",
+          "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "fs_interoperabiliteit_verplicht",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "FS-001"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "FS-FS-002",
+      "name": "SAML 2.0 — verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Forum Standaardisatie — Verplichte standaarden",
+          "section": "SAML 2.0",
+          "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "fs_interoperabiliteit_verplicht",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "FS-002"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "FS-FS-003",
+      "name": "OData 4.0 — verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Forum Standaardisatie — Verplichte standaarden",
+          "section": "OData 4.0",
+          "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "fs_interoperabiliteit_verplicht",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "FS-003"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "FS-FS-004",
+      "name": "StUF 3.0 — verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Forum Standaardisatie — Verplichte standaarden",
+          "section": "StUF 3.0",
+          "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "fs_interoperabiliteit_verplicht",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "FS-004"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "FS-FS-005",
+      "name": "ebMS 3.0 — verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Forum Standaardisatie — Verplichte standaarden",
+          "section": "ebMS 3.0",
+          "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "fs_interoperabiliteit_verplicht",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "FS-005"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "FS-FS-010",
+      "name": "DKIM — verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Forum Standaardisatie — Verplichte standaarden",
+          "section": "DKIM",
+          "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "fs_veiligheid_verplicht",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "FS-010"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "FS-FS-011",
+      "name": "DMARC — verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Forum Standaardisatie — Verplichte standaarden",
+          "section": "DMARC",
+          "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "fs_veiligheid_verplicht",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "FS-011"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "FS-FS-012",
+      "name": "SPF — verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Forum Standaardisatie — Verplichte standaarden",
+          "section": "SPF",
+          "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "fs_veiligheid_verplicht",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "FS-012"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "FS-FS-013",
+      "name": "HTTPS/TLS 1.2+ — verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Forum Standaardisatie — Verplichte standaarden",
+          "section": "HTTPS/TLS 1.2+",
+          "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "fs_veiligheid_verplicht",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "FS-013"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "FS-FS-014",
+      "name": "DNSSEC — verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Forum Standaardisatie — Verplichte standaarden",
+          "section": "DNSSEC",
+          "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "fs_veiligheid_verplicht",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "FS-014"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "FS-FS-020",
+      "name": "PDF 1.7 (ISO 32000-1) — verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Forum Standaardisatie — Verplichte standaarden",
+          "section": "PDF 1.7 (ISO 32000-1)",
+          "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "fs_document_verplicht",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "FS-020"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "FS-FS-021",
+      "name": "OOXML (ISO 26700) — verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Forum Standaardisatie — Verplichte standaarden",
+          "section": "OOXML (ISO 26700)",
+          "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "fs_document_verplicht",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "FS-021"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "FS-FS-022",
+      "name": "ODF 1.2 (ISO 26300) — verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Forum Standaardisatie — Verplichte standaarden",
+          "section": "ODF 1.2 (ISO 26300)",
+          "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "fs_document_verplicht",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "FS-022"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "FS-FS-023",
+      "name": "eFactuur 2.0 — verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Forum Standaardisatie — Verplichte standaarden",
+          "section": "eFactuur 2.0",
+          "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "fs_document_verplicht",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "FS-023"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "FS-FS-030",
+      "name": "eIDAS SAML — verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Forum Standaardisatie — Verplichte standaarden",
+          "section": "eIDAS SAML",
+          "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "fs_identiteit_verplicht",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "FS-030"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "FS-FS-031",
+      "name": "iGOV — verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Forum Standaardisatie — Verplichte standaarden",
+          "section": "iGOV",
+          "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "fs_identiteit_verplicht",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "FS-031"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "FS-FS-040",
+      "name": "ISO 27001 — streefbeeld",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Forum Standaardisatie — Verplichte standaarden",
+          "section": "ISO 27001",
+          "url": "https://www.forumstandaardisatie.nl/onderwerpen/veilig-internet/streefbeeldafspraken"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "fs_veiligheid_streefbeeld",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "FS-040"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "FS-FS-041",
+      "name": "BIO2 — streefbeeld",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Forum Standaardisatie — Verplichte standaarden",
+          "section": "BIO2",
+          "url": "https://www.forumstandaardisatie.nl/onderwerpen/veilig-internet/streefbeeldafspraken"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "fs_veiligheid_streefbeeld",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "FS-041"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "FS-FS-042",
+      "name": "NCSC ICT-beveiligingsrichtlijnen — streefbeeld",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Forum Standaardisatie — Verplichte standaarden",
+          "section": "NCSC ICT-beveiligingsrichtlijnen",
+          "url": "https://www.forumstandaardisatie.nl/onderwerpen/veilig-internet/streefbeeldafspraken"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "fs_veiligheid_streefbeeld",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "FS-042"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "FS-FS-043",
+      "name": "Common Ground — streefbeeld",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Forum Standaardisatie — Verplichte standaarden",
+          "section": "Common Ground",
+          "url": "https://www.forumstandaardisatie.nl/onderwerpen/veilig-internet/streefbeeldafspraken"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "fs_interoperabiliteit_streefbeeld",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "FS-043"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "FS-FS-044",
+      "name": "NORA — streefbeeld",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Forum Standaardisatie — Verplichte standaarden",
+          "section": "NORA",
+          "url": "https://www.forumstandaardisatie.nl/onderwerpen/veilig-internet/streefbeeldafspraken"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "fs_interoperabiliteit_streefbeeld",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "FS-044"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "FS-FS-045",
+      "name": "HBA (Huidige Bouwstenen Architectuur) — streefbeeld",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Forum Standaardisatie — Verplichte standaarden",
+          "section": "HBA (Huidige Bouwstenen Architectuur)",
+          "url": "https://www.forumstandaardisatie.nl/onderwerpen/veilig-internet/streefbeeldafspraken"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "fs_interoperabiliteit_streefbeeld",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "FS-045"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "FS-SC-FS-001",
+      "description": "OAuth 2.0 (verplicht)",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "FS-001"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "fs_interoperabiliteit_verplicht",
+        "appliedRules": [
+          "FS-FS-001"
+        ]
+      }
+    },
+    {
+      "id": "FS-SC-FS-002",
+      "description": "SAML 2.0 (verplicht)",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "FS-002"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "fs_interoperabiliteit_verplicht",
+        "appliedRules": [
+          "FS-FS-002"
+        ]
+      }
+    },
+    {
+      "id": "FS-SC-FS-003",
+      "description": "OData 4.0 (verplicht)",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "FS-003"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "fs_interoperabiliteit_verplicht",
+        "appliedRules": [
+          "FS-FS-003"
+        ]
+      }
+    },
+    {
+      "id": "FS-SC-FS-004",
+      "description": "StUF 3.0 (verplicht)",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "FS-004"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "fs_interoperabiliteit_verplicht",
+        "appliedRules": [
+          "FS-FS-004"
+        ]
+      }
+    },
+    {
+      "id": "FS-SC-FS-005",
+      "description": "ebMS 3.0 (verplicht)",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "FS-005"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "fs_interoperabiliteit_verplicht",
+        "appliedRules": [
+          "FS-FS-005"
+        ]
+      }
+    },
+    {
+      "id": "FS-SC-FS-010",
+      "description": "DKIM (verplicht)",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "FS-010"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "fs_veiligheid_verplicht",
+        "appliedRules": [
+          "FS-FS-010"
+        ]
+      }
+    },
+    {
+      "id": "FS-SC-FS-011",
+      "description": "DMARC (verplicht)",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "FS-011"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "fs_veiligheid_verplicht",
+        "appliedRules": [
+          "FS-FS-011"
+        ]
+      }
+    },
+    {
+      "id": "FS-SC-FS-012",
+      "description": "SPF (verplicht)",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "FS-012"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "fs_veiligheid_verplicht",
+        "appliedRules": [
+          "FS-FS-012"
+        ]
+      }
+    },
+    {
+      "id": "FS-SC-FS-013",
+      "description": "HTTPS/TLS 1.2+ (verplicht)",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "FS-013"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "fs_veiligheid_verplicht",
+        "appliedRules": [
+          "FS-FS-013"
+        ]
+      }
+    },
+    {
+      "id": "FS-SC-FS-014",
+      "description": "DNSSEC (verplicht)",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "FS-014"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "fs_veiligheid_verplicht",
+        "appliedRules": [
+          "FS-FS-014"
+        ]
+      }
+    },
+    {
+      "id": "FS-SC-FS-020",
+      "description": "PDF 1.7 (ISO 32000-1) (verplicht)",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "FS-020"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "fs_document_verplicht",
+        "appliedRules": [
+          "FS-FS-020"
+        ]
+      }
+    },
+    {
+      "id": "FS-SC-FS-021",
+      "description": "OOXML (ISO 26700) (verplicht)",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "FS-021"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "fs_document_verplicht",
+        "appliedRules": [
+          "FS-FS-021"
+        ]
+      }
+    },
+    {
+      "id": "FS-SC-FS-022",
+      "description": "ODF 1.2 (ISO 26300) (verplicht)",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "FS-022"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "fs_document_verplicht",
+        "appliedRules": [
+          "FS-FS-022"
+        ]
+      }
+    },
+    {
+      "id": "FS-SC-FS-023",
+      "description": "eFactuur 2.0 (verplicht)",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "FS-023"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "fs_document_verplicht",
+        "appliedRules": [
+          "FS-FS-023"
+        ]
+      }
+    },
+    {
+      "id": "FS-SC-FS-030",
+      "description": "eIDAS SAML (verplicht)",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "FS-030"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "fs_identiteit_verplicht",
+        "appliedRules": [
+          "FS-FS-030"
+        ]
+      }
+    },
+    {
+      "id": "FS-SC-FS-031",
+      "description": "iGOV (verplicht)",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "FS-031"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "fs_identiteit_verplicht",
+        "appliedRules": [
+          "FS-FS-031"
+        ]
+      }
+    },
+    {
+      "id": "FS-SC-FS-040",
+      "description": "ISO 27001 (streefbeeld)",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "FS-040"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "fs_veiligheid_streefbeeld",
+        "appliedRules": [
+          "FS-FS-040"
+        ]
+      }
+    },
+    {
+      "id": "FS-SC-FS-041",
+      "description": "BIO2 (streefbeeld)",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "FS-041"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "fs_veiligheid_streefbeeld",
+        "appliedRules": [
+          "FS-FS-041"
+        ]
+      }
+    },
+    {
+      "id": "FS-SC-FS-042",
+      "description": "NCSC ICT-beveiligingsrichtlijnen (streefbeeld)",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "FS-042"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "fs_veiligheid_streefbeeld",
+        "appliedRules": [
+          "FS-FS-042"
+        ]
+      }
+    },
+    {
+      "id": "FS-SC-FS-043",
+      "description": "Common Ground (streefbeeld)",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "FS-043"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "fs_interoperabiliteit_streefbeeld",
+        "appliedRules": [
+          "FS-FS-043"
+        ]
+      }
+    }
+  ],
+  "transitionRules": [],
+  "metadata": {
+    "juridischeContext": {
+      "wet": "Forum Standaardisatie",
+      "wetBwbrId": "BWBR0035700",
+      "wetVersieLaatstGecheckt": "2026-07-04",
+      "tariefVersie": "2025.1"
+    },
+    "juristAccordering": {
+      "geaccondeerdDoor": "D. Landman (agent-executed human gate)",
+      "datum": "2026-07-04",
+      "geldigTot": "2027-07-04",
+      "versie": "2025.1"
+    },
+    "bronverificatieDatum": "2026-07-04",
+    "acceptatieType": "full"
+  }
+}

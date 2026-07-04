@@ -1,0 +1,157 @@
+// BIO2 Standaarden — RegelSpraak CNL
+// Bron: forumstandaardisatie.nl
+
+regel FS-FS-001 "OAuth 2.0 — verplicht":
+  als standaardId is "FS-001"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "interoperabiliteit"
+  en is status "verplicht".
+
+regel FS-FS-002 "SAML 2.0 — verplicht":
+  als standaardId is "FS-002"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "interoperabiliteit"
+  en is status "verplicht".
+
+regel FS-FS-003 "OData 4.0 — verplicht":
+  als standaardId is "FS-003"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "interoperabiliteit"
+  en is status "verplicht".
+
+regel FS-FS-004 "StUF 3.0 — verplicht":
+  als standaardId is "FS-004"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "interoperabiliteit"
+  en is status "verplicht".
+
+regel FS-FS-005 "ebMS 3.0 — verplicht":
+  als standaardId is "FS-005"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "interoperabiliteit"
+  en is status "verplicht".
+
+regel FS-FS-010 "DKIM — verplicht":
+  als standaardId is "FS-010"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "veiligheid"
+  en is status "verplicht".
+
+regel FS-FS-011 "DMARC — verplicht":
+  als standaardId is "FS-011"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "veiligheid"
+  en is status "verplicht".
+
+regel FS-FS-012 "SPF — verplicht":
+  als standaardId is "FS-012"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "veiligheid"
+  en is status "verplicht".
+
+regel FS-FS-013 "HTTPS/TLS 1.2+ — verplicht":
+  als standaardId is "FS-013"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "veiligheid"
+  en is status "verplicht".
+
+regel FS-FS-014 "DNSSEC — verplicht":
+  als standaardId is "FS-014"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "veiligheid"
+  en is status "verplicht".
+
+regel FS-FS-020 "PDF 1.7 (ISO 32000-1) — verplicht":
+  als standaardId is "FS-020"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "document"
+  en is status "verplicht".
+
+regel FS-FS-021 "OOXML (ISO 26700) — verplicht":
+  als standaardId is "FS-021"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "document"
+  en is status "verplicht".
+
+regel FS-FS-022 "ODF 1.2 (ISO 26300) — verplicht":
+  als standaardId is "FS-022"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "document"
+  en is status "verplicht".
+
+regel FS-FS-023 "eFactuur 2.0 — verplicht":
+  als standaardId is "FS-023"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "document"
+  en is status "verplicht".
+
+regel FS-FS-030 "eIDAS SAML — verplicht":
+  als standaardId is "FS-030"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "identiteit"
+  en is status "verplicht".
+
+regel FS-FS-031 "iGOV — verplicht":
+  als standaardId is "FS-031"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "identiteit"
+  en is status "verplicht".
+
+regel FS-FS-040 "ISO 27001 — streefbeeld":
+  als standaardId is "FS-040"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "veiligheid"
+  en is status "streefbeeld".
+
+regel FS-FS-041 "BIO2 — streefbeeld":
+  als standaardId is "FS-041"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "veiligheid"
+  en is status "streefbeeld".
+
+regel FS-FS-042 "NCSC ICT-beveiligingsrichtlijnen — streefbeeld":
+  als standaardId is "FS-042"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "veiligheid"
+  en is status "streefbeeld".
+
+regel FS-FS-043 "Common Ground — streefbeeld":
+  als standaardId is "FS-043"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "interoperabiliteit"
+  en is status "streefbeeld".
+
+regel FS-FS-044 "NORA — streefbeeld":
+  als standaardId is "FS-044"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "interoperabiliteit"
+  en is status "streefbeeld".
+
+regel FS-FS-045 "HBA (Huidige Bouwstenen Architectuur) — streefbeeld":
+  als standaardId is "FS-045"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "interoperabiliteit"
+  en is status "streefbeeld".
+

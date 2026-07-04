@@ -1,0 +1,9 @@
+// Begrippenmodel — Forum Standaardisatie
+// Bron: forumstandaardisatie.nl/open-standaarden/verplicht
+
+begrip standaardId: "Unieke identificatie van een standaard." type: tekst.
+begrip naam: "Naam van de standaard." type: tekst.
+begrip categorie: "Categorie van de standaard." waarden: interoperabiliteit, veiligheid, document, identiteit.
+begrip status: "Status van de standaard." waarden: verplicht, systeem, streefbeeld.
+begrip compliant: "Voldoet de organisatie aan de standaard?" waarden: ja, nee, onbekend.
+begrip organisatieType: "Type overheidsorganisatie." waarden: rijk, gemeente, provincie, waterschap, rechtspraak.

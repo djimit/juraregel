@@ -99,6 +99,34 @@ curl http://127.0.0.1:8494/v1/bio2/maatregelen
 curl http://127.0.0.1:8494/v1/bio2/rapport/gemeente-amsterdam
 ```
 
+## Use Case: Forum Standaardisatie — Verplichte Open Standaarden
+
+**Als** architect van een overheidsorganisatie **wil ik** automatisch valideren of mijn organisatie de verplichte open standaarden toepast **zodat** ik niet handmatig de Forum Standaardisatie lijst hoef te checken en Monitor-rapportage foutloos is.
+
+| Rol | Probleem | Oplossing |
+|---|---|---|
+| Architect | 22 standaarden handmatig bijhouden — verouderd | Rule API checkt per standaard: compliant ja/nee |
+| CIO | Onduidelijk welke verplichte standaarden ontbreken | Compliance rapport per categorie |
+| Forum Standaardisatie | Geen gestandaardiseerd controle-instrument | JuraRegel als open-source compliance tool |
+| Monitor-verantwoordelijke | Handmatige rapportage inconsistent | `GET /v1/fs/rapport/{orgId}` — Monitor aligned |
+
+De [Forum Standaardisatie](https://www.forumstandaardisatie.nl/open-standaarden/verplicht) beheert de lijst van verplichte open standaarden voor de hele Nederlandse overheid — van OAuth en SAML tot DKIM en PDF.
+
+- **22 standaarden** (16 verplicht + 6 streefbeeld) in 4 categorieën
+- Interoperabiliteit (OAuth, SAML, OData, StUF, ebMS), Veiligheid (DKIM, DMARC, SPF, TLS, DNSSEC), Document (PDF, OOXML, ODF, eFactuur), Identiteit (eIDAS, iGOV)
+- Rule API op `localhost:8495` met standaarden listing en Monitor aligned rapport
+- 15 tests — 14 CI gates
+
+### Voorbeeld
+
+```bash
+# Lijst alle verplichte standaarden
+curl http://127.0.0.1:8495/v1/fs/standaarden?status=verplicht
+
+# Monitor Open Standaarden rapport
+curl http://127.0.0.1:8495/v1/fs/rapport/ministerie-bzk
+```
+
 ## Architectuur
 
 ```
