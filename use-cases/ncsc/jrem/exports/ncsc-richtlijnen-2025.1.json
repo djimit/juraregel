@@ -1,0 +1,1416 @@
+{
+  "schemaVersion": "1.0.0",
+  "ruleSetId": "ncsc-richtlijnen",
+  "version": "2025.1",
+  "validFrom": "2025-01-01",
+  "validUntil": "2026-12-31",
+  "jurisdiction": "NL",
+  "domain": "ncsc-cybersecurity",
+  "procedureType": "dagvaarding",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "NCSC-TLS-001",
+      "name": "TLS 1.2 minimum",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NCSC ICT-beveiligingsrichtlijnen TLS 2025-05",
+          "section": "NCSC-TLS-001",
+          "url": "https://www.ncsc.nl/documenten/publicaties/2025/juni/01/ict-beveiligingsrichtlijnen-voor-transport-layer-security-2025-05"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "ncsc_tls",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NCSC-TLS-001"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NCSC-TLS-002",
+      "name": "TLS 1.3 voorkeur",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NCSC ICT-beveiligingsrichtlijnen TLS 2025-05",
+          "section": "NCSC-TLS-002",
+          "url": "https://www.ncsc.nl/documenten/publicaties/2025/juni/01/ict-beveiligingsrichtlijnen-voor-transport-layer-security-2025-05"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "ncsc_tls",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NCSC-TLS-002"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NCSC-TLS-003",
+      "name": "Sterke cipher suites",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NCSC ICT-beveiligingsrichtlijnen TLS 2025-05",
+          "section": "NCSC-TLS-003",
+          "url": "https://www.ncsc.nl/documenten/publicaties/2025/juni/01/ict-beveiligingsrichtlijnen-voor-transport-layer-security-2025-05"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "ncsc_tls",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NCSC-TLS-003"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NCSC-TLS-004",
+      "name": "ECDSA certificaten voorkeur",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NCSC ICT-beveiligingsrichtlijnen TLS 2025-05",
+          "section": "NCSC-TLS-004",
+          "url": "https://www.ncsc.nl/documenten/publicaties/2025/juni/01/ict-beveiligingsrichtlijnen-voor-transport-layer-security-2025-05"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "ncsc_tls",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NCSC-TLS-004"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NCSC-TLS-005",
+      "name": "Minimaal 2048-bit RSA",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NCSC ICT-beveiligingsrichtlijnen TLS 2025-05",
+          "section": "NCSC-TLS-005",
+          "url": "https://www.ncsc.nl/documenten/publicaties/2025/juni/01/ict-beveiligingsrichtlijnen-voor-transport-layer-security-2025-05"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "ncsc_tls",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NCSC-TLS-005"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NCSC-TLS-006",
+      "name": "HSTS verplicht",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NCSC ICT-beveiligingsrichtlijnen TLS 2025-05",
+          "section": "NCSC-TLS-006",
+          "url": "https://www.ncsc.nl/documenten/publicaties/2025/juni/01/ict-beveiligingsrichtlijnen-voor-transport-layer-security-2025-05"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "ncsc_tls",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NCSC-TLS-006"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NCSC-TLS-007",
+      "name": "Certificate pinning voor mobiel",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NCSC ICT-beveiligingsrichtlijnen TLS 2025-05",
+          "section": "NCSC-TLS-007",
+          "url": "https://www.ncsc.nl/documenten/publicaties/2025/juni/01/ict-beveiligingsrichtlijnen-voor-transport-layer-security-2025-05"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "ncsc_tls",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NCSC-TLS-007"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NCSC-TLS-008",
+      "name": "OCSP stapling aanbevolen",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NCSC ICT-beveiligingsrichtlijnen TLS 2025-05",
+          "section": "NCSC-TLS-008",
+          "url": "https://www.ncsc.nl/documenten/publicaties/2025/juni/01/ict-beveiligingsrichtlijnen-voor-transport-layer-security-2025-05"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "ncsc_tls",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NCSC-TLS-008"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NCSC-WEB-001",
+      "name": "Input validatie server-side",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NCSC ICT-beveiligingsrichtlijnen Webapplicaties",
+          "section": "NCSC-WEB-001",
+          "url": "https://www.ncsc.nl/onderwerpen/ict-beveiligingsrichtlijnen-voor-webapplicaties"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "ncsc_webapp",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NCSC-WEB-001"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NCSC-WEB-002",
+      "name": "Output encoding verplicht",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NCSC ICT-beveiligingsrichtlijnen Webapplicaties",
+          "section": "NCSC-WEB-002",
+          "url": "https://www.ncsc.nl/onderwerpen/ict-beveiligingsrichtlijnen-voor-webapplicaties"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "ncsc_webapp",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NCSC-WEB-002"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NCSC-WEB-003",
+      "name": "CSRF tokens verplicht",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NCSC ICT-beveiligingsrichtlijnen Webapplicaties",
+          "section": "NCSC-WEB-003",
+          "url": "https://www.ncsc.nl/onderwerpen/ict-beveiligingsrichtlijnen-voor-webapplicaties"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "ncsc_webapp",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NCSC-WEB-003"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NCSC-WEB-004",
+      "name": "SQL parameterized queries",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NCSC ICT-beveiligingsrichtlijnen Webapplicaties",
+          "section": "NCSC-WEB-004",
+          "url": "https://www.ncsc.nl/onderwerpen/ict-beveiligingsrichtlijnen-voor-webapplicaties"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "ncsc_webapp",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NCSC-WEB-004"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NCSC-WEB-005",
+      "name": "Authentication sterke wachtwoorden",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NCSC ICT-beveiligingsrichtlijnen Webapplicaties",
+          "section": "NCSC-WEB-005",
+          "url": "https://www.ncsc.nl/onderwerpen/ict-beveiligingsrichtlijnen-voor-webapplicaties"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "ncsc_webapp",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NCSC-WEB-005"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NCSC-WEB-006",
+      "name": "Session management veilig",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NCSC ICT-beveiligingsrichtlijnen Webapplicaties",
+          "section": "NCSC-WEB-006",
+          "url": "https://www.ncsc.nl/onderwerpen/ict-beveiligingsrichtlijnen-voor-webapplicaties"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "ncsc_webapp",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NCSC-WEB-006"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NCSC-WEB-007",
+      "name": "Content Security Policy verplicht",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NCSC ICT-beveiligingsrichtlijnen Webapplicaties",
+          "section": "NCSC-WEB-007",
+          "url": "https://www.ncsc.nl/onderwerpen/ict-beveiligingsrichtlijnen-voor-webapplicaties"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "ncsc_webapp",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NCSC-WEB-007"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NCSC-WEB-008",
+      "name": "Foutmeldingen niet informatief",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NCSC ICT-beveiligingsrichtlijnen Webapplicaties",
+          "section": "NCSC-WEB-008",
+          "url": "https://www.ncsc.nl/onderwerpen/ict-beveiligingsrichtlijnen-voor-webapplicaties"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "ncsc_webapp",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NCSC-WEB-008"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NCSC-WEB-009",
+      "name": "File upload restricties",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NCSC ICT-beveiligingsrichtlijnen Webapplicaties",
+          "section": "NCSC-WEB-009",
+          "url": "https://www.ncsc.nl/onderwerpen/ict-beveiligingsrichtlijnen-voor-webapplicaties"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "ncsc_webapp",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NCSC-WEB-009"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NCSC-WEB-010",
+      "name": "Rate limiting op alle endpoints",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NCSC ICT-beveiligingsrichtlijnen Webapplicaties",
+          "section": "NCSC-WEB-010",
+          "url": "https://www.ncsc.nl/onderwerpen/ict-beveiligingsrichtlijnen-voor-webapplicaties"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "ncsc_webapp",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NCSC-WEB-010"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NCSC-BAS-001",
+      "name": "B1: Sectoral risk analysis",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NCSC Basisprincipes",
+          "section": "NCSC-BAS-001",
+          "url": "https://www.ncsc.nl/basisprincipes"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "ncsc_basisprincipes",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NCSC-BAS-001"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NCSC-BAS-002",
+      "name": "B2: Application risk analysis",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NCSC Basisprincipes",
+          "section": "NCSC-BAS-002",
+          "url": "https://www.ncsc.nl/basisprincipes"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "ncsc_basisprincipes",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NCSC-BAS-002"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NCSC-BAS-003",
+      "name": "B3: Treatment plan",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NCSC Basisprincipes",
+          "section": "NCSC-BAS-003",
+          "url": "https://www.ncsc.nl/basisprincipes"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "ncsc_basisprincipes",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NCSC-BAS-003"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NCSC-BAS-004",
+      "name": "B4: Security in development process",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NCSC Basisprincipes",
+          "section": "NCSC-BAS-004",
+          "url": "https://www.ncsc.nl/basisprincipes"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "ncsc_basisprincipes",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NCSC-BAS-004"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NCSC-BAS-005",
+      "name": "B5: Technical security standards",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NCSC Basisprincipes",
+          "section": "NCSC-BAS-005",
+          "url": "https://www.ncsc.nl/basisprincipes"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "ncsc_basisprincipes",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NCSC-BAS-005"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NCSC-BAS-006",
+      "name": "B6: Least privilege",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NCSC Basisprincipes",
+          "section": "NCSC-BAS-006",
+          "url": "https://www.ncsc.nl/basisprincipes"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "ncsc_basisprincipes",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NCSC-BAS-006"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NCSC-BAS-007",
+      "name": "B7: Defense in depth",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NCSC Basisprincipes",
+          "section": "NCSC-BAS-007",
+          "url": "https://www.ncsc.nl/basisprincipes"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "ncsc_basisprincipes",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NCSC-BAS-007"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NCSC-BAS-008",
+      "name": "B8: Monitoring en logging",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NCSC Basisprincipes",
+          "section": "NCSC-BAS-008",
+          "url": "https://www.ncsc.nl/basisprincipes"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "ncsc_basisprincipes",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NCSC-BAS-008"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NCSC-BAS-009",
+      "name": "B9: Patch management",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NCSC Basisprincipes",
+          "section": "NCSC-BAS-009",
+          "url": "https://www.ncsc.nl/basisprincipes"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "ncsc_basisprincipes",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NCSC-BAS-009"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NCSC-BAS-010",
+      "name": "B10: Incident response",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NCSC Basisprincipes",
+          "section": "NCSC-BAS-010",
+          "url": "https://www.ncsc.nl/basisprincipes"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "ncsc_basisprincipes",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NCSC-BAS-010"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NCSC-CYB-001",
+      "name": "Digitale basishygiene op orde",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NCSC Cybersecuritybeeld 2025",
+          "section": "NCSC-CYB-001",
+          "url": "https://www.ncsc.nl/nieuws/cybersecuritybeeld-2025-dreigingen-divers-en-onvoorspelbaar-digitale-basishygiene-op-orde-blijft"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "ncsc_basisprincipes",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NCSC-CYB-001"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NCSC-CYB-002",
+      "name": "Multi-factor authentication",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NCSC Cybersecuritybeeld 2025",
+          "section": "NCSC-CYB-002",
+          "url": "https://www.ncsc.nl/nieuws/cybersecuritybeeld-2025-dreigingen-divers-en-onvoorspelbaar-digitale-basishygiene-op-orde-blijft"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "ncsc_basisprincipes",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NCSC-CYB-002"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NCSC-CYB-003",
+      "name": "Backups en hersteltest",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NCSC Cybersecuritybeeld 2025",
+          "section": "NCSC-CYB-003",
+          "url": "https://www.ncsc.nl/nieuws/cybersecuritybeeld-2025-dreigingen-divers-en-onvoorspelbaar-digitale-basishygiene-op-orde-blijft"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "ncsc_basisprincipes",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NCSC-CYB-003"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NCSC-CYB-004",
+      "name": "Netwerksegmentatie",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NCSC Cybersecuritybeeld 2025",
+          "section": "NCSC-CYB-004",
+          "url": "https://www.ncsc.nl/nieuws/cybersecuritybeeld-2025-dreigingen-divers-en-onvoorspelbaar-digitale-basishygiene-op-orde-blijft"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "ncsc_basisprincipes",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NCSC-CYB-004"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "NCSC-SC-NCSC-TLS-001",
+      "description": "TLS 1.2 minimum",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NCSC-TLS-001"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "ncsc_tls",
+        "appliedRules": [
+          "NCSC-TLS-001"
+        ]
+      }
+    },
+    {
+      "id": "NCSC-SC-NCSC-TLS-002",
+      "description": "TLS 1.3 voorkeur",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NCSC-TLS-002"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "ncsc_tls",
+        "appliedRules": [
+          "NCSC-TLS-002"
+        ]
+      }
+    },
+    {
+      "id": "NCSC-SC-NCSC-TLS-003",
+      "description": "Sterke cipher suites",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NCSC-TLS-003"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "ncsc_tls",
+        "appliedRules": [
+          "NCSC-TLS-003"
+        ]
+      }
+    },
+    {
+      "id": "NCSC-SC-NCSC-TLS-004",
+      "description": "ECDSA certificaten voorkeur",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NCSC-TLS-004"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "ncsc_tls",
+        "appliedRules": [
+          "NCSC-TLS-004"
+        ]
+      }
+    },
+    {
+      "id": "NCSC-SC-NCSC-TLS-005",
+      "description": "Minimaal 2048-bit RSA",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NCSC-TLS-005"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "ncsc_tls",
+        "appliedRules": [
+          "NCSC-TLS-005"
+        ]
+      }
+    },
+    {
+      "id": "NCSC-SC-NCSC-TLS-006",
+      "description": "HSTS verplicht",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NCSC-TLS-006"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "ncsc_tls",
+        "appliedRules": [
+          "NCSC-TLS-006"
+        ]
+      }
+    },
+    {
+      "id": "NCSC-SC-NCSC-TLS-007",
+      "description": "Certificate pinning voor mobiel",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NCSC-TLS-007"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "ncsc_tls",
+        "appliedRules": [
+          "NCSC-TLS-007"
+        ]
+      }
+    },
+    {
+      "id": "NCSC-SC-NCSC-TLS-008",
+      "description": "OCSP stapling aanbevolen",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NCSC-TLS-008"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "ncsc_tls",
+        "appliedRules": [
+          "NCSC-TLS-008"
+        ]
+      }
+    },
+    {
+      "id": "NCSC-SC-NCSC-WEB-001",
+      "description": "Input validatie server-side",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NCSC-WEB-001"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "ncsc_webapp",
+        "appliedRules": [
+          "NCSC-WEB-001"
+        ]
+      }
+    },
+    {
+      "id": "NCSC-SC-NCSC-WEB-002",
+      "description": "Output encoding verplicht",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NCSC-WEB-002"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "ncsc_webapp",
+        "appliedRules": [
+          "NCSC-WEB-002"
+        ]
+      }
+    },
+    {
+      "id": "NCSC-SC-NCSC-WEB-003",
+      "description": "CSRF tokens verplicht",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NCSC-WEB-003"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "ncsc_webapp",
+        "appliedRules": [
+          "NCSC-WEB-003"
+        ]
+      }
+    },
+    {
+      "id": "NCSC-SC-NCSC-WEB-004",
+      "description": "SQL parameterized queries",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NCSC-WEB-004"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "ncsc_webapp",
+        "appliedRules": [
+          "NCSC-WEB-004"
+        ]
+      }
+    },
+    {
+      "id": "NCSC-SC-NCSC-WEB-005",
+      "description": "Authentication sterke wachtwoorden",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NCSC-WEB-005"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "ncsc_webapp",
+        "appliedRules": [
+          "NCSC-WEB-005"
+        ]
+      }
+    },
+    {
+      "id": "NCSC-SC-NCSC-WEB-006",
+      "description": "Session management veilig",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NCSC-WEB-006"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "ncsc_webapp",
+        "appliedRules": [
+          "NCSC-WEB-006"
+        ]
+      }
+    },
+    {
+      "id": "NCSC-SC-NCSC-WEB-007",
+      "description": "Content Security Policy verplicht",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NCSC-WEB-007"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "ncsc_webapp",
+        "appliedRules": [
+          "NCSC-WEB-007"
+        ]
+      }
+    },
+    {
+      "id": "NCSC-SC-NCSC-WEB-008",
+      "description": "Foutmeldingen niet informatief",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NCSC-WEB-008"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "ncsc_webapp",
+        "appliedRules": [
+          "NCSC-WEB-008"
+        ]
+      }
+    },
+    {
+      "id": "NCSC-SC-NCSC-WEB-009",
+      "description": "File upload restricties",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NCSC-WEB-009"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "ncsc_webapp",
+        "appliedRules": [
+          "NCSC-WEB-009"
+        ]
+      }
+    },
+    {
+      "id": "NCSC-SC-NCSC-WEB-010",
+      "description": "Rate limiting op alle endpoints",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NCSC-WEB-010"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "ncsc_webapp",
+        "appliedRules": [
+          "NCSC-WEB-010"
+        ]
+      }
+    },
+    {
+      "id": "NCSC-SC-NCSC-BAS-001",
+      "description": "B1: Sectoral risk analysis",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NCSC-BAS-001"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "ncsc_basisprincipes",
+        "appliedRules": [
+          "NCSC-BAS-001"
+        ]
+      }
+    },
+    {
+      "id": "NCSC-SC-NCSC-BAS-002",
+      "description": "B2: Application risk analysis",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NCSC-BAS-002"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "ncsc_basisprincipes",
+        "appliedRules": [
+          "NCSC-BAS-002"
+        ]
+      }
+    }
+  ],
+  "transitionRules": [],
+  "metadata": {
+    "juridischeContext": {
+      "wet": "NCSC",
+      "wetBwbrId": "BWBR0047434",
+      "wetVersieLaatstGecheckt": "2026-07-05",
+      "tariefVersie": "2025.1"
+    },
+    "juristAccordering": {
+      "geaccondeerdDoor": "D. Landman (approved v1.0.0)",
+      "datum": "2026-07-05",
+      "geldigTot": "2027-07-05",
+      "versie": "2025.1"
+    },
+    "bronverificatieDatum": "2026-07-05",
+    "acceptatieType": "full"
+  }
+}

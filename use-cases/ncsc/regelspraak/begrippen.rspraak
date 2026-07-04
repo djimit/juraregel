@@ -1,0 +1,6 @@
+// Begrippenmodel — NCSC ICT-beveiligingsrichtlijnen
+
+begrip regelId: "Unieke identificatie." type: tekst.
+begrip categorie: "Categorie." waarden: tls, webapp, basisprincipes.
+begrip compliant: "Voldoet?" waarden: ja, nee, onbekend.
+begrip bron: "Bron." type: tekst.

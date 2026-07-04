@@ -1,0 +1,194 @@
+// NCSC ICT-beveiligingsrichtlijnen — RegelSpraak CNL
+
+regel NCSC-TLS-001 "TLS 1.2 minimum":
+  als regelId is "NCSC-TLS-001"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "tls".
+
+regel NCSC-TLS-002 "TLS 1.3 voorkeur":
+  als regelId is "NCSC-TLS-002"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "tls".
+
+regel NCSC-TLS-003 "Sterke cipher suites":
+  als regelId is "NCSC-TLS-003"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "tls".
+
+regel NCSC-TLS-004 "ECDSA certificaten voorkeur":
+  als regelId is "NCSC-TLS-004"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "tls".
+
+regel NCSC-TLS-005 "Minimaal 2048-bit RSA":
+  als regelId is "NCSC-TLS-005"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "tls".
+
+regel NCSC-TLS-006 "HSTS verplicht":
+  als regelId is "NCSC-TLS-006"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "tls".
+
+regel NCSC-TLS-007 "Certificate pinning voor mobiel":
+  als regelId is "NCSC-TLS-007"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "tls".
+
+regel NCSC-TLS-008 "OCSP stapling aanbevolen":
+  als regelId is "NCSC-TLS-008"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "tls".
+
+regel NCSC-WEB-001 "Input validatie server-side":
+  als regelId is "NCSC-WEB-001"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "webapp".
+
+regel NCSC-WEB-002 "Output encoding verplicht":
+  als regelId is "NCSC-WEB-002"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "webapp".
+
+regel NCSC-WEB-003 "CSRF tokens verplicht":
+  als regelId is "NCSC-WEB-003"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "webapp".
+
+regel NCSC-WEB-004 "SQL parameterized queries":
+  als regelId is "NCSC-WEB-004"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "webapp".
+
+regel NCSC-WEB-005 "Authentication sterke wachtwoorden":
+  als regelId is "NCSC-WEB-005"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "webapp".
+
+regel NCSC-WEB-006 "Session management veilig":
+  als regelId is "NCSC-WEB-006"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "webapp".
+
+regel NCSC-WEB-007 "Content Security Policy verplicht":
+  als regelId is "NCSC-WEB-007"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "webapp".
+
+regel NCSC-WEB-008 "Foutmeldingen niet informatief":
+  als regelId is "NCSC-WEB-008"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "webapp".
+
+regel NCSC-WEB-009 "File upload restricties":
+  als regelId is "NCSC-WEB-009"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "webapp".
+
+regel NCSC-WEB-010 "Rate limiting op alle endpoints":
+  als regelId is "NCSC-WEB-010"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "webapp".
+
+regel NCSC-BAS-001 "B1: Sectoral risk analysis":
+  als regelId is "NCSC-BAS-001"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "basisprincipes".
+
+regel NCSC-BAS-002 "B2: Application risk analysis":
+  als regelId is "NCSC-BAS-002"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "basisprincipes".
+
+regel NCSC-BAS-003 "B3: Treatment plan":
+  als regelId is "NCSC-BAS-003"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "basisprincipes".
+
+regel NCSC-BAS-004 "B4: Security in development process":
+  als regelId is "NCSC-BAS-004"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "basisprincipes".
+
+regel NCSC-BAS-005 "B5: Technical security standards":
+  als regelId is "NCSC-BAS-005"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "basisprincipes".
+
+regel NCSC-BAS-006 "B6: Least privilege":
+  als regelId is "NCSC-BAS-006"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "basisprincipes".
+
+regel NCSC-BAS-007 "B7: Defense in depth":
+  als regelId is "NCSC-BAS-007"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "basisprincipes".
+
+regel NCSC-BAS-008 "B8: Monitoring en logging":
+  als regelId is "NCSC-BAS-008"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "basisprincipes".
+
+regel NCSC-BAS-009 "B9: Patch management":
+  als regelId is "NCSC-BAS-009"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "basisprincipes".
+
+regel NCSC-BAS-010 "B10: Incident response":
+  als regelId is "NCSC-BAS-010"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "basisprincipes".
+
+regel NCSC-CYB-001 "Digitale basishygiene op orde":
+  als regelId is "NCSC-CYB-001"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "basisprincipes".
+
+regel NCSC-CYB-002 "Multi-factor authentication":
+  als regelId is "NCSC-CYB-002"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "basisprincipes".
+
+regel NCSC-CYB-003 "Backups en hersteltest":
+  als regelId is "NCSC-CYB-003"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "basisprincipes".
+
+regel NCSC-CYB-004 "Netwerksegmentatie":
+  als regelId is "NCSC-CYB-004"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "basisprincipes".
+

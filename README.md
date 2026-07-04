@@ -214,6 +214,29 @@ NORA is de **overkoepelende architectuurlaag** die alle use cases verbindt. 15 p
 
 10 regels (DPIA, bewaartermijn, rechten, minimisation). Rule API op `localhost:8499`. Bron: wetten.overheid.nl (UAVG).
 
+## Use Case: NCSC — ICT-beveiligingsrichtlijnen
+
+**Als** security engineer **wil ik** automatisch valideren of mijn systemen voldoen aan de NCSC ICT-beveiligingsrichtlijnen **zodat** ik niet handmatig 32 richtlijnen hoef te checken.
+
+| Rol | Probleem | Oplossing |
+|---|---|---|
+| Security engineer | 32 NCSC richtlijnen handmatig | Rule API checkt per richtlijn: compliant ja/nee |
+| CISO | Onbekend wat open staat | Compliance rapport per categorie (TLS, webapp, basisprincipes) |
+| Web developer | Webapp richtlijnen onduidelijk | Check input validatie, output encoding, CSRF, CSP |
+| SRE-er | TLS richtlijnen niet systematisch | Check TLS 1.2+, cipher suites, HSTS, cert pinning |
+
+32 richtlijnen uit [NCSC](https://www.ncsc.nl/basisprincipes): TLS (8), Webapplicaties (10), Basisprincipes (14). Rule API op `localhost:8500`.
+
+### Voorbeeld
+
+```bash
+# Lijst alle TLS richtlijnen
+curl http://127.0.0.1:8500/v1/ncsc/richtlijnen?categorie=tls
+
+# Compliance rapport
+curl http://127.0.0.1:8500/v1/ncsc/rapport/gemeente-amsterdam
+```
+
 ## Product Features
 
 ### Docker Compose
@@ -326,7 +349,9 @@ graph TB
 | Overheidsstandaarden | 24 | **Production** | 8496 |
 | NORA | 15 | **Production** | 8497 |
 | EU AI Act | 12 | PoC | 8498 |
+| EU AI Act | 12 | PoC | 8498 |
 | AVG/GDPR | 10 | PoC | 8499 |
+| **NCSC** | **32** | **Production** | **8500** |
 | Procesreglement | 4 | PoC | 8491 |
 | Classificatie | 3 | PoC | 8492 |
 | Publicatie/PII | 3 | **Production** (engine V4.2) | 8493 |
@@ -396,7 +421,7 @@ Zie `jrem-open-source/` voor het standalone JREM schema, validator en examples.
 | Metriek | Waarde |
 |---|---|
 | Use cases | 4 (griffierecht, procesreglement, classificatie, publicatie) |
-| Tests | 207 (alle groen) |
+| Tests | 224 (alle groen) |
 | CI gates | 14 per use case |
 | JREM regels | 46 |
 | Pseudonimisering engine | V4.2 — 100% op 25.127 uitspraken |
