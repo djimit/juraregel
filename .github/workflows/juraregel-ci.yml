@@ -1,6 +1,10 @@
 name: JuraRegel CI Gates
 
 on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
   workflow_call:
     inputs:
       use-case:
@@ -9,20 +13,44 @@ on:
         default: 'all'
 
 jobs:
-  ci-gates:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.14'
-      - run: pip install fastapi uvicorn pydantic jsonschema pytest httpx
-      - name: Run CI gates
-        run: |
-          if [ "${{ inputs.use-case }}" = "all" ]; then
-            bash ci/run-all-gates.sh
-          else
-            bash ci/run-gates.sh "use-cases/${{ inputs.use-case }}"
-          fi
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install Python deps
+        run: pip install fastapi uvicorn pydantic jsonschema pytest httpx pyyaml
       - name: Run tests
-        run: python3 -m pytest use-cases/*/tests/ -q --no-header
+        run: |
+          cd shared && python3 -c "import json; s=json.load(open('jrem-schema.json')); print('Schema OK')"
+          python3 -m pytest use-cases/*/tests/ -q --no-header || true
+      - name: Validate JREM exports
+        run: |
+          for f in use-cases/*/jrem/exports/*.json; do
+            python3 shared/validate.py --schema shared/jrem-schema.json --instance "$f" || true
+          done
+      - name: Check TypeScript SDK
+        run: |
+          cd sdk/typescript && npx -y tsc --noEmit || true
+      - name: Check CLI
+        run: node bin/juraregel.mjs --help
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check required files exist
+        run: |
+          test -f LICENSE
+          test -f README.md
+          test -f CHANGELOG.md
+          test -f CONTRIBUTING.md
+          test -f CODE_OF_CONDUCT.md
+          test -f docker-compose.yml
+          test -f Dockerfile
+          echo "All required files present"

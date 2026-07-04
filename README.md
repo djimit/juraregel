@@ -1,8 +1,14 @@
 # JuraRegel — Legal RuleOps Platform
 
 [![JuraRegel CI](https://github.com/djimit/juraregel/actions/workflows/juraregel-ci.yml/badge.svg)](https://github.com/djimit/juraregel/actions/workflows/juraregel-ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Use Cases](https://img.shields.io/badge/Use%20Cases-10-blue)](https://github.com/djimit/juraregel)
+[![Tests](https://img.shields.io/badge/Tests-207-green)](https://github.com/djimit/juraregel)
+[![Regels](https://img.shields.io/badge/JREM%20Regels-291-purple)](https://github.com/djimit/juraregel)
 
 > **Juridische regels die juristen schrijven en computers begrijpen.**
+>
+> **[🎮 Probeer de Playground](https://djimit.github.io/juraregel/)** — compliance checking in je browser, geen installatie nodig.
 
 JuraRegel is een open-source platform voor het beheren, valideren, versioneren en serveren van administratief-juridische regels. Het vertaalt bijvoorbeeld de [pseudonimiseringsrichtlijn](https://www.rechtspraak.nl/uitspraken/pseudonimiseringsrichtlijn) van Rechtspraak.nl en andere juridische richtlijnen naar digitale, testbare, auditeerbare regels.
 
