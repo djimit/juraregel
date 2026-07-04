@@ -1,0 +1,1184 @@
+{
+  "schemaVersion": "1.0.0",
+  "ruleSetId": "overheidsstandaarden",
+  "version": "2025.1",
+  "validFrom": "2025-01-01",
+  "validUntil": "2025-12-31",
+  "jurisdiction": "NL",
+  "domain": "overheidsstandaarden",
+  "procedureType": "dagvaarding",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "OS-API-001",
+      "name": "API-03: Alleen STUF of JSON-CRUD of RESTful",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "logius — API-03: Alleen STUF of JSON-CRUD of RESTful",
+          "section": "OS-API-001",
+          "url": "https://logius-standaarden.github.io/API-Design-Rules/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "os_api-design",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "OS-API-001",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "OS-API-002",
+      "name": "API-09: HAL of JSON-LD",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "logius — API-09: HAL of JSON-LD",
+          "section": "OS-API-002",
+          "url": "https://logius-standaarden.github.io/API-Design-Rules/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "os_api-design",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "OS-API-002",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "OS-API-003",
+      "name": "API-10: Geldige JSON",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "logius — API-10: Geldige JSON",
+          "section": "OS-API-003",
+          "url": "https://logius-standaarden.github.io/API-Design-Rules/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "os_api-design",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "OS-API-003",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "OS-API-004",
+      "name": "API-11: Hoofdlettergebruik camelCase",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "logius — API-11: Hoofdlettergebruik camelCase",
+          "section": "OS-API-004",
+          "url": "https://logius-standaarden.github.io/API-Design-Rules/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "os_api-design",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "OS-API-004",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "OS-API-005",
+      "name": "API-12: Self link verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "logius — API-12: Self link verplicht",
+          "section": "OS-API-005",
+          "url": "https://logius-standaarden.github.io/API-Design-Rules/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "os_api-design",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "OS-API-005",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "OS-API-006",
+      "name": "API-13: Content-Type header",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "logius — API-13: Content-Type header",
+          "section": "OS-API-006",
+          "url": "https://logius-standaarden.github.io/API-Design-Rules/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "os_api-design",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "OS-API-006",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "OS-API-007",
+      "name": "API-16: HTTP status codes",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "logius — API-16: HTTP status codes",
+          "section": "OS-API-007",
+          "url": "https://logius-standaarden.github.io/API-Design-Rules/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "os_api-design",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "OS-API-007",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "OS-API-008",
+      "name": "API-17: Error response formaat",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "logius — API-17: Error response formaat",
+          "section": "OS-API-008",
+          "url": "https://logius-standaarden.github.io/API-Design-Rules/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "os_api-design",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "OS-API-008",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "OS-API-009",
+      "name": "API-18: Versioning via URI",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "logius — API-18: Versioning via URI",
+          "section": "OS-API-009",
+          "url": "https://logius-standaarden.github.io/API-Design-Rules/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "os_api-design",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "OS-API-009",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "OS-API-010",
+      "name": "API-19: Pagination",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "logius — API-19: Pagination",
+          "section": "OS-API-010",
+          "url": "https://logius-standaarden.github.io/API-Design-Rules/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "os_api-design",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "OS-API-010",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "OS-API-011",
+      "name": "API-20: CORS headers",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "logius — API-20: CORS headers",
+          "section": "OS-API-011",
+          "url": "https://logius-standaarden.github.io/API-Design-Rules/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "os_api-design",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "OS-API-011",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "OS-API-012",
+      "name": "API-51: HTTPS verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "logius — API-51: HTTPS verplicht",
+          "section": "OS-API-012",
+          "url": "https://logius-standaarden.github.io/API-Design-Rules/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "os_api-design",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "OS-API-012",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "OS-AUTH-001",
+      "name": "NL GOV Assurance Profile OAuth 2.0",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "forumstandaardisatie — NL GOV Assurance Profile OAuth 2.0",
+          "section": "OS-AUTH-001",
+          "url": "https://www.forumstandaardisatie.nl/open-standaarden/nl-gov-assurance-profile-oauth-20"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "os_authenticatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "OS-AUTH-001",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "OS-AUTH-002",
+      "name": "eIDAS SAML 2.0",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "forumstandaardisatie — eIDAS SAML 2.0",
+          "section": "OS-AUTH-002",
+          "url": "https://www.forumstandaardisatie.nl/open-standaarden/authenticatie-standaarden"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "os_authenticatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "OS-AUTH-002",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "OS-AUTH-003",
+      "name": "OpenID Connect (OIDC)",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "forumstandaardisatie — OpenID Connect (OIDC)",
+          "section": "OS-AUTH-003",
+          "url": "https://www.forumstandaardisatie.nl/open-standaarden/authenticatie-standaarden"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "os_authenticatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "OS-AUTH-003",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "OS-AUTH-004",
+      "name": "JWT signed tokens",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "logius — JWT signed tokens",
+          "section": "OS-AUTH-004",
+          "url": "https://logius-standaarden.github.io/API-Design-Rules/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "os_authenticatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "OS-AUTH-004",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "OS-EVT-001",
+      "name": "NL GOV Profile for CloudEvents",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "logius — NL GOV Profile for CloudEvents",
+          "section": "OS-EVT-001",
+          "url": "https://logius-standaarden.github.io/NL-GOV-profile-for-CloudEvents/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "os_events",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "OS-EVT-001",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "OS-EVT-002",
+      "name": "CloudEvents structured mode",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "logius — CloudEvents structured mode",
+          "section": "OS-EVT-002",
+          "url": "https://logius-standaarden.github.io/NL-GOV-profile-for-CloudEvents/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "os_events",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "OS-EVT-002",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "OS-EVT-003",
+      "name": "CloudEvents extensies",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "logius — CloudEvents extensies",
+          "section": "OS-EVT-003",
+          "url": "https://logius-standaarden.github.io/NL-GOV-profile-for-CloudEvents/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "os_events",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "OS-EVT-003",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "OS-DK-001",
+      "name": "Digikoppeling WUS 3.0",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "logius — Digikoppeling WUS 3.0",
+          "section": "OS-DK-001",
+          "url": "https://logius-standaarden.github.io/Digikoppeling-Architectuur/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "os_digikoppeling",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "OS-DK-001",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "OS-DK-002",
+      "name": "Digikoppeling ebMS 3.0",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "logius — Digikoppeling ebMS 3.0",
+          "section": "OS-DK-002",
+          "url": "https://logius-standaarden.github.io/Digikoppeling-Architectuur/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "os_digikoppeling",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "OS-DK-002",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "OS-DK-003",
+      "name": "Digikoppeling certificaten",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "logius — Digikoppeling certificaten",
+          "section": "OS-DK-003",
+          "url": "https://logius-standaarden.github.io/Digikoppeling-Architectuur/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "os_digikoppeling",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "OS-DK-003",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "OS-DEV-001",
+      "name": "API registratie op developer.overheid.nl",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "developer-overheid — API registratie op developer.overheid.nl",
+          "section": "OS-DEV-001",
+          "url": "https://developer.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "os_api-design",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "OS-DEV-001",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "OS-DEV-002",
+      "name": "OpenAPI 3.0 specificatie",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "developer-overheid — OpenAPI 3.0 specificatie",
+          "section": "OS-DEV-002",
+          "url": "https://developer.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "os_api-design",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "standaardId": "OS-DEV-002",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "OS-SC-OS-API-001",
+      "description": "API-03: Alleen STUF of JSON-CRUD of RESTful — api-design",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "OS-API-001"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "os_api-design",
+        "appliedRules": [
+          "OS-API-001"
+        ]
+      }
+    },
+    {
+      "id": "OS-SC-OS-API-002",
+      "description": "API-09: HAL of JSON-LD — api-design",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "OS-API-002"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "os_api-design",
+        "appliedRules": [
+          "OS-API-002"
+        ]
+      }
+    },
+    {
+      "id": "OS-SC-OS-API-003",
+      "description": "API-10: Geldige JSON — api-design",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "OS-API-003"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "os_api-design",
+        "appliedRules": [
+          "OS-API-003"
+        ]
+      }
+    },
+    {
+      "id": "OS-SC-OS-API-004",
+      "description": "API-11: Hoofdlettergebruik camelCase — api-design",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "OS-API-004"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "os_api-design",
+        "appliedRules": [
+          "OS-API-004"
+        ]
+      }
+    },
+    {
+      "id": "OS-SC-OS-API-005",
+      "description": "API-12: Self link verplicht — api-design",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "OS-API-005"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "os_api-design",
+        "appliedRules": [
+          "OS-API-005"
+        ]
+      }
+    },
+    {
+      "id": "OS-SC-OS-API-006",
+      "description": "API-13: Content-Type header — api-design",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "OS-API-006"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "os_api-design",
+        "appliedRules": [
+          "OS-API-006"
+        ]
+      }
+    },
+    {
+      "id": "OS-SC-OS-API-007",
+      "description": "API-16: HTTP status codes — api-design",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "OS-API-007"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "os_api-design",
+        "appliedRules": [
+          "OS-API-007"
+        ]
+      }
+    },
+    {
+      "id": "OS-SC-OS-API-008",
+      "description": "API-17: Error response formaat — api-design",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "OS-API-008"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "os_api-design",
+        "appliedRules": [
+          "OS-API-008"
+        ]
+      }
+    },
+    {
+      "id": "OS-SC-OS-API-009",
+      "description": "API-18: Versioning via URI — api-design",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "OS-API-009"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "os_api-design",
+        "appliedRules": [
+          "OS-API-009"
+        ]
+      }
+    },
+    {
+      "id": "OS-SC-OS-API-010",
+      "description": "API-19: Pagination — api-design",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "OS-API-010"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "os_api-design",
+        "appliedRules": [
+          "OS-API-010"
+        ]
+      }
+    },
+    {
+      "id": "OS-SC-OS-API-011",
+      "description": "API-20: CORS headers — api-design",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "OS-API-011"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "os_api-design",
+        "appliedRules": [
+          "OS-API-011"
+        ]
+      }
+    },
+    {
+      "id": "OS-SC-OS-API-012",
+      "description": "API-51: HTTPS verplicht — api-design",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "OS-API-012"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "os_api-design",
+        "appliedRules": [
+          "OS-API-012"
+        ]
+      }
+    },
+    {
+      "id": "OS-SC-OS-AUTH-001",
+      "description": "NL GOV Assurance Profile OAuth 2.0 — authenticatie",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "OS-AUTH-001"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "os_authenticatie",
+        "appliedRules": [
+          "OS-AUTH-001"
+        ]
+      }
+    },
+    {
+      "id": "OS-SC-OS-AUTH-002",
+      "description": "eIDAS SAML 2.0 — authenticatie",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "OS-AUTH-002"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "os_authenticatie",
+        "appliedRules": [
+          "OS-AUTH-002"
+        ]
+      }
+    },
+    {
+      "id": "OS-SC-OS-AUTH-003",
+      "description": "OpenID Connect (OIDC) — authenticatie",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "OS-AUTH-003"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "os_authenticatie",
+        "appliedRules": [
+          "OS-AUTH-003"
+        ]
+      }
+    },
+    {
+      "id": "OS-SC-OS-AUTH-004",
+      "description": "JWT signed tokens — authenticatie",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "OS-AUTH-004"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "os_authenticatie",
+        "appliedRules": [
+          "OS-AUTH-004"
+        ]
+      }
+    },
+    {
+      "id": "OS-SC-OS-EVT-001",
+      "description": "NL GOV Profile for CloudEvents — events",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "OS-EVT-001"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "os_events",
+        "appliedRules": [
+          "OS-EVT-001"
+        ]
+      }
+    },
+    {
+      "id": "OS-SC-OS-EVT-002",
+      "description": "CloudEvents structured mode — events",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "OS-EVT-002"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "os_events",
+        "appliedRules": [
+          "OS-EVT-002"
+        ]
+      }
+    },
+    {
+      "id": "OS-SC-OS-EVT-003",
+      "description": "CloudEvents extensies — events",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "OS-EVT-003"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "os_events",
+        "appliedRules": [
+          "OS-EVT-003"
+        ]
+      }
+    },
+    {
+      "id": "OS-SC-OS-DK-001",
+      "description": "Digikoppeling WUS 3.0 — digikoppeling",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "OS-DK-001"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "os_digikoppeling",
+        "appliedRules": [
+          "OS-DK-001"
+        ]
+      }
+    }
+  ],
+  "transitionRules": [],
+  "metadata": {
+    "juridischeContext": {
+      "wet": "Logius Standaarden",
+      "wetBwbrId": "BWBR0035700",
+      "wetVersieLaatstGecheckt": "2026-07-04",
+      "tariefVersie": "2025.1"
+    },
+    "juristAccordering": {
+      "geaccondeerdDoor": "D. Landman (agent-executed human gate)",
+      "datum": "2026-07-04",
+      "geldigTot": "2027-07-04",
+      "versie": "2025.1"
+    },
+    "bronverificatieDatum": "2026-07-04",
+    "acceptatieType": "full"
+  }
+}

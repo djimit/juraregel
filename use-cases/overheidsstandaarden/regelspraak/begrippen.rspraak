@@ -1,0 +1,7 @@
+// Begrippenmodel — Overheidsstandaarden (Logius/Forum Standaardisatie)
+
+begrip standaardId: "Unieke identificatie van een standaardregel." type: tekst.
+begrip categorie: "Categorie." waarden: api-design, authenticatie, events, digikoppeling.
+begrip bron: "Bron van de standaard." waarden: logius, forumstandaardisatie, developer-overheid.
+begrip compliant: "Voldoet de API/service aan de standaard?" waarden: ja, nee, onbekend.
+begrip regels: "Specifieke regels binnen de standaard." type: lijst.

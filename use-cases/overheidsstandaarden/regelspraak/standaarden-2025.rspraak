@@ -1,0 +1,171 @@
+// Overheidsstandaarden — RegelSpraak CNL
+// Bronnen: Logius, Forum Standaardisatie, developer.overheid.nl
+
+regel OS-API-001 "API-03: Alleen STUF of JSON-CRUD of RESTful":
+  als standaardId is "OS-API-001"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "api-design"
+  en is bron "logius".
+
+regel OS-API-002 "API-09: HAL of JSON-LD":
+  als standaardId is "OS-API-002"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "api-design"
+  en is bron "logius".
+
+regel OS-API-003 "API-10: Geldige JSON":
+  als standaardId is "OS-API-003"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "api-design"
+  en is bron "logius".
+
+regel OS-API-004 "API-11: Hoofdlettergebruik camelCase":
+  als standaardId is "OS-API-004"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "api-design"
+  en is bron "logius".
+
+regel OS-API-005 "API-12: Self link verplicht":
+  als standaardId is "OS-API-005"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "api-design"
+  en is bron "logius".
+
+regel OS-API-006 "API-13: Content-Type header":
+  als standaardId is "OS-API-006"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "api-design"
+  en is bron "logius".
+
+regel OS-API-007 "API-16: HTTP status codes":
+  als standaardId is "OS-API-007"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "api-design"
+  en is bron "logius".
+
+regel OS-API-008 "API-17: Error response formaat":
+  als standaardId is "OS-API-008"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "api-design"
+  en is bron "logius".
+
+regel OS-API-009 "API-18: Versioning via URI":
+  als standaardId is "OS-API-009"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "api-design"
+  en is bron "logius".
+
+regel OS-API-010 "API-19: Pagination":
+  als standaardId is "OS-API-010"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "api-design"
+  en is bron "logius".
+
+regel OS-API-011 "API-20: CORS headers":
+  als standaardId is "OS-API-011"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "api-design"
+  en is bron "logius".
+
+regel OS-API-012 "API-51: HTTPS verplicht":
+  als standaardId is "OS-API-012"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "api-design"
+  en is bron "logius".
+
+regel OS-AUTH-001 "NL GOV Assurance Profile OAuth 2.0":
+  als standaardId is "OS-AUTH-001"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "authenticatie"
+  en is bron "forumstandaardisatie".
+
+regel OS-AUTH-002 "eIDAS SAML 2.0":
+  als standaardId is "OS-AUTH-002"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "authenticatie"
+  en is bron "forumstandaardisatie".
+
+regel OS-AUTH-003 "OpenID Connect (OIDC)":
+  als standaardId is "OS-AUTH-003"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "authenticatie"
+  en is bron "forumstandaardisatie".
+
+regel OS-AUTH-004 "JWT signed tokens":
+  als standaardId is "OS-AUTH-004"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "authenticatie"
+  en is bron "logius".
+
+regel OS-EVT-001 "NL GOV Profile for CloudEvents":
+  als standaardId is "OS-EVT-001"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "events"
+  en is bron "logius".
+
+regel OS-EVT-002 "CloudEvents structured mode":
+  als standaardId is "OS-EVT-002"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "events"
+  en is bron "logius".
+
+regel OS-EVT-003 "CloudEvents extensies":
+  als standaardId is "OS-EVT-003"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "events"
+  en is bron "logius".
+
+regel OS-DK-001 "Digikoppeling WUS 3.0":
+  als standaardId is "OS-DK-001"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "digikoppeling"
+  en is bron "logius".
+
+regel OS-DK-002 "Digikoppeling ebMS 3.0":
+  als standaardId is "OS-DK-002"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "digikoppeling"
+  en is bron "logius".
+
+regel OS-DK-003 "Digikoppeling certificaten":
+  als standaardId is "OS-DK-003"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "digikoppeling"
+  en is bron "logius".
+
+regel OS-DEV-001 "API registratie op developer.overheid.nl":
+  als standaardId is "OS-DEV-001"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "api-design"
+  en is bron "developer-overheid".
+
+regel OS-DEV-002 "OpenAPI 3.0 specificatie":
+  als standaardId is "OS-DEV-002"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "api-design"
+  en is bron "developer-overheid".
+

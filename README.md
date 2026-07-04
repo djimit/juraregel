@@ -127,6 +127,35 @@ curl http://127.0.0.1:8495/v1/fs/standaarden?status=verplicht
 curl http://127.0.0.1:8495/v1/fs/rapport/ministerie-bzk
 ```
 
+## Use Case: Overheidsstandaarden — API, Authenticatie en Events
+
+**Als** API architect bij een overheidsorganisatie **wil ik** automatisch valideren of mijn APIs en services voldoen aan de Logius en Forum Standaardisatie standaarden **zodat** ik niet handmatig regels hoef te checken en developer.overheid.nl registratie foutloos is.
+
+| Rol | Probleem | Oplossing |
+|---|---|---|
+| API architect | API Design Rules handmatig per endpoint | Rule API checkt per regel: compliant ja/nee |
+| Security engineer | OAuth/OIDC profiel incompleet | Check NL GOV Assurance Profile OAuth 2.0 |
+| Event architect | CloudEvents niet conforme | Check NL GOV Profile for CloudEvents |
+| Integratie architect | Digikoppeling protocol onduidelijk | Check WUS/ebMS/certificaat regels |
+
+24 standaarden uit [Logius](https://logius-standaarden.github.io/API-Design-Rules/), [Forum Standaardisatie](https://www.forumstandaardisatie.nl/open-standaarden/authenticatie-standaarden) en [developer.overheid.nl](https://developer.overheid.nl/):
+
+- **API Design** (14): RESTful, HAL, JSON, camelCase, self-link, error responses, versioning, pagination, CORS, HTTPS
+- **Authenticatie** (4): OAuth 2.0 NL GOV Assurance Profile, eIDAS SAML, OpenID Connect, JWT
+- **Events** (3): CloudEvents structured mode, extensies
+- **Digikoppeling** (3): WUS 3.0, ebMS 3.0, PKIoverheid certificaten
+- Rule API op `localhost:8496` — 16 tests — 14 CI gates
+
+### Voorbeeld
+
+```bash
+# Lijst alle API Design Rules
+curl http://127.0.0.1:8496/v1/os/standaarden?categorie=api-design
+
+# Compliance rapport
+curl http://127.0.0.1:8496/v1/os/rapport/ministerie-bzk
+```
+
 ## Architectuur
 
 ```
