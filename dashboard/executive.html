@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="nl"><head><meta charset="UTF-8"><title>JuraRegel — Executive Dashboard</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:system-ui;background:#fff;color:#1a1a1a;padding:2rem;max-width:1200px;margin:0 auto}
+h1{font-size:1.8rem;color:#0f172a;margin-bottom:.5rem}
+.sub{color:#64748b;margin-bottom:1.5rem}
+.kpis{display:flex;gap:1rem;margin-bottom:2rem}
+.kpi{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:1rem;flex:1}
+.kpi .num{font-size:2.5rem;font-weight:700;color:#3b82f6}
+.kpi .label{font-size:.8rem;color:#64748b;margin-top:.25rem}
+table{width:100%;border-collapse:collapse;margin-bottom:2rem}
+th{background:#f1f5f9;text-align:left;padding:.75rem;font-size:.8rem;color:#64748b;text-transform:uppercase}
+td{padding:.75rem;border-bottom:1px solid #e2e8f0;font-size:.9rem}
+.badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:.7rem;font-weight:600}
+.badge.prod{background:#dcfce7;color:#166534}
+.badge.poc{background:#fef3c7;color:#92400e}
+.badge.yes{background:#dcfce7;color:#166534}
+.badge.no{background:#fee2e2;color:#991b1b}
+</style></head><body>
+<h1>JuraRegel — Compliance Overview</h1>
+<p class="sub">11 use cases · 8 domeinen · 323 regels · 224 tests · alle frameworks in één overzicht</p>
+<div class="kpis">
+<div class="kpi"><div class="num">11</div><div class="label">Use Cases</div></div>
+<div class="kpi"><div class="num">323</div><div class="label">JREM Regels</div></div>
+<div class="kpi"><div class="num">8</div><div class="label">Frameworks</div></div>
+<div class="kpi"><div class="num">224</div><div class="label">Tests</div></div>
+<div class="kpi"><div class="num">7</div><div class="label">Production</div></div>
+</div>
+<table>
+<tr><th>Domein</th><th>Framework</th><th>Regels</th><th>Status</th><th>Acceptatie</th><th>Poort</th></tr>
+<tr><td>Griffierecht</td><td>Rechtspraak</td><td>36</td><td><span class="badge prod">Production</span></td><td><span class="badge yes">✅</span></td><td>8490</td></tr>
+<tr><td>BIO2</td><td>Informatiebeveiliging</td><td>162</td><td><span class="badge prod">Production</span></td><td><span class="badge yes">✅</span></td><td>8494</td></tr>
+<tr><td>Forum Standaardisatie</td><td>Interoperabiliteit</td><td>22</td><td><span class="badge prod">Production</span></td><td><span class="badge yes">✅</span></td><td>8495</td></tr>
+<tr><td>Overheidsstandaarden</td><td>Technische standaarden</td><td>24</td><td><span class="badge prod">Production</span></td><td><span class="badge yes">✅</span></td><td>8496</td></tr>
+<tr><td>NORA</td><td>Architectuur</td><td>15</td><td><span class="badge prod">Production</span></td><td><span class="badge yes">✅</span></td><td>8497</td></tr>
+<tr><td>NCSC</td><td>Cybersecurity</td><td>32</td><td><span class="badge prod">Production</span></td><td><span class="badge yes">✅</span></td><td>8500</td></tr>
+<tr><td>Publicatie/PII</td><td>Rechtspraak/Privacy</td><td>3</td><td><span class="badge prod">Production</span></td><td><span class="badge yes">✅</span></td><td>8493</td></tr>
+<tr><td>EU AI Act</td><td>AI Regulering</td><td>12</td><td><span class="badge poc">PoC</span></td><td><span class="badge yes">✅</span></td><td>8498</td></tr>
+<tr><td>AVG/GDPR</td><td>Privacy</td><td>10</td><td><span class="badge poc">PoC</span></td><td><span class="badge yes">✅</span></td><td>8499</td></tr>
+<tr><td>Procesreglement</td><td>Rechtspraak</td><td>4</td><td><span class="badge poc">PoC</span></td><td><span class="badge yes">✅</span></td><td>8491</td></tr>
+<tr><td>Classificatie</td><td>Rechtspraak</td><td>3</td><td><span class="badge poc">PoC</span></td><td><span class="badge yes">✅</span></td><td>8492</td></tr>
+</table>
+</body></html>

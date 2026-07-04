@@ -1,0 +1,25 @@
+{
+  "info": {"name": "JuraRegel API Collection", "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"},
+  "variable": [{"key": "base_url", "value": "http://127.0.0.1"}],
+  "item": [
+    {"name": "Griffierecht", "item": [
+      {"name": "Calculate", "request": {"method": "POST", "url": "{{base_url}}:8490/v1/griffierecht/calculate", "header": [{"key": "Content-Type", "value": "application/json"}], "body": {"mode": "raw", "raw": "{\"calculationDate\":\"2026-07-03\",\"zaak\":{\"rechtsgebied\":\"civiel\",\"zaakstroom\":\"handel\",\"procedureType\":\"dagvaarding\",\"vorderingWaarde\":125000,\"bijzondereCategorie\":\"geen\"},\"partij\":{\"rol\":\"eiser\",\"partijType\":\"natuurlijk_persoon\",\"onvermogend\":false,\"verweerStatus\":\"n.v.t.\"}}"}}},
+      {"name": "Health", "request": {"method": "GET", "url": "{{base_url}}:8490/v1/health"}}
+    ]},
+    {"name": "BIO2", "item": [
+      {"name": "Check Maatregel", "request": {"method": "POST", "url": "{{base_url}}:8494/v1/bio2/calculate", "header": [{"key": "Content-Type", "value": "application/json"}], "body": {"mode": "raw", "raw": "{\"calculationDate\":\"2025-07-04\",\"zaak\":{\"rechtsgebied\":\"civiel\",\"zaakstroom\":\"handel\",\"procedureType\":\"dagvaarding\",\"vorderingWaarde\":0,\"bijzondereCategorie\":\"5.01.01\"},\"partij\":{\"rol\":\"eiser\",\"partijType\":\"natuurlijk_persoon\",\"onvermogend\":false,\"verweerStatus\":\"n.v.t.\"}}"}}},
+      {"name": "Maatregelen", "request": {"method": "GET", "url": "{{base_url}}:8494/v1/bio2/maatregelen"}},
+      {"name": "Rapport", "request": {"method": "GET", "url": "{{base_url}}:8494/v1/bio2/rapport/gemeente-amsterdam"}}
+    ]},
+    {"name": "NCSC", "item": [
+      {"name": "Check Richtlijn", "request": {"method": "POST", "url": "{{base_url}}:8500/v1/ncsc/calculate", "header": [{"key": "Content-Type", "value": "application/json"}], "body": {"mode": "raw", "raw": "{\"calculationDate\":\"2025-07-04\",\"zaak\":{\"rechtsgebied\":\"civiel\",\"zaakstroom\":\"handel\",\"procedureType\":\"dagvaarding\",\"vorderingWaarde\":0,\"bijzondereCategorie\":\"NCSC-TLS-001\"},\"partij\":{\"rol\":\"eiser\",\"partijType\":\"natuurlijk_persoon\",\"onvermogend\":false,\"verweerStatus\":\"n.v.t.\"}}"}}},
+      {"name": "Richtlijnen", "request": {"method": "GET", "url": "{{base_url}}:8500/v1/ncsc/richtlijnen"}}
+    ]},
+    {"name": "EU AI Act", "item": [
+      {"name": "Check", "request": {"method": "POST", "url": "{{base_url}}:8498/v1/eu-ai-act/calculate", "header": [{"key": "Content-Type", "value": "application/json"}], "body": {"mode": "raw", "raw": "{\"calculationDate\":\"2025-07-04\",\"zaak\":{\"rechtsgebied\":\"civiel\",\"zaakstroom\":\"handel\",\"procedureType\":\"dagvaarding\",\"vorderingWaarde\":0,\"bijzondereCategorie\":\"AIA-002\"},\"partij\":{\"rol\":\"eiser\",\"partijType\":\"natuurlijk_persoon\",\"onvermogend\":false,\"verweerStatus\":\"n.v.t.\"}}"}}}
+    ]},
+    {"name": "AVG/GDPR", "item": [
+      {"name": "Check", "request": {"method": "POST", "url": "{{base_url}}:8499/v1/avg-gdpr/calculate", "header": [{"key": "Content-Type", "value": "application/json"}], "body": {"mode": "raw", "raw": "{\"calculationDate\":\"2025-07-04\",\"zaak\":{\"rechtsgebied\":\"civiel\",\"zaakstroom\":\"handel\",\"procedureType\":\"dagvaarding\",\"vorderingWaarde\":0,\"bijzondereCategorie\":\"AVG-001\"},\"partij\":{\"rol\":\"eiser\",\"partijType\":\"natuurlijk_persoon\",\"onvermogend\":false,\"verweerStatus\":\"n.v.t.\"}}"}}}
+    ]}
+  ]
+}

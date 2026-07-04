@@ -268,6 +268,42 @@ Zie [CONTRIBUTING.md](CONTRIBUTING.md) voor de use case template en bijdrage ric
 ### NORA Compliance Matrix
 Zie [docs/nora-compliance-matrix.md](docs/nora-compliance-matrix.md) voor de Mermaid diagram met NORA principes → use case mapping.
 
+## Voor elk rol in het functiehuis Rijksoverheid
+
+| Rol | Wat JuraRegel biedt | Start hier |
+|---|---|---|
+| AI Engineer | EU AI Act compliance (12 regels) | [EU AI Act use case](docs/eu-ai-act-use-case.md) |
+| Data Engineer | AVG data minimisation, bewaartermijnen | [AVG use case](docs/avg-gdpr-use-case.md) |
+| Software Ontwikkelaar | TypeScript SDK, CLI, OpenAPI, code examples | [SDK README](sdk/typescript/README.md), [examples](docs/examples/) |
+| Solution Architect | NORA matrix, API Design Rules, ADR template | [NORA use case](docs/nora-use-case.md), [ADR template](docs/templates/adr-template.md) |
+| Security Expert | BIO2 (162), NCSC (32), threat model template | [BIO2](docs/bio2-use-case.md), [NCSC](docs/ncsc-use-case.md), [threat model](docs/templates/threat-model-template.md) |
+| DevOps Engineer | Docker compose, Helm chart, GitHub Actions | [Docker](#docker), [Helm](helm/), [CI](.github/workflows/) |
+| SRE | Health endpoints, Grafana dashboard, runbook | [Grafana](docs/sre/grafana-dashboard.json), [runbook](docs/sre/runbook-template.md) |
+| Tester | 224 tests als voorbeeld, test templates | [CONTRIBUTING](CONTRIBUTING.md), [user story template](docs/templates/user-story-template.md) |
+| Product Owner | Compliance rapporten, ROI template, comparison | [Comparison table](#waarom-juraregel), [user story template](docs/templates/user-story-template.md) |
+| Enterprise Architect | NORA compliance matrix, TOGAF mapping, C4 | [NORA matrix](docs/nora-compliance-matrix.md), [ADR template](docs/templates/adr-template.md) |
+| Compliance Officer | Multi-framework compliance, ENSIA rapport | [Executive dashboard](dashboard/executive.html), [Postman](docs/juraregel-postman-collection.json) |
+| CISO | BIO2 + NCSC + Cybersecuritybeeld 2025 | [Executive dashboard](dashboard/executive.html), [NCSC](docs/ncsc-use-case.md) |
+| Jurist | RegelSpraak CNL, bronverwijzingen, acceptatie | [Rule Extraction Sprint](docs/rule-extraction-sprint.md), [maturity model](docs/maturity-model.md) |
+| Privacy Officer | AVG/GDPR regels, DPIA template | [AVG use case](docs/avg-gdpr-use-case.md), [DPIA template](docs/templates/dpia-template.md) |
+| Beleidsmedewerker | NORA principes, Forum Standaardisatie | [NORA](docs/nora-use-case.md), [Forum Standaardisatie](docs/forumstandaardisatie-use-case.md) |
+
+### Templates & Tooling
+
+| Wat | Waar | Voor wie |
+|---|---|---|
+| ADR template | [docs/templates/adr-template.md](docs/templates/adr-template.md) | Architecten |
+| Threat model template | [docs/templates/threat-model-template.md](docs/templates/threat-model-template.md) | Security experts |
+| DPIA template | [docs/templates/dpia-template.md](docs/templates/dpia-template.md) | Privacy officers |
+| User story template | [docs/templates/user-story-template.md](docs/templates/user-story-template.md) | Product owners |
+| Grafana dashboard | [docs/sre/grafana-dashboard.json](docs/sre/grafana-dashboard.json) | SRE |
+| Runbook template | [docs/sre/runbook-template.md](docs/sre/runbook-template.md) | SRE |
+| Postman collection | [docs/juraregel-postman-collection.json](docs/juraregel-postman-collection.json) | Ontwikkelaars |
+| Code examples | [docs/examples/](docs/examples/) — Python, Java, C#, Go, TypeScript | Ontwikkelaars |
+| Executive dashboard | [dashboard/executive.html](dashboard/executive.html) | C-level |
+| Compliance matrix | [shared/compliance_matrix.py](shared/compliance_matrix.py) | Compliance officers |
+| Helm chart | [helm/juraregel/](helm/juraregel/) | DevOps |
+
 ## Installatie
 
 ### TypeScript SDK

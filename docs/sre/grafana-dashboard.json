@@ -1,0 +1,6 @@
+{"dashboard":{"title":"JuraRegel — Rule API Overview","panels":[
+{"title":"API Health","type":"stat","targets":[{"expr":"juraregel_api_health"}]},
+{"title":"Request Rate","type":"graph","targets":[{"expr":"rate(juraregel_requests_total[5m])"}]},
+{"title":"Latency p99","type":"graph","targets":[{"expr":"histogram_quantile(0.99, juraregel_latency_bucket)"}]},
+{"title":"Compliance Score","type":"stat","targets":[{"expr":"juraregel_compliance_score"}]}
+]}}
