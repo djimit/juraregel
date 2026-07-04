@@ -1,0 +1,7 @@
+// Begrippenmodel — Zaaksregistratie en classificatie
+// Status: DRAFT — pending jurist review
+begrip instantie: "De instantie die de zaak behandelt." waarden: rechtbank, hof, hoge_raad.
+begrip zaakstroom: "De stroom van de zaak." waarden: kanton, handel.
+begrip procedureType: "Het type procedure." waarden: dagvaarding, verzoek.
+begrip vorderingWaardeBereik: "Het bereik van de vordering." waarden: tot_25000, 25000_tot_100000, boven_100000, onbepaald.
+begrip specialisatie: "De specialisatie van de zaak." waarden: algemeen, familie, insolventie, bestuursrecht.

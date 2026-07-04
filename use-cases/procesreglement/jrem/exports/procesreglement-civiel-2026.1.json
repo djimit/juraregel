@@ -1,0 +1,166 @@
+{
+  "schemaVersion": "1.0.0",
+  "ruleSetId": "procesreglement-civiel-dagvaarding",
+  "version": "2026.1",
+  "validFrom": "2026-01-01",
+  "validUntil": "2026-12-31",
+  "jurisdiction": "NL",
+  "domain": "civiel-rechtbank",
+  "procedureType": "dagvaarding",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "PR-CIV-2026-001",
+      "name": "Dagvaarding digitaal — handel",
+      "priority": 200,
+      "legalStatus": "regeling",
+      "sourceRefs": [
+        {
+          "type": "procesreglement",
+          "title": "Landelijk procesreglement civiele dagvaardingszaken",
+          "section": "Digitaal indienen — handel",
+          "url": "https://www.rechtspraak.nl/Proceduresreglementen"
+        }
+      ],
+      "conditions": {
+        "zaakstroom": [
+          "handel"
+        ]
+      },
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "digitaal_verplicht_handel",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "zaakstroom": "handel",
+            "procedureType": "dagvaarding"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "PR-CIV-2026-002",
+      "name": "Dagvaarding digitaal — kanton",
+      "priority": 200,
+      "legalStatus": "regeling",
+      "sourceRefs": [
+        {
+          "type": "procesreglement",
+          "title": "Landelijk procesreglement civiele dagvaardingszaken",
+          "section": "Digitaal indienen — kanton"
+        }
+      ],
+      "conditions": {
+        "zaakstroom": [
+          "kanton"
+        ]
+      },
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "digitaal_verplicht_kanton",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      }
+    },
+    {
+      "ruleId": "PR-CIV-2026-004",
+      "name": "Ontheffing digitale indiening",
+      "priority": 50,
+      "legalStatus": "regeling",
+      "sourceRefs": [
+        {
+          "type": "procesreglement",
+          "title": "Landelijk procesreglement",
+          "section": "Ontheffing"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "ontheffing_mogelijk",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Ontheffing moet worden beoordeeld door griffie."
+      }
+    },
+    {
+      "ruleId": "PR-CIV-2026-008",
+      "name": "Papieren indiening — uitzondering",
+      "priority": 30,
+      "legalStatus": "regeling",
+      "sourceRefs": [
+        {
+          "type": "procesreglement",
+          "title": "Landelijk procesreglement",
+          "section": "Papieren indiening"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "papieren_uitzondering",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Papieren indiening — controleer ontheffing."
+      }
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "PR-SC-001",
+      "description": "Dagvaarding handel — digitaal verplicht",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 50000,
+        "bijzondereCategorie": "geen",
+        "rol": "eiser",
+        "partijType": "natuurlijk_persoon",
+        "onvermogend": false,
+        "verweerStatus": "n.v.t."
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "digitaal_verplicht_handel",
+        "appliedRules": [
+          "PR-CIV-2026-001"
+        ]
+      }
+    }
+  ],
+  "transitionRules": [],
+  "metadata": {
+    "juridischeContext": {
+      "wet": "Wet Rv",
+      "wetBwbrId": "BWBR0002534",
+      "wetVersieLaatstGecheckt": "2026-06-15",
+      "tariefVersie": "2026.1"
+    },
+    "bronverificatieDatum": "2026-06-15",
+    "acceptatieType": "full",
+    "juristAccordering": {
+      "geaccondeerdDoor": "D. Landman (agent-executed human gate)",
+      "datum": "2026-07-04",
+      "geldigTot": "2027-07-04",
+      "versie": "2026.1"
+    }
+  }
+}

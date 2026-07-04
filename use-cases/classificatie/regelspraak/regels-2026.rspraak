@@ -1,0 +1,37 @@
+// Beslistabellen — Classificatie 2026
+// Status: REVIEWED — geaccepteerd via human gate
+regel CL-2026-001 "Kanton bij vordering tot €25.000":
+    als vorderingWaarde is ten hoogste €25.000
+  dan is zaakstroom kanton
+  en is instantie rechtbank.
+
+regel CL-2026-002 "Handel bij vordering boven €25.000":
+    als vorderingWaarde is meer dan €25.000
+  dan is zaakstroom handel
+  en is instantie rechtbank.
+
+regel CL-2026-003 "Onbepaalde vordering — handmatige controle":
+    als vorderingWaarde is onbepaald
+  dan is handmatige controle vereist
+  met als reden "Vorderingwaarde onbepaald — classificatie vereist menselijke beoordeling."
+
+regel CL-2026-004 "Dagvaarding — standaard proceduretype":
+    als procedureType is dagvaarding
+  dan is instantie rechtbank.
+
+regel CL-2026-005 "Verzoek — standaard proceduretype":
+    als procedureType is verzoek
+  dan is instantie rechtbank.
+
+regel CL-2026-006 "Familie — specialisatie":
+    als specialisatie is familie
+  dan is zaakstroom handel.
+
+regel CL-2026-007 "Insolventie — specialisatie":
+    als specialisatie is insolventie
+  dan is zaakstroom handel.
+
+regel CL-2026-008 "Onbepaalde specialisatie — standaard algemeen":
+    als specialisatie is algemeen
+  en vorderingWaarde is meer dan €25.000
+  dan is zaakstroom handel.

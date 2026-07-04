@@ -1,0 +1,67 @@
+// ═══════════════════════════════════════════════════════════
+// Beslistabellen — Procesreglement digitale indiening 2026
+// Bron: Landelijk procesreglement civiele dagvaardingszaken (1 juli 2025)
+// Status: REVIEWED — geaccepteerd via human gate
+// ═══════════════════════════════════════════════════════════
+
+// REVIEWED — Regels geaccepteerd via human gate. Bronverwijzingen geverifieerd.
+
+regel PR-CIV-2026-001 "Dagvaarding digitaal indienen — handel":
+    als zaakstroom is handel
+  en procedureType is dagvaarding
+  dan is digitaal indienen verplicht
+  en is indieningswijze digitaal
+  en is formaat pdf.
+
+regel PR-CIV-2026-002 "Dagvaarding digitaal indienen — kanton":
+    als zaakstroom is kanton
+  en procedureType is dagvaarding
+  dan is digitaal indienen verplicht
+  en is indieningswijze digitaal
+  en is formaat pdf.
+
+regel PR-CIV-2026-003 "Verzoekschrift digitaal indienen":
+    als procedureType is verzoek
+  dan is digitaal indienen verplicht
+  en is indieningswijze digitaal
+  en is formaat pdf.
+
+regel PR-CIV-2026-004 "Ontheffing digitale indiening — mogelijk":
+    als procedureType is dagvaarding of verzoek
+  dan is ontheffing mogelijk
+  en is handmatige controle vereist
+  met als reden "Ontheffing van digitale indiening moet worden beoordeeld door de griffie."
+
+regel PR-CIV-2026-005 "Bijlagen bij dagvaarding — formaat":
+    als procedureType is dagvaarding
+  en documentType is bewijsstuk
+  dan is formaat pdf
+  en is digitaal indienen verplicht.
+
+regel PR-CIV-2026-006 "Conclusie van eis — digitaal":
+    als zaakstroom is handel
+  en procedureType is dagvaarding
+  en documentType is conclusie
+  dan is digitaal indienen verplicht
+  en is formaat pdf.
+
+regel PR-CIV-2026-007 "Akte — digitaal":
+    als documentType is akte
+  dan is digitaal indienen verplicht
+  en is formaat pdf.
+
+regel PR-CIV-2026-008 "Papieren indiening — uitzondering":
+    als indieningswijze is papier
+  en digitaalVerplicht is ja
+  dan is handmatige controle vereist
+  met als reden "Papieren indiening bij digitale verplichting — controleer of ontheffing is verleend."
+
+regel PR-CIV-2026-009 "Griffiersakte — formaat":
+    als documentType is griffiersakte
+  dan is formaat pdf
+  en is digitaal indienen verplicht.
+
+regel PR-CIV-2026-010 "Hybride indiening — handmatige controle":
+    als indieningswijze is hybride
+  dan is handmatige controle vereist
+  met als reden "Hybride indiening — controleer welke delen digitaal en welke papieren zijn."

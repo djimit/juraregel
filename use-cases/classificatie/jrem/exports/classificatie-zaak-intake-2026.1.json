@@ -1,0 +1,157 @@
+{
+  "schemaVersion": "1.0.0",
+  "ruleSetId": "classificatie-zaak-intake",
+  "version": "2026.1",
+  "validFrom": "2026-01-01",
+  "validUntil": "2026-12-31",
+  "jurisdiction": "NL",
+  "domain": "civiel-rechtbank",
+  "procedureType": "dagvaarding",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "CL-2026-001",
+      "name": "Kanton bij vordering tot €25.000",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet Rv",
+          "section": "Artikel 93 — kanton zaakstroom"
+        }
+      ],
+      "conditions": {
+        "vorderingWaarde": {
+          "gte": 0,
+          "lte": 25000
+        }
+      },
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "kanton_tot_25000",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      }
+    },
+    {
+      "ruleId": "CL-2026-002",
+      "name": "Handel bij vordering boven €25.000",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet Rv",
+          "section": "Artikel 93 — handel zaakstroom"
+        }
+      ],
+      "conditions": {
+        "vorderingWaarde": {
+          "gt": 25000
+        }
+      },
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "handel_boven_25000",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      }
+    },
+    {
+      "ruleId": "CL-2026-003",
+      "name": "Onbepaalde vordering — manual review",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet Rv",
+          "section": "Artikel 93"
+        }
+      ],
+      "conditions": {
+        "vorderingWaarde": "onbepaald"
+      },
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "onbepaald_manual",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Vorderingwaarde onbepaald — classificatie vereist menselijke beoordeling."
+      }
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "CL-SC-001",
+      "description": "Vordering €5.000 → kanton",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 5000,
+        "bijzondereCategorie": "geen",
+        "rol": "eiser",
+        "partijType": "natuurlijk_persoon",
+        "onvermogend": false,
+        "verweerStatus": "n.v.t."
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "kanton_tot_25000",
+        "appliedRules": [
+          "CL-2026-001"
+        ]
+      }
+    },
+    {
+      "id": "CL-SC-002",
+      "description": "Vordering €50.000 → handel",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 50000,
+        "bijzondereCategorie": "geen",
+        "rol": "eiser",
+        "partijType": "natuurlijk_persoon",
+        "onvermogend": false,
+        "verweerStatus": "n.v.t."
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "handel_boven_25000",
+        "appliedRules": [
+          "CL-2026-002"
+        ]
+      }
+    }
+  ],
+  "transitionRules": [],
+  "metadata": {
+    "juridischeContext": {
+      "wet": "Wet Rv",
+      "wetBwbrId": "BWBR0002534",
+      "wetVersieLaatstGecheckt": "2026-06-15",
+      "tariefVersie": "2026.1"
+    },
+    "bronverificatieDatum": "2026-06-15",
+    "acceptatieType": "full",
+    "juristAccordering": {
+      "geaccondeerdDoor": "D. Landman (agent-executed human gate)",
+      "datum": "2026-07-04",
+      "geldigTot": "2027-07-04",
+      "versie": "2026.1"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+// ═══════════════════════════════════════════════════════════
+// Begrippenmodel — Procesreglement civiele dagvaardingszaken
+// Bron: Landelijk procesreglement 1 juli 2025
+// Status: DRAFT — pending jurist review
+// ═══════════════════════════════════════════════════════════
+
+begrip zaakstroom: "De stroom van de zaak." waarden: kanton, handel.
+begrip procedureType: "Het type procedure." waarden: dagvaarding, verzoek.
+begrip indieningswijze: "Hoe het stuk wordt ingediend." waarden: digitaal, papier, hybride.
+begrip documentType: "Type document dat wordt ingediend." waarden: dagvaarding, conclusie, akte, bewijsstuk, griffiersakte.
+begrip formaat: "Bestandsformaat van digitale indiening." waarden: pdf, xml, anders.
+begrip digitaalVerplicht: "Of digitale indiening verplicht is." waarden: ja, nee, ontheffing_mogelijk.
+begrip ontheffing: "Of ontheffing van digitale indiening mogelijk is." waarden: mogelijk, niet_mogelijk.
