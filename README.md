@@ -156,6 +156,36 @@ curl http://127.0.0.1:8496/v1/os/standaarden?categorie=api-design
 curl http://127.0.0.1:8496/v1/os/rapport/ministerie-bzk
 ```
 
+## Use Case: NORA — Architectuur Compliance (Meta-laag)
+
+**Als** enterprise architect bij een overheidsorganisatie **wil ik** automatisch valideren of mijn oplossing voldoet aan NORA principes **zodat** ik NORA compliance kan bewijzen met verwijzingen naar specifieke use cases.
+
+| Rol | Probleem | Oplossing |
+|---|---|---|
+| Enterprise architect | NORA compliance handmatig per principe | Rule API checkt 15 NORA principes |
+| CIO | Onduidelijk welke principes open staan | NORA compliance matrix met use case mapping |
+| TOGAF architect | Principes niet gekoppeld aan implementatie | Matrix mapped principes → JuraRegel use cases |
+
+NORA is de **overkoepelende architectuurlaag** die alle use cases verbindt. 15 principes in 5 categorieën (architectuur, serviceorientatie, beveiliging, identiteit, data). Rule API op `localhost:8497` met `GET /v1/nora/matrix` voor compliance matrix.
+
+## Product Features
+
+### Docker Compose
+```bash
+docker compose up  # Start alle 8 Rule APIs
+```
+
+### CLI: Nieuwe Use Case Scaffolden
+```bash
+bash juraregel-init.sh avg 8498  # Scaffold een AVG use case op port 8498
+```
+
+### Contributing
+Zie [CONTRIBUTING.md](CONTRIBUTING.md) voor de use case template en bijdrage richtlijnen.
+
+### NORA Compliance Matrix
+Zie [docs/nora-compliance-matrix.md](docs/nora-compliance-matrix.md) voor de Mermaid diagram met NORA principes → use case mapping.
+
 ## Architectuur
 
 ```
@@ -225,7 +255,7 @@ Zie `jrem-open-source/` voor het standalone JREM schema, validator en examples.
 | Metriek | Waarde |
 |---|---|
 | Use cases | 4 (griffierecht, procesreglement, classificatie, publicatie) |
-| Tests | 120 (alle groen) |
+| Tests | 183 (alle groen) |
 | CI gates | 14 per use case |
 | JREM regels | 46 |
 | Pseudonimisering engine | V4.2 — 100% op 25.127 uitspraken |

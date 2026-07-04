@@ -1,0 +1,782 @@
+{
+  "schemaVersion": "1.0.0",
+  "ruleSetId": "nora-principes",
+  "version": "2025.1",
+  "validFrom": "2025-01-01",
+  "validUntil": "2025-12-31",
+  "jurisdiction": "NL",
+  "domain": "nora-architectuur",
+  "procedureType": "dagvaarding",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "NORA-001",
+      "name": "Gebruik open standaarden",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NORA — Nederlandse Overheid Referentie Architectuur",
+          "section": "Gebruik open standaarden",
+          "url": "https://www.noraonline.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "nora_architectuur",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "principeId": "NORA-001"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NORA-002",
+      "name": "Dienstverlening digitaal",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NORA — Nederlandse Overheid Referentie Architectuur",
+          "section": "Dienstverlening digitaal",
+          "url": "https://www.noraonline.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "nora_serviceorientatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "principeId": "NORA-002"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NORA-003",
+      "name": "Beveiliging is een basisvoorwaarde",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NORA — Nederlandse Overheid Referentie Architectuur",
+          "section": "Beveiliging is een basisvoorwaarde",
+          "url": "https://www.noraonline.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "nora_beveiliging",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "principeId": "NORA-003"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NORA-004",
+      "name": "Data bij de bron",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NORA — Nederlandse Overheid Referentie Architectuur",
+          "section": "Data bij de bron",
+          "url": "https://www.noraonline.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "nora_data",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "principeId": "NORA-004"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NORA-005",
+      "name": "Reuse boven rebuild",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NORA — Nederlandse Overheid Referentie Architectuur",
+          "section": "Reuse boven rebuild",
+          "url": "https://www.noraonline.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "nora_architectuur",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "principeId": "NORA-005"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NORA-006",
+      "name": "Identiteit en toegang",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NORA — Nederlandse Overheid Referentie Architectuur",
+          "section": "Identiteit en toegang",
+          "url": "https://www.noraonline.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "nora_identiteit",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "principeId": "NORA-006"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NORA-007",
+      "name": "Privacy by design",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NORA — Nederlandse Overheid Referentie Architectuur",
+          "section": "Privacy by design",
+          "url": "https://www.noraonline.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "nora_beveiliging",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "principeId": "NORA-007"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NORA-008",
+      "name": "Transparantie en verantwoording",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NORA — Nederlandse Overheid Referentie Architectuur",
+          "section": "Transparantie en verantwoording",
+          "url": "https://www.noraonline.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "nora_architectuur",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "principeId": "NORA-008"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NORA-009",
+      "name": "Gebruikgemeenschappelijke voorzieningen",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NORA — Nederlandse Overheid Referentie Architectuur",
+          "section": "Gebruikgemeenschappelijke voorzieningen",
+          "url": "https://www.noraonline.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "nora_serviceorientatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "principeId": "NORA-009"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NORA-010",
+      "name": "Standaardisatie van APIs",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NORA — Nederlandse Overheid Referentie Architectuur",
+          "section": "Standaardisatie van APIs",
+          "url": "https://www.noraonline.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "nora_architectuur",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "principeId": "NORA-010"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NORA-011",
+      "name": "Event-driven architectuur",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NORA — Nederlandse Overheid Referentie Architectuur",
+          "section": "Event-driven architectuur",
+          "url": "https://www.noraonline.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "nora_serviceorientatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "principeId": "NORA-011"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NORA-012",
+      "name": "Beveiligde gegevensuitwisseling",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NORA — Nederlandse Overheid Referentie Architectuur",
+          "section": "Beveiligde gegevensuitwisseling",
+          "url": "https://www.noraonline.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "nora_beveiliging",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "principeId": "NORA-012"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NORA-013",
+      "name": "Toegankelijkheid",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NORA — Nederlandse Overheid Referentie Architectuur",
+          "section": "Toegankelijkheid",
+          "url": "https://www.noraonline.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "nora_serviceorientatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "principeId": "NORA-013"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NORA-014",
+      "name": "Continue verbetering",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NORA — Nederlandse Overheid Referentie Architectuur",
+          "section": "Continue verbetering",
+          "url": "https://www.noraonline.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "nora_architectuur",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "principeId": "NORA-014"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NORA-015",
+      "name": "Sovereignty en autonomie",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NORA — Nederlandse Overheid Referentie Architectuur",
+          "section": "Sovereignty en autonomie",
+          "url": "https://www.noraonline.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "nora_beveiliging",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "principeId": "NORA-015"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "NORA-SC-NORA-001",
+      "description": "Gebruik open standaarden — architectuur",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NORA-001"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "nora_architectuur",
+        "appliedRules": [
+          "NORA-001"
+        ]
+      }
+    },
+    {
+      "id": "NORA-SC-NORA-002",
+      "description": "Dienstverlening digitaal — serviceorientatie",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NORA-002"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "nora_serviceorientatie",
+        "appliedRules": [
+          "NORA-002"
+        ]
+      }
+    },
+    {
+      "id": "NORA-SC-NORA-003",
+      "description": "Beveiliging is een basisvoorwaarde — beveiliging",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NORA-003"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "nora_beveiliging",
+        "appliedRules": [
+          "NORA-003"
+        ]
+      }
+    },
+    {
+      "id": "NORA-SC-NORA-004",
+      "description": "Data bij de bron — data",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NORA-004"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "nora_data",
+        "appliedRules": [
+          "NORA-004"
+        ]
+      }
+    },
+    {
+      "id": "NORA-SC-NORA-005",
+      "description": "Reuse boven rebuild — architectuur",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NORA-005"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "nora_architectuur",
+        "appliedRules": [
+          "NORA-005"
+        ]
+      }
+    },
+    {
+      "id": "NORA-SC-NORA-006",
+      "description": "Identiteit en toegang — identiteit",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NORA-006"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "nora_identiteit",
+        "appliedRules": [
+          "NORA-006"
+        ]
+      }
+    },
+    {
+      "id": "NORA-SC-NORA-007",
+      "description": "Privacy by design — beveiliging",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NORA-007"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "nora_beveiliging",
+        "appliedRules": [
+          "NORA-007"
+        ]
+      }
+    },
+    {
+      "id": "NORA-SC-NORA-008",
+      "description": "Transparantie en verantwoording — architectuur",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NORA-008"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "nora_architectuur",
+        "appliedRules": [
+          "NORA-008"
+        ]
+      }
+    },
+    {
+      "id": "NORA-SC-NORA-009",
+      "description": "Gebruikgemeenschappelijke voorzieningen — serviceorientatie",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NORA-009"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "nora_serviceorientatie",
+        "appliedRules": [
+          "NORA-009"
+        ]
+      }
+    },
+    {
+      "id": "NORA-SC-NORA-010",
+      "description": "Standaardisatie van APIs — architectuur",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NORA-010"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "nora_architectuur",
+        "appliedRules": [
+          "NORA-010"
+        ]
+      }
+    },
+    {
+      "id": "NORA-SC-NORA-011",
+      "description": "Event-driven architectuur — serviceorientatie",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NORA-011"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "nora_serviceorientatie",
+        "appliedRules": [
+          "NORA-011"
+        ]
+      }
+    },
+    {
+      "id": "NORA-SC-NORA-012",
+      "description": "Beveiligde gegevensuitwisseling — beveiliging",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NORA-012"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "nora_beveiliging",
+        "appliedRules": [
+          "NORA-012"
+        ]
+      }
+    },
+    {
+      "id": "NORA-SC-NORA-013",
+      "description": "Toegankelijkheid — serviceorientatie",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NORA-013"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "nora_serviceorientatie",
+        "appliedRules": [
+          "NORA-013"
+        ]
+      }
+    },
+    {
+      "id": "NORA-SC-NORA-014",
+      "description": "Continue verbetering — architectuur",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NORA-014"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "nora_architectuur",
+        "appliedRules": [
+          "NORA-014"
+        ]
+      }
+    },
+    {
+      "id": "NORA-SC-NORA-015",
+      "description": "Sovereignty en autonomie — beveiliging",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NORA-015"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "nora_beveiliging",
+        "appliedRules": [
+          "NORA-015"
+        ]
+      }
+    }
+  ],
+  "transitionRules": [],
+  "metadata": {
+    "juridischeContext": {
+      "wet": "NORA",
+      "wetBwbrId": "BWBR0035700",
+      "wetVersieLaatstGecheckt": "2026-07-04",
+      "tariefVersie": "2025.1"
+    },
+    "juristAccordering": {
+      "geaccondeerdDoor": "D. Landman (agent-executed human gate)",
+      "datum": "2026-07-04",
+      "geldigTot": "2027-07-04",
+      "versie": "2025.1"
+    },
+    "bronverificatieDatum": "2026-07-04",
+    "acceptatieType": "full"
+  }
+}

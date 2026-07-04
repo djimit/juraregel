@@ -1,0 +1,108 @@
+// NORA Principes — RegelSpraak CNL
+// Bron: noraonline.nl
+
+regel NORA-001 "Gebruik open standaarden":
+  als principeId is "NORA-001"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "architectuur"
+  en is gekoppeld aan use cases: forumstandaardisatie, overheidsstandaarden.
+
+regel NORA-002 "Dienstverlening digitaal":
+  als principeId is "NORA-002"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "serviceorientatie"
+  en is gekoppeld aan use cases: griffierecht, procesreglement, classificatie.
+
+regel NORA-003 "Beveiliging is een basisvoorwaarde":
+  als principeId is "NORA-003"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "beveiliging"
+  en is gekoppeld aan use cases: bio2, publicatie.
+
+regel NORA-004 "Data bij de bron":
+  als principeId is "NORA-004"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "data"
+  en is gekoppeld aan use cases: geen.
+
+regel NORA-005 "Reuse boven rebuild":
+  als principeId is "NORA-005"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "architectuur"
+  en is gekoppeld aan use cases: geen.
+
+regel NORA-006 "Identiteit en toegang":
+  als principeId is "NORA-006"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "identiteit"
+  en is gekoppeld aan use cases: overheidsstandaarden.
+
+regel NORA-007 "Privacy by design":
+  als principeId is "NORA-007"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "beveiliging"
+  en is gekoppeld aan use cases: publicatie.
+
+regel NORA-008 "Transparantie en verantwoording":
+  als principeId is "NORA-008"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "architectuur"
+  en is gekoppeld aan use cases: griffierecht, bio2, forumstandaardisatie.
+
+regel NORA-009 "Gebruikgemeenschappelijke voorzieningen":
+  als principeId is "NORA-009"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "serviceorientatie"
+  en is gekoppeld aan use cases: overheidsstandaarden.
+
+regel NORA-010 "Standaardisatie van APIs":
+  als principeId is "NORA-010"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "architectuur"
+  en is gekoppeld aan use cases: overheidsstandaarden.
+
+regel NORA-011 "Event-driven architectuur":
+  als principeId is "NORA-011"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "serviceorientatie"
+  en is gekoppeld aan use cases: overheidsstandaarden.
+
+regel NORA-012 "Beveiligde gegevensuitwisseling":
+  als principeId is "NORA-012"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "beveiliging"
+  en is gekoppeld aan use cases: overheidsstandaarden.
+
+regel NORA-013 "Toegankelijkheid":
+  als principeId is "NORA-013"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "serviceorientatie"
+  en is gekoppeld aan use cases: geen.
+
+regel NORA-014 "Continue verbetering":
+  als principeId is "NORA-014"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "architectuur"
+  en is gekoppeld aan use cases: geen.
+
+regel NORA-015 "Sovereignty en autonomie":
+  als principeId is "NORA-015"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "beveiliging"
+  en is gekoppeld aan use cases: bio2.
+

@@ -1,0 +1,34 @@
+version: "3.9"
+services:
+  griffierecht:
+    build: .
+    command: python use-cases/griffierecht/api/app.py
+    ports: ["8490:8490"]
+  procesreglement:
+    build: .
+    command: python use-cases/procesreglement/api/app.py
+    ports: ["8491:8491"]
+  classificatie:
+    build: .
+    command: python use-cases/classificatie/api/app.py
+    ports: ["8492:8492"]
+  publicatie:
+    build: .
+    command: python use-cases/publicatie/api/app.py
+    ports: ["8493:8493"]
+  bio2:
+    build: .
+    command: python use-cases/bio2/api/app.py
+    ports: ["8494:8494"]
+  forumstandaardisatie:
+    build: .
+    command: python use-cases/forumstandaardisatie/api/app.py
+    ports: ["8495:8495"]
+  overheidsstandaarden:
+    build: .
+    command: python use-cases/overheidsstandaarden/api/app.py
+    ports: ["8496:8496"]
+  nora:
+    build: .
+    command: python use-cases/nora/api/app.py
+    ports: ["8497:8497"]

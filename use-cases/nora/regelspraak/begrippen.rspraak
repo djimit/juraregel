@@ -1,0 +1,6 @@
+// Begrippenmodel — NORA Architectuur
+
+begrip principeId: "Unieke identificatie van een NORA principe." type: tekst.
+begrip categorie: "Categorie." waarden: architectuur, serviceorientatie, identiteit, data, beveiliging.
+begrip compliant: "Voldoet de oplossing aan het principe?" waarden: ja, nee, deels, onbekend.
+begrip gekoppeldeUseCases: "Welke JuraRegel use cases vullen dit principe in?" type: lijst.
