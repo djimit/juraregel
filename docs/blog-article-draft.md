@@ -6,7 +6,7 @@
 
 ## 1. Het probleem: regels in PDFs, niet in code
 
-De Nederlandse overheid werkt met honderden administratief-juridische regels. De BIO2 heeft 167 beveiligingsmaatregelen. De Forum Standaardisatie heeft 22 verplichte open standaarden. De NCSC publiceert 32 ICT-beveiligingsrichtlijnen. De Rechtspraak hanteert de pseudonimiseringsrichtlijn voor 174.210 gepubliceerde uitspraken.
+De Nederlandse overheid werkt met honderden administratief-juridische regels. De BIO2 heeft 167 beveiligingsmaatregelen. De Forum Standaardisatie heeft 22 verplichte open standaarden. De NCSC publiceert 32 ICT-beveiligingsrichtlijnen. De Rechtspraak hanteert de pseudonimiseringsrichtlijn voor 1.5M gepubliceerde uitspraken.
 
 Al deze regels staan in PDFs, op websites, in wetten. Ze zijn leesbaar voor juristen. Ze zijn niet uitvoerbaar door computers.
 
