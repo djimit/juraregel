@@ -1,0 +1,118 @@
+// ═══════════════════════════════════════════════════════════
+// Beslistabellen — Griffierecht civiele rechter 2026
+// Bron: Wgbz artikel 2, Rechtspraak.nl tarieftabel 2026
+// ═══════════════════════════════════════════════════════════
+
+// ═══════════════════════════════════════════════════════════
+// KANTONZAKEN — alleen eiser/verzoeker betaalt griffierecht
+// Bron: Wgbz artikel 2, eerste lid
+// ═══════════════════════════════════════════════════════════
+
+regel GR-KAN-2026-001 "Kantonzaken — eiser natuurlijk persoon of onvermogend":
+  als zaakstroom is kanton
+  en rol is eiser of verzoeker
+  en partijType is natuurlijk_persoon of onvermogend
+  dan is het griffierecht €91
+  en is de categorie "kanton_vast_tarief".
+
+regel GR-KAN-2026-002 "Kantonzaken — eiser niet-natuurlijk persoon, vordering ≤ €25.000":
+  als zaakstroom is kanton
+  en rol is eiser of verzoeker
+  en partijType is niet_natuurlijk_persoon
+  en vorderingWaarde is ten hoogste €25.000
+  dan is het griffierecht €91
+  en is de categorie "kanton_vast_tarief".
+
+regel GR-KAN-2026-003 "Kantonzaken — eiser niet-natuurlijk persoon, vordering > €25.000":
+  als zaakstroom is kanton
+  en rol is eiser of verzoeker
+  en partijType is niet_natuurlijk_persoon
+  en vorderingWaarde is meer dan €25.000
+  dan is het griffierecht €727
+  en is de categorie "kanton_nnp_boven_25000".
+
+regel GR-KAN-2026-004 "Kantonzaken — gedaagde betaalt geen griffierecht":
+  als zaakstroom is kanton
+  en rol is gedaagde of verweerder
+  dan is er geen griffierecht verschuldigd
+  en is de categorie "kanton_gedaagde_niet_verschuldigd".
+
+// ═══════════════════════════════════════════════════════════
+// CIVIELE ZAKEN (HANDEL) — eiser en gedaagde-bij-verweer
+// Bron: Wgbz artikel 2, tweede en derde lid
+// ═══════════════════════════════════════════════════════════
+
+// --- Onbepaalde waarde ---
+regel GR-CIV-2026-001 "Onbepaalde waarde — natuurlijk persoon of onvermogend":
+  als zaakstroom is handel
+  en rol is eiser of verzoeker
+  en partijType is natuurlijk_persoon of onvermogend
+  en vorderingWaarde is onbepaald
+  dan is het griffierecht €364
+  en is de categorie "onbepaald_natuurlijk".
+
+regel GR-CIV-2026-002 "Onbepaalde waarde — niet-natuurlijk persoon":
+  als zaakstroom is handel
+  en rol is eiser of verzoeker
+  en partijType is niet_natuurlijk_persoon
+  en vorderingWaarde is onbepaald
+  dan is het griffierecht €727
+  en is de categorie "onbepaald_niet_natuurlijk".
+
+// --- Vordering ≤ €100.000 ---
+// Boundary: ≤ betekent "ten hoogste" — exact €100.000 valt in deze categorie.
+// Bron: Wgbz artikel 2, tweede lid — "tot en met €100.000"
+regel GR-CIV-2026-003 "Vordering ≤ €100.000 — natuurlijk persoon of onvermogend":
+  als zaakstroom is handel
+  en rol is eiser of verzoeker
+  en partijType is natuurlijk_persoon of onvermogend
+  en vorderingWaarde is ten minste €0 en ten hoogste €100.000
+  dan is het griffierecht €364
+  en is de categorie "vordering_lte_100000_natuurlijk".
+
+regel GR-CIV-2026-004 "Vordering ≤ €100.000 — niet-natuurlijk persoon":
+  als zaakstroom is handel
+  en rol is eiser of verzoeker
+  en partijType is niet_natuurlijk_persoon
+  en vorderingWaarde is ten minste €0 en ten hoogste €100.000
+  dan is het griffierecht €727
+  en is de categorie "vordering_lte_100000_niet_natuurlijk".
+
+// --- Vordering > €100.000 en ≤ €1.000.000 ---
+// Boundary: > betekent "meer dan" — €100.000,01 valt in deze categorie.
+// ≤ betekent "ten hoogste" — exact €1.000.000 valt in deze categorie.
+// Bron: Wgbz artikel 2, tweede lid — "meer dan €100.000 tot en met €1.000.000"
+regel GR-CIV-2026-005 "Vordering > €100.000 en ≤ €1.000.000 — natuurlijk persoon of onvermogend":
+  als zaakstroom is handel
+  en rol is eiser of verzoeker
+  en partijType is natuurlijk_persoon of onvermogend
+  en vorderingWaarde is meer dan €100.000 en ten hoogste €1.000.000
+  dan is het griffierecht €2.803
+  en is de categorie "vordering_gt_100000_lte_1000000_natuurlijk".
+
+regel GR-CIV-2026-006 "Vordering > €100.000 en ≤ €1.000.000 — niet-natuurlijk persoon":
+  als zaakstroom is handel
+  en rol is eiser of verzoeker
+  en partijType is niet_natuurlijk_persoon
+  en vorderingWaarde is meer dan €100.000 en ten hoogste €1.000.000
+  dan is het griffierecht €3.616
+  en is de categorie "vordering_gt_100000_lte_1000000_niet_natuurlijk".
+
+// --- Vordering > €1.000.000 ---
+// Boundary: > betekent "meer dan" — €1.000.000,01 valt in deze categorie.
+// Bron: Wgbz artikel 2, tweede lid — "meer dan €1.000.000"
+regel GR-CIV-2026-007 "Vordering > €1.000.000 — natuurlijk persoon of onvermogend":
+  als zaakstroom is handel
+  en rol is eiser of verzoeker
+  en partijType is natuurlijk_persoon of onvermogend
+  en vordingWaarde is meer dan €1.000.000
+  dan is het griffierecht €3.616
+  en is de categorie "vordering_gt_1000000_natuurlijk".
+
+regel GR-CIV-2026-008 "Vordering > €1.000.000 — niet-natuurlijk persoon":
+  als zaakstroom is handel
+  en rol is eiser of verzoeker
+  en partijType is niet_natuurlijk_persoon
+  en vorderingWaarde is meer dan €1.000.000
+  dan is het griffierecht €5.644
+  en is de categorie "vordering_gt_1000000_niet_natuurlijk".

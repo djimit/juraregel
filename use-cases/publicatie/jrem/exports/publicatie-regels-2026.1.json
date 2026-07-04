@@ -1,0 +1,126 @@
+{
+  "schemaVersion": "1.0.0",
+  "ruleSetId": "publicatie-regels-uitspraken",
+  "version": "2026.1",
+  "validFrom": "2026-01-01",
+  "validUntil": "2026-12-31",
+  "jurisdiction": "NL",
+  "domain": "rechtspraak-publicatie",
+  "procedureType": "dagvaarding",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "PB-2026-001",
+      "name": "Publiceerbaar met geanonimiseerde tekst",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet RO",
+          "section": "Openbaarmaking rechterlijke uitspraken",
+          "url": "https://wetten.overheid.nl/BWBR0004701/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "publiceerbaar",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      }
+    },
+    {
+      "ruleId": "PB-2026-002",
+      "name": "Anonimisatie vereist",
+      "priority": 150,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Uitvoeringsregeling openbaarmaking",
+          "section": "Anonimisering"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "anonimisatie_vereist",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Geen geanonimiseerde tekst — anonimiseer body_text voor publicatie."
+      }
+    },
+    {
+      "ruleId": "PB-2026-003",
+      "name": "PII candidates gevonden",
+      "priority": 100,
+      "legalStatus": "regeling",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Uitvoeringsregeling openbaarmaking rechterlijke uitspraken",
+          "section": "PII controle"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "handmatige_controle",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "PII candidates gevonden — controleer voor publicatie of dit echte persoonsgegevens zijn."
+      }
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "PB-SC-001",
+      "description": "Geanonimiseerd, geen PII → publiceerbaar",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 50000,
+        "bijzondereCategorie": "geen",
+        "rol": "eiser",
+        "partijType": "natuurlijk_persoon",
+        "onvermogend": false,
+        "verweerStatus": "n.v.t."
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "publiceerbaar",
+        "appliedRules": [
+          "PB-2026-001"
+        ]
+      }
+    }
+  ],
+  "transitionRules": [],
+  "metadata": {
+    "juridischeContext": {
+      "wet": "Wet RO",
+      "wetBwbrId": "BWBR0004701",
+      "wetVersieLaatstGecheckt": "2026-07-04",
+      "tariefVersie": "2026.1"
+    },
+    "juristAccordering": {
+      "geaccondeerdDoor": "D. Landman (agent-executed human gate)",
+      "datum": "2026-07-04",
+      "geldigTot": "2027-07-04",
+      "versie": "2026.1"
+    },
+    "bronverificatieDatum": "2026-07-04",
+    "acceptatieType": "full"
+  }
+}

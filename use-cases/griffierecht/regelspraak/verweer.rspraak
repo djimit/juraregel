@@ -1,0 +1,62 @@
+// ═══════════════════════════════════════════════════════════
+// VerweerStatus logica — Gedaagde bij verweer
+// Bron: Wgbz artikel 2, derde lid
+// ═══════════════════════════════════════════════════════════
+
+// --- Gedaagde bij verweer — zelfde tarieven als eiser ---
+// Bij schriftelijk verweer is de gedaagde griffierecht verschuldigd.
+// Het tarief is gelijk aan het tarief van de eiser voor dezelfde categorie.
+
+regel GR-CIV-2026-009 "Gedaagde bij verweer — onbepaald, natuurlijk persoon":
+  als zaakstroom is handel
+  en rol is gedaagde
+  en verweerStatus is ingediend
+  en partijType is natuurlijk_persoon of onvermogend
+  en vorderingWaarde is onbepaald
+  dan is het griffierecht €364
+  en is de categorie "gedaagde_verweer_onbepaald_natuurlijk".
+
+regel GR-CIV-2026-010 "Gedaagde bij verweer — ≤ €100.000, natuurlijk persoon":
+  als zaakstroom is handel
+  en rol is gedaagde
+  en verweerStatus is ingediend
+  en partijType is natuurlijk_persoon of onvermogend
+  en vorderingWaarde is ten minste €0 en ten hoogste €100.000
+  dan is het griffierecht €364
+  en is de categorie "gedaagde_verweer_lte_100000_natuurlijk".
+
+regel GR-CIV-2026-011 "Gedaagde bij verweer — > €100.000 en ≤ €1.000.000, natuurlijk persoon":
+  als zaakstroom is handel
+  en rol is gedaagde
+  en verweerStatus is ingediend
+  en partijType is natuurlijk_persoon of onvermogend
+  en vorderingWaarde is meer dan €100.000 en ten hoogste €1.000.000
+  dan is het griffierecht €2.803
+  en is de categorie "gedaagde_verweer_gt_100000_lte_1000000_natuurlijk".
+
+regel GR-CIV-2026-012 "Gedaagde bij verweer — > €1.000.000, natuurlijk persoon":
+  als zaakstroom is handel
+  en rol is gedaagde
+  en verweerStatus is ingediend
+  en partijType is natuurlijk_persoon of onvermogend
+  en vorderingWaarde is meer dan €1.000.000
+  dan is het griffierecht €3.616
+  en is de categorie "gedaagde_verweer_gt_1000000_natuurlijk".
+
+// --- Geen verweer → geen griffierecht ---
+regel GR-CIV-2026-013 "Gedaagde zonder verweer — geen griffierecht":
+  als zaakstroom is handel
+  en rol is gedaagde
+  en verweerStatus is niet_ingediend
+  dan is er geen griffierecht verschuldigd
+  en is de categorie "gedaagde_geen_verweer".
+
+// --- Verweer onbekend → handmatige controle ---
+regel GR-CIV-2026-014 "Gedaagde verweer onbekend — handmatige controle":
+  als zaakstroom is handel
+  en rol is gedaagde
+  en verweerStatus is onbekend
+  dan is er geen griffierecht verschuldigd
+  en is handmatige controle vereist
+  met als reden "VerweerStatus is onbekend. Gedaagde is alleen griffierecht verschuldigd bij schriftelijk verweer. Controleer of verweer is ingediend."
+  en is de categorie "gedaagde_verweer_onbekend".

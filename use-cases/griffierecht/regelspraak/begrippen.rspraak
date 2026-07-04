@@ -1,0 +1,59 @@
+// ═══════════════════════════════════════════════════════════
+// Begrippenmodel — Griffierecht civiele dagvaardingszaken
+// Bron: Wgbz (Wet griffierechten burgerlijke zaken)
+// ═══════════════════════════════════════════════════════════
+
+// --- Rechtsgebied ---
+begrip rechtsgebied:
+  "Het rechtsgebied waarbinnen de procedure valt."
+  waarden: civiel, bestuursrecht, strafrecht.
+
+// --- Zaakstroom ---
+begrip zaakstroom:
+  "De stroom van de zaak binnen de rechtbank."
+  waarden: kanton, handel.
+
+// --- ProcedureType ---
+begrip procedureType:
+  "Het type procedure."
+  waarden: dagvaarding, verzoek, kort_geding.
+
+// --- Rol ---
+begrip rol:
+  "De rol van de partij in de procedure."
+  waarden: eiser, gedaagde, verzoeker, verweerder.
+
+// --- PartijType ---
+begrip partijType:
+  "Het type partij dat griffierecht verschuldigd kan zijn."
+  waarden: natuurlijk_persoon, niet_natuurlijk_persoon, onvermogend.
+  
+// Toelichting: "onvermogend" is een INPUT, geen beoordeling.
+// De vaststelling of iemand onvermogend is, geschiedt via een 
+// externe procedure (toevoeging RA) en valt buiten de Rule Service.
+
+// --- VorderingWaarde ---
+begrip vorderingWaarde:
+  "De waarde van de vordering in euro's, of 'onbepaald'."
+  type: bedrag of onbepaald.
+
+// --- VerweerStatus ---
+begrip verweerStatus:
+  "De status van het verweer bij een gedaagde."
+  waarden: niet_ingediend, ingediend, onbekend, n.v.t.
+  
+// Toelichting: "n.v.t." voor eiser/verzoeker (die hoeven geen verweer in te dienen).
+// "onbekend" vereist handmatige controle.
+
+// --- BijzondereCategorie ---
+begrip bijzondereCategorie:
+  "Bijzondere categorie die afwijkende griffierechtregels kan hebben."
+  waarden: geen, whoa, depot, akte.
+  
+// Toelichting: depot en akte zijn mogelijk aparte kostenposten,
+// niet direct griffierecht. Verduidelijking nodig in bronverificatie.
+
+// --- Tariefjaar ---
+begrip tariefjaar:
+  "Het jaar waarvoor de griffierechttarieven gelden."
+  type: jaartal.

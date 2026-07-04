@@ -1,0 +1,7 @@
+// Begrippenmodel — Publicatieregels uitspraken
+// Bron: Wet RO, Uitvoeringsregeling openbaarmaking rechterlijke uitspraken
+begrip publiceerbaar: "Mag de uitspraak worden gepubliceerd." waarden: ja, nee, voorwaardelijk.
+begrip anonimisatieVereist: "Welke velden moeten worden geanonimiseerd." waarden: body_text, body_text_anonymized, geen.
+begrip piiCandidateCount: "Aantal PII-candidates gevonden in de uitspraak." type: geheel_getal.
+begrip hasAnonymizedText: "Of een geanonimiseerde versie beschikbaar is." waarden: ja, nee.
+begrip publicatieStatus: "Status van de publicatie." waarden: publiceerbaar, anonimisatie_vereist, handmatige_controle, niet_publiceerbaar.

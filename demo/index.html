@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal RuleOps Platform — Intake Demo</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f5; color: #1a1a1a; padding: 2rem; }
+        .container { max-width: 900px; margin: 0 auto; }
+        h1 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .subtitle { color: #666; margin-bottom: 2rem; }
+        .card { background: white; border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .card h2 { font-size: 1.1rem; margin-bottom: 1rem; }
+        .form-group { margin-bottom: 1rem; }
+        label { display: block; font-weight: 600; margin-bottom: 0.25rem; font-size: 0.9rem; }
+        select, input { width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px; font-size: 0.9rem; }
+        .row { display: flex; gap: 1rem; }
+        .row > .form-group { flex: 1; }
+        button { background: #0066cc; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; font-size: 1rem; cursor: pointer; width: 100%; }
+        button:hover { background: #0052a3; }
+        #result { display: none; }
+        .amount { font-size: 2rem; font-weight: 700; color: #0066cc; }
+        .category { display: inline-block; background: #e6f2ff; color: #0066cc; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.85rem; margin-top: 0.5rem; }
+        .warning { background: #fff3cd; border: 1px solid #ffc107; color: #856404; padding: 0.75rem; border-radius: 4px; margin-top: 0.5rem; font-size: 0.9rem; }
+        .reasoning-step { padding: 0.5rem 0; border-bottom: 1px solid #eee; font-size: 0.9rem; }
+        .reasoning-step:last-child { border-bottom: none; }
+        .source-ref { font-size: 0.85rem; color: #666; margin-top: 0.25rem; }
+        .source-ref a { color: #0066cc; }
+        .audit-info { font-size: 0.8rem; color: #999; margin-top: 0.5rem; }
+        .jur-ctx { background: #e8f5e9; border: 1px solid #4caf50; border-radius: 4px; padding: 0.75rem; margin-top: 0.5rem; font-size: 0.85rem; }
+        .jur-ctx-title { font-weight: 600; color: #2e7d32; margin-bottom: 0.25rem; }
+        .jur-ctx-row { display: flex; gap: 0.5rem; margin-top: 0.15rem; }
+        .jur-ctx-label { color: #666; min-width: 120px; }
+        .jur-ctx-value { font-weight: 500; }
+        .draft-badge { display: inline-block; background: #fff3cd; color: #856404; padding: 0.15rem 0.5rem; border-radius: 3px; font-size: 0.75rem; margin-left: 0.5rem; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Legal RuleOps Platform — Intake Demo</h1>
+    <p class="subtitle">Auditbare juridische rule service — griffierecht, procesreglement, classificatie.</p>
+
+    <div class="card">
+        <h2>Domein selectie</h2>
+        <div class="form-group">
+            <label>Rule Service</label>
+            <select id="domain">
+                <option value="8490">Griffierecht (8490)</option>
+                <option value="8491">Procesreglement (8491)</option>
+                <option value="8492">Classificatie (8492)</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Zaakgegevens</h2>
+        <div class="row">
+            <div class="form-group"><label>Rechtsgebied</label><select id="rechtsgebied"><option value="civiel">Civiel</option><option value="strafrecht">Strafrecht (out of scope)</option></select></div>
+            <div class="form-group"><label>Zaakstroom</label><select id="zaakstroom"><option value="handel">Handel</option><option value="kanton">Kanton</option></select></div>
+        </div>
+        <div class="row">
+            <div class="form-group"><label>Proceduretype</label><select id="procedureType"><option value="dagvaarding">Dagvaarding</option></select></div>
+            <div class="form-group"><label>Vorderingwaarde</label><input type="text" id="vorderingWaarde" value="125000" placeholder="Bedrag of 'onbepaald'"></div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Partijgegevens</h2>
+        <div class="row">
+            <div class="form-group"><label>Rol</label><select id="rol"><option value="eiser">Eiser</option><option value="gedaagde">Gedaagde</option></select></div>
+            <div class="form-group"><label>Partijtype</label><select id="partijType"><option value="natuurlijk_persoon">Natuurlijk persoon</option><option value="niet_natuurlijk_persoon">Niet-natuurlijk persoon</option></select></div>
+        </div>
+        <div class="row">
+            <div class="form-group"><label>Onvermogend</label><select id="onvermogend"><option value="false">Nee</option><option value="true">Ja</option></select></div>
+            <div class="form-group"><label>Verweer status</label><select id="verweerStatus"><option value="n.v.t.">N.v.t.</option><option value="niet_ingediend">Niet ingediend</option><option value="ingediend">Ingediend</option><option value="onbekend">Onbekend</option></select></div>
+        </div>
+        <div class="form-group"><label>Tariefjaar</label><select id="tariefjaar"><option value="">Automatisch</option><option value="2026">2026</option><option value="2025">2025</option></select></div>
+    </div>
+
+    <button onclick="calculate()">Bereken</button>
+    <div id="result" class="card" style="margin-top: 1.5rem;"><h2>Berekening</h2><div id="result-content"></div></div>
+</div>
+<script>
+async function calculate() {
+    const port = document.getElementById('domain').value;
+    const vw = document.getElementById('vorderingWaarde').value;
+    const tj = document.getElementById('tariefjaar').value;
+    const req = {
+        calculationDate: new Date().toISOString().split('T')[0],
+        zaak: { rechtsgebied: document.getElementById('rechtsgebied').value, zaakstroom: document.getElementById('zaakstroom').value, procedureType: document.getElementById('procedureType').value, vorderingWaarde: vw === 'onbepaald' ? 'onbepaald' : parseFloat(vw), bijzondereCategorie: 'geen' },
+        partij: { rol: document.getElementById('rol').value, partijType: document.getElementById('partijType').value, onvermogend: document.getElementById('onvermogend').value === 'true', verweerStatus: document.getElementById('verweerStatus').value },
+    };
+    if (tj) req.tariefjaar = parseInt(tj);
+    try {
+        const resp = await fetch(`http://127.0.0.1:${port}/v1/griffierecht/calculate`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(req) });
+        const data = await resp.json();
+        displayResult(data);
+    } catch (e) {
+        document.getElementById('result').style.display = 'block';
+        document.getElementById('result-content').innerHTML = '<div class="warning">Kan geen verbinding maken met API op poort ' + port + '. Start de server.</div>';
+    }
+}
+function displayResult(data) {
+    const el = document.getElementById('result'); const c = document.getElementById('result-content'); el.style.display = 'block';
+    const amount = data.result.griffierecht.amount;
+    let html = `<div class="amount">${amount !== null ? '€' + amount.toLocaleString('nl-NL') : 'Geen griffierecht'}</div><div class="category">${data.result.category}</div>`;
+    if (data.domain) html += `<div style="margin-top:0.5rem;font-size:0.9rem;">Domein: <strong>${data.domain}</strong></div>`;
+    if (data.result.manualReviewRequired) html += '<div class="warning">⚠️ Handmatige controle vereist</div>';
+    (data.warnings || []).forEach(w => html += `<div class="warning">${w}</div>`);
+    // JuridischeContext
+    const jc = data.juridischeContext;
+    if (jc) {
+        html += '<div class="jur-ctx"><div class="jur-ctx-title">Juridische Context</div>';
+        html += `<div class="jur-ctx-row"><span class="jur-ctx-label">Wet:</span><span class="jur-ctx-value">${jc.wet || '—'}</span></div>`;
+        html += `<div class="jur-ctx-row"><span class="jur-ctx-label">BWBR:</span><span class="jur-ctx-value">${jc.wetBwbrId || '—'}</span></div>`;
+        html += `<div class="jur-ctx-row"><span class="jur-ctx-label">Versie:</span><span class="jur-ctx-value">${jc.tariefVersie || '—'}</span></div>`;
+        html += `<div class="jur-ctx-row"><span class="jur-ctx-label">Laatst gecheckt:</span><span class="jur-ctx-value">${jc.wetVersieLaatstGecheckt || '—'}</span></div>`;
+        html += '</div>';
+    }
+    html += '<h3 style="margin-top:1.5rem;">Uitleg</h3><p style="margin-bottom:1rem;">' + data.explanation.summary + '</p>';
+    html += '<h3>Redeneerstappen</h3>';
+    (data.explanation.reasoningSteps || []).forEach(s => html += `<div class="reasoning-step">${s}</div>`);
+    html += '<h3 style="margin-top:1rem;">Toegepaste regels</h3>';
+    (data.explanation.appliedRules || []).forEach(r => html += `<div style="font-family:monospace;font-size:0.85rem;">${r}</div>`);
+    html += '<h3 style="margin-top:1rem;">Bronverwijzingen</h3>';
+    (data.explanation.sourceRefs || []).forEach(r => html += `<div class="source-ref">${r.title}${r.section ? ' — ' + r.section : ''}${r.url ? ' <a href="' + r.url + '" target="_blank">↗</a>' : ''}</div>`);
+    html += '<h3 style="margin-top:1rem;">Audit</h3>';
+    html += `<div class="audit-info">Calculation ID: ${data.calculationId}</div>`;
+    html += `<div class="audit-info">Ruleset: ${data.ruleSetVersion}</div>`;
+    html += `<div class="audit-info">Input hash: ${(data.audit.inputHash || '').substring(0,30)}...</div>`;
+    c.innerHTML = html;
+}
+</script>
+</body>
+</html>

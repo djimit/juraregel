@@ -1,0 +1,126 @@
+// ═══════════════════════════════════════════════════════════
+// Pseudonimiseringsrichtlijn — Rule Service implementatie
+// Bron: https://www.rechtspraak.nl/uitspraken/pseudonimiseringsrichtlijn
+// Doel: 95% nauwkeurigheid — false positives reduceren door
+//       richtlijn-uitzonderingen te implementeren als regels
+// ═══════════════════════════════════════════════════════════
+
+// --- Begrippen ---
+
+begrip pseudonimiseringsStatus: "Status van een gedetecteerd gegeven."
+  waarden: pseudonimiseer, niet_pseudonimiseer, handmatige_controle.
+
+begrip gegevenType: "Type gedetecteerd gegeven."
+  waarden: geboortedatum, adres, postcode, email, telefoon, bsn, kenteken.
+
+begrip persoonType: "Type persoon waartoe het gegeven behoort."
+  waarden: particulier, professional, rechtspersoon, overheid, onbekend.
+
+begrip rechtsgebied: "Het rechtsgebied van de uitspraak."
+  waarden: civiel, strafrecht, bestuursrecht, arbeid, familierecht.
+
+// --- PersoonType classificatie ---
+
+regel PR-001 "Professional bij procedure — niet pseudonimiseren":
+  als context bevat "advocaat" of "mr." of "notaris" of "deurwaarder"
+  of "procuratiehouder" of "advocaat-stagiair" of "griffier"
+  dan is persoonType professional
+  en is pseudonimiseringsStatus niet_pseudonimiseer.
+
+regel PR-002 "Persoon in dienst van rechtspersoon — niet pseudonimiseren":
+  als context bevat "bestuurder" of "directeur" of "gemachtigde"
+  of "vertegenwoordiger" of "zaakwaarnemer"
+  en context bevat "B.V." of "N.V." of "Stichting" of "Vereniging"
+  dan is persoonType professional
+  en is pseudonimiseringsStatus niet_pseudonimiseer.
+
+regel PR-003 "Rechtspersoon — niet pseudonimiseren":
+  als context bevat "B.V." of "N.V." of "Stichting" of "Vereniging"
+  of "Cooperatie" of "Onderlinge" of "vereniging van eigenaars"
+  dan is persoonType rechtspersoon
+  en is pseudonimiseringsStatus niet_pseudonimiseer.
+
+regel PR-004 "Overheidsorganisatie — niet pseudonimiseren":
+  als context bevat "gemeente" of "provincie" of "waterschap"
+  of "ministerie" of "belastingdienst" of "politie" of "OM"
+  of "openbaar ministerie" of "reclassering" of "UWV" of "SVB"
+  of "IND" of "DUO" of "KvK" of "RDW" of "RIVM"
+  dan is persoonType overheid
+  en is pseudonimiseringsStatus niet_pseudonimiseer.
+
+regel PR-005 "Particulier — wel pseudonimiseren":
+  als persoonType is onbekend
+  en context bevat NIET professional-of-rechtspersoon-of-overheid keywords
+  dan is persoonType particulier
+  en is pseudonimiseringsStatus pseudonimiseer.
+
+// --- GegevenType specifieke regels ---
+
+regel PR-010 "Geboortedatum van professional — niet pseudonimiseren":
+  als gegevenType is geboortedatum
+  en persoonType is professional
+  dan is pseudonimiseringsStatus niet_pseudonimiseer
+  met als reden "Geboortedatum van professional (advocaat/notaris/deurwaarder) — niet pseudonimiseren per richtlijn."
+
+regel PR-011 "Geboortedatum van particulier — wel pseudonimiseren":
+  als gegevenType is geboortedatum
+  en persoonType is particulier
+  dan is pseudonimiseringsStatus pseudonimiseer
+  met als reden "Geboortedatum van particulier — wel pseudonimiseren per richtlijn."
+
+regel PR-012 "Geboortedatum — context onbekend — handmatige controle":
+  als gegevenType is geboortedatum
+  en persoonType is onbekend
+  dan is pseudonimiseringsStatus handmatige_controle
+  met als reden "Geboortedatum gedetecteerd maar context onduidelijk — handmatige controle vereist."
+
+regel PR-020 "Adres van rechtspersoon — niet pseudonimiseren":
+  als gegevenType is adres
+  en persoonType is rechtspersoon of overheid
+  dan is pseudonimiseringsStatus niet_pseudonimiseer.
+
+regel PR-021 "Adres van particulier — wel pseudonimiseren":
+  als gegevenType is adres
+  en persoonType is particulier
+  dan is pseudonimiseringsStatus pseudonimiseer.
+
+regel PR-030 "Postcode van rechtspersoon — niet pseudonimiseren":
+  als gegevenType is postcode
+  en persoonType is rechtspersoon of overheid
+  dan is pseudonimiseringsStatus niet_pseudonimiseer.
+
+regel PR-031 "Postcode van particulier — wel pseudonimiseren":
+  als gegevenType is postcode
+  en persoonType is particulier
+  dan is pseudonimiseringsStatus pseudonimiseer.
+
+regel PR-040 "Email van professional — niet pseudonimiseren":
+  als gegevenType is email
+  en persoonType is professional of rechtspersoon of overheid
+  dan is pseudonimiseringsStatus niet_pseudonimiseer.
+
+regel PR-041 "Email van particulier — wel pseudonimiseren":
+  als gegevenType is email
+  en persoonType is particulier
+  dan is pseudonimiseringsStatus pseudonimiseer.
+
+// --- Rechtsgebied specifieke uitzonderingen ---
+
+regel PR-050 "Strafrecht — strengere pseudonimisering":
+  als rechtsgebied is strafrecht
+  en gegevenType is geboortedatum of adres of postcode
+  en persoonType is particulier of onbekend
+  dan is pseudonimiseringsStatus pseudonimiseer
+  met als reden "Strafrecht: strengere pseudonimisering voor particulieren."
+
+regel PR-051 "Familierecht — altijd pseudonimiseren":
+  als rechtsgebied is familierecht
+  en gegevenType is geboortedatum of adres of postcode of email
+  dan is pseudonimiseringsStatus pseudonimiseer
+  met als reden "Familierecht: altijd pseudonimiseren i.v.m. privacygevoelige aard."
+
+regel PR-052 "Bestuursrecht — rechtspersoon afhankelijk":
+  als rechtsgebied is bestuursrecht
+  en persoonType is rechtspersoon
+  dan is pseudonimiseringsStatus handmatige_controle
+  met als reden "Bestuursrecht: rechtspersoon-gegevens afhankelijk van specifieke wetgeving — handmatige controle."

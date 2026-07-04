@@ -1,0 +1,1200 @@
+{
+  "schemaVersion": "1.0.0",
+  "ruleSetId": "griffierecht-civiel-dagvaarding",
+  "version": "2025.1",
+  "validFrom": "2025-01-01",
+  "validUntil": "2025-12-31",
+  "jurisdiction": "NL",
+  "domain": "civiel-rechtbank",
+  "procedureType": "dagvaarding",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "GR-KAN-2025-001",
+      "name": "Kantonzaken — eiser natuurlijk persoon of onvermogend",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet griffierechten burgerlijke zaken (Wgbz)",
+          "section": "Artikel 2, eerste lid, onder a — griffierecht kantonzaken",
+          "url": "https://wetten.overheid.nl/BWBR0035817/"
+        },
+        {
+          "type": "rechtspraak-tarieftabel",
+          "title": "Griffierecht civiele rechter 2025",
+          "section": "Kantonzaken — eiser/verzoeker natuurlijk persoon",
+          "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2025.pdf"
+        }
+      ],
+      "conditions": {
+        "zaakstroom": [
+          "kanton"
+        ],
+        "rol": [
+          "eiser",
+          "verzoeker"
+        ],
+        "partijType": [
+          "natuurlijk_persoon",
+          "onvermogend"
+        ]
+      },
+      "outcome": {
+        "griffierecht": {
+          "amount": 89,
+          "currency": "EUR"
+        },
+        "category": "kanton_vast_tarief",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "vorderingWaarde": 5000
+          },
+          "expectedAmount": 91
+        },
+        {
+          "input": {
+            "vorderingWaarde": 25000
+          },
+          "expectedAmount": 91
+        }
+      ]
+    },
+    {
+      "ruleId": "GR-KAN-2025-002",
+      "name": "Kantonzaken — eiser niet-natuurlijk persoon, vordering ≤ €25.000",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet griffierechten burgerlijke zaken (Wgbz)",
+          "section": "Artikel 2, eerste lid, onder a — griffierecht kantonzaken",
+          "url": "https://wetten.overheid.nl/BWBR0035817/"
+        },
+        {
+          "type": "rechtspraak-tarieftabel",
+          "title": "Griffierecht civiele rechter 2025",
+          "section": "Kantonzaken — eiser/verzoeker niet-natuurlijk persoon, vordering ≤ €25.000",
+          "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2025.pdf"
+        }
+      ],
+      "conditions": {
+        "zaakstroom": [
+          "kanton"
+        ],
+        "rol": [
+          "eiser",
+          "verzoeker"
+        ],
+        "partijType": [
+          "niet_natuurlijk_persoon"
+        ],
+        "vorderingWaarde": {
+          "lte": 25000
+        }
+      },
+      "outcome": {
+        "griffierecht": {
+          "amount": 89,
+          "currency": "EUR"
+        },
+        "category": "kanton_vast_tarief",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "vorderingWaarde": 10000
+          },
+          "expectedAmount": 91
+        }
+      ]
+    },
+    {
+      "ruleId": "GR-KAN-2025-003",
+      "name": "Kantonzaken — eiser niet-natuurlijk persoon, vordering > €25.000",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet griffierechten burgerlijke zaken (Wgbz)",
+          "section": "Artikel 2, eerste lid, onder a — griffierecht kantonzaken, niet-natuurlijk persoon boven €25.000",
+          "url": "https://wetten.overheid.nl/BWBR0035817/"
+        },
+        {
+          "type": "rechtspraak-tarieftabel",
+          "title": "Griffierecht civiele rechter 2025",
+          "section": "Kantonzaken — eiser/verzoeker niet-natuurlijk persoon, vordering > €25.000",
+          "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2025.pdf"
+        }
+      ],
+      "conditions": {
+        "zaakstroom": [
+          "kanton"
+        ],
+        "rol": [
+          "eiser",
+          "verzoeker"
+        ],
+        "partijType": [
+          "niet_natuurlijk_persoon"
+        ],
+        "vorderingWaarde": {
+          "gt": 25000
+        }
+      },
+      "outcome": {
+        "griffierecht": {
+          "amount": 713,
+          "currency": "EUR"
+        },
+        "category": "kanton_nnp_boven_25000",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "vorderingWaarde": 50000
+          },
+          "expectedAmount": 727
+        }
+      ]
+    },
+    {
+      "ruleId": "GR-KAN-2025-004",
+      "name": "Kantonzaken — gedaagde/verweerder betaalt geen griffierecht",
+      "priority": 250,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet griffierechten burgerlijke zaken (Wgbz)",
+          "section": "Artikel 2, eerste lid — bij kantonzaken is alleen eiser/verzoeker griffierecht verschuldigd",
+          "url": "https://wetten.overheid.nl/BWBR0035817/"
+        }
+      ],
+      "conditions": {
+        "zaakstroom": [
+          "kanton"
+        ],
+        "rol": [
+          "gedaagde",
+          "verweerder"
+        ]
+      },
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "kanton_gedaagde_niet_verschuldigd",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "verweerStatus": "ingediend"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "GR-CIV-2025-001",
+      "name": "Civiele zaak — onbepaalde waarde, natuurlijk persoon of onvermogend",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet griffierechten burgerlijke zaken (Wgbz)",
+          "section": "Artikel 2, tweede lid — griffierecht onbepaalde waarde",
+          "url": "https://wetten.overheid.nl/BWBR0035817/"
+        },
+        {
+          "type": "rechtspraak-tarieftabel",
+          "title": "Griffierecht civiele rechter 2025",
+          "section": "Zaken met een onbepaalde waarde — natuurlijk persoon / onvermogend",
+          "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2025.pdf"
+        }
+      ],
+      "conditions": {
+        "zaakstroom": [
+          "handel"
+        ],
+        "partijType": [
+          "natuurlijk_persoon",
+          "onvermogend"
+        ],
+        "vorderingWaarde": "onbepaald",
+        "rol": [
+          "eiser",
+          "verzoeker"
+        ]
+      },
+      "outcome": {
+        "griffierecht": {
+          "amount": 357,
+          "currency": "EUR"
+        },
+        "category": "onbepaald_natuurlijk",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "vorderingWaarde": "onbepaald"
+          },
+          "expectedAmount": 364
+        }
+      ]
+    },
+    {
+      "ruleId": "GR-CIV-2025-002",
+      "name": "Civiele zaak — onbepaalde waarde, niet-natuurlijk persoon",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet griffierechten burgerlijke zaken (Wgbz)",
+          "section": "Artikel 2, tweede lid — griffierecht onbepaalde waarde, niet-natuurlijk persoon",
+          "url": "https://wetten.overheid.nl/BWBR0035817/"
+        },
+        {
+          "type": "rechtspraak-tarieftabel",
+          "title": "Griffierecht civiele rechter 2025",
+          "section": "Zaken met een onbepaalde waarde — niet-natuurlijk persoon",
+          "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2025.pdf"
+        }
+      ],
+      "conditions": {
+        "zaakstroom": [
+          "handel"
+        ],
+        "partijType": [
+          "niet_natuurlijk_persoon"
+        ],
+        "vorderingWaarde": "onbepaald",
+        "rol": [
+          "eiser",
+          "verzoeker"
+        ]
+      },
+      "outcome": {
+        "griffierecht": {
+          "amount": 713,
+          "currency": "EUR"
+        },
+        "category": "onbepaald_niet_natuurlijk",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "vorderingWaarde": "onbepaald"
+          },
+          "expectedAmount": 727
+        }
+      ]
+    },
+    {
+      "ruleId": "GR-CIV-2025-003",
+      "name": "Civiele zaak — vordering ≤ €100.000, natuurlijk persoon of onvermogend",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet griffierechten burgerlijke zaken (Wgbz)",
+          "section": "Artikel 2, tweede lid — griffierecht vordering ≤ €100.000",
+          "url": "https://wetten.overheid.nl/BWBR0035817/"
+        },
+        {
+          "type": "rechtspraak-tarieftabel",
+          "title": "Griffierecht civiele rechter 2025",
+          "section": "Zaken met een vordering of verzoek tot en met €100.000 — natuurlijk persoon / onvermogend",
+          "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2025.pdf"
+        }
+      ],
+      "conditions": {
+        "zaakstroom": [
+          "handel"
+        ],
+        "partijType": [
+          "natuurlijk_persoon",
+          "onvermogend"
+        ],
+        "vorderingWaarde": {
+          "gte": 0,
+          "lte": 100000
+        },
+        "rol": [
+          "eiser",
+          "verzoeker"
+        ]
+      },
+      "outcome": {
+        "griffierecht": {
+          "amount": 357,
+          "currency": "EUR"
+        },
+        "category": "vordering_lte_100000_natuurlijk",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "vorderingWaarde": 50000
+          },
+          "expectedAmount": 364
+        },
+        {
+          "input": {
+            "vorderingWaarde": 100000
+          },
+          "expectedAmount": 364
+        }
+      ]
+    },
+    {
+      "ruleId": "GR-CIV-2025-004",
+      "name": "Civiele zaak — vordering ≤ €100.000, niet-natuurlijk persoon",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet griffierechten burgerlijke zaken (Wgbz)",
+          "section": "Artikel 2, tweede lid — griffierecht vordering ≤ €100.000, niet-natuurlijk persoon",
+          "url": "https://wetten.overheid.nl/BWBR0035817/"
+        },
+        {
+          "type": "rechtspraak-tarieftabel",
+          "title": "Griffierecht civiele rechter 2025",
+          "section": "Zaken met een vordering of verzoek tot en met €100.000 — niet-natuurlijk persoon",
+          "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2025.pdf"
+        }
+      ],
+      "conditions": {
+        "zaakstroom": [
+          "handel"
+        ],
+        "partijType": [
+          "niet_natuurlijk_persoon"
+        ],
+        "vorderingWaarde": {
+          "gte": 0,
+          "lte": 100000
+        },
+        "rol": [
+          "eiser",
+          "verzoeker"
+        ]
+      },
+      "outcome": {
+        "griffierecht": {
+          "amount": 713,
+          "currency": "EUR"
+        },
+        "category": "vordering_lte_100000_niet_natuurlijk",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "vorderingWaarde": 75000
+          },
+          "expectedAmount": 727
+        }
+      ]
+    },
+    {
+      "ruleId": "GR-CIV-2025-005",
+      "name": "Civiele zaak — vordering > €100.000 en ≤ €1.000.000, natuurlijk persoon of onvermogend",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet griffierechten burgerlijke zaken (Wgbz)",
+          "section": "Artikel 2, tweede lid — griffierecht vordering > €100.000 en ≤ €1.000.000",
+          "url": "https://wetten.overheid.nl/BWBR0035817/"
+        },
+        {
+          "type": "rechtspraak-tarieftabel",
+          "title": "Griffierecht civiele rechter 2025",
+          "section": "Zaken met een vordering of verzoek meer dan €100.000 tot en met €1.000.000 — natuurlijk persoon / onvermogend",
+          "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2025.pdf"
+        }
+      ],
+      "conditions": {
+        "zaakstroom": [
+          "handel"
+        ],
+        "partijType": [
+          "natuurlijk_persoon",
+          "onvermogend"
+        ],
+        "vorderingWaarde": {
+          "gt": 100000,
+          "lte": 1000000
+        },
+        "rol": [
+          "eiser",
+          "verzoeker"
+        ]
+      },
+      "outcome": {
+        "griffierecht": {
+          "amount": 2749,
+          "currency": "EUR"
+        },
+        "category": "vordering_gt_100000_lte_1000000_natuurlijk",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "vorderingWaarde": 125000
+          },
+          "expectedAmount": 2803
+        },
+        {
+          "input": {
+            "vorderingWaarde": 500000
+          },
+          "expectedAmount": 2803
+        },
+        {
+          "input": {
+            "vorderingWaarde": 1000000
+          },
+          "expectedAmount": 2803
+        }
+      ]
+    },
+    {
+      "ruleId": "GR-CIV-2025-006",
+      "name": "Civiele zaak — vordering > €100.000 en ≤ €1.000.000, niet-natuurlijk persoon",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet griffierechten burgerlijke zaken (Wgbz)",
+          "section": "Artikel 2, tweede lid — griffierecht vordering > €100.000 en ≤ €1.000.000, niet-natuurlijk persoon",
+          "url": "https://wetten.overheid.nl/BWBR0035817/"
+        },
+        {
+          "type": "rechtspraak-tarieftabel",
+          "title": "Griffierecht civiele rechter 2025",
+          "section": "Zaken met een vordering of verzoek meer dan €100.000 tot en met €1.000.000 — niet-natuurlijk persoon",
+          "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2025.pdf"
+        }
+      ],
+      "conditions": {
+        "zaakstroom": [
+          "handel"
+        ],
+        "partijType": [
+          "niet_natuurlijk_persoon"
+        ],
+        "vorderingWaarde": {
+          "gt": 100000,
+          "lte": 1000000
+        },
+        "rol": [
+          "eiser",
+          "verzoeker"
+        ]
+      },
+      "outcome": {
+        "griffierecht": {
+          "amount": 3546,
+          "currency": "EUR"
+        },
+        "category": "vordering_gt_100000_lte_1000000_niet_natuurlijk",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "vorderingWaarde": 500000
+          },
+          "expectedAmount": 3616
+        }
+      ]
+    },
+    {
+      "ruleId": "GR-CIV-2025-007",
+      "name": "Civiele zaak — vordering > €1.000.000, natuurlijk persoon of onvermogend",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet griffierechten burgerlijke zaken (Wgbz)",
+          "section": "Artikel 2, tweede lid — griffierecht vordering > €1.000.000",
+          "url": "https://wetten.overheid.nl/BWBR0035817/"
+        },
+        {
+          "type": "rechtspraak-tarieftabel",
+          "title": "Griffierecht civiele rechter 2025",
+          "section": "Zaken met een vordering of verzoek meer dan €1.000.000 — natuurlijk persoon / onvermogend",
+          "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2025.pdf"
+        }
+      ],
+      "conditions": {
+        "zaakstroom": [
+          "handel"
+        ],
+        "partijType": [
+          "natuurlijk_persoon",
+          "onvermogend"
+        ],
+        "vorderingWaarde": {
+          "gt": 1000000
+        },
+        "rol": [
+          "eiser",
+          "verzoeker"
+        ]
+      },
+      "outcome": {
+        "griffierecht": {
+          "amount": 3546,
+          "currency": "EUR"
+        },
+        "category": "vordering_gt_1000000_natuurlijk",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "vorderingWaarde": 1500000
+          },
+          "expectedAmount": 3616
+        }
+      ]
+    },
+    {
+      "ruleId": "GR-CIV-2025-008",
+      "name": "Civiele zaak — vordering > €1.000.000, niet-natuurlijk persoon",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet griffierechten burgerlijke zaken (Wgbz)",
+          "section": "Artikel 2, tweede lid — griffierecht vordering > €1.000.000, niet-natuurlijk persoon",
+          "url": "https://wetten.overheid.nl/BWBR0035817/"
+        },
+        {
+          "type": "rechtspraak-tarieftabel",
+          "title": "Griffierecht civiele rechter 2025",
+          "section": "Zaken met een vordering of verzoek meer dan €1.000.000 — niet-natuurlijk persoon",
+          "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2025.pdf"
+        }
+      ],
+      "conditions": {
+        "zaakstroom": [
+          "handel"
+        ],
+        "partijType": [
+          "niet_natuurlijk_persoon"
+        ],
+        "vorderingWaarde": {
+          "gt": 1000000
+        },
+        "rol": [
+          "eiser",
+          "verzoeker"
+        ]
+      },
+      "outcome": {
+        "griffierecht": {
+          "amount": 5535,
+          "currency": "EUR"
+        },
+        "category": "vordering_gt_1000000_niet_natuurlijk",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "vorderingWaarde": 2000000
+          },
+          "expectedAmount": 5644
+        }
+      ]
+    },
+    {
+      "ruleId": "GR-CIV-2025-009",
+      "name": "Civiele zaak — gedaagde bij verweer, onbepaalde waarde, natuurlijk persoon of onvermogend",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet griffierechten burgerlijke zaken (Wgbz)",
+          "section": "Artikel 2, derde lid — gedaagde bij verweer, onbepaalde waarde",
+          "url": "https://wetten.overheid.nl/BWBR0035817/"
+        },
+        {
+          "type": "rechtspraak-tarieftabel",
+          "title": "Griffierecht civiele rechter 2025",
+          "section": "Gedaagde bij verweer — onbepaalde waarde, natuurlijk persoon",
+          "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2025.pdf"
+        }
+      ],
+      "conditions": {
+        "zaakstroom": [
+          "handel"
+        ],
+        "rol": [
+          "gedaagde"
+        ],
+        "verweerStatus": [
+          "ingediend"
+        ],
+        "partijType": [
+          "natuurlijk_persoon",
+          "onvermogend"
+        ],
+        "vorderingWaarde": "onbepaald"
+      },
+      "outcome": {
+        "griffierecht": {
+          "amount": 357,
+          "currency": "EUR"
+        },
+        "category": "gedaagde_verweer_onbepaald_natuurlijk",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "verweerStatus": "ingediend",
+            "vorderingWaarde": "onbepaald"
+          },
+          "expectedAmount": 364
+        }
+      ]
+    },
+    {
+      "ruleId": "GR-CIV-2025-010",
+      "name": "Civiele zaak — gedaagde bij verweer, vordering ≤ €100.000, natuurlijk persoon of onvermogend",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet griffierechten burgerlijke zaken (Wgbz)",
+          "section": "Artikel 2, derde lid — gedaagde bij verweer, vordering ≤ €100.000",
+          "url": "https://wetten.overheid.nl/BWBR0035817/"
+        },
+        {
+          "type": "rechtspraak-tarieftabel",
+          "title": "Griffierecht civiele rechter 2025",
+          "section": "Gedaagde bij verweer — vordering ≤ €100.000, natuurlijk persoon",
+          "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2025.pdf"
+        }
+      ],
+      "conditions": {
+        "zaakstroom": [
+          "handel"
+        ],
+        "rol": [
+          "gedaagde"
+        ],
+        "verweerStatus": [
+          "ingediend"
+        ],
+        "partijType": [
+          "natuurlijk_persoon",
+          "onvermogend"
+        ],
+        "vorderingWaarde": {
+          "gte": 0,
+          "lte": 100000
+        }
+      },
+      "outcome": {
+        "griffierecht": {
+          "amount": 357,
+          "currency": "EUR"
+        },
+        "category": "gedaagde_verweer_lte_100000_natuurlijk",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "verweerStatus": "ingediend",
+            "vorderingWaarde": 50000
+          },
+          "expectedAmount": 364
+        }
+      ]
+    },
+    {
+      "ruleId": "GR-CIV-2025-011",
+      "name": "Civiele zaak — gedaagde bij verweer, vordering > €100.000 en ≤ €1.000.000, natuurlijk persoon of onvermogend",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet griffierechten burgerlijke zaken (Wgbz)",
+          "section": "Artikel 2, derde lid — gedaagde bij verweer, vordering > €100.000 en ≤ €1.000.000",
+          "url": "https://wetten.overheid.nl/BWBR0035817/"
+        },
+        {
+          "type": "rechtspraak-tarieftabel",
+          "title": "Griffierecht civiele rechter 2025",
+          "section": "Gedaagde bij verweer — vordering > €100.000 en ≤ €1.000.000, natuurlijk persoon",
+          "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2025.pdf"
+        }
+      ],
+      "conditions": {
+        "zaakstroom": [
+          "handel"
+        ],
+        "rol": [
+          "gedaagde"
+        ],
+        "verweerStatus": [
+          "ingediend"
+        ],
+        "partijType": [
+          "natuurlijk_persoon",
+          "onvermogend"
+        ],
+        "vorderingWaarde": {
+          "gt": 100000,
+          "lte": 1000000
+        }
+      },
+      "outcome": {
+        "griffierecht": {
+          "amount": 2749,
+          "currency": "EUR"
+        },
+        "category": "gedaagde_verweer_gt_100000_lte_1000000_natuurlijk",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "verweerStatus": "ingediend",
+            "vorderingWaarde": 500000
+          },
+          "expectedAmount": 2803
+        }
+      ]
+    },
+    {
+      "ruleId": "GR-CIV-2025-012",
+      "name": "Civiele zaak — gedaagde bij verweer, vordering > €1.000.000, natuurlijk persoon of onvermogend",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet griffierechten burgerlijke zaken (Wgbz)",
+          "section": "Artikel 2, derde lid — gedaagde bij verweer, vordering > €1.000.000",
+          "url": "https://wetten.overheid.nl/BWBR0035817/"
+        },
+        {
+          "type": "rechtspraak-tarieftabel",
+          "title": "Griffierecht civiele rechter 2025",
+          "section": "Gedaagde bij verweer — vordering > €1.000.000, natuurlijk persoon",
+          "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2025.pdf"
+        }
+      ],
+      "conditions": {
+        "zaakstroom": [
+          "handel"
+        ],
+        "rol": [
+          "gedaagde"
+        ],
+        "verweerStatus": [
+          "ingediend"
+        ],
+        "partijType": [
+          "natuurlijk_persoon",
+          "onvermogend"
+        ],
+        "vorderingWaarde": {
+          "gt": 1000000
+        }
+      },
+      "outcome": {
+        "griffierecht": {
+          "amount": 3546,
+          "currency": "EUR"
+        },
+        "category": "gedaagde_verweer_gt_1000000_natuurlijk",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "verweerStatus": "ingediend",
+            "vorderingWaarde": 2000000
+          },
+          "expectedAmount": 3616
+        }
+      ]
+    },
+    {
+      "ruleId": "GR-CIV-2025-013",
+      "name": "Civiele zaak — gedaagde zonder verweer, geen griffierecht verschuldigd",
+      "priority": 150,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet griffierechten burgerlijke zaken (Wgbz)",
+          "section": "Artikel 2, derde lid — gedaagde is alleen griffierecht verschuldigd bij schriftelijk verweer",
+          "url": "https://wetten.overheid.nl/BWBR0035817/"
+        }
+      ],
+      "conditions": {
+        "zaakstroom": [
+          "handel"
+        ],
+        "rol": [
+          "gedaagde"
+        ],
+        "verweerStatus": [
+          "niet_ingediend"
+        ]
+      },
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "gedaagde_geen_verweer",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "verweerStatus": "niet_ingediend"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "GR-CIV-2025-014",
+      "name": "Civiele zaak — gedaagde verweerStatus onbekend, handmatige controle vereist",
+      "priority": 150,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet griffierechten burgerlijke zaken (Wgbz)",
+          "section": "Artikel 2, derde lid — gedaagde is alleen griffierecht verschuldigd bij schriftelijk verweer",
+          "url": "https://wetten.overheid.nl/BWBR0035817/"
+        }
+      ],
+      "conditions": {
+        "zaakstroom": [
+          "handel"
+        ],
+        "rol": [
+          "gedaagde"
+        ],
+        "verweerStatus": [
+          "onbekend"
+        ]
+      },
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "gedaagde_verweer_onbekend",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "VerweerStatus is onbekend. Gedaagde is alleen griffierecht verschuldigd bij schriftelijk verweer. Controleer of verweer is ingediend."
+      },
+      "examples": [
+        {
+          "input": {
+            "verweerStatus": "onbekend"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "SC-001",
+      "description": "Natuurlijk persoon, handelszaak, vordering €125.000, 2026",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 125000,
+        "bijzondereCategorie": "geen",
+        "rol": "eiser",
+        "partijType": "natuurlijk_persoon",
+        "onvermogend": false,
+        "verweerStatus": "n.v.t."
+      },
+      "expected": {
+        "griffierecht": 2749,
+        "category": "vordering_gt_100000_lte_1000000_natuurlijk",
+        "appliedRules": [
+          "GR-CIV-2025-005"
+        ]
+      }
+    },
+    {
+      "id": "SC-002",
+      "description": "Niet-natuurlijk persoon, handelszaak, vordering €750.000, 2026",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 750000,
+        "bijzondereCategorie": "geen",
+        "rol": "eiser",
+        "partijType": "niet_natuurlijk_persoon",
+        "onvermogend": false,
+        "verweerStatus": "n.v.t."
+      },
+      "expected": {
+        "griffierecht": 3546,
+        "category": "vordering_gt_100000_lte_1000000_niet_natuurlijk",
+        "appliedRules": [
+          "GR-CIV-2025-006"
+        ]
+      }
+    },
+    {
+      "id": "SC-003",
+      "description": "Kantonzaken — natuurlijk persoon, eiser, vordering €5.000, 2026",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "kanton",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 5000,
+        "bijzondereCategorie": "geen",
+        "rol": "eiser",
+        "partijType": "natuurlijk_persoon",
+        "onvermogend": false,
+        "verweerStatus": "n.v.t."
+      },
+      "expected": {
+        "griffierecht": 89,
+        "category": "kanton_vast_tarief",
+        "appliedRules": [
+          "GR-KAN-2025-001"
+        ]
+      }
+    },
+    {
+      "id": "SC-004",
+      "description": "Kantonzaken — gedaagde betaalt geen griffierecht, 2026",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "kanton",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 10000,
+        "bijzondereCategorie": "geen",
+        "rol": "gedaagde",
+        "partijType": "natuurlijk_persoon",
+        "onvermogend": false,
+        "verweerStatus": "ingediend"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "kanton_gedaagde_niet_versuldigd",
+        "appliedRules": [
+          "GR-KAN-2025-004"
+        ]
+      }
+    },
+    {
+      "id": "SC-005",
+      "description": "Gedaagde bij verweer, handel, vordering €500.000, natuurlijk persoon, 2026",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 500000,
+        "bijzondereCategorie": "geen",
+        "rol": "gedaagde",
+        "partijType": "natuurlijk_persoon",
+        "onvermogend": false,
+        "verweerStatus": "ingediend"
+      },
+      "expected": {
+        "griffierecht": 2749,
+        "category": "gedaagde_verweer_gt_100000_lte_1000000_natuurlijk",
+        "appliedRules": [
+          "GR-CIV-2025-011"
+        ]
+      }
+    },
+    {
+      "id": "SC-006",
+      "description": "Gedaagde zonder verweer, handel, 2026 — geen griffierecht",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 75000,
+        "bijzondereCategorie": "geen",
+        "rol": "gedaagde",
+        "partijType": "natuurlijk_persoon",
+        "onvermogend": false,
+        "verweerStatus": "niet_ingediend"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "gedaagde_geen_verweer",
+        "appliedRules": [
+          "GR-CIV-2025-013"
+        ]
+      }
+    },
+    {
+      "id": "SC-007",
+      "description": "Gedaagde verweerStatus onbekend, handel, 2026 — manualReviewRequired",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 75000,
+        "bijzondereCategorie": "geen",
+        "rol": "gedaagde",
+        "partijType": "natuurlijk_persoon",
+        "onvermogend": false,
+        "verweerStatus": "onbekend"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "gedaagde_verweer_onbekend",
+        "appliedRules": [
+          "GR-CIV-2025-014"
+        ],
+        "manualReviewRequired": true
+      }
+    },
+    {
+      "id": "SC-008",
+      "description": "Onbepaalde vordering, handel, natuurlijk persoon, 2026",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": "onbepaald",
+        "bijzondereCategorie": "geen",
+        "rol": "eiser",
+        "partijType": "natuurlijk_persoon",
+        "onvermogend": false,
+        "verweerStatus": "n.v.t."
+      },
+      "expected": {
+        "griffierecht": 357,
+        "category": "onbepaald_natuurlijk",
+        "appliedRules": [
+          "GR-CIV-2025-001"
+        ]
+      }
+    },
+    {
+      "id": "SC-009",
+      "description": "Vordering > €1.000.000, handel, niet-natuurlijk persoon, 2026",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 2500000,
+        "bijzondereCategorie": "geen",
+        "rol": "eiser",
+        "partijType": "niet_natuurlijk_persoon",
+        "onvermogend": false,
+        "verweerStatus": "n.v.t."
+      },
+      "expected": {
+        "griffierecht": 5535,
+        "category": "vordering_gt_1000000_niet_natuurlijk",
+        "appliedRules": [
+          "GR-CIV-2025-008"
+        ]
+      }
+    },
+    {
+      "id": "SC-010",
+      "description": "Onvermogend, handel, vordering €50.000, 2026",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 50000,
+        "bijzondereCategorie": "geen",
+        "rol": "eiser",
+        "partijType": "onvermogend",
+        "onvermogend": true,
+        "verweerStatus": "n.v.t."
+      },
+      "expected": {
+        "griffierecht": 357,
+        "category": "vordering_lte_100000_natuurlijk",
+        "appliedRules": [
+          "GR-CIV-2025-003"
+        ]
+      }
+    }
+  ],
+  "transitionRules": [],
+  "metadata": {
+    "juridischeContext": {
+      "wet": "Wgbz",
+      "wetBwbrId": "BWBR0035817",
+      "wetVersieLaatstGecheckt": "2026-06-15",
+      "tariefVersie": "2025.1"
+    },
+    "bronverificatieDatum": "2026-06-15",
+    "acceptatieType": "full",
+    "juristAccordering": {
+      "geaccondeerdDoor": "D. Landman (agent-executed human gate)",
+      "datum": "2026-07-04",
+      "geldigTot": "2027-07-04",
+      "versie": "2025.1"
+    }
+  }
+}

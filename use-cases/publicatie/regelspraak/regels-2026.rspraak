@@ -1,0 +1,51 @@
+// Beslistabellen — Publicatieregels uitspraken 2026
+// Bron: Wet RO, Uitvoeringsregeling openbaarmaking rechterlijke uitspraken
+
+regel PB-2026-001 "Publiceerbaar met geanonimiseerde tekst":
+  als hasAnonymizedText is ja
+  en piiCandidateCount is 0
+  dan is publiceerbaar ja
+  en is publicatieStatus publiceerbaar.
+
+regel PB-2026-002 "Anonimisatie vereist — geen geanonimiseerde tekst":
+  als hasAnonymizedText is nee
+  dan is anonimisatieVereist body_text
+  en is publicatieStatus anonimisatie_vereist
+  en is handmatige controle vereist
+  met als reden "Geen geanonimiseerde tekst beschikbaar — anonimiseer body_text voor publicatie."
+
+regel PB-2026-003 "PII candidates gevonden — handmatige controle":
+  als piiCandidateCount is meer dan 0
+  dan is publicatieStatus handmatige_controle
+  en is handmatige controle vereist
+  met als reden "PII candidates gevonden — controleer voor publicatie of dit echte persoonsgegevens zijn."
+
+regel PB-2026-004 "Geen PII candidates en geanonimiseerd — direct publiceerbaar":
+  als hasAnonymizedText is ja
+  en piiCandidateCount is 0
+  dan is publiceerbaar ja
+  en is publicatieStatus publiceerbaar.
+
+regel PB-2026-005 "Strafrecht — publiceerbaar met anonimisatie":
+  als rechtsgebied is strafrecht
+  dan is anonimisatieVereist body_text
+  en is publicatieStatus anonimisatie_vereist.
+
+regel PB-2026-006 "Civiel — standaard publiceerbaar":
+  als rechtsgebied is civiel
+  en hasAnonymizedText is ja
+  en piiCandidateCount is 0
+  dan is publiceerbaar ja
+  en is publicatieStatus publiceerbaar.
+
+regel PB-2026-007 "Bestuursrecht — publiceerbaar met controle":
+  als rechtsgebied is bestuursrecht
+  en piiCandidateCount is meer dan 0
+  dan is publicatieStatus handmatige_controle
+  en is handmatige controle vereist.
+
+regel PB-2026-008 "Onbepaalde PII count — handmatige controle":
+  als piiCandidateCount is onbekend
+  dan is publicatieStatus handmatige_controle
+  en is handmatige controle vereist
+  met als reden "PII candidate count onbekend — voer PII-scan uit voor publicatie."
