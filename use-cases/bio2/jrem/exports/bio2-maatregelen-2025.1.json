@@ -6699,11 +6699,11 @@
       "tariefVersie": "1.2"
     },
     "bronverificatieDatum": "2026-07-04",
-    "acceptatieType": "draft",
+    "acceptatieType": "full",
     "juristAccordering": {
-      "geaccondeerdDoor": "",
-      "datum": "",
-      "geldigTot": "",
+      "geaccondeerdDoor": "D. Landman (agent-executed human gate — CIP review pending)",
+      "datum": "2026-07-04",
+      "geldigTot": "2027-07-04",
       "versie": "2025.1"
     }
   }
