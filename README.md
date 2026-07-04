@@ -31,16 +31,20 @@ De engine implementeert de uitzonderingen uit de pseudonimiseringsrichtlijn:
 - Rechtspersonen en overheidsorganisaties → niet pseudonimiseren
 - Per rechtsgebied verschillende regels (familierecht = strenger, strafrecht = strenger voor particulieren)
 
-## Eerste Use Case: Griffierecht
+## Use Case: Griffierecht
 
-De eerste volledig uitgewerkte use case is de **Griffierecht Rule Service**:
+**Als** griffier **wil ik** bij zaakintake automatisch het correcte griffierecht bepalen **zodat** ik niet handmatig tarieven hoeft op te zoeken en fouten voorkom.
+
+| Rol | Probleem | Oplossing |
+|---|---|---|
+| Griffier | Verschillende tarieven per zaakstroom, partijtype en vorderingwaarde — foutgevoelig | Rule API berekent bedrag met bronverwijzing en redeneerstappen |
+| Burger | Begrijpt niet waarom een bepaald bedrag geldt | API retourneert uitleg: "vordering €125.000 → categorie >€100K-≤€1M → tarief 2026: €2.803. Bron: Wgbz art. 2" |
+| Advocaten | Moeten griffie bellen voor tariefbevestiging | Directe berekening via API of portaal |
+| Financieel beheer | Geen audit trail van griffierecht-berekeningen | Elke berekening heeft inputHash, rulesetHash, timestamp |
 
 - 18 JREM regels voor civiele dagvaardingszaken (kanton + handel)
-- 57 tests (happy path, boundary, regression, explainability, audit, idempotentie)
-- 14 CI gates (alle groen)
-- Rule API op `localhost:8490` met `POST /v1/griffierecht/calculate`
+- 57 tests — 14 CI gates — Rule API op `localhost:8490`
 - Juridische context in elke response (wet, BWBR-id, accordering)
-- Demo met intakeformulier
 
 ### Voorbeeld
 
@@ -65,18 +69,25 @@ curl -X POST http://127.0.0.1:8490/v1/griffierecht/calculate \
   }'
 ```
 
-Response bevat: griffierecht bedrag, categorie, redeneerstappen, toegepaste regels, bronverwijzingen, juridische context, en audit trail.
-
 ## Use Case: BIO2 — Baseline Informatiebeveiliging Overheid
 
-De BIO2 use case bewijst dat JuraRegel schaalt voorbij de Rechtspraak naar de hele overheid. De [BIO2](https://www.bio-overheid.nl/category/producten/bio) is het normenkader voor informatiebeveiliging binnen alle overheidsentiteiten, gebaseerd op ISO 27001/27002. De 167 maatregelen staan op [GitHub (MinBZK)](https://github.com/MinBZK/Baseline-Informatiebeveiliging-Overheid).
+**Als** CISO van een overheidsorganisatie **wil ik** automatisch valideren of mijn organisatie voldoet aan de BIO2 maatregelen **zodat** ik niet handmatig 167 maatregelen hoef te checken en ENSIA-rapportage foutloos is.
+
+| Rol | Probleem | Oplossing |
+|---|---|---|
+| CISO | 167 BIO2 maatregelen handmatig bijhouden in spreadsheet — foutgevoelig en verouderd | Rule API checkt per maatregel: compliant ja/nee + ISO referentie |
+| Bestuurder | Onduidelijk welke maatregelen nog open staan | Compliance rapport: per categorie score + totaal % compliant |
+| CIP | Geen gestandaardiseerd controle-instrument voor alle entiteiten | JuraRegel als open-source compliance tool — één standaard |
+| ENSIA-verantwoordelijke | Handmatige rapportage is tijdrovend en inconsistent | `GET /v1/bio2/rapport/{orgId}` genereert ENSIA-gealigned rapport |
+| Auditor | Geen audit trail van compliance-beslissingen | Elke check heeft calculationId, inputHash, rulesetHash, timestamp |
+
+De [BIO2](https://www.bio-overheid.nl/category/producten/bio) is het normenkader voor informatiebeveiliging binnen alle overheidsentiteiten, gebaseerd op ISO 27001/27002. De 167 maatregelen staan op [GitHub (MinBZK)](https://github.com/MinBZK/Baseline-Informatiebeveiliging-Overheid).
 
 - **162 overheidsmaatregelen** geparsed van MinBZK GitHub (5 zijn ISO-only)
 - 4 categorieën: organisatorisch (72), technologisch (66), fysiek (17), mensgericht (12)
 - Elke maatregel gekoppeld aan ISO 27002 clause (bronverwijzing)
-- Rule API op `localhost:8494` met compliance check en maatregelen listing
-- ENSIA-gealigned compliance rapport per organisatie (`GET /v1/bio2/rapport/{orgId}`)
-- 18 tests, 14 CI gates
+- Rule API op `localhost:8494` — ENSIA-gealigned compliance rapport
+- 18 tests — 14 CI gates
 
 ### Voorbeeld
 
