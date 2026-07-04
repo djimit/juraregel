@@ -67,6 +67,27 @@ curl -X POST http://127.0.0.1:8490/v1/griffierecht/calculate \
 
 Response bevat: griffierecht bedrag, categorie, redeneerstappen, toegepaste regels, bronverwijzingen, juridische context, en audit trail.
 
+## Use Case: BIO2 — Baseline Informatiebeveiliging Overheid
+
+De BIO2 use case bewijst dat JuraRegel schaalt voorbij de Rechtspraak naar de hele overheid. De [BIO2](https://www.bio-overheid.nl/category/producten/bio) is het normenkader voor informatiebeveiliging binnen alle overheidsentiteiten, gebaseerd op ISO 27001/27002. De 167 maatregelen staan op [GitHub (MinBZK)](https://github.com/MinBZK/Baseline-Informatiebeveiliging-Overheid).
+
+- **162 overheidsmaatregelen** geparsed van MinBZK GitHub (5 zijn ISO-only)
+- 4 categorieën: organisatorisch (72), technologisch (66), fysiek (17), mensgericht (12)
+- Elke maatregel gekoppeld aan ISO 27002 clause (bronverwijzing)
+- Rule API op `localhost:8494` met compliance check en maatregelen listing
+- ENSIA-gealigned compliance rapport per organisatie (`GET /v1/bio2/rapport/{orgId}`)
+- 18 tests, 14 CI gates
+
+### Voorbeeld
+
+```bash
+# Lijst alle maatregelen
+curl http://127.0.0.1:8494/v1/bio2/maatregelen
+
+# Compliance rapport per organisatie
+curl http://127.0.0.1:8494/v1/bio2/rapport/gemeente-amsterdam
+```
+
 ## Architectuur
 
 ```
