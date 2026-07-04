@@ -1,0 +1,21 @@
+name: Bug Report
+description: Meld een bug in JuraRegel
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Beschrijving
+      description: Wat is het probleem?
+    validations:
+      required: true
+  - type: input
+    id: use-case
+    attributes:
+      label: Use case
+      placeholder: griffierecht, bio2, etc.
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproductie
+      description: Hoe reproduceer je de bug?

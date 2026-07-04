@@ -1,0 +1,20 @@
+name: Use Case Proposal
+description: Stel een nieuwe use case voor JuraRegel voor
+labels: ["enhancement", "use-case"]
+body:
+  - type: input
+    id: domein
+    attributes:
+      label: Domein
+      placeholder: bijv. belastingdienst, uwv, nis2
+    validations:
+      required: true
+  - type: textarea
+    id: bron
+    attributes:
+      label: Bron
+      description: Waar staan de regels? (URL, wet, PDF)
+  - type: textarea
+    id: regels
+    attributes:
+      label: Aantal regels (schatting)

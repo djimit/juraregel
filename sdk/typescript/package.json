@@ -20,6 +20,19 @@
     "check": "tsc --noEmit"
   },
   "license": "MIT",
-  "repository": {"type": "git", "url": "https://github.com/djimit/juraregel"},
-  "keywords": ["juraregel", "legal-ruleops", "compliance", "netherlands", "government", "bio2", "nora", "avg", "ai-act"]
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/djimit/juraregel"
+  },
+  "keywords": [
+    "juraregel",
+    "legal-ruleops",
+    "compliance",
+    "netherlands",
+    "government",
+    "bio2",
+    "nora",
+    "avg",
+    "ai-act"
+  ]
 }

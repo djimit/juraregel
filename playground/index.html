@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="nl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JuraRegel Playground — Probeer Compliance Checking</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:system-ui;background:#0f172a;color:#e2e8f0;padding:2rem;max-width:900px;margin:0 auto}
+h1{font-size:1.5rem;margin-bottom:.5rem}.sub{color:#94a3b8;margin-bottom:2rem}
+select,input,button{padding:.5rem;border-radius:6px;border:1px solid #334155;background:#1e293b;color:#e2e8f0;font-size:.9rem}
+button{background:#3b82f6;border:none;cursor:pointer;font-weight:600}
+button:hover{background:#2563eb}
+.form-group{margin-bottom:1rem}.form-group label{display:block;font-size:.8rem;color:#94a3b8;margin-bottom:.25rem}
+.result{background:#1e293b;border-radius:12px;padding:1.5rem;margin-top:1.5rem;border:1px solid #334155;display:none}
+.amount{font-size:2rem;font-weight:700;color:#3b82f6}.category{color:#22c55e;margin-top:.5rem}
+.steps{margin-top:1rem}.step{padding:.5rem 0;border-bottom:1px solid #334155;font-size:.9rem}.step:last-child{border:none}
+.source{font-size:.8rem;color:#64748b;margin-top:.5rem}
+.context{background:#052e16;border:1px solid #22c55e;border-radius:8px;padding:.75rem;margin-top:1rem;font-size:.85rem}
+.warnings{background:#422006;border:1px solid #f59e0b;border-radius:8px;padding:.75rem;margin-top:.5rem;font-size:.85rem;color:#fbbf24}
+</style></head><body>
+<h1>JuraRegel Playground</h1>
+<p class="sub">Probeer compliance checking — geen installatie nodig. Selecteer een use case, vul in, zie het resultaat.</p>
+
+<div class="form-group"><label>Use case</label>
+<select id="uc" onchange="loadPreset()">
+<option value="griffierecht">Griffierecht (Rechtspraak)</option>
+<option value="bio2">BIO2 (Informatiebeveiliging)</option>
+<option value="forumstandaardisatie">Forum Standaardisatie</option>
+<option value="eu-ai-act">EU AI Act</option>
+<option value="avg-gdpr">AVG / GDPR</option>
+<option value="nora">NORA (Architectuur)</option>
+</select></div>
+
+<div class="form-group"><label>Vorderingwaarde / Maatregel ID</label>
+<input id="input" type="text" value="125000" style="width:200px"></div>
+
+<div class="form-group"><label>Partij type</label>
+<select id="partij"><option>natuurlijk_persoon</option><option>niet_natuurlijk_persoon</option><option>onvermogend</option></select></div>
+
+<div class="form-group"><label>Rol</label>
+<select id="rol"><option>eiser</option><option>gedaagde</option></select></div>
+
+<button onclick="calculate()">Bereken</button>
+
+<div class="result" id="result">
+  <div class="amount" id="amount"></div>
+  <div class="category" id="category"></div>
+  <div class="steps" id="steps"></div>
+  <div class="context" id="context"></div>
+  <div class="warnings" id="warnings"></div>
+  <div class="source" id="source"></div>
+</div>
+
+<script>
+const presets = {
+  griffierecht: {input:"125000",label:"Vorderingwaarde (€)",partij:"natuurlijk_persoon"},
+  bio2: {input:"5.01.01",label:"Maatregel ID",partij:"natuurlijk_persoon"},
+  forumstandaardisatie: {input:"FS-001",label:"Standaard ID",partij:"natuurlijk_persoon"},
+  "eu-ai-act": {input:"AIA-002",label:"Regel ID",partij:"natuurlijk_persoon"},
+  "avg-gdpr": {input:"AVG-001",label:"Regel ID",partij:"natuurlijk_persoon"},
+  nora: {input:"NORA-001",label:"Principe ID",partij:"natuurlijk_persoon"}
+};
+const mockResults = {
+  griffierecht: {amount:"€2.803",category:"vordering > €100.000 en ≤ €1.000.000 (natuurlijk persoon)",steps:["Rechtsgebied is civiel → griffierecht verschuldigd","Zaakstroom is handel","Partij is eiser → verschuldigd door eiser","Partijtype is natuurlijk_persoon","Vorderingwaarde is €125.000","Categorie: >€100K-≤€1M","Griffierecht 2026: €2.803"],context:"Wet: Wgbz | BWBR: BWBR0035817 | Versie: 2026.1",source:"Bron: Wgbz art. 2, Rechtspraak.nl tarieftabel 2026",warnings:[]},
+  bio2: {amount:"✅ Compliant",category:"bio2_organisatorisch — Informatiebeveiligingsbeleid",steps:["Maatregel 5.01.01: Informatiebeveiligingsbeleid opgesteld","ISO 27002 referentie: 5.01","Categorie: organisatorisch","Implementatie: ja → compliant"],context:"Wet: BIO2 | Versie: 2025.1",source:"Bron: BIO2 maatregel 5.01.01, ISO 27002 5.01",warnings:[]},
+  forumstandaardisatie: {amount:"✅ Compliant",category:"fs_interoperabiliteit_verplicht — OAuth 2.0",steps:["Standaard: OAuth 2.0","Status: verplicht","Categorie: interoperabiliteit","Implementatie: ja → compliant"],context:"Wet: Forum Standaardisatie | Versie: 2025.1",source:"Bron: forumstandaardisatie.nl/open-standaarden/verplicht",warnings:[]},
+  "eu-ai-act": {amount:"⚠️ Hoog-risico",category:"aia_classificatie — AI-systeem classificatie",steps:["Regel: AIA-002 — hoog-risico classificatie","Bijlage I: kritieke infrastructuur, wetshandhaving","Conformity assessment verplicht (art. 43)","Risicobeheersysteem verplicht (art. 9)","Technische documentatie verplicht (art. 11)"],context:"Wet: EU AI Act | BWBR: BWBR0048300 | Versie: 2025.1",source:"Bron: EU AI Act art. 6 + Bijlage I, EUR-Lex",warnings:["Conformity assessment vereist","Risicobeheersysteem vereist","Technische documentatie vereist"]},
+  "avg-gdpr": {amount:"⚠️ DPIA vereist",category:"avg_dpia — DPIA vereist",steps:["Regel: AVG-001 — DPIA bij grootschalige verwerking","Art. 35: DPIA verplicht bij grootschalige verwerking van bijzondere persoonsgegevens","Verwerkingstype: grootschalig → DPIA vereist"],context:"Wet: AVG | BWBR: BWBR0040930 | Versie: 2025.1",source:"Bron: AVG art. 35, wetten.overheid.nl",warnings:["DPIA vereist — voer Data Protection Impact Assessment uit"]},
+  nora: {amount:"✅ Compliant",category:"nora_architectuur — Gebruik open standaarden",steps:["Principe: NORA-001","Gekoppelde use cases: forumstandaardisatie, overheidsstandaarden","Open standaarden toegepast → compliant"],context:"Wet: NORA | Versie: 2025.1",source:"Bron: NORA online, noraonline.nl",warnings:[]}
+};
+function loadPreset(){const p=presets[document.getElementById('uc').value];document.getElementById('input').value=p.input;document.getElementById('partij').value=p.partij}
+function calculate(){
+  const uc=document.getElementById('uc').value;
+  const r=mockResults[uc];if(!r)return;
+  const el=document.getElementById('result');el.style.display='block';
+  document.getElementById('amount').textContent=r.amount;
+  document.getElementById('category').textContent=r.category;
+  document.getElementById('steps').innerHTML=r.steps.map(s=>'<div class="step">'+s+'</div>').join('');
+  document.getElementById('context').textContent='Juridische context: '+r.context;
+  document.getElementById('source').textContent=r.source;
+  document.getElementById('warnings').innerHTML=r.warnings.length?r.warnings.map(w=>'<div>'+w+'</div>').join(''):'';
+  document.getElementById('warnings').style.display=r.warnings.length?'block':'none';
+}
+loadPreset();
+</script></body></html>

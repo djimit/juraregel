@@ -33,6 +33,21 @@ De engine implementeert de uitzonderingen uit de pseudonimiseringsrichtlijn:
 - Rechtspersonen en overheidsorganisaties → niet pseudonimiseren
 - Per rechtsgebied verschillende regels (familierecht = strenger, strafrecht = strenger voor particulieren)
 
+## Waarom JuraRegel?
+
+| Aspect | Handmatige compliance check | Commerciële GRC tools | **JuraRegel** |
+|---|---|---|---|
+| Prijs | €0 (maar uren werk) | €10K-€100K/jaar | **€0 (open-source)** |
+| Bronverwijzing per regel | Handmatig | Soms | **Altijd (JREM sourceRef)** |
+| Testbaarheid | Geen | Beperkt | **207 tests + 14 CI gates** |
+| Uitleg aan burgers | Niet mogelijk | Niet mogelijk | **Redeneerstappen + bronverwijzing** |
+| Versiebeheer | Excel/version control | Vendor-locked | **Git + JREM versioning** |
+| Developer SDK | Niet beschikbaar | Vendor-locked | **TypeScript SDK (MIT)** |
+| Zelf hosten | n.v.t. | Cloud-only | **Docker compose (localhost)** |
+| Rule Maturity Model | Niet | Niet | **L1-L4 classificatie** |
+| NORA compliance | Niet | Soms | **NORA matrix (15 principes)** |
+| Pseudonimisering | Handmatig | Niet | **V4.2 engine (100% op 25K)** |
+
 ## Use Case: Griffierecht
 
 **Als** griffier **wil ik** bij zaakintake automatisch het correcte griffierecht bepalen **zodat** ik niet handmatig tarieven hoeft op te zoeken en fouten voorkom.
@@ -249,8 +264,67 @@ Open `dashboard/index.html` voor een visueel overzicht met live health checks.
 
 ## Architectuur
 
+```mermaid
+graph TB
+    subgraph "Bronnen"
+        R[Rechtspraak.nl]
+        B[MinBZK GitHub — BIO2]
+        F[Forum Standaardisatie]
+        L[Logius / developer.overheid.nl]
+        N[noraonline.nl]
+        EU[EUR-Lex — EU AI Act]
+        AVG[wetten.overheid.nl — AVG]
+    end
+
+    subgraph "JuraRegel Platform"
+        RS[RegelSpraak CNL]
+        JREM[JREM JSON Schema 2020-12]
+        CI[CI/CD — 14 Gates]
+        API[Rule API — FastAPI :8490-8499]
+    end
+
+    subgraph "Consumers"
+        SDK[TypeScript SDK — @juraregel/sdk]
+        CLI[npx juraregel]
+        DASH[Dashboard]
+        PLAY[Playground]
+        DOCKER[docker compose up]
+        GH[GitHub Actions]
+    end
+
+    R --> RS
+    B --> RS
+    F --> RS
+    L --> RS
+    N --> RS
+    EU --> RS
+    AVG --> RS
+    RS --> JREM
+    JREM --> CI
+    CI --> API
+    API --> SDK
+    API --> CLI
+    API --> DASH
+    API --> PLAY
+    API --> DOCKER
+    CI --> GH
 ```
-use-cases/
+
+### Use Case Maturity
+
+| Use case | Regels | Status | Poort |
+|---|---|---|---|
+| Griffierecht | 36 | **Production** | 8490 |
+| BIO2 | 162 | **Production** | 8494 |
+| Forum Standaardisatie | 22 | **Production** | 8495 |
+| Overheidsstandaarden | 24 | **Production** | 8496 |
+| NORA | 15 | **Production** | 8497 |
+| EU AI Act | 12 | PoC | 8498 |
+| AVG/GDPR | 10 | PoC | 8499 |
+| Procesreglement | 4 | PoC | 8491 |
+| Classificatie | 3 | PoC | 8492 |
+| Publicatie/PII | 3 | **Production** (engine V4.2) | 8493 |
+
 ├── griffierecht/         Eerste use case (bewezen PoC)
 ├── procesreglement/      UC-02: Digitale indiening
 ├── classificatie/        UC-03: Zaakclassificatie
