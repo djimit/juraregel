@@ -2,7 +2,7 @@
 
 > **Juridische regels die juristen schrijven en computers begrijpen.**
 
-JuraRegel is een open-source platform voor het beheren, valideren, versioneren en serveren van administratief-juridische regels bij de Nederlandse rechtspraak. Het vertaalt de [pseudonimiseringsrichtlijn](https://www.rechtspraak.nl/uitspraken/pseudonimiseringsrichtlijn) van Rechtspraak.nl en andere juridische richtlijnen naar digitale, testbare, auditeerbare regels.
+JuraRegel is een open-source platform voor het beheren, valideren, versioneren en serveren van administratief-juridische regels. Het vertaalt de [pseudonimiseringsrichtlijn](https://www.rechtspraak.nl/uitspraken/pseudonimiseringsrichtlijn) van Rechtspraak.nl en andere juridische richtlijnen naar digitale, testbare, auditeerbare regels.
 
 ## Wat JuraRegel doet
 
