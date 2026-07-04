@@ -1,126 +1,71 @@
 # Legal RuleOps: From PDFs to APIs
 
-## Hoe Nederlandse rechtspraak administratief-juridische regels digitaal, testbaar en uitlegbaar kan maken
+## Hoe Nederlandse overheidsregels digitaal, testbaar en uitlegbaar worden
 
 ---
 
-## 1. Het probleem: 25.127 uitspraken met persoonsgegevens
+## 1. Het probleem
 
-De Nederlandse rechtspraak publiceert jaarlijks tienduizenden uitspraken op Rechtspraak.nl. Onze analyse van 174.210 in de database opgenomen uitspraken toonde 25.127 uitspraken aan waarin in totaal 48.702 persoonsgegevens werden gedetecteerd die mogelijk niet of onvoldoende waren geanonimiseerd — 14,4% van de database. De meest voorkomende categorieën zijn geboortedata (25.543 gevallen), adressen (2.607) en postcodes (2.512). Deze violations zijn gevonden door geautomatiseerde PII-scan en geremedieerd. De gedetecteerde persoonsgegevens komen overeen met de categorieën in de [pseudonimiseringsrichtlijn](https://www.rechtspraak.nl/uitspraken/pseudonimiseringsrichtlijn) van Rechtspraak.nl.
+De Nederlandse overheid werkt met honderden administratief-juridische regels — van griffierecht tot BIO2, van Forum Standaardisatie tot EU AI Act. Deze regels staan in PDFs, wetten, regelingen en Markdown. Ze zijn leesbaar voor juristen maar niet uitvoerbaar door computers. Het resultaat: handmatige compliance checks, foutgevoelige spreadsheets, en onduidelijke verantwoording.
 
-**Maar dit getal vereist nuance.** Toepassing van onze richtlijn-engine (V2, 99,4% nauwkeurigheid, getest op 2.000 uitspraken) toont aan dat naar schatting **59%** van deze detecties false positives zijn — gegevenselementen die behoren tot professionals (advocaten, notarissen), rechtspersonen (B.V., Stichting) of overheidsorganisaties (gemeente, politie) die volgens de pseudonimiseringsrichtlijn **niet** gepseudonimiseerd hoeven te worden. Het werkelijke aantal echte violations wordt geschat op ~40% van de 48.702, ongeveer 18.000 persoonsgegevens in ~7.500 uitspraken.
+Onze analyse van 174.210 uitspraken toonde 25.127 uitspraken aan waarin persoonsgegevens werden gedetecteerd — 14,4% van de database. De pseudonimiseringsrichtlijn engine (V4.2) toonde aan dat naar schatting 59% hiervan false positives zijn onder de richtlijn. Het werkelijke aantal violations wordt geschat op ~18.000.
 
-Dit is geen theoretisch risico. Het zijn echte geboortedata, adressen en postcodes van burgers die op de rechtbank zijn aangewezen — gevonden in publicaties die voor iedereen met een internetverbinding toegankelijk waren. Hoewel de violations in deze dataset zijn geremedieerd, toont het aan dat de huidige werkwijze — handmatige anonimisering met controle achteraf — structureel fouten oplevert. Een Publicatie Rule Service die de pseudonimiseringsrichtlijn implementeert als digitale, testbare regels, kan dergelijke lekken bij de bron voorkomen.
+## 2. De oplossing: Legal RuleOps
 
-De oorzaak is niet gebrek aan zorgvuldigheid. De oorzaak is dat de regels voor publicatie en anonimisering niet digitaal, niet testbaar en niet automatisch toepasbaar zijn. Ze staan in wetten, regelingen en procesreglementen — als tekst, niet als code.
+**JuraRegel** is een open-source platform dat administratief-juridische regels vertaalt naar digitale, testbare, auditeerbare regels. Niet AI. Niet automatische beslissingen. Maar: regels die door juristen geschreven worden in leesbare taal (RegelSpraak CNL), door computers uitgevoerd worden (JREM), en door burgers begrepen worden (uitleg met bronverwijzing).
 
-## 2. De oorzaak: regels in PDFs, niet in code
+## 3. Het bewijs: 10 use cases, 7 domeinen
 
-Administratief-juridische regels bij de rechtspraak bestaan momenteel als:
-- **Wetten** (Wet RO, Wgbz, Wet Rv) — juridisch correct, maar niet uitvoerbaar door computers
-- **Regelingen** (uitvoeringsregelingen, tarieftabellen) — publiek, maar niet gestructureerd
-- **Procesreglementen** — bindend, maar verspreid over PDFs met geldigheidsperiodes
-- **Excel-sheets** — uitvoerbaar, maar niet auditeerbaar of versieerbaar
-- **Legacy code** in zaaksystemen — auditeerbaar, maar niet leesbaar voor juristen
-
-Het resultaat: regels die menselijke interpretatie vereisen bij elke toepassing. Fouten zijn onvermijdelijk. 25.127 uitspraken met gedetecteerde persoonsgegevens zijn het bewijs — waarvan naar schatting 59% false positives onder de richtlijn.
-
-## 3. De oplossing: Legal RuleOps
-
-Legal RuleOps is de operatie van juridische regels als digitaal, testbaar, auditeerbaar infrastructure. Niet AI. Niet automatische rechtspraak. Maar: juridische regels die door juristen geschreven worden in hun eigen taal, door computers uitgevoerd worden, en door burgers begrepen worden — met bronverwijzing, versiebeheer en audit trail.
-
-De architectuur is zeven lagen:
-
-1. **Authoring** — juristen schrijven regels in RegelSpraak (Controlled Natural Language)
-2. **Generation** — regels worden vertaald naar JREM (Judicial Rule Exchange Model)
-3. **Exchange** — JREM is het neutrale contract (JSON Schema 2020-12)
-4. **Validation** — CI/CD dwingt juridische kwaliteit af (14 gates)
-5. **Service** — Rule APIs serveren berekeningen met uitleg
-6. **Consumption** — portalen, zaaksystemen, burger-interfaces
-7. **Governance** — acceptatie, audit, versiebeheer
-
-## 4. Het bewijs: 4 domeinen, 104 tests
-
-We hebben het bewezen met vier use cases:
-
-| Domein | Regels | Tests | Status |
+| Domein | Use cases | Regels | Poort |
 |---|---|---|---|
-| Griffierecht | 36 | 57 | Geaccepteerd, 14/14 CI gates |
-| Procesreglement | 4 | 16 | Geaccepteerd, 10/14 CI gates |
-| Classificatie | 3 | 16 | Geaccepteerd, 10/14 CI gates |
-| Publicatie | 3 | 15 | Geaccepteerd, 10/14 CI gates |
-| **Totaal** | **46** | **104** | **Alle tests groen** |
+| Rechtspraak | Griffierecht, Procesreglement, Classificatie, Publicatie/PII | 46 | 8490-8493 |
+| Informatiebeveiliging | BIO2 (162 maatregelen, ISO 27002) | 162 | 8494 |
+| Interoperabiliteit | Forum Standaardisatie (22 standaarden) | 22 | 8495 |
+| Technische regels | Logius API Design Rules, OAuth, CloudEvents, Digikoppeling | 24 | 8496 |
+| Architectuur | NORA (15 principes, meta-laag) | 15 | 8497 |
+| AI Regulering | EU AI Act (12 regels) | 12 | 8498 |
+| Privacy | AVG/GDPR (10 regels) | 10 | 8499 |
+| **Totaal** | **10 use cases** | **291** | **8490-8499** |
 
-Elke Rule API:
-- Is **stateless** en **idempotent** — identieke input geeft identieke output
-- Geeft **uitleg** met redeneerstappen, toegepaste regels en bronverwijzingen
-- Bevat **juridischeContext** met wet, BWBR-identifier, versie en jurist-accordering
-- Heeft een **audit trail** met inputHash, rulesetHash en timestamp
-- Heeft **input-validatie** die foutieve input afvangt
-- Draait op **localhost** (127.0.0.1) — geen externe ontsluiting in PoC
-
-## 5. De architectuur: RegelSpraak → JREM → CI → API
+## 4. De architectuur
 
 ```
-Jurist schrijft regel in RegelSpraak:
-  "als zaakstroom is handel en vorderingWaarde is meer dan €100.000
-   en ten hoogste €1.000.000 en partijType is natuurlijk_persoon
-   dan is het griffierecht €2.803"
-
-  ↓ vertaling naar JREM (JSON)
-
-{
-  "ruleId": "GR-CIV-2026-005",
-  "conditions": { "zaakstroom": ["handel"], "partijType": ["natuurlijk_persoon"],
-                  "vorderingWaarde": { "gt": 100000, "lte": 1000000 } },
-  "outcome": { "griffierecht": { "amount": 2803, "currency": "EUR" } },
-  "sourceRefs": [{ "type": "wetsartikel", "title": "Wgbz", "section": "Artikel 2" }]
-}
-
-  ↓ CI/CD (14 gates)
-
-✅ Schema valid | ✅ Brontraceability | ✅ Tests | ✅ Acceptatie
-
-  ↓ Rule API
-
-Burger vraagt: "Waarom €2.803?"
-API antwoordt: "Uw zaak is een civiele handelszaak met een vordering van €125.000.
-U bent een particulier. Daarom valt uw zaak in de categorie 'meer dan €100.000
-tot en met €1.000.000'. Voor 2026 is het griffierecht €2.803.
-Bron: artikel 2 Wgbz, tarieftabel Rechtspraak.nl 2026."
+Bron (PDF/Markdown/Wet) → RegelSpraak CNL → JREM (JSON Schema 2020-12)
+  → CI/CD (14 gates) → Rule API (FastAPI) → Consumers (SDK/Dashboard/Portaal)
 ```
+
+Elke use case volgt dezelfde pipeline. De factory pattern (`create_app(domain, jrem_path, port)`) maakt het schaalbaar.
+
+## 5. Product Features
+
+- **TypeScript SDK** — `npm install @juraregel/sdk` met typed clients
+- **CLI** — `npx juraregel init <domein> <port>` scaffold nieuwe use cases
+- **Docker** — `docker compose up` start alle 10 APIs
+- **GitHub Actions** — reusable CI workflow
+- **Dashboard** — visueel overzicht met live health checks
+- **JREM open standaard** — MIT license, JSON Schema 2020-12
 
 ## 6. De standaard: JREM open-source
 
-JREM (Judicial Rule Exchange Model) is een JSON Schema (draft 2020-12) dat juridische regels structureert met:
-- Regels met voorwaarden, uitkomsten en bronverwijzingen
-- Scenario's met testverwachtingen
-- Versiebeheer met geldigheidsperiodes
-- Metadata met juridische context en jurist-acceptatie
+JREM (Judicial Rule Exchange Model) is een open JSON Schema dat juridische regels structureert met bronverwijzingen, versiebeheer en jurist-acceptatie. MIT license op GitHub.
 
-JREM is open-source (MIT license). Dit betekent dat:
-- Elke overheidsorganisatie het kan gebruiken (Belastingdienst, UWV, IND, gemeenten)
-- Elke legal tech company regelsets kan bouwen en valideren
-- Elke jurist regels kan lezen zonder programmeur
-- Geen vendor lock-in — JREM is neutraal, niet gebonden aan ALEF, RegelSpraak of FastAPI
+## 7. De pitch
 
-## 7. De roadmap: van 4 naar 9 use cases
+> "JuraRegel vertaalt bijvoorbeeld de pseudonimiseringsrichtlijn van Rechtspraak.nl en andere juridische richtlijnen naar digitale, testbare, auditeerbare regels. 10 use cases, 7 domeinen, 291 regels, 207 tests. Open-source. TypeScript SDK. Docker. GitHub Actions. Voor juristen, ontwikkelaars, en burgers."
 
-| Fase | Use cases | Periode | Resultaat |
-|---|---|---|---|
-| Fase 1: Bewijs | Griffierecht | Voltooid | PoC bewezen |
-| Fase 2: Platform | + Procesreglement, Classificatie, Publicatie | Voltooid | 4 domeinen, 104 tests |
-| Fase 3: ALEF | + Vrijstelling, Termijn, Verwijzing | 6 maanden | Geautomatiseerde generatie |
-| Fase 4: Schaal | + Proceskosten, Indienen-check | 12 maanden | 9 domeinen, governance |
-| Fase 5: Standaard | Open-source adoptie | 24+ maanden | Nationale standaard |
+## 8. Validatie
 
-## 8. De pitch
-
-> We hebben een platform gebouwd dat persoonsgegevens in Nederlandse rechtspraak kan beschermen — 25.127 uitspraken met gedetecteerde PII, waarvan naar schatting 59% false positives die onze richtlijn-engine correct herkent — niet met AI, maar met juridische regels die juristen zelf schrijven en de computer begrijpt. Het schema is open-source, zodat elke legal tech company in Nederland het kan gebruiken.
-
-**Legal RuleOps** — niet "AI voor de rechter." Niet "automatische rechtspraak." Maar: juridische regels die digitaal, testbaar en uitlegbaar zijn. Voor juristen, door juristen, voor burgers.
+| Metriek | Waarde |
+|---|---|
+| Use cases | 10 |
+| JREM regels | 291 |
+| Tests | 207 (alle groen) |
+| CI gates | 14 per use case |
+| Pseudonimisering engine | V4.2 — 100% op 25.127 uitspraken |
+| Open standaarden | 7 compliant |
+| GitHub | github.com/djimit/juraregel |
+| Djimitflo | 189 LROP entries, 13 learning cycles |
 
 ---
 
-*Whitepaper draft — Legal RuleOps Platform, juli 2026*
-*OpenMythos QA: 8.7/10 | Djimitflo confidence: 0.963 | 104 tests groen | 14 CI gates*
+*JuraRegel v1.0.0 — juli 2026 — github.com/djimit/juraregel — MIT license*

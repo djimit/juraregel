@@ -1,0 +1,17 @@
+{
+  "name": "juraregel",
+  "version": "1.0.0",
+  "description": "JuraRegel — Legal RuleOps Platform CLI",
+  "type": "module",
+  "bin": {
+    "juraregel": "bin/juraregel.mjs"
+  },
+  "scripts": {
+    "init": "node bin/juraregel.mjs init",
+    "check": "node bin/juraregel.mjs check",
+    "serve": "node bin/juraregel.mjs serve"
+  },
+  "license": "MIT",
+  "repository": {"type": "git", "url": "https://github.com/djimit/juraregel"},
+  "keywords": ["juraregel", "legal-ruleops", "compliance", "netherlands", "bio2", "nora", "ai-act", "avg"]
+}

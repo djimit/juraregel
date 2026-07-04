@@ -1,0 +1,25 @@
+{
+  "name": "@juraregel/sdk",
+  "version": "1.0.0",
+  "description": "TypeScript SDK for JuraRegel Legal RuleOps Platform",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./griffierecht": "./src/griffierecht.ts",
+    "./bio2": "./src/bio2.ts",
+    "./forumstandaardisatie": "./src/forumstandaardisatie.ts",
+    "./overheidsstandaarden": "./src/overheidsstandaarden.ts",
+    "./nora": "./src/nora.ts",
+    "./eu-ai-act": "./src/eu-ai-act.ts",
+    "./avg-gdpr": "./src/avg-gdpr.ts"
+  },
+  "scripts": {
+    "build": "tsc",
+    "check": "tsc --noEmit"
+  },
+  "license": "MIT",
+  "repository": {"type": "git", "url": "https://github.com/djimit/juraregel"},
+  "keywords": ["juraregel", "legal-ruleops", "compliance", "netherlands", "government", "bio2", "nora", "avg", "ai-act"]
+}

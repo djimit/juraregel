@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+*.db
+*.sqlite
+use-cases/*/jrem/exports/*.json
+.git/

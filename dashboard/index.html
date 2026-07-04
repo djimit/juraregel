@@ -1,16 +1,61 @@
 <!DOCTYPE html>
-<html lang="nl"><head><meta charset="UTF-8"><title>JuraRegel Dashboard</title>
-<style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:system-ui;background:#0f172a;color:#e2e8f0;padding:2rem}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem}.card{background:#1e293b;border-radius:12px;padding:1.5rem;border:1px solid #334155}.card h2{font-size:1rem;color:#94a3b8;margin-bottom:0.5rem}.card .port{font-size:2rem;font-weight:700;color:#3b82f6}.card .rules{font-size:1.2rem;color:#22c55e;margin-top:0.5rem}.card .status{display:inline-block;padding:2px 8px;border-radius:4px;font-size:0.75rem;background:#22c55e;color:#0f172a;margin-top:0.5rem}h1{font-size:1.5rem;margin-bottom:1rem}</style>
-</head><body><h1>JuraRegel — Legal RuleOps Platform</h1><p style="color:#94a3b8;margin-bottom:2rem">10 use cases · 291 regels · 207 tests · 7 domeinen</p>
-<div class="grid">
-<div class="card"><h2>Griffierecht</h2><div class="port">:8490</div><div class="rules">36 regels</div><span class="status">Rechtspraak</span></div>
-<div class="card"><h2>Procesreglement</h2><div class="port">:8491</div><div class="rules">4 regels</div><span class="status">Rechtspraak</span></div>
-<div class="card"><h2>Classificatie</h2><div class="port">:8492</div><div class="rules">3 regels</div><span class="status">Rechtspraak</span></div>
-<div class="card"><h2>Publicatie / PII</h2><div class="port">:8493</div><div class="rules">3 regels</div><span class="status">Rechtspraak</span></div>
-<div class="card"><h2>BIO2</h2><div class="port">:8494</div><div class="rules">162 regels</div><span class="status">Informatiebeveiliging</span></div>
-<div class="card"><h2>Forum Standaardisatie</h2><div class="port">:8495</div><div class="rules">22 regels</div><span class="status">Interoperabiliteit</span></div>
-<div class="card"><h2>Overheidsstandaarden</h2><div class="port">:8496</div><div class="rules">24 regels</div><span class="status">Technische regels</span></div>
-<div class="card"><h2>NORA (meta-laag)</h2><div class="port">:8497</div><div class="rules">15 regels</div><span class="status">Architectuur</span></div>
-<div class="card"><h2>EU AI Act</h2><div class="port">:8498</div><div class="rules">12 regels</div><span class="status">AI Regulering</span></div>
-<div class="card"><h2>AVG / GDPR</h2><div class="port">:8499</div><div class="rules">10 regels</div><span class="status">Privacy</span></div>
-</div></body></html>
+<html lang="nl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JuraRegel Dashboard</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:system-ui,-apple-system,sans-serif;background:#0f172a;color:#e2e8f0;padding:2rem}
+h1{font-size:1.5rem;margin-bottom:0.5rem}
+.subtitle{color:#94a3b8;margin-bottom:2rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
+.card{background:#1e293b;border-radius:12px;padding:1.5rem;border:1px solid #334155;transition:border-color .2s}
+.card:hover{border-color:#3b82f6}
+.card.online{border-color:#22c55e}
+.card.offline{border-color:#ef4444;opacity:.6}
+.card h2{font-size:.9rem;color:#94a3b8;margin-bottom:.5rem;text-transform:uppercase;letter-spacing:.05em}
+.card .port{font-size:1.8rem;font-weight:700;color:#3b82f6}
+.card.online .port{color:#22c55e}
+.card .rules{font-size:1.1rem;color:#e2e8f0;margin-top:.5rem}
+.card .status{display:inline-block;padding:2px 8px;border-radius:4px;font-size:.7rem;margin-top:.5rem}
+.card.online .status{background:#22c55e;color:#0f172a}
+.card.offline .status{background:#ef4444;color:#fff}
+.card .health{font-size:.8rem;color:#64748b;margin-top:.5rem}
+.stats{display:flex;gap:2rem;margin-bottom:2rem}
+.stat{background:#1e293b;padding:1rem;border-radius:8px;border:1px solid #334155}
+.stat .num{font-size:2rem;font-weight:700;color:#3b82f6}
+.stat .label{font-size:.8rem;color:#94a3b8}
+</style></head>
+<body>
+<h1>JuraRegel — Legal RuleOps Platform</h1>
+<p class="subtitle">10 use cases · 291 regels · 207 tests · 7 domeinen</p>
+<div class="stats">
+<div class="stat"><div class="num">10</div><div class="label">Use Cases</div></div>
+<div class="stat"><div class="num">291</div><div class="label">JREM Regels</div></div>
+<div class="stat"><div class="num">207</div><div class="label">Tests</div></div>
+<div class="stat"><div class="num">7</div><div class="label">Domeinen</div></div>
+</div>
+<div class="grid" id="grid"></div>
+<script>
+const useCases = [
+  {name:'Griffierecht',port:8490,rules:36,domain:'Rechtspraak'},
+  {name:'Procesreglement',port:8491,rules:4,domain:'Rechtspraak'},
+  {name:'Classificatie',port:8492,rules:3,domain:'Rechtspraak'},
+  {name:'Publicatie / PII',port:8493,rules:3,domain:'Rechtspraak'},
+  {name:'BIO2',port:8494,rules:162,domain:'Informatiebeveiliging'},
+  {name:'Forum Standaardisatie',port:8495,rules:22,domain:'Interoperabiliteit'},
+  {name:'Overheidsstandaarden',port:8496,rules:24,domain:'Technische regels'},
+  {name:'NORA',port:8497,rules:15,domain:'Architectuur'},
+  {name:'EU AI Act',port:8498,rules:12,domain:'AI Regulering'},
+  {name:'AVG / GDPR',port:8499,rules:10,domain:'Privacy'},
+];
+const grid = document.getElementById('grid');
+useCases.forEach(uc => {
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.innerHTML = `<h2>${uc.name}</h2><div class="port">:${uc.port}</div><div class="rules">${uc.rules} regels</div><span class="status">${uc.domain}</span><div class="health">checking...</div>`;
+  grid.appendChild(card);
+  fetch(`http://127.0.0.1:${uc.port}/v1/health`)
+    .then(r => r.json())
+    .then(d => { card.classList.add('online'); card.querySelector('.health').textContent = `✅ ${d.status} — v${d.version}`; })
+    .catch(() => { card.classList.add('offline'); card.querySelector('.health').textContent = '❌ offline'; });
+});
+</script></body></html>

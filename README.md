@@ -1,5 +1,7 @@
 # JuraRegel — Legal RuleOps Platform
 
+[![JuraRegel CI](https://github.com/djimit/juraregel/actions/workflows/juraregel-ci.yml/badge.svg)](https://github.com/djimit/juraregel/actions/workflows/juraregel-ci.yml)
+
 > **Juridische regels die juristen schrijven en computers begrijpen.**
 
 JuraRegel is een open-source platform voor het beheren, valideren, versioneren en serveren van administratief-juridische regels. Het vertaalt bijvoorbeeld de [pseudonimiseringsrichtlijn](https://www.rechtspraak.nl/uitspraken/pseudonimiseringsrichtlijn) van Rechtspraak.nl en andere juridische richtlijnen naar digitale, testbare, auditeerbare regels.
@@ -221,6 +223,29 @@ Zie [CONTRIBUTING.md](CONTRIBUTING.md) voor de use case template en bijdrage ric
 
 ### NORA Compliance Matrix
 Zie [docs/nora-compliance-matrix.md](docs/nora-compliance-matrix.md) voor de Mermaid diagram met NORA principes → use case mapping.
+
+## Installatie
+
+### TypeScript SDK
+```bash
+npm install @juraregel/sdk
+```
+
+### CLI
+```bash
+npx juraregel init avg 8500    # Scaffold nieuwe use case
+npx juraregel check             # Run CI gates
+npx juraregel serve griffierecht # Start API
+npx juraregel validate use-cases/griffierecht/jrem/exports/griffierecht-civiel-2026.1.json
+```
+
+### Docker
+```bash
+docker compose up  # Start alle 10 Rule APIs (ports 8490-8499)
+```
+
+### Dashboard
+Open `dashboard/index.html` voor een visueel overzicht met live health checks.
 
 ## Architectuur
 
