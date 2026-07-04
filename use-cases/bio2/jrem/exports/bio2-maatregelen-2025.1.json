@@ -1,0 +1,6710 @@
+{
+  "schemaVersion": "1.0.0",
+  "ruleSetId": "bio2-maatregelen",
+  "version": "2025.1",
+  "validFrom": "2025-01-01",
+  "validUntil": "2026-12-31",
+  "jurisdiction": "NL",
+  "domain": "bio2-informatiebeveiliging",
+  "procedureType": "dagvaarding",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "BIO2-5.01.01",
+      "name": "De entiteit heeft een informatiebeveiligingsbeleid opgesteld en vastgesteld door het bestuur van de",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.01.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.01",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.01.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.01.02",
+      "name": "Het informatiebeveiligingsbeleid wordt minimaal jaarlijks en in aansluiting bij de bestuurs- en Plan",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.01.02",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.01",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.01.02",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.02.01",
+      "name": "Het bestuur van de entiteit heeft vastgelegd en vastgesteld:  -  wat de verantwoordelijkheden en rol",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.02.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.02",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.02.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.02.02",
+      "name": "Er is een CISO aangesteld die bevoegd is om onafhankelijk en zelfstandig te adviseren en te rapporte",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.02.02",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.02",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.02.02",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.03.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.03.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.03",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.03.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.04.01",
+      "name": "Het bestuur en de werknemers volgen regelmatig scholing, om cyberbeveiligingsrisico’s te herkennen e",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.04.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.04",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.04.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.05.01",
+      "name": "De entiteit heeft uitgewerkt welke functionarissen met welke (overheids)instanties en toezichthouder",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.05.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.05",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.05.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.06.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.06.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.06",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.06.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.07.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.07.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.07",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.07.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.08.01",
+      "name": "Bij nieuwe informatiesystemen en bij significante wijzigingen op bestaande informatiesystemen wordt",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.08.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.08",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.08.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.09.01",
+      "name": "Er is een inventaris van bedrijfsmiddelen die van belang zijn voor informatieverwerking, met inbegri",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.09.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.09",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.09.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.10.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.10.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.10",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.10.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.10.02",
+      "name": "De gedragsregels voor het gebruik van bedrijfsmiddelen zijn voor extern personeel en vrijwilligers i",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.10.02",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.10",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.10.02",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.10.03",
+      "name": "Alle medewerkers zijn aantoonbaar gewezen op de gedragsregels voor het gebruik van bedrijfsmiddelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.10.03",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.10",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.10.03",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.11.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.11.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.11",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.11.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.12.01",
+      "name": "Informatie in alle informatiesystemen wordt met een expliciete risicoafweging geclassificeerd.<br><b",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.12.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.12",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.12.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.13.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.13.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.13",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.13.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.14.01",
+      "name": "Internetfacing-informatiesystemen en e-mail berichtenverkeer blijven voldoen aan de verplichte bevei",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.14.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.14",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.14.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.14.02",
+      "name": "De entiteit maakt bij openbaar webverkeer van gevoelige gegevens gebruik van ten minste publiek vert",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.14.02",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.14",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.14.02",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.14.03",
+      "name": "Geavanceerde en/of gekwalificeerde elektronische handtekeningen voldoen aan de Advanced Electronic S",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.14.03",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.14",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.14.03",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.14.04",
+      "name": "Van alle internetfacing-informatiesystemen, webapplicaties, IP-adressen en API’s is er een actuele r",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.14.04",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.14",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.14.04",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.14.05",
+      "name": "Publiek toegankelijke websites worden bekend gemaakt via het Register Internetdomeinen Overheid (RIO",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.14.05",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.14",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.14.05",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.15.01",
+      "name": "Toegang tot een vertrouwde zone is toegestaan in twee situaties:  1. vanaf geauthentiseerde apparatu",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.15.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.15",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.15.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.16.01",
+      "name": "Er is een sluitende formele registratie- en afmeldprocedure voor het beheren van gebruikersidentific",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.16.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.16",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.16.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.16.02",
+      "name": "Het gebruiken van groepsaccounts is niet toegestaan, tenzij de proceseigenaar dit motiveert, vastleg",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.16.02",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.16",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.16.02",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.17.01",
+      "name": "De entiteit past multi-factorauthenticatie (MFA) ten minste toe voor het primaire aanloggen op de di",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.17.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.17",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.17.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.17.02",
+      "name": "De entiteit biedt aan alle medewerkers een wachtwoordmanager of vergelijkbare oplossing aan.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.17.02",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.17",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.17.02",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.17.03",
+      "name": "De eisen aan wachtwoorden worden geautomatiseerd afgedwongen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.17.03",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.17",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.17.03",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.18.01",
+      "name": "Het maken en aanpassen van accounts met bijzondere rechten wordt gemonitord. Indien deze wijzigingen",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.18.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.18",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.18.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.18.02",
+      "name": "Alle uitgegeven toegangsrechten worden minimaal eenmaal per jaar beoordeeld. Een risicoafweging bepa",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.18.02",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.18",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.18.02",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.19.01",
+      "name": "Bij offerteaanvragen waar informatie(voorziening) een rol speelt, zijn informatiebeveiligingseisen w",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.19.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.19",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.19.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.20.01",
+      "name": "De beveiligingseisen uit de offerteaanvraag worden expliciet opgenomen in (inkoop)contracten waar de",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.20.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.20",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.20.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.20.02",
+      "name": "Waar mogelijk worden algemene voorwaarden van leveranciers expliciet uitgesloten en worden eventueel",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.20.02",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.20",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.20.02",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.20.03",
+      "name": "In het inkoopcontract wordt opgenomen dat de leverancier aantoont dat hij aan alle gestelde eisen vo",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.20.03",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.20",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.20.03",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.20.04",
+      "name": "De entiteit voert zelfstandig onderzoek uit, ook ter validatie van de rapportages die de leverancier",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.20.04",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.20",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.20.04",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.20.05",
+      "name": "Onderdeel van de afspraken is dat de leverancier transparant is over kwetsbaarheden in de dienstverl",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.20.05",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.20",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.20.05",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.20.06",
+      "name": "Voordat een contract wordt afgesloten, wordt in een risicoafweging bepaald of de afhankelijkheid van",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.20.06",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.20",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.20.06",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.21.01",
+      "name": "Vervallen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.21.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.21",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.21.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.21.02",
+      "name": "Voorafgaand aan het afsluiten van de overeenkomst geeft de leverancier inzicht in de keten van toele",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.21.02",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.21",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.21.02",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.21.03",
+      "name": "De entiteit borgt dat de beveiligingseisen aan de leverancier onverminderd van toepassing zijn op de",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.21.03",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.21",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.21.03",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.21.04",
+      "name": "Gedurende de looptijd geeft de leverancier veranderingen in de keten van toeleveranciers door, inclu",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.21.04",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.21",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.21.04",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.21.05",
+      "name": "De beveiliging van toeleveringsketens is onderdeel van de risicoanalyse voor de entiteit. In de risi",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.21.05",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.21",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.21.05",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.22.01",
+      "name": "Op basis van het door de leverancier aangeleverde bewijsmateriaal, zie overheidsmaatregel 5.20.03, i",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.22.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.22",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.22.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.22.02",
+      "name": "De entiteit heeft een actuele registratie van leveranciers en afgesloten contracten.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.22.02",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.22",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.22.02",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.23.01",
+      "name": "De entiteit stelt beleid op dat toeziet op het inventariseren, classificeren, selecteren, beoordelen",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.23.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.23",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.23.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.24.01",
+      "name": "Er is voor alle interne en externe medewerkers een toegankelijk meldloket waar informatiebeveiliging",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.24.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.24",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.24.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.24.02",
+      "name": "Er is een meldprocedure waarin de taken en verantwoordelijkheden van het meldloket staan beschreven.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.24.02",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.24",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.24.02",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.24.03",
+      "name": "De proceseigenaar is verantwoordelijk voor het oplossen van informatiebeveiligingsincidenten.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.24.03",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.24",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.24.03",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.24.04",
+      "name": "De proceseigenaar rapporteert maandelijks de opvolging van informatiebeveiligingsincidenten aan de e",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.24.04",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.24",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.24.04",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.24.05",
+      "name": "In de procedure voor informatiebeveiligingsincidenten is er een verwijzing gemaakt naar de procedure",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.24.05",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.24",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.24.05",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.24.07",
+      "name": "De incidentprocedure bevat tenminste:  - dat binnen de wettelijke termijn informatiebeveiligingsinci",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.24.07",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.24",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.24.07",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.24.08",
+      "name": "Een Coordinated Vulnerability Disclosure (CVD)-procedure is ingericht en gepubliceerd volgens de NCS",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.24.08",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.24",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.24.08",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.26.02",
+      "name": "Informatiebeveiligingsincidenten worden afgedaan via het incidentbeheerproces.<br><br> In het incide",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.26.02",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.26",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.26.02",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.27.01",
+      "name": "Informatiebeveiligingsincidenten worden geanalyseerd om achterliggende oorzaken vast te stellen, ver",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.27.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.27",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.27.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.27.02",
+      "name": "De analyses van informatiebeveiligingsincidenten, inclusief de achterliggende oorzaken en de verbete",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.27.02",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.27",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.27.02",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.28.01",
+      "name": "De bewaartermijn van een (vermoedelijk) informatiebeveiligingsincident en alle informatie om het inc",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.28.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.28",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.28.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.29.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.29.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.29",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.29.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.30.01",
+      "name": "De proceseigenaar test jaarlijks continuïteitsplannen op werking, volledigheid en actualiteit, om de",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.30.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.30",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.30.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.30.02",
+      "name": "Binnen de inventarisatie van beheersmaatregel 5.12 uit NEN-EN-ISO/IEC 27002:2022, identificeert de p",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.30.02",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.30",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.30.02",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.31.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.31.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.31",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.31.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.32.01",
+      "name": "```Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.```",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.32.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.32",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.32.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.33.01",
+      "name": "```De proceseigenaar heeft voor informatie(systemen) bewaartermijnen vastgesteld en ingericht, zodan",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.33.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.33",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.33.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.34.01",
+      "name": "```Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.```",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.34.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.34",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.34.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.35.01",
+      "name": "Vervallen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.35.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.35",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.35.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.35.02",
+      "name": "Er is een vastgesteld auditplan waarin jaarlijks keuzes worden gemaakt voor welke systemen welk soor",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.35.02",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.35",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.35.02",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.36.01",
+      "name": "In de P&C-cyclus en als onderdeel van de plan-do-check-act (PDCA)-cyclus wordt gerapporteerd over in",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.36.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.36",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.36.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-5.37.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 5.37.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 5.37",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Organisatorische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "5.37.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-6.01.01",
+      "name": "Elke entiteit heeft een vastgesteld screeningsbeleid.<br><br> Bij indiensttreding en bij functiewijz",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 6.01.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 6.01",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Mensgerichte maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "6.01.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-6.02.01",
+      "name": "Alle medewerkers (intern en extern) zijn bij hun aanstelling of functiewisseling gewezen op hun vera",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 6.02.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 6.02",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Mensgerichte maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "6.02.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-6.03.01",
+      "name": "Alle medewerkers, lijnmanagers en bestuurders hebben de verantwoordelijkheid bedrijfsinformatie te b",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 6.03.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 6.03",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Mensgerichte maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "6.03.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-6.03.02",
+      "name": "Alle medewerkers en contractanten die gebruikmaken van informatiesystemen en -diensten hebben binnen",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 6.03.02",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 6.03",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Mensgerichte maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "6.03.02",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-6.03.03",
+      "name": "Het management benadrukt bij aanstelling en interne overplaatsing en bijvoorbeeld in werkoverleggen",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 6.03.03",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 6.03",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Mensgerichte maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "6.03.03",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-6.03.04",
+      "name": "In bewustwordingsprogramma’s komen gedragsaspecten van veilig mobiel werken aan de orde.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 6.03.04",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 6.03",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Mensgerichte maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "6.03.04",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-6.03.05",
+      "name": "Gebruikers zijn voorgelicht over de risico’s van surfgedrag en het klikken op onbekende links.  <p c",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 6.03.05",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 6.03",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Mensgerichte maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "6.03.05",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-6.04.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 6.04.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 6.04",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Mensgerichte maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "6.04.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-6.05.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 6.05.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 6.05",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Mensgerichte maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "6.05.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-6.06.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 6.06.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 6.06",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Mensgerichte maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "6.06.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-6.07.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 6.07.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 6.07",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Mensgerichte maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "6.07.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-6.08.01",
+      "name": "Alle medewerkers (intern en extern) hebben aantoonbaar kennisgenomen van de meldingsprocedure van in",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 6.08.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 6.08",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Mensgerichte maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "6.08.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-7.01.01",
+      "name": "Vervallen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 7.01.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 7.01",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Fysieke maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "7.01.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-7.01.02",
+      "name": "Kritieke informatie of informatiesystemen zijn alleen bereikbaar via ten minste twee opeenvolgende b",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 7.01.02",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 7.01",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Fysieke maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "7.01.02",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-7.02.01",
+      "name": "In geval van concrete beveiligingsrisico’s worden waarschuwingen, volgens onderlinge afspraken, verz",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 7.02.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 7.02",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Fysieke maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "7.02.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-7.03.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 7.03.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 7.03",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Fysieke maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "7.03.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-7.04.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 7.04.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 7.04",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Fysieke maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "7.04.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-7.05.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 7.05.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 7.05",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Fysieke maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "7.05.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-7.06.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 7.06.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 7.06",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Fysieke maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "7.06.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-7.07.01",
+      "name": "Bij het gebruik van een chipcardtoken voor toegang tot systemen wordt bij het verwijderen van het to",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 7.07.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 7.07",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Fysieke maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "7.07.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-7.08.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 7.08.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 7.08",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Fysieke maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "7.08.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-7.09.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 7.09.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 7.09",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Fysieke maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "7.09.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-7.10.01",
+      "name": "In de verwijderinstructie is opgenomen dat van verwijderbare media, die herbruikbaar zijn en de enti",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 7.10.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 7.10",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Fysieke maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "7.10.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-7.10.02",
+      "name": "Er wordt gecontroleerd of alle data op het medium onherstelbaar verwijderd is.<br><br> Hiervan wordt",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 7.10.02",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 7.10",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Fysieke maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "7.10.02",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-7.10.03",
+      "name": "Het gebruik van koeriers of transporteurs voor transport van geclassificeerde informatie voldoet aan",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 7.10.03",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 7.10",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Fysieke maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "7.10.03",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-7.11.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 7.11.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 7.11",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Fysieke maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "7.11.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-7.12.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 7.12.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 7.12",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Fysieke maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "7.12.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-7.13.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 7.13.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 7.13",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Fysieke maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "7.13.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-7.14.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 7.14.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 7.14",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Fysieke maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "7.14.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.01.01",
+      "name": "Mobiele apparatuur is zo ingericht dat bedrijfsinformatie niet standaard op het gebruikersdevice wor",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.01.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.01",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.01.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.01.02",
+      "name": "Bij de inzet van mobiele apparatuur zijn minimaal de volgende aspecten geïmplementeerd:  - Het appar",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.01.02",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.01",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.01.02",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.02.01",
+      "name": "De toegewezen of gebruikte speciale bevoegdheden worden in opzet, bestaan en werking minimaal ieder",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.02.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.02",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.02.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.03.01",
+      "name": "Er zijn maatregelen genomen die het fysiek en/of logisch isoleren van informatie met specifiek belan",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.03.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.03",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.03.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.03.02",
+      "name": "Gebruikers kunnen alleen die informatie met specifiek belang inzien en verwerken die ze nodig hebben",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.03.02",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.03",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.03.02",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.04.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.04.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.04",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.04.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.05.01",
+      "name": "Voor het verlenen van toegang tot het netwerk aan externe leveranciers wordt vooraf een risicoafwegi",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.05.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.05",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.05.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.06.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.06.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.06",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.06.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.07.01",
+      "name": "Het downloaden van bestanden is beheerst en beperkt op basis van het risico en need-of-use.<br><br>",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.07.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.07",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.07.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.07.02",
+      "name": "De gebruikte antimalware-software en bijbehorende herstelsoftware zijn actueel en wordt ondersteund",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.07.02",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.07",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.07.02",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.07.03",
+      "name": "De malwarescan wordt uitgevoerd op:  - alle omgevingen, bijvoorbeeld op (mail)servers, (desktop)comp",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.07.03",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.07",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.07.03",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.07.04",
+      "name": "Dit maatregelnummer is vervallen.  <p class=\"note\" title=\"Deze maatregel is gewijzigd voor BIO2 v2.0",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.07.04",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.07",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.07.04",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.08.01",
+      "name": "Als van een kwetsbaarheidswaarschuwing de kans op misbruik en de verwachte schade beide hoog zijn, w",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.08.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.08",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.08.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.08.02",
+      "name": "Op basis van een expliciete risicoafweging wordt bepaald op welke wijze mitigerende maatregelen getr",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.08.02",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.08",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.08.02",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.08.03",
+      "name": "In de tussentijd of als installatie binnen een week niet mogelijk is, worden op basis van een explic",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.08.03",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.08",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.08.03",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.08.04",
+      "name": "Informatiesystemen worden waar mogelijk jaarlijks gecontroleerd op technische naleving van beveiligi",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.08.04",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.08",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.08.04",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.08.05",
+      "name": "Internetfacing-informatiesystemen hebben een verplichte waar mogelijk geautomatiseerde penetratietes",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.08.05",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.08",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.08.05",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.08.06",
+      "name": "Zie overheidsmaatregel 5.24.08.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.08.06",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.08",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.08.06",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.09.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.09.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.09",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.09.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.10.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.10.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.10",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.10.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.11.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.11.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.11",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.11.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.12.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.12.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.12",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.12.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.13.01",
+      "name": "Er is een back-upbeleid waarin de eisen voor het bewaren en beschermen zijn gedefinieerd en vastgest",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.13.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.13",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.13.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.13.02",
+      "name": "Op basis van een expliciete risicoafweging is bepaald wat het maximaal toegestane dataverlies is en",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.13.02",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.13",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.13.02",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.13.03",
+      "name": "Het back-upproces voorziet in de opslag van de back-up op een locatie, waarbij een incident op de en",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.13.03",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.13",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.13.03",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.13.04",
+      "name": "De herstelprocedure wordt minimaal jaarlijks getest of na een grote wijziging, om de goede werking t",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.13.04",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.13",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.13.04",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.14.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.14.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.14",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.14.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.15.01",
+      "name": "Een logregel bevat minimaal:  - Actie: de gebeurtenis of handeling die heeft plaatsgevonden. - Objec",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.15.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.15",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.15.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.15.02",
+      "name": "Een logregel bevat nooit gegevens die tot het doorbreken van de beveiliging kunnen leiden.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.15.02",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.15",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.15.02",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.15.03",
+      "name": "Er is een overzicht van logbestanden die worden gegenereerd.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.15.03",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.15",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.15.03",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.15.04",
+      "name": "De bewaartermijn van logbestanden en gegevens in het Security Incident en Event Monitoring (SIEM) wo",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.15.04",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.15",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.15.04",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.15.05",
+      "name": "Oneigenlijk wijzigen, verwijderen of pogingen daartoe van loggegevens worden zo snel mogelijk gemeld",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.15.05",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.15",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.15.05",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.15.06",
+      "name": "Op basis van een expliciete risicoafweging bepaalt de entiteit de periodieke toetsing op het ongewij",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.15.06",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.15",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.15.06",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.16.01",
+      "name": "Bij ontdekte nieuwe dreigingen (aanvallen) via overheidsmaatregel 8.16.3 worden deze binnen geldende",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.16.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.16",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.16.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.16.02",
+      "name": "Het SIEM- en/of het SOC-monitoringsproces hebben eenduidige regels over wanneer een incident wordt g",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.16.02",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.16",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.16.02",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.16.03",
+      "name": "De informatieverwerkende omgeving wordt gemonitord met een detectie- en response-oplossing, waarmee",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.16.03",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.16",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.16.03",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.16.04",
+      "name": "Actieve netwerkcomponenten zijn voorzien van logging en monitoring van die logging om afwijkende geb",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.16.04",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.16",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.16.04",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.17.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.17.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.17",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.17.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.18.01",
+      "name": "Alleen bevoegd personeel heeft op die momenten dat toegang strikt noodzakelijk is toegang tot systee",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.18.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.18",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.18.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.18.02",
+      "name": "Het gebruik van systeemhulpmiddelen wordt gelogd.<br><br> De logging is een halfjaar beschikbaar voo",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.18.02",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.18",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.18.02",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.19.01",
+      "name": "Het risico van installatie door gebruikers van niet geautoriseerde software wordt beheerst.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.19.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.19",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.19.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.20.01",
+      "name": "Netwerkcomponenten voldoen minimaal aan het vertrouwelijkheidsniveau van het netwerk waarvan ze onde",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.20.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.20",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.20.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.20.02",
+      "name": "Toegang tot beheerinterfaces van netwerkcomponenten zijn zo veel als mogelijk gescheiden van het geb",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.20.02",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.20",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.20.02",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.21.01",
+      "name": "In koppelpunten met externe of onvertrouwde zones en vanwege netwerksegmentatie zijn maatregelen get",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.21.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.21",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.21.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.21.02",
+      "name": "Het dataverkeer van of naar de vertrouwde omgeving, wordt bewaakt en geanalyseerd op verdacht verkee",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.21.02",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.21",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.21.02",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.21.03",
+      "name": "Bij ontdekte nieuwe dreigingen vanuit overheidsmaatregel 8.21.02 worden deze doorgeleid, rekening ho",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.21.03",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.21",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.21.03",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.21.04",
+      "name": "Bij transport van gegevens over draadloze verbindingen zoals wifi en bij bedrade verbindingen buiten",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.21.04",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.21",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.21.04",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.22.01",
+      "name": "Alle gescheiden groepen hebben een gedefinieerd beveiligingsniveau.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.22.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.22",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.22.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.23.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.23.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.23",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.23.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.24.01",
+      "name": "In het cryptografiebeleid zijn minimaal de volgende onderwerpen uitgewerkt:  - Wanneer cryptografie",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.24.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.24",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.24.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.24.02",
+      "name": "Cryptografische beheersmaatregelen zijn opgenomen in de inventaris van de bedrijfsmiddelen.<br><br>",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.24.02",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.24",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.24.02",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.24.03",
+      "name": "Vervallen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.24.03",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.24",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.24.03",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.24.04",
+      "name": "De sterkte van de cryptografie wordt gebaseerd op de actuele adviezen van het NCSC en de Unit Weerba",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.24.04",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.24",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.24.04",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.24.05",
+      "name": "Er zijn afspraken over reservecertificaten van een alternatieve leverancier als uit de risicoafwegin",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.24.05",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.24",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.24.05",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.25.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.25.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.25",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.25.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.26.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.26.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.26",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.26.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.27.01",
+      "name": "Architectuurprincipes zoals ‘security by design’ en ‘security by default’ voor het ontwerpen van de",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.27.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.27",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.27.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.28.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.28.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.28",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.28.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.29.01",
+      "name": "Voor acceptatietesten van systemen worden gestructureerde testmethodieken gebruikt. De testen worden",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.29.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.29",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.29.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.30.01",
+      "name": "Interne maatregelen voor systeemontwikkeling zijn onverkort van toepassing op uitbestede ontwikkelin",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.30.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.30",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.30.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.31.01",
+      "name": "In de productieomgeving wordt niet getest. Alleen met voorafgaande goedkeuring door de proceseigenaa",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.31.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.31",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.31.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.31.02",
+      "name": "Significante wijzigingen in de productieomgeving worden altijd getest voordat zij in productie gebra",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.31.02",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.31",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.31.02",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.32.01",
+      "name": "In het wijzigingsbeheerproces is minimaal aandacht besteed aan:  - het administreren van wijzigingen",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.32.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.32",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.32.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.32.02",
+      "name": "Wijzigingsbeheer vindt plaats op basis van een algemeen geaccepteerd beheerraamwerk.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.32.02",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.32",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.32.02",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.33.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.33.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.33",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.33.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BIO2-8.34.01",
+      "name": "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "section": "Maatregel 8.34.01",
+          "url": "https://www.bio-overheid.nl/category/producten/bio"
+        },
+        {
+          "type": "wetsartikel",
+          "title": "NEN-EN-ISO/IEC 27002",
+          "section": "ISO 27002 8.34",
+          "url": "https://www.iso.org/standard/27001"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "bio2_Technologische maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "maatregelId": "8.34.01",
+            "implementatie": "ja"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "BIO2-SC-5.01.01",
+      "description": "Maatregel 5.01.01 — Organisatorische maatregelen",
+      "input": {
+        "rechtsgebied": "bio2",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "5.01.01"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "bio2_Organisatorische maatregelen",
+        "appliedRules": [
+          "BIO2-5.01.01"
+        ]
+      }
+    },
+    {
+      "id": "BIO2-SC-5.01.02",
+      "description": "Maatregel 5.01.02 — Organisatorische maatregelen",
+      "input": {
+        "rechtsgebied": "bio2",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "5.01.02"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "bio2_Organisatorische maatregelen",
+        "appliedRules": [
+          "BIO2-5.01.02"
+        ]
+      }
+    },
+    {
+      "id": "BIO2-SC-5.02.01",
+      "description": "Maatregel 5.02.01 — Organisatorische maatregelen",
+      "input": {
+        "rechtsgebied": "bio2",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "5.02.01"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "bio2_Organisatorische maatregelen",
+        "appliedRules": [
+          "BIO2-5.02.01"
+        ]
+      }
+    },
+    {
+      "id": "BIO2-SC-5.02.02",
+      "description": "Maatregel 5.02.02 — Organisatorische maatregelen",
+      "input": {
+        "rechtsgebied": "bio2",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "5.02.02"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "bio2_Organisatorische maatregelen",
+        "appliedRules": [
+          "BIO2-5.02.02"
+        ]
+      }
+    },
+    {
+      "id": "BIO2-SC-5.03.01",
+      "description": "Maatregel 5.03.01 — Organisatorische maatregelen",
+      "input": {
+        "rechtsgebied": "bio2",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "5.03.01"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "bio2_Organisatorische maatregelen",
+        "appliedRules": [
+          "BIO2-5.03.01"
+        ]
+      }
+    },
+    {
+      "id": "BIO2-SC-5.04.01",
+      "description": "Maatregel 5.04.01 — Organisatorische maatregelen",
+      "input": {
+        "rechtsgebied": "bio2",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "5.04.01"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "bio2_Organisatorische maatregelen",
+        "appliedRules": [
+          "BIO2-5.04.01"
+        ]
+      }
+    },
+    {
+      "id": "BIO2-SC-5.05.01",
+      "description": "Maatregel 5.05.01 — Organisatorische maatregelen",
+      "input": {
+        "rechtsgebied": "bio2",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "5.05.01"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "bio2_Organisatorische maatregelen",
+        "appliedRules": [
+          "BIO2-5.05.01"
+        ]
+      }
+    },
+    {
+      "id": "BIO2-SC-5.06.01",
+      "description": "Maatregel 5.06.01 — Organisatorische maatregelen",
+      "input": {
+        "rechtsgebied": "bio2",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "5.06.01"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "bio2_Organisatorische maatregelen",
+        "appliedRules": [
+          "BIO2-5.06.01"
+        ]
+      }
+    },
+    {
+      "id": "BIO2-SC-5.07.01",
+      "description": "Maatregel 5.07.01 — Organisatorische maatregelen",
+      "input": {
+        "rechtsgebied": "bio2",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "5.07.01"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "bio2_Organisatorische maatregelen",
+        "appliedRules": [
+          "BIO2-5.07.01"
+        ]
+      }
+    },
+    {
+      "id": "BIO2-SC-5.08.01",
+      "description": "Maatregel 5.08.01 — Organisatorische maatregelen",
+      "input": {
+        "rechtsgebied": "bio2",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "5.08.01"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "bio2_Organisatorische maatregelen",
+        "appliedRules": [
+          "BIO2-5.08.01"
+        ]
+      }
+    },
+    {
+      "id": "BIO2-SC-5.09.01",
+      "description": "Maatregel 5.09.01 — Organisatorische maatregelen",
+      "input": {
+        "rechtsgebied": "bio2",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "5.09.01"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "bio2_Organisatorische maatregelen",
+        "appliedRules": [
+          "BIO2-5.09.01"
+        ]
+      }
+    },
+    {
+      "id": "BIO2-SC-5.10.01",
+      "description": "Maatregel 5.10.01 — Organisatorische maatregelen",
+      "input": {
+        "rechtsgebied": "bio2",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "5.10.01"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "bio2_Organisatorische maatregelen",
+        "appliedRules": [
+          "BIO2-5.10.01"
+        ]
+      }
+    },
+    {
+      "id": "BIO2-SC-5.10.02",
+      "description": "Maatregel 5.10.02 — Organisatorische maatregelen",
+      "input": {
+        "rechtsgebied": "bio2",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "5.10.02"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "bio2_Organisatorische maatregelen",
+        "appliedRules": [
+          "BIO2-5.10.02"
+        ]
+      }
+    },
+    {
+      "id": "BIO2-SC-5.10.03",
+      "description": "Maatregel 5.10.03 — Organisatorische maatregelen",
+      "input": {
+        "rechtsgebied": "bio2",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "5.10.03"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "bio2_Organisatorische maatregelen",
+        "appliedRules": [
+          "BIO2-5.10.03"
+        ]
+      }
+    },
+    {
+      "id": "BIO2-SC-5.11.01",
+      "description": "Maatregel 5.11.01 — Organisatorische maatregelen",
+      "input": {
+        "rechtsgebied": "bio2",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "5.11.01"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "bio2_Organisatorische maatregelen",
+        "appliedRules": [
+          "BIO2-5.11.01"
+        ]
+      }
+    },
+    {
+      "id": "BIO2-SC-5.12.01",
+      "description": "Maatregel 5.12.01 — Organisatorische maatregelen",
+      "input": {
+        "rechtsgebied": "bio2",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "5.12.01"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "bio2_Organisatorische maatregelen",
+        "appliedRules": [
+          "BIO2-5.12.01"
+        ]
+      }
+    },
+    {
+      "id": "BIO2-SC-5.13.01",
+      "description": "Maatregel 5.13.01 — Organisatorische maatregelen",
+      "input": {
+        "rechtsgebied": "bio2",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "5.13.01"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "bio2_Organisatorische maatregelen",
+        "appliedRules": [
+          "BIO2-5.13.01"
+        ]
+      }
+    },
+    {
+      "id": "BIO2-SC-5.14.01",
+      "description": "Maatregel 5.14.01 — Organisatorische maatregelen",
+      "input": {
+        "rechtsgebied": "bio2",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "5.14.01"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "bio2_Organisatorische maatregelen",
+        "appliedRules": [
+          "BIO2-5.14.01"
+        ]
+      }
+    },
+    {
+      "id": "BIO2-SC-5.14.02",
+      "description": "Maatregel 5.14.02 — Organisatorische maatregelen",
+      "input": {
+        "rechtsgebied": "bio2",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "5.14.02"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "bio2_Organisatorische maatregelen",
+        "appliedRules": [
+          "BIO2-5.14.02"
+        ]
+      }
+    },
+    {
+      "id": "BIO2-SC-5.14.03",
+      "description": "Maatregel 5.14.03 — Organisatorische maatregelen",
+      "input": {
+        "rechtsgebied": "bio2",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "5.14.03"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "bio2_Organisatorische maatregelen",
+        "appliedRules": [
+          "BIO2-5.14.03"
+        ]
+      }
+    }
+  ],
+  "transitionRules": [],
+  "metadata": {
+    "juridischeContext": {
+      "wet": "BIO2",
+      "wetBwbrId": "BWBR0044701",
+      "wetVersieLaatstGecheckt": "2026-07-04",
+      "tariefVersie": "1.2"
+    },
+    "bronverificatieDatum": "2026-07-04",
+    "acceptatieType": "draft",
+    "juristAccordering": {
+      "geaccondeerdDoor": "",
+      "datum": "",
+      "geldigTot": "",
+      "versie": "2025.1"
+    }
+  }
+}

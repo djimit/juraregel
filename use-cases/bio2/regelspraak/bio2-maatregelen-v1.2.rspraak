@@ -1,0 +1,1140 @@
+// ═════════════════════════════════════════════════════════════
+// BIO2 Maatregelen — RegelSpraak CNL
+// Bron: MinBZK GitHub — BIO2 v1.2
+// Status: DRAFT — pending CIP review
+// ═════════════════════════════════════════════════════════════
+
+regel BIO2-5.01.01 "De entiteit heeft een informatiebeveiligingsbeleid opgesteld en vastgesteld door":
+  als maatregelId is "5.01.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.01"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.01.02 "Het informatiebeveiligingsbeleid wordt minimaal jaarlijks en in aansluiting bij":
+  als maatregelId is "5.01.02"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.01"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.02.01 "Het bestuur van de entiteit heeft vastgelegd en vastgesteld:  -  wat de verantwo":
+  als maatregelId is "5.02.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.02"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.02.02 "Er is een CISO aangesteld die bevoegd is om onafhankelijk en zelfstandig te advi":
+  als maatregelId is "5.02.02"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.02"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.03.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "5.03.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.03"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.04.01 "Het bestuur en de werknemers volgen regelmatig scholing, om cyberbeveiligingsris":
+  als maatregelId is "5.04.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.04"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.05.01 "De entiteit heeft uitgewerkt welke functionarissen met welke (overheids)instanti":
+  als maatregelId is "5.05.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.05"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.06.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "5.06.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.06"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.07.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "5.07.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.07"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.08.01 "Bij nieuwe informatiesystemen en bij significante wijzigingen op bestaande infor":
+  als maatregelId is "5.08.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.08"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.09.01 "Er is een inventaris van bedrijfsmiddelen die van belang zijn voor informatiever":
+  als maatregelId is "5.09.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.09"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.10.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "5.10.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.10"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.10.02 "De gedragsregels voor het gebruik van bedrijfsmiddelen zijn voor extern personee":
+  als maatregelId is "5.10.02"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.10"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.10.03 "Alle medewerkers zijn aantoonbaar gewezen op de gedragsregels voor het gebruik v":
+  als maatregelId is "5.10.03"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.10"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.11.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "5.11.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.11"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.12.01 "Informatie in alle informatiesystemen wordt met een expliciete risicoafweging ge":
+  als maatregelId is "5.12.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.12"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.13.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "5.13.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.13"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.14.01 "Internetfacing-informatiesystemen en e-mail berichtenverkeer blijven voldoen aan":
+  als maatregelId is "5.14.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.14"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.14.02 "De entiteit maakt bij openbaar webverkeer van gevoelige gegevens gebruik van ten":
+  als maatregelId is "5.14.02"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.14"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.14.03 "Geavanceerde en/of gekwalificeerde elektronische handtekeningen voldoen aan de A":
+  als maatregelId is "5.14.03"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.14"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.14.04 "Van alle internetfacing-informatiesystemen, webapplicaties, IP-adressen en API’s":
+  als maatregelId is "5.14.04"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.14"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.14.05 "Publiek toegankelijke websites worden bekend gemaakt via het Register Internetdo":
+  als maatregelId is "5.14.05"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.14"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.15.01 "Toegang tot een vertrouwde zone is toegestaan in twee situaties:  1. vanaf geaut":
+  als maatregelId is "5.15.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.15"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.16.01 "Er is een sluitende formele registratie- en afmeldprocedure voor het beheren van":
+  als maatregelId is "5.16.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.16"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.16.02 "Het gebruiken van groepsaccounts is niet toegestaan, tenzij de proceseigenaar di":
+  als maatregelId is "5.16.02"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.16"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.17.01 "De entiteit past multi-factorauthenticatie (MFA) ten minste toe voor het primair":
+  als maatregelId is "5.17.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.17"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.17.02 "De entiteit biedt aan alle medewerkers een wachtwoordmanager of vergelijkbare op":
+  als maatregelId is "5.17.02"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.17"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.17.03 "De eisen aan wachtwoorden worden geautomatiseerd afgedwongen.":
+  als maatregelId is "5.17.03"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.17"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.18.01 "Het maken en aanpassen van accounts met bijzondere rechten wordt gemonitord. Ind":
+  als maatregelId is "5.18.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.18"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.18.02 "Alle uitgegeven toegangsrechten worden minimaal eenmaal per jaar beoordeeld. Een":
+  als maatregelId is "5.18.02"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.18"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.19.01 "Bij offerteaanvragen waar informatie(voorziening) een rol speelt, zijn informati":
+  als maatregelId is "5.19.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.19"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.20.01 "De beveiligingseisen uit de offerteaanvraag worden expliciet opgenomen in (inkoo":
+  als maatregelId is "5.20.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.20"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.20.02 "Waar mogelijk worden algemene voorwaarden van leveranciers expliciet uitgesloten":
+  als maatregelId is "5.20.02"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.20"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.20.03 "In het inkoopcontract wordt opgenomen dat de leverancier aantoont dat hij aan al":
+  als maatregelId is "5.20.03"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.20"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.20.04 "De entiteit voert zelfstandig onderzoek uit, ook ter validatie van de rapportage":
+  als maatregelId is "5.20.04"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.20"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.20.05 "Onderdeel van de afspraken is dat de leverancier transparant is over kwetsbaarhe":
+  als maatregelId is "5.20.05"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.20"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.20.06 "Voordat een contract wordt afgesloten, wordt in een risicoafweging bepaald of de":
+  als maatregelId is "5.20.06"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.20"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.21.01 "Vervallen.":
+  als maatregelId is "5.21.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.21"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.21.02 "Voorafgaand aan het afsluiten van de overeenkomst geeft de leverancier inzicht i":
+  als maatregelId is "5.21.02"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.21"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.21.03 "De entiteit borgt dat de beveiligingseisen aan de leverancier onverminderd van t":
+  als maatregelId is "5.21.03"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.21"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.21.04 "Gedurende de looptijd geeft de leverancier veranderingen in de keten van toeleve":
+  als maatregelId is "5.21.04"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.21"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.21.05 "De beveiliging van toeleveringsketens is onderdeel van de risicoanalyse voor de":
+  als maatregelId is "5.21.05"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.21"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.22.01 "Op basis van het door de leverancier aangeleverde bewijsmateriaal, zie overheids":
+  als maatregelId is "5.22.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.22"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.22.02 "De entiteit heeft een actuele registratie van leveranciers en afgesloten contrac":
+  als maatregelId is "5.22.02"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.22"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.23.01 "De entiteit stelt beleid op dat toeziet op het inventariseren, classificeren, se":
+  als maatregelId is "5.23.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.23"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.24.01 "Er is voor alle interne en externe medewerkers een toegankelijk meldloket waar i":
+  als maatregelId is "5.24.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.24"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.24.02 "Er is een meldprocedure waarin de taken en verantwoordelijkheden van het meldlok":
+  als maatregelId is "5.24.02"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.24"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.24.03 "De proceseigenaar is verantwoordelijk voor het oplossen van informatiebeveiligin":
+  als maatregelId is "5.24.03"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.24"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.24.04 "De proceseigenaar rapporteert maandelijks de opvolging van informatiebeveiliging":
+  als maatregelId is "5.24.04"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.24"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.24.05 "In de procedure voor informatiebeveiligingsincidenten is er een verwijzing gemaa":
+  als maatregelId is "5.24.05"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.24"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.24.07 "De incidentprocedure bevat tenminste:  - dat binnen de wettelijke termijn inform":
+  als maatregelId is "5.24.07"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.24"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.24.08 "Een Coordinated Vulnerability Disclosure (CVD)-procedure is ingericht en gepubli":
+  als maatregelId is "5.24.08"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.24"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.26.02 "Informatiebeveiligingsincidenten worden afgedaan via het incidentbeheerproces.<b":
+  als maatregelId is "5.26.02"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.26"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.27.01 "Informatiebeveiligingsincidenten worden geanalyseerd om achterliggende oorzaken":
+  als maatregelId is "5.27.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.27"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.27.02 "De analyses van informatiebeveiligingsincidenten, inclusief de achterliggende oo":
+  als maatregelId is "5.27.02"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.27"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.28.01 "De bewaartermijn van een (vermoedelijk) informatiebeveiligingsincident en alle i":
+  als maatregelId is "5.28.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.28"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.29.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "5.29.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.29"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.30.01 "De proceseigenaar test jaarlijks continuïteitsplannen op werking, volledigheid e":
+  als maatregelId is "5.30.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.30"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.30.02 "Binnen de inventarisatie van beheersmaatregel 5.12 uit NEN-EN-ISO/IEC 27002:2022":
+  als maatregelId is "5.30.02"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.30"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.31.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "5.31.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.31"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.32.01 "```Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.```":
+  als maatregelId is "5.32.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.32"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.33.01 "```De proceseigenaar heeft voor informatie(systemen) bewaartermijnen vastgesteld":
+  als maatregelId is "5.33.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.33"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.34.01 "```Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.```":
+  als maatregelId is "5.34.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.34"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.35.01 "Vervallen.":
+  als maatregelId is "5.35.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.35"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.35.02 "Er is een vastgesteld auditplan waarin jaarlijks keuzes worden gemaakt voor welk":
+  als maatregelId is "5.35.02"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.35"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.36.01 "In de P&C-cyclus en als onderdeel van de plan-do-check-act (PDCA)-cyclus wordt g":
+  als maatregelId is "5.36.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.36"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-5.37.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "5.37.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 5.37"
+  en is categorie "Organisatorische maatregelen".
+
+regel BIO2-6.01.01 "Elke entiteit heeft een vastgesteld screeningsbeleid. Bij indiensttredin":
+  als maatregelId is "6.01.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 6.01"
+  en is categorie "Mensgerichte maatregelen".
+
+regel BIO2-6.02.01 "Alle medewerkers (intern en extern) zijn bij hun aanstelling of functiewisseling":
+  als maatregelId is "6.02.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 6.02"
+  en is categorie "Mensgerichte maatregelen".
+
+regel BIO2-6.03.01 "Alle medewerkers, lijnmanagers en bestuurders hebben de verantwoordelijkheid bed":
+  als maatregelId is "6.03.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 6.03"
+  en is categorie "Mensgerichte maatregelen".
+
+regel BIO2-6.03.02 "Alle medewerkers en contractanten die gebruikmaken van informatiesystemen en -di":
+  als maatregelId is "6.03.02"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 6.03"
+  en is categorie "Mensgerichte maatregelen".
+
+regel BIO2-6.03.03 "Het management benadrukt bij aanstelling en interne overplaatsing en bijvoorbeel":
+  als maatregelId is "6.03.03"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 6.03"
+  en is categorie "Mensgerichte maatregelen".
+
+regel BIO2-6.03.04 "In bewustwordingsprogramma’s komen gedragsaspecten van veilig mobiel werken aan":
+  als maatregelId is "6.03.04"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 6.03"
+  en is categorie "Mensgerichte maatregelen".
+
+regel BIO2-6.03.05 "Gebruikers zijn voorgelicht over de risico’s van surfgedrag en het klikken op on":
+  als maatregelId is "6.03.05"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 6.03"
+  en is categorie "Mensgerichte maatregelen".
+
+regel BIO2-6.04.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "6.04.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 6.04"
+  en is categorie "Mensgerichte maatregelen".
+
+regel BIO2-6.05.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "6.05.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 6.05"
+  en is categorie "Mensgerichte maatregelen".
+
+regel BIO2-6.06.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "6.06.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 6.06"
+  en is categorie "Mensgerichte maatregelen".
+
+regel BIO2-6.07.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "6.07.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 6.07"
+  en is categorie "Mensgerichte maatregelen".
+
+regel BIO2-6.08.01 "Alle medewerkers (intern en extern) hebben aantoonbaar kennisgenomen van de meld":
+  als maatregelId is "6.08.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 6.08"
+  en is categorie "Mensgerichte maatregelen".
+
+regel BIO2-7.01.01 "Vervallen.":
+  als maatregelId is "7.01.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 7.01"
+  en is categorie "Fysieke maatregelen".
+
+regel BIO2-7.01.02 "Kritieke informatie of informatiesystemen zijn alleen bereikbaar via ten minste":
+  als maatregelId is "7.01.02"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 7.01"
+  en is categorie "Fysieke maatregelen".
+
+regel BIO2-7.02.01 "In geval van concrete beveiligingsrisico’s worden waarschuwingen, volgens onderl":
+  als maatregelId is "7.02.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 7.02"
+  en is categorie "Fysieke maatregelen".
+
+regel BIO2-7.03.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "7.03.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 7.03"
+  en is categorie "Fysieke maatregelen".
+
+regel BIO2-7.04.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "7.04.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 7.04"
+  en is categorie "Fysieke maatregelen".
+
+regel BIO2-7.05.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "7.05.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 7.05"
+  en is categorie "Fysieke maatregelen".
+
+regel BIO2-7.06.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "7.06.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 7.06"
+  en is categorie "Fysieke maatregelen".
+
+regel BIO2-7.07.01 "Bij het gebruik van een chipcardtoken voor toegang tot systemen wordt bij het ve":
+  als maatregelId is "7.07.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 7.07"
+  en is categorie "Fysieke maatregelen".
+
+regel BIO2-7.08.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "7.08.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 7.08"
+  en is categorie "Fysieke maatregelen".
+
+regel BIO2-7.09.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "7.09.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 7.09"
+  en is categorie "Fysieke maatregelen".
+
+regel BIO2-7.10.01 "In de verwijderinstructie is opgenomen dat van verwijderbare media, die herbruik":
+  als maatregelId is "7.10.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 7.10"
+  en is categorie "Fysieke maatregelen".
+
+regel BIO2-7.10.02 "Er wordt gecontroleerd of alle data op het medium onherstelbaar verwijderd is.<b":
+  als maatregelId is "7.10.02"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 7.10"
+  en is categorie "Fysieke maatregelen".
+
+regel BIO2-7.10.03 "Het gebruik van koeriers of transporteurs voor transport van geclassificeerde in":
+  als maatregelId is "7.10.03"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 7.10"
+  en is categorie "Fysieke maatregelen".
+
+regel BIO2-7.11.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "7.11.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 7.11"
+  en is categorie "Fysieke maatregelen".
+
+regel BIO2-7.12.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "7.12.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 7.12"
+  en is categorie "Fysieke maatregelen".
+
+regel BIO2-7.13.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "7.13.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 7.13"
+  en is categorie "Fysieke maatregelen".
+
+regel BIO2-7.14.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "7.14.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 7.14"
+  en is categorie "Fysieke maatregelen".
+
+regel BIO2-8.01.01 "Mobiele apparatuur is zo ingericht dat bedrijfsinformatie niet standaard op het":
+  als maatregelId is "8.01.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.01"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.01.02 "Bij de inzet van mobiele apparatuur zijn minimaal de volgende aspecten geïmpleme":
+  als maatregelId is "8.01.02"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.01"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.02.01 "De toegewezen of gebruikte speciale bevoegdheden worden in opzet, bestaan en wer":
+  als maatregelId is "8.02.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.02"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.03.01 "Er zijn maatregelen genomen die het fysiek en/of logisch isoleren van informatie":
+  als maatregelId is "8.03.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.03"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.03.02 "Gebruikers kunnen alleen die informatie met specifiek belang inzien en verwerken":
+  als maatregelId is "8.03.02"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.03"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.04.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "8.04.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.04"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.05.01 "Voor het verlenen van toegang tot het netwerk aan externe leveranciers wordt voo":
+  als maatregelId is "8.05.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.05"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.06.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "8.06.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.06"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.07.01 "Het downloaden van bestanden is beheerst en beperkt op basis van het risico en n":
+  als maatregelId is "8.07.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.07"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.07.02 "De gebruikte antimalware-software en bijbehorende herstelsoftware zijn actueel e":
+  als maatregelId is "8.07.02"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.07"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.07.03 "De malwarescan wordt uitgevoerd op:  - alle omgevingen, bijvoorbeeld op (mail)se":
+  als maatregelId is "8.07.03"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.07"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.07.04 "Dit maatregelnummer is vervallen.  <p class="note" title="Deze maatregel is gewi":
+  als maatregelId is "8.07.04"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.07"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.08.01 "Als van een kwetsbaarheidswaarschuwing de kans op misbruik en de verwachte schad":
+  als maatregelId is "8.08.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.08"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.08.02 "Op basis van een expliciete risicoafweging wordt bepaald op welke wijze mitigere":
+  als maatregelId is "8.08.02"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.08"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.08.03 "In de tussentijd of als installatie binnen een week niet mogelijk is, worden op":
+  als maatregelId is "8.08.03"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.08"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.08.04 "Informatiesystemen worden waar mogelijk jaarlijks gecontroleerd op technische na":
+  als maatregelId is "8.08.04"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.08"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.08.05 "Internetfacing-informatiesystemen hebben een verplichte waar mogelijk geautomati":
+  als maatregelId is "8.08.05"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.08"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.08.06 "Zie overheidsmaatregel 5.24.08.":
+  als maatregelId is "8.08.06"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.08"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.09.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "8.09.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.09"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.10.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "8.10.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.10"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.11.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "8.11.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.11"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.12.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "8.12.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.12"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.13.01 "Er is een back-upbeleid waarin de eisen voor het bewaren en beschermen zijn gede":
+  als maatregelId is "8.13.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.13"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.13.02 "Op basis van een expliciete risicoafweging is bepaald wat het maximaal toegestan":
+  als maatregelId is "8.13.02"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.13"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.13.03 "Het back-upproces voorziet in de opslag van de back-up op een locatie, waarbij e":
+  als maatregelId is "8.13.03"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.13"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.13.04 "De herstelprocedure wordt minimaal jaarlijks getest of na een grote wijziging, o":
+  als maatregelId is "8.13.04"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.13"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.14.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "8.14.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.14"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.15.01 "Een logregel bevat minimaal:  - Actie: de gebeurtenis of handeling die heeft pla":
+  als maatregelId is "8.15.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.15"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.15.02 "Een logregel bevat nooit gegevens die tot het doorbreken van de beveiliging kunn":
+  als maatregelId is "8.15.02"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.15"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.15.03 "Er is een overzicht van logbestanden die worden gegenereerd.":
+  als maatregelId is "8.15.03"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.15"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.15.04 "De bewaartermijn van logbestanden en gegevens in het Security Incident en Event":
+  als maatregelId is "8.15.04"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.15"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.15.05 "Oneigenlijk wijzigen, verwijderen of pogingen daartoe van loggegevens worden zo":
+  als maatregelId is "8.15.05"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.15"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.15.06 "Op basis van een expliciete risicoafweging bepaalt de entiteit de periodieke toe":
+  als maatregelId is "8.15.06"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.15"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.16.01 "Bij ontdekte nieuwe dreigingen (aanvallen) via overheidsmaatregel 8.16.3 worden":
+  als maatregelId is "8.16.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.16"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.16.02 "Het SIEM- en/of het SOC-monitoringsproces hebben eenduidige regels over wanneer":
+  als maatregelId is "8.16.02"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.16"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.16.03 "De informatieverwerkende omgeving wordt gemonitord met een detectie- en response":
+  als maatregelId is "8.16.03"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.16"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.16.04 "Actieve netwerkcomponenten zijn voorzien van logging en monitoring van die loggi":
+  als maatregelId is "8.16.04"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.16"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.17.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "8.17.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.17"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.18.01 "Alleen bevoegd personeel heeft op die momenten dat toegang strikt noodzakelijk i":
+  als maatregelId is "8.18.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.18"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.18.02 "Het gebruik van systeemhulpmiddelen wordt gelogd. De logging is een half":
+  als maatregelId is "8.18.02"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.18"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.19.01 "Het risico van installatie door gebruikers van niet geautoriseerde software word":
+  als maatregelId is "8.19.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.19"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.20.01 "Netwerkcomponenten voldoen minimaal aan het vertrouwelijkheidsniveau van het net":
+  als maatregelId is "8.20.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.20"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.20.02 "Toegang tot beheerinterfaces van netwerkcomponenten zijn zo veel als mogelijk ge":
+  als maatregelId is "8.20.02"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.20"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.21.01 "In koppelpunten met externe of onvertrouwde zones en vanwege netwerksegmentatie":
+  als maatregelId is "8.21.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.21"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.21.02 "Het dataverkeer van of naar de vertrouwde omgeving, wordt bewaakt en geanalyseer":
+  als maatregelId is "8.21.02"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.21"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.21.03 "Bij ontdekte nieuwe dreigingen vanuit overheidsmaatregel 8.21.02 worden deze doo":
+  als maatregelId is "8.21.03"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.21"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.21.04 "Bij transport van gegevens over draadloze verbindingen zoals wifi en bij bedrade":
+  als maatregelId is "8.21.04"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.21"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.22.01 "Alle gescheiden groepen hebben een gedefinieerd beveiligingsniveau.":
+  als maatregelId is "8.22.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.22"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.23.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "8.23.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.23"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.24.01 "In het cryptografiebeleid zijn minimaal de volgende onderwerpen uitgewerkt:  - W":
+  als maatregelId is "8.24.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.24"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.24.02 "Cryptografische beheersmaatregelen zijn opgenomen in de inventaris van de bedrij":
+  als maatregelId is "8.24.02"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.24"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.24.03 "Vervallen.":
+  als maatregelId is "8.24.03"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.24"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.24.04 "De sterkte van de cryptografie wordt gebaseerd op de actuele adviezen van het NC":
+  als maatregelId is "8.24.04"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.24"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.24.05 "Er zijn afspraken over reservecertificaten van een alternatieve leverancier als":
+  als maatregelId is "8.24.05"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.24"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.25.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "8.25.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.25"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.26.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "8.26.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.26"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.27.01 "Architectuurprincipes zoals ‘security by design’ en ‘security by default’ voor h":
+  als maatregelId is "8.27.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.27"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.28.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "8.28.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.28"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.29.01 "Voor acceptatietesten van systemen worden gestructureerde testmethodieken gebrui":
+  als maatregelId is "8.29.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.29"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.30.01 "Interne maatregelen voor systeemontwikkeling zijn onverkort van toepassing op ui":
+  als maatregelId is "8.30.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.30"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.31.01 "In de productieomgeving wordt niet getest. Alleen met voorafgaande goedkeuring d":
+  als maatregelId is "8.31.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.31"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.31.02 "Significante wijzigingen in de productieomgeving worden altijd getest voordat zi":
+  als maatregelId is "8.31.02"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.31"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.32.01 "In het wijzigingsbeheerproces is minimaal aandacht besteed aan:  - het administr":
+  als maatregelId is "8.32.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.32"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.32.02 "Wijzigingsbeheer vindt plaats op basis van een algemeen geaccepteerd beheerraamw":
+  als maatregelId is "8.32.02"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.32"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.33.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "8.33.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.33"
+  en is categorie "Technologische maatregelen".
+
+regel BIO2-8.34.01 "Geen overheidsmaatregel, zie inleiding deel 2 BIO-overheidsmaatregelen.":
+  als maatregelId is "8.34.01"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is isoRef "ISO 27002 8.34"
+  en is categorie "Technologische maatregelen".
+

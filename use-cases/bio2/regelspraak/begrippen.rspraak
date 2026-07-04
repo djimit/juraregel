@@ -1,0 +1,10 @@
+// Begrippenmodel — BIO2 Informatiebeveiliging
+// Bron: BIO2 v1.2, ISO 27001/27002
+
+begrip maatregelId: "Unieke identificatie van een BIO2 maatregel." type: tekst.
+begrip categorie: "Categorie van de maatregel." waarden: organisatorisch, mensgericht, fysiek, technologisch.
+begrip implementatie: "Is de maatregel geïmplementeerd?" waarden: ja, nee, gedeeltelijk.
+begrip compliant: "Voldoet de entiteit aan de maatregel?" waarden: ja, nee, onbekend.
+begrip isoRef: "Referentie naar ISO 27002 clause." type: tekst.
+begrip evidence: "Bewijsstuk voor implementatie." type: tekst.
+begrip bioVersie: "Versie van de BIO2 baseline." type: tekst.
