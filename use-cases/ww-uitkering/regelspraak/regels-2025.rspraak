@@ -1,0 +1,93 @@
+// WW-uitkering — Werkloosheidswet — RegelSpraak CNL
+// Bron: Werkloosheidswet
+
+regel WW-001 "Rechthebbende — 26 weken werk in 36 weken":
+  als regelId is "WW-001"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "voorwaarden".
+
+regel WW-002 "Arbeidsverleden — minimaal 4 jaar in 5 jaar":
+  als regelId is "WW-002"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "voorwaarden".
+
+regel WW-003 "Inschrijving UWV verplicht":
+  als regelId is "WW-003"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "inschrijving".
+
+regel WW-004 "Beschikbaar voor arbeid":
+  als regelId is "WW-004"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "voorwaarden".
+
+regel WW-005 "Actief solliciteren verplicht":
+  als regelId is "WW-005"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "voorwaarden".
+
+regel WW-006 "Uitkering duur — 3 maanden minimum":
+  als regelId is "WW-006"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "duur".
+
+regel WW-007 "Uitkering duur — afhankelijk van arbeidsverleden":
+  als regelId is "WW-007"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "duur".
+
+regel WW-008 "Uitkering hoogte — 75% eerste 2 maanden":
+  als regelId is "WW-008"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "hoogte".
+
+regel WW-009 "Uitkering hoogte — 70% na 2 maanden":
+  als regelId is "WW-009"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "hoogte".
+
+regel WW-010 "Maximum dagloon toepassing":
+  als regelId is "WW-010"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "hoogte".
+
+regel WW-011 "Einddatum uitkering":
+  als regelId is "WW-011"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "duur".
+
+regel WW-012 "Heropleving bij nieuwe arbeid":
+  als regelId is "WW-012"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "duur".
+
+regel WW-013 "Weigering passende arbeid — sanctie":
+  als regelId is "WW-013"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "sanctie".
+
+regel WW-014 "Verlaging bij verwijtbaar werkloosheid":
+  als regelId is "WW-014"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "sanctie".
+
+regel WW-015 "Premieplichtig dienstverband":
+  als regelId is "WW-015"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "voorwaarden".
+

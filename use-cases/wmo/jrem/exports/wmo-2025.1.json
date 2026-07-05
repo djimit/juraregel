@@ -1,0 +1,532 @@
+{
+  "schemaVersion": "1.0.0",
+  "ruleSetId": "wmo",
+  "version": "2025.1",
+  "validFrom": "2025-01-01",
+  "validUntil": "2026-12-31",
+  "jurisdiction": "NL",
+  "domain": "wmo",
+  "procedureType": "dagvaarding",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "WMO-001",
+      "name": "Wmo aanspraak — wonen zelfstandig",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wmo 2015",
+          "section": "WMO-001",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_wmo_aanspraak",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "WMO-001"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "WMO-002",
+      "name": "Wmo aanspraak — deelname maatschappij",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wmo 2015",
+          "section": "WMO-002",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_wmo_aanspraak",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "WMO-002"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "WMO-003",
+      "name": "Wmo aanspraak — huiselijke relaties onderhouden",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wmo 2015",
+          "section": "WMO-003",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_wmo_aanspraak",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "WMO-003"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "WMO-004",
+      "name": "Maatwerkvoorziening — noodzakelijk",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wmo 2015",
+          "section": "WMO-004",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_wmo_voorziening",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "WMO-004"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "WMO-005",
+      "name": "Eigen bijdrage — afhankelijk van inkomen",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wmo 2015",
+          "section": "WMO-005",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_wmo_bijdrage",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "WMO-005"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "WMO-006",
+      "name": "Zorgnood — objectief vastgesteld",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wmo 2015",
+          "section": "WMO-006",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_wmo_beoordeling",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "WMO-006"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "WMO-007",
+      "name": "Algemene voorziening voorrang boven maatwerk",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wmo 2015",
+          "section": "WMO-007",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_wmo_voorziening",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "WMO-007"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "WMO-008",
+      "name": "Cliëntparticipatie verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wmo 2015",
+          "section": "WMO-008",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_wmo_participatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "WMO-008"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "WMO-009",
+      "name": "Gezinshuisvervangend — jeugd",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wmo 2015",
+          "section": "WMO-009",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_wmo_voorziening",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "WMO-009"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "WMO-010",
+      "name": "Klachtrecht verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wmo 2015",
+          "section": "WMO-010",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_wmo_klacht",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "WMO-010"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "SC-WMO-001",
+      "description": "Wmo aanspraak — wonen zelfstandig",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "WMO-001"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_wmo_aanspraak",
+        "appliedRules": [
+          "WMO-001"
+        ]
+      }
+    },
+    {
+      "id": "SC-WMO-002",
+      "description": "Wmo aanspraak — deelname maatschappij",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "WMO-002"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_wmo_aanspraak",
+        "appliedRules": [
+          "WMO-002"
+        ]
+      }
+    },
+    {
+      "id": "SC-WMO-003",
+      "description": "Wmo aanspraak — huiselijke relaties onderhouden",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "WMO-003"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_wmo_aanspraak",
+        "appliedRules": [
+          "WMO-003"
+        ]
+      }
+    },
+    {
+      "id": "SC-WMO-004",
+      "description": "Maatwerkvoorziening — noodzakelijk",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "WMO-004"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_wmo_voorziening",
+        "appliedRules": [
+          "WMO-004"
+        ]
+      }
+    },
+    {
+      "id": "SC-WMO-005",
+      "description": "Eigen bijdrage — afhankelijk van inkomen",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "WMO-005"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_wmo_bijdrage",
+        "appliedRules": [
+          "WMO-005"
+        ]
+      }
+    },
+    {
+      "id": "SC-WMO-006",
+      "description": "Zorgnood — objectief vastgesteld",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "WMO-006"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_wmo_beoordeling",
+        "appliedRules": [
+          "WMO-006"
+        ]
+      }
+    },
+    {
+      "id": "SC-WMO-007",
+      "description": "Algemene voorziening voorrang boven maatwerk",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "WMO-007"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_wmo_voorziening",
+        "appliedRules": [
+          "WMO-007"
+        ]
+      }
+    },
+    {
+      "id": "SC-WMO-008",
+      "description": "Cliëntparticipatie verplicht",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "WMO-008"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_wmo_participatie",
+        "appliedRules": [
+          "WMO-008"
+        ]
+      }
+    },
+    {
+      "id": "SC-WMO-009",
+      "description": "Gezinshuisvervangend — jeugd",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "WMO-009"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_wmo_voorziening",
+        "appliedRules": [
+          "WMO-009"
+        ]
+      }
+    },
+    {
+      "id": "SC-WMO-010",
+      "description": "Klachtrecht verplicht",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "WMO-010"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_wmo_klacht",
+        "appliedRules": [
+          "WMO-010"
+        ]
+      }
+    }
+  ],
+  "transitionRules": [],
+  "metadata": {
+    "juridischeContext": {
+      "wet": "Wmo 2015",
+      "wetBwbrId": "BWBR0034200",
+      "wetVersieLaatstGecheckt": "2026-07-05",
+      "tariefVersie": "2025.1"
+    },
+    "juristAccordering": {
+      "geaccondeerdDoor": "D. Landman (approved v1.1.0)",
+      "datum": "2026-07-05",
+      "geldigTot": "2027-07-05",
+      "versie": "2025.1"
+    },
+    "bronverificatieDatum": "2026-07-05",
+    "acceptatieType": "full"
+  }
+}

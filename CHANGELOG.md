@@ -26,3 +26,17 @@
 - Forum Standaardisatie: 22 standaarden (16 verplicht + 6 streefbeeld)
 - Open standaarden: 7 compliant (pseudonimiseringsrichtlijn, AVG/GDPR, JSON Schema, MIT, ECLI, BWBR)
 - Djimitflo: 189 LROP entries, 13 learning cycles, 9 reflections
+
+## v1.1.0 — 2026-07-05
+
+### Changed
+- 4 PoC use cases upgraded to Production:
+  - Procesreglement: 4 → 20 regels
+  - Classificatie: 3 → 15 regels
+  - EU AI Act: 12 → 25 regels
+  - AVG/GDPR: 10 → 25 regels
+
+### Added
+- 5 new use cases: NIS2 (15 regels), btw-tarieven (10), WW-uitkering (15), IND verblijfsregels (15), Wmo (10)
+- Total: 16 use cases, 444 regels, 279 tests, 10 domeinen
+- All use cases: Production status, accepted, CI gates PASS

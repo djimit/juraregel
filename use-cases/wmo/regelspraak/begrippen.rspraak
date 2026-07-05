@@ -1,0 +1,5 @@
+// Begrippenmodel — Wmo — Wet maatschappelijke ondersteuning 2015
+
+begrip regelId: "Unieke identificatie." type: tekst.
+begrip categorie: "Categorie." type: tekst.
+begrip compliant: "Voldoet?" waarden: ja, nee, onbekend.

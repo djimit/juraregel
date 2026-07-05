@@ -1,62 +1,77 @@
 // AVG/GDPR — RegelSpraak CNL
+// Bron: wetten.overheid.nl — UAVG
 
 regel AVG-001 "DPIA vereist bij grootschalige verwerking":
-  als regelId is "AVG-001"
-  en implementatie is "ja"
-  dan is compliant ja
-  en is categorie "dpia".
+  als verwerkingType is grootschalig en persoonsgegevensType is bijzonder dan is DPIA verplicht.
 
 regel AVG-002 "DPIA vereist bij systematische monitoring":
-  als regelId is "AVG-002"
-  en implementatie is "ja"
-  dan is compliant ja
-  en is categorie "dpia".
+  als monitoring is ja en schaal is groot dan is DPIA verplicht.
 
 regel AVG-003 "Bewaartermijn — niet langer dan noodzakelijk":
-  als regelId is "AVG-003"
-  en implementatie is "ja"
-  dan is compliant ja
-  en is categorie "bewaartermijn".
+  als bewaartermijn is langer dan noodzakelijk dan is niet-compliant.
 
 regel AVG-004 "Recht op inzage":
-  als regelId is "AVG-004"
-  en implementatie is "ja"
-  dan is compliant ja
-  en is categorie "rechten".
+  als betrokkeneVerzoek is inzage dan is response verplicht binnen 1 maand.
 
 regel AVG-005 "Recht op rectificatie":
-  als regelId is "AVG-005"
-  en implementatie is "ja"
-  dan is compliant ja
-  en is categorie "rechten".
+  als betrokkeneVerzoek is rectificatie dan is response verplicht binnen 1 maand.
 
 regel AVG-006 "Recht op vergetelheid":
-  als regelId is "AVG-006"
-  en implementatie is "ja"
-  dan is compliant ja
-  en is categorie "rechten".
+  als betrokkeneVerzoek is verwijdering dan is response verplicht binnen 1 maand en is verwijdering uit te voeren tenzij wettelijke grond.
 
 regel AVG-007 "Recht op dataportabiliteit":
-  als regelId is "AVG-007"
-  en implementatie is "ja"
-  dan is compliant ja
-  en is categorie "rechten".
+  als betrokkeneVerzoek is portabiliteit en verwerking is geautomatiseerd dan is data export verplicht in gestructureerd formaat.
 
 regel AVG-008 "Data minimalisation":
-  als regelId is "AVG-008"
-  en implementatie is "ja"
-  dan is compliant ja
-  en is categorie "minimisation".
+  als persoonsgegevens verzameld zijn meer dan noodzakelijk dan is niet-compliant.
 
 regel AVG-009 "Verwerkingsregister verplicht":
-  als regelId is "AVG-009"
-  en implementatie is "ja"
-  dan is compliant ja
-  en is categorie "minimisation".
+  als organisatie is verwerkingsverantwoordelijke dan is verwerkingsregister verplicht.
 
-regel AVG-010 "Functionaris voor gegevensbescherming (FG)":
-  als regelId is "AVG-010"
-  en implementatie is "ja"
-  dan is compliant ja
-  en is categorie "minimisation".
+regel AVG-010 "Functionaris voor gegevensbescherming":
+  als verwerking is grootschalig of persoonsgegevensType is bijzonder dan is FG aangesteld verplicht.
 
+regel AVG-011 "Verwerkingsgrondslag — toestemming":
+  als grondslag is toestemming dan is toestemming vrij gegeven en herroepbaar.
+
+regel AVG-012 "Verwerkingsgrondslag — overeenkomst":
+  als grondslag is overeenkomst dan is verwerking noodzakelijk voor uitvoering overeenkomst.
+
+regel AVG-013 "Verwerkingsgrondslag — wettelijke plicht":
+  als grondslag is wettelijkePlicht dan is verwerking noodzakelijk voor naleving wet.
+
+regel AVG-014 "Bijzondere persoonsgegevens":
+  als persoonsgegevensType is bijzonder (gezonheid, genetica, biometrie) dan is verwerking verboden tenzij expliciete toestemming of wettelijke grond.
+
+regel AVG-015 "Informatieplicht — artikel 13":
+  als persoonsgegevens verzameld worden dan is informatieplicht verplicht bij verzameling.
+
+regel AVG-016 "Informatieplicht — artikel 14":
+  als persoonsgegevens niet bij betrokkene verzameld dan is informatieplicht verplicht binnen 1 maand.
+
+regel AVG-017 "Privacy by design":
+  als nieuw systeem ontwikkeld wordt dan is privacyByDesign verplicht in ontwikopfase.
+
+regel AVG-018 "Security van verwerking":
+  als persoonsgegevens verwerkt worden dan is security verplicht (pseudonimisering, encryptie, toegangscontrole).
+
+regel AVG-019 "Data breach melding":
+  als datalek is ontdekt dan is melding verplicht binnen 72 uur bij AP.
+
+regel AVG-020 "Data breach communicatie":
+  als datalek is hoogRisico voor betrokkenen dan is communicatie naar betrokkenen verplicht.
+
+regel AVG-021 "Doorgifte buiten EER":
+  als persoonsgegevens doorgegeven buiten EER dan is adequate bescherming vereist (adequaatheidsbesluit of SCC).
+
+regel AVG-022 "Toestemming kinderen":
+  als betrokkene is jonger dan 16 dan is ouderlijke toestemming verplicht voor digitale diensten.
+
+regel AVG-023 "Geautomatiseerde besluitvorming":
+  als besluitvorming is geautomatiseerd dan is recht op menselijke tussenkomst verplicht.
+
+regel AVG-024 "DPIA — wanneer niet vereist":
+  als verwerkingType is niet grootschalig en monitoring is nee en persoonsgegevensType is niet bijzonder dan is DPIA niet verplicht.
+
+regel AVG-025 "Privacy by default":
+  als systeem in productie gaat dan is privacyByDefault verplicht (minimale data verzameling, maximale privacy instellingen).

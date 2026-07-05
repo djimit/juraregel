@@ -1,0 +1,5 @@
+// Begrippenmodel — NIS2 — Network and Information Security
+
+begrip regelId: "Unieke identificatie." type: tekst.
+begrip categorie: "Categorie." type: tekst.
+begrip compliant: "Voldoet?" waarden: ja, nee, onbekend.

@@ -1,67 +1,79 @@
-// ═══════════════════════════════════════════════════════════
-// Beslistabellen — Procesreglement digitale indiening 2026
-// Bron: Landelijk procesreglement civiele dagvaardingszaken (1 juli 2025)
-// Status: REVIEWED — geaccepteerd via human gate
-// ═══════════════════════════════════════════════════════════
-
-// REVIEWED — Regels geaccepteerd via human gate. Bronverwijzingen geverifieerd.
+// Procesreglement civiele dagvaardingszaken — RegelSpraak CNL
+// Bron: Landelijk procesreglement 1 juli 2025, Rechtspraak.nl
 
 regel PR-CIV-2026-001 "Dagvaarding digitaal indienen — handel":
-    als zaakstroom is handel
-  en procedureType is dagvaarding
-  dan is digitaal indienen verplicht
-  en is indieningswijze digitaal
-  en is formaat pdf.
+  als zaakstroom is handel en procedureType is dagvaarding
+  dan is digitaal indienen verplicht en is formaat pdf.
 
 regel PR-CIV-2026-002 "Dagvaarding digitaal indienen — kanton":
-    als zaakstroom is kanton
-  en procedureType is dagvaarding
-  dan is digitaal indienen verplicht
-  en is indieningswijze digitaal
-  en is formaat pdf.
+  als zaakstroom is kanton en procedureType is dagvaarding
+  dan is digitaal indienen verplicht en is formaat pdf.
 
 regel PR-CIV-2026-003 "Verzoekschrift digitaal indienen":
-    als procedureType is verzoek
-  dan is digitaal indienen verplicht
-  en is indieningswijze digitaal
-  en is formaat pdf.
+  als procedureType is verzoek
+  dan is digitaal indienen verplicht en is formaat pdf.
 
-regel PR-CIV-2026-004 "Ontheffing digitale indiening — mogelijk":
-    als procedureType is dagvaarding of verzoek
-  dan is ontheffing mogelijk
-  en is handmatige controle vereist
-  met als reden "Ontheffing van digitale indiening moet worden beoordeeld door de griffie."
+regel PR-CIV-2026-004 "Ontheffing digitale indiening":
+  als procedureType is dagvaarding of verzoek
+  dan is ontheffing mogelijk en is handmatige controle vereist.
 
-regel PR-CIV-2026-005 "Bijlagen bij dagvaarding — formaat":
-    als procedureType is dagvaarding
-  en documentType is bewijsstuk
-  dan is formaat pdf
-  en is digitaal indienen verplicht.
+regel PR-CIV-2026-005 "Bijlagen bij dagvaarding — pdf":
+  als procedureType is dagvaarding en documentType is bewijsstuk
+  dan is formaat pdf en is digitaal indienen verplicht.
 
 regel PR-CIV-2026-006 "Conclusie van eis — digitaal":
-    als zaakstroom is handel
-  en procedureType is dagvaarding
-  en documentType is conclusie
-  dan is digitaal indienen verplicht
-  en is formaat pdf.
+  als zaakstroom is handel en procedureType is dagvaarding en documentType is conclusie
+  dan is digitaal indienen verplicht en is formaat pdf.
 
 regel PR-CIV-2026-007 "Akte — digitaal":
-    als documentType is akte
-  dan is digitaal indienen verplicht
-  en is formaat pdf.
+  als documentType is akte dan is digitaal indienen verplicht en is formaat pdf.
 
 regel PR-CIV-2026-008 "Papieren indiening — uitzondering":
-    als indieningswijze is papier
-  en digitaalVerplicht is ja
-  dan is handmatige controle vereist
-  met als reden "Papieren indiening bij digitale verplichting — controleer of ontheffing is verleend."
+  als indieningswijze is papier en digitaalVerplicht is ja
+  dan is handmatige controle vereist.
 
-regel PR-CIV-2026-009 "Griffiersakte — formaat":
-    als documentType is griffiersakte
-  dan is formaat pdf
-  en is digitaal indienen verplicht.
+regel PR-CIV-2026-009 "Griffiersakte — digitaal":
+  als documentType is griffiersakte dan is formaat pdf en is digitaal indienen verplicht.
 
 regel PR-CIV-2026-010 "Hybride indiening — handmatige controle":
-    als indieningswijze is hybride
-  dan is handmatige controle vereist
-  met als reden "Hybride indiening — controleer welke delen digitaal en welke papieren zijn."
+  als indieningswijze is hybride dan is handmatige controle vereist.
+
+regel PR-CIV-2026-011 "Kanton — verzoekschrift digitaal":
+  als zaakstroom is kanton en procedureType is verzoek
+  dan is digitaal indienen verplicht en is formaat pdf.
+
+regel PR-CIV-2026-012 "Handel — verweerschrift digitaal":
+  als zaakstroom is handel en documentType is verweerschrift
+  dan is digitaal indienen verplicht en is formaat pdf.
+
+regel PR-CIV-2026-013 "Kanton — verweerschrift digitaal":
+  als zaakstroom is kanton en documentType is verweerschrift
+  dan is digitaal indienen verplicht en is formaat pdf.
+
+regel PR-CIV-2026-014 "Hoger beroep — digitaal indienen":
+  als procedureType is hogerBeroep
+  dan is digitaal indienen verplicht en is formaat pdf.
+
+regel PR-CIV-2026-015 "Kort geding — digitaal indienen":
+  als procedureType is kortGeding
+  dan is digitaal indienen verplicht en is formaat pdf.
+
+regel PR-CIV-2026-016 "Verslag van het onderzoek — pdf":
+  als documentType is verslag
+  dan is formaat pdf en is digitaal indienen verplicht.
+
+regel PR-CIV-2026-017 "Getuigenverklaring — digitaal":
+  als documentType is getuigenverklaring
+  dan is digitaal indienen verplicht en is formaat pdf.
+
+regel PR-CIV-2026-018 "Expert rapport — pdf":
+  als documentType is expertRapport
+  dan is formaat pdf en is digitaal indienen verplicht.
+
+regel PR-CIV-2026-019 "Bevelschrift — digitaal":
+  als documentType is bevelschrift
+  dan is digitaal indienen verplicht en is formaat pdf.
+
+regel PR-CIV-2026-020 "Proces-verbaal — digitaal":
+  als documentType is procesVerbaal
+  dan is digitaal indienen verplicht en is formaat pdf.

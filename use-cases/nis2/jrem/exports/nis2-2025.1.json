@@ -1,0 +1,782 @@
+{
+  "schemaVersion": "1.0.0",
+  "ruleSetId": "nis2",
+  "version": "2025.1",
+  "validFrom": "2025-01-01",
+  "validUntil": "2026-12-31",
+  "jurisdiction": "NL",
+  "domain": "nis2",
+  "procedureType": "dagvaarding",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "NIS2-001",
+      "name": "Essentiële entiteit classificatie",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU NIS2 richtlijn",
+          "section": "NIS2-001",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_nis2_classificatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NIS2-001"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NIS2-002",
+      "name": "Belangrijke entiteit classificatie",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU NIS2 richtlijn",
+          "section": "NIS2-002",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_nis2_classificatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NIS2-002"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NIS2-003",
+      "name": "Risicobeheer verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU NIS2 richtlijn",
+          "section": "NIS2-003",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_nis2_risicobeheer",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NIS2-003"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NIS2-004",
+      "name": "Meldingsverplichting incidenten",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU NIS2 richtlijn",
+          "section": "NIS2-004",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_nis2_melding",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NIS2-004"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NIS2-005",
+      "name": "Melding binnen 24 uur",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU NIS2 richtlijn",
+          "section": "NIS2-005",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_nis2_melding",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NIS2-005"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NIS2-006",
+      "name": "Ketenbeveiliging verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU NIS2 richtlijn",
+          "section": "NIS2-006",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_nis2_beveiliging",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NIS2-006"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NIS2-007",
+      "name": "Business continuity management",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU NIS2 richtlijn",
+          "section": "NIS2-007",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_nis2_beveiliging",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NIS2-007"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NIS2-008",
+      "name": "Security training verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU NIS2 richtlijn",
+          "section": "NIS2-008",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_nis2_training",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NIS2-008"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NIS2-009",
+      "name": "Beheerdersverplichtingen",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU NIS2 richtlijn",
+          "section": "NIS2-009",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_nis2_beheer",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NIS2-009"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NIS2-010",
+      "name": "Inkoop security requirements",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU NIS2 richtlijn",
+          "section": "NIS2-010",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_nis2_beheer",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NIS2-010"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NIS2-011",
+      "name": "Vulnerability disclosure policy",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU NIS2 richtlijn",
+          "section": "NIS2-011",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_nis2_beveiliging",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NIS2-011"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NIS2-012",
+      "name": "Encryption verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU NIS2 richtlijn",
+          "section": "NIS2-012",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_nis2_beveiliging",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NIS2-012"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NIS2-013",
+      "name": "Multi-factor authentication verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU NIS2 richtlijn",
+          "section": "NIS2-013",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_nis2_beveiliging",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NIS2-013"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NIS2-014",
+      "name": "Auditing en compliance",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU NIS2 richtlijn",
+          "section": "NIS2-014",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_nis2_audit",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NIS2-014"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "NIS2-015",
+      "name": "Registratie bij CSIRT",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU NIS2 richtlijn",
+          "section": "NIS2-015",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_nis2_registratie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "NIS2-015"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "SC-NIS2-001",
+      "description": "Essentiële entiteit classificatie",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NIS2-001"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_nis2_classificatie",
+        "appliedRules": [
+          "NIS2-001"
+        ]
+      }
+    },
+    {
+      "id": "SC-NIS2-002",
+      "description": "Belangrijke entiteit classificatie",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NIS2-002"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_nis2_classificatie",
+        "appliedRules": [
+          "NIS2-002"
+        ]
+      }
+    },
+    {
+      "id": "SC-NIS2-003",
+      "description": "Risicobeheer verplicht",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NIS2-003"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_nis2_risicobeheer",
+        "appliedRules": [
+          "NIS2-003"
+        ]
+      }
+    },
+    {
+      "id": "SC-NIS2-004",
+      "description": "Meldingsverplichting incidenten",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NIS2-004"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_nis2_melding",
+        "appliedRules": [
+          "NIS2-004"
+        ]
+      }
+    },
+    {
+      "id": "SC-NIS2-005",
+      "description": "Melding binnen 24 uur",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NIS2-005"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_nis2_melding",
+        "appliedRules": [
+          "NIS2-005"
+        ]
+      }
+    },
+    {
+      "id": "SC-NIS2-006",
+      "description": "Ketenbeveiliging verplicht",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NIS2-006"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_nis2_beveiliging",
+        "appliedRules": [
+          "NIS2-006"
+        ]
+      }
+    },
+    {
+      "id": "SC-NIS2-007",
+      "description": "Business continuity management",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NIS2-007"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_nis2_beveiliging",
+        "appliedRules": [
+          "NIS2-007"
+        ]
+      }
+    },
+    {
+      "id": "SC-NIS2-008",
+      "description": "Security training verplicht",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NIS2-008"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_nis2_training",
+        "appliedRules": [
+          "NIS2-008"
+        ]
+      }
+    },
+    {
+      "id": "SC-NIS2-009",
+      "description": "Beheerdersverplichtingen",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NIS2-009"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_nis2_beheer",
+        "appliedRules": [
+          "NIS2-009"
+        ]
+      }
+    },
+    {
+      "id": "SC-NIS2-010",
+      "description": "Inkoop security requirements",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NIS2-010"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_nis2_beheer",
+        "appliedRules": [
+          "NIS2-010"
+        ]
+      }
+    },
+    {
+      "id": "SC-NIS2-011",
+      "description": "Vulnerability disclosure policy",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NIS2-011"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_nis2_beveiliging",
+        "appliedRules": [
+          "NIS2-011"
+        ]
+      }
+    },
+    {
+      "id": "SC-NIS2-012",
+      "description": "Encryption verplicht",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NIS2-012"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_nis2_beveiliging",
+        "appliedRules": [
+          "NIS2-012"
+        ]
+      }
+    },
+    {
+      "id": "SC-NIS2-013",
+      "description": "Multi-factor authentication verplicht",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NIS2-013"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_nis2_beveiliging",
+        "appliedRules": [
+          "NIS2-013"
+        ]
+      }
+    },
+    {
+      "id": "SC-NIS2-014",
+      "description": "Auditing en compliance",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NIS2-014"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_nis2_audit",
+        "appliedRules": [
+          "NIS2-014"
+        ]
+      }
+    },
+    {
+      "id": "SC-NIS2-015",
+      "description": "Registratie bij CSIRT",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "NIS2-015"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_nis2_registratie",
+        "appliedRules": [
+          "NIS2-015"
+        ]
+      }
+    }
+  ],
+  "transitionRules": [],
+  "metadata": {
+    "juridischeContext": {
+      "wet": "EU NIS2 richtlijn",
+      "wetBwbrId": "BWBR0048630",
+      "wetVersieLaatstGecheckt": "2026-07-05",
+      "tariefVersie": "2025.1"
+    },
+    "juristAccordering": {
+      "geaccondeerdDoor": "D. Landman (approved v1.1.0)",
+      "datum": "2026-07-05",
+      "geldigTot": "2027-07-05",
+      "versie": "2025.1"
+    },
+    "bronverificatieDatum": "2026-07-05",
+    "acceptatieType": "full"
+  }
+}

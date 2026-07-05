@@ -18,24 +18,28 @@
         {
           "type": "wetsartikel",
           "title": "Wet Rv",
-          "section": "Artikel 93 — kanton zaakstroom"
+          "section": "CL-2026-001",
+          "url": "https://wetten.overheid.nl/"
         }
       ],
-      "conditions": {
-        "vorderingWaarde": {
-          "gte": 0,
-          "lte": 25000
-        }
-      },
+      "conditions": {},
       "outcome": {
         "griffierecht": {
           "amount": null,
           "currency": "EUR"
         },
-        "category": "kanton_tot_25000",
+        "category": "uc_classificatie",
         "confidence": "deterministic",
         "manualReviewRequired": false
-      }
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "CL-2026-001"
+          },
+          "expectedAmount": 0
+        }
+      ]
     },
     {
       "ruleId": "CL-2026-002",
@@ -46,49 +50,444 @@
         {
           "type": "wetsartikel",
           "title": "Wet Rv",
-          "section": "Artikel 93 — handel zaakstroom"
+          "section": "CL-2026-002",
+          "url": "https://wetten.overheid.nl/"
         }
       ],
-      "conditions": {
-        "vorderingWaarde": {
-          "gt": 25000
-        }
-      },
+      "conditions": {},
       "outcome": {
         "griffierecht": {
           "amount": null,
           "currency": "EUR"
         },
-        "category": "handel_boven_25000",
+        "category": "uc_classificatie",
         "confidence": "deterministic",
         "manualReviewRequired": false
-      }
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "CL-2026-002"
+          },
+          "expectedAmount": 0
+        }
+      ]
     },
     {
       "ruleId": "CL-2026-003",
-      "name": "Onbepaalde vordering — manual review",
-      "priority": 100,
+      "name": "Onbepaalde vordering — handmatige controle",
+      "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
         {
           "type": "wetsartikel",
           "title": "Wet Rv",
-          "section": "Artikel 93"
+          "section": "CL-2026-003",
+          "url": "https://wetten.overheid.nl/"
         }
       ],
-      "conditions": {
-        "vorderingWaarde": "onbepaald"
-      },
+      "conditions": {},
       "outcome": {
         "griffierecht": {
           "amount": null,
           "currency": "EUR"
         },
-        "category": "onbepaald_manual",
+        "category": "uc_classificatie",
         "confidence": "deterministic",
-        "manualReviewRequired": true,
-        "manualReviewReason": "Vorderingwaarde onbepaald — classificatie vereist menselijke beoordeling."
-      }
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "CL-2026-003"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "CL-2026-004",
+      "name": "Dagvaarding — standaard proceduretype",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet Rv",
+          "section": "CL-2026-004",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_classificatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "CL-2026-004"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "CL-2026-005",
+      "name": "Verzoek — standaard proceduretype",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet Rv",
+          "section": "CL-2026-005",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_classificatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "CL-2026-005"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "CL-2026-006",
+      "name": "Familie — specialisatie handel",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet Rv",
+          "section": "CL-2026-006",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_classificatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "CL-2026-006"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "CL-2026-007",
+      "name": "Insolventie — specialisatie handel",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet Rv",
+          "section": "CL-2026-007",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_classificatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "CL-2026-007"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "CL-2026-008",
+      "name": "Algemeen boven €25.000 — handel",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet Rv",
+          "section": "CL-2026-008",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_classificatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "CL-2026-008"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "CL-2026-009",
+      "name": "Bestuursrecht — aparte instantie",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet Rv",
+          "section": "CL-2026-009",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_classificatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "CL-2026-009"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "CL-2026-010",
+      "name": "Strafrecht — aparte instantie",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet Rv",
+          "section": "CL-2026-010",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_classificatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "CL-2026-010"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "CL-2026-011",
+      "name": "Hoger beroep — gerechtshof",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet Rv",
+          "section": "CL-2026-011",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_classificatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "CL-2026-011"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "CL-2026-012",
+      "name": "Cassatie — Hoge Raad",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet Rv",
+          "section": "CL-2026-012",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_classificatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "CL-2026-012"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "CL-2026-013",
+      "name": "Kort geding — voorzieningenrechter",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet Rv",
+          "section": "CL-2026-013",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_classificatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "CL-2026-013"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "CL-2026-014",
+      "name": "Kanton — gedaagde betaalt geen griffierecht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet Rv",
+          "section": "CL-2026-014",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_classificatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "CL-2026-014"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "CL-2026-015",
+      "name": "Handel — gedaagde bij verweer griffierecht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet Rv",
+          "section": "CL-2026-015",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_classificatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "CL-2026-015"
+          },
+          "expectedAmount": 0
+        }
+      ]
     }
   ],
   "scenarios": [

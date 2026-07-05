@@ -1,37 +1,47 @@
-// Beslistabellen — Classificatie 2026
-// Status: REVIEWED — geaccepteerd via human gate
+// Classificatie — RegelSpraak CNL
+// Bron: Wet Rv, Wet RO
+
 regel CL-2026-001 "Kanton bij vordering tot €25.000":
-    als vorderingWaarde is ten hoogste €25.000
-  dan is zaakstroom kanton
-  en is instantie rechtbank.
+  als vorderingWaarde is ten hoogste €25.000 dan is zaakstroom kanton en is instantie rechtbank.
 
 regel CL-2026-002 "Handel bij vordering boven €25.000":
-    als vorderingWaarde is meer dan €25.000
-  dan is zaakstroom handel
-  en is instantie rechtbank.
+  als vorderingWaarde is meer dan €25.000 dan is zaakstroom handel en is instantie rechtbank.
 
 regel CL-2026-003 "Onbepaalde vordering — handmatige controle":
-    als vorderingWaarde is onbepaald
-  dan is handmatige controle vereist
-  met als reden "Vorderingwaarde onbepaald — classificatie vereist menselijke beoordeling."
+  als vorderingWaarde is onbepaald dan is handmatige controle vereist.
 
 regel CL-2026-004 "Dagvaarding — standaard proceduretype":
-    als procedureType is dagvaarding
-  dan is instantie rechtbank.
+  als procedureType is dagvaarding dan is instantie rechtbank.
 
 regel CL-2026-005 "Verzoek — standaard proceduretype":
-    als procedureType is verzoek
-  dan is instantie rechtbank.
+  als procedureType is verzoek dan is instantie rechtbank.
 
-regel CL-2026-006 "Familie — specialisatie":
-    als specialisatie is familie
-  dan is zaakstroom handel.
+regel CL-2026-006 "Familie — specialisatie handel":
+  als specialisatie is familie dan is zaakstroom handel.
 
-regel CL-2026-007 "Insolventie — specialisatie":
-    als specialisatie is insolventie
-  dan is zaakstroom handel.
+regel CL-2026-007 "Insolventie — specialisatie handel":
+  als specialisatie is insolventie dan is zaakstroom handel.
 
-regel CL-2026-008 "Onbepaalde specialisatie — standaard algemeen":
-    als specialisatie is algemeen
-  en vorderingWaarde is meer dan €25.000
-  dan is zaakstroom handel.
+regel CL-2026-008 "Algemeen boven €25.000 — handel":
+  als specialisatie is algemeen en vorderingWaarde is meer dan €25.000 dan is zaakstroom handel.
+
+regel CL-2026-009 "Bestuursrecht — aparte instantie":
+  als rechtsgebied is bestuursrecht dan is instantie rechtbank en is zaakstroom bestuursrecht.
+
+regel CL-2026-010 "Strafrecht — aparte instantie":
+  als rechtsgebied is strafrecht dan is instantie rechtbank en is zaakstroom strafrecht.
+
+regel CL-2026-011 "Hoger beroep — gerechtshof":
+  als procedureType is hogerBeroep dan is instantie gerechtshof.
+
+regel CL-2026-012 "Cassatie — Hoge Raad":
+  als procedureType is cassatie dan is instantie hogeRaad.
+
+regel CL-2026-013 "Kort geding — voorzieningenrechter":
+  als procedureType is kortGeding dan is instantie rechtbank en is rol voorzieningenrechter.
+
+regel CL-2026-014 "Kanton — gedaagde betaalt geen griffierecht":
+  als zaakstroom is kanton en rol is gedaagde dan is griffierecht verschuldigd nee.
+
+regel CL-2026-015 "Handel — gedaagde bij verweer griffierecht":
+  als zaakstroom is handel en rol is gedaagde en verweerStatus is ingediend dan is griffierecht verschuldigd ja.

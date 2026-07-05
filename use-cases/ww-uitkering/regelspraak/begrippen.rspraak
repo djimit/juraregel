@@ -1,0 +1,5 @@
+// Begrippenmodel — WW-uitkering — Werkloosheidswet
+
+begrip regelId: "Unieke identificatie." type: tekst.
+begrip categorie: "Categorie." type: tekst.
+begrip compliant: "Voldoet?" waarden: ja, nee, onbekend.

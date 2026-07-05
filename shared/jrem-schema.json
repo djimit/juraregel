@@ -60,7 +60,12 @@
         "nora-architectuur",
         "eu-ai-act",
         "avg-gdpr",
-        "ncsc-cybersecurity"
+        "ncsc-cybersecurity",
+        "nis2",
+        "btw-tarieven",
+        "ww-uitkering",
+        "ind-verblijfsregels",
+        "wmo"
       ]
     },
     "procedureType": {

@@ -17,8 +17,8 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "AVG — Algemene Verordening Gegevensbescherming",
-          "section": "Art. 35",
+          "title": "AVG",
+          "section": "AVG-001",
           "url": "https://wetten.overheid.nl/"
         }
       ],
@@ -28,7 +28,7 @@
           "amount": null,
           "currency": "EUR"
         },
-        "category": "avg_dpia",
+        "category": "uc_avg-gdpr",
         "confidence": "deterministic",
         "manualReviewRequired": false
       },
@@ -49,8 +49,8 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "AVG — Algemene Verordening Gegevensbescherming",
-          "section": "Art. 35 lid 1c",
+          "title": "AVG",
+          "section": "AVG-002",
           "url": "https://wetten.overheid.nl/"
         }
       ],
@@ -60,7 +60,7 @@
           "amount": null,
           "currency": "EUR"
         },
-        "category": "avg_dpia",
+        "category": "uc_avg-gdpr",
         "confidence": "deterministic",
         "manualReviewRequired": false
       },
@@ -81,8 +81,8 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "AVG — Algemene Verordening Gegevensbescherming",
-          "section": "Art. 5 lid 1e",
+          "title": "AVG",
+          "section": "AVG-003",
           "url": "https://wetten.overheid.nl/"
         }
       ],
@@ -92,7 +92,7 @@
           "amount": null,
           "currency": "EUR"
         },
-        "category": "avg_bewaartermijn",
+        "category": "uc_avg-gdpr",
         "confidence": "deterministic",
         "manualReviewRequired": false
       },
@@ -113,8 +113,8 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "AVG — Algemene Verordening Gegevensbescherming",
-          "section": "Art. 15",
+          "title": "AVG",
+          "section": "AVG-004",
           "url": "https://wetten.overheid.nl/"
         }
       ],
@@ -124,7 +124,7 @@
           "amount": null,
           "currency": "EUR"
         },
-        "category": "avg_rechten",
+        "category": "uc_avg-gdpr",
         "confidence": "deterministic",
         "manualReviewRequired": false
       },
@@ -145,8 +145,8 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "AVG — Algemene Verordening Gegevensbescherming",
-          "section": "Art. 16",
+          "title": "AVG",
+          "section": "AVG-005",
           "url": "https://wetten.overheid.nl/"
         }
       ],
@@ -156,7 +156,7 @@
           "amount": null,
           "currency": "EUR"
         },
-        "category": "avg_rechten",
+        "category": "uc_avg-gdpr",
         "confidence": "deterministic",
         "manualReviewRequired": false
       },
@@ -177,8 +177,8 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "AVG — Algemene Verordening Gegevensbescherming",
-          "section": "Art. 17",
+          "title": "AVG",
+          "section": "AVG-006",
           "url": "https://wetten.overheid.nl/"
         }
       ],
@@ -188,7 +188,7 @@
           "amount": null,
           "currency": "EUR"
         },
-        "category": "avg_rechten",
+        "category": "uc_avg-gdpr",
         "confidence": "deterministic",
         "manualReviewRequired": false
       },
@@ -209,8 +209,8 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "AVG — Algemene Verordening Gegevensbescherming",
-          "section": "Art. 20",
+          "title": "AVG",
+          "section": "AVG-007",
           "url": "https://wetten.overheid.nl/"
         }
       ],
@@ -220,7 +220,7 @@
           "amount": null,
           "currency": "EUR"
         },
-        "category": "avg_rechten",
+        "category": "uc_avg-gdpr",
         "confidence": "deterministic",
         "manualReviewRequired": false
       },
@@ -241,8 +241,8 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "AVG — Algemene Verordening Gegevensbescherming",
-          "section": "Art. 5 lid 1c",
+          "title": "AVG",
+          "section": "AVG-008",
           "url": "https://wetten.overheid.nl/"
         }
       ],
@@ -252,7 +252,7 @@
           "amount": null,
           "currency": "EUR"
         },
-        "category": "avg_minimisation",
+        "category": "uc_avg-gdpr",
         "confidence": "deterministic",
         "manualReviewRequired": false
       },
@@ -273,8 +273,8 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "AVG — Algemene Verordening Gegevensbescherming",
-          "section": "Art. 30",
+          "title": "AVG",
+          "section": "AVG-009",
           "url": "https://wetten.overheid.nl/"
         }
       ],
@@ -284,7 +284,7 @@
           "amount": null,
           "currency": "EUR"
         },
-        "category": "avg_minimisation",
+        "category": "uc_avg-gdpr",
         "confidence": "deterministic",
         "manualReviewRequired": false
       },
@@ -299,14 +299,14 @@
     },
     {
       "ruleId": "AVG-010",
-      "name": "Functionaris voor gegevensbescherming (FG)",
+      "name": "Functionaris voor gegevensbescherming",
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "AVG — Algemene Verordening Gegevensbescherming",
-          "section": "Art. 37",
+          "title": "AVG",
+          "section": "AVG-010",
           "url": "https://wetten.overheid.nl/"
         }
       ],
@@ -316,7 +316,7 @@
           "amount": null,
           "currency": "EUR"
         },
-        "category": "avg_minimisation",
+        "category": "uc_avg-gdpr",
         "confidence": "deterministic",
         "manualReviewRequired": false
       },
@@ -324,6 +324,486 @@
         {
           "input": {
             "regelId": "AVG-010"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AVG-011",
+      "name": "Verwerkingsgrondslag — toestemming",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "AVG",
+          "section": "AVG-011",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_avg-gdpr",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AVG-011"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AVG-012",
+      "name": "Verwerkingsgrondslag — overeenkomst",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "AVG",
+          "section": "AVG-012",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_avg-gdpr",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AVG-012"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AVG-013",
+      "name": "Verwerkingsgrondslag — wettelijke plicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "AVG",
+          "section": "AVG-013",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_avg-gdpr",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AVG-013"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AVG-014",
+      "name": "Bijzondere persoonsgegevens",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "AVG",
+          "section": "AVG-014",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_avg-gdpr",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AVG-014"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AVG-015",
+      "name": "Informatieplicht — artikel 13",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "AVG",
+          "section": "AVG-015",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_avg-gdpr",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AVG-015"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AVG-016",
+      "name": "Informatieplicht — artikel 14",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "AVG",
+          "section": "AVG-016",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_avg-gdpr",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AVG-016"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AVG-017",
+      "name": "Privacy by design",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "AVG",
+          "section": "AVG-017",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_avg-gdpr",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AVG-017"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AVG-018",
+      "name": "Security van verwerking",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "AVG",
+          "section": "AVG-018",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_avg-gdpr",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AVG-018"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AVG-019",
+      "name": "Data breach melding",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "AVG",
+          "section": "AVG-019",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_avg-gdpr",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AVG-019"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AVG-020",
+      "name": "Data breach communicatie",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "AVG",
+          "section": "AVG-020",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_avg-gdpr",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AVG-020"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AVG-021",
+      "name": "Doorgifte buiten EER",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "AVG",
+          "section": "AVG-021",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_avg-gdpr",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AVG-021"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AVG-022",
+      "name": "Toestemming kinderen",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "AVG",
+          "section": "AVG-022",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_avg-gdpr",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AVG-022"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AVG-023",
+      "name": "Geautomatiseerde besluitvorming",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "AVG",
+          "section": "AVG-023",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_avg-gdpr",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AVG-023"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AVG-024",
+      "name": "DPIA — wanneer niet vereist",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "AVG",
+          "section": "AVG-024",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_avg-gdpr",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AVG-024"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AVG-025",
+      "name": "Privacy by default",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "AVG",
+          "section": "AVG-025",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_avg-gdpr",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AVG-025"
           },
           "expectedAmount": 0
         }

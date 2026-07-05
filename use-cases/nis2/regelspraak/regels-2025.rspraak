@@ -1,0 +1,93 @@
+// NIS2 — Network and Information Security — RegelSpraak CNL
+// Bron: EU NIS2 richtlijn
+
+regel NIS2-001 "Essentiële entiteit classificatie":
+  als regelId is "NIS2-001"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "classificatie".
+
+regel NIS2-002 "Belangrijke entiteit classificatie":
+  als regelId is "NIS2-002"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "classificatie".
+
+regel NIS2-003 "Risicobeheer verplicht":
+  als regelId is "NIS2-003"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "risicobeheer".
+
+regel NIS2-004 "Meldingsverplichting incidenten":
+  als regelId is "NIS2-004"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "melding".
+
+regel NIS2-005 "Melding binnen 24 uur":
+  als regelId is "NIS2-005"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "melding".
+
+regel NIS2-006 "Ketenbeveiliging verplicht":
+  als regelId is "NIS2-006"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "beveiliging".
+
+regel NIS2-007 "Business continuity management":
+  als regelId is "NIS2-007"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "beveiliging".
+
+regel NIS2-008 "Security training verplicht":
+  als regelId is "NIS2-008"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "training".
+
+regel NIS2-009 "Beheerdersverplichtingen":
+  als regelId is "NIS2-009"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "beheer".
+
+regel NIS2-010 "Inkoop security requirements":
+  als regelId is "NIS2-010"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "beheer".
+
+regel NIS2-011 "Vulnerability disclosure policy":
+  als regelId is "NIS2-011"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "beveiliging".
+
+regel NIS2-012 "Encryption verplicht":
+  als regelId is "NIS2-012"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "beveiliging".
+
+regel NIS2-013 "Multi-factor authentication verplicht":
+  als regelId is "NIS2-013"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "beveiliging".
+
+regel NIS2-014 "Auditing en compliance":
+  als regelId is "NIS2-014"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "audit".
+
+regel NIS2-015 "Registratie bij CSIRT":
+  als regelId is "NIS2-015"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "registratie".
+

@@ -44,3 +44,24 @@ services:
     build: .
     command: python use-cases/ncsc/api/app.py
     ports: ["8500:8500"]
+
+  nis2:
+    build: .
+    command: python use-cases/nis2/api/app.py
+    ports: ["8501:8501"]
+  btw-tarieven:
+    build: .
+    command: python use-cases/btw-tarieven/api/app.py
+    ports: ["8502:8502"]
+  ww-uitkering:
+    build: .
+    command: python use-cases/ww-uitkering/api/app.py
+    ports: ["8503:8503"]
+  ind-verblijfsregels:
+    build: .
+    command: python use-cases/ind-verblijfsregels/api/app.py
+    ports: ["8504:8504"]
+  wmo:
+    build: .
+    command: python use-cases/wmo/api/app.py
+    ports: ["8505:8505"]

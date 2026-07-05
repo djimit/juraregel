@@ -1,0 +1,93 @@
+// IND — Vreemdelingenwet 2000 — RegelSpraak CNL
+// Bron: Vreemdelingenwet 2000
+
+regel IND-001 "Verblijfsdoel bepaald":
+  als regelId is "IND-001"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "voorwaarden".
+
+regel IND-002 "Paspoort geldig":
+  als regelId is "IND-002"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "voorwaarden".
+
+regel IND-003 "Inkomenseis regulier":
+  als regelId is "IND-003"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "voorwaarden".
+
+regel IND-004 "Inkomenseis gezinshereniging":
+  als regelId is "IND-004"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "voorwaarden".
+
+regel IND-005 "Integratieverplichting":
+  als regelId is "IND-005"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "integratie".
+
+regel IND-006 "Verblijfsvergunning regulier onbepaald":
+  als regelId is "IND-006"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "vergunning".
+
+regel IND-007 "Verblijfsvergunning eu-burger":
+  als regelId is "IND-007"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "vergunning".
+
+regel IND-008 "Asiel — eerste aanvraag":
+  als regelId is "IND-008"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "asiel".
+
+regel IND-009 "Asiel — volgende aanvraag":
+  als regelId is "IND-009"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "asiel".
+
+regel IND-010 "Naturalisatie — 5 jaar onafgebroken verblijf":
+  als regelId is "IND-010"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "naturalisatie".
+
+regel IND-011 "Naturalisatie — ingeburgerd":
+  als regelId is "IND-011"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "naturalisatie".
+
+regel IND-012 "Verblijf illegaal — geen vergunning":
+  als regelId is "IND-012"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "status".
+
+regel IND-013 "Vertrekplicht — terugkeer":
+  als regelId is "IND-013"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "vertrek".
+
+regel IND-014 "Inreisverbod":
+  als regelId is "IND-014"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "voorwaarden".
+
+regel IND-015 "Verblijfsbeëindiging":
+  als regelId is "IND-015"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "vertrek".
+

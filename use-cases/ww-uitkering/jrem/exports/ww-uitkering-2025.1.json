@@ -1,0 +1,782 @@
+{
+  "schemaVersion": "1.0.0",
+  "ruleSetId": "ww-uitkering",
+  "version": "2025.1",
+  "validFrom": "2025-01-01",
+  "validUntil": "2026-12-31",
+  "jurisdiction": "NL",
+  "domain": "ww-uitkering",
+  "procedureType": "dagvaarding",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "WW-001",
+      "name": "Rechthebbende — 26 weken werk in 36 weken",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Werkloosheidswet",
+          "section": "WW-001",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_ww-uitkering_voorwaarden",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "WW-001"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "WW-002",
+      "name": "Arbeidsverleden — minimaal 4 jaar in 5 jaar",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Werkloosheidswet",
+          "section": "WW-002",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_ww-uitkering_voorwaarden",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "WW-002"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "WW-003",
+      "name": "Inschrijving UWV verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Werkloosheidswet",
+          "section": "WW-003",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_ww-uitkering_inschrijving",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "WW-003"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "WW-004",
+      "name": "Beschikbaar voor arbeid",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Werkloosheidswet",
+          "section": "WW-004",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_ww-uitkering_voorwaarden",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "WW-004"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "WW-005",
+      "name": "Actief solliciteren verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Werkloosheidswet",
+          "section": "WW-005",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_ww-uitkering_voorwaarden",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "WW-005"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "WW-006",
+      "name": "Uitkering duur — 3 maanden minimum",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Werkloosheidswet",
+          "section": "WW-006",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_ww-uitkering_duur",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "WW-006"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "WW-007",
+      "name": "Uitkering duur — afhankelijk van arbeidsverleden",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Werkloosheidswet",
+          "section": "WW-007",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_ww-uitkering_duur",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "WW-007"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "WW-008",
+      "name": "Uitkering hoogte — 75% eerste 2 maanden",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Werkloosheidswet",
+          "section": "WW-008",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_ww-uitkering_hoogte",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "WW-008"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "WW-009",
+      "name": "Uitkering hoogte — 70% na 2 maanden",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Werkloosheidswet",
+          "section": "WW-009",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_ww-uitkering_hoogte",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "WW-009"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "WW-010",
+      "name": "Maximum dagloon toepassing",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Werkloosheidswet",
+          "section": "WW-010",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_ww-uitkering_hoogte",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "WW-010"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "WW-011",
+      "name": "Einddatum uitkering",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Werkloosheidswet",
+          "section": "WW-011",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_ww-uitkering_duur",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "WW-011"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "WW-012",
+      "name": "Heropleving bij nieuwe arbeid",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Werkloosheidswet",
+          "section": "WW-012",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_ww-uitkering_duur",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "WW-012"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "WW-013",
+      "name": "Weigering passende arbeid — sanctie",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Werkloosheidswet",
+          "section": "WW-013",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_ww-uitkering_sanctie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "WW-013"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "WW-014",
+      "name": "Verlaging bij verwijtbaar werkloosheid",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Werkloosheidswet",
+          "section": "WW-014",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_ww-uitkering_sanctie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "WW-014"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "WW-015",
+      "name": "Premieplichtig dienstverband",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Werkloosheidswet",
+          "section": "WW-015",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_ww-uitkering_voorwaarden",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "WW-015"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "SC-WW-001",
+      "description": "Rechthebbende — 26 weken werk in 36 weken",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "WW-001"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_ww-uitkering_voorwaarden",
+        "appliedRules": [
+          "WW-001"
+        ]
+      }
+    },
+    {
+      "id": "SC-WW-002",
+      "description": "Arbeidsverleden — minimaal 4 jaar in 5 jaar",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "WW-002"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_ww-uitkering_voorwaarden",
+        "appliedRules": [
+          "WW-002"
+        ]
+      }
+    },
+    {
+      "id": "SC-WW-003",
+      "description": "Inschrijving UWV verplicht",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "WW-003"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_ww-uitkering_inschrijving",
+        "appliedRules": [
+          "WW-003"
+        ]
+      }
+    },
+    {
+      "id": "SC-WW-004",
+      "description": "Beschikbaar voor arbeid",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "WW-004"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_ww-uitkering_voorwaarden",
+        "appliedRules": [
+          "WW-004"
+        ]
+      }
+    },
+    {
+      "id": "SC-WW-005",
+      "description": "Actief solliciteren verplicht",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "WW-005"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_ww-uitkering_voorwaarden",
+        "appliedRules": [
+          "WW-005"
+        ]
+      }
+    },
+    {
+      "id": "SC-WW-006",
+      "description": "Uitkering duur — 3 maanden minimum",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "WW-006"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_ww-uitkering_duur",
+        "appliedRules": [
+          "WW-006"
+        ]
+      }
+    },
+    {
+      "id": "SC-WW-007",
+      "description": "Uitkering duur — afhankelijk van arbeidsverleden",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "WW-007"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_ww-uitkering_duur",
+        "appliedRules": [
+          "WW-007"
+        ]
+      }
+    },
+    {
+      "id": "SC-WW-008",
+      "description": "Uitkering hoogte — 75% eerste 2 maanden",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "WW-008"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_ww-uitkering_hoogte",
+        "appliedRules": [
+          "WW-008"
+        ]
+      }
+    },
+    {
+      "id": "SC-WW-009",
+      "description": "Uitkering hoogte — 70% na 2 maanden",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "WW-009"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_ww-uitkering_hoogte",
+        "appliedRules": [
+          "WW-009"
+        ]
+      }
+    },
+    {
+      "id": "SC-WW-010",
+      "description": "Maximum dagloon toepassing",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "WW-010"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_ww-uitkering_hoogte",
+        "appliedRules": [
+          "WW-010"
+        ]
+      }
+    },
+    {
+      "id": "SC-WW-011",
+      "description": "Einddatum uitkering",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "WW-011"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_ww-uitkering_duur",
+        "appliedRules": [
+          "WW-011"
+        ]
+      }
+    },
+    {
+      "id": "SC-WW-012",
+      "description": "Heropleving bij nieuwe arbeid",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "WW-012"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_ww-uitkering_duur",
+        "appliedRules": [
+          "WW-012"
+        ]
+      }
+    },
+    {
+      "id": "SC-WW-013",
+      "description": "Weigering passende arbeid — sanctie",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "WW-013"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_ww-uitkering_sanctie",
+        "appliedRules": [
+          "WW-013"
+        ]
+      }
+    },
+    {
+      "id": "SC-WW-014",
+      "description": "Verlaging bij verwijtbaar werkloosheid",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "WW-014"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_ww-uitkering_sanctie",
+        "appliedRules": [
+          "WW-014"
+        ]
+      }
+    },
+    {
+      "id": "SC-WW-015",
+      "description": "Premieplichtig dienstverband",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "WW-015"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_ww-uitkering_voorwaarden",
+        "appliedRules": [
+          "WW-015"
+        ]
+      }
+    }
+  ],
+  "transitionRules": [],
+  "metadata": {
+    "juridischeContext": {
+      "wet": "Werkloosheidswet",
+      "wetBwbrId": "BWBR0014086",
+      "wetVersieLaatstGecheckt": "2026-07-05",
+      "tariefVersie": "2025.1"
+    },
+    "juristAccordering": {
+      "geaccondeerdDoor": "D. Landman (approved v1.1.0)",
+      "datum": "2026-07-05",
+      "geldigTot": "2027-07-05",
+      "versie": "2025.1"
+    },
+    "bronverificatieDatum": "2026-07-05",
+    "acceptatieType": "full"
+  }
+}

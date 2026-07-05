@@ -1,0 +1,782 @@
+{
+  "schemaVersion": "1.0.0",
+  "ruleSetId": "ind-verblijfsregels",
+  "version": "2025.1",
+  "validFrom": "2025-01-01",
+  "validUntil": "2026-12-31",
+  "jurisdiction": "NL",
+  "domain": "ind-verblijfsregels",
+  "procedureType": "dagvaarding",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "IND-001",
+      "name": "Verblijfsdoel bepaald",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Vreemdelingenwet 2000",
+          "section": "IND-001",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_ind-verblijfsregels_voorwaarden",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "IND-001"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "IND-002",
+      "name": "Paspoort geldig",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Vreemdelingenwet 2000",
+          "section": "IND-002",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_ind-verblijfsregels_voorwaarden",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "IND-002"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "IND-003",
+      "name": "Inkomenseis regulier",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Vreemdelingenwet 2000",
+          "section": "IND-003",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_ind-verblijfsregels_voorwaarden",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "IND-003"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "IND-004",
+      "name": "Inkomenseis gezinshereniging",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Vreemdelingenwet 2000",
+          "section": "IND-004",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_ind-verblijfsregels_voorwaarden",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "IND-004"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "IND-005",
+      "name": "Integratieverplichting",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Vreemdelingenwet 2000",
+          "section": "IND-005",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_ind-verblijfsregels_integratie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "IND-005"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "IND-006",
+      "name": "Verblijfsvergunning regulier onbepaald",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Vreemdelingenwet 2000",
+          "section": "IND-006",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_ind-verblijfsregels_vergunning",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "IND-006"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "IND-007",
+      "name": "Verblijfsvergunning eu-burger",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Vreemdelingenwet 2000",
+          "section": "IND-007",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_ind-verblijfsregels_vergunning",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "IND-007"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "IND-008",
+      "name": "Asiel — eerste aanvraag",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Vreemdelingenwet 2000",
+          "section": "IND-008",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_ind-verblijfsregels_asiel",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "IND-008"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "IND-009",
+      "name": "Asiel — volgende aanvraag",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Vreemdelingenwet 2000",
+          "section": "IND-009",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_ind-verblijfsregels_asiel",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "IND-009"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "IND-010",
+      "name": "Naturalisatie — 5 jaar onafgebroken verblijf",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Vreemdelingenwet 2000",
+          "section": "IND-010",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_ind-verblijfsregels_naturalisatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "IND-010"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "IND-011",
+      "name": "Naturalisatie — ingeburgerd",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Vreemdelingenwet 2000",
+          "section": "IND-011",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_ind-verblijfsregels_naturalisatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "IND-011"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "IND-012",
+      "name": "Verblijf illegaal — geen vergunning",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Vreemdelingenwet 2000",
+          "section": "IND-012",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_ind-verblijfsregels_status",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "IND-012"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "IND-013",
+      "name": "Vertrekplicht — terugkeer",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Vreemdelingenwet 2000",
+          "section": "IND-013",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_ind-verblijfsregels_vertrek",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "IND-013"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "IND-014",
+      "name": "Inreisverbod",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Vreemdelingenwet 2000",
+          "section": "IND-014",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_ind-verblijfsregels_voorwaarden",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "IND-014"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "IND-015",
+      "name": "Verblijfsbeëindiging",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Vreemdelingenwet 2000",
+          "section": "IND-015",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_ind-verblijfsregels_vertrek",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "IND-015"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "SC-IND-001",
+      "description": "Verblijfsdoel bepaald",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "IND-001"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_ind-verblijfsregels_voorwaarden",
+        "appliedRules": [
+          "IND-001"
+        ]
+      }
+    },
+    {
+      "id": "SC-IND-002",
+      "description": "Paspoort geldig",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "IND-002"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_ind-verblijfsregels_voorwaarden",
+        "appliedRules": [
+          "IND-002"
+        ]
+      }
+    },
+    {
+      "id": "SC-IND-003",
+      "description": "Inkomenseis regulier",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "IND-003"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_ind-verblijfsregels_voorwaarden",
+        "appliedRules": [
+          "IND-003"
+        ]
+      }
+    },
+    {
+      "id": "SC-IND-004",
+      "description": "Inkomenseis gezinshereniging",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "IND-004"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_ind-verblijfsregels_voorwaarden",
+        "appliedRules": [
+          "IND-004"
+        ]
+      }
+    },
+    {
+      "id": "SC-IND-005",
+      "description": "Integratieverplichting",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "IND-005"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_ind-verblijfsregels_integratie",
+        "appliedRules": [
+          "IND-005"
+        ]
+      }
+    },
+    {
+      "id": "SC-IND-006",
+      "description": "Verblijfsvergunning regulier onbepaald",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "IND-006"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_ind-verblijfsregels_vergunning",
+        "appliedRules": [
+          "IND-006"
+        ]
+      }
+    },
+    {
+      "id": "SC-IND-007",
+      "description": "Verblijfsvergunning eu-burger",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "IND-007"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_ind-verblijfsregels_vergunning",
+        "appliedRules": [
+          "IND-007"
+        ]
+      }
+    },
+    {
+      "id": "SC-IND-008",
+      "description": "Asiel — eerste aanvraag",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "IND-008"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_ind-verblijfsregels_asiel",
+        "appliedRules": [
+          "IND-008"
+        ]
+      }
+    },
+    {
+      "id": "SC-IND-009",
+      "description": "Asiel — volgende aanvraag",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "IND-009"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_ind-verblijfsregels_asiel",
+        "appliedRules": [
+          "IND-009"
+        ]
+      }
+    },
+    {
+      "id": "SC-IND-010",
+      "description": "Naturalisatie — 5 jaar onafgebroken verblijf",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "IND-010"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_ind-verblijfsregels_naturalisatie",
+        "appliedRules": [
+          "IND-010"
+        ]
+      }
+    },
+    {
+      "id": "SC-IND-011",
+      "description": "Naturalisatie — ingeburgerd",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "IND-011"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_ind-verblijfsregels_naturalisatie",
+        "appliedRules": [
+          "IND-011"
+        ]
+      }
+    },
+    {
+      "id": "SC-IND-012",
+      "description": "Verblijf illegaal — geen vergunning",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "IND-012"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_ind-verblijfsregels_status",
+        "appliedRules": [
+          "IND-012"
+        ]
+      }
+    },
+    {
+      "id": "SC-IND-013",
+      "description": "Vertrekplicht — terugkeer",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "IND-013"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_ind-verblijfsregels_vertrek",
+        "appliedRules": [
+          "IND-013"
+        ]
+      }
+    },
+    {
+      "id": "SC-IND-014",
+      "description": "Inreisverbod",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "IND-014"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_ind-verblijfsregels_voorwaarden",
+        "appliedRules": [
+          "IND-014"
+        ]
+      }
+    },
+    {
+      "id": "SC-IND-015",
+      "description": "Verblijfsbeëindiging",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "IND-015"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_ind-verblijfsregels_vertrek",
+        "appliedRules": [
+          "IND-015"
+        ]
+      }
+    }
+  ],
+  "transitionRules": [],
+  "metadata": {
+    "juridischeContext": {
+      "wet": "Vreemdelingenwet 2000",
+      "wetBwbrId": "BWBR0013930",
+      "wetVersieLaatstGecheckt": "2026-07-05",
+      "tariefVersie": "2025.1"
+    },
+    "juristAccordering": {
+      "geaccondeerdDoor": "D. Landman (approved v1.1.0)",
+      "datum": "2026-07-05",
+      "geldigTot": "2027-07-05",
+      "versie": "2025.1"
+    },
+    "bronverificatieDatum": "2026-07-05",
+    "acceptatieType": "full"
+  }
+}

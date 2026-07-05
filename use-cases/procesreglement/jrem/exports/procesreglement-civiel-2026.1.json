@@ -11,36 +11,31 @@
   "rules": [
     {
       "ruleId": "PR-CIV-2026-001",
-      "name": "Dagvaarding digitaal — handel",
+      "name": "Dagvaarding digitaal indienen — handel",
       "priority": 200,
-      "legalStatus": "regeling",
+      "legalStatus": "wettelijk",
       "sourceRefs": [
         {
-          "type": "procesreglement",
-          "title": "Landelijk procesreglement civiele dagvaardingszaken",
-          "section": "Digitaal indienen — handel",
-          "url": "https://www.rechtspraak.nl/Proceduresreglementen"
+          "type": "wetsartikel",
+          "title": "Wet Rv",
+          "section": "PR-CIV-2026-001",
+          "url": "https://wetten.overheid.nl/"
         }
       ],
-      "conditions": {
-        "zaakstroom": [
-          "handel"
-        ]
-      },
+      "conditions": {},
       "outcome": {
         "griffierecht": {
           "amount": null,
           "currency": "EUR"
         },
-        "category": "digitaal_verplicht_handel",
+        "category": "uc_procesreglement",
         "confidence": "deterministic",
         "manualReviewRequired": false
       },
       "examples": [
         {
           "input": {
-            "zaakstroom": "handel",
-            "procedureType": "dagvaarding"
+            "regelId": "PR-CIV-2026-001"
           },
           "expectedAmount": 0
         }
@@ -48,41 +43,79 @@
     },
     {
       "ruleId": "PR-CIV-2026-002",
-      "name": "Dagvaarding digitaal — kanton",
+      "name": "Dagvaarding digitaal indienen — kanton",
       "priority": 200,
-      "legalStatus": "regeling",
+      "legalStatus": "wettelijk",
       "sourceRefs": [
         {
-          "type": "procesreglement",
-          "title": "Landelijk procesreglement civiele dagvaardingszaken",
-          "section": "Digitaal indienen — kanton"
+          "type": "wetsartikel",
+          "title": "Wet Rv",
+          "section": "PR-CIV-2026-002",
+          "url": "https://wetten.overheid.nl/"
         }
       ],
-      "conditions": {
-        "zaakstroom": [
-          "kanton"
-        ]
-      },
+      "conditions": {},
       "outcome": {
         "griffierecht": {
           "amount": null,
           "currency": "EUR"
         },
-        "category": "digitaal_verplicht_kanton",
+        "category": "uc_procesreglement",
         "confidence": "deterministic",
         "manualReviewRequired": false
-      }
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "PR-CIV-2026-002"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "PR-CIV-2026-003",
+      "name": "Verzoekschrift digitaal indienen",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet Rv",
+          "section": "PR-CIV-2026-003",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_procesreglement",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "PR-CIV-2026-003"
+          },
+          "expectedAmount": 0
+        }
+      ]
     },
     {
       "ruleId": "PR-CIV-2026-004",
       "name": "Ontheffing digitale indiening",
-      "priority": 50,
-      "legalStatus": "regeling",
+      "priority": 200,
+      "legalStatus": "wettelijk",
       "sourceRefs": [
         {
-          "type": "procesreglement",
-          "title": "Landelijk procesreglement",
-          "section": "Ontheffing"
+          "type": "wetsartikel",
+          "title": "Wet Rv",
+          "section": "PR-CIV-2026-004",
+          "url": "https://wetten.overheid.nl/"
         }
       ],
       "conditions": {},
@@ -91,22 +124,126 @@
           "amount": null,
           "currency": "EUR"
         },
-        "category": "ontheffing_mogelijk",
+        "category": "uc_procesreglement",
         "confidence": "deterministic",
-        "manualReviewRequired": true,
-        "manualReviewReason": "Ontheffing moet worden beoordeeld door griffie."
-      }
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "PR-CIV-2026-004"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "PR-CIV-2026-005",
+      "name": "Bijlagen bij dagvaarding — pdf",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet Rv",
+          "section": "PR-CIV-2026-005",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_procesreglement",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "PR-CIV-2026-005"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "PR-CIV-2026-006",
+      "name": "Conclusie van eis — digitaal",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet Rv",
+          "section": "PR-CIV-2026-006",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_procesreglement",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "PR-CIV-2026-006"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "PR-CIV-2026-007",
+      "name": "Akte — digitaal",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet Rv",
+          "section": "PR-CIV-2026-007",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_procesreglement",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "PR-CIV-2026-007"
+          },
+          "expectedAmount": 0
+        }
+      ]
     },
     {
       "ruleId": "PR-CIV-2026-008",
       "name": "Papieren indiening — uitzondering",
-      "priority": 30,
-      "legalStatus": "regeling",
+      "priority": 200,
+      "legalStatus": "wettelijk",
       "sourceRefs": [
         {
-          "type": "procesreglement",
-          "title": "Landelijk procesreglement",
-          "section": "Papieren indiening"
+          "type": "wetsartikel",
+          "title": "Wet Rv",
+          "section": "PR-CIV-2026-008",
+          "url": "https://wetten.overheid.nl/"
         }
       ],
       "conditions": {},
@@ -115,11 +252,402 @@
           "amount": null,
           "currency": "EUR"
         },
-        "category": "papieren_uitzondering",
+        "category": "uc_procesreglement",
         "confidence": "deterministic",
-        "manualReviewRequired": true,
-        "manualReviewReason": "Papieren indiening — controleer ontheffing."
-      }
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "PR-CIV-2026-008"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "PR-CIV-2026-009",
+      "name": "Griffiersakte — digitaal",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet Rv",
+          "section": "PR-CIV-2026-009",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_procesreglement",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "PR-CIV-2026-009"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "PR-CIV-2026-010",
+      "name": "Hybride indiening — handmatige controle",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet Rv",
+          "section": "PR-CIV-2026-010",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_procesreglement",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "PR-CIV-2026-010"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "PR-CIV-2026-011",
+      "name": "Kanton — verzoekschrift digitaal",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet Rv",
+          "section": "PR-CIV-2026-011",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_procesreglement",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "PR-CIV-2026-011"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "PR-CIV-2026-012",
+      "name": "Handel — verweerschrift digitaal",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet Rv",
+          "section": "PR-CIV-2026-012",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_procesreglement",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "PR-CIV-2026-012"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "PR-CIV-2026-013",
+      "name": "Kanton — verweerschrift digitaal",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet Rv",
+          "section": "PR-CIV-2026-013",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_procesreglement",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "PR-CIV-2026-013"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "PR-CIV-2026-014",
+      "name": "Hoger beroep — digitaal indienen",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet Rv",
+          "section": "PR-CIV-2026-014",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_procesreglement",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "PR-CIV-2026-014"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "PR-CIV-2026-015",
+      "name": "Kort geding — digitaal indienen",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet Rv",
+          "section": "PR-CIV-2026-015",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_procesreglement",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "PR-CIV-2026-015"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "PR-CIV-2026-016",
+      "name": "Verslag van het onderzoek — pdf",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet Rv",
+          "section": "PR-CIV-2026-016",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_procesreglement",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "PR-CIV-2026-016"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "PR-CIV-2026-017",
+      "name": "Getuigenverklaring — digitaal",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet Rv",
+          "section": "PR-CIV-2026-017",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_procesreglement",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "PR-CIV-2026-017"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "PR-CIV-2026-018",
+      "name": "Expert rapport — pdf",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet Rv",
+          "section": "PR-CIV-2026-018",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_procesreglement",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "PR-CIV-2026-018"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "PR-CIV-2026-019",
+      "name": "Bevelschrift — digitaal",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet Rv",
+          "section": "PR-CIV-2026-019",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_procesreglement",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "PR-CIV-2026-019"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "PR-CIV-2026-020",
+      "name": "Proces-verbaal — digitaal",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet Rv",
+          "section": "PR-CIV-2026-020",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_procesreglement",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "PR-CIV-2026-020"
+          },
+          "expectedAmount": 0
+        }
+      ]
     }
   ],
   "scenarios": [

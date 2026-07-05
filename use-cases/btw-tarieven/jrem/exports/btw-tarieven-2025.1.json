@@ -1,0 +1,532 @@
+{
+  "schemaVersion": "1.0.0",
+  "ruleSetId": "btw-tarieven",
+  "version": "2025.1",
+  "validFrom": "2025-01-01",
+  "validUntil": "2026-12-31",
+  "jurisdiction": "NL",
+  "domain": "btw-tarieven",
+  "procedureType": "dagvaarding",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "BTW-001",
+      "name": "Hoog tarief 21%",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet op de omzetbelasting 1968",
+          "section": "BTW-001",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_btw-tarieven_tarief",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "BTW-001"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BTW-002",
+      "name": "Laag tarief 9%",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet op de omzetbelasting 1968",
+          "section": "BTW-002",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_btw-tarieven_tarief",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "BTW-002"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BTW-003",
+      "name": "Nul tarief 0%",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet op de omzetbelasting 1968",
+          "section": "BTW-003",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_btw-tarieven_tarief",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "BTW-003"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BTW-004",
+      "name": "Voedingsmiddelen — 9%",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet op de omzetbelasting 1968",
+          "section": "BTW-004",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_btw-tarieven_tarief",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "BTW-004"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BTW-005",
+      "name": "Medicijnen — 9%",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet op de omzetbelasting 1968",
+          "section": "BTW-005",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_btw-tarieven_tarief",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "BTW-005"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BTW-006",
+      "name": "Boeken — 9%",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet op de omzetbelasting 1968",
+          "section": "BTW-006",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_btw-tarieven_tarief",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "BTW-006"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BTW-007",
+      "name": "Kappers — 21%",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet op de omzetbelasting 1968",
+          "section": "BTW-007",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_btw-tarieven_tarief",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "BTW-007"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BTW-008",
+      "name": "Schilderswerken — 9%",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet op de omzetbelasting 1968",
+          "section": "BTW-008",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_btw-tarieven_tarief",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "BTW-008"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BTW-009",
+      "name": "Verzekeringen — 21%",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet op de omzetbelasting 1968",
+          "section": "BTW-009",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_btw-tarieven_tarief",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "BTW-009"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "BTW-010",
+      "name": "Onderwijs — 0% (vrijgesteld)",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "Wet op de omzetbelasting 1968",
+          "section": "BTW-010",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_btw-tarieven_tarief",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "BTW-010"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "SC-BTW-001",
+      "description": "Hoog tarief 21%",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "BTW-001"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_btw-tarieven_tarief",
+        "appliedRules": [
+          "BTW-001"
+        ]
+      }
+    },
+    {
+      "id": "SC-BTW-002",
+      "description": "Laag tarief 9%",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "BTW-002"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_btw-tarieven_tarief",
+        "appliedRules": [
+          "BTW-002"
+        ]
+      }
+    },
+    {
+      "id": "SC-BTW-003",
+      "description": "Nul tarief 0%",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "BTW-003"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_btw-tarieven_tarief",
+        "appliedRules": [
+          "BTW-003"
+        ]
+      }
+    },
+    {
+      "id": "SC-BTW-004",
+      "description": "Voedingsmiddelen — 9%",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "BTW-004"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_btw-tarieven_tarief",
+        "appliedRules": [
+          "BTW-004"
+        ]
+      }
+    },
+    {
+      "id": "SC-BTW-005",
+      "description": "Medicijnen — 9%",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "BTW-005"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_btw-tarieven_tarief",
+        "appliedRules": [
+          "BTW-005"
+        ]
+      }
+    },
+    {
+      "id": "SC-BTW-006",
+      "description": "Boeken — 9%",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "BTW-006"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_btw-tarieven_tarief",
+        "appliedRules": [
+          "BTW-006"
+        ]
+      }
+    },
+    {
+      "id": "SC-BTW-007",
+      "description": "Kappers — 21%",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "BTW-007"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_btw-tarieven_tarief",
+        "appliedRules": [
+          "BTW-007"
+        ]
+      }
+    },
+    {
+      "id": "SC-BTW-008",
+      "description": "Schilderswerken — 9%",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "BTW-008"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_btw-tarieven_tarief",
+        "appliedRules": [
+          "BTW-008"
+        ]
+      }
+    },
+    {
+      "id": "SC-BTW-009",
+      "description": "Verzekeringen — 21%",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "BTW-009"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_btw-tarieven_tarief",
+        "appliedRules": [
+          "BTW-009"
+        ]
+      }
+    },
+    {
+      "id": "SC-BTW-010",
+      "description": "Onderwijs — 0% (vrijgesteld)",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "BTW-010"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_btw-tarieven_tarief",
+        "appliedRules": [
+          "BTW-010"
+        ]
+      }
+    }
+  ],
+  "transitionRules": [],
+  "metadata": {
+    "juridischeContext": {
+      "wet": "Wet op de omzetbelasting 1968",
+      "wetBwbrId": "BWBR0003158",
+      "wetVersieLaatstGecheckt": "2026-07-05",
+      "tariefVersie": "2025.1"
+    },
+    "juristAccordering": {
+      "geaccondeerdDoor": "D. Landman (approved v1.1.0)",
+      "datum": "2026-07-05",
+      "geldigTot": "2027-07-05",
+      "versie": "2025.1"
+    },
+    "bronverificatieDatum": "2026-07-05",
+    "acceptatieType": "full"
+  }
+}

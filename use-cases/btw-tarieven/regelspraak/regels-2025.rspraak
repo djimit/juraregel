@@ -1,0 +1,63 @@
+// btw-tarieven — Omzetbelasting — RegelSpraak CNL
+// Bron: Wet op de omzetbelasting 1968
+
+regel BTW-001 "Hoog tarief 21%":
+  als regelId is "BTW-001"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "tarief".
+
+regel BTW-002 "Laag tarief 9%":
+  als regelId is "BTW-002"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "tarief".
+
+regel BTW-003 "Nul tarief 0%":
+  als regelId is "BTW-003"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "tarief".
+
+regel BTW-004 "Voedingsmiddelen — 9%":
+  als regelId is "BTW-004"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "tarief".
+
+regel BTW-005 "Medicijnen — 9%":
+  als regelId is "BTW-005"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "tarief".
+
+regel BTW-006 "Boeken — 9%":
+  als regelId is "BTW-006"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "tarief".
+
+regel BTW-007 "Kappers — 21%":
+  als regelId is "BTW-007"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "tarief".
+
+regel BTW-008 "Schilderswerken — 9%":
+  als regelId is "BTW-008"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "tarief".
+
+regel BTW-009 "Verzekeringen — 21%":
+  als regelId is "BTW-009"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "tarief".
+
+regel BTW-010 "Onderwijs — 0% (vrijgesteld)":
+  als regelId is "BTW-010"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "tarief".
+

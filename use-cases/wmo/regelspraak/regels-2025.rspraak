@@ -1,0 +1,63 @@
+// Wmo — Wet maatschappelijke ondersteuning 2015 — RegelSpraak CNL
+// Bron: Wmo 2015
+
+regel WMO-001 "Wmo aanspraak — wonen zelfstandig":
+  als regelId is "WMO-001"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "aanspraak".
+
+regel WMO-002 "Wmo aanspraak — deelname maatschappij":
+  als regelId is "WMO-002"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "aanspraak".
+
+regel WMO-003 "Wmo aanspraak — huiselijke relaties onderhouden":
+  als regelId is "WMO-003"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "aanspraak".
+
+regel WMO-004 "Maatwerkvoorziening — noodzakelijk":
+  als regelId is "WMO-004"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "voorziening".
+
+regel WMO-005 "Eigen bijdrage — afhankelijk van inkomen":
+  als regelId is "WMO-005"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "bijdrage".
+
+regel WMO-006 "Zorgnood — objectief vastgesteld":
+  als regelId is "WMO-006"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "beoordeling".
+
+regel WMO-007 "Algemene voorziening voorrang boven maatwerk":
+  als regelId is "WMO-007"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "voorziening".
+
+regel WMO-008 "Cliëntparticipatie verplicht":
+  als regelId is "WMO-008"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "participatie".
+
+regel WMO-009 "Gezinshuisvervangend — jeugd":
+  als regelId is "WMO-009"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "voorziening".
+
+regel WMO-010 "Klachtrecht verplicht":
+  als regelId is "WMO-010"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "klacht".
+

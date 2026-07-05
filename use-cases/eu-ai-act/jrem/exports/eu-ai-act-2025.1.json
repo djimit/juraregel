@@ -11,15 +11,15 @@
   "rules": [
     {
       "ruleId": "AIA-001",
-      "name": "AI-systeem classificatie — verboden",
+      "name": "AI-systeem verboden praktijken",
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "EU AI Act — Verordening artificiële intelligentie",
-          "section": "Art. 5",
-          "url": "https://eur-lex.europa.eu/"
+          "title": "EU AI Act",
+          "section": "AIA-001",
+          "url": "https://wetten.overheid.nl/"
         }
       ],
       "conditions": {},
@@ -28,7 +28,7 @@
           "amount": null,
           "currency": "EUR"
         },
-        "category": "aia_classificatie",
+        "category": "uc_eu-ai-act",
         "confidence": "deterministic",
         "manualReviewRequired": false
       },
@@ -43,15 +43,15 @@
     },
     {
       "ruleId": "AIA-002",
-      "name": "AI-systeem classificatie — hoog-risico",
+      "name": "AI-systeem hoog-risico — kritieke infrastructuur",
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "EU AI Act — Verordening artificiële intelligentie",
-          "section": "Art. 6 + Bijlage I",
-          "url": "https://eur-lex.europa.eu/"
+          "title": "EU AI Act",
+          "section": "AIA-002",
+          "url": "https://wetten.overheid.nl/"
         }
       ],
       "conditions": {},
@@ -60,7 +60,7 @@
           "amount": null,
           "currency": "EUR"
         },
-        "category": "aia_classificatie",
+        "category": "uc_eu-ai-act",
         "confidence": "deterministic",
         "manualReviewRequired": false
       },
@@ -75,15 +75,15 @@
     },
     {
       "ruleId": "AIA-003",
-      "name": "AI-systeem classificatie — beperkt-risico",
+      "name": "AI-systeem hoog-risico — wetshandhaving",
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "EU AI Act — Verordening artificiële intelligentie",
-          "section": "Art. 50",
-          "url": "https://eur-lex.europa.eu/"
+          "title": "EU AI Act",
+          "section": "AIA-003",
+          "url": "https://wetten.overheid.nl/"
         }
       ],
       "conditions": {},
@@ -92,7 +92,7 @@
           "amount": null,
           "currency": "EUR"
         },
-        "category": "aia_classificatie",
+        "category": "uc_eu-ai-act",
         "confidence": "deterministic",
         "manualReviewRequired": false
       },
@@ -107,15 +107,15 @@
     },
     {
       "ruleId": "AIA-004",
-      "name": "AI-systeem classificatie — minimaal-risico",
+      "name": "AI-systeem hoog-risico — onderwijs",
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "EU AI Act — Verordening artificiële intelligentie",
-          "section": "Art. 50 lid 2",
-          "url": "https://eur-lex.europa.eu/"
+          "title": "EU AI Act",
+          "section": "AIA-004",
+          "url": "https://wetten.overheid.nl/"
         }
       ],
       "conditions": {},
@@ -124,7 +124,7 @@
           "amount": null,
           "currency": "EUR"
         },
-        "category": "aia_classificatie",
+        "category": "uc_eu-ai-act",
         "confidence": "deterministic",
         "manualReviewRequired": false
       },
@@ -139,15 +139,15 @@
     },
     {
       "ruleId": "AIA-005",
-      "name": "Risicobeheersysteem verplicht",
+      "name": "AI-systeem hoog-risico — essentiële diensten",
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "EU AI Act — Verordening artificiële intelligentie",
-          "section": "Art. 9",
-          "url": "https://eur-lex.europa.eu/"
+          "title": "EU AI Act",
+          "section": "AIA-005",
+          "url": "https://wetten.overheid.nl/"
         }
       ],
       "conditions": {},
@@ -156,7 +156,7 @@
           "amount": null,
           "currency": "EUR"
         },
-        "category": "aia_conformity",
+        "category": "uc_eu-ai-act",
         "confidence": "deterministic",
         "manualReviewRequired": false
       },
@@ -171,15 +171,15 @@
     },
     {
       "ruleId": "AIA-006",
-      "name": "Data governance verplicht",
+      "name": "AI-systeem hoog-risico — werkgelegenheid",
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "EU AI Act — Verordening artificiële intelligentie",
-          "section": "Art. 10",
-          "url": "https://eur-lex.europa.eu/"
+          "title": "EU AI Act",
+          "section": "AIA-006",
+          "url": "https://wetten.overheid.nl/"
         }
       ],
       "conditions": {},
@@ -188,7 +188,7 @@
           "amount": null,
           "currency": "EUR"
         },
-        "category": "aia_conformity",
+        "category": "uc_eu-ai-act",
         "confidence": "deterministic",
         "manualReviewRequired": false
       },
@@ -203,15 +203,15 @@
     },
     {
       "ruleId": "AIA-007",
-      "name": "Technische documentatie verplicht",
+      "name": "AI-systeem beperkt-risico — chatbots",
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "EU AI Act — Verordening artificiële intelligentie",
-          "section": "Art. 11 + Bijlage IV",
-          "url": "https://eur-lex.europa.eu/"
+          "title": "EU AI Act",
+          "section": "AIA-007",
+          "url": "https://wetten.overheid.nl/"
         }
       ],
       "conditions": {},
@@ -220,7 +220,7 @@
           "amount": null,
           "currency": "EUR"
         },
-        "category": "aia_conformity",
+        "category": "uc_eu-ai-act",
         "confidence": "deterministic",
         "manualReviewRequired": false
       },
@@ -235,15 +235,15 @@
     },
     {
       "ruleId": "AIA-008",
-      "name": "Logboek bijhouden verplicht",
+      "name": "AI-systeem beperkt-risico — deepfakes",
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "EU AI Act — Verordening artificiële intelligentie",
-          "section": "Art. 12",
-          "url": "https://eur-lex.europa.eu/"
+          "title": "EU AI Act",
+          "section": "AIA-008",
+          "url": "https://wetten.overheid.nl/"
         }
       ],
       "conditions": {},
@@ -252,7 +252,7 @@
           "amount": null,
           "currency": "EUR"
         },
-        "category": "aia_conformity",
+        "category": "uc_eu-ai-act",
         "confidence": "deterministic",
         "manualReviewRequired": false
       },
@@ -267,15 +267,15 @@
     },
     {
       "ruleId": "AIA-009",
-      "name": "Transparantie tegenover gebruikers",
+      "name": "AI-systeem minimaal-risico",
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "EU AI Act — Verordening artificiële intelligentie",
-          "section": "Art. 50 lid 1",
-          "url": "https://eur-lex.europa.eu/"
+          "title": "EU AI Act",
+          "section": "AIA-009",
+          "url": "https://wetten.overheid.nl/"
         }
       ],
       "conditions": {},
@@ -284,7 +284,7 @@
           "amount": null,
           "currency": "EUR"
         },
-        "category": "aia_transparantie",
+        "category": "uc_eu-ai-act",
         "confidence": "deterministic",
         "manualReviewRequired": false
       },
@@ -299,15 +299,15 @@
     },
     {
       "ruleId": "AIA-010",
-      "name": "Deepfake transparantie",
+      "name": "Risicobeheersysteem verplicht",
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "EU AI Act — Verordening artificiële intelligentie",
-          "section": "Art. 50 lid 4",
-          "url": "https://eur-lex.europa.eu/"
+          "title": "EU AI Act",
+          "section": "AIA-010",
+          "url": "https://wetten.overheid.nl/"
         }
       ],
       "conditions": {},
@@ -316,7 +316,7 @@
           "amount": null,
           "currency": "EUR"
         },
-        "category": "aia_transparantie",
+        "category": "uc_eu-ai-act",
         "confidence": "deterministic",
         "manualReviewRequired": false
       },
@@ -331,15 +331,15 @@
     },
     {
       "ruleId": "AIA-011",
-      "name": "Fundamentele rechten impactbeoordeling",
+      "name": "Data governance verplicht",
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "EU AI Act — Verordening artificiële intelligentie",
-          "section": "Art. 27",
-          "url": "https://eur-lex.europa.eu/"
+          "title": "EU AI Act",
+          "section": "AIA-011",
+          "url": "https://wetten.overheid.nl/"
         }
       ],
       "conditions": {},
@@ -348,7 +348,7 @@
           "amount": null,
           "currency": "EUR"
         },
-        "category": "aia_rechten",
+        "category": "uc_eu-ai-act",
         "confidence": "deterministic",
         "manualReviewRequired": false
       },
@@ -363,15 +363,15 @@
     },
     {
       "ruleId": "AIA-012",
-      "name": "Conformity assessment verplicht",
+      "name": "Technische documentatie verplicht",
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "EU AI Act — Verordening artificiële intelligentie",
-          "section": "Art. 43",
-          "url": "https://eur-lex.europa.eu/"
+          "title": "EU AI Act",
+          "section": "AIA-012",
+          "url": "https://wetten.overheid.nl/"
         }
       ],
       "conditions": {},
@@ -380,7 +380,7 @@
           "amount": null,
           "currency": "EUR"
         },
-        "category": "aia_conformity",
+        "category": "uc_eu-ai-act",
         "confidence": "deterministic",
         "manualReviewRequired": false
       },
@@ -388,6 +388,422 @@
         {
           "input": {
             "regelId": "AIA-012"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AIA-013",
+      "name": "Logboek bijhouden verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU AI Act",
+          "section": "AIA-013",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_eu-ai-act",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AIA-013"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AIA-014",
+      "name": "Transparantie tegenover gebruikers",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU AI Act",
+          "section": "AIA-014",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_eu-ai-act",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AIA-014"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AIA-015",
+      "name": "Deepfake transparantie",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU AI Act",
+          "section": "AIA-015",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_eu-ai-act",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AIA-015"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AIA-016",
+      "name": "Fundamentele rechten impactbeoordeling",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU AI Act",
+          "section": "AIA-016",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_eu-ai-act",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AIA-016"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AIA-017",
+      "name": "Conformity assessment verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU AI Act",
+          "section": "AIA-017",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_eu-ai-act",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AIA-017"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AIA-018",
+      "name": "Transparantie naar deployers",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU AI Act",
+          "section": "AIA-018",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_eu-ai-act",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AIA-018"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AIA-019",
+      "name": "Human oversight verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU AI Act",
+          "section": "AIA-019",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_eu-ai-act",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AIA-019"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AIA-020",
+      "name": "Accuracy en robustness",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU AI Act",
+          "section": "AIA-020",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_eu-ai-act",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AIA-020"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AIA-021",
+      "name": "Cybersecurity van AI-systemen",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU AI Act",
+          "section": "AIA-021",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_eu-ai-act",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AIA-021"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AIA-022",
+      "name": "Deployer obligations",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU AI Act",
+          "section": "AIA-022",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_eu-ai-act",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AIA-022"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AIA-023",
+      "name": "Foundation model transparantie",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU AI Act",
+          "section": "AIA-023",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_eu-ai-act",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AIA-023"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AIA-024",
+      "name": "GPK compliant — generatieve AI",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU AI Act",
+          "section": "AIA-024",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_eu-ai-act",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AIA-024"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "AIA-025",
+      "name": "Registratie in EU database",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "wetsartikel",
+          "title": "EU AI Act",
+          "section": "AIA-025",
+          "url": "https://wetten.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_eu-ai-act",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "AIA-025"
           },
           "expectedAmount": 0
         }
