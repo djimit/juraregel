@@ -1,9 +1,9 @@
 {
   "schemaVersion": "1.1.0",
   "ruleSetId": "bio2-maatregelen",
-  "version": "2025.1",
-  "validFrom": "2025-01-01",
-  "validUntil": "2026-12-31",
+  "version": "2026.1",
+  "validFrom": "2026-03-05",
+  "validUntil": "2027-12-31",
   "jurisdiction": "NL",
   "domain": "bio2-informatiebeveiliging",
   "procedureType": "dagvaarding",
@@ -17,9 +17,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.01.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -55,9 +56,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.01.02",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -93,9 +95,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.02.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -131,9 +134,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.02.02",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -169,9 +173,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.03.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -207,9 +212,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.04.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -245,9 +251,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.05.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -283,9 +290,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.06.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -321,9 +329,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.07.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -359,9 +368,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.08.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -397,9 +407,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.09.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -435,9 +446,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.10.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -473,9 +485,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.10.02",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -511,9 +524,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.10.03",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -549,9 +563,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.11.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -587,9 +602,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.12.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -625,9 +641,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.13.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -663,9 +680,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.14.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -701,9 +719,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.14.02",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -739,9 +758,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.14.03",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -777,9 +797,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.14.04",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -815,9 +836,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.14.05",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -853,9 +875,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.15.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -891,9 +914,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.16.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -929,9 +953,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.16.02",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -967,9 +992,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.17.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -1005,9 +1031,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.17.02",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -1043,9 +1070,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.17.03",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -1081,9 +1109,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.18.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -1119,9 +1148,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.18.02",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -1157,9 +1187,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.19.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -1195,9 +1226,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.20.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -1233,9 +1265,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.20.02",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -1271,9 +1304,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.20.03",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -1309,9 +1343,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.20.04",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -1347,9 +1382,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.20.05",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -1385,9 +1421,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.20.06",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -1423,9 +1460,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.21.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -1461,9 +1499,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.21.02",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -1499,9 +1538,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.21.03",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -1537,9 +1577,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.21.04",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -1575,9 +1616,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.21.05",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -1613,9 +1655,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.22.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -1651,9 +1694,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.22.02",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -1689,9 +1733,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.23.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -1727,9 +1772,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.24.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -1765,9 +1811,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.24.02",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -1803,9 +1850,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.24.03",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -1841,9 +1889,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.24.04",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -1879,9 +1928,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.24.05",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -1917,9 +1967,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.24.07",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -1955,9 +2006,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.24.08",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -1993,9 +2045,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.26.02",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -2031,9 +2084,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.27.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -2069,9 +2123,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.27.02",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -2107,9 +2162,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.28.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -2145,9 +2201,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.29.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -2183,9 +2240,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.30.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -2221,9 +2279,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.30.02",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -2259,9 +2318,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.31.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -2297,9 +2357,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.32.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -2335,9 +2396,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.33.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -2373,9 +2435,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.34.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -2411,9 +2474,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.35.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -2449,9 +2513,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.35.02",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -2487,9 +2552,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.36.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -2525,9 +2591,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 5.37.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -2563,9 +2630,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 6.01.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -2601,9 +2669,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 6.02.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -2639,9 +2708,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 6.03.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -2677,9 +2747,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 6.03.02",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -2715,9 +2786,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 6.03.03",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -2753,9 +2825,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 6.03.04",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -2791,9 +2864,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 6.03.05",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -2829,9 +2903,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 6.04.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -2867,9 +2942,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 6.05.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -2905,9 +2981,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 6.06.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -2943,9 +3020,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 6.07.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -2981,9 +3059,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 6.08.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -3019,9 +3098,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 7.01.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -3057,9 +3137,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 7.01.02",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -3095,9 +3176,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 7.02.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -3133,9 +3215,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 7.03.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -3171,9 +3254,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 7.04.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -3209,9 +3293,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 7.05.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -3247,9 +3332,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 7.06.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -3285,9 +3371,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 7.07.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -3323,9 +3410,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 7.08.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -3361,9 +3449,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 7.09.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -3399,9 +3488,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 7.10.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -3437,9 +3527,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 7.10.02",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -3475,9 +3566,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 7.10.03",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -3513,9 +3605,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 7.11.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -3551,9 +3644,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 7.12.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -3589,9 +3683,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 7.13.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -3627,9 +3722,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 7.14.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -3665,9 +3761,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.01.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -3703,9 +3800,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.01.02",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -3741,9 +3839,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.02.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -3779,9 +3878,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.03.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -3817,9 +3917,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.03.02",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -3855,9 +3956,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.04.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -3893,9 +3995,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.05.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -3931,9 +4034,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.06.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -3969,9 +4073,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.07.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -4007,9 +4112,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.07.02",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -4045,9 +4151,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.07.03",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -4083,9 +4190,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.07.04",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -4121,9 +4229,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.08.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -4159,9 +4268,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.08.02",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -4197,9 +4307,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.08.03",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -4235,9 +4346,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.08.04",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -4273,9 +4385,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.08.05",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -4311,9 +4424,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.08.06",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -4349,9 +4463,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.09.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -4387,9 +4502,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.10.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -4425,9 +4541,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.11.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -4463,9 +4580,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.12.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -4501,9 +4619,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.13.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -4539,9 +4658,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.13.02",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -4577,9 +4697,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.13.03",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -4615,9 +4736,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.13.04",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -4653,9 +4775,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.14.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -4691,9 +4814,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.15.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -4729,9 +4853,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.15.02",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -4767,9 +4892,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.15.03",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -4805,9 +4931,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.15.04",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -4843,9 +4970,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.15.05",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -4881,9 +5009,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.15.06",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -4919,9 +5048,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.16.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -4957,9 +5087,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.16.02",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -4995,9 +5126,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.16.03",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -5033,9 +5165,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.16.04",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -5071,9 +5204,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.17.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -5109,9 +5243,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.18.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -5147,9 +5282,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.18.02",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -5185,9 +5321,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.19.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -5223,9 +5360,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.20.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -5261,9 +5399,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.20.02",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -5299,9 +5438,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.21.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -5337,9 +5477,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.21.02",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -5375,9 +5516,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.21.03",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -5413,9 +5555,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.21.04",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -5451,9 +5594,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.22.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -5489,9 +5633,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.23.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -5527,9 +5672,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.24.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -5565,9 +5711,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.24.02",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -5603,9 +5750,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.24.03",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -5641,9 +5789,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.24.04",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -5679,9 +5828,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.24.05",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -5717,9 +5867,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.25.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -5755,9 +5906,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.26.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -5793,9 +5945,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.27.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -5831,9 +5984,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.28.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -5869,9 +6023,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.29.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -5907,9 +6062,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.30.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -5945,9 +6101,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.31.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -5983,9 +6140,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.31.02",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -6021,9 +6179,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.32.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -6059,9 +6218,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.32.02",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -6097,9 +6257,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.33.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -6135,9 +6296,10 @@
       "sourceRefs": [
         {
           "type": "wetsartikel",
-          "title": "BIO2 — Baseline Informatiebeveiliging Overheid",
+          "title": "BIO2 v1.3 — Baseline Informatiebeveiliging Overheid",
           "section": "Maatregel 8.34.01",
-          "url": "https://www.bio-overheid.nl/category/producten/bio"
+          "url": "https://www.bio-overheid.nl/category/producten/bio",
+          "bronVersie": "2026-03-05"
         },
         {
           "type": "wetsartikel",
@@ -6537,13 +6699,19 @@
       "tariefVersie": "1.2"
     },
     "bronverificatieDatum": "2026-07-04",
-    "acceptatieType": "full",
-    "juristAccordering": {
-      "geaccondeerdDoor": "D. Landman (agent-executed human gate — CIP review pending)",
-      "datum": "2026-07-04",
-      "geldigTot": "2027-07-04",
-      "versie": "2025.1"
-    }
+    "acceptatieType": "full"
   },
-  "governanceLevel": "rijk"
+  "governanceLevel": "rijk",
+  "approval": {
+    "type": "self",
+    "reviewer": "D. Landman (agent-executed human gate — CIP review pending)",
+    "role": "maker",
+    "date": "2026-07-04",
+    "scope": "volledige regelset",
+    "limitations": [
+      "Geen onafhankelijke juridische review",
+      "Zelf-geaccordeerd als PoC",
+      "Niet geschikt voor productie zonder externe validatie"
+    ]
+  }
 }

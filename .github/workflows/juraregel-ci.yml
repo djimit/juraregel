@@ -32,7 +32,7 @@ jobs:
       - name: Validate JREM exports
         run: |
           for f in use-cases/*/jrem/exports/*.json; do
-            python3 shared/validate.py --schema shared/jrem-schema.json --instance "$f" 
+            python3 shared/validate.py --schema shared/jrem-schema-v1.1.0.json --instance "$f" 
           done
       - name: Check TypeScript SDK
         run: |

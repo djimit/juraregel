@@ -55,4 +55,4 @@ print(f'Total: {total}, Pseud: {pse}, Niet: {nie}')
 
 ## Conclusie
 
-De V4.2 engine bereikt 100% definitieve classificatie op de volledige dataset. Alle 48.702 detecties worden automatisch geclassificeerd als "pseudonimiseer" of "niet pseudonimiseer" — 0 handmatige controle. De engine implementeert de pseudonimiseringsrichtlijn-uitzonderingen (professionals, rechtspersonen, overheid) conform [Rechtspraak.nl](https://www.rechtspraak.nl/uitspraken/pseudonimiseringsrichtlijn).
+De V4.2 engine bereikt automatische classificatie op de volledige dataset. Let op: dit is geen onafhankelijke juridische validatie. Alle 48.702 detecties worden automatisch geclassificeerd als "pseudonimiseer" of "niet pseudonimiseer" — 0 handmatige controle. De engine implementeert de pseudonimiseringsrichtlijn-uitzonderingen (professionals, rechtspersonen, overheid) conform [Rechtspraak.nl](https://www.rechtspraak.nl/uitspraken/pseudonimiseringsrichtlijn).

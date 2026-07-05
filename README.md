@@ -289,7 +289,7 @@ Zie [docs/nora-compliance-matrix.md](docs/nora-compliance-matrix.md) voor de Mer
 | Security Expert | BIO2 (162), NCSC (32), threat model template | [BIO2](docs/bio2-use-case.md), [NCSC](docs/ncsc-use-case.md), [threat model](docs/templates/threat-model-template.md) |
 | DevOps Engineer | Docker compose, Helm chart, GitHub Actions | [Docker](#docker), [Helm](helm/), [CI](.github/workflows/) |
 | SRE | Health endpoints, Grafana dashboard, runbook | [Grafana](docs/sre/grafana-dashboard.json), [runbook](docs/sre/runbook-template.md) |
-| Tester | 224 tests als voorbeeld, test templates | [CONTRIBUTING](CONTRIBUTING.md), [user story template](docs/templates/user-story-template.md) |
+| Tester | 451+ tests (unit + BDD + MCP), test templates | [CONTRIBUTING](CONTRIBUTING.md), [user story template](docs/templates/user-story-template.md) |
 | Product Owner | Compliance rapporten, ROI template, comparison | [Comparison table](#waarom-juraregel), [user story template](docs/templates/user-story-template.md) |
 | Enterprise Architect | NORA compliance matrix, TOGAF mapping, C4 | [NORA matrix](docs/nora-compliance-matrix.md), [ADR template](docs/templates/adr-template.md) |
 | Compliance Officer | Multi-framework compliance, ENSIA rapport | [Executive dashboard](dashboard/executive.html), [Postman](docs/juraregel-postman-collection.json) |
@@ -389,11 +389,11 @@ graph TB
 
 | Use case | Regels | Status | Poort |
 |---|---|---|---|
-| Griffierecht | 36 | **Production** | 8490 |
-| BIO2 | 162 | **Production** | 8494 |
-| Forum Standaardisatie | 22 | **Production** | 8495 |
-| Overheidsstandaarden | 24 | **Production** | 8496 |
-| NORA | 15 | **Production** | 8497 |
+| Griffierecht | 36 | **PoC** | 8490 |
+| BIO2 | 162 | **PoC** | 8494 |
+| Forum Standaardisatie | 22 | **PoC** | 8495 |
+| Overheidsstandaarden | 24 | **PoC** | 8496 |
+| NORA | 15 | **PoC** | 8497 |
 | EU AI Act | 12 | PoC | 8498 |
 | EU AI Act | 12 | PoC | 8498 |
 | AVG/GDPR | 10 | PoC | 8499 |

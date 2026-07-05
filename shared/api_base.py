@@ -353,7 +353,7 @@ def create_app(domain: str, jrem_dir: Path, port: int, endpoint_prefix: str = No
         description=f"Auditbare juridische rule service voor {domain}",
         version="1.0.0",
     )
-    app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
+    app.add_middleware(CORSMiddleware, allow_origins=os.environ.get("JURAREGEL_CORS_ORIGINS", "http://localhost:3000").split(","), allow_methods=["*"], allow_headers=["*"])
 
     @app.get("/v1/health")
     def health():
@@ -378,7 +378,7 @@ def create_app(domain: str, jrem_dir: Path, port: int, endpoint_prefix: str = No
         raise HTTPException(status_code=404, detail=f"Rule {rule_id} not found")
 
     @app.post(f"{prefix}/calculate")
-    def calculate(request: CalculateRequest):
+    def calculate(request: CalculateRequest, token: str = Depends(verify_token)):
         # Out-of-scope check
         if request.zaak.rechtsgebied != "civiel":
             return {

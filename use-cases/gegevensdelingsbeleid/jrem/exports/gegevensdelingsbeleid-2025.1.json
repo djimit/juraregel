@@ -910,14 +910,20 @@
       "wetVersieLaatstGecheckt": "2026-07-05",
       "tariefVersie": "1.1.2"
     },
-    "juristAccordering": {
-      "geaccondeerdDoor": "D. Landman (approved v1.1.0)",
-      "datum": "2026-07-05",
-      "geldigTot": "2027-07-05",
-      "versie": "2025.1"
-    },
     "bronverificatieDatum": "2026-07-05",
     "acceptatieType": "full"
   },
-  "governanceLevel": "rijk"
+  "governanceLevel": "rijk",
+  "approval": {
+    "type": "self",
+    "reviewer": "D. Landman (approved v1.1.0)",
+    "role": "maker",
+    "date": "2026-07-05",
+    "scope": "volledige regelset",
+    "limitations": [
+      "Geen onafhankelijke juridische review",
+      "Zelf-geaccordeerd als PoC",
+      "Niet geschikt voor productie zonder externe validatie"
+    ]
+  }
 }

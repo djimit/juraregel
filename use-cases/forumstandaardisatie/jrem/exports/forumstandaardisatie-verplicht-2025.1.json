@@ -1062,14 +1062,20 @@
       "wetVersieLaatstGecheckt": "2026-07-04",
       "tariefVersie": "2025.1"
     },
-    "juristAccordering": {
-      "geaccondeerdDoor": "D. Landman (agent-executed human gate)",
-      "datum": "2026-07-04",
-      "geldigTot": "2027-07-04",
-      "versie": "2025.1"
-    },
     "bronverificatieDatum": "2026-07-04",
     "acceptatieType": "full"
   },
-  "governanceLevel": "rijk"
+  "governanceLevel": "rijk",
+  "approval": {
+    "type": "self",
+    "reviewer": "D. Landman (agent-executed human gate)",
+    "role": "maker",
+    "date": "2026-07-04",
+    "scope": "volledige regelset",
+    "limitations": [
+      "Geen onafhankelijke juridische review",
+      "Zelf-geaccordeerd als PoC",
+      "Niet geschikt voor productie zonder externe validatie"
+    ]
+  }
 }
