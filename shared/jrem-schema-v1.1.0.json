@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://juraregel.nl/schemas/jrem/v1.0.0",
+  "$id": "https://juraregel.nl/schemas/jrem/v1.1.0",
   "title": "JREM v1.1.0",
   "description": "Judicial Rule Exchange Model v1.0.0 — basis schema voor juridische regels",
   "type": "object",
