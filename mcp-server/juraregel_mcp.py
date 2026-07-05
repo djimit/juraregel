@@ -322,6 +322,158 @@ def version_diff(domain: str, v1: str, v2: str) -> dict:
     
     return results
 
+
+def semantic_search(query: str, domain: str = None, limit: int = 10) -> list:
+    """Semantic search via Qdrant vector store. Falls back to keyword store if Qdrant unavailable."""
+    repo_root = Path(__file__).parent.parent
+    try:
+        from tools.jkb_vectorstore import init_qdrant, search as vec_search
+        client = init_qdrant(str(repo_root / ".qdrant"))
+        return vec_search(client, query, domain=domain, limit=limit)
+    except Exception:
+        # Fallback: keyword search via SQLite FTS5
+        import sqlite3
+        db_path = repo_root / ".keyword.db"
+        if not db_path.exists():
+            return {"error": "No search index available. Run: python3 tools/jkb-keyword.py index"}
+        conn = sqlite3.connect(str(db_path))
+        terms = query.replace('"', '').strip().split()
+        fts_query = " ".join('"' + t + '"' for t in terms if t)
+        if domain:
+            sql = "SELECT rule_id, domain, name, nl_text FROM rules WHERE rules MATCH ? AND domain = ? ORDER BY rank LIMIT ?"
+            rows = conn.execute(sql, (fts_query, domain, limit)).fetchall()
+        else:
+            sql = "SELECT rule_id, domain, name, nl_text FROM rules WHERE rules MATCH ? ORDER BY rank LIMIT ?"
+            rows = conn.execute(sql, (fts_query, limit)).fetchall()
+        conn.close()
+        return [{"rule_id": r[0], "domain": r[1], "name": r[2], "nl_text": r[3][:200], "score": None} for r in rows]
+
+def build_reasoning(matched_result: dict) -> list[str]:
+    """Build reasoning steps from a matched rule result."""
+    steps = []
+    rule = matched_result.get("result", {}).get("matchedRule", {})
+    explanation = matched_result.get("explanation", {})
+    conditions = explanation.get("conditions", {})
+    
+    steps.append(f"Regel {rule.get('ruleId', '?')} '{rule.get('name', '?')}' geevalueerd")
+    
+    for key, val in conditions.items():
+        if key == "periode":
+            continue
+        if isinstance(val, dict):
+            parts = []
+            for op, v in val.items():
+                if op == "periode":
+                    continue
+                op_map = {"gt": ">", "gte": ">=", "lt": "<", "lte": "<="}
+                parts.append(f"{op_map.get(op, op)} {v}")
+            steps.append(f"Voorwaarde {key}: {' en '.join(parts)}")
+        else:
+            steps.append(f"Voorwaarde {key}: {val}")
+    
+    outcome = matched_result.get("result", {}).get("outcome", {})
+    outcome_parts = [f"{k}: {v}" for k, v in outcome.items() if k not in ("confidence", "manualReviewRequired")]
+    if outcome_parts:
+        steps.append(f"Uitkomst: {'; '.join(outcome_parts)}")
+    
+    if matched_result.get("result", {}).get("matchedRule", {}).get("ruleId") is None:
+        steps.append("Geen regel matchte met de gegeven input")
+    
+    return steps
+
+def explain(domain: str, input_data: dict) -> dict:
+    """Explain a calculation in natural language with reasoning steps."""
+    result = match_rule(domain, input_data)
+    return {
+        "summary": result.get("explanation", {}).get("summary", ""),
+        "reasoning_steps": build_reasoning(result),
+        "source_refs": result.get("explanation", {}).get("sourceRefs", []),
+        "conditions_checked": result.get("explanation", {}).get("conditions", {}),
+        "outcome": result.get("result", {}).get("outcome", {}),
+        "matched_rule": result.get("result", {}).get("matchedRule"),
+    }
+
+def check_compliance(domain: str, framework: str = None) -> dict:
+    """Check compliance of a domain against a framework (BIO2, NIS2, AVG)."""
+    jrem = load_jrem(domain)
+    rules = jrem.get("rules", [])
+    
+    total = len(rules)
+    compliant = 0
+    manual_review = 0
+    gaps = []
+    
+    for rule in rules:
+        outcome = rule.get("outcome", {})
+        if outcome.get("compliant") == True or outcome.get("vergunningplichtig") == False:
+            compliant += 1
+        elif outcome.get("manualReviewRequired"):
+            manual_review += 1
+            gaps.append({
+                "rule_id": rule["ruleId"],
+                "name": rule["name"],
+                "status": "manual_review_required",
+                "source_refs": rule.get("sourceRefs", [])
+            })
+        else:
+            gaps.append({
+                "rule_id": rule["ruleId"],
+                "name": rule["name"],
+                "status": "unknown",
+                "source_refs": rule.get("sourceRefs", [])
+            })
+    
+    return {
+        "domain": domain,
+        "framework": framework or domain,
+        "total_rules": total,
+        "compliant": compliant,
+        "manual_review": manual_review,
+        "compliance_percentage": round(compliant / total * 100, 1) if total > 0 else 0,
+        "gaps": gaps[:10],
+        "gap_count": len(gaps),
+        "version": jrem.get("version"),
+    }
+
+def get_playbook(playbook_id: str) -> dict:
+    """Get an agent playbook by ID."""
+    playbooks_dir = Path(__file__).parent.parent / "docs" / "agent-playbooks"
+    playbook_file = playbooks_dir / f"{playbook_id}.md"
+    
+    if playbook_file.exists():
+        return {"playbook_id": playbook_id, "content": playbook_file.read_text(), "source": str(playbook_file)}
+    
+    # List available playbooks
+    available = []
+    if playbooks_dir.exists():
+        available = [f.stem for f in playbooks_dir.glob("*.md") if f.name != "_template.md"]
+    
+    return {"error": f"Playbook '{playbook_id}' not found", "available": available}
+
+def get_governance(domain: str, rule_id: str = None) -> dict:
+    """Get governance info for a domain or specific rule."""
+    governance_dir = Path(__file__).parent.parent / "governance"
+    registry_file = governance_dir / "governance-registry.jsonld"
+    
+    if registry_file.exists():
+        registry = json.loads(registry_file.read_text())
+        if rule_id:
+            for entry in registry.get("@graph", []):
+                if entry.get("@id") == f"rule:{rule_id}":
+                    return entry
+            return {"error": f"Rule {rule_id} not in governance registry"}
+        return registry
+    
+    # Fallback: derive from JREM
+    jrem = load_jrem(domain)
+    return {
+        "domain": domain,
+        "version": jrem.get("version"),
+        "governance_level": "rijk",
+        "note": "Governance registry not yet built — using JREM defaults",
+        "rules_count": len(jrem.get("rules", [])),
+    }
+
 # ─── MCP Protocol (stdio) ─────────────────────────────────────
 # Simple MCP-over-stdio implementation for agent integration
 
@@ -424,7 +576,67 @@ def handle_request(msg: dict) -> dict:
                             },
                             "required": ["domain", "v1", "v2"]
                         }
-                    }
+                    },
+                    {
+                        "name": "juraregel.semantic_search",
+                        "description": "Semantisch zoeken in alle JuraRegel regels. Gebruikt vector embeddings (Qdrant) of keyword search (SQLite FTS5) als fallback.",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {
+                                "query": {"type": "string", "description": "Zoekopdracht in natuurlijke taal"},
+                                "domain": {"type": "string", "description": "Optioneel: beperk tot domein"},
+                                "limit": {"type": "integer", "description": "Max resultaten (default 10)"}
+                            },
+                            "required": ["query"]
+                        }
+                    },
+                    {
+                        "name": "juraregel.explain",
+                        "description": "Verklaar een berekening in natuurlijke taal met redeneerstappen, bronverwijzingen en voorwaarden.",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {
+                                "domain": {"type": "string", "description": "Domein naam"},
+                                "input": {"type": "object", "description": "Input data voor de berekening"}
+                            },
+                            "required": ["domain", "input"]
+                        }
+                    },
+                    {
+                        "name": "juraregel.check_compliance",
+                        "description": "Compliance check voor een domein tegen een framework (BIO2, NIS2, AVG). Geeft percentage en gaps.",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {
+                                "domain": {"type": "string", "description": "Domein naam"},
+                                "framework": {"type": "string", "description": "Framework (bio2, nis2, avg-gdpr). Optioneel."}
+                            },
+                            "required": ["domain"]
+                        }
+                    },
+                    {
+                        "name": "juraregel.get_playbook",
+                        "description": "Haal een agent playbook op. Geeft stappen, tools, escalation en voorbeelden.",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {
+                                "playbook_id": {"type": "string", "description": "Playbook ID (bijv. toeslagen, bio2, nis2)"}
+                            },
+                            "required": ["playbook_id"]
+                        }
+                    },
+                    {
+                        "name": "juraregel.get_governance",
+                        "description": "Haal governance informatie op voor een domein of regel. Geeft niveau, bronnen, lokale variaties.",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {
+                                "domain": {"type": "string", "description": "Domein naam"},
+                                "rule_id": {"type": "string", "description": "Optioneel: specifieke regel ID"}
+                            },
+                            "required": ["domain"]
+                        }
+                    },
                 ]
             }
         }
@@ -448,6 +660,16 @@ def handle_request(msg: dict) -> dict:
                 result = get_audit_trail(args["domain"], args["rule_id"])
             elif tool_name == "juraregel.version_diff":
                 result = version_diff(args["domain"], args["v1"], args["v2"])
+            elif tool_name == "juraregel.semantic_search":
+                result = semantic_search(args["query"], args.get("domain"), args.get("limit", 10))
+            elif tool_name == "juraregel.explain":
+                result = explain(args["domain"], args["input"])
+            elif tool_name == "juraregel.check_compliance":
+                result = check_compliance(args["domain"], args.get("framework"))
+            elif tool_name == "juraregel.get_playbook":
+                result = get_playbook(args["playbook_id"])
+            elif tool_name == "juraregel.get_governance":
+                result = get_governance(args["domain"], args.get("rule_id"))
             else:
                 return {
                     "jsonrpc": "2.0",
