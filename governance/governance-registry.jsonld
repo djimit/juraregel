@@ -1,0 +1,436 @@
+{
+  "@context": {
+    "@vocab": "https://juraregel.nl/governance#",
+    "dcterms": "http://purl.org/dc/terms/"
+  },
+  "@graph": [
+    {
+      "@id": "juraregel:algoritmeregister",
+      "@type": "GovernanceDomain",
+      "domain": "algoritmeregister",
+      "governanceLevel": "eu",
+      "legalBasis": "EU AI Act 2024/1689 + nationale regeling",
+      "delegatedTo": [
+        "rijk"
+      ],
+      "euLevel": {
+        "applicable": true,
+        "interaction": "Algoritmeregister onderdeel AI Act transparantie",
+        "euRegulation": "EU 2024/1689 (AI Act)"
+      }
+    },
+    {
+      "@id": "juraregel:api-registratie",
+      "@type": "GovernanceDomain",
+      "domain": "api-registratie",
+      "governanceLevel": "rijk",
+      "legalBasis": "Forum Standaardisatie API-standaard",
+      "delegatedTo": [],
+      "euLevel": {
+        "applicable": true,
+        "interaction": "API-standaard bevordert interoperabiliteit",
+        "euRegulation": "EU Interoperability Framework"
+      }
+    },
+    {
+      "@id": "juraregel:avg-gdpr",
+      "@type": "GovernanceDomain",
+      "domain": "avg-gdpr",
+      "governanceLevel": "eu",
+      "legalBasis": "EU 2016/679 (AVG/GDPR)",
+      "delegatedTo": [
+        "rijk"
+      ],
+      "euLevel": {
+        "applicable": true,
+        "interaction": "Uitvoering via Uitvoeringswet AVG",
+        "euRegulation": "EU 2016/679 (AVG)"
+      }
+    },
+    {
+      "@id": "juraregel:basisregistraties",
+      "@type": "GovernanceDomain",
+      "domain": "basisregistraties",
+      "governanceLevel": "rijk",
+      "legalBasis": "Wet basisregistraties",
+      "delegatedTo": [],
+      "euLevel": {
+        "applicable": true,
+        "interaction": "BRP gegevens onder AVG",
+        "euRegulation": "EU 2016/679 (AVG)"
+      }
+    },
+    {
+      "@id": "juraregel:bio2-informatiebeveiliging",
+      "@type": "GovernanceDomain",
+      "domain": "bio2-informatiebeveiliging",
+      "governanceLevel": "rijk",
+      "legalBasis": "BIO2 Baseline Informatiebeveiliging Overheid",
+      "delegatedTo": [],
+      "euLevel": {
+        "applicable": true,
+        "interaction": "BIO2 maatregelen dekken NIS2 vereisten deels",
+        "euRegulation": "NIS2 richtlijn"
+      }
+    },
+    {
+      "@id": "juraregel:btw-tarieven",
+      "@type": "GovernanceDomain",
+      "domain": "btw-tarieven",
+      "governanceLevel": "eu",
+      "legalBasis": "EU BTW-richtlijn 2006/112/EG",
+      "delegatedTo": [
+        "rijk"
+      ],
+      "euLevel": {
+        "applicable": true,
+        "interaction": "Nationale BTW-wet implementeert EU-richtlijn",
+        "euRegulation": "EU 2006/112/EG (BTW)"
+      }
+    },
+    {
+      "@id": "juraregel:civiel-rechtbank",
+      "@type": "GovernanceDomain",
+      "domain": "civiel-rechtbank",
+      "governanceLevel": "rijk",
+      "legalBasis": "Wet op de rechterlijke organisatie",
+      "delegatedTo": [],
+      "euLevel": {
+        "applicable": true,
+        "euRegulation": "EU 2016/679 (AVG)",
+        "interaction": "Rechtszaken en gegevensbescherming"
+      }
+    },
+    {
+      "@id": "juraregel:classificatie",
+      "@type": "GovernanceDomain",
+      "domain": "classificatie",
+      "governanceLevel": "rijk",
+      "legalBasis": "Archiefwet 1995",
+      "delegatedTo": [],
+      "euLevel": {
+        "applicable": true,
+        "interaction": "Archiefgegevens vallen onder AVG beperkingen",
+        "euRegulation": "EU 2016/679 (AVG)"
+      }
+    },
+    {
+      "@id": "juraregel:compliance-debt",
+      "@type": "GovernanceDomain",
+      "domain": "compliance-debt",
+      "governanceLevel": "rijk",
+      "legalBasis": "Intern beleid",
+      "delegatedTo": [],
+      "euLevel": {
+        "applicable": false
+      }
+    },
+    {
+      "@id": "juraregel:data-overheid-dcat",
+      "@type": "GovernanceDomain",
+      "domain": "data-overheid-dcat",
+      "governanceLevel": "eu",
+      "legalBasis": "EU 2019/1024 (Open Data)",
+      "delegatedTo": [
+        "rijk"
+      ],
+      "euLevel": {
+        "applicable": true,
+        "interaction": "DCAT-AP implementatie voor Nederland",
+        "euRegulation": "EU 2019/1024"
+      }
+    },
+    {
+      "@id": "juraregel:dpia-model",
+      "@type": "GovernanceDomain",
+      "domain": "dpia-model",
+      "governanceLevel": "eu",
+      "legalBasis": "EU 2016/679 (AVG) art. 35",
+      "delegatedTo": [
+        "rijk"
+      ],
+      "euLevel": {
+        "applicable": true,
+        "interaction": "DPIA verplichting uit AVG art. 35",
+        "euRegulation": "EU 2016/679 (AVG)"
+      }
+    },
+    {
+      "@id": "juraregel:eu-ai-act",
+      "@type": "GovernanceDomain",
+      "domain": "eu-ai-act",
+      "governanceLevel": "eu",
+      "legalBasis": "EU AI Act 2024/1689",
+      "delegatedTo": [
+        "rijk",
+        "provincie",
+        "gemeente"
+      ],
+      "euLevel": {
+        "applicable": true,
+        "interaction": "Directe werking, nationale uitvoering",
+        "euRegulation": "EU 2024/1689 (AI Act)"
+      }
+    },
+    {
+      "@id": "juraregel:forumstandaardisatie",
+      "@type": "GovernanceDomain",
+      "domain": "forumstandaardisatie",
+      "governanceLevel": "rijk",
+      "legalBasis": "Kaderovereenkomst open standaarden",
+      "delegatedTo": [],
+      "euLevel": {
+        "applicable": true,
+        "interaction": "Forum standaarden implementeren EU interoperabiliteit",
+        "euRegulation": "EU Interoperability Framework"
+      }
+    },
+    {
+      "@id": "juraregel:gegevensdelingsbeleid",
+      "@type": "GovernanceDomain",
+      "domain": "gegevensdelingsbeleid",
+      "governanceLevel": "rijk",
+      "legalBasis": "Wet hergebruik overheidsinformatie",
+      "delegatedTo": [],
+      "euLevel": {
+        "applicable": true,
+        "interaction": "Implementatie Open Data richtlijn",
+        "euRegulation": "EU 2019/1024 (Open data)"
+      }
+    },
+    {
+      "@id": "juraregel:griffierecht",
+      "@type": "GovernanceDomain",
+      "domain": "griffierecht",
+      "governanceLevel": "rijk",
+      "legalBasis": "Wet griffierechten rechtspleging",
+      "delegatedTo": [],
+      "euLevel": {
+        "applicable": false
+      }
+    },
+    {
+      "@id": "juraregel:ind-verblijfsregels",
+      "@type": "GovernanceDomain",
+      "domain": "ind-verblijfsregels",
+      "governanceLevel": "rijk",
+      "legalBasis": "Vreemdelingenwet 2000",
+      "delegatedTo": [],
+      "euLevel": {
+        "applicable": true,
+        "interaction": "Verblijfsregels deels gebaseerd op EU-richtlijnen",
+        "euRegulation": "EU 2003/86/EG (Gezinshereniging)"
+      }
+    },
+    {
+      "@id": "juraregel:ncsc",
+      "@type": "GovernanceDomain",
+      "domain": "ncsc",
+      "governanceLevel": "rijk",
+      "legalBasis": "NCSC Richtlijnen",
+      "delegatedTo": [],
+      "euLevel": {
+        "applicable": true,
+        "interaction": "NCSC richtlijnen implementeren NIS2",
+        "euRegulation": "NIS2 richtlijn"
+      }
+    },
+    {
+      "@id": "juraregel:ncsc-cybersecurity",
+      "@type": "GovernanceDomain",
+      "domain": "ncsc-cybersecurity",
+      "governanceLevel": "rijk",
+      "legalBasis": "NCSC Richtlijnen",
+      "delegatedTo": [],
+      "euLevel": {
+        "applicable": true,
+        "euRegulation": "NIS2 richtlijn",
+        "interaction": "NCSC richtlijnen implementeren NIS2"
+      }
+    },
+    {
+      "@id": "juraregel:nis2",
+      "@type": "GovernanceDomain",
+      "domain": "nis2",
+      "governanceLevel": "eu",
+      "legalBasis": "EU 2022/2555 (NIS2)",
+      "delegatedTo": [
+        "rijk"
+      ],
+      "euLevel": {
+        "applicable": true,
+        "interaction": "Implementatie via Cyberbeveiligingswet",
+        "euRegulation": "EU 2022/2555 (NIS2)"
+      }
+    },
+    {
+      "@id": "juraregel:nora",
+      "@type": "GovernanceDomain",
+      "domain": "nora",
+      "governanceLevel": "rijk",
+      "legalBasis": "NORA Referentiearchitectuur Overheid",
+      "delegatedTo": [],
+      "euLevel": {
+        "applicable": true,
+        "interaction": "NORA sluit aan op EU interoperabiliteitsprincipes",
+        "euRegulation": "EU Interoperability Framework"
+      }
+    },
+    {
+      "@id": "juraregel:nora-architectuur",
+      "@type": "GovernanceDomain",
+      "domain": "nora-architectuur",
+      "governanceLevel": "rijk",
+      "legalBasis": "NORA Referentiearchitectuur",
+      "delegatedTo": [],
+      "euLevel": {
+        "applicable": true,
+        "euRegulation": "EU Interoperability Framework",
+        "interaction": "NORA sluit aan op EU principes"
+      }
+    },
+    {
+      "@id": "juraregel:omgevingswet",
+      "@type": "GovernanceDomain",
+      "domain": "omgevingswet",
+      "governanceLevel": "rijk",
+      "legalBasis": "Omgevingswet 2022",
+      "delegatedTo": [
+        "gemeente",
+        "provincie",
+        "waterschap"
+      ],
+      "euLevel": {
+        "applicable": true,
+        "interaction": "Natura 2000 gebieden vereisen aanvullende toetsing",
+        "euRegulation": "Habitatrichtlijn 92/43/EEG"
+      }
+    },
+    {
+      "@id": "juraregel:overheidsstandaarden",
+      "@type": "GovernanceDomain",
+      "domain": "overheidsstandaarden",
+      "governanceLevel": "rijk",
+      "legalBasis": "Logius standaardencatalogus",
+      "delegatedTo": [],
+      "euLevel": {
+        "applicable": true,
+        "interaction": "Standaarden beinvloeden gegevensbescherming",
+        "euRegulation": "EU 2016/679 (AVG)"
+      }
+    },
+    {
+      "@id": "juraregel:participatiewet",
+      "@type": "GovernanceDomain",
+      "domain": "participatiewet",
+      "governanceLevel": "gemeente",
+      "legalBasis": "Participatiewet 2015",
+      "delegatedTo": [
+        "gemeente"
+      ],
+      "euLevel": {
+        "applicable": true,
+        "interaction": "Bijstandsgegevens onder AVG",
+        "euRegulation": "EU 2016/679 (AVG)"
+      }
+    },
+    {
+      "@id": "juraregel:procesreglement",
+      "@type": "GovernanceDomain",
+      "domain": "procesreglement",
+      "governanceLevel": "rijk",
+      "legalBasis": "Wet op de rechterlijke organisatie",
+      "delegatedTo": [],
+      "euLevel": {
+        "applicable": false
+      }
+    },
+    {
+      "@id": "juraregel:publicatie",
+      "@type": "GovernanceDomain",
+      "domain": "publicatie",
+      "governanceLevel": "rijk",
+      "legalBasis": "Wet open overheid",
+      "delegatedTo": [],
+      "euLevel": {
+        "applicable": true,
+        "interaction": "PII in uitspraken — pseudonimisering vereist",
+        "euRegulation": "EU 2016/679 (AVG)"
+      }
+    },
+    {
+      "@id": "juraregel:rechtspraak-publicatie",
+      "@type": "GovernanceDomain",
+      "domain": "rechtspraak-publicatie",
+      "governanceLevel": "rijk",
+      "legalBasis": "Wet open overheid",
+      "delegatedTo": [],
+      "euLevel": {
+        "applicable": true,
+        "euRegulation": "EU 2016/679 (AVG)",
+        "interaction": "PII in uitspraken — pseudonimisering vereist"
+      }
+    },
+    {
+      "@id": "juraregel:regulatory-impact",
+      "@type": "GovernanceDomain",
+      "domain": "regulatory-impact",
+      "governanceLevel": "rijk",
+      "legalBasis": "Aanwijzingen regulatoire toetsing",
+      "delegatedTo": [],
+      "euLevel": {
+        "applicable": false,
+        "euRegulation": "",
+        "interaction": ""
+      }
+    },
+    {
+      "@id": "juraregel:toeslagen",
+      "@type": "GovernanceDomain",
+      "domain": "toeslagen",
+      "governanceLevel": "rijk",
+      "legalBasis": "Toeslagenwet 2001",
+      "delegatedTo": [],
+      "euLevel": {
+        "applicable": true,
+        "interaction": "Geautomatiseerde besluitvorming art. 22 — menselijke controle vereist",
+        "euRegulation": "EU 2016/679 (AVG)"
+      }
+    },
+    {
+      "@id": "juraregel:traceability",
+      "@type": "GovernanceDomain",
+      "domain": "traceability",
+      "governanceLevel": "rijk",
+      "legalBasis": "Wet kwaliteitsborging",
+      "delegatedTo": [],
+      "euLevel": {
+        "applicable": false
+      }
+    },
+    {
+      "@id": "juraregel:wmo",
+      "@type": "GovernanceDomain",
+      "domain": "wmo",
+      "governanceLevel": "gemeente",
+      "legalBasis": "Wet maatschappelijke ondersteuning 2015",
+      "delegatedTo": [
+        "gemeente"
+      ],
+      "euLevel": {
+        "applicable": false
+      }
+    },
+    {
+      "@id": "juraregel:ww-uitkering",
+      "@type": "GovernanceDomain",
+      "domain": "ww-uitkering",
+      "governanceLevel": "rijk",
+      "legalBasis": "Wet werk en bijstand",
+      "delegatedTo": [],
+      "euLevel": {
+        "applicable": false
+      }
+    }
+  ]
+}
