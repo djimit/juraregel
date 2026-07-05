@@ -15,6 +15,8 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      JURAREGEL_CI_MODE: poc
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -48,3 +50,23 @@ jobs:
           test -f CONTRIBUTING.md && test -f CODE_OF_CONDUCT.md
           test -f docker-compose.yml && test -f Dockerfile
           echo All required files present
+
+  pilot:
+    runs-on: ubuntu-latest
+    env:
+      JURAREGEL_CI_MODE: pilot
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.12
+      - name: Install deps
+        run: pip install -r requirements.txt
+      - name: Schema check
+        run: python3 ci/check-schema.py
+      - name: Strict JREM validation
+        run: python3 ci/validate-jrem.py
+      - name: Legal review gate (strict)
+        run: bash ci/legal-review-gate.sh
+      - name: BDD tests
+        run: python3 -m pytest features/ -q --no-header

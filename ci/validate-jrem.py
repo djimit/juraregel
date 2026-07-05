@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 import json, glob, sys, os
 
-CI_MODE = os.environ.get("JURAREGEL_CI_MODE", "pooc")
-STRICT = CI_MODE == "pooc"
+CI_MODE = os.environ.get("JURAREGEL_CI_MODE", "poc").lower()
+STRICT_SCHEMA = CI_MODE in ("pilot", "production")
+STRICT_LEGAL = CI_MODE in ("pilot", "production")
 
 try:
     import jsonschema
@@ -24,7 +25,7 @@ for f in sorted(glob.glob("use-cases/*/jrem/exports/*.json")):
         errors += 1
     elif data.get("schemaVersion") != "1.1.0":
         msg = "  {}: uses schemaVersion {}".format(f, data.get("schemaVersion"))
-        if STRICT:
+        if STRICT_SCHEMA:
             print("ERROR" + msg)
             errors += 1
         else:
@@ -52,12 +53,30 @@ if HAS_JSONSCHEMA:
             jsonschema.validate(data, core_schema)
         except jsonschema.ValidationError as e:
             msg = "  {}: {}".format(f, e.message[:80])
-            if STRICT:
+            if STRICT_SCHEMA:
                 print("ERROR" + msg)
                 errors += 1
             else:
                 print("WARN" + msg)
                 warnings += 1
+
+
+    # Maturity-aware gating
+    for rule in data.get("rules", []):
+        rid = rule.get("ruleId", "?")
+        maturity = data.get("maturityLevel", "L0-demo")
+        approval = data.get("approval", {})
+        approval_type = approval.get("type", "none")
+        
+        # L2+ requires independent review
+        if maturity in ("L2-pilot", "L3-production") and approval_type == "self":
+            print("  ERROR: {} rule {} maturity {} requires independent review".format(f, rid, maturity))
+            errors += 1
+        
+        # L2+ requires approval object
+        if maturity in ("L2-pilot", "L3-production") and not approval:
+            print("  ERROR: {} rule {} maturity {} requires approval object".format(f, rid, maturity))
+            errors += 1
 
 print("Validated: {} errors, {} warnings".format(errors, warnings))
 print("CI mode: {}".format(CI_MODE))

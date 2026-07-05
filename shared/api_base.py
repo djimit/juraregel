@@ -361,7 +361,10 @@ def create_app(domain: str, jrem_dir: Path, port: int, endpoint_prefix: str = No
             versions = list_versions(jrem_dir)
         except Exception as e:
             return {"status": "degraded", "error": str(e), "domain": domain}
-        return {"status": "ok", "service": f"{domain}-rule-api", "version": "1.0.0", "domain": domain, "rulesetVersions": versions}
+        maturity = os.environ.get("JURAREGEL_MATURITY", "L1-poc")
+        approval = "self-approved"
+        limitations = ["PoC, not production-ready", "Self-approved rules", "Results indicative, not legally binding"]
+        return {"status": "ok", "service": f"{domain}-rule-api", "version": "1.0.0", "domain": domain, "rulesetVersions": versions, "maturityLevel": maturity, "approvalStatus": approval, "limitations": limitations}
 
     @app.get(f"{prefix}/versions")
     def get_versions():

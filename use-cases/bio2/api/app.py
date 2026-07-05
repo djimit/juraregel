@@ -39,24 +39,53 @@ def get_maatregelen(categorie: Optional[str] = Query(None)):
         })
     return {"maatregelen": maatregelen, "totaal": len(maatregelen)}
 
+@app.post("/v1/bio2/assessments")
+def create_assessment(assessment: dict):
+    """Create a compliance assessment with evidence."""
+    import hashlib, sqlite3, os
+    from datetime import datetime, timezone
+    
+    org_id = assessment.get("organisationId", "unknown")
+    measures = assessment.get("measures", [])
+    
+    # Store in SQLite evidence store
+    db_path = os.environ.get("BIO2_EVIDENCE_DB", ".data/bio2-evidence.db")
+    os.makedirs(os.path.dirname(db_path), exist_ok=True)
+    conn = sqlite3.connect(db_path)
+    conn.execute("CREATE TABLE IF NOT EXISTS assessments (id TEXT PRIMARY KEY, org_id TEXT, data TEXT, created_at TEXT)")
+    conn.execute("CREATE TABLE IF NOT EXISTS evidence (assessment_id TEXT, measure_id TEXT, status TEXT, evidence_type TEXT, hash TEXT, collected_at TEXT)")
+    
+    assessment_id = hashlib.sha256(json.dumps(assessment, sort_keys=True).encode()).hexdigest()[:16]
+    conn.execute("INSERT INTO assessments VALUES (?, ?, ?, ?)", (assessment_id, org_id, json.dumps(assessment), datetime.now(timezone.utc).isoformat()))
+    
+    for m in measures:
+        conn.execute("INSERT INTO evidence VALUES (?, ?, ?, ?, ?, ?)",
+            (assessment_id, m.get("maatregelId"), m.get("status", "onbekend"), m.get("evidenceType", "onbekend"),
+             hashlib.sha256(json.dumps(m, sort_keys=True).encode()).hexdigest(), datetime.now(timezone.utc).isoformat()))
+    conn.commit()
+    conn.close()
+    
+    return {"assessmentId": assessment_id, "organisationId": org_id, "measuresReceived": len(measures), "status": "stored"}
+
 @app.get("/v1/bio2/rapport/{organisatie_id}")
-def get_rapport(organisatie_id: str, evidence: Optional[str] = Query(None)):
-    """Evidence-based compliance rapport. Evidence als JSON string."""
-    import hashlib
+def get_rapport(organisatie_id: str, assessmentId: str = None):
+    """Evidence-based compliance rapport. Uses stored assessment if assessmentId provided."""
+    import hashlib, sqlite3, os
     from collections import defaultdict
     from datetime import datetime, timezone
     
     jrem = load_jrem(JREM_DIR, "2026.1")
     
-    # Parse evidence input
+    # Load evidence from store if assessmentId provided
     evidence_map = {}
-    if evidence:
-        try:
-            ev_data = json.loads(evidence)
-            for item in ev_data:
-                evidence_map[item.get("maatregelId", "")] = item
-        except (json.JSONDecodeError, TypeError):
-            pass
+    if assessmentId:
+        db_path = os.environ.get("BIO2_EVIDENCE_DB", ".data/bio2-evidence.db")
+        if os.path.exists(db_path):
+            conn = sqlite3.connect(db_path)
+            rows = conn.execute("SELECT measure_id, status FROM evidence WHERE assessment_id = ?", (assessmentId,)).fetchall()
+            for row in rows:
+                evidence_map[row[0]] = {"status": row[1]}
+            conn.close()
     
     per_categorie = defaultdict(lambda: {"totaal": 0, "compliant": 0, "niet_compliant": 0, "onbekend": 0, "geen_evidence": 0})
     
@@ -64,10 +93,8 @@ def get_rapport(organisatie_id: str, evidence: Optional[str] = Query(None)):
         cat = rule["outcome"].get("category", "onbekend").replace("bio2_", "")
         rid = rule["ruleId"].replace("BIO2-", "")
         per_categorie[cat]["totaal"] += 1
-        
         ev = evidence_map.get(rid, {})
         status = ev.get("status", "geen_evidence")
-        
         if status == "compliant":
             per_categorie[cat]["compliant"] += 1
         elif status == "niet_compliant":
@@ -83,6 +110,7 @@ def get_rapport(organisatie_id: str, evidence: Optional[str] = Query(None)):
     
     return {
         "organisatieId": organisatie_id,
+        "assessmentId": assessmentId,
         "bioVersie": jrem["version"],
         "totaalMaatregelen": totaal,
         "compliant": compliant,
@@ -95,22 +123,10 @@ def get_rapport(organisatie_id: str, evidence: Optional[str] = Query(None)):
             "rulesetHash": hashlib.sha256(json.dumps(jrem, sort_keys=True).encode()).hexdigest(),
             "timestamp": datetime.now(timezone.utc).isoformat(),
             "evidenceCount": len(evidence_map),
+            "maturityLevel": "L1-poc",
+            "limitations": ["Evidence store is SQLite (PoC)", "No independent assessor validation"]
         }
     }
-
-@app.post("/v1/bio2/evidence")
-def submit_evidence(evidence: list):
-    """Submit evidence for compliance assessment."""
-    processed = []
-    for item in evidence:
-        processed.append({
-            "maatregelId": item.get("maatregelId"),
-            "status": item.get("status", "onbekend"),
-            "evidenceType": item.get("evidenceType", "onbekend"),
-            "hash": hashlib.sha256(json.dumps(item, sort_keys=True).encode()).hexdigest(),
-            "receivedAt": datetime.now(timezone.utc).isoformat(),
-        })
-    return {"received": len(processed), "evidence": processed}
 
 if __name__ == "__main__":
     import uvicorn; uvicorn.run(app, host="127.0.0.1", port=8494)
