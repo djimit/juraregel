@@ -3,7 +3,7 @@ import json, os, sys
 from pathlib import Path
 
 COLLECTION = "juraregel-rules"
-VECTOR_SIZE = 1536
+VECTOR_SIZE = None  # Auto-detect from first embedding
 STORE_PATH = ".qdrant"
 
 def get_repo_root():
@@ -32,9 +32,11 @@ def init_qdrant(path=STORE_PATH):
     try:
         client.get_collection(COLLECTION)
     except Exception:
+        # Get vector size from first embedding if not set
+        vs = VECTOR_SIZE or 768
         client.create_collection(
             collection_name=COLLECTION,
-            vectors_config=VectorParams(size=VECTOR_SIZE, distance=Distance.COSINE),
+            vectors_config=VectorParams(size=vs, distance=Distance.COSINE),
         )
     return client
 
@@ -62,8 +64,9 @@ def search(client, query, embed_fn=None, domain=None, limit=10):
     embed_fn = embed_fn or default_embed_fn
     vector = embed_fn([query])[0]
     qf = Filter(must=[FieldCondition(key="domain", match=MatchValue(value=domain))]) if domain else None
-    results = client.search(collection_name=COLLECTION, query_vector=vector, query_filter=qf, limit=limit)
-    return [{"rule_id": r.payload["rule_id"], "domain": r.payload["domain"], "name": r.payload["name"], "nl_text": r.payload["nl_text"][:200], "score": round(r.score, 4)} for r in results]
+    result = client.query_points(collection_name=COLLECTION, query=vector, query_filter=qf, limit=limit)
+    points = result.points if hasattr(result, 'points') else []
+    return [{"rule_id": r.payload["rule_id"], "domain": r.payload["domain"], "name": r.payload["name"], "nl_text": r.payload["nl_text"][:200], "score": round(r.score, 4)} for r in points]
 
 def check_coverage(expected_count):
     from qdrant_client import QdrantClient

@@ -71,7 +71,7 @@ fi
 # Gate 4: Vector store coverage (if .qdrant exists)
 echo "Gate 4/5: Vector store coverage"
 if [ -d ".qdrant" ]; then
-  COVERAGE=$(python3 tools/jkb-vectorstore.py --check-coverage 2>/dev/null)
+  COVERAGE=$(python3 tools/jkb-vectorstore.py --check-coverage 2>/dev/null) || COVERAGE='{"complete": false, "error": "qdrant not available"}'
   COMPLETE=$(echo "$COVERAGE" | python3 -c "import json,sys; print(json.load(sys.stdin)['complete'])")
   if [ "$COMPLETE" = "True" ]; then
     pass_gate "Vector store coverage complete"

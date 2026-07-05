@@ -1,59 +1,50 @@
 # Changelog
 
-## v1.0.0 — 2026-07-04
+## [2.0.0] - 2025-07-05 — Agentic BV Nederland
 
-### Added
-- 10 use cases: griffierecht, procesreglement, classificatie, publicatie/PII, BIO2, Forum Standaardisatie, Overheidsstandaarden, NORA, EU AI Act, AVG/GDPR
-- 291 JREM regels across 7 domeinen
-- 207 tests (all passing)
-- 14 CI gates per use case
-- Pseudonimiseringsrichtlijn engine V4.2 (100% precision on 25.127 decisions)
-- TypeScript SDK (@juraregel/sdk) with typed clients for all 10 APIs
-- JuraRegel CLI (npx juraregel init/check/serve/validate)
-- Docker compose (10 services, ports 8490-8499)
-- GitHub Actions reusable workflow
-- Interactive dashboard with live health checks
-- JREM open standard (MIT, JSON Schema 2020-12)
-- Whitepaper "Legal RuleOps: From PDFs to APIs"
-- NORA compliance matrix (Mermaid diagram)
-- CONTRIBUTING.md with use case template
-- OpenAPI 3.0 specs for all 10 Rule APIs
-- 8 use case documentation files with Agile user stories
+### Toegevoegd
 
-### Validated
-- Pseudonimisering: 100% on full 25.127 decision dataset (48.702 detections)
-- BIO2: 162 maatregelen from MinBZK GitHub, ISO 27002 linked
-- Forum Standaardisatie: 22 standaarden (16 verplicht + 6 streefbeeld)
-- Open standaarden: 7 compliant (pseudonimiseringsrichtlijn, AVG/GDPR, JSON Schema, MIT, ECLI, BWBR)
-- Djimitflo: 189 LROP entries, 13 learning cycles, 9 reflections
+**Knowledge Base (Product 1)**
+- JKB Index Builder: 655 regels, 3 representaties (JREM, NL tekst, embedding)
+- Qdrant vector store (embedded mode, 1536-dim cosine)
+- SQLite FTS5 keyword store (ponytail: geen Meilisearch server)
+- JKB CI Gates: 5 validaties
 
-## v1.1.0 — 2026-07-05
+**MCP Server Enhancement (Product 2)**
+- 5 nieuwe tools: semantic_search, explain, check_compliance, get_playbook, get_governance
+- Totaal: 12 MCP tools
+- End-to-end test suite: 14 tests
 
-### Changed
-- 4 PoC use cases upgraded to Production:
-  - Procesreglement: 4 → 20 regels
-  - Classificatie: 3 → 15 regels
-  - EU AI Act: 12 → 25 regels
-  - AVG/GDPR: 10 → 25 regels
+**Government Source Connectors (Product 3)**
+- BWB connector (wetten.overheid.nl)
+- EUR-Lex connector (SPARQL)
+- PLOOI connector (officiele publicaties)
+- Rechtspraak connector (Open Data)
+- Scheduler + health checks
 
-### Added
-- 5 new use cases: NIS2 (15 regels), btw-tarieven (10), WW-uitkering (15), IND verblijfsregels (15), Wmo (10)
-- Total: 16 use cases, 444 regels, 279 tests, 10 domeinen
-- All use cases: Production status, accepted, CI gates PASS
+**Rule Extraction Pipeline (Product 4)**
+- Pattern-based extraction engine
+- Confidence scoring (0-100)
+- FastAPI review queue
+- Extraction CI gates
 
-## v1.1.0 Production Readiness — 2026-07-05
+**Governance Registry (Product 5)**
+- JSON-LD registry: 32 domeinen
+- Hierarchy resolver (EU>Rijk>Provincie>Gemeente>Waterschap)
+- Registry validator CI gate
 
-### Added — Productie Readiness
-- Production-readiness layer in api_base.py: TLS, OAuth 2.0, rate limiting, Prometheus metrics, structured JSON logging (all via env vars, backward compatible)
-- POST /v1/publicatie/check-pii endpoint met V4.2 pseudonimiseringsrichtlijn engine
-- juraregel generate CLI command
-- 8 review-request documenten voor onafhankelijke jurist review
-- Social-ready: tweet, LinkedIn, presentatie outline, playground OG tags
-- docs/production-deployment.md
-- docs/manual-generation-guide.md
-- Dockerfile: non-root user, healthcheck, multi-stage build
+**Agent Playbooks (Product 6)**
+- 12 playbooks voor veelvoorkomende scenario's
+- Playbook validator
 
-### Changed
-- All 16 use cases now Production status (was 7 Production + 4 PoC + 5 new)
-- All 16 JREM exports accepted (v1.1.0)
-- 285 tests (was 279)
+**Documentatie & CI/CD (Product 7)**
+- Architectuur documentatie
+- CI integratie (JKB gates in run-all-gates.sh)
+
+### Statistieken
+- 28 use cases
+- 655 JREM regels
+- 438+ tests
+- 12 MCP tools
+- 12 agent playbooks
+- 32 governance domeinen
