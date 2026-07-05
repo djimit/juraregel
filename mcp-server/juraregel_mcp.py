@@ -483,6 +483,168 @@ def get_governance(domain: str, rule_id: str = None) -> dict:
 # ─── MCP Protocol (stdio) ─────────────────────────────────────
 # Simple MCP-over-stdio implementation for agent integration
 
+
+# ─── MCP Resources ─────────────────────────────────────────────
+
+def get_resource_list() -> list[dict]:
+    """List all available MCP resources."""
+    domains_summary = []
+    for domain, info in DOMAINS.items():
+        try:
+            jrem = load_jrem(domain)
+            domains_summary.append({
+                "domain": domain,
+                "version": jrem.get("version", "?"),
+                "ruleCount": len(jrem.get("rules", [])),
+                "validFrom": jrem.get("validFrom"),
+                "validUntil": jrem.get("validUntil"),
+            })
+        except Exception:
+            domains_summary.append({"domain": domain, "error": "JREM not found"})
+    
+    return [
+        {
+            "uri": "laws://list",
+            "name": "Alle beschikbare wetten/domeinen",
+            "description": "Lijst van alle JuraRegel domeinen met metadata (versie, regelcount, geldigheid).",
+            "mimeType": "application/json",
+        },
+        {
+            "uri": "laws://summary",
+            "name": "Knowledge Base samenvatting",
+            "description": "Samenvatting van alle 655+ regels per domein uit de JKB index.",
+            "mimeType": "application/json",
+        },
+    ] + [
+        {
+            "uri": f"laws://{d['domain']}/spec",
+            "name": f"Specificatie: {d['domain']}",
+            "description": f"Volledige JREM specificatie voor domein {d['domain']} ({d.get('ruleCount', '?')} regels, versie {d.get('version', '?')}).",
+            "mimeType": "application/json",
+        }
+        for d in domains_summary if "error" not in d
+    ]
+
+def read_resource(uri: str) -> dict | list | None:
+    """Read a specific MCP resource by URI."""
+    if uri == "laws://list":
+        return list_all_domains()
+    
+    if uri == "laws://summary":
+        kb_path = Path(__file__).parent.parent / "knowledge-base" / "jkb-summary.json"
+        if kb_path.exists():
+            return json.loads(kb_path.read_text())
+        return {"error": "Knowledge base summary not found. Run: python3 tools/jkb-builder.py"}
+    
+    if uri.startswith("laws://") and uri.endswith("/spec"):
+        domain = uri.replace("laws://", "").replace("/spec", "")
+        try:
+            return load_jrem(domain)
+        except Exception as e:
+            return {"error": str(e)}
+    
+    if uri.startswith("profile://"):
+        domain = uri.replace("profile://", "")
+        try:
+            jrem = load_jrem(domain)
+            # Extract input/output profile from rules
+            input_fields = set()
+            output_fields = set()
+            for rule in jrem.get("rules", []):
+                input_fields.update(rule.get("conditions", {}).keys())
+                outcome = rule.get("outcome", {})
+                for k, v in outcome.items():
+                    if k not in ("confidence", "manualReviewRequired"):
+                        output_fields.add(k)
+            return {
+                "domain": domain,
+                "input_profile": sorted(input_fields),
+                "output_profile": sorted(output_fields),
+                "version": jrem.get("version"),
+                "rule_count": len(jrem.get("rules", [])),
+            }
+        except Exception as e:
+            return {"error": str(e)}
+    
+    return None
+
+# ─── MCP Prompts ──────────────────────────────────────────────
+
+def get_prompt_list() -> list[dict]:
+    """List all available MCP prompts."""
+    return [
+        {
+            "name": "check_all_benefits",
+            "description": "Controleer alle mogelijke uitkeringen/toeslagen voor een persoon (zorgtoeslag, huurtoeslag, bijstand, AOW).",
+            "arguments": [
+                {"name": "leeftijd", "description": "Leeftijd van de persoon", "required": True},
+                {"name": "inkomen", "description": "Jaarinkomen in euro", "required": True},
+                {"name": "huishouden", "description": "Type huishouden (alleenstaande, samenwonend, alleenstaande_ouder)", "required": True},
+            ],
+        },
+        {
+            "name": "explain_calculation",
+            "description": "Leg een JuraRegel berekening uit in natuurlijke taal met redeneerstappen en bronverwijzingen.",
+            "arguments": [
+                {"name": "domain", "description": "Domein (bijv. toeslagen, participatiewet)", "required": True},
+                {"name": "input", "description": "Input data als JSON object", "required": True},
+            ],
+        },
+        {
+            "name": "compare_scenarios",
+            "description": "Vergelijk twee scenario's voor hetzelfde domein (bijv. alleenstaand vs samenwonend).",            "arguments": [
+                {"name": "domain", "description": "Domein", "required": True},
+                {"name": "scenario_a", "description": "Eerste scenario als JSON", "required": True},
+                {"name": "scenario_b", "description": "Tweede scenario als JSON", "required": True},
+            ],
+        },
+    ]
+
+def get_prompt(name: str, arguments: dict) -> dict | None:
+    """Get a specific prompt with filled-in arguments."""
+    if name == "check_all_benefits":
+        leeftijd = arguments.get("leeftijd")
+        inkomen = arguments.get("inkomen")
+        huishouden = arguments.get("huishouden")
+        return {
+            "messages": [
+                {
+                    "role": "user",
+                    "content": f"Controleer alle mogelijke uitkeringen voor een {huishouden} persoon van {leeftijd} jaar met een jaarinkomen van EUR {inkomen}. Gebruik juraregel.check_compliance voor BIO2 en juraregel.calculate voor toeslagen en bijstand.",
+                }
+            ],
+            "metadata": {"domains": ["toeslagen", "participatiewet"], "input": arguments},
+        }
+    
+    if name == "explain_calculation":
+        domain = arguments.get("domain", "")
+        input_data = arguments.get("input", {})
+        return {
+            "messages": [
+                {
+                    "role": "user",
+                    "content": f"Leg de {domain} berekening uit voor input {json.dumps(input_data, ensure_ascii=False)}. Gebruik juraregel.explain om de redeneerstappen, bronverwijzingen en voorwaarden te tonen.",
+                }
+            ],
+            "metadata": {"domain": domain, "input": input_data},
+        }
+    
+    if name == "compare_scenarios":
+        domain = arguments.get("domain", "")
+        a = arguments.get("scenario_a", {})
+        b = arguments.get("scenario_b", {})
+        return {
+            "messages": [
+                {
+                    "role": "user",
+                    "content": f"Vergelijk deze twee scenario's voor {domain}:\nScenario A: {json.dumps(a, ensure_ascii=False)}\nScenario B: {json.dumps(b, ensure_ascii=False)}\nGebruik juraregel.calculate voor beide en toon de verschillen.",
+                }
+            ],
+            "metadata": {"domain": domain, "scenario_a": a, "scenario_b": b},
+        }
+    
+    return None
+
 def handle_request(msg: dict) -> dict:
     """Handle an MCP tool call."""
     method = msg.get("method", "")
@@ -495,9 +657,56 @@ def handle_request(msg: dict) -> dict:
             "id": msg_id,
             "result": {
                 "protocolVersion": "2024-11-05",
-                "capabilities": {"tools": {}},
-                "serverInfo": {"name": "juraregel", "version": "1.0.0"}
+                "capabilities": {"tools": {}, "resources": {}, "prompts": {}},
+                "serverInfo": {"name": "juraregel", "version": "2.1.0"}
             }
+        }
+    
+    elif method == "resources/list":
+        return {
+            "jsonrpc": "2.0",
+            "id": msg_id,
+            "result": {"resources": get_resource_list()}
+        }
+    
+    elif method == "resources/read":
+        uri = params.get("uri", "")
+        data = read_resource(uri)
+        if data is None:
+            return {
+                "jsonrpc": "2.0",
+                "id": msg_id,
+                "error": {"code": -32602, "message": f"Unknown resource: {uri}"}
+            }
+        return {
+            "jsonrpc": "2.0",
+            "id": msg_id,
+            "result": {
+                "contents": [{"uri": uri, "mimeType": "application/json", "text": json.dumps(data, indent=2, ensure_ascii=False)}]
+            }
+        }
+    
+    elif method == "prompts/list":
+        return {
+            "jsonrpc": "2.0",
+            "id": msg_id,
+            "result": {"prompts": get_prompt_list()}
+        }
+    
+    elif method == "prompts/get":
+        name = params.get("name", "")
+        arguments = params.get("arguments", {})
+        prompt = get_prompt(name, arguments)
+        if prompt is None:
+            return {
+                "jsonrpc": "2.0",
+                "id": msg_id,
+                "error": {"code": -32602, "message": f"Unknown prompt: {name}"}
+            }
+        return {
+            "jsonrpc": "2.0",
+            "id": msg_id,
+            "result": prompt
         }
     
     elif method == "tools/list":

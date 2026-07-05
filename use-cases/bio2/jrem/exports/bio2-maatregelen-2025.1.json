@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "1.1.0",
   "ruleSetId": "bio2-maatregelen",
   "version": "2025.1",
   "validFrom": "2025-01-01",
@@ -6706,5 +6706,6 @@
       "geldigTot": "2027-07-04",
       "versie": "2025.1"
     }
-  }
+  },
+  "governanceLevel": "rijk"
 }

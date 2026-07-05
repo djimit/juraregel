@@ -20,7 +20,8 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 21"
+          "section": "art. 21",
+          "bwbId": "BWBR0015703"
         },
         {
           "type": "besluit",
@@ -52,7 +53,8 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 21"
+          "section": "art. 21",
+          "bwbId": "BWBR0015703"
         },
         {
           "type": "besluit",
@@ -84,7 +86,8 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 21"
+          "section": "art. 21",
+          "bwbId": "BWBR0015703"
         },
         {
           "type": "besluit",
@@ -116,7 +119,8 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 23"
+          "section": "art. 23",
+          "bwbId": "BWBR0015703"
         },
         {
           "type": "besluit",
@@ -144,7 +148,8 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 23"
+          "section": "art. 23",
+          "bwbId": "BWBR0015703"
         }
       ],
       "conditions": {
@@ -168,7 +173,8 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 23"
+          "section": "art. 23",
+          "bwbId": "BWBR0015703"
         },
         {
           "type": "besluit",
@@ -196,7 +202,8 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 23"
+          "section": "art. 23",
+          "bwbId": "BWBR0015703"
         }
       ],
       "conditions": {
@@ -220,7 +227,8 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 22"
+          "section": "art. 22",
+          "bwbId": "BWBR0015703"
         },
         {
           "type": "besluit",
@@ -250,7 +258,8 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 22"
+          "section": "art. 22",
+          "bwbId": "BWBR0015703"
         }
       ],
       "conditions": {
@@ -271,7 +280,8 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 31"
+          "section": "art. 31",
+          "bwbId": "BWBR0015703"
         },
         {
           "type": "besluit",
@@ -299,7 +309,8 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 31"
+          "section": "art. 31",
+          "bwbId": "BWBR0015703"
         },
         {
           "type": "besluit",
@@ -330,7 +341,8 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 31"
+          "section": "art. 31",
+          "bwbId": "BWBR0015703"
         }
       ],
       "conditions": {
@@ -353,7 +365,8 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 36"
+          "section": "art. 36",
+          "bwbId": "BWBR0015703"
         }
       ],
       "conditions": {
@@ -383,7 +396,8 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 21"
+          "section": "art. 21",
+          "bwbId": "BWBR0015703"
         }
       ],
       "conditions": {
@@ -406,7 +420,8 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 20"
+          "section": "art. 20",
+          "bwbId": "BWBR0015703"
         },
         {
           "type": "wet",
@@ -436,7 +451,8 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 18"
+          "section": "art. 18",
+          "bwbId": "BWBR0015703"
         }
       ],
       "conditions": {
@@ -458,7 +474,8 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 9"
+          "section": "art. 9",
+          "bwbId": "BWBR0015703"
         }
       ],
       "conditions": {
@@ -480,7 +497,8 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 9 lid 2"
+          "section": "art. 9 lid 2",
+          "bwbId": "BWBR0015703"
         }
       ],
       "conditions": {
@@ -502,7 +520,8 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 10"
+          "section": "art. 10",
+          "bwbId": "BWBR0015703"
         }
       ],
       "conditions": {
@@ -524,7 +543,8 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 17"
+          "section": "art. 17",
+          "bwbId": "BWBR0015703"
         }
       ],
       "conditions": {
@@ -540,5 +560,7 @@
       },
       "priority": 200
     }
-  ]
+  ],
+  "schemaVersion": "1.1.0",
+  "governanceLevel": "gemeente"
 }

@@ -386,5 +386,7 @@
       },
       "priority": 200
     }
-  ]
+  ],
+  "schemaVersion": "1.1.0",
+  "governanceLevel": "rijk"
 }

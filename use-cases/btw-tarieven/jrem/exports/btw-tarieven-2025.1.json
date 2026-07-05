@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "1.1.0",
   "ruleSetId": "btw-tarieven",
   "version": "2025.1",
   "validFrom": "2025-01-01",
@@ -528,5 +528,6 @@
     },
     "bronverificatieDatum": "2026-07-05",
     "acceptatieType": "full"
-  }
+  },
+  "governanceLevel": "rijk"
 }

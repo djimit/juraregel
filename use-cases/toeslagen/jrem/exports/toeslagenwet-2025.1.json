@@ -20,7 +20,8 @@
         {
           "type": "wet",
           "title": "Toeslagenwet",
-          "section": "art. 8"
+          "section": "art. 8",
+          "bwbId": "BWBR0005291"
         },
         {
           "type": "besluit",
@@ -57,7 +58,8 @@
         {
           "type": "wet",
           "title": "Toeslagenwet",
-          "section": "art. 8"
+          "section": "art. 8",
+          "bwbId": "BWBR0005291"
         },
         {
           "type": "besluit",
@@ -95,7 +97,8 @@
         {
           "type": "wet",
           "title": "Toeslagenwet",
-          "section": "art. 8"
+          "section": "art. 8",
+          "bwbId": "BWBR0005291"
         },
         {
           "type": "besluit",
@@ -124,7 +127,8 @@
         {
           "type": "wet",
           "title": "Toeslagenwet",
-          "section": "art. 8"
+          "section": "art. 8",
+          "bwbId": "BWBR0005291"
         },
         {
           "type": "besluit",
@@ -154,7 +158,8 @@
         {
           "type": "wet",
           "title": "Toeslagenwet",
-          "section": "art. 7a"
+          "section": "art. 7a",
+          "bwbId": "BWBR0005291"
         },
         {
           "type": "besluit",
@@ -190,7 +195,8 @@
         {
           "type": "wet",
           "title": "Toeslagenwet",
-          "section": "art. 7a"
+          "section": "art. 7a",
+          "bwbId": "BWBR0005291"
         },
         {
           "type": "besluit",
@@ -226,7 +232,8 @@
         {
           "type": "wet",
           "title": "Toeslagenwet",
-          "section": "art. 7a"
+          "section": "art. 7a",
+          "bwbId": "BWBR0005291"
         },
         {
           "type": "besluit",
@@ -256,7 +263,8 @@
         {
           "type": "wet",
           "title": "Toeslagenwet",
-          "section": "art. 7a"
+          "section": "art. 7a",
+          "bwbId": "BWBR0005291"
         },
         {
           "type": "besluit",
@@ -286,7 +294,8 @@
         {
           "type": "wet",
           "title": "Toeslagenwet",
-          "section": "art. 7a"
+          "section": "art. 7a",
+          "bwbId": "BWBR0005291"
         },
         {
           "type": "besluit",
@@ -323,7 +332,8 @@
         {
           "type": "wet",
           "title": "Toeslagenwet",
-          "section": "art. 7b"
+          "section": "art. 7b",
+          "bwbId": "BWBR0005291"
         },
         {
           "type": "besluit",
@@ -353,7 +363,8 @@
         {
           "type": "wet",
           "title": "Toeslagenwet",
-          "section": "art. 7b"
+          "section": "art. 7b",
+          "bwbId": "BWBR0005291"
         },
         {
           "type": "besluit",
@@ -384,7 +395,8 @@
         {
           "type": "wet",
           "title": "Toeslagenwet",
-          "section": "art. 7b"
+          "section": "art. 7b",
+          "bwbId": "BWBR0005291"
         },
         {
           "type": "besluit",
@@ -412,7 +424,8 @@
         {
           "type": "wet",
           "title": "Toeslagenwet",
-          "section": "art. 7c"
+          "section": "art. 7c",
+          "bwbId": "BWBR0005291"
         },
         {
           "type": "besluit",
@@ -447,7 +460,8 @@
         {
           "type": "wet",
           "title": "Toeslagenwet",
-          "section": "art. 7c"
+          "section": "art. 7c",
+          "bwbId": "BWBR0005291"
         },
         {
           "type": "besluit",
@@ -483,7 +497,8 @@
         {
           "type": "wet",
           "title": "Toeslagenwet",
-          "section": "art. 7c"
+          "section": "art. 7c",
+          "bwbId": "BWBR0005291"
         },
         {
           "type": "besluit",
@@ -512,7 +527,8 @@
         {
           "type": "wet",
           "title": "Toeslagenwet",
-          "section": "art. 7c"
+          "section": "art. 7c",
+          "bwbId": "BWBR0005291"
         },
         {
           "type": "besluit",
@@ -542,7 +558,8 @@
         {
           "type": "wet",
           "title": "Toeslagenwet",
-          "section": "art. 10"
+          "section": "art. 10",
+          "bwbId": "BWBR0005291"
         }
       ],
       "conditions": {
@@ -564,7 +581,8 @@
         {
           "type": "wet",
           "title": "Toeslagenwet",
-          "section": "art. 10"
+          "section": "art. 10",
+          "bwbId": "BWBR0005291"
         }
       ],
       "conditions": {
@@ -585,7 +603,8 @@
         {
           "type": "wet",
           "title": "Toeslagenwet",
-          "section": "art. 10"
+          "section": "art. 10",
+          "bwbId": "BWBR0005291"
         }
       ],
       "conditions": {
@@ -599,5 +618,7 @@
       },
       "priority": 200
     }
-  ]
+  ],
+  "schemaVersion": "1.1.0",
+  "governanceLevel": "rijk"
 }

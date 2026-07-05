@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "1.1.0",
   "ruleSetId": "griffierecht-civiel-dagvaarding",
   "version": "2026.1",
   "validFrom": "2026-01-01",
@@ -1203,5 +1203,6 @@
       "geldigTot": "2027-07-04",
       "versie": "2026.1"
     }
-  }
+  },
+  "governanceLevel": "rijk"
 }
