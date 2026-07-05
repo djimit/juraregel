@@ -2,8 +2,8 @@
 
 [![JuraRegel CI](https://github.com/djimit/juraregel/actions/workflows/juraregel-ci.yml/badge.svg)](https://github.com/djimit/juraregel/actions/workflows/juraregel-ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Use Cases](https://img.shields.io/badge/Use%20Cases-28%20%282%20active%29-blue)](https://github.com/djimit/juraregel)
-[![Tests](https://img.shields.io/badge/Tests-451%2B-green)](https://github.com/djimit/juraregel)
+[![Use Cases](https://img.shields.io/badge/Use%20Cases-28%20%283%20L1%2C%2026%20L0%29-blue)](https://github.com/djimit/juraregel)
+[![Tests](https://img.shields.io/badge/Tests-64%2B-green)](https://github.com/djimit/juraregel)
 [![Regels](https://img.shields.io/badge/JREM%20Regels-655%20%28PoC%29-purple)](https://github.com/djimit/juraregel)
 [![Agentic](https://img.shields.io/badge/Agentic-Platform-orange)](https://github.com/djimit/juraregel)
 [![MCP](https://img.shields.io/badge/MCP-12%20tools%20%2B%203%20resources%20%2B%203%20prompts-teal)](https://github.com/djimit/juraregel)

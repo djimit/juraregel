@@ -1,3 +1,27 @@
+## [2.1.2] - 2026-07-05 -- Maturity Model & Evidence
+
+### Added
+- Maturity model L0-L3 (demo, PoC, pilot, production)
+- maturityLevel field in alle 29 JREM exports
+- BIO2 evidence store (SQLite) + POST /v1/bio2/assessments
+- BIO2 rapport miturityLevel + limitations in audit
+- requirements.txt mit pinned dependencies
+- docs/trust-report.md
+- Health endpoint: maturityLevel + approvalStatus + limitations
+
+### Changed
+- validate-jrem.py: CI_MODE=poc|pilot|production
+- Legal review gate: warn-only PoC, fail in pilot/production
+- CI workflow: poc + pilot jobs
+- HTTPBearer auto_error=False (auth disabled by default)
+
+### Fixed
+- HTTPBearer auto_error bug
+- v1.1.0 schema: validUntil nullable
+- 64/64 tests passed (57 griffierecht + 7 BDD)
+
+---
+
 ## [2.1.1] - 2025-07-05 — Hardening
 
 ### Fixed

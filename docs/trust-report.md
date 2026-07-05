@@ -8,8 +8,8 @@
 
 | Level | Count | Description |
 |-------|-------|-------------|
-| L0-demo | 26 | Example rules, no external review |
-| L1-poc | 3 | Schema validates, tests pass, self-approved |
+| L0-demo | 26 | Regelmatige exports, geen externe review | Example rules, no external review |
+| L1-poc | 3 | Griffierecht, Publicatie, Toeslagen | Schema validates, tests pass, self-approved |
 | L2-pilot | 0 | Independent legal review required |
 | L3-production | 0 | Full assurance pipeline required |
 
@@ -30,7 +30,7 @@
 | JREM validation | ✅ Pass | 0 errors, 0 warnings |
 | BDD tests | ✅ Pass | 7/7 scenarios |
 | CLI | ✅ Pass | All commands work |
-| Legal review | ⚠️ Warn | 29 self-approved exports |
+| Legal review | ⚠️ Warn (PoC) / Fail (Pilot) | 29 self-approved, maturity-aware gating |
 
 ## Security Status
 
