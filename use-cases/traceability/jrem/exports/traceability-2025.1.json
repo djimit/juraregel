@@ -1,0 +1,511 @@
+{
+  "schemaVersion": "1.0.0",
+  "ruleSetId": "traceability",
+  "version": "2025.1",
+  "validFrom": "2025-01-01",
+  "validUntil": "2026-12-31",
+  "jurisdiction": "NL",
+  "domain": "traceability",
+  "procedureType": "dagvaarding",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "TRACE-001",
+      "name": "Wet→RegelSpraak traceerbaar",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JuraRegel",
+          "section": "TRACE-001",
+          "url": "https://github.com/djimit/juraregel"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_traceability_traceability",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "TRACE-001"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "TRACE-002",
+      "name": "RegelSpraak→JREM traceerbaar",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JuraRegel",
+          "section": "TRACE-002",
+          "url": "https://github.com/djimit/juraregel"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_traceability_traceability",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "TRACE-002"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "TRACE-003",
+      "name": "JREM→API endpoint traceerbaar",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JuraRegel",
+          "section": "TRACE-003",
+          "url": "https://github.com/djimit/juraregel"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_traceability_traceability",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "TRACE-003"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "TRACE-004",
+      "name": "API→Database constraint traceerbaar",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JuraRegel",
+          "section": "TRACE-004",
+          "url": "https://github.com/djimit/juraregel"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_traceability_traceability",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "TRACE-004"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "TRACE-005",
+      "name": "Database→Test traceerbaar",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JuraRegel",
+          "section": "TRACE-005",
+          "url": "https://github.com/djimit/juraregel"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_traceability_traceability",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "TRACE-005"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "TRACE-006",
+      "name": "Test→Audit trail traceerbaar",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JuraRegel",
+          "section": "TRACE-006",
+          "url": "https://github.com/djimit/juraregel"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_traceability_traceability",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "TRACE-006"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "TRACE-007",
+      "name": "Wet wijziging→Impact analyse",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JuraRegel",
+          "section": "TRACE-007",
+          "url": "https://github.com/djimit/juraregel"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_traceability_impact",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "TRACE-007"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "TRACE-008",
+      "name": "Impact→Affected rules identificatie",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JuraRegel",
+          "section": "TRACE-008",
+          "url": "https://github.com/djimit/juraregel"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_traceability_impact",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "TRACE-008"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "TRACE-009",
+      "name": "Impact→Affected APIs identificatie",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JuraRegel",
+          "section": "TRACE-009",
+          "url": "https://github.com/djimit/juraregel"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_traceability_impact",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "TRACE-009"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "TRACE-010",
+      "name": "Impact→Affected DB constraints identificatie",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JuraRegel",
+          "section": "TRACE-010",
+          "url": "https://github.com/djimit/juraregel"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_traceability_impact",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "TRACE-010"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "TRACE-011",
+      "name": "Evidence collection per domein",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JuraRegel",
+          "section": "TRACE-011",
+          "url": "https://github.com/djimit/juraregel"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_traceability_evidence",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "TRACE-011"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "TRACE-012",
+      "name": "Cross-domein consistency check",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JuraRegel",
+          "section": "TRACE-012",
+          "url": "https://github.com/djimit/juraregel"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_traceability_consistency",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "TRACE-012"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "TRACE-013",
+      "name": "Team topology mapping",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JuraRegel",
+          "section": "TRACE-013",
+          "url": "https://github.com/djimit/juraregel"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_traceability_topology",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "TRACE-013"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "TRACE-014",
+      "name": "Compliance debt per team trackable",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JuraRegel",
+          "section": "TRACE-014",
+          "url": "https://github.com/djimit/juraregel"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_traceability_debt",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "TRACE-014"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "TRACE-015",
+      "name": "Full chain: wet→code→database→audit",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JuraRegel",
+          "section": "TRACE-015",
+          "url": "https://github.com/djimit/juraregel"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_traceability_chain",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "TRACE-015"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    }
+  ],
+  "scenarios": [],
+  "transitionRules": [],
+  "metadata": {
+    "juridischeContext": {
+      "wet": "Traceability Matrix — Law to Code",
+      "wetBwbrId": "BWBR0000000",
+      "wetVersieLaatstGecheckt": "2026-07-05",
+      "tariefVersie": "2025.1"
+    },
+    "juristAccordering": {
+      "geaccondeerdDoor": "D. Landman (approved v1.1.0)",
+      "datum": "2026-07-05",
+      "geldigTot": "2027-07-05",
+      "versie": "2025.1"
+    },
+    "bronverificatieDatum": "2026-07-05",
+    "acceptatieType": "full"
+  }
+}

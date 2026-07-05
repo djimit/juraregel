@@ -1,0 +1,62 @@
+// Regulatory Impact Analyzer — RegelSpraak CNL
+
+regel IMPACT-001 "Wet wijziging detectie":
+  als regelId is "IMPACT-001"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "detection".
+
+regel IMPACT-002 "Affected JREM rules identificatie":
+  als regelId is "IMPACT-002"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "analysis".
+
+regel IMPACT-003 "Affected API endpoints identificatie":
+  als regelId is "IMPACT-003"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "analysis".
+
+regel IMPACT-004 "Affected tests identificatie":
+  als regelId is "IMPACT-004"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "analysis".
+
+regel IMPACT-005 "Affected DB constraints identificatie":
+  als regelId is "IMPACT-005"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "analysis".
+
+regel IMPACT-006 "Affected teams identificatie":
+  als regelId is "IMPACT-006"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "analysis".
+
+regel IMPACT-007 "Impact severity bepaling":
+  als regelId is "IMPACT-007"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "analysis".
+
+regel IMPACT-008 "Sprint planning aanbeveling":
+  als regelId is "IMPACT-008"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "planning".
+
+regel IMPACT-009 "Stakeholder notificatie":
+  als regelId is "IMPACT-009"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "communication".
+
+regel IMPACT-010 "Rollback scenario analyse":
+  als regelId is "IMPACT-010"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "rollback".
+

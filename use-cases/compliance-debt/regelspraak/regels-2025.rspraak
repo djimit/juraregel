@@ -1,0 +1,50 @@
+// Compliance Debt Tracker — RegelSpraak CNL
+
+regel DEBT-001 "Onuitgevoerde regels per domein":
+  als regelId is "DEBT-001"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "tracking".
+
+regel DEBT-002 "Onuitgevoerde regels per team":
+  als regelId is "DEBT-002"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "tracking".
+
+regel DEBT-003 "Debt prioritisering op risico":
+  als regelId is "DEBT-003"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "prioritisering".
+
+regel DEBT-004 "Sprint planning integratie":
+  als regelId is "DEBT-004"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "planning".
+
+regel DEBT-005 "Debt burn-down chart data":
+  als regelId is "DEBT-005"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "reporting".
+
+regel DEBT-006 "Debt per wet/artikel trackable":
+  als regelId is "DEBT-006"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "tracking".
+
+regel DEBT-007 "Debt alert bij nieuwe wetgeving":
+  als regelId is "DEBT-007"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "alerting".
+
+regel DEBT-008 "Debt rapportage voor management":
+  als regelId is "DEBT-008"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "reporting".
+

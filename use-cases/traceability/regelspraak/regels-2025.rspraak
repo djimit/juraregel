@@ -1,0 +1,92 @@
+// Traceability Matrix — Law to Code — RegelSpraak CNL
+
+regel TRACE-001 "Wet→RegelSpraak traceerbaar":
+  als regelId is "TRACE-001"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "traceability".
+
+regel TRACE-002 "RegelSpraak→JREM traceerbaar":
+  als regelId is "TRACE-002"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "traceability".
+
+regel TRACE-003 "JREM→API endpoint traceerbaar":
+  als regelId is "TRACE-003"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "traceability".
+
+regel TRACE-004 "API→Database constraint traceerbaar":
+  als regelId is "TRACE-004"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "traceability".
+
+regel TRACE-005 "Database→Test traceerbaar":
+  als regelId is "TRACE-005"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "traceability".
+
+regel TRACE-006 "Test→Audit trail traceerbaar":
+  als regelId is "TRACE-006"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "traceability".
+
+regel TRACE-007 "Wet wijziging→Impact analyse":
+  als regelId is "TRACE-007"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "impact".
+
+regel TRACE-008 "Impact→Affected rules identificatie":
+  als regelId is "TRACE-008"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "impact".
+
+regel TRACE-009 "Impact→Affected APIs identificatie":
+  als regelId is "TRACE-009"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "impact".
+
+regel TRACE-010 "Impact→Affected DB constraints identificatie":
+  als regelId is "TRACE-010"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "impact".
+
+regel TRACE-011 "Evidence collection per domein":
+  als regelId is "TRACE-011"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "evidence".
+
+regel TRACE-012 "Cross-domein consistency check":
+  als regelId is "TRACE-012"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "consistency".
+
+regel TRACE-013 "Team topology mapping":
+  als regelId is "TRACE-013"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "topology".
+
+regel TRACE-014 "Compliance debt per team trackable":
+  als regelId is "TRACE-014"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "debt".
+
+regel TRACE-015 "Full chain: wet→code→database→audit":
+  als regelId is "TRACE-015"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "chain".
+

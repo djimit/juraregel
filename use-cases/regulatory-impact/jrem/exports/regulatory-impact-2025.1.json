@@ -1,0 +1,351 @@
+{
+  "schemaVersion": "1.0.0",
+  "ruleSetId": "regulatory-impact",
+  "version": "2025.1",
+  "validFrom": "2025-01-01",
+  "validUntil": "2026-12-31",
+  "jurisdiction": "NL",
+  "domain": "regulatory-impact",
+  "procedureType": "dagvaarding",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "IMPACT-001",
+      "name": "Wet wijziging detectie",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JuraRegel",
+          "section": "IMPACT-001",
+          "url": "https://github.com/djimit/juraregel"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_regulatory-impact_detection",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "IMPACT-001"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "IMPACT-002",
+      "name": "Affected JREM rules identificatie",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JuraRegel",
+          "section": "IMPACT-002",
+          "url": "https://github.com/djimit/juraregel"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_regulatory-impact_analysis",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "IMPACT-002"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "IMPACT-003",
+      "name": "Affected API endpoints identificatie",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JuraRegel",
+          "section": "IMPACT-003",
+          "url": "https://github.com/djimit/juraregel"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_regulatory-impact_analysis",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "IMPACT-003"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "IMPACT-004",
+      "name": "Affected tests identificatie",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JuraRegel",
+          "section": "IMPACT-004",
+          "url": "https://github.com/djimit/juraregel"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_regulatory-impact_analysis",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "IMPACT-004"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "IMPACT-005",
+      "name": "Affected DB constraints identificatie",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JuraRegel",
+          "section": "IMPACT-005",
+          "url": "https://github.com/djimit/juraregel"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_regulatory-impact_analysis",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "IMPACT-005"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "IMPACT-006",
+      "name": "Affected teams identificatie",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JuraRegel",
+          "section": "IMPACT-006",
+          "url": "https://github.com/djimit/juraregel"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_regulatory-impact_analysis",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "IMPACT-006"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "IMPACT-007",
+      "name": "Impact severity bepaling",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JuraRegel",
+          "section": "IMPACT-007",
+          "url": "https://github.com/djimit/juraregel"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_regulatory-impact_analysis",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "IMPACT-007"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "IMPACT-008",
+      "name": "Sprint planning aanbeveling",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JuraRegel",
+          "section": "IMPACT-008",
+          "url": "https://github.com/djimit/juraregel"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_regulatory-impact_planning",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "IMPACT-008"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "IMPACT-009",
+      "name": "Stakeholder notificatie",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JuraRegel",
+          "section": "IMPACT-009",
+          "url": "https://github.com/djimit/juraregel"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_regulatory-impact_communication",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "IMPACT-009"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "IMPACT-010",
+      "name": "Rollback scenario analyse",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JuraRegel",
+          "section": "IMPACT-010",
+          "url": "https://github.com/djimit/juraregel"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_regulatory-impact_rollback",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "IMPACT-010"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    }
+  ],
+  "scenarios": [],
+  "transitionRules": [],
+  "metadata": {
+    "juridischeContext": {
+      "wet": "Regulatory Impact Analyzer",
+      "wetBwbrId": "BWBR0000000",
+      "wetVersieLaatstGecheckt": "2026-07-05",
+      "tariefVersie": "2025.1"
+    },
+    "juristAccordering": {
+      "geaccondeerdDoor": "D. Landman (approved v1.1.0)",
+      "datum": "2026-07-05",
+      "geldigTot": "2027-07-05",
+      "versie": "2025.1"
+    },
+    "bronverificatieDatum": "2026-07-05",
+    "acceptatieType": "full"
+  }
+}

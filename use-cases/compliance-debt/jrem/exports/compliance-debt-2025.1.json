@@ -1,0 +1,287 @@
+{
+  "schemaVersion": "1.0.0",
+  "ruleSetId": "compliance-debt",
+  "version": "2025.1",
+  "validFrom": "2025-01-01",
+  "validUntil": "2026-12-31",
+  "jurisdiction": "NL",
+  "domain": "compliance-debt",
+  "procedureType": "dagvaarding",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "DEBT-001",
+      "name": "Onuitgevoerde regels per domein",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JuraRegel",
+          "section": "DEBT-001",
+          "url": "https://github.com/djimit/juraregel"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_compliance-debt_tracking",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DEBT-001"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DEBT-002",
+      "name": "Onuitgevoerde regels per team",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JuraRegel",
+          "section": "DEBT-002",
+          "url": "https://github.com/djimit/juraregel"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_compliance-debt_tracking",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DEBT-002"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DEBT-003",
+      "name": "Debt prioritisering op risico",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JuraRegel",
+          "section": "DEBT-003",
+          "url": "https://github.com/djimit/juraregel"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_compliance-debt_prioritisering",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DEBT-003"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DEBT-004",
+      "name": "Sprint planning integratie",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JuraRegel",
+          "section": "DEBT-004",
+          "url": "https://github.com/djimit/juraregel"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_compliance-debt_planning",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DEBT-004"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DEBT-005",
+      "name": "Debt burn-down chart data",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JuraRegel",
+          "section": "DEBT-005",
+          "url": "https://github.com/djimit/juraregel"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_compliance-debt_reporting",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DEBT-005"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DEBT-006",
+      "name": "Debt per wet/artikel trackable",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JuraRegel",
+          "section": "DEBT-006",
+          "url": "https://github.com/djimit/juraregel"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_compliance-debt_tracking",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DEBT-006"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DEBT-007",
+      "name": "Debt alert bij nieuwe wetgeving",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JuraRegel",
+          "section": "DEBT-007",
+          "url": "https://github.com/djimit/juraregel"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_compliance-debt_alerting",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DEBT-007"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DEBT-008",
+      "name": "Debt rapportage voor management",
+      "priority": 200,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JuraRegel",
+          "section": "DEBT-008",
+          "url": "https://github.com/djimit/juraregel"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_compliance-debt_reporting",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DEBT-008"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    }
+  ],
+  "scenarios": [],
+  "transitionRules": [],
+  "metadata": {
+    "juridischeContext": {
+      "wet": "Compliance Debt Tracker",
+      "wetBwbrId": "BWBR0000000",
+      "wetVersieLaatstGecheckt": "2026-07-05",
+      "tariefVersie": "2025.1"
+    },
+    "juristAccordering": {
+      "geaccondeerdDoor": "D. Landman (approved v1.1.0)",
+      "datum": "2026-07-05",
+      "geldigTot": "2027-07-05",
+      "versie": "2025.1"
+    },
+    "bronverificatieDatum": "2026-07-05",
+    "acceptatieType": "full"
+  }
+}

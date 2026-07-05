@@ -85,3 +85,15 @@ services:
     build: .
     command: python use-cases/api-registratie/api/app.py
     ports: ["8510:8510"]
+  traceability:
+    build: .
+    command: python use-cases/traceability/api/app.py
+    ports: ["8511:8511"]
+  compliance-debt:
+    build: .
+    command: python use-cases/compliance-debt/api/app.py
+    ports: ["8512:8512"]
+  regulatory-impact:
+    build: .
+    command: python use-cases/regulatory-impact/api/app.py
+    ports: ["8513:8513"]

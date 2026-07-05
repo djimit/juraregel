@@ -70,7 +70,10 @@
         "dpia-model",
         "algoritmeregister",
         "data-overheid-dcat",
-        "api-registratie"
+        "api-registratie",
+        "traceability",
+        "compliance-debt",
+        "regulatory-impact"
       ]
     },
     "procedureType": {
