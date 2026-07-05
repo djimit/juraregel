@@ -2,9 +2,10 @@
 
 [![JuraRegel CI](https://github.com/djimit/juraregel/actions/workflows/juraregel-ci.yml/badge.svg)](https://github.com/djimit/juraregel/actions/workflows/juraregel-ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Use Cases](https://img.shields.io/badge/Use%20Cases-10-blue)](https://github.com/djimit/juraregel)
-[![Tests](https://img.shields.io/badge/Tests-207-green)](https://github.com/djimit/juraregel)
-[![Regels](https://img.shields.io/badge/JREM%20Regels-291-purple)](https://github.com/djimit/juraregel)
+[![Use Cases](https://img.shields.io/badge/Use%20Cases-28-blue)](https://github.com/djimit/juraregel)
+[![Tests](https://img.shields.io/badge/Tests-438-green)](https://github.com/djimit/juraregel)
+[![Regels](https://img.shields.io/badge/JREM%20Regels-655-purple)](https://github.com/djimit/juraregel)
+[![Agentic](https://img.shields.io/badge/Agentic-Platform-orange)](https://github.com/djimit/juraregel)
 
 > **Juridische regels die juristen schrijven en computers begrijpen.**
 >

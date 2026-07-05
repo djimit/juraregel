@@ -18,4 +18,11 @@ done
 echo ""
 echo "╔═══════════════════════════════════════════════════════════╗"
 echo "║  Alle use cases: see per-use-case results above           ║"
+
+echo ""
+echo "=== JKB Gates ==="
+bash ci/jkb-gates.sh 2>&1 || true
+
+echo ""
+echo "=== Alle gates voltooid ==="
 echo "╚═══════════════════════════════════════════════════════════╝"
