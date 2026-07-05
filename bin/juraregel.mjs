@@ -13,7 +13,7 @@ const commands = {
   check: "Run CI gates: juraregel check [use-case]",
   serve: "Start een Rule API: juraregel serve <use-case>",
   validate: "Valideer een JREM export: juraregel validate <jrem-file>",
-  generate: "Genereer JREM from parser: juraregel generate <domein>",\n  help: "Toon dit overzicht"
+  generate: "Genereer JREM from parser: juraregel generate <domein>",  help: "Toon dit overzicht"
 };
 
 function help() {
@@ -90,7 +90,7 @@ switch (cmd) {
   case "init": await init(args[0], args[1]); break;
   case "check": await check(args[0]); break;
   case "serve": await serve(args[0]); break;
-  case "validate": await validate(args[0]); break;\n  case "generate": await generate(args[0]); break;
+  case "validate": await validate(args[0]); break;  case "generate": await generate(args[0]); break;
   case "help": case "--help": case undefined: help(); break;
   default: console.error(`Unknown command: ${cmd}`); help(); process.exit(1);
 }

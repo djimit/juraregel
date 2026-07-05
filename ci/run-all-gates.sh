@@ -24,5 +24,10 @@ echo "=== JKB Gates ==="
 bash ci/jkb-gates.sh 2>&1 
 
 echo ""
+echo ""
+echo "=== Legal Review Gate ==="
+bash ci/legal-review-gate.sh 2>&1
+
+echo ""
 echo "=== Alle gates voltooid ==="
 echo "╚═══════════════════════════════════════════════════════════╝"

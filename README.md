@@ -3,7 +3,7 @@
 [![JuraRegel CI](https://github.com/djimit/juraregel/actions/workflows/juraregel-ci.yml/badge.svg)](https://github.com/djimit/juraregel/actions/workflows/juraregel-ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Use Cases](https://img.shields.io/badge/Use%20Cases-28-blue)](https://github.com/djimit/juraregel)
-[![Tests](https://img.shields.io/badge/Tests-451-green)](https://github.com/djimit/juraregel)
+[![Tests](https://img.shields.io/badge/Tests-451%2B-green)](https://github.com/djimit/juraregel)
 [![Regels](https://img.shields.io/badge/JREM%20Regels-655-purple)](https://github.com/djimit/juraregel)
 [![Agentic](https://img.shields.io/badge/Agentic-Platform-orange)](https://github.com/djimit/juraregel)
 [![MCP](https://img.shields.io/badge/MCP-12%20tools%20%2B%203%20resources%20%2B%203%20prompts-teal)](https://github.com/djimit/juraregel)
@@ -41,7 +41,7 @@ De engine (V4.2) classificeert gedetecteerde persoonsgegevens in rechterlijke ui
 | Rechtspersoon | Niet pseudonimiseren | Adres van B.V. → laten staan |
 | Overheid | Niet pseudonimiseren | Adres van gemeente → laten staan |
 
-**Nauwkeurigheid**: hoog op volledige dataset van 25.127 uitspraken (48.702 detecties). 0 fouten. 0 handmatige controle gevallen.
+**Nauwkeurigheid**: Gevalideerd op dataset van 25.127 uitspraken (48.702 detecties). Geen onafhankelijke gouden standaardvalidatie — resultaten zijn indicatief, niet juridisch bindend.
 
 De engine implementeert de uitzonderingen uit de pseudonimiseringsrichtlijn:
 - Professionals bij de procedure (advocaten, notarissen, deurwaarders) → niet pseudonimiseren

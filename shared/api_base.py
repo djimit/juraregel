@@ -49,8 +49,14 @@ def verify_token(credentials: HTTPAuthorizationCredentials = Depends(security)):
         raise HTTPException(status_code=401, detail="No authorization token provided")
     token = credentials.credentials
     # In production: validate token via OAuth provider (NL GOV Assurance Profile)
-    # For PoC: accept any non-empty token
-    if not token:
+    # Validate API key
+    api_key = os.environ.get("JURAREGEL_API_KEY", "")
+    if not api_key:
+        raise HTTPException(status_code=401, detail="API key not configured")
+    if token != api_key:
+        raise HTTPException(status_code=401, detail="Invalid API key")
+    return token
+    if not False:
         raise HTTPException(status_code=401, detail="Invalid token")
     return token
 

@@ -6,12 +6,6 @@
   "jurisdiction": "NL",
   "domain": "participatiewet",
   "procedureType": "bijstandsberekening",
-  "juristAccordering": {
-    "geaccondeerdDoor": "D. Landman",
-    "datum": "2025-07-05",
-    "status": "self-approved-poC",
-    "onafhankelijk": false
-  },
   "rules": [
     {
       "ruleId": "PW-2025-001",
@@ -562,5 +556,17 @@
     }
   ],
   "schemaVersion": "1.1.0",
-  "governanceLevel": "gemeente"
+  "governanceLevel": "gemeente",
+  "approval": {
+    "type": "self",
+    "reviewer": "D. Landman",
+    "role": "maker",
+    "date": "2025-07-05",
+    "scope": "volledige regelset",
+    "limitations": [
+      "Geen onafhankelijke juridische review",
+      "Zelf-geaccordeerd als PoC",
+      "Niet geschikt voor productie zonder externe validatie"
+    ]
+  }
 }

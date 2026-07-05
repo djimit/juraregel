@@ -1,0 +1,203 @@
+{
+  "\\$schema": "https://json-schema.org/draft/2020-12/schema",
+  "\\$id": "https://juraregel.nl/schemas/jrem-core/v1.1.0",
+  "title": "JREM Core v1.1.0",
+  "description": "Judicial Rule Exchange Model - generiek kernschema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "ruleSetId",
+    "version",
+    "validFrom",
+    "jurisdiction",
+    "domain",
+    "rules"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.1.0"
+    },
+    "ruleSetId": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\\\d{4}\\\\.\\\\d+\\$"
+    },
+    "validFrom": {
+      "type": "string",
+      "format": "date"
+    },
+    "validUntil": {
+      "type": "string",
+      "format": "date"
+    },
+    "jurisdiction": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string"
+    },
+    "governanceLevel": {
+      "type": "string",
+      "enum": [
+        "eu",
+        "rijk",
+        "provincie",
+        "gemeente",
+        "waterschap"
+      ]
+    },
+    "bwbId": {
+      "type": "string"
+    },
+    "celexId": {
+      "type": "string"
+    },
+    "eli": {
+      "type": "string",
+      "format": "uri"
+    },
+    "procedureType": {
+      "type": "string",
+      "enum": [
+        "berekening",
+        "classificatie",
+        "compliance-check",
+        "publicatie",
+        "toegangsbeoordeling",
+        "andere"
+      ]
+    },
+    "conflictResolution": {
+      "type": "string",
+      "enum": [
+        "first-match",
+        "priority",
+        "most-specific",
+        "deny-overrides",
+        "permit-overrides"
+      ]
+    },
+    "rules": {
+      "type": "array",
+      "items": {
+        "\\$ref": "#/definitions/rule"
+      }
+    }
+  },
+  "definitions": {
+    "rule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ruleId",
+        "name",
+        "sourceRefs",
+        "conditions",
+        "outcome"
+      ],
+      "properties": {
+        "ruleId": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "priority": {
+          "type": "integer",
+          "default": 100
+        },
+        "legalStatus": {
+          "type": "string",
+          "enum": [
+            "wettelijk",
+            "beleid",
+            "richtlijn",
+            "interpretatie",
+            "onbekend"
+          ]
+        },
+        "interpretatieMethode": {
+          "type": "string",
+          "enum": [
+            "handmatig",
+            "LLM-assisteerd",
+            "LLM-gegenereerd"
+          ]
+        },
+        "interpretatieOpmerking": {
+          "type": "string"
+        },
+        "sourceRefs": {
+          "type": "array",
+          "items": {
+            "\\$ref": "#/definitions/sourceRef"
+          }
+        },
+        "conditions": {
+          "type": "object"
+        },
+        "outcome": {
+          "type": "object"
+        },
+        "examples": {
+          "type": "array"
+        }
+      }
+    },
+    "sourceRef": {
+      "type": "object",
+      "required": [
+        "type",
+        "title"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "wet",
+            "besluit",
+            "regeling",
+            "richtlijn",
+            "wetsartikel",
+            "AMvB",
+            "ministeriele-regeling",
+            "beleid",
+            "andere"
+          ]
+        },
+        "title": {
+          "type": "string"
+        },
+        "section": {
+          "type": "string"
+        },
+        "lid": {
+          "type": "string"
+        },
+        "onderdeel": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "bwbId": {
+          "type": "string",
+          "pattern": "^BWBR[0-9]{7}\\$"
+        },
+        "bronVersie": {
+          "type": "string",
+          "format": "date"
+        },
+        "bronDatum": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    }
+  }
+}

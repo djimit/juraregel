@@ -1,3 +1,28 @@
+## [2.1.1] - 2025-07-05 — Hardening
+
+### Fixed
+- CI/CD: alle `|| true` verwijderd — gates falen echt bij errors
+- CLI: syntax errors gefixt (`bin/juraregel.mjs`)
+- Dockerfile: expose poorten gecorrigeerd (8490-8515)
+- JREM v1.1.0: `$id` en description gecorrigeerd
+- JREM v1.1.0: outcome required fields veralgemeend (niet griffierecht-specifiek)
+- API auth: "any token" vervangen door API key validatie
+- CORS: restricted to configured origins
+
+### Added
+- `shared/jrem-core.json` — generiek JREM kernschema
+- `tools/jrem-migrate.py` v2.0 — verbeterde migratie met validatie
+- `ci/legal-review-gate.sh` — waarschuwt bij self-approved regels
+- SECURITY.md met security model
+- `approval` object ter vervanging van `juristAccordering`
+
+### Changed
+- `juristAccordering` vervangen door auditable `approval` object in alle exports
+- Accuracy claim gesanitizeerd ("hoog" ipv "100%")
+- Disclaimer toegevoegd aan README
+
+---
+
 # Changelog
 
 ## [2.1.0] - 2025-07-05 - MinBZK Improvements
