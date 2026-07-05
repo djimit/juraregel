@@ -1,7 +1,7 @@
 openapi: 3.1.0
 info:
-  title: Griffierecht Rule API
-  description: Auditbare juridische rule service voor griffierecht
+  title: Dpia-Model Rule API
+  description: Auditbare juridische rule service voor dpia-model
   version: 1.0.0
 paths:
   /v1/health:
@@ -14,10 +14,10 @@ paths:
           content:
             application/json:
               schema: {}
-  /v1/griffierecht/versions:
+  /v1/dpia-model/versions:
     get:
       summary: Get Versions
-      operationId: get_versions_v1_griffierecht_versions_get
+      operationId: get_versions_v1_dpia_model_versions_get
       responses:
         '200':
           description: Successful Response
@@ -47,10 +47,10 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/HTTPValidationError'
-  /v1/griffierecht/calculate:
+  /v1/dpia-model/calculate:
     post:
       summary: Calculate
-      operationId: calculate_v1_griffierecht_calculate_post
+      operationId: calculate_v1_dpia_model_calculate_post
       requestBody:
         content:
           application/json:

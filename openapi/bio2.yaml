@@ -1,7 +1,7 @@
 openapi: 3.1.0
 info:
-  title: "JuraRegel \u2014 Bio2 Rule API"
-  description: Legal RuleOps compliance check for bio2
+  title: Bio2 Rule API
+  description: Auditbare juridische rule service voor bio2
   version: 1.0.0
 paths:
   /v1/health:
@@ -208,6 +208,3 @@ components:
       - zaakstroom
       - procedureType
       title: ZaakInput
-servers:
-- url: http://127.0.0.1:8494
-  description: Local development
