@@ -17,7 +17,7 @@ app = create_app("bio2", JREM_DIR, 8494)
 @app.get("/v1/bio2/maatregelen")
 def get_maatregelen(categorie: Optional[str] = Query(None)):
     """Lijst van alle BIO2 maatregelen met id, categorie, isoRef, beschrijving."""
-    jrem = load_jrem(JREM_DIR, "2025.1")
+    jrem = load_jrem(JREM_DIR, "2026.1")
     maatregelen = []
     for rule in jrem.get("rules", []):
         rid = rule["ruleId"].replace("BIO2-", "")
@@ -40,7 +40,7 @@ def get_maatregelen(categorie: Optional[str] = Query(None)):
 @app.get("/v1/bio2/rapport/{organisatie_id}")
 def get_rapport(organisatie_id: str):
     """Compliance rapport per organisatie — ENSIA aligned."""
-    jrem = load_jrem(JREM_DIR, "2025.1")
+    jrem = load_jrem(JREM_DIR, "2026.1")
     
     from collections import defaultdict
     per_categorie = defaultdict(lambda: {"totaal": 0, "compliant": 0, "niet_compliant": 0, "onbekend": 0})

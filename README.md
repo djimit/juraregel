@@ -397,10 +397,10 @@ graph TB
 | EU AI Act | 12 | PoC | 8498 |
 | EU AI Act | 12 | PoC | 8498 |
 | AVG/GDPR | 10 | PoC | 8499 |
-| **NCSC** | **32** | **Production** | **8500** |
+| **NCSC** | **32** | **PoC** | **8500** |
 | Procesreglement | 4 | PoC | 8491 |
 | Classificatie | 3 | PoC | 8492 |
-| Publicatie/PII | 3 | **Production** (engine V4.2) | 8493 |
+| Publicatie/PII | 3 | **PoC** (engine V4.2) | 8493 |
 
 ├── griffierecht/         Eerste use case (bewezen PoC)
 ├── procesreglement/      UC-02: Digitale indiening
@@ -467,7 +467,7 @@ Zie `jrem-open-source/` voor het standalone JREM schema, validator en examples.
 | Metriek | Waarde |
 |---|---|
 | Use cases | 4 (griffierecht, procesreglement, classificatie, publicatie) |
-| Tests | 224 (alle groen) |
+| Tests | 451+ (unit + BDD + MCP) |
 | CI gates | 14 per use case |
 | JREM regels | 46 |
 | Pseudonimisering engine | V4.2 — hoog op 25.127 uitspraken |

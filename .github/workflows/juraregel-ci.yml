@@ -10,7 +10,7 @@ on:
       use-case:
         required: false
         type: string
-        default: 'all'
+        default: all
 
 jobs:
   test:
@@ -19,24 +19,26 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: 3.12
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: 20
       - name: Install Python deps
-        run: pip install fastapi uvicorn pydantic jsonschema pytest httpx pyyaml
+        run: pip install fastapi uvicorn pydantic jsonschema pytest httpx pyyaml pytest-bdd
       - name: Run tests
         run: |
-          cd shared && python3 -c "import json; s=json.load(open('jrem-schema.json')); print('Schema OK')"
-          python3 -m pytest use-cases/*/tests/ -q --no-header 
+          python3 -c "import json; s=json.load(open("shared/jrem-schema-v1.1.0.json")); print("Schema OK")
+          python3 -m pytest use-cases/*/tests/ -q --no-header
       - name: Validate JREM exports
         run: |
           for f in use-cases/*/jrem/exports/*.json; do
-            python3 shared/validate.py --schema shared/jrem-schema-v1.1.0.json --instance "$f" 
+            python3 shared/validate.py --schema shared/jrem-schema-v1.1.0.json --instance "$f"
           done
+      - name: Legal review gate
+        run: bash ci/legal-review-gate.sh
       - name: Check TypeScript SDK
         run: |
-          cd sdk/typescript && npx -y tsc --noEmit 
+          cd sdk/typescript && npx -y tsc --noEmit
       - name: Check CLI
         run: node bin/juraregel.mjs --help
 
@@ -53,4 +55,4 @@ jobs:
           test -f CODE_OF_CONDUCT.md
           test -f docker-compose.yml
           test -f Dockerfile
-          echo "All required files present"
+          echo All required files present
