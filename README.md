@@ -2,9 +2,9 @@
 
 [![JuraRegel CI](https://github.com/djimit/juraregel/actions/workflows/juraregel-ci.yml/badge.svg)](https://github.com/djimit/juraregel/actions/workflows/juraregel-ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Use Cases](https://img.shields.io/badge/Use%20Cases-28-blue)](https://github.com/djimit/juraregel)
+[![Use Cases](https://img.shields.io/badge/Use%20Cases-28%20%282%20active%29-blue)](https://github.com/djimit/juraregel)
 [![Tests](https://img.shields.io/badge/Tests-451%2B-green)](https://github.com/djimit/juraregel)
-[![Regels](https://img.shields.io/badge/JREM%20Regels-655-purple)](https://github.com/djimit/juraregel)
+[![Regels](https://img.shields.io/badge/JREM%20Regels-655%20%28PoC%29-purple)](https://github.com/djimit/juraregel)
 [![Agentic](https://img.shields.io/badge/Agentic-Platform-orange)](https://github.com/djimit/juraregel)
 [![MCP](https://img.shields.io/badge/MCP-12%20tools%20%2B%203%20resources%20%2B%203%20prompts-teal)](https://github.com/djimit/juraregel)
 [![BDD](https://img.shields.io/badge/BDD-7%20scenarios-brightgreen)](https://github.com/djimit/juraregel)
@@ -394,7 +394,6 @@ graph TB
 | Forum Standaardisatie | 22 | **PoC** | 8495 |
 | Overheidsstandaarden | 24 | **PoC** | 8496 |
 | NORA | 15 | **PoC** | 8497 |
-| EU AI Act | 12 | PoC | 8498 |
 | EU AI Act | 12 | PoC | 8498 |
 | AVG/GDPR | 10 | PoC | 8499 |
 | **NCSC** | **32** | **PoC** | **8500** |

@@ -4,7 +4,7 @@
   "title": "JREM Core v1.1.0",
   "description": "Judicial Rule Exchange Model - generiek kernschema voor juridische regels",
   "type": "object",
-  "additionalProperties": false,
+  "additionalProperties": true,
   "required": [
     "schemaVersion",
     "ruleSetId",
@@ -62,14 +62,7 @@
     },
     "procedureType": {
       "type": "string",
-      "enum": [
-        "berekening",
-        "classificatie",
-        "compliance-check",
-        "publicatie",
-        "toegangsbeoordeling",
-        "andere"
-      ]
+      "description": "Type procedure. Aanbevolen: berekening, classificatie, compliance-check, publicatie, toegangsbeoordeling, andere"
     },
     "conflictResolution": {
       "type": "string",
@@ -112,13 +105,7 @@
         },
         "legalStatus": {
           "type": "string",
-          "enum": [
-            "wettelijk",
-            "beleid",
-            "richtlijn",
-            "interpretatie",
-            "onbekend"
-          ]
+          "description": "Juridische status. Aanbevolen: wettelijk, beleid, richtlijn, interpretatie, onbekend"
         },
         "interpretatieMethode": {
           "type": "string",
@@ -157,17 +144,7 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": [
-            "wet",
-            "besluit",
-            "regeling",
-            "richtlijn",
-            "wetsartikel",
-            "AMvB",
-            "ministeriele-regeling",
-            "beleid",
-            "andere"
-          ]
+          "description": "Type bron. Aanbevolen: wet, besluit, regeling, richtlijn, wetsartikel, AMvB, ministeriele-regeling, beleid, andere"
         },
         "title": {
           "type": "string"

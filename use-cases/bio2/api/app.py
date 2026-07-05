@@ -1,7 +1,9 @@
 """BIO2 Compliance Rule API — use case app met bio2-specifieke endpoints."""
 import sys
 import json
+import hashlib
 from pathlib import Path
+from datetime import datetime, timezone
 from fastapi import Query
 from typing import Optional
 
@@ -64,8 +66,8 @@ def get_rapport(organisatie_id: str):
         "score": round(score, 1),
         "perCategorie": dict(per_categorie),
         "audit": {
-            "rulesetHash": f"sha256:{hash(json.dumps(jrem, sort_keys=True))}",
-            "timestamp": "2026-07-04T23:00:00+02:00",
+            "rulesetHash": hashlib.sha256(json.dumps(jrem, sort_keys=True).encode()).hexdigest(),
+            "timestamp": datetime.now(timezone.utc).isoformat(),
         }
     }
 
