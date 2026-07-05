@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://juraregel.nl/schemas/jrem/v1.1.0",
   "title": "JREM v1.1.0",
-  "description": "Judicial Rule Exchange Model v1.0.0 — basis schema voor juridische regels",
+  "description": "Judicial Rule Exchange Model v1.1.0 — uitbreiding met governance level en bron-identifiers",
   "type": "object",
   "additionalProperties": false,
   "required": [

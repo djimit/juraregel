@@ -28,15 +28,15 @@ jobs:
       - name: Run tests
         run: |
           cd shared && python3 -c "import json; s=json.load(open('jrem-schema.json')); print('Schema OK')"
-          python3 -m pytest use-cases/*/tests/ -q --no-header || true
+          python3 -m pytest use-cases/*/tests/ -q --no-header 
       - name: Validate JREM exports
         run: |
           for f in use-cases/*/jrem/exports/*.json; do
-            python3 shared/validate.py --schema shared/jrem-schema.json --instance "$f" || true
+            python3 shared/validate.py --schema shared/jrem-schema.json --instance "$f" 
           done
       - name: Check TypeScript SDK
         run: |
-          cd sdk/typescript && npx -y tsc --noEmit || true
+          cd sdk/typescript && npx -y tsc --noEmit 
       - name: Check CLI
         run: node bin/juraregel.mjs --help
 

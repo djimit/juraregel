@@ -16,6 +16,8 @@
 
 JuraRegel is een open-source platform voor het beheren, valideren, versioneren en serveren van administratief-juridische regels. Het vertaalt bijvoorbeeld de [pseudonimiseringsrichtlijn](https://www.rechtspraak.nl/uitspraken/pseudonimiseringsrichtlijn) van Rechtspraak.nl en andere juridische richtlijnen naar digitale, testbare, auditeerbare regels.
 
+> **Disclaimer:** JuraRegel is een proof-of-concept en architectuurprototype. Het is niet geschikt voor productiegebruik als juridisch besluitvormingsplatform zonder onafhankelijke juridische validatie.
+
 ## Wat JuraRegel doet
 
 - **Pseudonimiseringsrichtlijn Engine** — classificeert persoonsgegevens in uitspraken conform de richtlijn (particulier → pseudonimiseer, professional/organisatie/overheid → niet pseudonimiseer)
@@ -39,7 +41,7 @@ De engine (V4.2) classificeert gedetecteerde persoonsgegevens in rechterlijke ui
 | Rechtspersoon | Niet pseudonimiseren | Adres van B.V. → laten staan |
 | Overheid | Niet pseudonimiseren | Adres van gemeente → laten staan |
 
-**Nauwkeurigheid**: 100% op volledige dataset van 25.127 uitspraken (48.702 detecties). 0 fouten. 0 handmatige controle gevallen.
+**Nauwkeurigheid**: hoog op volledige dataset van 25.127 uitspraken (48.702 detecties). 0 fouten. 0 handmatige controle gevallen.
 
 De engine implementeert de uitzonderingen uit de pseudonimiseringsrichtlijn:
 - Professionals bij de procedure (advocaten, notarissen, deurwaarders) → niet pseudonimiseren
@@ -60,7 +62,7 @@ De engine implementeert de uitzonderingen uit de pseudonimiseringsrichtlijn:
 | Zelf hosten | n.v.t. | Cloud-only | **Docker compose (localhost)** |
 | Rule Maturity Model | Niet | Niet | **L1-L4 classificatie** |
 | NORA compliance | Niet | Soms | **NORA matrix (15 principes)** |
-| Pseudonimisering | Handmatig | Niet | **V4.2 engine (100% op 25K)** |
+| Pseudonimisering | Handmatig | Niet | **V4.2 engine (hoog op 25K)** |
 
 ## Use Case: Griffierecht
 
@@ -422,7 +424,7 @@ ci/
 | `use-cases/publicatie/lib/richtlijn_engine.py` | V1: Basis classificatie (95% target) |
 | `use-cases/publicatie/lib/richtlijn_engine_v2.py` | V2: Sentence-level + confidence scoring (99% target) |
 | `use-cases/publicatie/lib/richtlijn_engine_v3.py` | V3: Scanner-level fixes (99.995% target) |
-| `use-cases/publicatie/lib/richtlijn_engine_v4.py` | V4.2: Final — `\bOM\b` fix, particulier confirm, woont-aan override (100% op 25K) |
+| `use-cases/publicatie/lib/richtlijn_engine_v4.py` | V4.2: Final — `\bOM\b` fix, particulier confirm, woont-aan override (hoog op 25K) |
 | `use-cases/publicatie/regelspraak/pseudonimiseringsrichtlijn.rspraak` | 17 RegelSpraak regels conform richtlijn |
 | `use-cases/publicatie/tests/test_richtlijn_engine.py` | 16 tests voor de engine |
 
@@ -468,7 +470,7 @@ Zie `jrem-open-source/` voor het standalone JREM schema, validator en examples.
 | Tests | 224 (alle groen) |
 | CI gates | 14 per use case |
 | JREM regels | 46 |
-| Pseudonimisering engine | V4.2 — 100% op 25.127 uitspraken |
+| Pseudonimisering engine | V4.2 — hoog op 25.127 uitspraken |
 | Open standaarden | 7 compliant (pseudonimiseringsrichtlijn, AVG/GDPR, JSON Schema, MIT, ECLI, BWBR) |
 
 ## Licentie

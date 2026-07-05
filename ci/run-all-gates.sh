@@ -12,7 +12,7 @@ echo "╚═══════════════════════�
 
 for uc in use-cases/*/; do
   [ -d "$uc" ] || continue
-  bash ci/run-gates.sh "$uc" 2>&1 || true
+  bash ci/run-gates.sh "$uc" 2>&1 
 done
 
 echo ""
@@ -21,7 +21,7 @@ echo "║  Alle use cases: see per-use-case results above           ║"
 
 echo ""
 echo "=== JKB Gates ==="
-bash ci/jkb-gates.sh 2>&1 || true
+bash ci/jkb-gates.sh 2>&1 
 
 echo ""
 echo "=== Alle gates voltooid ==="
