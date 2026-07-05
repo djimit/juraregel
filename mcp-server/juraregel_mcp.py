@@ -462,6 +462,12 @@ def get_governance(domain: str, rule_id: str = None) -> dict:
                 if entry.get("@id") == f"rule:{rule_id}":
                     return entry
             return {"error": f"Rule {rule_id} not in governance registry"}
+        graph = registry.get("@graph", [])
+        if domain:
+            for entry in graph:
+                if entry.get("domain") == domain:
+                    return entry
+            return {"error": f"Domain {domain} not in governance registry", "available": [e.get("domain") for e in graph]}
         return registry
     
     # Fallback: derive from JREM
