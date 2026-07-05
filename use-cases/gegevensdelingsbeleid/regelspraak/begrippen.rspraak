@@ -1,0 +1,6 @@
+// Begrippenmodel — JENV Gegevensdelingsbeleid v1.1.2
+
+begrip regelId: "Unieke identificatie." type: tekst.
+begrip categorie: "Categorie." waarden: anonimisering, classificatie, persoonsgegevens, doelbinding, glp, gls, beveiliging, crisis, rol, bewaartermijn, verwerking, techniek, audit, privacy.
+begrip compliant: "Voldoet?" waarden: ja, nee, onbekend.
+begrip BIV: "Beschikbaarheid, Integriteit, Vertrouwelijkheid classificatie." type: tekst.

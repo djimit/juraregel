@@ -65,3 +65,11 @@ services:
     build: .
     command: python use-cases/wmo/api/app.py
     ports: ["8505:8505"]
+  gegevensdelingsbeleid:
+    build: .
+    command: python use-cases/gegevensdelingsbeleid/api/app.py
+    ports: ["8506:8506"]
+  dpia-model:
+    build: .
+    command: python use-cases/dpia-model/api/app.py
+    ports: ["8507:8507"]

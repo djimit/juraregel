@@ -1,0 +1,213 @@
+// DPIA Model Rijksdienst — RegelSpraak CNL
+// Bron: modellen.jenvgegevens.nl/dpia v1.0.0
+
+regel DPIA-001 "DPIA vereist bij grootschalige verwerking":
+  als regelId is "DPIA-001"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "vereiste"
+  en is bron "AVG art. 35".
+
+regel DPIA-002 "DPIA vereist bij systematische monitoring":
+  als regelId is "DPIA-002"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "vereiste"
+  en is bron "AVG art. 35 lid 1c".
+
+regel DPIA-003 "DPIA vereist bij geautomatiseerde besluitvorming":
+  als regelId is "DPIA-003"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "vereiste"
+  en is bron "AVG art. 35 lid 1a".
+
+regel DPIA-004 "DPIA vereist bij bijzondere persoonsgegevens grootschalig":
+  als regelId is "DPIA-004"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "vereiste"
+  en is bron "AVG art. 35 lid 1b".
+
+regel DPIA-005 "DPIA vereist bij publieke cloudvoorziening":
+  als regelId is "DPIA-005"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "vereiste"
+  en is bron "Cloudbeleid Rijk".
+
+regel DPIA-006 "Pre-scan DPIA bij twijfel over verplichting":
+  als regelId is "DPIA-006"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "prescan"
+  en is bron "Model DPIA Rijksdienst".
+
+regel DPIA-007 "EDPB criteria — 2 criteria = DPIA verplicht":
+  als regelId is "DPIA-007"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "criteria"
+  en is bron "EDPB".
+
+regel DPIA-008 "EDPB criteria — 1 criterium = beoordelen":
+  als regelId is "DPIA-008"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "criteria"
+  en is bron "EDPB".
+
+regel DPIA-009 "Verwerkingsgrondslag toestemming":
+  als regelId is "DPIA-009"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "grondslag"
+  en is bron "AVG art. 6 lid 1a".
+
+regel DPIA-010 "Verwerkingsgrondslag overeenkomst":
+  als regelId is "DPIA-010"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "grondslag"
+  en is bron "AVG art. 6 lid 1b".
+
+regel DPIA-011 "Verwerkingsgrondslag wettelijke verplichting":
+  als regelId is "DPIA-011"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "grondslag"
+  en is bron "AVG art. 6 lid 1c".
+
+regel DPIA-012 "Verwerkingsgrondslag vitaal belang":
+  als regelId is "DPIA-012"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "grondslag"
+  en is bron "AVG art. 6 lid 1d".
+
+regel DPIA-013 "Verwerkingsgrondslag taak algemeen belang":
+  als regelId is "DPIA-013"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "grondslag"
+  en is bron "AVG art. 6 lid 1e".
+
+regel DPIA-014 "Verwerkingsgrondslag gerechtvaardigd belang":
+  als regelId is "DPIA-014"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "grondslag"
+  en is bron "AVG art. 6 lid 1f".
+
+regel DPIA-015 "Akkoordverklaring verplicht voor alle verwerkingsverantwoordelijken":
+  als regelId is "DPIA-015"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "akkoord"
+  en is bron "Rapportagemodel DPIA".
+
+regel DPIA-016 "Advies FG verplicht":
+  als regelId is "DPIA-016"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "advies"
+  en is bron "AVG / Model DPIA Rijksdienst".
+
+regel DPIA-017 "Risicoanalyse voor betrokkenen verplicht":
+  als regelId is "DPIA-017"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "risico"
+  en is bron "AVG art. 35 lid 7".
+
+regel DPIA-018 "Maatregelen ter mitigatie van risico's verplicht":
+  als regelId is "DPIA-018"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "maatregelen"
+  en is bron "AVG art. 35 lid 7d".
+
+regel DPIA-019 "Bewaartermijn persoonsgegevens vastgesteld":
+  als regelId is "DPIA-019"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "bewaartermijn"
+  en is bron "AVG art. 5 lid 1e".
+
+regel DPIA-020 "Doorgifte naar derde land beoordeeld":
+  als regelId is "DPIA-020"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "doorgifte"
+  en is bron "AVG art. 44-50".
+
+regel DPIA-021 "DPIA met algoritme — extra risicoanalyse":
+  als regelId is "DPIA-021"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "specifiek"
+  en is bron "Model DPIA Rijksdienst".
+
+regel DPIA-022 "DPIA met big data — extra risicoanalyse":
+  als regelId is "DPIA-022"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "specifiek"
+  en is bron "Model DPIA Rijksdienst".
+
+regel DPIA-023 "DPIA met cloud — extra risicoanalyse":
+  als regelId is "DPIA-023"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "specifiek"
+  en is bron "Model DPIA Rijksdienst".
+
+regel DPIA-024 "DPIA met profilering — extra risicoanalyse":
+  als regelId is "DPIA-024"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "specifiek"
+  en is bron "AVG art. 4 lid 4".
+
+regel DPIA-025 "DPIA met geautomatiseerde besluitvorming — extra risicoanalyse":
+  als regelId is "DPIA-025"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "specifiek"
+  en is bron "AVG art. 22".
+
+regel DPIA-026 "DPIA status: Akkoord vereist alle akkoordverklaringen":
+  als regelId is "DPIA-026"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "status"
+  en is bron "Rapportagemodel DPIA".
+
+regel DPIA-027 "DPIA dossier met alle documenten verplicht":
+  als regelId is "DPIA-027"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "dossier"
+  en is bron "Model DPIA Rijksdienst".
+
+regel DPIA-028 "Versiebeheer DPIA verplicht":
+  als regelId is "DPIA-028"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "versie"
+  en is bron "Model DPIA Rijksdienst".
+
+regel DPIA-029 "Kwetsbaarheid betrokkenen categorie vastgelegd":
+  als regelId is "DPIA-029"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "betrokkenen"
+  en is bron "Model DPIA Rijksdienst".
+
+regel DPIA-030 "Nationale identificatienummers — extra bescherming":
+  als regelId is "DPIA-030"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "persoonsgegevens"
+  en is bron "AVG art. 87".
+

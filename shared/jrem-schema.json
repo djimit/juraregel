@@ -65,7 +65,9 @@
         "btw-tarieven",
         "ww-uitkering",
         "ind-verblijfsregels",
-        "wmo"
+        "wmo",
+        "gegevensdelingsbeleid",
+        "dpia-model"
       ]
     },
     "procedureType": {

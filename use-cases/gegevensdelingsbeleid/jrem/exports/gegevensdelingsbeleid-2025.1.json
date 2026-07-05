@@ -1,0 +1,942 @@
+{
+  "schemaVersion": "1.0.0",
+  "ruleSetId": "gegevensdelingsbeleid",
+  "version": "2025.1",
+  "validFrom": "2025-01-01",
+  "validUntil": "2026-12-31",
+  "jurisdiction": "NL",
+  "domain": "gegevensdelingsbeleid",
+  "procedureType": "dagvaarding",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "GDB-001",
+      "name": "Anonimisering verplicht bij publicatie",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JENV Gegevensdelingsbeleid — art. 2 lid 7, EU richtlijn 2019/1024",
+          "section": "GDB-001",
+          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "gdb_anonimisering",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "GDB-001"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "GDB-002",
+      "name": "BIV-classificatie verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JENV Gegevensdelingsbeleid — ISO 27000",
+          "section": "GDB-002",
+          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "gdb_classificatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "GDB-002"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "GDB-003",
+      "name": "Bijzondere persoonsgegeven — extra bescherming",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JENV Gegevensdelingsbeleid — art. 9 AVG",
+          "section": "GDB-003",
+          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "gdb_persoonsgegevens",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "GDB-003"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "GDB-004",
+      "name": "Doelbinding — vooraf bepaald en welomschreven",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JENV Gegevensdelingsbeleid — JENV gegevensdelingsbeleid v1.0",
+          "section": "GDB-004",
+          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "gdb_doelbinding",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "GDB-004"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "GDB-005",
+      "name": "Gegevensleveringsprotocol (GLP) verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JENV Gegevensdelingsbeleid — Model GLP v1.0",
+          "section": "GDB-005",
+          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "gdb_glp",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "GDB-005"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "GDB-006",
+      "name": "GLP-code uniek per organisatie",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JENV Gegevensdelingsbeleid — Model GLP v1.0",
+          "section": "GDB-006",
+          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "gdb_glp",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "GDB-006"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "GDB-007",
+      "name": "GLP geldigheidsduur met begin- en einddatum",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JENV Gegevensdelingsbeleid — Model GLP v1.0",
+          "section": "GDB-007",
+          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "gdb_glp",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "GDB-007"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "GDB-008",
+      "name": "Gegevensleveringsspecificatie (GLS) verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JENV Gegevensdelingsbeleid — Model GLS v1.0",
+          "section": "GDB-008",
+          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "gdb_gls",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "GDB-008"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "GDB-009",
+      "name": "GLS-code uniek per organisatie",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JENV Gegevensdelingsbeleid — Model GLS v1.0",
+          "section": "GDB-009",
+          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "gdb_gls",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "GDB-009"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "GDB-010",
+      "name": "Datamaskering bij ongeautoriseerde toegang",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JENV Gegevensdelingsbeleid — JENV implementatiehandreiding v1.0",
+          "section": "GDB-010",
+          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "gdb_beveiliging",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "GDB-010"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "GDB-011",
+      "name": "Crisissituatie — versnelde gegevensdeling toegestaan",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JENV Gegevensdelingsbeleid — JENV gegevensdelingsbeleid v1.0",
+          "section": "GDB-011",
+          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "gdb_crisis",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "GDB-011"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "GDB-012",
+      "name": "Verstrekker verantwoordelijk voor doelbinding",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JENV Gegevensdelingsbeleid — JENV gegevensdelingsbeleid v1.0",
+          "section": "GDB-012",
+          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "gdb_rol",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "GDB-012"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "GDB-013",
+      "name": "Ontvanger mag gegevens niet hergebruiken buiten doel",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JENV Gegevensdelingsbeleid — JENV gegevensdelingsbeleid v1.0",
+          "section": "GDB-013",
+          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "gdb_rol",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "GDB-013"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "GDB-014",
+      "name": "Gegevensclassificatie vooraf bepaald",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JENV Gegevensdelingsbeleid — JENV gegevensdelingsbeleid v1.0",
+          "section": "GDB-014",
+          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "gdb_classificatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "GDB-014"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "GDB-015",
+      "name": "Bewaartermijn in GLP opgenomen",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JENV Gegevensdelingsbeleid — AVG art. 5 lid 1e",
+          "section": "GDB-015",
+          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "gdb_bewaartermijn",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "GDB-015"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "GDB-016",
+      "name": "Verwerkersovereenkomst bij externe verwerking",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JENV Gegevensdelingsbeleid — AVG art. 28",
+          "section": "GDB-016",
+          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "gdb_verwerking",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "GDB-016"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "GDB-017",
+      "name": "Geautomatiseerde gegevensdeling via API (Digikoppeling)",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JENV Gegevensdelingsbeleid — NORA / Digikoppeling",
+          "section": "GDB-017",
+          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "gdb_techniek",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "GDB-017"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "GDB-018",
+      "name": "Audit trail van gegevensdeling verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JENV Gegevensdelingsbeleid — AVG art. 30",
+          "section": "GDB-018",
+          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "gdb_audit",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "GDB-018"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "GDB-019",
+      "name": "Beveiligingsmaatregelen conform BIO2",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JENV Gegevensdelingsbeleid — BIO2 / ISO 27001",
+          "section": "GDB-019",
+          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "gdb_beveiliging",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "GDB-019"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "GDB-020",
+      "name": "Privacy by design bij gegevensdeling systemen",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "JENV Gegevensdelingsbeleid — AVG art. 25",
+          "section": "GDB-020",
+          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "gdb_privacy",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "GDB-020"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "GDB-SC-GDB-001",
+      "description": "Anonimisering verplicht bij publicatie",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "GDB-001"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "gdb_anonimisering",
+        "appliedRules": [
+          "GDB-001"
+        ]
+      }
+    },
+    {
+      "id": "GDB-SC-GDB-002",
+      "description": "BIV-classificatie verplicht",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "GDB-002"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "gdb_classificatie",
+        "appliedRules": [
+          "GDB-002"
+        ]
+      }
+    },
+    {
+      "id": "GDB-SC-GDB-003",
+      "description": "Bijzondere persoonsgegeven — extra bescherming",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "GDB-003"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "gdb_persoonsgegevens",
+        "appliedRules": [
+          "GDB-003"
+        ]
+      }
+    },
+    {
+      "id": "GDB-SC-GDB-004",
+      "description": "Doelbinding — vooraf bepaald en welomschreven",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "GDB-004"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "gdb_doelbinding",
+        "appliedRules": [
+          "GDB-004"
+        ]
+      }
+    },
+    {
+      "id": "GDB-SC-GDB-005",
+      "description": "Gegevensleveringsprotocol (GLP) verplicht",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "GDB-005"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "gdb_glp",
+        "appliedRules": [
+          "GDB-005"
+        ]
+      }
+    },
+    {
+      "id": "GDB-SC-GDB-006",
+      "description": "GLP-code uniek per organisatie",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "GDB-006"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "gdb_glp",
+        "appliedRules": [
+          "GDB-006"
+        ]
+      }
+    },
+    {
+      "id": "GDB-SC-GDB-007",
+      "description": "GLP geldigheidsduur met begin- en einddatum",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "GDB-007"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "gdb_glp",
+        "appliedRules": [
+          "GDB-007"
+        ]
+      }
+    },
+    {
+      "id": "GDB-SC-GDB-008",
+      "description": "Gegevensleveringsspecificatie (GLS) verplicht",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "GDB-008"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "gdb_gls",
+        "appliedRules": [
+          "GDB-008"
+        ]
+      }
+    },
+    {
+      "id": "GDB-SC-GDB-009",
+      "description": "GLS-code uniek per organisatie",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "GDB-009"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "gdb_gls",
+        "appliedRules": [
+          "GDB-009"
+        ]
+      }
+    },
+    {
+      "id": "GDB-SC-GDB-010",
+      "description": "Datamaskering bij ongeautoriseerde toegang",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "GDB-010"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "gdb_beveiliging",
+        "appliedRules": [
+          "GDB-010"
+        ]
+      }
+    },
+    {
+      "id": "GDB-SC-GDB-011",
+      "description": "Crisissituatie — versnelde gegevensdeling toegestaan",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "GDB-011"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "gdb_crisis",
+        "appliedRules": [
+          "GDB-011"
+        ]
+      }
+    },
+    {
+      "id": "GDB-SC-GDB-012",
+      "description": "Verstrekker verantwoordelijk voor doelbinding",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "GDB-012"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "gdb_rol",
+        "appliedRules": [
+          "GDB-012"
+        ]
+      }
+    },
+    {
+      "id": "GDB-SC-GDB-013",
+      "description": "Ontvanger mag gegevens niet hergebruiken buiten doel",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "GDB-013"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "gdb_rol",
+        "appliedRules": [
+          "GDB-013"
+        ]
+      }
+    },
+    {
+      "id": "GDB-SC-GDB-014",
+      "description": "Gegevensclassificatie vooraf bepaald",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "GDB-014"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "gdb_classificatie",
+        "appliedRules": [
+          "GDB-014"
+        ]
+      }
+    },
+    {
+      "id": "GDB-SC-GDB-015",
+      "description": "Bewaartermijn in GLP opgenomen",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "GDB-015"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "gdb_bewaartermijn",
+        "appliedRules": [
+          "GDB-015"
+        ]
+      }
+    }
+  ],
+  "transitionRules": [],
+  "metadata": {
+    "juridischeContext": {
+      "wet": "JENV Gegevensdelingsbeleid",
+      "wetBwbrId": "BWBR0086930",
+      "wetVersieLaatstGecheckt": "2026-07-05",
+      "tariefVersie": "1.1.2"
+    },
+    "juristAccordering": {
+      "geaccondeerdDoor": "D. Landman (approved v1.1.0)",
+      "datum": "2026-07-05",
+      "geldigTot": "2027-07-05",
+      "versie": "2025.1"
+    },
+    "bronverificatieDatum": "2026-07-05",
+    "acceptatieType": "full"
+  }
+}

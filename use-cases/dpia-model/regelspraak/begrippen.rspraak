@@ -1,0 +1,6 @@
+// Begrippenmodel — DPIA Model Rijksdienst v3.0
+
+begrip regelId: "Unieke identificatie." type: tekst.
+begrip categorie: "Categorie." waarden: vereiste, prescan, criteria, grondslag, akkoord, advies, risico, maatregelen, bewaartermijn, doorgifte, specifiek, status, dossier, versie, betrokkenen, persoonsgegevens.
+begrip compliant: "Voldoet?" waarden: ja, nee, onbekend.
+begrip dpiaVereist: "Is DPIA vereist?" waarden: ja, nee, misschien.

@@ -1,0 +1,1262 @@
+{
+  "schemaVersion": "1.0.0",
+  "ruleSetId": "dpia-model",
+  "version": "2025.1",
+  "validFrom": "2025-01-01",
+  "validUntil": "2026-12-31",
+  "jurisdiction": "NL",
+  "domain": "dpia-model",
+  "procedureType": "dagvaarding",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "DPIA-001",
+      "name": "DPIA vereist bij grootschalige verwerking",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DPIA Model Rijksdienst — AVG art. 35",
+          "section": "DPIA-001",
+          "url": "https://modellen.jenvgegevens.nl/dpia"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "dpia_vereiste",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DPIA-001"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DPIA-002",
+      "name": "DPIA vereist bij systematische monitoring",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DPIA Model Rijksdienst — AVG art. 35 lid 1c",
+          "section": "DPIA-002",
+          "url": "https://modellen.jenvgegevens.nl/dpia"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "dpia_vereiste",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DPIA-002"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DPIA-003",
+      "name": "DPIA vereist bij geautomatiseerde besluitvorming",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DPIA Model Rijksdienst — AVG art. 35 lid 1a",
+          "section": "DPIA-003",
+          "url": "https://modellen.jenvgegevens.nl/dpia"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "dpia_vereiste",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DPIA-003"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DPIA-004",
+      "name": "DPIA vereist bij bijzondere persoonsgegevens grootschalig",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DPIA Model Rijksdienst — AVG art. 35 lid 1b",
+          "section": "DPIA-004",
+          "url": "https://modellen.jenvgegevens.nl/dpia"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "dpia_vereiste",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DPIA-004"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DPIA-005",
+      "name": "DPIA vereist bij publieke cloudvoorziening",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DPIA Model Rijksdienst — Cloudbeleid Rijk",
+          "section": "DPIA-005",
+          "url": "https://modellen.jenvgegevens.nl/dpia"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "dpia_vereiste",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DPIA-005"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DPIA-006",
+      "name": "Pre-scan DPIA bij twijfel over verplichting",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DPIA Model Rijksdienst — Model DPIA Rijksdienst",
+          "section": "DPIA-006",
+          "url": "https://modellen.jenvgegevens.nl/dpia"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "dpia_prescan",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DPIA-006"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DPIA-007",
+      "name": "EDPB criteria — 2 criteria = DPIA verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DPIA Model Rijksdienst — EDPB",
+          "section": "DPIA-007",
+          "url": "https://modellen.jenvgegevens.nl/dpia"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "dpia_criteria",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DPIA-007"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DPIA-008",
+      "name": "EDPB criteria — 1 criterium = beoordelen",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DPIA Model Rijksdienst — EDPB",
+          "section": "DPIA-008",
+          "url": "https://modellen.jenvgegevens.nl/dpia"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "dpia_criteria",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DPIA-008"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DPIA-009",
+      "name": "Verwerkingsgrondslag toestemming",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DPIA Model Rijksdienst — AVG art. 6 lid 1a",
+          "section": "DPIA-009",
+          "url": "https://modellen.jenvgegevens.nl/dpia"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "dpia_grondslag",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DPIA-009"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DPIA-010",
+      "name": "Verwerkingsgrondslag overeenkomst",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DPIA Model Rijksdienst — AVG art. 6 lid 1b",
+          "section": "DPIA-010",
+          "url": "https://modellen.jenvgegevens.nl/dpia"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "dpia_grondslag",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DPIA-010"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DPIA-011",
+      "name": "Verwerkingsgrondslag wettelijke verplichting",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DPIA Model Rijksdienst — AVG art. 6 lid 1c",
+          "section": "DPIA-011",
+          "url": "https://modellen.jenvgegevens.nl/dpia"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "dpia_grondslag",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DPIA-011"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DPIA-012",
+      "name": "Verwerkingsgrondslag vitaal belang",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DPIA Model Rijksdienst — AVG art. 6 lid 1d",
+          "section": "DPIA-012",
+          "url": "https://modellen.jenvgegevens.nl/dpia"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "dpia_grondslag",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DPIA-012"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DPIA-013",
+      "name": "Verwerkingsgrondslag taak algemeen belang",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DPIA Model Rijksdienst — AVG art. 6 lid 1e",
+          "section": "DPIA-013",
+          "url": "https://modellen.jenvgegevens.nl/dpia"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "dpia_grondslag",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DPIA-013"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DPIA-014",
+      "name": "Verwerkingsgrondslag gerechtvaardigd belang",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DPIA Model Rijksdienst — AVG art. 6 lid 1f",
+          "section": "DPIA-014",
+          "url": "https://modellen.jenvgegevens.nl/dpia"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "dpia_grondslag",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DPIA-014"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DPIA-015",
+      "name": "Akkoordverklaring verplicht voor alle verwerkingsverantwoordelijken",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DPIA Model Rijksdienst — Rapportagemodel DPIA",
+          "section": "DPIA-015",
+          "url": "https://modellen.jenvgegevens.nl/dpia"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "dpia_akkoord",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DPIA-015"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DPIA-016",
+      "name": "Advies FG verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DPIA Model Rijksdienst — AVG / Model DPIA Rijksdienst",
+          "section": "DPIA-016",
+          "url": "https://modellen.jenvgegevens.nl/dpia"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "dpia_advies",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DPIA-016"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DPIA-017",
+      "name": "Risicoanalyse voor betrokkenen verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DPIA Model Rijksdienst — AVG art. 35 lid 7",
+          "section": "DPIA-017",
+          "url": "https://modellen.jenvgegevens.nl/dpia"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "dpia_risico",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DPIA-017"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DPIA-018",
+      "name": "Maatregelen ter mitigatie van risico's verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DPIA Model Rijksdienst — AVG art. 35 lid 7d",
+          "section": "DPIA-018",
+          "url": "https://modellen.jenvgegevens.nl/dpia"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "dpia_maatregelen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DPIA-018"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DPIA-019",
+      "name": "Bewaartermijn persoonsgegevens vastgesteld",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DPIA Model Rijksdienst — AVG art. 5 lid 1e",
+          "section": "DPIA-019",
+          "url": "https://modellen.jenvgegevens.nl/dpia"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "dpia_bewaartermijn",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DPIA-019"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DPIA-020",
+      "name": "Doorgifte naar derde land beoordeeld",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DPIA Model Rijksdienst — AVG art. 44-50",
+          "section": "DPIA-020",
+          "url": "https://modellen.jenvgegevens.nl/dpia"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "dpia_doorgifte",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DPIA-020"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DPIA-021",
+      "name": "DPIA met algoritme — extra risicoanalyse",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DPIA Model Rijksdienst — Model DPIA Rijksdienst",
+          "section": "DPIA-021",
+          "url": "https://modellen.jenvgegevens.nl/dpia"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "dpia_specifiek",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DPIA-021"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DPIA-022",
+      "name": "DPIA met big data — extra risicoanalyse",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DPIA Model Rijksdienst — Model DPIA Rijksdienst",
+          "section": "DPIA-022",
+          "url": "https://modellen.jenvgegevens.nl/dpia"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "dpia_specifiek",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DPIA-022"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DPIA-023",
+      "name": "DPIA met cloud — extra risicoanalyse",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DPIA Model Rijksdienst — Model DPIA Rijksdienst",
+          "section": "DPIA-023",
+          "url": "https://modellen.jenvgegevens.nl/dpia"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "dpia_specifiek",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DPIA-023"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DPIA-024",
+      "name": "DPIA met profilering — extra risicoanalyse",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DPIA Model Rijksdienst — AVG art. 4 lid 4",
+          "section": "DPIA-024",
+          "url": "https://modellen.jenvgegevens.nl/dpia"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "dpia_specifiek",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DPIA-024"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DPIA-025",
+      "name": "DPIA met geautomatiseerde besluitvorming — extra risicoanalyse",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DPIA Model Rijksdienst — AVG art. 22",
+          "section": "DPIA-025",
+          "url": "https://modellen.jenvgegevens.nl/dpia"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "dpia_specifiek",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DPIA-025"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DPIA-026",
+      "name": "DPIA status: Akkoord vereist alle akkoordverklaringen",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DPIA Model Rijksdienst — Rapportagemodel DPIA",
+          "section": "DPIA-026",
+          "url": "https://modellen.jenvgegevens.nl/dpia"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "dpia_status",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DPIA-026"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DPIA-027",
+      "name": "DPIA dossier met alle documenten verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DPIA Model Rijksdienst — Model DPIA Rijksdienst",
+          "section": "DPIA-027",
+          "url": "https://modellen.jenvgegevens.nl/dpia"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "dpia_dossier",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DPIA-027"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DPIA-028",
+      "name": "Versiebeheer DPIA verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DPIA Model Rijksdienst — Model DPIA Rijksdienst",
+          "section": "DPIA-028",
+          "url": "https://modellen.jenvgegevens.nl/dpia"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "dpia_versie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DPIA-028"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DPIA-029",
+      "name": "Kwetsbaarheid betrokkenen categorie vastgelegd",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DPIA Model Rijksdienst — Model DPIA Rijksdienst",
+          "section": "DPIA-029",
+          "url": "https://modellen.jenvgegevens.nl/dpia"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "dpia_betrokkenen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DPIA-029"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DPIA-030",
+      "name": "Nationale identificatienummers — extra bescherming",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DPIA Model Rijksdienst — AVG art. 87",
+          "section": "DPIA-030",
+          "url": "https://modellen.jenvgegevens.nl/dpia"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "dpia_persoonsgegevens",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DPIA-030"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "DPIA-SC-DPIA-001",
+      "description": "DPIA vereist bij grootschalige verwerking",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "DPIA-001"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "dpia_vereiste",
+        "appliedRules": [
+          "DPIA-001"
+        ]
+      }
+    },
+    {
+      "id": "DPIA-SC-DPIA-002",
+      "description": "DPIA vereist bij systematische monitoring",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "DPIA-002"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "dpia_vereiste",
+        "appliedRules": [
+          "DPIA-002"
+        ]
+      }
+    },
+    {
+      "id": "DPIA-SC-DPIA-003",
+      "description": "DPIA vereist bij geautomatiseerde besluitvorming",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "DPIA-003"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "dpia_vereiste",
+        "appliedRules": [
+          "DPIA-003"
+        ]
+      }
+    },
+    {
+      "id": "DPIA-SC-DPIA-004",
+      "description": "DPIA vereist bij bijzondere persoonsgegevens grootschalig",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "DPIA-004"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "dpia_vereiste",
+        "appliedRules": [
+          "DPIA-004"
+        ]
+      }
+    },
+    {
+      "id": "DPIA-SC-DPIA-005",
+      "description": "DPIA vereist bij publieke cloudvoorziening",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "DPIA-005"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "dpia_vereiste",
+        "appliedRules": [
+          "DPIA-005"
+        ]
+      }
+    },
+    {
+      "id": "DPIA-SC-DPIA-006",
+      "description": "Pre-scan DPIA bij twijfel over verplichting",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "DPIA-006"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "dpia_prescan",
+        "appliedRules": [
+          "DPIA-006"
+        ]
+      }
+    },
+    {
+      "id": "DPIA-SC-DPIA-007",
+      "description": "EDPB criteria — 2 criteria = DPIA verplicht",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "DPIA-007"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "dpia_criteria",
+        "appliedRules": [
+          "DPIA-007"
+        ]
+      }
+    },
+    {
+      "id": "DPIA-SC-DPIA-008",
+      "description": "EDPB criteria — 1 criterium = beoordelen",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "DPIA-008"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "dpia_criteria",
+        "appliedRules": [
+          "DPIA-008"
+        ]
+      }
+    },
+    {
+      "id": "DPIA-SC-DPIA-009",
+      "description": "Verwerkingsgrondslag toestemming",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "DPIA-009"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "dpia_grondslag",
+        "appliedRules": [
+          "DPIA-009"
+        ]
+      }
+    },
+    {
+      "id": "DPIA-SC-DPIA-010",
+      "description": "Verwerkingsgrondslag overeenkomst",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "DPIA-010"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "dpia_grondslag",
+        "appliedRules": [
+          "DPIA-010"
+        ]
+      }
+    },
+    {
+      "id": "DPIA-SC-DPIA-011",
+      "description": "Verwerkingsgrondslag wettelijke verplichting",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "DPIA-011"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "dpia_grondslag",
+        "appliedRules": [
+          "DPIA-011"
+        ]
+      }
+    },
+    {
+      "id": "DPIA-SC-DPIA-012",
+      "description": "Verwerkingsgrondslag vitaal belang",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "DPIA-012"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "dpia_grondslag",
+        "appliedRules": [
+          "DPIA-012"
+        ]
+      }
+    },
+    {
+      "id": "DPIA-SC-DPIA-013",
+      "description": "Verwerkingsgrondslag taak algemeen belang",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "DPIA-013"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "dpia_grondslag",
+        "appliedRules": [
+          "DPIA-013"
+        ]
+      }
+    },
+    {
+      "id": "DPIA-SC-DPIA-014",
+      "description": "Verwerkingsgrondslag gerechtvaardigd belang",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "DPIA-014"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "dpia_grondslag",
+        "appliedRules": [
+          "DPIA-014"
+        ]
+      }
+    },
+    {
+      "id": "DPIA-SC-DPIA-015",
+      "description": "Akkoordverklaring verplicht voor alle verwerkingsverantwoordelijken",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "DPIA-015"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "dpia_akkoord",
+        "appliedRules": [
+          "DPIA-015"
+        ]
+      }
+    }
+  ],
+  "transitionRules": [],
+  "metadata": {
+    "juridischeContext": {
+      "wet": "DPIA Model Rijksdienst",
+      "wetBwbrId": "BWBR0086931",
+      "wetVersieLaatstGecheckt": "2026-07-05",
+      "tariefVersie": "1.0.0"
+    },
+    "juristAccordering": {
+      "geaccondeerdDoor": "D. Landman (approved v1.1.0)",
+      "datum": "2026-07-05",
+      "geldigTot": "2027-07-05",
+      "versie": "2025.1"
+    },
+    "bronverificatieDatum": "2026-07-05",
+    "acceptatieType": "full"
+  }
+}

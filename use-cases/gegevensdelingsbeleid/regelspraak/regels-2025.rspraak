@@ -1,0 +1,143 @@
+// JENV Gegevensdelingsbeleid — RegelSpraak CNL
+// Bron: modellen.jenvgegevens.nl/gegevensdelingsbeleid v1.1.2
+
+regel GDB-001 "Anonimisering verplicht bij publicatie":
+  als regelId is "GDB-001"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "anonimisering"
+  en is bron "art. 2 lid 7, EU richtlijn 2019/1024".
+
+regel GDB-002 "BIV-classificatie verplicht":
+  als regelId is "GDB-002"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "classificatie"
+  en is bron "ISO 27000".
+
+regel GDB-003 "Bijzondere persoonsgegeven — extra bescherming":
+  als regelId is "GDB-003"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "persoonsgegevens"
+  en is bron "art. 9 AVG".
+
+regel GDB-004 "Doelbinding — vooraf bepaald en welomschreven":
+  als regelId is "GDB-004"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "doelbinding"
+  en is bron "JENV gegevensdelingsbeleid v1.0".
+
+regel GDB-005 "Gegevensleveringsprotocol (GLP) verplicht":
+  als regelId is "GDB-005"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "glp"
+  en is bron "Model GLP v1.0".
+
+regel GDB-006 "GLP-code uniek per organisatie":
+  als regelId is "GDB-006"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "glp"
+  en is bron "Model GLP v1.0".
+
+regel GDB-007 "GLP geldigheidsduur met begin- en einddatum":
+  als regelId is "GDB-007"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "glp"
+  en is bron "Model GLP v1.0".
+
+regel GDB-008 "Gegevensleveringsspecificatie (GLS) verplicht":
+  als regelId is "GDB-008"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "gls"
+  en is bron "Model GLS v1.0".
+
+regel GDB-009 "GLS-code uniek per organisatie":
+  als regelId is "GDB-009"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "gls"
+  en is bron "Model GLS v1.0".
+
+regel GDB-010 "Datamaskering bij ongeautoriseerde toegang":
+  als regelId is "GDB-010"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "beveiliging"
+  en is bron "JENV implementatiehandreiding v1.0".
+
+regel GDB-011 "Crisissituatie — versnelde gegevensdeling toegestaan":
+  als regelId is "GDB-011"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "crisis"
+  en is bron "JENV gegevensdelingsbeleid v1.0".
+
+regel GDB-012 "Verstrekker verantwoordelijk voor doelbinding":
+  als regelId is "GDB-012"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "rol"
+  en is bron "JENV gegevensdelingsbeleid v1.0".
+
+regel GDB-013 "Ontvanger mag gegevens niet hergebruiken buiten doel":
+  als regelId is "GDB-013"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "rol"
+  en is bron "JENV gegevensdelingsbeleid v1.0".
+
+regel GDB-014 "Gegevensclassificatie vooraf bepaald":
+  als regelId is "GDB-014"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "classificatie"
+  en is bron "JENV gegevensdelingsbeleid v1.0".
+
+regel GDB-015 "Bewaartermijn in GLP opgenomen":
+  als regelId is "GDB-015"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "bewaartermijn"
+  en is bron "AVG art. 5 lid 1e".
+
+regel GDB-016 "Verwerkersovereenkomst bij externe verwerking":
+  als regelId is "GDB-016"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "verwerking"
+  en is bron "AVG art. 28".
+
+regel GDB-017 "Geautomatiseerde gegevensdeling via API (Digikoppeling)":
+  als regelId is "GDB-017"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "techniek"
+  en is bron "NORA / Digikoppeling".
+
+regel GDB-018 "Audit trail van gegevensdeling verplicht":
+  als regelId is "GDB-018"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "audit"
+  en is bron "AVG art. 30".
+
+regel GDB-019 "Beveiligingsmaatregelen conform BIO2":
+  als regelId is "GDB-019"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "beveiliging"
+  en is bron "BIO2 / ISO 27001".
+
+regel GDB-020 "Privacy by design bij gegevensdeling systemen":
+  als regelId is "GDB-020"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "privacy"
+  en is bron "AVG art. 25".
+
