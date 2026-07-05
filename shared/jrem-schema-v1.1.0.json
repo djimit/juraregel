@@ -540,6 +540,5 @@
       "description": "European Legislation Identifier",
       "format": "uri"
     }
-  },
-  "\\$id": "https://juraregel.nl/schemas/jrem/v1.1.0"
+  }
 }
