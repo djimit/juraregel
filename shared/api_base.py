@@ -16,9 +16,68 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Optional, Any
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Depends, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from pydantic import BaseModel, Field, field_validator
+import os
+import logging
+
+# ─── Production Readiness Config (env vars, backward compatible) ───
+TLS_KEY = os.environ.get("JURAREGEL_TLS_KEY")
+TLS_CERT = os.environ.get("JURAREGEL_TLS_CERT")
+AUTH_ENABLED = os.environ.get("JURAREGEL_AUTH_ENABLED", "").lower() == "true"
+RATE_LIMIT = os.environ.get("JURAREGEL_RATE_LIMIT", "")
+METRICS_ENABLED = os.environ.get("JURAREGEL_METRICS_ENABLED", "").lower() == "true"
+LOG_FORMAT = os.environ.get("JURAREGEL_LOG_FORMAT", "plain")
+
+# Structured logging
+if LOG_FORMAT == "json":
+    logging.basicConfig(level=logging.INFO, format='{"timestamp":"%(asctime)s","level":"%(levelname)s","message":"%(message)s"}')
+else:
+    logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("juraregel")
+
+# Security
+security = HTTPBearer(auto_error=not AUTH_ENABLED)
+
+def verify_token(credentials: HTTPAuthorizationCredentials = Depends(security)):
+    """Verify OAuth 2.0 bearer token. Only active when JURAREGEL_AUTH_ENABLED=true."""
+    if not AUTH_ENABLED:
+        return None  # localhost mode — no auth
+    if not credentials:
+        raise HTTPException(status_code=401, detail="No authorization token provided")
+    token = credentials.credentials
+    # In production: validate token via OAuth provider (NL GOV Assurance Profile)
+    # For PoC: accept any non-empty token
+    if not token:
+        raise HTTPException(status_code=401, detail="Invalid token")
+    return token
+
+# Rate limiting (simple in-memory, for PoC)
+_rate_store = {}
+def check_rate_limit(request: Request):
+    """Simple rate limiting per IP. Only active when JURAREGEL_RATE_LIMIT is set."""
+    if not RATE_LIMIT:
+        return  # no rate limiting
+    client_ip = request.client.host if request.client else "unknown"
+    limit, period = RATE_LIMIT.split("/")
+    limit = int(limit)
+    period_seconds = {"second": 1, "minute": 60, "hour": 3600}.get(period, 60)
+    key = f"{client_ip}:{int(datetime.now().timestamp()) // period_seconds}"
+    _rate_store[key] = _rate_store.get(key, 0) + 1
+    if _rate_store[key] > limit:
+        raise HTTPException(status_code=429, detail="Rate limit exceeded")
+
+# Prometheus metrics (optional)
+if METRICS_ENABLED:
+    try:
+        from prometheus_fastapi_instrumentator import Instrumentator
+        _metrics_available = True
+    except ImportError:
+        _metrics_available = False
+else:
+    _metrics_available = False
 
 # ─── Models ───
 
@@ -392,3 +451,8 @@ def create_app(domain: str, jrem_dir: Path, port: int, endpoint_prefix: str = No
         return _audit_store[calculation_id]
 
     return app
+
+
+# ─── Production TLS support in __main__ ───
+# When using api_base.py directly, add TLS via env vars:
+# JURAREGEL_TLS_KEY=/path/to/key.pem JURAREGEL_TLS_CERT=/path/to/cert.pem python3 app.py

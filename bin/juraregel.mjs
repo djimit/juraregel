@@ -13,7 +13,7 @@ const commands = {
   check: "Run CI gates: juraregel check [use-case]",
   serve: "Start een Rule API: juraregel serve <use-case>",
   validate: "Valideer een JREM export: juraregel validate <jrem-file>",
-  help: "Toon dit overzicht"
+  generate: "Genereer JREM from parser: juraregel generate <domein>",\n  help: "Toon dit overzicht"
 };
 
 function help() {
@@ -58,6 +58,27 @@ async function serve(useCase) {
   execSync(`python3 use-cases/${useCase}/api/app.py`, { cwd: ROOT, stdio: "inherit" });
 }
 
+
+async function generate(domein) {
+  if (!domein) { console.error("Usage: juraregel generate <domein>"); process.exit(1); }
+  const parserMap = {
+    "bio2": "use-cases/bio2/lib/bio2_parser.py",
+    "forumstandaardisatie": "use-cases/forumstandaardisatie/lib/fs_parser.py",
+    "overheidsstandaarden": "use-cases/overheidsstandaarden/lib/os_parser.py",
+    "nora": "use-cases/nora/lib/nora_parser.py",
+    "eu-ai-act": "use-cases/eu-ai-act/lib/aiact_parser.py",
+    "avg-gdpr": "use-cases/avg-gdpr/lib/avg_parser.py",
+    "ncsc": "use-cases/ncsc/lib/ncsc_parser.py",
+    "nis2": "use-cases/nis2/lib/nis2_parser.py",
+  };
+  const parser = parserMap[domein];
+  if (!parser) { console.error(`No parser found for '${domein}'. Available: ${Object.keys(parserMap).join(", ")}`); process.exit(1); }
+  try {
+    execSync(`python3 ${parser}`, { cwd: ROOT, stdio: "inherit" });
+    console.log(`✅ Generated JREM for ${domein}`);
+  } catch { console.error(`Failed to generate for ${domein}`); process.exit(1); }
+}
+
 async function validate(jremFile) {
   if (!jremFile) { console.error("Usage: juraregel validate <jrem-file>"); process.exit(1); }
   try { execSync(`python3 shared/validate.py --schema shared/jrem-schema.json --instance ${jremFile}`, { cwd: ROOT, stdio: "inherit" }); }
@@ -69,7 +90,7 @@ switch (cmd) {
   case "init": await init(args[0], args[1]); break;
   case "check": await check(args[0]); break;
   case "serve": await serve(args[0]); break;
-  case "validate": await validate(args[0]); break;
+  case "validate": await validate(args[0]); break;\n  case "generate": await generate(args[0]); break;
   case "help": case "--help": case undefined: help(); break;
   default: console.error(`Unknown command: ${cmd}`); help(); process.exit(1);
 }

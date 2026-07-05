@@ -1,0 +1,1 @@
+JuraRegel — open-source Legal RuleOps Platform. 16 use cases, 444 regels, 10 domeinen (BIO2, NORA, NCSC, AVG, EU AI Act). Pseudonimisering engine: 100% op 25K uitspraken. TypeScript SDK. Docker. Playground: djimit.github.io/juraregel

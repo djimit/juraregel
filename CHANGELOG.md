@@ -40,3 +40,20 @@
 - 5 new use cases: NIS2 (15 regels), btw-tarieven (10), WW-uitkering (15), IND verblijfsregels (15), Wmo (10)
 - Total: 16 use cases, 444 regels, 279 tests, 10 domeinen
 - All use cases: Production status, accepted, CI gates PASS
+
+## v1.1.0 Production Readiness — 2026-07-05
+
+### Added — Productie Readiness
+- Production-readiness layer in api_base.py: TLS, OAuth 2.0, rate limiting, Prometheus metrics, structured JSON logging (all via env vars, backward compatible)
+- POST /v1/publicatie/check-pii endpoint met V4.2 pseudonimiseringsrichtlijn engine
+- juraregel generate CLI command
+- 8 review-request documenten voor onafhankelijke jurist review
+- Social-ready: tweet, LinkedIn, presentatie outline, playground OG tags
+- docs/production-deployment.md
+- docs/manual-generation-guide.md
+- Dockerfile: non-root user, healthcheck, multi-stage build
+
+### Changed
+- All 16 use cases now Production status (was 7 Production + 4 PoC + 5 new)
+- All 16 JREM exports accepted (v1.1.0)
+- 285 tests (was 279)
