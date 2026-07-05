@@ -43,8 +43,7 @@
           "input": {
             "maatregelId": "5.01.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -82,8 +81,7 @@
           "input": {
             "maatregelId": "5.01.02",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -121,8 +119,7 @@
           "input": {
             "maatregelId": "5.02.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -160,8 +157,7 @@
           "input": {
             "maatregelId": "5.02.02",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -199,8 +195,7 @@
           "input": {
             "maatregelId": "5.03.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -238,8 +233,7 @@
           "input": {
             "maatregelId": "5.04.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -277,8 +271,7 @@
           "input": {
             "maatregelId": "5.05.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -316,8 +309,7 @@
           "input": {
             "maatregelId": "5.06.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -355,8 +347,7 @@
           "input": {
             "maatregelId": "5.07.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -394,8 +385,7 @@
           "input": {
             "maatregelId": "5.08.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -433,8 +423,7 @@
           "input": {
             "maatregelId": "5.09.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -472,8 +461,7 @@
           "input": {
             "maatregelId": "5.10.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -511,8 +499,7 @@
           "input": {
             "maatregelId": "5.10.02",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -550,8 +537,7 @@
           "input": {
             "maatregelId": "5.10.03",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -589,8 +575,7 @@
           "input": {
             "maatregelId": "5.11.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -628,8 +613,7 @@
           "input": {
             "maatregelId": "5.12.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -667,8 +651,7 @@
           "input": {
             "maatregelId": "5.13.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -706,8 +689,7 @@
           "input": {
             "maatregelId": "5.14.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -745,8 +727,7 @@
           "input": {
             "maatregelId": "5.14.02",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -784,8 +765,7 @@
           "input": {
             "maatregelId": "5.14.03",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -823,8 +803,7 @@
           "input": {
             "maatregelId": "5.14.04",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -862,8 +841,7 @@
           "input": {
             "maatregelId": "5.14.05",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -901,8 +879,7 @@
           "input": {
             "maatregelId": "5.15.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -940,8 +917,7 @@
           "input": {
             "maatregelId": "5.16.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -979,8 +955,7 @@
           "input": {
             "maatregelId": "5.16.02",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -1018,8 +993,7 @@
           "input": {
             "maatregelId": "5.17.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -1057,8 +1031,7 @@
           "input": {
             "maatregelId": "5.17.02",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -1096,8 +1069,7 @@
           "input": {
             "maatregelId": "5.17.03",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -1135,8 +1107,7 @@
           "input": {
             "maatregelId": "5.18.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -1174,8 +1145,7 @@
           "input": {
             "maatregelId": "5.18.02",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -1213,8 +1183,7 @@
           "input": {
             "maatregelId": "5.19.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -1252,8 +1221,7 @@
           "input": {
             "maatregelId": "5.20.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -1291,8 +1259,7 @@
           "input": {
             "maatregelId": "5.20.02",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -1330,8 +1297,7 @@
           "input": {
             "maatregelId": "5.20.03",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -1369,8 +1335,7 @@
           "input": {
             "maatregelId": "5.20.04",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -1408,8 +1373,7 @@
           "input": {
             "maatregelId": "5.20.05",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -1447,8 +1411,7 @@
           "input": {
             "maatregelId": "5.20.06",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -1486,8 +1449,7 @@
           "input": {
             "maatregelId": "5.21.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -1525,8 +1487,7 @@
           "input": {
             "maatregelId": "5.21.02",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -1564,8 +1525,7 @@
           "input": {
             "maatregelId": "5.21.03",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -1603,8 +1563,7 @@
           "input": {
             "maatregelId": "5.21.04",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -1642,8 +1601,7 @@
           "input": {
             "maatregelId": "5.21.05",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -1681,8 +1639,7 @@
           "input": {
             "maatregelId": "5.22.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -1720,8 +1677,7 @@
           "input": {
             "maatregelId": "5.22.02",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -1759,8 +1715,7 @@
           "input": {
             "maatregelId": "5.23.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -1798,8 +1753,7 @@
           "input": {
             "maatregelId": "5.24.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -1837,8 +1791,7 @@
           "input": {
             "maatregelId": "5.24.02",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -1876,8 +1829,7 @@
           "input": {
             "maatregelId": "5.24.03",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -1915,8 +1867,7 @@
           "input": {
             "maatregelId": "5.24.04",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -1954,8 +1905,7 @@
           "input": {
             "maatregelId": "5.24.05",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -1993,8 +1943,7 @@
           "input": {
             "maatregelId": "5.24.07",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -2032,8 +1981,7 @@
           "input": {
             "maatregelId": "5.24.08",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -2071,8 +2019,7 @@
           "input": {
             "maatregelId": "5.26.02",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -2110,8 +2057,7 @@
           "input": {
             "maatregelId": "5.27.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -2149,8 +2095,7 @@
           "input": {
             "maatregelId": "5.27.02",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -2188,8 +2133,7 @@
           "input": {
             "maatregelId": "5.28.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -2227,8 +2171,7 @@
           "input": {
             "maatregelId": "5.29.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -2266,8 +2209,7 @@
           "input": {
             "maatregelId": "5.30.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -2305,8 +2247,7 @@
           "input": {
             "maatregelId": "5.30.02",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -2344,8 +2285,7 @@
           "input": {
             "maatregelId": "5.31.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -2383,8 +2323,7 @@
           "input": {
             "maatregelId": "5.32.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -2422,8 +2361,7 @@
           "input": {
             "maatregelId": "5.33.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -2461,8 +2399,7 @@
           "input": {
             "maatregelId": "5.34.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -2500,8 +2437,7 @@
           "input": {
             "maatregelId": "5.35.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -2539,8 +2475,7 @@
           "input": {
             "maatregelId": "5.35.02",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -2578,8 +2513,7 @@
           "input": {
             "maatregelId": "5.36.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -2617,8 +2551,7 @@
           "input": {
             "maatregelId": "5.37.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -2656,8 +2589,7 @@
           "input": {
             "maatregelId": "6.01.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -2695,8 +2627,7 @@
           "input": {
             "maatregelId": "6.02.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -2734,8 +2665,7 @@
           "input": {
             "maatregelId": "6.03.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -2773,8 +2703,7 @@
           "input": {
             "maatregelId": "6.03.02",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -2812,8 +2741,7 @@
           "input": {
             "maatregelId": "6.03.03",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -2851,8 +2779,7 @@
           "input": {
             "maatregelId": "6.03.04",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -2890,8 +2817,7 @@
           "input": {
             "maatregelId": "6.03.05",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -2929,8 +2855,7 @@
           "input": {
             "maatregelId": "6.04.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -2968,8 +2893,7 @@
           "input": {
             "maatregelId": "6.05.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -3007,8 +2931,7 @@
           "input": {
             "maatregelId": "6.06.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -3046,8 +2969,7 @@
           "input": {
             "maatregelId": "6.07.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -3085,8 +3007,7 @@
           "input": {
             "maatregelId": "6.08.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -3124,8 +3045,7 @@
           "input": {
             "maatregelId": "7.01.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -3163,8 +3083,7 @@
           "input": {
             "maatregelId": "7.01.02",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -3202,8 +3121,7 @@
           "input": {
             "maatregelId": "7.02.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -3241,8 +3159,7 @@
           "input": {
             "maatregelId": "7.03.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -3280,8 +3197,7 @@
           "input": {
             "maatregelId": "7.04.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -3319,8 +3235,7 @@
           "input": {
             "maatregelId": "7.05.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -3358,8 +3273,7 @@
           "input": {
             "maatregelId": "7.06.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -3397,8 +3311,7 @@
           "input": {
             "maatregelId": "7.07.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -3436,8 +3349,7 @@
           "input": {
             "maatregelId": "7.08.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -3475,8 +3387,7 @@
           "input": {
             "maatregelId": "7.09.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -3514,8 +3425,7 @@
           "input": {
             "maatregelId": "7.10.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -3553,8 +3463,7 @@
           "input": {
             "maatregelId": "7.10.02",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -3592,8 +3501,7 @@
           "input": {
             "maatregelId": "7.10.03",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -3631,8 +3539,7 @@
           "input": {
             "maatregelId": "7.11.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -3670,8 +3577,7 @@
           "input": {
             "maatregelId": "7.12.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -3709,8 +3615,7 @@
           "input": {
             "maatregelId": "7.13.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -3748,8 +3653,7 @@
           "input": {
             "maatregelId": "7.14.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -3787,8 +3691,7 @@
           "input": {
             "maatregelId": "8.01.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -3826,8 +3729,7 @@
           "input": {
             "maatregelId": "8.01.02",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -3865,8 +3767,7 @@
           "input": {
             "maatregelId": "8.02.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -3904,8 +3805,7 @@
           "input": {
             "maatregelId": "8.03.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -3943,8 +3843,7 @@
           "input": {
             "maatregelId": "8.03.02",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -3982,8 +3881,7 @@
           "input": {
             "maatregelId": "8.04.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -4021,8 +3919,7 @@
           "input": {
             "maatregelId": "8.05.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -4060,8 +3957,7 @@
           "input": {
             "maatregelId": "8.06.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -4099,8 +3995,7 @@
           "input": {
             "maatregelId": "8.07.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -4138,8 +4033,7 @@
           "input": {
             "maatregelId": "8.07.02",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -4177,8 +4071,7 @@
           "input": {
             "maatregelId": "8.07.03",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -4216,8 +4109,7 @@
           "input": {
             "maatregelId": "8.07.04",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -4255,8 +4147,7 @@
           "input": {
             "maatregelId": "8.08.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -4294,8 +4185,7 @@
           "input": {
             "maatregelId": "8.08.02",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -4333,8 +4223,7 @@
           "input": {
             "maatregelId": "8.08.03",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -4372,8 +4261,7 @@
           "input": {
             "maatregelId": "8.08.04",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -4411,8 +4299,7 @@
           "input": {
             "maatregelId": "8.08.05",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -4450,8 +4337,7 @@
           "input": {
             "maatregelId": "8.08.06",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -4489,8 +4375,7 @@
           "input": {
             "maatregelId": "8.09.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -4528,8 +4413,7 @@
           "input": {
             "maatregelId": "8.10.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -4567,8 +4451,7 @@
           "input": {
             "maatregelId": "8.11.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -4606,8 +4489,7 @@
           "input": {
             "maatregelId": "8.12.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -4645,8 +4527,7 @@
           "input": {
             "maatregelId": "8.13.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -4684,8 +4565,7 @@
           "input": {
             "maatregelId": "8.13.02",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -4723,8 +4603,7 @@
           "input": {
             "maatregelId": "8.13.03",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -4762,8 +4641,7 @@
           "input": {
             "maatregelId": "8.13.04",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -4801,8 +4679,7 @@
           "input": {
             "maatregelId": "8.14.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -4840,8 +4717,7 @@
           "input": {
             "maatregelId": "8.15.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -4879,8 +4755,7 @@
           "input": {
             "maatregelId": "8.15.02",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -4918,8 +4793,7 @@
           "input": {
             "maatregelId": "8.15.03",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -4957,8 +4831,7 @@
           "input": {
             "maatregelId": "8.15.04",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -4996,8 +4869,7 @@
           "input": {
             "maatregelId": "8.15.05",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -5035,8 +4907,7 @@
           "input": {
             "maatregelId": "8.15.06",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -5074,8 +4945,7 @@
           "input": {
             "maatregelId": "8.16.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -5113,8 +4983,7 @@
           "input": {
             "maatregelId": "8.16.02",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -5152,8 +5021,7 @@
           "input": {
             "maatregelId": "8.16.03",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -5191,8 +5059,7 @@
           "input": {
             "maatregelId": "8.16.04",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -5230,8 +5097,7 @@
           "input": {
             "maatregelId": "8.17.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -5269,8 +5135,7 @@
           "input": {
             "maatregelId": "8.18.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -5308,8 +5173,7 @@
           "input": {
             "maatregelId": "8.18.02",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -5347,8 +5211,7 @@
           "input": {
             "maatregelId": "8.19.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -5386,8 +5249,7 @@
           "input": {
             "maatregelId": "8.20.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -5425,8 +5287,7 @@
           "input": {
             "maatregelId": "8.20.02",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -5464,8 +5325,7 @@
           "input": {
             "maatregelId": "8.21.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -5503,8 +5363,7 @@
           "input": {
             "maatregelId": "8.21.02",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -5542,8 +5401,7 @@
           "input": {
             "maatregelId": "8.21.03",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -5581,8 +5439,7 @@
           "input": {
             "maatregelId": "8.21.04",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -5620,8 +5477,7 @@
           "input": {
             "maatregelId": "8.22.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -5659,8 +5515,7 @@
           "input": {
             "maatregelId": "8.23.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -5698,8 +5553,7 @@
           "input": {
             "maatregelId": "8.24.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -5737,8 +5591,7 @@
           "input": {
             "maatregelId": "8.24.02",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -5776,8 +5629,7 @@
           "input": {
             "maatregelId": "8.24.03",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -5815,8 +5667,7 @@
           "input": {
             "maatregelId": "8.24.04",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -5854,8 +5705,7 @@
           "input": {
             "maatregelId": "8.24.05",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -5893,8 +5743,7 @@
           "input": {
             "maatregelId": "8.25.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -5932,8 +5781,7 @@
           "input": {
             "maatregelId": "8.26.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -5971,8 +5819,7 @@
           "input": {
             "maatregelId": "8.27.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -6010,8 +5857,7 @@
           "input": {
             "maatregelId": "8.28.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -6049,8 +5895,7 @@
           "input": {
             "maatregelId": "8.29.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -6088,8 +5933,7 @@
           "input": {
             "maatregelId": "8.30.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -6127,8 +5971,7 @@
           "input": {
             "maatregelId": "8.31.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -6166,8 +6009,7 @@
           "input": {
             "maatregelId": "8.31.02",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -6205,8 +6047,7 @@
           "input": {
             "maatregelId": "8.32.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -6244,8 +6085,7 @@
           "input": {
             "maatregelId": "8.32.02",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -6283,8 +6123,7 @@
           "input": {
             "maatregelId": "8.33.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -6322,8 +6161,7 @@
           "input": {
             "maatregelId": "8.34.01",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     }

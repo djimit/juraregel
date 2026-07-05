@@ -36,8 +36,7 @@
         {
           "input": {
             "regelId": "DEBT-001"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -68,8 +67,7 @@
         {
           "input": {
             "regelId": "DEBT-002"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -100,8 +98,7 @@
         {
           "input": {
             "regelId": "DEBT-003"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -132,8 +129,7 @@
         {
           "input": {
             "regelId": "DEBT-004"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -164,8 +160,7 @@
         {
           "input": {
             "regelId": "DEBT-005"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -196,8 +191,7 @@
         {
           "input": {
             "regelId": "DEBT-006"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -228,8 +222,7 @@
         {
           "input": {
             "regelId": "DEBT-007"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -260,8 +253,7 @@
         {
           "input": {
             "regelId": "DEBT-008"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     }

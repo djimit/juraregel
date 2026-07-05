@@ -373,11 +373,6 @@
       },
       "outcome": {
         "individueleInkomenstoeslag": true,
-        "bedrag": {
-          "amount": 218.67,
-          "currency": "EUR",
-          "periode": "maandelijks"
-        },
         "confidence": "deterministic",
         "manualReviewRequired": false
       },

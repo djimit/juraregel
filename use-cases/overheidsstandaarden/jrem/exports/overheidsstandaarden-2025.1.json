@@ -37,8 +37,7 @@
           "input": {
             "standaardId": "OS-API-001",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -70,8 +69,7 @@
           "input": {
             "standaardId": "OS-API-002",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -103,8 +101,7 @@
           "input": {
             "standaardId": "OS-API-003",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -136,8 +133,7 @@
           "input": {
             "standaardId": "OS-API-004",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -169,8 +165,7 @@
           "input": {
             "standaardId": "OS-API-005",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -202,8 +197,7 @@
           "input": {
             "standaardId": "OS-API-006",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -235,8 +229,7 @@
           "input": {
             "standaardId": "OS-API-007",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -268,8 +261,7 @@
           "input": {
             "standaardId": "OS-API-008",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -301,8 +293,7 @@
           "input": {
             "standaardId": "OS-API-009",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -334,8 +325,7 @@
           "input": {
             "standaardId": "OS-API-010",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -367,8 +357,7 @@
           "input": {
             "standaardId": "OS-API-011",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -400,8 +389,7 @@
           "input": {
             "standaardId": "OS-API-012",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -433,8 +421,7 @@
           "input": {
             "standaardId": "OS-AUTH-001",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -466,8 +453,7 @@
           "input": {
             "standaardId": "OS-AUTH-002",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -499,8 +485,7 @@
           "input": {
             "standaardId": "OS-AUTH-003",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -532,8 +517,7 @@
           "input": {
             "standaardId": "OS-AUTH-004",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -565,8 +549,7 @@
           "input": {
             "standaardId": "OS-EVT-001",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -598,8 +581,7 @@
           "input": {
             "standaardId": "OS-EVT-002",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -631,8 +613,7 @@
           "input": {
             "standaardId": "OS-EVT-003",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -664,8 +645,7 @@
           "input": {
             "standaardId": "OS-DK-001",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -697,8 +677,7 @@
           "input": {
             "standaardId": "OS-DK-002",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -730,8 +709,7 @@
           "input": {
             "standaardId": "OS-DK-003",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -763,8 +741,7 @@
           "input": {
             "standaardId": "OS-DEV-001",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -796,8 +773,7 @@
           "input": {
             "standaardId": "OS-DEV-002",
             "implementatie": "ja"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     }

@@ -36,8 +36,7 @@
         {
           "input": {
             "regelId": "WMO-001"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -68,8 +67,7 @@
         {
           "input": {
             "regelId": "WMO-002"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -100,8 +98,7 @@
         {
           "input": {
             "regelId": "WMO-003"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -132,8 +129,7 @@
         {
           "input": {
             "regelId": "WMO-004"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -164,8 +160,7 @@
         {
           "input": {
             "regelId": "WMO-005"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -196,8 +191,7 @@
         {
           "input": {
             "regelId": "WMO-006"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -228,8 +222,7 @@
         {
           "input": {
             "regelId": "WMO-007"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -260,8 +253,7 @@
         {
           "input": {
             "regelId": "WMO-008"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -292,8 +284,7 @@
         {
           "input": {
             "regelId": "WMO-009"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -324,8 +315,7 @@
         {
           "input": {
             "regelId": "WMO-010"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     }

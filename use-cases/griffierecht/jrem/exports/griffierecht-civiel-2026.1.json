@@ -54,14 +54,12 @@
         {
           "input": {
             "vorderingWaarde": 5000
-          },
-          "expectedAmount": 91
+          }
         },
         {
           "input": {
             "vorderingWaarde": 25000
-          },
-          "expectedAmount": 91
+          }
         }
       ]
     },
@@ -112,8 +110,7 @@
         {
           "input": {
             "vorderingWaarde": 10000
-          },
-          "expectedAmount": 91
+          }
         }
       ]
     },
@@ -164,8 +161,7 @@
         {
           "input": {
             "vorderingWaarde": 50000
-          },
-          "expectedAmount": 727
+          }
         }
       ]
     },
@@ -204,8 +200,7 @@
         {
           "input": {
             "verweerStatus": "ingediend"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -255,8 +250,7 @@
         {
           "input": {
             "vorderingWaarde": "onbepaald"
-          },
-          "expectedAmount": 364
+          }
         }
       ]
     },
@@ -305,8 +299,7 @@
         {
           "input": {
             "vorderingWaarde": "onbepaald"
-          },
-          "expectedAmount": 727
+          }
         }
       ]
     },
@@ -359,14 +352,12 @@
         {
           "input": {
             "vorderingWaarde": 50000
-          },
-          "expectedAmount": 364
+          }
         },
         {
           "input": {
             "vorderingWaarde": 100000
-          },
-          "expectedAmount": 364
+          }
         }
       ]
     },
@@ -418,8 +409,7 @@
         {
           "input": {
             "vorderingWaarde": 75000
-          },
-          "expectedAmount": 727
+          }
         }
       ]
     },
@@ -472,20 +462,17 @@
         {
           "input": {
             "vorderingWaarde": 125000
-          },
-          "expectedAmount": 2803
+          }
         },
         {
           "input": {
             "vorderingWaarde": 500000
-          },
-          "expectedAmount": 2803
+          }
         },
         {
           "input": {
             "vorderingWaarde": 1000000
-          },
-          "expectedAmount": 2803
+          }
         }
       ]
     },
@@ -537,8 +524,7 @@
         {
           "input": {
             "vorderingWaarde": 500000
-          },
-          "expectedAmount": 3616
+          }
         }
       ]
     },
@@ -590,8 +576,7 @@
         {
           "input": {
             "vorderingWaarde": 1500000
-          },
-          "expectedAmount": 3616
+          }
         }
       ]
     },
@@ -642,8 +627,7 @@
         {
           "input": {
             "vorderingWaarde": 2000000
-          },
-          "expectedAmount": 5644
+          }
         }
       ]
     },
@@ -696,8 +680,7 @@
           "input": {
             "verweerStatus": "ingediend",
             "vorderingWaarde": "onbepaald"
-          },
-          "expectedAmount": 364
+          }
         }
       ]
     },
@@ -753,8 +736,7 @@
           "input": {
             "verweerStatus": "ingediend",
             "vorderingWaarde": 50000
-          },
-          "expectedAmount": 364
+          }
         }
       ]
     },
@@ -810,8 +792,7 @@
           "input": {
             "verweerStatus": "ingediend",
             "vorderingWaarde": 500000
-          },
-          "expectedAmount": 2803
+          }
         }
       ]
     },
@@ -866,8 +847,7 @@
           "input": {
             "verweerStatus": "ingediend",
             "vorderingWaarde": 2000000
-          },
-          "expectedAmount": 3616
+          }
         }
       ]
     },
@@ -908,8 +888,7 @@
         {
           "input": {
             "verweerStatus": "niet_ingediend"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     },
@@ -951,8 +930,7 @@
         {
           "input": {
             "verweerStatus": "onbekend"
-          },
-          "expectedAmount": 0
+          }
         }
       ]
     }

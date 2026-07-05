@@ -35,11 +35,6 @@
       },
       "outcome": {
         "recht": true,
-        "bedrag": {
-          "amount": 123,
-          "currency": "EUR",
-          "periode": "maandelijks"
-        },
         "confidence": "deterministic",
         "manualReviewRequired": false
       },
@@ -74,11 +69,6 @@
       },
       "outcome": {
         "recht": true,
-        "bedrag": {
-          "amount": 123,
-          "currency": "EUR",
-          "periode": "maandelijks"
-        },
         "confidence": "deterministic",
         "manualReviewRequired": false
       },
@@ -437,11 +427,6 @@
       },
       "outcome": {
         "recht": true,
-        "bedrag": {
-          "amount": 149,
-          "currency": "EUR",
-          "periode": "maandelijks"
-        },
         "confidence": "deterministic",
         "manualReviewRequired": false
       },
@@ -474,11 +459,6 @@
       },
       "outcome": {
         "recht": true,
-        "bedrag": {
-          "amount": 149,
-          "currency": "EUR",
-          "periode": "maandelijks"
-        },
         "confidence": "deterministic",
         "manualReviewRequired": false
       },
