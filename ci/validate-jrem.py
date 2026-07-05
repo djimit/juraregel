@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-import json, glob, sys
+import json, glob, sys, os
+
+CI_MODE = os.environ.get("JURAREGEL_CI_MODE", "pooc")
+STRICT = CI_MODE == "pooc"
 
 try:
     import jsonschema
@@ -11,6 +14,8 @@ with open("shared/jrem-core.json") as f:
     core_schema = json.load(f)
 
 errors = 0
+warnings = 0
+
 for f in sorted(glob.glob("use-cases/*/jrem/exports/*.json")):
     data = json.load(open(f))
 
@@ -18,7 +23,13 @@ for f in sorted(glob.glob("use-cases/*/jrem/exports/*.json")):
         print("  ERROR: {} missing schemaVersion".format(f))
         errors += 1
     elif data.get("schemaVersion") != "1.1.0":
-        print("  WARN: {} uses schemaVersion {}".format(f, data.get("schemaVersion")))
+        msg = "  {}: uses schemaVersion {}".format(f, data.get("schemaVersion"))
+        if STRICT:
+            print("ERROR" + msg)
+            errors += 1
+        else:
+            print("WARN" + msg)
+            warnings += 1
 
     if not data.get("rules"):
         print("  ERROR: {} has no rules".format(f))
@@ -26,6 +37,7 @@ for f in sorted(glob.glob("use-cases/*/jrem/exports/*.json")):
 
     if "approval" not in data:
         print("  WARN: {} missing approval object".format(f))
+        warnings += 1
 
     for rule in data.get("rules", []):
         rid = rule.get("ruleId", "?")
@@ -39,7 +51,14 @@ if HAS_JSONSCHEMA:
         try:
             jsonschema.validate(data, core_schema)
         except jsonschema.ValidationError as e:
-            print("  SCHEMA WARN: {}: {}".format(f, e.message[:80]))
+            msg = "  {}: {}".format(f, e.message[:80])
+            if STRICT:
+                print("ERROR" + msg)
+                errors += 1
+            else:
+                print("WARN" + msg)
+                warnings += 1
 
-print("Validated all JREM exports: {} errors".format(errors))
+print("Validated: {} errors, {} warnings".format(errors, warnings))
+print("CI mode: {}".format(CI_MODE))
 sys.exit(1 if errors > 0 else 0)

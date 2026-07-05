@@ -1235,5 +1235,6 @@
       "Zelf-geaccordeerd als PoC",
       "Niet geschikt voor productie zonder externe validatie"
     ]
-  }
+  },
+  "maturityLevel": "L0-demo"
 }

@@ -18,6 +18,20 @@ JuraRegel is een open-source platform voor het beheren, valideren, versioneren e
 
 > **Disclaimer:** JuraRegel is een proof-of-concept en architectuurprototype. Het is niet geschikt voor productiegebruik als juridisch besluitvormingsplatform zonder onafhankelijke juridische validatie.
 
+
+## Maturity Model
+
+JuraRegel gebruikt vier maturity-niveaus per use case:
+
+| Niveau | Naam | Criteria | CI Gedrag |
+|--------|------|----------|-----------|
+| L0 | Demo | Regels voorbeeldmatig, geen externe review | Warnings toegestaan |
+| L1 | PoC | Schema valideert, tests draaien, sourceRefs aanwezig | CI faalt bij errors, waarschuwt bij self-approval |
+| L2 | Pilot | Onafhankelijke juridische review, evidence model, auditlog | CI faalt bij self-approval |
+| L3 | Production | Legal sign-off, required checks, threat model, SBOM, OAuth2 | Volledige assurance pipeline |
+
+Huidige status: de meeste use cases zijn L1 (PoC). Griffierecht en publicatie zijn het dichtst bij L2.
+
 ## Wat JuraRegel doet
 
 - **Pseudonimiseringsrichtlijn Engine** — classificeert persoonsgegevens in uitspraken conform de richtlijn (particulier → pseudonimiseer, professional/organisatie/overheid → niet pseudonimiseer)

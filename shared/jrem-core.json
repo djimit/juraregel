@@ -31,8 +31,12 @@
       "format": "date"
     },
     "validUntil": {
-      "type": "string",
-      "format": "date"
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "description": "Geldig tot. null = nog niet verlopen"
     },
     "jurisdiction": {
       "type": "string"
