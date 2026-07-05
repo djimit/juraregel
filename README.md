@@ -3,9 +3,12 @@
 [![JuraRegel CI](https://github.com/djimit/juraregel/actions/workflows/juraregel-ci.yml/badge.svg)](https://github.com/djimit/juraregel/actions/workflows/juraregel-ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Use Cases](https://img.shields.io/badge/Use%20Cases-28-blue)](https://github.com/djimit/juraregel)
-[![Tests](https://img.shields.io/badge/Tests-438-green)](https://github.com/djimit/juraregel)
+[![Tests](https://img.shields.io/badge/Tests-451-green)](https://github.com/djimit/juraregel)
 [![Regels](https://img.shields.io/badge/JREM%20Regels-655-purple)](https://github.com/djimit/juraregel)
 [![Agentic](https://img.shields.io/badge/Agentic-Platform-orange)](https://github.com/djimit/juraregel)
+[![MCP](https://img.shields.io/badge/MCP-12%20tools%20%2B%203%20resources%20%2B%203%20prompts-teal)](https://github.com/djimit/juraregel)
+[![BDD](https://img.shields.io/badge/BDD-7%20scenarios-brightgreen)](https://github.com/djimit/juraregel)
+[![Schema](https://img.shields.io/badge/JREM-Schema%20v1.1.0-lightblue)](https://github.com/djimit/juraregel)
 
 > **Juridische regels die juristen schrijven en computers begrijpen.**
 >
@@ -16,9 +19,13 @@ JuraRegel is een open-source platform voor het beheren, valideren, versioneren e
 ## Wat JuraRegel doet
 
 - **Pseudonimiseringsrichtlijn Engine** — classificeert persoonsgegevens in uitspraken conform de richtlijn (particulier → pseudonimiseer, professional/organisatie/overheid → niet pseudonimiseer)
-- **JREM** — Judicial Rule Exchange Model, een open JSON Schema standaard voor juridische regels
+- **JREM** — Judicial Rule Exchange Model, versioned JSON Schema standaard (v1.0.0 → v1.1.0) voor juridische regels
 - **Rule APIs** — stateless, idempotente APIs met uitleg, bronverwijzingen en audit trail
-- **CI/CD Gates** — 14 gates die juridische kwaliteit afdwingen (brontraceability, coverage, acceptatie)
+- **MCP Server** — 12 tools + 3 resources + 3 prompts voor LLM-agents (Claude, GPT, lokale LLMs)
+- **Knowledge Base** — 655 regels semantisch doorzoekbaar (Qdrant vector store + SQLite FTS5)
+- **BDD Tests** — Gherkin scenarios voor legal team acceptatie (pytest-bdd)
+- **BWB Harvester** — automatische wetwijziging-detectie via BWB API
+- **CI/CD Gates** — 18+ gates: per-use-case (14), JKB (5), extraction (3), schema versioning, BDD, harvester health
 - **RegelSpraak** — Controlled Natural Language specificaties, leesbaar door juristen
 
 ## Pseudonimiseringsrichtlijn Engine
