@@ -1,0 +1,544 @@
+{
+  "ruleSetId": "participatiewet-2025",
+  "version": "2025.1",
+  "validFrom": "2025-07-01",
+  "validUntil": "2025-12-31",
+  "jurisdiction": "NL",
+  "domain": "participatiewet",
+  "procedureType": "bijstandsberekening",
+  "juristAccordering": {
+    "geaccondeerdDoor": "D. Landman",
+    "datum": "2025-07-05",
+    "status": "self-approved-poC",
+    "onafhankelijk": false
+  },
+  "rules": [
+    {
+      "ruleId": "PW-2025-001",
+      "name": "Bijstandsnorm alleenstaande — basisbedrag",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Participatiewet",
+          "section": "art. 21"
+        },
+        {
+          "type": "besluit",
+          "title": "Besluit bijstandsnormen 2025",
+          "section": "art. 2"
+        }
+      ],
+      "conditions": {
+        "huishoudenType": "alleenstaande",
+        "leeftijd": {
+          "gte": 21
+        }
+      },
+      "outcome": {
+        "bijstandsnorm": {
+          "amount": 1460.32,
+          "currency": "EUR",
+          "periode": "maandelijks"
+        },
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 100
+    },
+    {
+      "ruleId": "PW-2025-002",
+      "name": "Bijstandsnorm gehuwden — basisbedrag",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Participatiewet",
+          "section": "art. 21"
+        },
+        {
+          "type": "besluit",
+          "title": "Besluit bijstandsnormen 2025",
+          "section": "art. 2"
+        }
+      ],
+      "conditions": {
+        "huishoudenType": "gehuwden",
+        "leeftijd": {
+          "gte": 21
+        }
+      },
+      "outcome": {
+        "bijstandsnorm": {
+          "amount": 2087.48,
+          "currency": "EUR",
+          "periode": "maandelijks"
+        },
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 100
+    },
+    {
+      "ruleId": "PW-2025-003",
+      "name": "Bijstandsnorm alleenstaande ouder — basisbedrag",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Participatiewet",
+          "section": "art. 21"
+        },
+        {
+          "type": "besluit",
+          "title": "Besluit bijstandsnormen 2025",
+          "section": "art. 2"
+        }
+      ],
+      "conditions": {
+        "huishoudenType": "alleenstaande_ouder",
+        "leeftijd": {
+          "gte": 21
+        }
+      },
+      "outcome": {
+        "bijstandsnorm": {
+          "amount": 1768.47,
+          "currency": "EUR",
+          "periode": "maandelijks"
+        },
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 100
+    },
+    {
+      "ruleId": "PW-2025-004",
+      "name": "Vermogensgrens alleenstaande — max €7.120",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Participatiewet",
+          "section": "art. 23"
+        },
+        {
+          "type": "besluit",
+          "title": "Besluit vermogensgrenzen 2025",
+          "section": "art. 2"
+        }
+      ],
+      "conditions": {
+        "huishoudenType": "alleenstaande",
+        "vermogen": {
+          "lte": 7120
+        }
+      },
+      "outcome": {
+        "vermogenAkkoord": true,
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 260
+    },
+    {
+      "ruleId": "PW-2025-005",
+      "name": "Vermogensgrens alleenstaande — boven grens",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Participatiewet",
+          "section": "art. 23"
+        }
+      ],
+      "conditions": {
+        "huishoudenType": "alleenstaande",
+        "vermogen": {
+          "gt": 7120
+        }
+      },
+      "outcome": {
+        "vermogenAkkoord": false,
+        "reden": "Vermogen boven grens — geen recht op bijstand",
+        "confidence": "deterministic",
+        "manualReviewRequired": true
+      },
+      "priority": 270
+    },
+    {
+      "ruleId": "PW-2025-006",
+      "name": "Vermogensgrens gehuwden — max €14.240",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Participatiewet",
+          "section": "art. 23"
+        },
+        {
+          "type": "besluit",
+          "title": "Besluit vermogensgrenzen 2025",
+          "section": "art. 2"
+        }
+      ],
+      "conditions": {
+        "huishoudenType": "gehuwden",
+        "vermogen": {
+          "lte": 14240
+        }
+      },
+      "outcome": {
+        "vermogenAkkoord": true,
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 260
+    },
+    {
+      "ruleId": "PW-2025-007",
+      "name": "Vermogensgrens gehuwden — boven grens",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Participatiewet",
+          "section": "art. 23"
+        }
+      ],
+      "conditions": {
+        "huishoudenType": "gehuwden",
+        "vermogen": {
+          "gt": 14240
+        }
+      },
+      "outcome": {
+        "vermogenAkkoord": false,
+        "reden": "Vermogen boven grens — geen recht op bijstand",
+        "confidence": "deterministic",
+        "manualReviewRequired": true
+      },
+      "priority": 270
+    },
+    {
+      "ruleId": "PW-2025-008",
+      "name": "Kostendelersnorm van toepassing — medebewoner zonder zelfstandige huishouding",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Participatiewet",
+          "section": "art. 22"
+        },
+        {
+          "type": "besluit",
+          "title": "Besluit kostendelersnorm 2025",
+          "section": "art. 2"
+        }
+      ],
+      "conditions": {
+        "alleenstaande": true,
+        "medebewoners": {
+          "gt": 0
+        },
+        "medebewonerZelfstandigeHuishouding": false
+      },
+      "outcome": {
+        "kostendelersnorm": true,
+        "verlagingVanNorm": true,
+        "confidence": "deterministic",
+        "manualReviewRequired": true
+      },
+      "priority": 250
+    },
+    {
+      "ruleId": "PW-2025-009",
+      "name": "Kostendelersnorm niet van toepassing — alleenstaande zonder medebewoners",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Participatiewet",
+          "section": "art. 22"
+        }
+      ],
+      "conditions": {
+        "alleenstaande": true,
+        "medebewoners": 0
+      },
+      "outcome": {
+        "kostendelersnorm": false,
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 250
+    },
+    {
+      "ruleId": "PW-2025-010",
+      "name": "Vrijlating inkomen — eerste 4 maanden 100% vrijlating bij werk",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Participatiewet",
+          "section": "art. 31"
+        },
+        {
+          "type": "besluit",
+          "title": "Besluit vrijlating inkomsten 2025",
+          "section": "art. 3"
+        }
+      ],
+      "conditions": {
+        "inkomenUitWerk": true,
+        "maandenAanHetWerk": {
+          "lte": 4
+        }
+      },
+      "outcome": {
+        "vrijlatingPercentage": 100,
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 240
+    },
+    {
+      "ruleId": "PW-2025-011",
+      "name": "Vrijlating inkomen — maanden 5-12: deels vrijgelaten",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Participatiewet",
+          "section": "art. 31"
+        },
+        {
+          "type": "besluit",
+          "title": "Besluit vrijlating inkomsten 2025",
+          "section": "art. 3"
+        }
+      ],
+      "conditions": {
+        "inkomenUitWerk": true,
+        "maandenAanHetWerk": {
+          "gt": 4,
+          "lte": 12
+        }
+      },
+      "outcome": {
+        "vrijlatingPercentage": "afnemend_schaal",
+        "minVrijlating": 50,
+        "maxVrijlating": 100,
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 240
+    },
+    {
+      "ruleId": "PW-2025-012",
+      "name": "Vrijlating inkomen — na 12 maanden: minimumloon-vrijlating",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Participatiewet",
+          "section": "art. 31"
+        }
+      ],
+      "conditions": {
+        "inkomenUitWerk": true,
+        "maandenAanHetWerk": {
+          "gt": 12
+        }
+      },
+      "outcome": {
+        "vrijlatingPercentage": "minimumloon_regeling",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 240
+    },
+    {
+      "ruleId": "PW-2025-013",
+      "name": "Eigen bijdrage individuele inkomenstoeslag — alleenstaande 21-65",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Participatiewet",
+          "section": "art. 36"
+        }
+      ],
+      "conditions": {
+        "leeftijd": {
+          "gte": 21,
+          "lt": 65
+        },
+        "huishoudenType": "alleenstaande",
+        "alleenstaandMetLangeDuur": true
+      },
+      "outcome": {
+        "individueleInkomenstoeslag": true,
+        "bedrag": {
+          "amount": 218.67,
+          "currency": "EUR",
+          "periode": "maandelijks"
+        },
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 240
+    },
+    {
+      "ruleId": "PW-2025-014",
+      "name": "Geen bijstand onder 21 — verwijzing naar Jeugdwet of ouderlijk onderhoud",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Participatiewet",
+          "section": "art. 21"
+        }
+      ],
+      "conditions": {
+        "leeftijd": {
+          "lt": 21
+        }
+      },
+      "outcome": {
+        "bijstand": false,
+        "reden": "Onder 21 — verwijzing naar Jeugdwet of ouderlijk onderhoud",
+        "confidence": "deterministic",
+        "manualReviewRequired": true
+      },
+      "priority": 300
+    },
+    {
+      "ruleId": "PW-2025-015",
+      "name": "AOW-gerechtigde — IOAW in plaats van bijstand",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Participatiewet",
+          "section": "art. 20"
+        },
+        {
+          "type": "wet",
+          "title": "Ioaw"
+        }
+      ],
+      "conditions": {
+        "leeftijd": {
+          "gte": 65
+        },
+        "inkomen": {
+          "lt": "minimumloon"
+        }
+      },
+      "outcome": {
+        "bijstand": false,
+        "regeling": "IOAW",
+        "confidence": "deterministic",
+        "manualReviewRequired": true
+      },
+      "priority": 290
+    },
+    {
+      "ruleId": "PW-2025-016",
+      "name": "Verwijtbare werkloosheid — sanctionering",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Participatiewet",
+          "section": "art. 18"
+        }
+      ],
+      "conditions": {
+        "verwijtbareWerkloosheid": true
+      },
+      "outcome": {
+        "sanctie": true,
+        "maatregel": "verlaging_uitkering",
+        "duur": "1_tot_3_maanden",
+        "confidence": "deterministic",
+        "manualReviewRequired": true
+      },
+      "priority": 280
+    },
+    {
+      "ruleId": "PW-2025-017",
+      "name": "Sollicitatieplicht — actief zoeken naar werk",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Participatiewet",
+          "section": "art. 9"
+        }
+      ],
+      "conditions": {
+        "uitkeringOntvangen": true,
+        "arbeidsgeschikt": true
+      },
+      "outcome": {
+        "sollicitatieplicht": true,
+        "minSollicitatiesPerMaand": 4,
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 240
+    },
+    {
+      "ruleId": "PW-2025-018",
+      "name": "Tegenwerkingsplicht — meewerken aan begeleiding",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Participatiewet",
+          "section": "art. 9 lid 2"
+        }
+      ],
+      "conditions": {
+        "uitkeringOntvangen": true,
+        "arbeidsgeschikt": true,
+        "begeleidingsTraject": true
+      },
+      "outcome": {
+        "tegenwerkingsplicht": true,
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 240
+    },
+    {
+      "ruleId": "PW-2025-019",
+      "name": "Doelgroepregister — recht op banenafspraak / loonkostensubsidie",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Participatiewet",
+          "section": "art. 10"
+        }
+      ],
+      "conditions": {
+        "arbeidsbeperking": true,
+        "doelgroepregister": true
+      },
+      "outcome": {
+        "loonkostensubsidie": true,
+        "banenafspraak": true,
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 240
+    },
+    {
+      "ruleId": "PW-2025-020",
+      "name": "Beëindiging uitkering bij voldoende inkomen uit werk",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Participatiewet",
+          "section": "art. 17"
+        }
+      ],
+      "conditions": {
+        "inkomen": {
+          "gte": "bijstandsnorm"
+        }
+      },
+      "outcome": {
+        "beëindiging": true,
+        "reden": "Inkomen gelijk aan of boven bijstandsnorm",
+        "confidence": "deterministic",
+        "manualReviewRequired": true
+      },
+      "priority": 200
+    }
+  ]
+}

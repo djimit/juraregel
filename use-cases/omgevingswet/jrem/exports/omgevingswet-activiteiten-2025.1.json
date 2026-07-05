@@ -1,0 +1,556 @@
+{
+  "ruleSetId": "omgevingswet-activiteiten-2025",
+  "version": "2025.1",
+  "validFrom": "2024-01-01",
+  "validUntil": null,
+  "jurisdiction": "NL",
+  "domain": "omgevingswet",
+  "procedureType": "activiteit-toetsing",
+  "juristAccordering": {
+    "geaccondeerdDoor": "D. Landman",
+    "datum": "2025-07-05",
+    "status": "self-approved-poC",
+    "onafhankelijk": false
+  },
+  "rules": [
+    {
+      "ruleId": "OW-B-001",
+      "name": "Bouwen vergunningplichtig — bouwwerk > 5 meter",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Omgevingswet",
+          "section": "art. 5.1"
+        },
+        {
+          "type": "besluit",
+          "title": "Besluit activiteiten leefomgeving (Bal)",
+          "section": "art. 2.1"
+        }
+      ],
+      "conditions": {
+        "activiteit": "bouwen",
+        "bouwhoogte": {
+          "gt": 5
+        }
+      },
+      "outcome": {
+        "vergunningplichtig": true,
+        "type": "omgevingsvergunning",
+        "bevoegdGezag": "gemeente",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 100
+    },
+    {
+      "ruleId": "OW-B-002",
+      "name": "Bouwen meldingplichtig — bouwwerk 1-5 meter",
+      "sourceRefs": [
+        {
+          "type": "besluit",
+          "title": "Besluit activiteiten leefomgeving (Bal)",
+          "section": "art. 2.1"
+        }
+      ],
+      "conditions": {
+        "activiteit": "bouwen",
+        "bouwhoogte": {
+          "gte": 1,
+          "lte": 5
+        }
+      },
+      "outcome": {
+        "vergunningplichtig": false,
+        "meldingplichtig": true,
+        "bevoegdGezag": "gemeente",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 100
+    },
+    {
+      "ruleId": "OW-B-003",
+      "name": "Bouwen vrij — bouwwerk < 1 meter",
+      "sourceRefs": [
+        {
+          "type": "besluit",
+          "title": "Besluit activiteiten leefomgeving (Bal)",
+          "section": "art. 2.1"
+        }
+      ],
+      "conditions": {
+        "activiteit": "bouwen",
+        "bouwhoogte": {
+          "lt": 1
+        }
+      },
+      "outcome": {
+        "vergunningplichtig": false,
+        "meldingplichtig": false,
+        "vrij": true,
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 100
+    },
+    {
+      "ruleId": "OW-S-001",
+      "name": "Slopen vergunningplichtig — bouwwerk > 50 m³",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Omgevingswet",
+          "section": "art. 5.1"
+        },
+        {
+          "type": "besluit",
+          "title": "Bal",
+          "section": "art. 2.2"
+        }
+      ],
+      "conditions": {
+        "activiteit": "slopen",
+        "volume": {
+          "gt": 50
+        }
+      },
+      "outcome": {
+        "vergunningplichtig": true,
+        "type": "omgevingsvergunning",
+        "bevoegdGezag": "gemeente",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 100
+    },
+    {
+      "ruleId": "OW-S-002",
+      "name": "Slopen meldingplichtig — bouwwerk <= 50 m³",
+      "sourceRefs": [
+        {
+          "type": "besluit",
+          "title": "Bal",
+          "section": "art. 2.2"
+        }
+      ],
+      "conditions": {
+        "activiteit": "slopen",
+        "volume": {
+          "lte": 50
+        }
+      },
+      "outcome": {
+        "vergunningplichtig": false,
+        "meldingplichtig": true,
+        "bevoegdGezag": "gemeente",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 100
+    },
+    {
+      "ruleId": "OW-K-001",
+      "name": "Kappen meldingplichtig — boom > 5 meter of stam > 40 cm",
+      "sourceRefs": [
+        {
+          "type": "besluit",
+          "title": "Bal",
+          "section": "art. 2.5"
+        }
+      ],
+      "conditions": {
+        "activiteit": "kappen",
+        "boomHoogte": {
+          "gt": 5
+        },
+        "stamomtrek": {
+          "gt": 40
+        }
+      },
+      "outcome": {
+        "vergunningplichtig": false,
+        "meldingplichtig": true,
+        "bevoegdGezag": "gemeente",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 100
+    },
+    {
+      "ruleId": "OW-K-002",
+      "name": "Kappen vrij — boom < 5 meter en stam < 40 cm",
+      "sourceRefs": [
+        {
+          "type": "besluit",
+          "title": "Bal",
+          "section": "art. 2.5"
+        }
+      ],
+      "conditions": {
+        "activiteit": "kappen",
+        "boomHoogte": {
+          "lte": 5
+        },
+        "stamomtrek": {
+          "lte": 40
+        }
+      },
+      "outcome": {
+        "vergunningplichtig": false,
+        "meldingplichtig": false,
+        "vrij": true,
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 100
+    },
+    {
+      "ruleId": "OW-G-001",
+      "name": "Geluidproducerende installatie vergunningplichtig — boven drempel",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Omgevingswet",
+          "section": "art. 5.1"
+        },
+        {
+          "type": "besluit",
+          "title": "Bal",
+          "section": "art. 3.1"
+        }
+      ],
+      "conditions": {
+        "activiteit": "geluid_installatie",
+        "geluidsniveau": {
+          "gt": 50
+        },
+        "locatie": "woning"
+      },
+      "outcome": {
+        "vergunningplichtig": true,
+        "type": "omgevingsvergunning",
+        "bevoegdGezag": "gemeente",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 100
+    },
+    {
+      "ruleId": "OW-G-002",
+      "name": "Geluidproducerende installatie vrij — onder drempel",
+      "sourceRefs": [
+        {
+          "type": "besluit",
+          "title": "Bal",
+          "section": "art. 3.1"
+        }
+      ],
+      "conditions": {
+        "activiteit": "geluid_installatie",
+        "geluidsniveau": {
+          "lte": 50
+        },
+        "locatie": "woning"
+      },
+      "outcome": {
+        "vergunningplichtig": false,
+        "meldingplichtig": false,
+        "vrij": true,
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 100
+    },
+    {
+      "ruleId": "OW-O-001",
+      "name": "Storten afvalstoffen vergunningplichtig — meer dan 100 m³",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Omgevingswet",
+          "section": "art. 5.1"
+        },
+        {
+          "type": "besluit",
+          "title": "Bal",
+          "section": "art. 4.1"
+        }
+      ],
+      "conditions": {
+        "activiteit": "storten",
+        "volume": {
+          "gt": 100
+        }
+      },
+      "outcome": {
+        "vergunningplichtig": true,
+        "type": "omgevingsvergunning",
+        "bevoegdGezag": "provincie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 100
+    },
+    {
+      "ruleId": "OW-O-002",
+      "name": "Storten afvalstoffen meldingplichtig — 10-100 m³",
+      "sourceRefs": [
+        {
+          "type": "besluit",
+          "title": "Bal",
+          "section": "art. 4.1"
+        }
+      ],
+      "conditions": {
+        "activiteit": "storten",
+        "volume": {
+          "gte": 10,
+          "lte": 100
+        }
+      },
+      "outcome": {
+        "vergunningplichtig": false,
+        "meldingplichtig": true,
+        "bevoegdGezag": "gemeente",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 100
+    },
+    {
+      "ruleId": "OW-O-003",
+      "name": "Storten afvalstoffen vrij — minder dan 10 m³",
+      "sourceRefs": [
+        {
+          "type": "besluit",
+          "title": "Bal",
+          "section": "art. 4.1"
+        }
+      ],
+      "conditions": {
+        "activiteit": "storten",
+        "volume": {
+          "lt": 10
+        }
+      },
+      "outcome": {
+        "vergunningplichtig": false,
+        "meldingplichtig": false,
+        "vrij": true,
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 100
+    },
+    {
+      "ruleId": "OW-W-001",
+      "name": "Wateronttrekking vergunningplichtig — meer dan 150.000 m³/jaar",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Omgevingswet",
+          "section": "art. 5.1"
+        },
+        {
+          "type": "besluit",
+          "title": "Bal",
+          "section": "art. 5.1"
+        }
+      ],
+      "conditions": {
+        "activiteit": "water_onttrekking",
+        "volume": {
+          "gt": 150000
+        },
+        "periode": "jaar"
+      },
+      "outcome": {
+        "vergunningplichtig": true,
+        "type": "omgevingsvergunning",
+        "bevoegdGezag": "waterschap",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 100
+    },
+    {
+      "ruleId": "OW-W-002",
+      "name": "Wateronttrekking vrij — minder dan 150.000 m³/jaar",
+      "sourceRefs": [
+        {
+          "type": "besluit",
+          "title": "Bal",
+          "section": "art. 5.1"
+        }
+      ],
+      "conditions": {
+        "activiteit": "water_onttrekking",
+        "volume": {
+          "lte": 150000
+        },
+        "periode": "jaar"
+      },
+      "outcome": {
+        "vergunningplichtig": false,
+        "meldingplichtig": false,
+        "vrij": true,
+        "bevoegdGezag": "waterschap",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 100
+    },
+    {
+      "ruleId": "OW-R-001",
+      "name": "Rijksactiviteit — rijkswaterstaat bevoegd gezag",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Omgevingswet",
+          "section": "art. 5.3"
+        }
+      ],
+      "conditions": {
+        "activiteit": "rijkswerk",
+        "locatieType": "rijkswater"
+      },
+      "outcome": {
+        "vergunningplichtig": true,
+        "type": "omgevingsvergunning",
+        "bevoegdGezag": "rijk",
+        "confidence": "deterministic",
+        "manualReviewRequired": true
+      },
+      "priority": 190
+    },
+    {
+      "ruleId": "OW-U-001",
+      "name": "Bouwen in monument — altijd vergunningplichtig ongeacht hoogte",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Omgevingswet",
+          "section": "art. 5.1"
+        },
+        {
+          "type": "besluit",
+          "title": "Bal",
+          "section": "art. 2.1, uitzondering"
+        }
+      ],
+      "conditions": {
+        "activiteit": "bouwen",
+        "monument": true
+      },
+      "outcome": {
+        "vergunningplichtig": true,
+        "type": "omgevingsvergunning",
+        "bevoegdGezag": "gemeente",
+        "confidence": "deterministic",
+        "manualReviewRequired": true
+      },
+      "priority": 200
+    },
+    {
+      "ruleId": "OW-U-002",
+      "name": "Slopen monument — altijd vergunningplichtig",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Omgevingswet",
+          "section": "art. 5.1"
+        },
+        {
+          "type": "besluit",
+          "title": "Bal",
+          "section": "art. 2.2, uitzondering"
+        }
+      ],
+      "conditions": {
+        "activiteit": "slopen",
+        "monument": true
+      },
+      "outcome": {
+        "vergunningplichtig": true,
+        "type": "omgevingsvergunning",
+        "bevoegdGezag": "gemeente",
+        "confidence": "deterministic",
+        "manualReviewRequired": true
+      },
+      "priority": 200
+    },
+    {
+      "ruleId": "OW-U-003",
+      "name": "Natura2000 gebied — provincie bevoegd gezag",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Omgevingswet",
+          "section": "art. 5.3"
+        }
+      ],
+      "conditions": {
+        "locatie": "Natura2000"
+      },
+      "outcome": {
+        "bevoegdGezag": "provincie",
+        "vergunningplichtig": true,
+        "confidence": "deterministic",
+        "manualReviewRequired": true
+      },
+      "priority": 200
+    },
+    {
+      "ruleId": "OW-U-004",
+      "name": "Tijdelijke bouw — tijdelijke omgevingsvergunning max 10 jaar",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Omgevingswet",
+          "section": "art. 5.1 lid 4"
+        }
+      ],
+      "conditions": {
+        "activiteit": "bouwen",
+        "tijdelijk": true
+      },
+      "outcome": {
+        "vergunningplichtig": true,
+        "type": "tijdelijke_omgevingsvergunning",
+        "maxDuur": "10_jaar",
+        "bevoegdGezag": "gemeente",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 200
+    },
+    {
+      "ruleId": "OW-U-005",
+      "name": "Flora- en faunawet beschermde soort — ontheffing vereist",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Omgevingswet",
+          "section": "art. 5.1"
+        },
+        {
+          "type": "besluit",
+          "title": "Bal",
+          "section": "art. 6.1"
+        }
+      ],
+      "conditions": {
+        "activiteit": "bouwen_of_slopen",
+        "beschermdeSoort": true
+      },
+      "outcome": {
+        "vergunningplichtig": true,
+        "type": "omgevingsvergunning_met_ontheffing",
+        "manualReviewRequired": true,
+        "confidence": "deterministic"
+      },
+      "priority": 200
+    }
+  ]
+}

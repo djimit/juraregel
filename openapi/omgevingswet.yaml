@@ -1,0 +1,212 @@
+openapi: 3.1.0
+info:
+  title: Omgevingswet Rule API
+  description: Auditbare juridische rule service voor omgevingswet
+  version: 1.0.0
+paths:
+  /v1/health:
+    get:
+      summary: Health
+      operationId: health_v1_health_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+  /v1/omgevingswet/versions:
+    get:
+      summary: Get Versions
+      operationId: get_versions_v1_omgevingswet_versions_get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+  /v1/rules/{rule_id}:
+    get:
+      summary: Get Rule
+      operationId: get_rule_v1_rules__rule_id__get
+      parameters:
+      - name: rule_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Rule Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /v1/audit/{calculation_id}:
+    get:
+      summary: Get Audit
+      operationId: get_audit_v1_audit__calculation_id__get
+      parameters:
+      - name: calculation_id
+        in: path
+        required: true
+        schema:
+          type: string
+          title: Calculation Id
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /v1/omgevingswet/calculate:
+    post:
+      summary: Calculate Omgevingswet
+      operationId: calculate_omgevingswet_v1_omgevingswet_calculate_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OmgevingswetRequest'
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+  /v1/omgevingswet/explain:
+    post:
+      summary: Explain Omgevingswet
+      operationId: explain_omgevingswet_v1_omgevingswet_explain_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OmgevingswetRequest'
+        required: true
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+components:
+  schemas:
+    HTTPValidationError:
+      properties:
+        detail:
+          items:
+            $ref: '#/components/schemas/ValidationError'
+          type: array
+          title: Detail
+      type: object
+      title: HTTPValidationError
+    OmgevingswetRequest:
+      properties:
+        activiteit:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Activiteit
+        bouwhoogte:
+          anyOf:
+          - type: number
+          - type: 'null'
+          title: Bouwhoogte
+        volume:
+          anyOf:
+          - type: number
+          - type: 'null'
+          title: Volume
+        boomHoogte:
+          anyOf:
+          - type: number
+          - type: 'null'
+          title: Boomhoogte
+        stamomtrek:
+          anyOf:
+          - type: number
+          - type: 'null'
+          title: Stamomtrek
+        geluidsniveau:
+          anyOf:
+          - type: number
+          - type: 'null'
+          title: Geluidsniveau
+        locatie:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Locatie
+        locatieType:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Locatietype
+        monument:
+          anyOf:
+          - type: boolean
+          - type: 'null'
+          title: Monument
+        tijdelijk:
+          anyOf:
+          - type: boolean
+          - type: 'null'
+          title: Tijdelijk
+        beschermdeSoort:
+          anyOf:
+          - type: boolean
+          - type: 'null'
+          title: Beschermdesoort
+      type: object
+      title: OmgevingswetRequest
+    ValidationError:
+      properties:
+        loc:
+          items:
+            anyOf:
+            - type: string
+            - type: integer
+          type: array
+          title: Location
+        msg:
+          type: string
+          title: Message
+        type:
+          type: string
+          title: Error Type
+        input:
+          title: Input
+        ctx:
+          type: object
+          title: Context
+      type: object
+      required:
+      - loc
+      - msg
+      - type
+      title: ValidationError

@@ -1,0 +1,603 @@
+{
+  "ruleSetId": "toeslagenwet-2025",
+  "version": "2025.1",
+  "validFrom": "2025-01-01",
+  "validUntil": "2025-12-31",
+  "jurisdiction": "NL",
+  "domain": "toeslagen",
+  "procedureType": "toeslagen-berekening",
+  "juristAccordering": {
+    "geaccondeerdDoor": "D. Landman",
+    "datum": "2025-07-05",
+    "status": "self-approved-poC",
+    "onafhankelijk": false
+  },
+  "rules": [
+    {
+      "ruleId": "TZ-2025-001",
+      "name": "Zorgtoeslag recht alleenstaande onder inkomensgrens",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Toeslagenwet",
+          "section": "art. 8"
+        },
+        {
+          "type": "besluit",
+          "title": "Besluit zorgtoeslag 2025",
+          "section": "art. 2"
+        }
+      ],
+      "conditions": {
+        "toeslagType": "zorgtoeslag",
+        "leeftijd": {
+          "gte": 18
+        },
+        "alleenstaande": true,
+        "inkomen": {
+          "lte": 38000
+        }
+      },
+      "outcome": {
+        "recht": true,
+        "bedrag": {
+          "amount": 123,
+          "currency": "EUR",
+          "periode": "maandelijks"
+        },
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 100
+    },
+    {
+      "ruleId": "TZ-2025-002",
+      "name": "Zorgtoeslag recht samenwonend onder inkomensgrens",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Toeslagenwet",
+          "section": "art. 8"
+        },
+        {
+          "type": "besluit",
+          "title": "Besluit zorgtoeslag 2025",
+          "section": "art. 2"
+        }
+      ],
+      "conditions": {
+        "toeslagType": "zorgtoeslag",
+        "leeftijd": {
+          "gte": 18
+        },
+        "alleenstaande": false,
+        "toeslagenpartner": true,
+        "inkomen": {
+          "lte": 48000
+        }
+      },
+      "outcome": {
+        "recht": true,
+        "bedrag": {
+          "amount": 123,
+          "currency": "EUR",
+          "periode": "maandelijks"
+        },
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 100
+    },
+    {
+      "ruleId": "TZ-2025-003",
+      "name": "Zorgtoeslag geen recht boven inkomensgrens alleenstaande",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Toeslagenwet",
+          "section": "art. 8"
+        },
+        {
+          "type": "besluit",
+          "title": "Besluit zorgtoeslag 2025",
+          "section": "art. 2"
+        }
+      ],
+      "conditions": {
+        "toeslagType": "zorgtoeslag",
+        "alleenstaande": true,
+        "inkomen": {
+          "gt": 38000
+        }
+      },
+      "outcome": {
+        "recht": false,
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 150
+    },
+    {
+      "ruleId": "TZ-2025-004",
+      "name": "Zorgtoeslag geen recht boven inkomensgrens samenwonend",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Toeslagenwet",
+          "section": "art. 8"
+        },
+        {
+          "type": "besluit",
+          "title": "Besluit zorgtoeslag 2025",
+          "section": "art. 2"
+        }
+      ],
+      "conditions": {
+        "toeslagType": "zorgtoeslag",
+        "alleenstaande": false,
+        "toeslagenpartner": true,
+        "inkomen": {
+          "gt": 48000
+        }
+      },
+      "outcome": {
+        "recht": false,
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 150
+    },
+    {
+      "ruleId": "TH-2025-001",
+      "name": "Huurtoeslag recht alleenstaande onder huurgrens en inkomensgrens",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Toeslagenwet",
+          "section": "art. 7a"
+        },
+        {
+          "type": "besluit",
+          "title": "Besluit huurtoeslag 2025",
+          "section": "art. 2"
+        }
+      ],
+      "conditions": {
+        "toeslagType": "huurtoeslag",
+        "leeftijd": {
+          "gte": 18
+        },
+        "alleenstaande": true,
+        "huur": {
+          "lte": 879.12,
+          "periode": "maandelijks"
+        },
+        "inkomen": {
+          "lte": 23800
+        }
+      },
+      "outcome": {
+        "recht": true,
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 100
+    },
+    {
+      "ruleId": "TH-2025-002",
+      "name": "Huurtoeslag recht alleenstaande boven 23 jaar geen leeftijdsgrens",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Toeslagenwet",
+          "section": "art. 7a"
+        },
+        {
+          "type": "besluit",
+          "title": "Besluit huurtoeslag 2025",
+          "section": "art. 2"
+        }
+      ],
+      "conditions": {
+        "toeslagType": "huurtoeslag",
+        "leeftijd": {
+          "gte": 23
+        },
+        "alleenstaande": true,
+        "huur": {
+          "lte": 879.12,
+          "periode": "maandelijks"
+        },
+        "inkomen": {
+          "lte": 23800
+        }
+      },
+      "outcome": {
+        "recht": true,
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 150
+    },
+    {
+      "ruleId": "TH-2025-003",
+      "name": "Huurtoeslag geen recht boven huurgrens",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Toeslagenwet",
+          "section": "art. 7a"
+        },
+        {
+          "type": "besluit",
+          "title": "Besluit huurtoeslag 2025",
+          "section": "art. 2"
+        }
+      ],
+      "conditions": {
+        "toeslagType": "huurtoeslag",
+        "huur": {
+          "gt": 879.12,
+          "periode": "maandelijks"
+        }
+      },
+      "outcome": {
+        "recht": false,
+        "reden": "Huur boven kwaliteitskortingsgrens",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 150
+    },
+    {
+      "ruleId": "TH-2025-004",
+      "name": "Huurtoeslag geen recht boven inkomensgrens alleenstaande",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Toeslagenwet",
+          "section": "art. 7a"
+        },
+        {
+          "type": "besluit",
+          "title": "Besluit huurtoeslag 2025",
+          "section": "art. 2"
+        }
+      ],
+      "conditions": {
+        "toeslagType": "huurtoeslag",
+        "alleenstaande": true,
+        "inkomen": {
+          "gt": 23800
+        }
+      },
+      "outcome": {
+        "recht": false,
+        "reden": "Inkomen boven grens",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 150
+    },
+    {
+      "ruleId": "TH-2025-005",
+      "name": "Huurtoeslag jongerenondergrens 18-22 jaar verhoogde huurgrens",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Toeslagenwet",
+          "section": "art. 7a"
+        },
+        {
+          "type": "besluit",
+          "title": "Besluit huurtoeslag 2025",
+          "section": "art. 2"
+        }
+      ],
+      "conditions": {
+        "toeslagType": "huurtoeslag",
+        "leeftijd": {
+          "gte": 18,
+          "lt": 23
+        },
+        "alleenstaande": true,
+        "huur": {
+          "lte": 446.04,
+          "periode": "maandelijks"
+        },
+        "inkomen": {
+          "lte": 23800
+        }
+      },
+      "outcome": {
+        "recht": true,
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 100
+    },
+    {
+      "ruleId": "TK-2025-001",
+      "name": "Kinderopvangtoeslag recht laag inkomen hoog percentage",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Toeslagenwet",
+          "section": "art. 7b"
+        },
+        {
+          "type": "besluit",
+          "title": "Besluit kinderopvangtoeslag 2025",
+          "section": "art. 2"
+        }
+      ],
+      "conditions": {
+        "toeslagType": "kinderopvangtoeslag",
+        "kindOpOpvang": true,
+        "inkomen": {
+          "lte": 35890
+        }
+      },
+      "outcome": {
+        "recht": true,
+        "percentage": 96,
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 150
+    },
+    {
+      "ruleId": "TK-2025-002",
+      "name": "Kinderopvangtoeslag recht middeninkomen middel percentage",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Toeslagenwet",
+          "section": "art. 7b"
+        },
+        {
+          "type": "besluit",
+          "title": "Besluit kinderopvangtoeslag 2025",
+          "section": "art. 2"
+        }
+      ],
+      "conditions": {
+        "toeslagType": "kinderopvangtoeslag",
+        "kindOpOpvang": true,
+        "inkomen": {
+          "gt": 35890,
+          "lte": 145000
+        }
+      },
+      "outcome": {
+        "recht": true,
+        "percentage": "scaleer_tussen_96_en_33",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 100
+    },
+    {
+      "ruleId": "TK-2025-003",
+      "name": "Kinderopvangtoeslag geen recht hoog inkomen",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Toeslagenwet",
+          "section": "art. 7b"
+        },
+        {
+          "type": "besluit",
+          "title": "Besluit kinderopvangtoeslag 2025",
+          "section": "art. 2"
+        }
+      ],
+      "conditions": {
+        "toeslagType": "kinderopvangtoeslag",
+        "inkomen": {
+          "gt": 145000
+        }
+      },
+      "outcome": {
+        "recht": false,
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 150
+    },
+    {
+      "ruleId": "TKB-2025-001",
+      "name": "Kindgebonden budget recht alleenstaande onder inkomensgrens",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Toeslagenwet",
+          "section": "art. 7c"
+        },
+        {
+          "type": "besluit",
+          "title": "Besluit kindgebonden budget 2025",
+          "section": "art. 2"
+        }
+      ],
+      "conditions": {
+        "toeslagType": "kindgebonden_budget",
+        "heeftKind": true,
+        "alleenstaande": true,
+        "inkomen": {
+          "lte": 54000
+        }
+      },
+      "outcome": {
+        "recht": true,
+        "bedrag": {
+          "amount": 149,
+          "currency": "EUR",
+          "periode": "maandelijks"
+        },
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 100
+    },
+    {
+      "ruleId": "TKB-2025-002",
+      "name": "Kindgebonden budget recht samenwonend onder inkomensgrens",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Toeslagenwet",
+          "section": "art. 7c"
+        },
+        {
+          "type": "besluit",
+          "title": "Besluit kindgebonden budget 2025",
+          "section": "art. 2"
+        }
+      ],
+      "conditions": {
+        "toeslagType": "kindgebonden_budget",
+        "heeftKind": true,
+        "alleenstaande": false,
+        "toeslagenpartner": true,
+        "inkomen": {
+          "lte": 68000
+        }
+      },
+      "outcome": {
+        "recht": true,
+        "bedrag": {
+          "amount": 149,
+          "currency": "EUR",
+          "periode": "maandelijks"
+        },
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 100
+    },
+    {
+      "ruleId": "TKB-2025-003",
+      "name": "Kindgebonden budget geen recht boven inkomensgrens alleenstaande",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Toeslagenwet",
+          "section": "art. 7c"
+        },
+        {
+          "type": "besluit",
+          "title": "Besluit kindgebonden budget 2025",
+          "section": "art. 2"
+        }
+      ],
+      "conditions": {
+        "toeslagType": "kindgebonden_budget",
+        "alleenstaande": true,
+        "inkomen": {
+          "gt": 54000
+        }
+      },
+      "outcome": {
+        "recht": false,
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 150
+    },
+    {
+      "ruleId": "TKB-2025-004",
+      "name": "Kindgebonden budget geen recht boven inkomensgrens samenwonend",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Toeslagenwet",
+          "section": "art. 7c"
+        },
+        {
+          "type": "besluit",
+          "title": "Besluit kindgebonden budget 2025",
+          "section": "art. 2"
+        }
+      ],
+      "conditions": {
+        "toeslagType": "kindgebonden_budget",
+        "alleenstaande": false,
+        "toeslagenpartner": true,
+        "inkomen": {
+          "gt": 68000
+        }
+      },
+      "outcome": {
+        "recht": false,
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 150
+    },
+    {
+      "ruleId": "TA-2025-001",
+      "name": "Geen toeslag bij niet-Nederlandse nationaliteit zonder verblijfsrecht",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Toeslagenwet",
+          "section": "art. 10"
+        }
+      ],
+      "conditions": {
+        "nationaliteit": "niet-EU",
+        "verblijfsrecht": false
+      },
+      "outcome": {
+        "recht": false,
+        "reden": "Geen rechtmatig verblijf",
+        "confidence": "deterministic",
+        "manualReviewRequired": true
+      },
+      "priority": 200
+    },
+    {
+      "ruleId": "TA-2025-002",
+      "name": "Geen toeslag bij detentie",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Toeslagenwet",
+          "section": "art. 10"
+        }
+      ],
+      "conditions": {
+        "gedetineerd": true
+      },
+      "outcome": {
+        "recht": false,
+        "reden": "Detentie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 200
+    },
+    {
+      "ruleId": "TA-2025-003",
+      "name": "Geen toeslag bij institutionele woning",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Toeslagenwet",
+          "section": "art. 10"
+        }
+      ],
+      "conditions": {
+        "woonsituatie": "institutioneel"
+      },
+      "outcome": {
+        "recht": false,
+        "reden": "Institutionele woonsituatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": true
+      },
+      "priority": 200
+    }
+  ]
+}

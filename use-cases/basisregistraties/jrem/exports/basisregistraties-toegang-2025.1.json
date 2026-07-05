@@ -1,0 +1,390 @@
+{
+  "ruleSetId": "basisregistraties-toegang-2025",
+  "version": "2025.1",
+  "validFrom": "2025-01-01",
+  "validUntil": null,
+  "jurisdiction": "NL",
+  "domain": "basisregistraties",
+  "procedureType": "toegangsbeoordeling",
+  "juristAccordering": {
+    "geaccondeerdDoor": "D. Landman",
+    "datum": "2025-07-05",
+    "status": "self-approved-poC",
+    "onafhankelijk": false
+  },
+  "rules": [
+    {
+      "ruleId": "BRP-001",
+      "name": "BRP opvraag door overheidsorgaan met wettaak — toegestaan",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Wet basisregistratie personen",
+          "section": "art. 3.1"
+        }
+      ],
+      "conditions": {
+        "registratie": "BRP",
+        "vrager": "overheidsorgaan",
+        "doel": "wettelijke_taak",
+        "grondslag": "aanwezig"
+      },
+      "outcome": {
+        "toegang": true,
+        "scope": "volledig",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 100
+    },
+    {
+      "ruleId": "BRP-002",
+      "name": "BRP opvraag zonder wettelijke grondslag — geweigerd",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Wet basisregistratie personen",
+          "section": "art. 3.1"
+        },
+        {
+          "type": "wet",
+          "title": "AVG",
+          "section": "art. 6 lid 1c"
+        }
+      ],
+      "conditions": {
+        "registratie": "BRP",
+        "grondslag": "afwezig"
+      },
+      "outcome": {
+        "toegang": false,
+        "reden": "Geen wettelijke grondslag voor opvraag",
+        "confidence": "deterministic",
+        "manualReviewRequired": true
+      },
+      "priority": 100
+    },
+    {
+      "ruleId": "BRP-003",
+      "name": "BRP opvraag door derde zonder wettelijke taak — geweigerd",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Wet basisregistratie personen",
+          "section": "art. 3.1"
+        }
+      ],
+      "conditions": {
+        "registratie": "BRP",
+        "vrager": "derde",
+        "doel": "niet_wettelijk"
+      },
+      "outcome": {
+        "toegang": false,
+        "reden": "Derde zonder wettelijke taak — geen toegang",
+        "confidence": "deterministic",
+        "manualReviewRequired": true
+      },
+      "priority": 100
+    },
+    {
+      "ruleId": "BRP-004",
+      "name": "BRP beperkt verstrekken — alleen noodzakelijke gegevens",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Wet basisregistratie personen",
+          "section": "art. 3.2"
+        },
+        {
+          "type": "wet",
+          "title": "AVG",
+          "section": "art. 5 lid 1c — minimalisatie"
+        }
+      ],
+      "conditions": {
+        "registratie": "BRP",
+        "vrager": "overheidsorgaan",
+        "doel": "wettelijke_taak",
+        "gevraagdeGegevens": "ruimer_dan_noodzakelijk"
+      },
+      "outcome": {
+        "toegang": true,
+        "scope": "beperkt_tot_noodzakelijk",
+        "confidence": "deterministic",
+        "manualReviewRequired": true
+      },
+      "priority": 100
+    },
+    {
+      "ruleId": "BAG-001",
+      "name": "BAG is open data — vrij toegankelijk voor iedereen",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Wet basisregistratie adressen en gebouwen",
+          "section": "art. 6.1"
+        }
+      ],
+      "conditions": {
+        "registratie": "BAG"
+      },
+      "outcome": {
+        "toegang": true,
+        "scope": "volledig",
+        "vorm": "open_data",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 100
+    },
+    {
+      "ruleId": "NHR-001",
+      "name": "NHR handelsregister openbaar — publiek toegankelijk",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Handelsregisterwet 2007",
+          "section": "art. 2.1"
+        }
+      ],
+      "conditions": {
+        "registratie": "NHR",
+        "vrager": "publiek",
+        "gebruiksdoel": "commercieel_of_recht"
+      },
+      "outcome": {
+        "toegang": true,
+        "scope": "publiek_toegankelijk",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 100
+    },
+    {
+      "ruleId": "NHR-002",
+      "name": "NHR commercieel gebruik — leges verschuldigd",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Handelsregisterwet 2007",
+          "section": "art. 2.3"
+        }
+      ],
+      "conditions": {
+        "registratie": "NHR",
+        "vrager": "publiek",
+        "gebruiksdoel": "commercieel"
+      },
+      "outcome": {
+        "toegang": true,
+        "scope": "volledig",
+        "leges": true,
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 100
+    },
+    {
+      "ruleId": "BRT-001",
+      "name": "BRT topografische data — open data vrij toegankelijk",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Wet basisregistratie topografie",
+          "section": "art. 3"
+        }
+      ],
+      "conditions": {
+        "registratie": "BRT"
+      },
+      "outcome": {
+        "toegang": true,
+        "scope": "volledig",
+        "vorm": "open_data",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 100
+    },
+    {
+      "ruleId": "WOZ-001",
+      "name": "WOZ-waarde opvraag door belastingorgaan — toegestaan",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Wet waardering onroerende zaken",
+          "section": "art. 22"
+        }
+      ],
+      "conditions": {
+        "registratie": "WOZ",
+        "vrager": "belastingorgaan",
+        "doel": "heffing"
+      },
+      "outcome": {
+        "toegang": true,
+        "scope": "volledig",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 100
+    },
+    {
+      "ruleId": "WOZ-002",
+      "name": "WOZ-waarde opvraag door burger voor eigen woning — toegestaan",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Wet waardering onroerende zaken",
+          "section": "art. 23"
+        }
+      ],
+      "conditions": {
+        "registratie": "WOZ",
+        "vrager": "burger",
+        "doel": "bezwaar_of_inzicht",
+        "eigenObject": true
+      },
+      "outcome": {
+        "toegang": true,
+        "scope": "eigen_object",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 100
+    },
+    {
+      "ruleId": "WOZ-003",
+      "name": "WOZ-waarde opvraag door derde — geweigerd tenzij wettelijke grondslag",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "Wet waardering onroerende zaken",
+          "section": "art. 22"
+        }
+      ],
+      "conditions": {
+        "registratie": "WOZ",
+        "vrager": "derde",
+        "doel": "niet_belasting",
+        "wettelijkeGrondslag": "afwezig"
+      },
+      "outcome": {
+        "toegang": false,
+        "reden": "Derde zonder wettelijke grondslag",
+        "confidence": "deterministic",
+        "manualReviewRequired": true
+      },
+      "priority": 100
+    },
+    {
+      "ruleId": "KV-001",
+      "name": "Koppelvlak BRP — StUF-BG of Haal Centraal API",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "Logius StUF-BG / Haal Centraal BRP"
+        }
+      ],
+      "conditions": {
+        "registratie": "BRP",
+        "koppelvlakType": "overheid_naar_overheid"
+      },
+      "outcome": {
+        "koppelvlak": "StUF-BG_of_Haal_Centraal",
+        "standaard": "Logius",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 50
+    },
+    {
+      "ruleId": "KV-002",
+      "name": "Koppelvlak BAG — OGC API Features of REST",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "Kadaster BAG API / PDOK"
+        }
+      ],
+      "conditions": {
+        "registratie": "BAG"
+      },
+      "outcome": {
+        "koppelvlak": "PDOK_OGC_API",
+        "vorm": "REST",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "priority": 50
+    },
+    {
+      "ruleId": "DB-001",
+      "name": "Doelbinding — elke opvraag vereist geregistreerd doel",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "AVG",
+          "section": "art. 5 lid 1b"
+        }
+      ],
+      "conditions": {
+        "registratie": "BRP",
+        "doelGeregistreerd": false
+      },
+      "outcome": {
+        "toegang": false,
+        "reden": "Doel niet geregistreerd — schending doelbinding",
+        "confidence": "deterministic",
+        "manualReviewRequired": true
+      },
+      "priority": 200
+    },
+    {
+      "ruleId": "DB-002",
+      "name": "Verwerkingsregistratie verplicht voor BRP-gegevens",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "AVG",
+          "section": "art. 30"
+        }
+      ],
+      "conditions": {
+        "registratie": "BRP",
+        "verwerkingslog": "afwezig"
+      },
+      "outcome": {
+        "toegang": false,
+        "reden": "Verwerkingslog verplicht — afwezig",
+        "confidence": "deterministic",
+        "manualReviewRequired": true
+      },
+      "priority": 200
+    },
+    {
+      "ruleId": "DB-003",
+      "name": "AVG art. 22 — geen geautomatiseerde besluitvorming zonder menselijke controle",
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "AVG",
+          "section": "art. 22"
+        }
+      ],
+      "conditions": {
+        "registratie": "BRP",
+        "besluitvorming": "geautomatiseerd",
+        "menselijkeControle": false
+      },
+      "outcome": {
+        "toegang": false,
+        "reden": "Geautomatiseerde besluitvorming zonder menselijke controle niet toegestaan",
+        "confidence": "deterministic",
+        "manualReviewRequired": true
+      },
+      "priority": 200
+    }
+  ]
+}
