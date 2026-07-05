@@ -484,13 +484,13 @@ class TestJREMValidation:
     def test_schema_is_valid_2020_12(self):
         """Schema must be valid JSON Schema draft 2020-12."""
         import jsonschema
-        schema = json.load(open(Path(__file__).parent.parent.parent.parent / "shared" / "jrem-schema.json"))
+        schema = json.load(open(Path(__file__).parent.parent.parent.parent / "shared" / "jrem-core.json"))
         jsonschema.Draft202012Validator.check_schema(schema)
 
     def test_2026_export_validates(self):
         """2026 JREM export must validate against schema."""
         import jsonschema
-        schema = json.load(open(Path(__file__).parent.parent.parent.parent / "shared" / "jrem-schema.json"))
+        schema = json.load(open(Path(__file__).parent.parent.parent.parent / "shared" / "jrem-core.json"))
         instance = json.load(open(JREM_DIR / "griffierecht-civiel-2026.1.json"))
         validator = jsonschema.Draft202012Validator(schema)
         errors = list(validator.iter_errors(instance))
@@ -499,7 +499,7 @@ class TestJREMValidation:
     def test_2025_export_validates(self):
         """2025 JREM export must validate against schema."""
         import jsonschema
-        schema = json.load(open(Path(__file__).parent.parent.parent.parent / "shared" / "jrem-schema.json"))
+        schema = json.load(open(Path(__file__).parent.parent.parent.parent / "shared" / "jrem-core.json"))
         instance = json.load(open(JREM_DIR / "griffierecht-civiel-2025.1.json"))
         validator = jsonschema.Draft202012Validator(schema)
         errors = list(validator.iter_errors(instance))

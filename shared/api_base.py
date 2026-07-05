@@ -39,7 +39,7 @@ else:
 logger = logging.getLogger("juraregel")
 
 # Security
-security = HTTPBearer(auto_error=not AUTH_ENABLED)
+security = HTTPBearer(auto_error=False)
 
 def verify_token(credentials: HTTPAuthorizationCredentials = Depends(security)):
     """Verify OAuth 2.0 bearer token. Only active when JURAREGEL_AUTH_ENABLED=true."""
