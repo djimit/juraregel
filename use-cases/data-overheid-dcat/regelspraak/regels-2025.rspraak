@@ -1,0 +1,92 @@
+// DCAT-AP-NL — data.overheid.nl — RegelSpraak CNL
+
+regel DCAT-001 "Dataset titel verplicht":
+  als regelId is "DCAT-001"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "verplicht".
+
+regel DCAT-002 "Dataset beschrijving verplicht":
+  als regelId is "DCAT-002"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "verplicht".
+
+regel DCAT-003 "Uitgever (publisher) verplicht":
+  als regelId is "DCAT-003"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "verplicht".
+
+regel DCAT-004 "Licentie verplicht (CC0 of CC-BY)":
+  als regelId is "DCAT-004"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "verplicht".
+
+regel DCAT-005 "Distributie (download/API) verplicht":
+  als regelId is "DCAT-005"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "verplicht".
+
+regel DCAT-006 "Formaat specificatie in distributie":
+  als regelId is "DCAT-006"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "aanbevolen".
+
+regel DCAT-007 "Trefwoorden (keywords) aanbevolen":
+  als regelId is "DCAT-007"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "aanbevolen".
+
+regel DCAT-008 "Thema/classificatie verplicht":
+  als regelId is "DCAT-008"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "verplicht".
+
+regel DCAT-009 "Geografische dekking indien van toepassing":
+  als regelId is "DCAT-009"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "optioneel".
+
+regel DCAT-010 "Tijdelijke dekking indien van toepassing":
+  als regelId is "DCAT-010"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "optioneel".
+
+regel DCAT-011 "Frequentie van update":
+  als regelId is "DCAT-011"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "aanbevolen".
+
+regel DCAT-012 "Contactpunt verplicht":
+  als regelId is "DCAT-012"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "verplicht".
+
+regel DCAT-013 "Dataservice met endpoint URL":
+  als regelId is "DCAT-013"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "verplicht".
+
+regel DCAT-014 "OpenAPI spec voor dataservice":
+  als regelId is "DCAT-014"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "aanbevolen".
+
+regel DCAT-015 "Machine-readable formaat (JSON/XML/CSV)":
+  als regelId is "DCAT-015"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "verplicht".
+

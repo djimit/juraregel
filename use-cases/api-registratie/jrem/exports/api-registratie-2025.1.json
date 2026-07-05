@@ -1,0 +1,878 @@
+{
+  "schemaVersion": "1.0.0",
+  "ruleSetId": "api-registratie",
+  "version": "2025.1",
+  "validFrom": "2025-01-01",
+  "validUntil": "2026-12-31",
+  "jurisdiction": "NL",
+  "domain": "api-registratie",
+  "procedureType": "dagvaarding",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "APIR-001",
+      "name": "API geregistreerd op developer.overheid.nl",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "developer.overheid.nl",
+          "section": "APIR-001",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_api-registratie_registratie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "APIR-001"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "APIR-002",
+      "name": "OpenAPI 3.0 specificatie beschikbaar",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Logius API Design Rules",
+          "section": "APIR-002",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_api-registratie_specificatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "APIR-002"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "APIR-003",
+      "name": "API Design Rule API-03: RESTful",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Logius API-03",
+          "section": "APIR-003",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_api-registratie_design",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "APIR-003"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "APIR-004",
+      "name": "API Design Rule API-09: HAL of JSON-LD",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Logius API-09",
+          "section": "APIR-004",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_api-registratie_design",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "APIR-004"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "APIR-005",
+      "name": "API Design Rule API-16: HTTP status codes",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Logius API-16",
+          "section": "APIR-005",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_api-registratie_design",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "APIR-005"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "APIR-006",
+      "name": "API Design Rule API-17: Error response formaat",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Logius API-17",
+          "section": "APIR-006",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_api-registratie_design",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "APIR-006"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "APIR-007",
+      "name": "API Design Rule API-18: Versioning via URI",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Logius API-18",
+          "section": "APIR-007",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_api-registratie_design",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "APIR-007"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "APIR-008",
+      "name": "API Design Rule API-51: HTTPS verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Logius API-51",
+          "section": "APIR-008",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_api-registratie_design",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "APIR-008"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "APIR-009",
+      "name": "OAuth 2.0 authenticatie (NL GOV Assurance Profile)",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Forum Standaardisatie",
+          "section": "APIR-009",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_api-registratie_auth",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "APIR-009"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "APIR-010",
+      "name": "API op GitHub (open source)",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "developer.overheid.nl OSS",
+          "section": "APIR-010",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_api-registratie_opensource",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "APIR-010"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "APIR-011",
+      "name": "LICENSE aanwezig (MIT/CDDL/Apache)",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "OSS beleid",
+          "section": "APIR-011",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_api-registratie_opensource",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "APIR-011"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "APIR-012",
+      "name": "CODE_OF_CONDUCT aanwezig",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "OSS beleid",
+          "section": "APIR-012",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_api-registratie_opensource",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "APIR-012"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "APIR-013",
+      "name": "CONTRIBUTING aanwezig",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "OSS beleid",
+          "section": "APIR-013",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_api-registratie_opensource",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "APIR-013"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "APIR-014",
+      "name": "CI/CD pipeline actief",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NORA / DevSecOps",
+          "section": "APIR-014",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_api-registratie_devops",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "APIR-014"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "APIR-015",
+      "name": "Security scan in CI (SAST/dependency check)",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NCSC / BIO2",
+          "section": "APIR-015",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_api-registratie_security",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "APIR-015"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "APIR-016",
+      "name": "Toegankelijkheid conform WCAG 2.2",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "WCAG 2.2",
+          "section": "APIR-016",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_api-registratie_toegankelijkheid",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "APIR-016"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "APIR-017",
+      "name": "Rate limiting geïmplementeerd",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NCSC-WEB-010",
+          "section": "APIR-017",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_api-registratie_performance",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "APIR-017"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "APIR-018",
+      "name": "Monitoring en alerting actief",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "NCSC-BAS-008",
+          "section": "APIR-018",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_api-registratie_devops",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "APIR-018"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "SC-APIR-001",
+      "description": "API geregistreerd op developer.overheid.nl",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "APIR-001"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_api-registratie_registratie",
+        "appliedRules": [
+          "APIR-001"
+        ]
+      }
+    },
+    {
+      "id": "SC-APIR-002",
+      "description": "OpenAPI 3.0 specificatie beschikbaar",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "APIR-002"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_api-registratie_specificatie",
+        "appliedRules": [
+          "APIR-002"
+        ]
+      }
+    },
+    {
+      "id": "SC-APIR-003",
+      "description": "API Design Rule API-03: RESTful",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "APIR-003"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_api-registratie_design",
+        "appliedRules": [
+          "APIR-003"
+        ]
+      }
+    },
+    {
+      "id": "SC-APIR-004",
+      "description": "API Design Rule API-09: HAL of JSON-LD",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "APIR-004"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_api-registratie_design",
+        "appliedRules": [
+          "APIR-004"
+        ]
+      }
+    },
+    {
+      "id": "SC-APIR-005",
+      "description": "API Design Rule API-16: HTTP status codes",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "APIR-005"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_api-registratie_design",
+        "appliedRules": [
+          "APIR-005"
+        ]
+      }
+    },
+    {
+      "id": "SC-APIR-006",
+      "description": "API Design Rule API-17: Error response formaat",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "APIR-006"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_api-registratie_design",
+        "appliedRules": [
+          "APIR-006"
+        ]
+      }
+    },
+    {
+      "id": "SC-APIR-007",
+      "description": "API Design Rule API-18: Versioning via URI",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "APIR-007"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_api-registratie_design",
+        "appliedRules": [
+          "APIR-007"
+        ]
+      }
+    },
+    {
+      "id": "SC-APIR-008",
+      "description": "API Design Rule API-51: HTTPS verplicht",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "APIR-008"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_api-registratie_design",
+        "appliedRules": [
+          "APIR-008"
+        ]
+      }
+    },
+    {
+      "id": "SC-APIR-009",
+      "description": "OAuth 2.0 authenticatie (NL GOV Assurance Profile)",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "APIR-009"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_api-registratie_auth",
+        "appliedRules": [
+          "APIR-009"
+        ]
+      }
+    },
+    {
+      "id": "SC-APIR-010",
+      "description": "API op GitHub (open source)",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "APIR-010"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_api-registratie_opensource",
+        "appliedRules": [
+          "APIR-010"
+        ]
+      }
+    },
+    {
+      "id": "SC-APIR-011",
+      "description": "LICENSE aanwezig (MIT/CDDL/Apache)",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "APIR-011"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_api-registratie_opensource",
+        "appliedRules": [
+          "APIR-011"
+        ]
+      }
+    },
+    {
+      "id": "SC-APIR-012",
+      "description": "CODE_OF_CONDUCT aanwezig",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "APIR-012"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_api-registratie_opensource",
+        "appliedRules": [
+          "APIR-012"
+        ]
+      }
+    },
+    {
+      "id": "SC-APIR-013",
+      "description": "CONTRIBUTING aanwezig",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "APIR-013"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_api-registratie_opensource",
+        "appliedRules": [
+          "APIR-013"
+        ]
+      }
+    },
+    {
+      "id": "SC-APIR-014",
+      "description": "CI/CD pipeline actief",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "APIR-014"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_api-registratie_devops",
+        "appliedRules": [
+          "APIR-014"
+        ]
+      }
+    },
+    {
+      "id": "SC-APIR-015",
+      "description": "Security scan in CI (SAST/dependency check)",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "APIR-015"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_api-registratie_security",
+        "appliedRules": [
+          "APIR-015"
+        ]
+      }
+    }
+  ],
+  "transitionRules": [],
+  "metadata": {
+    "juridischeContext": {
+      "wet": "API Registratie — developer.overheid.nl",
+      "wetBwbrId": "BWBR0038645",
+      "wetVersieLaatstGecheckt": "2026-07-05",
+      "tariefVersie": "2025.1"
+    },
+    "juristAccordering": {
+      "geaccondeerdDoor": "D. Landman (approved v1.1.0)",
+      "datum": "2026-07-05",
+      "geldigTot": "2027-07-05",
+      "versie": "2025.1"
+    },
+    "bronverificatieDatum": "2026-07-05",
+    "acceptatieType": "full"
+  }
+}

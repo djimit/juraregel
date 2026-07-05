@@ -67,7 +67,10 @@
         "ind-verblijfsregels",
         "wmo",
         "gegevensdelingsbeleid",
-        "dpia-model"
+        "dpia-model",
+        "algoritmeregister",
+        "data-overheid-dcat",
+        "api-registratie"
       ]
     },
     "procedureType": {

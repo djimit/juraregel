@@ -1,0 +1,110 @@
+// API Registratie — developer.overheid.nl — RegelSpraak CNL
+
+regel APIR-001 "API geregistreerd op developer.overheid.nl":
+  als regelId is "APIR-001"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "registratie".
+
+regel APIR-002 "OpenAPI 3.0 specificatie beschikbaar":
+  als regelId is "APIR-002"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "specificatie".
+
+regel APIR-003 "API Design Rule API-03: RESTful":
+  als regelId is "APIR-003"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "design".
+
+regel APIR-004 "API Design Rule API-09: HAL of JSON-LD":
+  als regelId is "APIR-004"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "design".
+
+regel APIR-005 "API Design Rule API-16: HTTP status codes":
+  als regelId is "APIR-005"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "design".
+
+regel APIR-006 "API Design Rule API-17: Error response formaat":
+  als regelId is "APIR-006"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "design".
+
+regel APIR-007 "API Design Rule API-18: Versioning via URI":
+  als regelId is "APIR-007"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "design".
+
+regel APIR-008 "API Design Rule API-51: HTTPS verplicht":
+  als regelId is "APIR-008"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "design".
+
+regel APIR-009 "OAuth 2.0 authenticatie (NL GOV Assurance Profile)":
+  als regelId is "APIR-009"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "auth".
+
+regel APIR-010 "API op GitHub (open source)":
+  als regelId is "APIR-010"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "opensource".
+
+regel APIR-011 "LICENSE aanwezig (MIT/CDDL/Apache)":
+  als regelId is "APIR-011"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "opensource".
+
+regel APIR-012 "CODE_OF_CONDUCT aanwezig":
+  als regelId is "APIR-012"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "opensource".
+
+regel APIR-013 "CONTRIBUTING aanwezig":
+  als regelId is "APIR-013"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "opensource".
+
+regel APIR-014 "CI/CD pipeline actief":
+  als regelId is "APIR-014"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "devops".
+
+regel APIR-015 "Security scan in CI (SAST/dependency check)":
+  als regelId is "APIR-015"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "security".
+
+regel APIR-016 "Toegankelijkheid conform WCAG 2.2":
+  als regelId is "APIR-016"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "toegankelijkheid".
+
+regel APIR-017 "Rate limiting geïmplementeerd":
+  als regelId is "APIR-017"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "performance".
+
+regel APIR-018 "Monitoring en alerting actief":
+  als regelId is "APIR-018"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "devops".
+

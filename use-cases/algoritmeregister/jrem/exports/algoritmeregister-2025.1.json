@@ -1,0 +1,942 @@
+{
+  "schemaVersion": "1.0.0",
+  "ruleSetId": "algoritmeregister",
+  "version": "2025.1",
+  "validFrom": "2025-01-01",
+  "validUntil": "2026-12-31",
+  "jurisdiction": "NL",
+  "domain": "algoritmeregister",
+  "procedureType": "dagvaarding",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "ALG-001",
+      "name": "Algoritme geregistreerd in algoritmeregister",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "algoritmes.overheid.nl",
+          "section": "ALG-001",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_algoritmeregister_registratie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "ALG-001"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "ALG-002",
+      "name": "Algoritme naam verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "algoritmeregister verplichte velden",
+          "section": "ALG-002",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_algoritmeregister_registratie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "ALG-002"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "ALG-003",
+      "name": "Algoritme beschrijving verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "algoritmeregister verplichte velden",
+          "section": "ALG-003",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_algoritmeregister_registratie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "ALG-003"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "ALG-004",
+      "name": "Organisatie naam verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "algoritmeregister verplichte velden",
+          "section": "ALG-004",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_algoritmeregister_registratie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "ALG-004"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "ALG-005",
+      "name": "Algoritme type geclassificeerd",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "EU AI Act",
+          "section": "ALG-005",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_algoritmeregister_classificatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "ALG-005"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "ALG-006",
+      "name": "Risicoclassificatie bepaald",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "EU AI Act art. 6",
+          "section": "ALG-006",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_algoritmeregister_classificatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "ALG-006"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "ALG-007",
+      "name": "Risico verboden — direct stop",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "EU AI Act art. 5",
+          "section": "ALG-007",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_algoritmeregister_classificatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "ALG-007"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "ALG-008",
+      "name": "Risico hoog — extra verplichtingen",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "EU AI Act art. 9-15",
+          "section": "ALG-008",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_algoritmeregister_classificatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "ALG-008"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "ALG-009",
+      "name": "Risico beperkt — transparantie verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "EU AI Act art. 50",
+          "section": "ALG-009",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_algoritmeregister_classificatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "ALG-009"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "ALG-010",
+      "name": "Transparantie naar burgers",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "EU AI Act art. 50 lid 1",
+          "section": "ALG-010",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_algoritmeregister_transparantie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "ALG-010"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "ALG-011",
+      "name": "Deepfake openbaarmaking",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "EU AI Act art. 50 lid 4",
+          "section": "ALG-011",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_algoritmeregister_transparantie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "ALG-011"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "ALG-012",
+      "name": "Menselijke tussenkomst gegarandeerd",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "EU AI Act art. 14",
+          "section": "ALG-012",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_algoritmeregister_oversight",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "ALG-012"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "ALG-013",
+      "name": "DPIA uitgevoerd voor algoritme",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "AVG art. 35",
+          "section": "ALG-013",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_algoritmeregister_dpia",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "ALG-013"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "ALG-014",
+      "name": "Security maatregelen conform BIO2",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "BIO2 / NCSC",
+          "section": "ALG-014",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_algoritmeregister_security",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "ALG-014"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "ALG-015",
+      "name": "Privacy by design in algoritme",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "AVG art. 25",
+          "section": "ALG-015",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_algoritmeregister_privacy",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "ALG-015"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "ALG-016",
+      "name": "Data governance voor training data",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "EU AI Act art. 10",
+          "section": "ALG-016",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_algoritmeregister_data",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "ALG-016"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "ALG-017",
+      "name": "Technische documentatie bijgewerkt",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "EU AI Act art. 11",
+          "section": "ALG-017",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_algoritmeregister_documentatie",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "ALG-017"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "ALG-018",
+      "name": "Logboek van beslissingen bijgehouden",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "EU AI Act art. 12",
+          "section": "ALG-018",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_algoritmeregister_logging",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "ALG-018"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "ALG-019",
+      "name": "Bias assessment uitgevoerd",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "EU AI Act art. 10 + art. 15",
+          "section": "ALG-019",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_algoritmeregister_bias",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "ALG-019"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "ALG-020",
+      "name": "Impact op fundamentele rechten beoordeeld",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "EU AI Act art. 27",
+          "section": "ALG-020",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_algoritmeregister_rechten",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "ALG-020"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "SC-ALG-001",
+      "description": "Algoritme geregistreerd in algoritmeregister",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "ALG-001"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_algoritmeregister_registratie",
+        "appliedRules": [
+          "ALG-001"
+        ]
+      }
+    },
+    {
+      "id": "SC-ALG-002",
+      "description": "Algoritme naam verplicht",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "ALG-002"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_algoritmeregister_registratie",
+        "appliedRules": [
+          "ALG-002"
+        ]
+      }
+    },
+    {
+      "id": "SC-ALG-003",
+      "description": "Algoritme beschrijving verplicht",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "ALG-003"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_algoritmeregister_registratie",
+        "appliedRules": [
+          "ALG-003"
+        ]
+      }
+    },
+    {
+      "id": "SC-ALG-004",
+      "description": "Organisatie naam verplicht",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "ALG-004"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_algoritmeregister_registratie",
+        "appliedRules": [
+          "ALG-004"
+        ]
+      }
+    },
+    {
+      "id": "SC-ALG-005",
+      "description": "Algoritme type geclassificeerd",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "ALG-005"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_algoritmeregister_classificatie",
+        "appliedRules": [
+          "ALG-005"
+        ]
+      }
+    },
+    {
+      "id": "SC-ALG-006",
+      "description": "Risicoclassificatie bepaald",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "ALG-006"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_algoritmeregister_classificatie",
+        "appliedRules": [
+          "ALG-006"
+        ]
+      }
+    },
+    {
+      "id": "SC-ALG-007",
+      "description": "Risico verboden — direct stop",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "ALG-007"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_algoritmeregister_classificatie",
+        "appliedRules": [
+          "ALG-007"
+        ]
+      }
+    },
+    {
+      "id": "SC-ALG-008",
+      "description": "Risico hoog — extra verplichtingen",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "ALG-008"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_algoritmeregister_classificatie",
+        "appliedRules": [
+          "ALG-008"
+        ]
+      }
+    },
+    {
+      "id": "SC-ALG-009",
+      "description": "Risico beperkt — transparantie verplicht",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "ALG-009"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_algoritmeregister_classificatie",
+        "appliedRules": [
+          "ALG-009"
+        ]
+      }
+    },
+    {
+      "id": "SC-ALG-010",
+      "description": "Transparantie naar burgers",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "ALG-010"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_algoritmeregister_transparantie",
+        "appliedRules": [
+          "ALG-010"
+        ]
+      }
+    },
+    {
+      "id": "SC-ALG-011",
+      "description": "Deepfake openbaarmaking",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "ALG-011"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_algoritmeregister_transparantie",
+        "appliedRules": [
+          "ALG-011"
+        ]
+      }
+    },
+    {
+      "id": "SC-ALG-012",
+      "description": "Menselijke tussenkomst gegarandeerd",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "ALG-012"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_algoritmeregister_oversight",
+        "appliedRules": [
+          "ALG-012"
+        ]
+      }
+    },
+    {
+      "id": "SC-ALG-013",
+      "description": "DPIA uitgevoerd voor algoritme",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "ALG-013"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_algoritmeregister_dpia",
+        "appliedRules": [
+          "ALG-013"
+        ]
+      }
+    },
+    {
+      "id": "SC-ALG-014",
+      "description": "Security maatregelen conform BIO2",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "ALG-014"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_algoritmeregister_security",
+        "appliedRules": [
+          "ALG-014"
+        ]
+      }
+    },
+    {
+      "id": "SC-ALG-015",
+      "description": "Privacy by design in algoritme",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "ALG-015"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_algoritmeregister_privacy",
+        "appliedRules": [
+          "ALG-015"
+        ]
+      }
+    }
+  ],
+  "transitionRules": [],
+  "metadata": {
+    "juridischeContext": {
+      "wet": "Algoritmeregister — algoritmes.overheid.nl",
+      "wetBwbrId": "BWBR0048300",
+      "wetVersieLaatstGecheckt": "2026-07-05",
+      "tariefVersie": "2025.1"
+    },
+    "juristAccordering": {
+      "geaccondeerdDoor": "D. Landman (approved v1.1.0)",
+      "datum": "2026-07-05",
+      "geldigTot": "2027-07-05",
+      "versie": "2025.1"
+    },
+    "bronverificatieDatum": "2026-07-05",
+    "acceptatieType": "full"
+  }
+}

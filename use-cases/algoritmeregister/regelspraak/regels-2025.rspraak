@@ -1,0 +1,122 @@
+// Algoritmeregister — algoritmes.overheid.nl — RegelSpraak CNL
+
+regel ALG-001 "Algoritme geregistreerd in algoritmeregister":
+  als regelId is "ALG-001"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "registratie".
+
+regel ALG-002 "Algoritme naam verplicht":
+  als regelId is "ALG-002"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "registratie".
+
+regel ALG-003 "Algoritme beschrijving verplicht":
+  als regelId is "ALG-003"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "registratie".
+
+regel ALG-004 "Organisatie naam verplicht":
+  als regelId is "ALG-004"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "registratie".
+
+regel ALG-005 "Algoritme type geclassificeerd":
+  als regelId is "ALG-005"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "classificatie".
+
+regel ALG-006 "Risicoclassificatie bepaald":
+  als regelId is "ALG-006"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "classificatie".
+
+regel ALG-007 "Risico verboden — direct stop":
+  als regelId is "ALG-007"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "classificatie".
+
+regel ALG-008 "Risico hoog — extra verplichtingen":
+  als regelId is "ALG-008"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "classificatie".
+
+regel ALG-009 "Risico beperkt — transparantie verplicht":
+  als regelId is "ALG-009"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "classificatie".
+
+regel ALG-010 "Transparantie naar burgers":
+  als regelId is "ALG-010"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "transparantie".
+
+regel ALG-011 "Deepfake openbaarmaking":
+  als regelId is "ALG-011"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "transparantie".
+
+regel ALG-012 "Menselijke tussenkomst gegarandeerd":
+  als regelId is "ALG-012"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "oversight".
+
+regel ALG-013 "DPIA uitgevoerd voor algoritme":
+  als regelId is "ALG-013"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "dpia".
+
+regel ALG-014 "Security maatregelen conform BIO2":
+  als regelId is "ALG-014"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "security".
+
+regel ALG-015 "Privacy by design in algoritme":
+  als regelId is "ALG-015"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "privacy".
+
+regel ALG-016 "Data governance voor training data":
+  als regelId is "ALG-016"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "data".
+
+regel ALG-017 "Technische documentatie bijgewerkt":
+  als regelId is "ALG-017"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "documentatie".
+
+regel ALG-018 "Logboek van beslissingen bijgehouden":
+  als regelId is "ALG-018"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "logging".
+
+regel ALG-019 "Bias assessment uitgevoerd":
+  als regelId is "ALG-019"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "bias".
+
+regel ALG-020 "Impact op fundamentele rechten beoordeeld":
+  als regelId is "ALG-020"
+  en implementatie is "ja"
+  dan is compliant ja
+  en is categorie "rechten".
+

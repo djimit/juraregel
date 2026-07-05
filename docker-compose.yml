@@ -73,3 +73,15 @@ services:
     build: .
     command: python use-cases/dpia-model/api/app.py
     ports: ["8507:8507"]
+  algoritmeregister:
+    build: .
+    command: python use-cases/algoritmeregister/api/app.py
+    ports: ["8508:8508"]
+  data-overheid-dcat:
+    build: .
+    command: python use-cases/data-overheid-dcat/api/app.py
+    ports: ["8509:8509"]
+  api-registratie:
+    build: .
+    command: python use-cases/api-registratie/api/app.py
+    ports: ["8510:8510"]

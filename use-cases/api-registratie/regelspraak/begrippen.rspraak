@@ -1,0 +1,4 @@
+// Begrippenmodel — API Registratie — developer.overheid.nl
+
+begrip regelId: "Unieke identificatie." type: tekst.
+begrip compliant: "Voldoet?" waarden: ja, nee, onbekend.

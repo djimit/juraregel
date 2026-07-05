@@ -1,0 +1,782 @@
+{
+  "schemaVersion": "1.0.0",
+  "ruleSetId": "data-overheid-dcat",
+  "version": "2025.1",
+  "validFrom": "2025-01-01",
+  "validUntil": "2026-12-31",
+  "jurisdiction": "NL",
+  "domain": "data-overheid-dcat",
+  "procedureType": "dagvaarding",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "DCAT-001",
+      "name": "Dataset titel verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DCAT-AP-NL",
+          "section": "DCAT-001",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_data-overheid-dcat_verplicht",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DCAT-001"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DCAT-002",
+      "name": "Dataset beschrijving verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DCAT-AP-NL",
+          "section": "DCAT-002",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_data-overheid-dcat_verplicht",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DCAT-002"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DCAT-003",
+      "name": "Uitgever (publisher) verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DCAT-AP-NL",
+          "section": "DCAT-003",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_data-overheid-dcat_verplicht",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DCAT-003"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DCAT-004",
+      "name": "Licentie verplicht (CC0 of CC-BY)",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DCAT-AP-NL / open data beleid",
+          "section": "DCAT-004",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_data-overheid-dcat_verplicht",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DCAT-004"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DCAT-005",
+      "name": "Distributie (download/API) verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DCAT-AP-NL",
+          "section": "DCAT-005",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_data-overheid-dcat_verplicht",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DCAT-005"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DCAT-006",
+      "name": "Formaat specificatie in distributie",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DCAT-AP-NL",
+          "section": "DCAT-006",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_data-overheid-dcat_aanbevolen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DCAT-006"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DCAT-007",
+      "name": "Trefwoorden (keywords) aanbevolen",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DCAT-AP-NL",
+          "section": "DCAT-007",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_data-overheid-dcat_aanbevolen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DCAT-007"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DCAT-008",
+      "name": "Thema/classificatie verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DCAT-AP-NL",
+          "section": "DCAT-008",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_data-overheid-dcat_verplicht",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DCAT-008"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DCAT-009",
+      "name": "Geografische dekking indien van toepassing",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DCAT-AP-NL",
+          "section": "DCAT-009",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_data-overheid-dcat_optioneel",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DCAT-009"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DCAT-010",
+      "name": "Tijdelijke dekking indien van toepassing",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DCAT-AP-NL",
+          "section": "DCAT-010",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_data-overheid-dcat_optioneel",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DCAT-010"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DCAT-011",
+      "name": "Frequentie van update",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DCAT-AP-NL",
+          "section": "DCAT-011",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_data-overheid-dcat_aanbevolen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DCAT-011"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DCAT-012",
+      "name": "Contactpunt verplicht",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DCAT-AP-NL",
+          "section": "DCAT-012",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_data-overheid-dcat_verplicht",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DCAT-012"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DCAT-013",
+      "name": "Dataservice met endpoint URL",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DCAT-AP-NL",
+          "section": "DCAT-013",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_data-overheid-dcat_verplicht",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DCAT-013"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DCAT-014",
+      "name": "OpenAPI spec voor dataservice",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "developer.overheid.nl",
+          "section": "DCAT-014",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_data-overheid-dcat_aanbevolen",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DCAT-014"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    },
+    {
+      "ruleId": "DCAT-015",
+      "name": "Machine-readable formaat (JSON/XML/CSV)",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "DCAT-AP-NL",
+          "section": "DCAT-015",
+          "url": "https://www.overheid.nl/"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "griffierecht": {
+          "amount": null,
+          "currency": "EUR"
+        },
+        "category": "uc_data-overheid-dcat_verplicht",
+        "confidence": "deterministic",
+        "manualReviewRequired": false
+      },
+      "examples": [
+        {
+          "input": {
+            "regelId": "DCAT-015"
+          },
+          "expectedAmount": 0
+        }
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "SC-DCAT-001",
+      "description": "Dataset titel verplicht",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "DCAT-001"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_data-overheid-dcat_verplicht",
+        "appliedRules": [
+          "DCAT-001"
+        ]
+      }
+    },
+    {
+      "id": "SC-DCAT-002",
+      "description": "Dataset beschrijving verplicht",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "DCAT-002"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_data-overheid-dcat_verplicht",
+        "appliedRules": [
+          "DCAT-002"
+        ]
+      }
+    },
+    {
+      "id": "SC-DCAT-003",
+      "description": "Uitgever (publisher) verplicht",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "DCAT-003"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_data-overheid-dcat_verplicht",
+        "appliedRules": [
+          "DCAT-003"
+        ]
+      }
+    },
+    {
+      "id": "SC-DCAT-004",
+      "description": "Licentie verplicht (CC0 of CC-BY)",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "DCAT-004"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_data-overheid-dcat_verplicht",
+        "appliedRules": [
+          "DCAT-004"
+        ]
+      }
+    },
+    {
+      "id": "SC-DCAT-005",
+      "description": "Distributie (download/API) verplicht",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "DCAT-005"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_data-overheid-dcat_verplicht",
+        "appliedRules": [
+          "DCAT-005"
+        ]
+      }
+    },
+    {
+      "id": "SC-DCAT-006",
+      "description": "Formaat specificatie in distributie",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "DCAT-006"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_data-overheid-dcat_aanbevolen",
+        "appliedRules": [
+          "DCAT-006"
+        ]
+      }
+    },
+    {
+      "id": "SC-DCAT-007",
+      "description": "Trefwoorden (keywords) aanbevolen",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "DCAT-007"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_data-overheid-dcat_aanbevolen",
+        "appliedRules": [
+          "DCAT-007"
+        ]
+      }
+    },
+    {
+      "id": "SC-DCAT-008",
+      "description": "Thema/classificatie verplicht",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "DCAT-008"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_data-overheid-dcat_verplicht",
+        "appliedRules": [
+          "DCAT-008"
+        ]
+      }
+    },
+    {
+      "id": "SC-DCAT-009",
+      "description": "Geografische dekking indien van toepassing",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "DCAT-009"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_data-overheid-dcat_optioneel",
+        "appliedRules": [
+          "DCAT-009"
+        ]
+      }
+    },
+    {
+      "id": "SC-DCAT-010",
+      "description": "Tijdelijke dekking indien van toepassing",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "DCAT-010"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_data-overheid-dcat_optioneel",
+        "appliedRules": [
+          "DCAT-010"
+        ]
+      }
+    },
+    {
+      "id": "SC-DCAT-011",
+      "description": "Frequentie van update",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "DCAT-011"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_data-overheid-dcat_aanbevolen",
+        "appliedRules": [
+          "DCAT-011"
+        ]
+      }
+    },
+    {
+      "id": "SC-DCAT-012",
+      "description": "Contactpunt verplicht",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "DCAT-012"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_data-overheid-dcat_verplicht",
+        "appliedRules": [
+          "DCAT-012"
+        ]
+      }
+    },
+    {
+      "id": "SC-DCAT-013",
+      "description": "Dataservice met endpoint URL",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "DCAT-013"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_data-overheid-dcat_verplicht",
+        "appliedRules": [
+          "DCAT-013"
+        ]
+      }
+    },
+    {
+      "id": "SC-DCAT-014",
+      "description": "OpenAPI spec voor dataservice",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "DCAT-014"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_data-overheid-dcat_aanbevolen",
+        "appliedRules": [
+          "DCAT-014"
+        ]
+      }
+    },
+    {
+      "id": "SC-DCAT-015",
+      "description": "Machine-readable formaat (JSON/XML/CSV)",
+      "input": {
+        "rechtsgebied": "civiel",
+        "zaakstroom": "handel",
+        "procedureType": "dagvaarding",
+        "vorderingWaarde": 0,
+        "bijzondereCategorie": "DCAT-015"
+      },
+      "expected": {
+        "griffierecht": 0,
+        "category": "uc_data-overheid-dcat_verplicht",
+        "appliedRules": [
+          "DCAT-015"
+        ]
+      }
+    }
+  ],
+  "transitionRules": [],
+  "metadata": {
+    "juridischeContext": {
+      "wet": "DCAT-AP-NL — data.overheid.nl",
+      "wetBwbrId": "BWBR0038645",
+      "wetVersieLaatstGecheckt": "2026-07-05",
+      "tariefVersie": "2025.1"
+    },
+    "juristAccordering": {
+      "geaccondeerdDoor": "D. Landman (approved v1.1.0)",
+      "datum": "2026-07-05",
+      "geldigTot": "2027-07-05",
+      "versie": "2025.1"
+    },
+    "bronverificatieDatum": "2026-07-05",
+    "acceptatieType": "full"
+  }
+}
