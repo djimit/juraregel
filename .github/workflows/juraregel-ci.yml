@@ -26,13 +26,13 @@ jobs:
       - name: Install deps
         run: pip install fastapi uvicorn pydantic jsonschema pytest httpx pyyaml pytest-bdd
       - name: Schema check
-        run: python3 -c "import json; json.load(open("shared/jrem-core.json")); print("Core schema OK")"
+        run: python3 ci/check-schema.py
       - name: Run unit tests
         run: python3 -m pytest use-cases/*/tests/ -q --no-header
       - name: Validate JREM exports
         run: python3 ci/validate-jrem.py
       - name: Legal review gate (warn only for PoC)
-        run: bash ci/legal-review-gate.sh || echo "LEGAL_REVIEW_WARNING: self-approved exports"
+        run: bash ci/legal-review-gate.sh || echo LEGAL_REVIEW_WARNING
       - name: BDD tests
         run: python3 -m pytest features/ -q --no-header
       - name: CLI check
@@ -47,4 +47,4 @@ jobs:
           test -f LICENSE && test -f README.md && test -f CHANGELOG.md
           test -f CONTRIBUTING.md && test -f CODE_OF_CONDUCT.md
           test -f docker-compose.yml && test -f Dockerfile
-          echo "All required files present"
+          echo All required files present
