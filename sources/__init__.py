@@ -2,7 +2,7 @@
 Government Source Connectors package.
 
 Exports:
-    BaseConnector, BWBConnector, EURLexConnector, PLOOIConnector, RechtspraakConnector
+    BaseConnector
 """
 from sources.base import BaseConnector
 

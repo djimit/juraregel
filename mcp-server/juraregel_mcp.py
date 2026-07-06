@@ -335,7 +335,18 @@ def semantic_search(query: str, domain: str = None, limit: int = 10) -> list:
         import sqlite3
         db_path = repo_root / ".keyword.db"
         if not db_path.exists():
-            return {"error": "No search index available. Run: python3 tools/jkb-keyword.py index"}
+            return [
+                {
+                    "rule_id": r["ruleId"],
+                    "ruleId": r["ruleId"],
+                    "domain": r["domain"],
+                    "name": r["name"],
+                    "sourceRefs": r.get("sourceRefs", []),
+                    "nl_text": r["name"],
+                    "score": None,
+                }
+                for r in search_rules(query, domain)[:limit]
+            ]
         conn = sqlite3.connect(str(db_path))
         terms = query.replace('"', '').strip().split()
         fts_query = " ".join('"' + t + '"' for t in terms if t)
@@ -512,7 +523,7 @@ def get_resource_list() -> list[dict]:
         {
             "uri": "laws://summary",
             "name": "Knowledge Base samenvatting",
-            "description": "Samenvatting van alle 655+ regels per domein uit de JKB index.",
+            "description": "Samenvatting van alle 665+ regels per domein uit de JKB index.",
             "mimeType": "application/json",
         },
     ] + [

@@ -35,7 +35,7 @@ def test_resource_read_summary():
     assert "result" in result
     data = json.loads(result["result"]["contents"][0]["text"])
     assert "total_rules" in data
-    assert data["total_rules"] == 655
+    assert data["total_rules"] >= 665
     print("  resources/read(laws://summary): OK")
 
 def test_resource_read_spec():

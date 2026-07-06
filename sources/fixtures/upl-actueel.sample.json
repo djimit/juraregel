@@ -1,0 +1,50 @@
+{
+  "head": {
+    "vars": [
+      "UniformeProductnaam",
+      "URI",
+      "Rijk",
+      "Provincie",
+      "Waterschap",
+      "Gemeente",
+      "Burger",
+      "Bedrijf",
+      "SDG",
+      "Aanvraag",
+      "Melding",
+      "Verplichting",
+      "Grondslaglabel",
+      "Grondslaglink"
+    ]
+  },
+  "results": {
+    "bindings": [
+      {
+        "UniformeProductnaam": {"type": "literal", "value": "evenementenvergunning"},
+        "URI": {"type": "uri", "value": "http://standaarden.overheid.nl/owms/terms/Evenementenvergunning"},
+        "Gemeente": {"type": "literal", "value": "X"},
+        "Burger": {"type": "literal", "value": "X"},
+        "Bedrijf": {"type": "literal", "value": "X"},
+        "SDG": {"type": "literal", "value": "J"},
+        "Aanvraag": {"type": "literal", "value": "X"},
+        "Grondslaglabel": {"type": "literal", "value": "Algemene plaatselijke verordening"},
+        "Grondslaglink": {"type": "uri", "value": "https://lokaleregelgeving.overheid.nl/"}
+      },
+      {
+        "UniformeProductnaam": {"type": "literal", "value": "subsidie natuurbeheer"},
+        "URI": {"type": "uri", "value": "http://standaarden.overheid.nl/owms/terms/SubsidieNatuurbeheer"},
+        "Provincie": {"type": "literal", "value": "X"},
+        "Bedrijf": {"type": "literal", "value": "X"},
+        "Subsidie": {"type": "literal", "value": "X"}
+      },
+      {
+        "UniformeProductnaam": {"type": "literal", "value": "watervergunning"},
+        "URI": {"type": "uri", "value": "http://standaarden.overheid.nl/owms/terms/Watervergunning"},
+        "Waterschap": {"type": "literal", "value": "X"},
+        "Burger": {"type": "literal", "value": "X"},
+        "Bedrijf": {"type": "literal", "value": "X"},
+        "Aanvraag": {"type": "literal", "value": "X"}
+      }
+    ]
+  }
+}

@@ -161,10 +161,25 @@ def load_jrem(jrem_dir: Path, version: str = "2026.1") -> dict:
     if not files:
         year = version.split(".")[0]
         files = list(jrem_dir.glob(f"*-{year}.*.json"))
-    if not files:
+    data = None
+    if files:
+        with open(files[0]) as f:
+            data = json.load(f)
+    else:
+        year = version.split(".")[0]
+        same_year = None
+        for filepath in sorted(jrem_dir.glob("*.json")):
+            with open(filepath) as f:
+                candidate = json.load(f)
+            candidate_version = str(candidate.get("version", ""))
+            if candidate_version == version:
+                data = candidate
+                break
+            if same_year is None and candidate_version.startswith(year):
+                same_year = candidate
+        data = data or same_year
+    if data is None:
         raise FileNotFoundError(f"No JREM export found in {jrem_dir} for version {version}")
-    with open(files[0]) as f:
-        data = json.load(f)
     _jrem_cache[cache_key] = data
     return data
 

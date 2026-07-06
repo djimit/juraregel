@@ -1,0 +1,127 @@
+{
+  "schemaVersion": "1.1.0",
+  "ruleSetId": "dienstverlening-check",
+  "version": "2026.1",
+  "validFrom": "2026-07-06",
+  "validUntil": "2026-12-31",
+  "jurisdiction": "NL",
+  "domain": "dienstverlening-check",
+  "procedureType": "dagvaarding",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "DVC-001",
+      "name": "Productnaam bestaat in UPL",
+      "priority": 200,
+      "legalStatus": "regeling",
+      "sourceRefs": [{"type": "regeling", "title": "Uniforme Productnamenlijst (UPL)", "section": "UPL Actueel", "url": "https://standaarden.overheid.nl/upl"}],
+      "conditions": {},
+      "outcome": {"griffierecht": {"amount": null, "currency": "EUR"}, "category": "productnaam_gevonden", "confidence": "deterministic", "manualReviewRequired": false}
+    },
+    {
+      "ruleId": "DVC-002",
+      "name": "Gemeentelijke bestuurslaag past",
+      "priority": 190,
+      "legalStatus": "regeling",
+      "sourceRefs": [{"type": "regeling", "title": "UPL voor gemeenten", "section": "Bestuurslaag gemeente", "url": "https://standaarden.overheid.nl/upl"}],
+      "conditions": {},
+      "outcome": {"griffierecht": {"amount": null, "currency": "EUR"}, "category": "bestuurslaag_gemeente_fit", "confidence": "deterministic", "manualReviewRequired": false}
+    },
+    {
+      "ruleId": "DVC-003",
+      "name": "Provinciale bestuurslaag past",
+      "priority": 190,
+      "legalStatus": "regeling",
+      "sourceRefs": [{"type": "regeling", "title": "UPL voor provincies", "section": "Bestuurslaag provincie", "url": "https://standaarden.overheid.nl/upl"}],
+      "conditions": {},
+      "outcome": {"griffierecht": {"amount": null, "currency": "EUR"}, "category": "bestuurslaag_provincie_fit", "confidence": "deterministic", "manualReviewRequired": false}
+    },
+    {
+      "ruleId": "DVC-004",
+      "name": "Waterschapsbestuurslaag past",
+      "priority": 190,
+      "legalStatus": "regeling",
+      "sourceRefs": [{"type": "regeling", "title": "UPL voor waterschappen", "section": "Bestuurslaag waterschap", "url": "https://standaarden.overheid.nl/upl"}],
+      "conditions": {},
+      "outcome": {"griffierecht": {"amount": null, "currency": "EUR"}, "category": "bestuurslaag_waterschap_fit", "confidence": "deterministic", "manualReviewRequired": false}
+    },
+    {
+      "ruleId": "DVC-005",
+      "name": "Rijksbestuurslaag past",
+      "priority": 190,
+      "legalStatus": "regeling",
+      "sourceRefs": [{"type": "regeling", "title": "UPL voor de Rijksoverheid", "section": "Bestuurslaag rijk", "url": "https://standaarden.overheid.nl/upl"}],
+      "conditions": {},
+      "outcome": {"griffierecht": {"amount": null, "currency": "EUR"}, "category": "bestuurslaag_rijk_fit", "confidence": "deterministic", "manualReviewRequired": false}
+    },
+    {
+      "ruleId": "DVC-006",
+      "name": "Organisatie bestaat in TOOI/ROO",
+      "priority": 180,
+      "legalStatus": "regeling",
+      "sourceRefs": [{"type": "regeling", "title": "TOOI/ROO waardelijsten", "section": "Overheidsorganisaties", "url": "https://standaarden.overheid.nl/tooi/waardelijsten/"}],
+      "conditions": {},
+      "outcome": {"griffierecht": {"amount": null, "currency": "EUR"}, "category": "organisatie_gevonden", "confidence": "deterministic", "manualReviewRequired": false}
+    },
+    {
+      "ruleId": "DVC-007",
+      "name": "SDG-signaal aanwezig",
+      "priority": 120,
+      "legalStatus": "regeling",
+      "sourceRefs": [{"type": "regeling", "title": "UPL Single Digital Gateway", "section": "SDG", "url": "https://standaarden.overheid.nl/upl"}],
+      "conditions": {},
+      "outcome": {"griffierecht": {"amount": null, "currency": "EUR"}, "category": "sdg_signaal", "confidence": "deterministic", "manualReviewRequired": false}
+    },
+    {
+      "ruleId": "DVC-008",
+      "name": "Wmebv-signaal aanwezig",
+      "priority": 120,
+      "legalStatus": "regeling",
+      "sourceRefs": [{"type": "regeling", "title": "UPL Wmebv voor gemeenten", "section": "Wmebv", "url": "https://standaarden.overheid.nl/upl"}],
+      "conditions": {},
+      "outcome": {"griffierecht": {"amount": null, "currency": "EUR"}, "category": "wmebv_signaal", "confidence": "deterministic", "manualReviewRequired": false}
+    },
+    {
+      "ruleId": "DVC-009",
+      "name": "Product past niet bij bestuurslaag",
+      "priority": 90,
+      "legalStatus": "regeling",
+      "sourceRefs": [{"type": "regeling", "title": "Uniforme Productnamenlijst (UPL)", "section": "Bestuurslaag subsets", "url": "https://standaarden.overheid.nl/upl"}],
+      "conditions": {},
+      "outcome": {"griffierecht": {"amount": null, "currency": "EUR"}, "category": "bestuurslaag_mismatch", "confidence": "deterministic", "manualReviewRequired": true, "manualReviewReason": "Productnaam hoort niet bij de opgegeven bestuurslaag; controleer lokale context."}
+    },
+    {
+      "ruleId": "DVC-010",
+      "name": "Product of organisatie ontbreekt",
+      "priority": 80,
+      "legalStatus": "regeling",
+      "sourceRefs": [{"type": "regeling", "title": "UPL en TOOI/ROO", "section": "Bronregistraties", "url": "https://standaarden.overheid.nl/"}],
+      "conditions": {},
+      "outcome": {"griffierecht": {"amount": null, "currency": "EUR"}, "category": "bronwaarde_ontbreekt", "confidence": "deterministic", "manualReviewRequired": true, "manualReviewReason": "Product of organisatie ontbreekt in de gebruikte officiele bronregistratie."}
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "DVC-SC-001",
+      "description": "Gemeenteproduct past bij gemeente",
+      "input": {"rechtsgebied": "civiel", "zaakstroom": "handel", "procedureType": "dagvaarding", "vorderingWaarde": 0, "bijzondereCategorie": "DVC-001", "organisatie": "gemeente Amsterdam", "productNaam": "evenementenvergunning", "bestuurslaag": "gemeente"},
+      "expected": {"griffierecht": 0, "category": "productnaam_gevonden", "appliedRules": ["DVC-001", "DVC-002", "DVC-006"], "manualReviewRequired": false}
+    },
+    {
+      "id": "DVC-SC-002",
+      "description": "Gemeenteproduct past niet bij provincie",
+      "input": {"rechtsgebied": "civiel", "zaakstroom": "handel", "procedureType": "dagvaarding", "vorderingWaarde": 0, "bijzondereCategorie": "DVC-009", "organisatie": "provincie Noord-Holland", "productNaam": "evenementenvergunning", "bestuurslaag": "provincie"},
+      "expected": {"griffierecht": 0, "category": "bestuurslaag_mismatch", "appliedRules": ["DVC-001", "DVC-006", "DVC-009"], "manualReviewRequired": true}
+    }
+  ],
+  "transitionRules": [],
+  "metadata": {
+    "juridischeContext": {
+      "wet": "UPL en TOOI/ROO",
+      "wetVersieLaatstGecheckt": "2026-07-06",
+      "tariefVersie": "2026.1"
+    },
+    "bronverificatieDatum": "2026-07-06",
+    "acceptatieType": "draft"
+  }
+}

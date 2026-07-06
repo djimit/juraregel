@@ -14,7 +14,6 @@
     "jurisdiction",
     "domain",
     "procedureType",
-    "conflictResolution",
     "rules"
   ],
   "properties": {
@@ -39,7 +38,10 @@
       "description": "Geldig vanaf (ISO 8601 datum)"
     },
     "validUntil": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "format": "date",
       "description": "Geldig tot en met (ISO 8601 datum)"
     },
@@ -55,15 +57,19 @@
         "bestuursrecht",
         "strafrecht",
         "rechtspraak-publicatie",
+        "basisregistraties",
         "bio2-informatiebeveiliging",
         "forumstandaardisatie",
         "overheidsstandaarden",
         "nora-architectuur",
+        "omgevingswet",
         "eu-ai-act",
         "avg-gdpr",
         "ncsc-cybersecurity",
         "nis2",
         "btw-tarieven",
+        "toeslagen",
+        "participatiewet",
         "ww-uitkering",
         "ind-verblijfsregels",
         "wmo",
@@ -72,6 +78,7 @@
         "algoritmeregister",
         "data-overheid-dcat",
         "api-registratie",
+        "dienstverlening-check",
         "traceability",
         "compliance-debt",
         "regulatory-impact"
@@ -83,7 +90,11 @@
         "dagvaarding",
         "verzoek",
         "kort-geding",
-        "cassatie"
+        "cassatie",
+        "activiteit-toetsing",
+        "bijstandsberekening",
+        "toegangsbeoordeling",
+        "toeslagen-berekening"
       ]
     },
     "conflictResolution": {
@@ -104,7 +115,6 @@
           "ruleId",
           "name",
           "priority",
-          "legalStatus",
           "sourceRefs",
           "conditions",
           "outcome"
@@ -148,6 +158,9 @@
                   "type": "string",
                   "enum": [
                     "wetsartikel",
+                    "wet",
+                    "besluit",
+                    "standaard",
                     "regeling",
                     "rechtspraak-tarieftabel",
                     "procesreglement",
@@ -163,13 +176,24 @@
                 "url": {
                   "type": "string",
                   "format": "uri"
+                },
+                "bwbId": {
+                  "type": "string"
+                },
+                "bronVersie": {
+                  "type": "string",
+                  "format": "date"
+                },
+                "bronDatum": {
+                  "type": "string",
+                  "format": "date"
                 }
               }
             }
           },
           "conditions": {
             "type": "object",
-            "additionalProperties": false,
+            "additionalProperties": true,
             "properties": {
               "zaakstroom": {
                 "type": "array",
@@ -265,12 +289,7 @@
           },
           "outcome": {
             "type": "object",
-            "additionalProperties": false,
-            "required": [
-              "griffierecht",
-              "confidence",
-              "manualReviewRequired"
-            ],
+            "additionalProperties": true,
             "properties": {
               "griffierecht": {
                 "type": "object",
@@ -321,8 +340,7 @@
               "type": "object",
               "additionalProperties": false,
               "required": [
-                "input",
-                "expectedAmount"
+                "input"
               ],
               "properties": {
                 "input": {
@@ -525,6 +543,49 @@
         "waterschap"
       ],
       "description": "Bestuursniveau"
+    },
+    "approval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "reviewer",
+        "role",
+        "date",
+        "scope",
+        "limitations"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "self"
+          ]
+        },
+        "reviewer": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        },
+        "date": {
+          "type": "string",
+          "format": "date"
+        },
+        "scope": {
+          "type": "string"
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "maturityLevel": {
+      "type": "string",
+      "pattern": "^L[0-4]-[a-z0-9-]+$"
     },
     "bwbId": {
       "type": "string",

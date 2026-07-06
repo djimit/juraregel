@@ -2,13 +2,19 @@
 Connector Scheduler — runs all connectors in sequence with health checks.
 """
 import json
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
 from sources.bwb_connector import BWBConnector
 from sources.eurlex_connector import EURLexConnector
 from sources.plooi_connector import PLOOIConnector
 from sources.rechtspraak_connector import RechtspraakConnector
+from sources.tooi_roo_connector import TOOIROOConnector
+from sources.upl_connector import UPLConnector
 
-ALL_CONNECTORS = [BWBConnector, EURLexConnector, PLOOIConnector, RechtspraakConnector]
+ALL_CONNECTORS = [BWBConnector, EURLexConnector, PLOOIConnector, RechtspraakConnector, UPLConnector, TOOIROOConnector]
 
 def run_health_checks() -> list[dict]:
     """Run health checks for all connectors."""

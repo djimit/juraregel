@@ -1,0 +1,8 @@
+begrip organisatie:
+  definitie "Overheidsorganisatie uit TOOI/ROO."
+
+begrip productNaam:
+  definitie "Product- of dienstnaam zoals aangeleverd door gebruiker of organisatie."
+
+begrip bestuurslaag:
+  definitie "Rijk, provincie, gemeente of waterschap."

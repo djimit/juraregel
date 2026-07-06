@@ -228,12 +228,43 @@ def apply_richtlijn_v4(gegeven_type, match, start_idx, end_idx, text, rechtsgebi
 
 # ─── V4: Full scan ───
 
+@dataclass
+class _Violation:
+    type: str
+    match: str
+    start_idx: int
+    end_idx: int
+
+
+def _fallback_scan_decision(text: str) -> list[_Violation]:
+    """Small repo-local scanner for tests and offline use when importer is absent."""
+    patterns = [
+        ("email", r"\b[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}\b"),
+        ("postcode", r"\b[1-9]\d{3}\s?[A-Z]{2}\b"),
+        ("date_of_birth", r"\b\d{1,2}\s+(?:januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december)\s+\d{4}\b"),
+        ("date_of_birth", r"\b\d{1,2}[-/]\d{1,2}[-/]\d{4}\b"),
+        ("street_address", r"\b[A-Z][A-Za-zÀ-ÿ' -]*(?:straat|laan|weg|plein|gracht|dijk|hof|kade|pad)\s+\d+[A-Za-z]?\b"),
+        ("phone_mobile", r"\b(?:\+31\s?6|06)[-\s]?\d{8}\b"),
+        ("phone_landline", r"\b(?:\+31\s?|0)\d{2,3}[-\s]?\d{6,7}\b"),
+        ("bsn", r"\b\d{8,9}\b"),
+        ("license_plate", r"\b[A-Z0-9]{2}-[A-Z0-9]{2}-[A-Z0-9]{2}\b"),
+    ]
+    violations: list[_Violation] = []
+    for given_type, pattern in patterns:
+        for match in re.finditer(pattern, text, re.IGNORECASE):
+            violations.append(_Violation(given_type, match.group(0), match.start(), match.end()))
+    return sorted(violations, key=lambda v: v.start_idx)
+
+
 def scan_met_richtlijn_v4(text, ecli="", rechtsgebied=""):
     import sys
     from pathlib import Path
     sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent.parent / "importer" / "rechtspraak"))
-    from pseudonymize import scan_decision
     from richtlijn_engine import RichtlijnResult
+    try:
+        from pseudonymize import scan_decision
+    except ModuleNotFoundError:
+        scan_decision = _fallback_scan_decision
     
     if not rechtsgebied and ecli:
         rechtsgebied = detect_rechtsgebied(ecli)

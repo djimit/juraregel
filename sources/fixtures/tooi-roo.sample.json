@@ -1,0 +1,34 @@
+[
+  {
+    "@id": "https://identifier.overheid.nl/tooi/id/gemeente/gm0363",
+    "@type": ["https://identifier.overheid.nl/tooi/def/ont/Gemeente"],
+    "http://www.w3.org/2000/01/rdf-schema#label": [{"@value": "gemeente Amsterdam"}],
+    "https://identifier.overheid.nl/tooi/def/ont/organisatiecode": [{"@value": "gm0363"}],
+    "https://identifier.overheid.nl/tooi/def/ont/voorkeursnaamExclSoort": [{"@value": "Amsterdam"}],
+    "https://identifier.overheid.nl/tooi/def/ont/voorkeursnaamInclSoort": [{"@value": "gemeente Amsterdam"}]
+  },
+  {
+    "@id": "https://identifier.overheid.nl/tooi/id/provincie/pv27",
+    "@type": ["https://identifier.overheid.nl/tooi/def/ont/Provincie"],
+    "http://www.w3.org/2000/01/rdf-schema#label": [{"@value": "provincie Noord-Holland"}],
+    "https://identifier.overheid.nl/tooi/def/ont/organisatiecode": [{"@value": "pv27"}],
+    "https://identifier.overheid.nl/tooi/def/ont/voorkeursnaamExclSoort": [{"@value": "Noord-Holland"}],
+    "https://identifier.overheid.nl/tooi/def/ont/voorkeursnaamInclSoort": [{"@value": "provincie Noord-Holland"}]
+  },
+  {
+    "@id": "https://identifier.overheid.nl/tooi/id/waterschap/ws0651",
+    "@type": ["https://identifier.overheid.nl/tooi/def/ont/Waterschap"],
+    "http://www.w3.org/2000/01/rdf-schema#label": [{"@value": "Hoogheemraadschap Hollands Noorderkwartier"}],
+    "https://identifier.overheid.nl/tooi/def/ont/organisatiecode": [{"@value": "ws0651"}],
+    "https://identifier.overheid.nl/tooi/def/ont/voorkeursnaamExclSoort": [{"@value": "Hollands Noorderkwartier"}],
+    "https://identifier.overheid.nl/tooi/def/ont/voorkeursnaamInclSoort": [{"@value": "Hoogheemraadschap Hollands Noorderkwartier"}]
+  },
+  {
+    "@id": "https://identifier.overheid.nl/tooi/id/ministerie/mnre1034",
+    "@type": ["https://identifier.overheid.nl/tooi/def/ont/Ministerie"],
+    "http://www.w3.org/2000/01/rdf-schema#label": [{"@value": "ministerie van Binnenlandse Zaken en Koninkrijksrelaties"}],
+    "https://identifier.overheid.nl/tooi/def/ont/organisatiecode": [{"@value": "mnre1034"}],
+    "https://identifier.overheid.nl/tooi/def/ont/voorkeursnaamExclSoort": [{"@value": "Binnenlandse Zaken en Koninkrijksrelaties"}],
+    "https://identifier.overheid.nl/tooi/def/ont/voorkeursnaamInclSoort": [{"@value": "ministerie van Binnenlandse Zaken en Koninkrijksrelaties"}]
+  }
+]

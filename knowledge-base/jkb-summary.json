@@ -1,6 +1,6 @@
 {
-  "total_rules": 655,
-  "total_domains": 26,
+  "total_rules": 665,
+  "total_domains": 27,
   "domains": {
     "algoritmeregister": {
       "rule_count": 20,
@@ -42,7 +42,7 @@
     "bio2-informatiebeveiliging": {
       "rule_count": 162,
       "versions": [
-        "2025.1"
+        "2026.1"
       ],
       "source_types": [
         "wetsartikel"
@@ -81,6 +81,15 @@
       "rule_count": 15,
       "versions": [
         "2025.1"
+      ],
+      "source_types": [
+        "regeling"
+      ]
+    },
+    "dienstverlening-check": {
+      "rule_count": 10,
+      "versions": [
+        "2026.1"
       ],
       "source_types": [
         "regeling"

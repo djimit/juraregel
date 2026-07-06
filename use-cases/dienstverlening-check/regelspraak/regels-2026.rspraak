@@ -1,0 +1,43 @@
+regel DVC-001 "Productnaam bestaat in UPL":
+  als productNaam voorkomt in UPL.
+  dan uniformeProductnaam is UPL productnaam.
+
+regel DVC-002 "Gemeentelijke bestuurslaag past":
+  als bestuurslaag is "gemeente"
+  en UPL product bestuurslaag gemeente heeft.
+  dan bestuurslaagfit is waar.
+
+regel DVC-003 "Provinciale bestuurslaag past":
+  als bestuurslaag is "provincie"
+  en UPL product bestuurslaag provincie heeft.
+  dan bestuurslaagfit is waar.
+
+regel DVC-004 "Waterschapsbestuurslaag past":
+  als bestuurslaag is "waterschap"
+  en UPL product bestuurslaag waterschap heeft.
+  dan bestuurslaagfit is waar.
+
+regel DVC-005 "Rijksbestuurslaag past":
+  als bestuurslaag is "rijk"
+  en UPL product bestuurslaag rijk heeft.
+  dan bestuurslaagfit is waar.
+
+regel DVC-006 "Organisatie bestaat in TOOI/ROO":
+  als organisatie voorkomt in TOOI/ROO.
+  dan organisatie-id is canoniek.
+
+regel DVC-007 "SDG-signaal aanwezig":
+  als UPL product SDG kenmerk heeft.
+  dan SDG signaal is waar.
+
+regel DVC-008 "Wmebv-signaal aanwezig":
+  als UPL product Wmebv kenmerk heeft.
+  dan Wmebv signaal is waar.
+
+regel DVC-009 "Product past niet bij bestuurslaag":
+  als UPL product niet hoort bij opgegeven bestuurslaag.
+  dan manualReviewRequired is waar.
+
+regel DVC-010 "Product of organisatie ontbreekt":
+  als product of organisatie niet in officiele bron voorkomt.
+  dan manualReviewRequired is waar.
