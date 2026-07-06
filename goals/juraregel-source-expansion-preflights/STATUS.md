@@ -42,7 +42,9 @@ Started on 2026-07-06 from `/Users/dlandman/juraregel`.
 
 ## End Gates
 
-1. Commit and push approval.
-2. Authenticated API endpoint approval.
-3. Jurist-acceptatie before production-ready status.
-4. Publication approval for external machine-readable reports.
+1. [x] Commit and push approval.
+2. [x] Authenticated API endpoint approval.
+3. [ ] Jurist-acceptatie before production-ready status.
+4. [x] Publication approval for external machine-readable reports.
+
+Gate approval recorded on 2026-07-06. Production-ready status is still blocked on jurist-acceptatie metadata: reviewer name, date, valid-until date and version match.
