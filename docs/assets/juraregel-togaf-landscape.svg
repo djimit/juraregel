@@ -1,0 +1,301 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="7680" height="4320" viewBox="0 0 7680 4320" role="img" aria-labelledby="title desc">
+  <title id="title">JuraRegel TOGAF Enterprise Architecture Landscape</title>
+  <desc id="desc">High-resolution landscape architecture overview showing source authorities flowing into RegelSpraak, JREM, CI/CD gates, Rule APIs, and consumer channels.</desc>
+  <defs>
+    <linearGradient id="page" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="0.48" stop-color="#edf7f6"/>
+      <stop offset="1" stop-color="#f8f4ed"/>
+    </linearGradient>
+    <linearGradient id="header" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="0.55" stop-color="#164e63"/>
+      <stop offset="1" stop-color="#14532d"/>
+    </linearGradient>
+    <linearGradient id="sourceGrad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#eef2ff"/>
+      <stop offset="1" stop-color="#dbeafe"/>
+    </linearGradient>
+    <linearGradient id="platformGrad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ecfeff"/>
+      <stop offset="1" stop-color="#ccfbf1"/>
+    </linearGradient>
+    <linearGradient id="consumerGrad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff7ed"/>
+      <stop offset="1" stop-color="#ffedd5"/>
+    </linearGradient>
+    <linearGradient id="governanceGrad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fdf2f8"/>
+      <stop offset="1" stop-color="#fce7f3"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-15%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#0f172a" flood-opacity="0.16"/>
+    </filter>
+    <marker id="arrowBlue" viewBox="0 0 18 18" refX="16" refY="9" markerWidth="18" markerHeight="18" orient="auto-start-reverse">
+      <path d="M1,1 L17,9 L1,17 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrowTeal" viewBox="0 0 18 18" refX="16" refY="9" markerWidth="18" markerHeight="18" orient="auto-start-reverse">
+      <path d="M1,1 L17,9 L1,17 Z" fill="#0f766e"/>
+    </marker>
+    <marker id="arrowOrange" viewBox="0 0 18 18" refX="16" refY="9" markerWidth="18" markerHeight="18" orient="auto-start-reverse">
+      <path d="M1,1 L17,9 L1,17 Z" fill="#c2410c"/>
+    </marker>
+    <style>
+      .font { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; }
+      .title { font-size: 122px; font-weight: 800; fill: #ffffff; }
+      .subtitle { font-size: 48px; font-weight: 500; fill: #dff7ef; }
+      .meta { font-size: 33px; font-weight: 700; fill: #e2e8f0; }
+      .sectionTitle { font-size: 46px; font-weight: 800; fill: #0f172a; }
+      .sectionSub { font-size: 28px; font-weight: 600; fill: #475569; }
+      .laneTitle { font-size: 36px; font-weight: 800; fill: #0f172a; }
+      .nodeTitle { font-size: 31px; font-weight: 800; fill: #111827; }
+      .nodeText { font-size: 25px; font-weight: 560; fill: #334155; }
+      .tiny { font-size: 22px; font-weight: 650; fill: #475569; }
+      .pill { font-size: 23px; font-weight: 800; fill: #0f172a; }
+      .white { fill: #ffffff; }
+      .muted { fill: #64748b; }
+      .box { stroke: rgba(15, 23, 42, 0.14); stroke-width: 3; filter: url(#shadow); }
+      .node { fill: #ffffff; stroke: rgba(15, 23, 42, 0.16); stroke-width: 3; }
+      .arrowBlue { stroke: #2563eb; stroke-width: 10; fill: none; marker-end: url(#arrowBlue); }
+      .arrowTeal { stroke: #0f766e; stroke-width: 10; fill: none; marker-end: url(#arrowTeal); }
+      .arrowOrange { stroke: #c2410c; stroke-width: 10; fill: none; marker-end: url(#arrowOrange); }
+      .dash { stroke-dasharray: 28 22; }
+    </style>
+  </defs>
+
+  <rect width="7680" height="4320" fill="url(#page)"/>
+  <rect x="150" y="120" width="7380" height="390" rx="44" fill="url(#header)" filter="url(#shadow)"/>
+  <text class="font title" x="280" y="285">JuraRegel TOGAF Enterprise Architecture Landscape</text>
+  <text class="font subtitle" x="285" y="375">Legal RuleOps platform: source authorities to RegelSpraak, JREM, assurance gates, Rule APIs, and adoption channels</text>
+  <text class="font meta" x="6160" y="222">Landscape view</text>
+  <text class="font meta" x="6160" y="276">7680 x 4320 SVG</text>
+  <text class="font meta" x="6160" y="330">README Mermaid restored</text>
+  <text class="font meta" x="6160" y="384">Ports 8490-8500</text>
+
+  <rect x="190" y="590" width="1820" height="2030" rx="38" fill="url(#sourceGrad)" class="box"/>
+  <text class="font sectionTitle" x="270" y="675">External Source Authorities</text>
+  <text class="font sectionSub" x="270" y="728">Authoritative legal, security, architecture and interoperability sources</text>
+
+  <rect x="2260" y="590" width="3170" height="2030" rx="38" fill="url(#platformGrad)" class="box"/>
+  <text class="font sectionTitle" x="2360" y="675">JuraRegel Platform</text>
+  <text class="font sectionSub" x="2360" y="728">Rule engineering pipeline, canonical exchange model, assurance, runtime APIs</text>
+
+  <rect x="5680" y="590" width="1810" height="2030" rx="38" fill="url(#consumerGrad)" class="box"/>
+  <text class="font sectionTitle" x="5760" y="675">Consumers</text>
+  <text class="font sectionSub" x="5760" y="728">Developer, architect, compliance, CI and self-hosting interfaces</text>
+
+  <rect x="270" y="805" width="1540" height="150" rx="28" class="node"/>
+  <text class="font nodeTitle" x="330" y="862">Rechtspraak.nl</text>
+  <text class="font nodeText" x="330" y="910">pseudonimiseringsrichtlijn, publicatie, griffierecht context</text>
+
+  <rect x="270" y="990" width="1540" height="150" rx="28" class="node"/>
+  <text class="font nodeTitle" x="330" y="1047">MinBZK GitHub - BIO2</text>
+  <text class="font nodeText" x="330" y="1095">Baseline Informatiebeveiliging Overheid, ISO 27002 mapping</text>
+
+  <rect x="270" y="1175" width="1540" height="150" rx="28" class="node"/>
+  <text class="font nodeTitle" x="330" y="1232">Forum Standaardisatie</text>
+  <text class="font nodeText" x="330" y="1280">verplichte standaarden, streefbeeldafspraken, monitor</text>
+
+  <rect x="270" y="1360" width="1540" height="150" rx="28" class="node"/>
+  <text class="font nodeTitle" x="330" y="1417">Logius / developer.overheid.nl</text>
+  <text class="font nodeText" x="330" y="1465">API Design Rules, OAuth, events, Digikoppeling</text>
+
+  <rect x="270" y="1545" width="1540" height="150" rx="28" class="node"/>
+  <text class="font nodeTitle" x="330" y="1602">noraonline.nl</text>
+  <text class="font nodeText" x="330" y="1650">NORA principes as enterprise architecture meta-layer</text>
+
+  <rect x="270" y="1730" width="1540" height="150" rx="28" class="node"/>
+  <text class="font nodeTitle" x="330" y="1787">EUR-Lex - EU AI Act</text>
+  <text class="font nodeText" x="330" y="1835">risk classification, conformity, transparency obligations</text>
+
+  <rect x="270" y="1915" width="1540" height="150" rx="28" class="node"/>
+  <text class="font nodeTitle" x="330" y="1972">wetten.overheid.nl - AVG</text>
+  <text class="font nodeText" x="330" y="2020">DPIA, minimisation, retention, data-subject rights</text>
+
+  <rect x="270" y="2100" width="1540" height="150" rx="28" class="node"/>
+  <text class="font nodeTitle" x="330" y="2157">NCSC &amp; NIS2 sources</text>
+  <text class="font nodeText" x="330" y="2205">TLS, webapp security, basic principles, duty-of-care controls</text>
+
+  <rect x="270" y="2320" width="1540" height="175" rx="28" fill="#ffffff" stroke="#1d4ed8" stroke-width="5"/>
+  <text class="font nodeTitle" x="330" y="2382">Source contract</text>
+  <text class="font nodeText" x="330" y="2430">Every rule keeps sourceRef, version, validity, evidence and domain owner.</text>
+
+  <rect x="2360" y="800" width="2900" height="500" rx="32" fill="#ffffff" stroke="#0f766e" stroke-width="4"/>
+  <text class="font laneTitle" x="2440" y="875">1. Rule Engineering Value Stream</text>
+  <rect x="2460" y="940" width="575" height="210" rx="24" fill="#f0fdfa" stroke="#14b8a6" stroke-width="3"/>
+  <text class="font nodeTitle" x="2515" y="1010">Source intake</text>
+  <text class="font nodeText" x="2515" y="1062">connectors, parsers,</text>
+  <text class="font nodeText" x="2515" y="1102">manual curation</text>
+  <rect x="3145" y="940" width="575" height="210" rx="24" fill="#f0fdfa" stroke="#14b8a6" stroke-width="3"/>
+  <text class="font nodeTitle" x="3200" y="1010">Extraction Sprint</text>
+  <text class="font nodeText" x="3200" y="1062">classify L0-L3,</text>
+  <text class="font nodeText" x="3200" y="1102">draft rule cases</text>
+  <rect x="3830" y="940" width="575" height="210" rx="24" fill="#f0fdfa" stroke="#14b8a6" stroke-width="3"/>
+  <text class="font nodeTitle" x="3885" y="1010">RegelSpraak CNL</text>
+  <text class="font nodeText" x="3885" y="1062">jurist-readable</text>
+  <text class="font nodeText" x="3885" y="1102">controlled language</text>
+  <rect x="4515" y="940" width="575" height="210" rx="24" fill="#f0fdfa" stroke="#14b8a6" stroke-width="3"/>
+  <text class="font nodeTitle" x="4570" y="1010">JREM JSON</text>
+  <text class="font nodeText" x="4570" y="1062">Schema 2020-12,</text>
+  <text class="font nodeText" x="4570" y="1102">source refs, tests</text>
+
+  <path class="arrowTeal" d="M3035 1045 H3130"/>
+  <path class="arrowTeal" d="M3720 1045 H3815"/>
+  <path class="arrowTeal" d="M4405 1045 H4500"/>
+
+  <rect x="2360" y="1380" width="2900" height="480" rx="32" fill="#ffffff" stroke="#be123c" stroke-width="4"/>
+  <text class="font laneTitle" x="2440" y="1455">2. Assurance Pipeline</text>
+  <rect x="2460" y="1520" width="530" height="210" rx="24" fill="#fff1f2" stroke="#f43f5e" stroke-width="3"/>
+  <text class="font nodeTitle" x="2515" y="1590">CI/CD</text>
+  <text class="font nodeText" x="2515" y="1642">14 per-use-case</text>
+  <text class="font nodeText" x="2515" y="1682">quality gates</text>
+  <rect x="3070" y="1520" width="530" height="210" rx="24" fill="#fff1f2" stroke="#f43f5e" stroke-width="3"/>
+  <text class="font nodeTitle" x="3125" y="1590">BDD acceptance</text>
+  <text class="font nodeText" x="3125" y="1642">Gherkin scenarios</text>
+  <text class="font nodeText" x="3125" y="1682">for legal review</text>
+  <rect x="3680" y="1520" width="530" height="210" rx="24" fill="#fff1f2" stroke="#f43f5e" stroke-width="3"/>
+  <text class="font nodeTitle" x="3735" y="1590">Maturity model</text>
+  <text class="font nodeText" x="3735" y="1642">L0 demo to</text>
+  <text class="font nodeText" x="3735" y="1682">L3 production</text>
+  <rect x="4290" y="1520" width="760" height="210" rx="24" fill="#fff1f2" stroke="#f43f5e" stroke-width="3"/>
+  <text class="font nodeTitle" x="4345" y="1590">Legal traceability</text>
+  <text class="font nodeText" x="4345" y="1642">versioned sources, audit trail,</text>
+  <text class="font nodeText" x="4345" y="1682">jurist acceptance metadata</text>
+  <path class="arrowOrange" d="M2990 1625 H3055"/>
+  <path class="arrowOrange" d="M3600 1625 H3665"/>
+  <path class="arrowOrange" d="M4210 1625 H4275"/>
+
+  <rect x="2360" y="1940" width="2900" height="560" rx="32" fill="#ffffff" stroke="#2563eb" stroke-width="4"/>
+  <text class="font laneTitle" x="2440" y="2015">3. Runtime &amp; Agentic Platform</text>
+  <rect x="2460" y="2080" width="650" height="265" rx="24" fill="#eff6ff" stroke="#3b82f6" stroke-width="3"/>
+  <text class="font nodeTitle" x="2515" y="2150">Rule API Factory</text>
+  <text class="font nodeText" x="2515" y="2202">FastAPI, stateless,</text>
+  <text class="font nodeText" x="2515" y="2242">idempotent, OpenAPI</text>
+  <text class="font nodeText" x="2515" y="2282">ports 8490-8500</text>
+  <rect x="3210" y="2080" width="650" height="265" rx="24" fill="#eff6ff" stroke="#3b82f6" stroke-width="3"/>
+  <text class="font nodeTitle" x="3265" y="2150">Knowledge Base</text>
+  <text class="font nodeText" x="3265" y="2202">655 JREM rules,</text>
+  <text class="font nodeText" x="3265" y="2242">SQLite FTS5, Qdrant,</text>
+  <text class="font nodeText" x="3265" y="2282">semantic retrieval</text>
+  <rect x="3960" y="2080" width="650" height="265" rx="24" fill="#eff6ff" stroke="#3b82f6" stroke-width="3"/>
+  <text class="font nodeTitle" x="4015" y="2150">MCP Server</text>
+  <text class="font nodeText" x="4015" y="2202">12 tools, resources,</text>
+  <text class="font nodeText" x="4015" y="2242">prompts for agents</text>
+  <text class="font nodeText" x="4015" y="2282">and local LLMs</text>
+  <rect x="4710" y="2080" width="390" height="265" rx="24" fill="#eff6ff" stroke="#3b82f6" stroke-width="3"/>
+  <text class="font nodeTitle" x="4765" y="2150">Registry</text>
+  <text class="font nodeText" x="4765" y="2202">JSON-LD</text>
+  <text class="font nodeText" x="4765" y="2242">governance</text>
+  <text class="font nodeText" x="4765" y="2282">metadata</text>
+  <path class="arrowBlue" d="M3110 2212 H3195"/>
+  <path class="arrowBlue" d="M3860 2212 H3945"/>
+  <path class="arrowBlue" d="M4610 2212 H4695"/>
+
+  <path class="arrowBlue" d="M1810 1500 C2040 1500 2070 1045 2460 1045"/>
+  <path class="arrowOrange" d="M4805 1150 C4805 1270 2725 1305 2725 1518"/>
+  <path class="arrowBlue" d="M2730 1730 C2730 1840 2785 1910 2785 2080"/>
+
+  <rect x="5840" y="805" width="1430" height="150" rx="28" class="node"/>
+  <text class="font nodeTitle" x="5900" y="862">TypeScript SDK</text>
+  <text class="font nodeText" x="5900" y="910">@juraregel/sdk for product integrations</text>
+
+  <rect x="5840" y="990" width="1430" height="150" rx="28" class="node"/>
+  <text class="font nodeTitle" x="5900" y="1047">CLI</text>
+  <text class="font nodeText" x="5900" y="1095">npx juraregel init, check, serve, validate</text>
+
+  <rect x="5840" y="1175" width="1430" height="150" rx="28" class="node"/>
+  <text class="font nodeTitle" x="5900" y="1232">Dashboard</text>
+  <text class="font nodeText" x="5900" y="1280">executive overview, matrix, live health checks</text>
+
+  <rect x="5840" y="1360" width="1430" height="150" rx="28" class="node"/>
+  <text class="font nodeTitle" x="5900" y="1417">Playground</text>
+  <text class="font nodeText" x="5900" y="1465">browser-based compliance checking</text>
+
+  <rect x="5840" y="1545" width="1430" height="150" rx="28" class="node"/>
+  <text class="font nodeTitle" x="5900" y="1602">Docker compose</text>
+  <text class="font nodeText" x="5900" y="1650">self-hosted localhost Rule APIs</text>
+
+  <rect x="5840" y="1730" width="1430" height="150" rx="28" class="node"/>
+  <text class="font nodeTitle" x="5900" y="1787">GitHub Actions</text>
+  <text class="font nodeText" x="5900" y="1835">quality gates, schema checks, BDD, harvester health</text>
+
+  <rect x="5840" y="1915" width="1430" height="150" rx="28" class="node"/>
+  <text class="font nodeTitle" x="5900" y="1972">Government systems</text>
+  <text class="font nodeText" x="5900" y="2020">intake portals, GRC, architecture repositories, ENSIA</text>
+
+  <rect x="5840" y="2135" width="1430" height="360" rx="28" fill="#ffffff" stroke="#c2410c" stroke-width="5"/>
+  <text class="font nodeTitle" x="5900" y="2200">Adoption contract</text>
+  <text class="font nodeText" x="5900" y="2252">Consumers receive deterministic outcome, reasoning steps,</text>
+  <text class="font nodeText" x="5900" y="2292">source references, calculationId, inputHash, rulesetHash,</text>
+  <text class="font nodeText" x="5900" y="2332">version, maturity level and legal assurance status.</text>
+
+  <path class="arrowBlue" d="M5100 2212 C5425 2212 5480 880 5840 880"/>
+  <path class="arrowBlue" d="M5100 2212 C5435 2212 5480 1065 5840 1065"/>
+  <path class="arrowBlue" d="M5100 2212 C5450 2212 5480 1250 5840 1250"/>
+  <path class="arrowBlue" d="M5100 2212 C5465 2212 5480 1435 5840 1435"/>
+  <path class="arrowBlue" d="M5100 2212 C5480 2212 5480 1620 5840 1620"/>
+  <path class="arrowOrange dash" d="M2990 1625 C5350 1625 5420 1805 5840 1805"/>
+  <path class="arrowBlue" d="M5100 2212 C5500 2212 5520 1990 5840 1990"/>
+
+  <rect x="190" y="2760" width="7300" height="1120" rx="38" fill="url(#governanceGrad)" class="box"/>
+  <text class="font sectionTitle" x="290" y="2850">TOGAF Architecture Views &amp; Governance Overlay</text>
+  <text class="font sectionSub" x="290" y="2904">Business, data, application and technology views share one assurance model: traceability, acceptance, auditability and rollback.</text>
+
+  <rect x="290" y="2985" width="1380" height="360" rx="26" fill="#ffffff" stroke="#7c3aed" stroke-width="4"/>
+  <text class="font laneTitle" x="360" y="3060">Business Architecture</text>
+  <text class="font nodeText" x="360" y="3120">Stakeholders: jurist, griffier, CISO, FG,</text>
+  <text class="font nodeText" x="360" y="3160">enterprise architect, developer, auditor.</text>
+  <text class="font nodeText" x="360" y="3225">Capabilities: rule extraction, compliance</text>
+  <text class="font nodeText" x="360" y="3265">checking, explainability, assurance reporting.</text>
+
+  <rect x="1745" y="2985" width="1380" height="360" rx="26" fill="#ffffff" stroke="#0891b2" stroke-width="4"/>
+  <text class="font laneTitle" x="1815" y="3060">Data Architecture</text>
+  <text class="font nodeText" x="1815" y="3120">Canonical contracts: RegelSpraak CNL, JREM,</text>
+  <text class="font nodeText" x="1815" y="3160">OpenAPI, sourceRef, governance JSON-LD.</text>
+  <text class="font nodeText" x="1815" y="3225">Stores: rule exports, JKB index, SQLite FTS5,</text>
+  <text class="font nodeText" x="1815" y="3265">Qdrant vectors, audit logs.</text>
+
+  <rect x="3200" y="2985" width="1380" height="360" rx="26" fill="#ffffff" stroke="#2563eb" stroke-width="4"/>
+  <text class="font laneTitle" x="3270" y="3060">Application Architecture</text>
+  <text class="font nodeText" x="3270" y="3120">Domain Rule APIs, API factory, TypeScript SDK,</text>
+  <text class="font nodeText" x="3270" y="3160">CLI, dashboard, playground, MCP server.</text>
+  <text class="font nodeText" x="3270" y="3225">Integration: HTTP JSON, OpenAPI, stdio MCP,</text>
+  <text class="font nodeText" x="3270" y="3265">GitHub Actions quality gates.</text>
+
+  <rect x="4655" y="2985" width="1380" height="360" rx="26" fill="#ffffff" stroke="#c2410c" stroke-width="4"/>
+  <text class="font laneTitle" x="4725" y="3060">Technology Architecture</text>
+  <text class="font nodeText" x="4725" y="3120">FastAPI/Uvicorn, Python, Docker Compose, Helm,</text>
+  <text class="font nodeText" x="4725" y="3160">GitHub Pages, localhost runtime, OpenAPI YAML.</text>
+  <text class="font nodeText" x="4725" y="3225">Operational hooks: health endpoints, CI scripts,</text>
+  <text class="font nodeText" x="4725" y="3265">SRE runbooks and dashboard checks.</text>
+
+  <rect x="6110" y="2985" width="1180" height="360" rx="26" fill="#ffffff" stroke="#be123c" stroke-width="4"/>
+  <text class="font laneTitle" x="6180" y="3060">Security &amp; Governance</text>
+  <text class="font nodeText" x="6180" y="3120">Maturity L0-L3, legal sign-off, DPIA,</text>
+  <text class="font nodeText" x="6180" y="3160">threat model, SBOM, OAuth2 for production.</text>
+  <text class="font nodeText" x="6180" y="3225">Rollback: versioned rulesets, Git history,</text>
+  <text class="font nodeText" x="6180" y="3265">source validity windows and audit replay.</text>
+
+  <rect x="290" y="3425" width="2170" height="310" rx="26" fill="#fff" stroke="#0f766e" stroke-width="4"/>
+  <text class="font laneTitle" x="360" y="3500">Domain API portfolio</text>
+  <text class="font nodeText" x="360" y="3560">Legal process: griffierecht 8490, procesreglement 8491, classificatie 8492, publicatie 8493</text>
+  <text class="font nodeText" x="360" y="3610">Government compliance: BIO2 8494, Forum 8495, Overheidsstandaarden 8496, NORA 8497</text>
+  <text class="font nodeText" x="360" y="3660">Regulation and security: EU AI Act 8498, AVG/GDPR 8499, NCSC 8500, plus emerging L0 domains</text>
+
+  <rect x="2555" y="3425" width="2170" height="310" rx="26" fill="#fff" stroke="#2563eb" stroke-width="4"/>
+  <text class="font laneTitle" x="2625" y="3500">Restored Mermaid contract</text>
+  <text class="font nodeText" x="2625" y="3560">Bronnen feed RegelSpraak CNL; RegelSpraak produces JREM; JREM gates CI/CD;</text>
+  <text class="font nodeText" x="2625" y="3610">CI/CD releases FastAPI Rule APIs; APIs feed SDK, CLI, dashboard, playground and Docker;</text>
+  <text class="font nodeText" x="2625" y="3660">CI/CD also feeds GitHub Actions for repeatable quality proof.</text>
+
+  <rect x="4820" y="3425" width="2470" height="310" rx="26" fill="#fff" stroke="#be123c" stroke-width="4"/>
+  <text class="font laneTitle" x="4890" y="3500">Decision integrity chain</text>
+  <text class="font nodeText" x="4890" y="3560">Source reference -> rule version -> maturity level -> validation gate -> runtime decision -> audit evidence.</text>
+  <text class="font nodeText" x="4890" y="3610">This is the enterprise control plane: visible enough for architects, strict enough for CI,</text>
+  <text class="font nodeText" x="4890" y="3660">and simple enough for developers to run locally.</text>
+
+  <rect x="190" y="3990" width="7300" height="170" rx="34" fill="#0f172a"/>
+  <text class="font white" x="290" y="4058" style="font-size:34px;font-weight:800;">Architecture principle</text>
+  <text class="font white" x="290" y="4112" style="font-size:30px;font-weight:560;">Legal rules remain explainable artifacts: jurist-readable source, machine-validated JREM, auditable API decisions, and traceable consumer outcomes.</text>
+  <text class="font muted" x="6300" y="4112" style="font-size:26px;font-weight:700;">JuraRegel / djimit/juraregel</text>
+</svg>
