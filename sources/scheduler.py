@@ -8,13 +8,28 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from sources.bwb_connector import BWBConnector
+from sources.cvdr_sru_connector import CVDRSRUConnector
 from sources.eurlex_connector import EURLexConnector
 from sources.plooi_connector import PLOOIConnector
 from sources.rechtspraak_connector import RechtspraakConnector
+from sources.sttr_rtr_connector import STTRRTRConnector
 from sources.tooi_roo_connector import TOOIROOConnector
 from sources.upl_connector import UPLConnector
+from sources.woo_diwoo_connector import WooDiWooConnector
 
-ALL_CONNECTORS = [BWBConnector, EURLexConnector, PLOOIConnector, RechtspraakConnector, UPLConnector, TOOIROOConnector]
+SOURCE_HEALTH_STATUSES = {"ok", "degraded", "deprecated", "unsupported_method", "error"}
+
+ALL_CONNECTORS = [
+    BWBConnector,
+    EURLexConnector,
+    PLOOIConnector,
+    RechtspraakConnector,
+    UPLConnector,
+    TOOIROOConnector,
+    CVDRSRUConnector,
+    WooDiWooConnector,
+    STTRRTRConnector,
+]
 
 def run_health_checks() -> list[dict]:
     """Run health checks for all connectors."""

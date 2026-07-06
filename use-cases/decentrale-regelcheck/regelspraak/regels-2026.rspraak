@@ -1,0 +1,9 @@
+regels voor decentrale-regelcheck versie 2026.1
+
+regel DRC-001 "Postcode-context is de eerste scopefilter"
+wanneer postcode aanwezig is
+dan beperk zoekruimte tot lokale organisaties rond die postcode
+
+regel DRC-006 "Open normen vereisen handmatige juridische beoordeling"
+wanneer lokale regeling open normen bevat
+dan zet manualReviewRequired op waar

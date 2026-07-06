@@ -8,6 +8,7 @@ import urllib.request
 from sources.base import BaseConnector
 
 PLOOI_API = "https://zoek.officielebekendmakingen.nl/api/v1"
+PLOOI_PUBLIC = "https://zoek.officielebekendmakingen.nl"
 
 class PLOOIConnector(BaseConnector):
     def list_sources(self) -> list[dict]:
@@ -39,10 +40,19 @@ class PLOOIConnector(BaseConnector):
     def health_check(self) -> dict:
         """Check PLOOI endpoint."""
         try:
-            url = f"{PLOOI_API}/publicaties?max=1"
-            req = urllib.request.Request(url, method="HEAD")
+            url = PLOOI_PUBLIC
+            req = urllib.request.Request(
+                url,
+                headers={"User-Agent": "JuraRegel source-health/2026.1"},
+            )
             with urllib.request.urlopen(req, timeout=10) as resp:
-                return {"source": "PLOOI", "status": "ok", "http_code": resp.status}
+                return {
+                    "source": "PLOOI",
+                    "status": "deprecated",
+                    "http_code": resp.status,
+                    "checked_url": url,
+                    "note": "Legacy PLOOI API is not used as an authoritative source; public publications portal is reachable.",
+                }
         except Exception as e:
             return {"source": "PLOOI", "status": "error", "error": str(e)}
 

@@ -1,0 +1,228 @@
+{
+  "schemaVersion": "1.1.0",
+  "ruleSetId": "decentrale-regelcheck",
+  "version": "2026.1",
+  "validFrom": "2026-07-06",
+  "validUntil": "2026-12-31",
+  "jurisdiction": "NL",
+  "domain": "decentrale-regelcheck",
+  "procedureType": "decentrale-regelcheck",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "DRC-001",
+      "name": "Postcode-context is de eerste scopefilter",
+      "priority": 100,
+      "legalStatus": "regeling",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Lokale wet- en regelgeving",
+          "section": "Zoek op locatie",
+          "url": "https://lokaleregelgeving.overheid.nl/"
+        }
+      ],
+      "conditions": {
+        "postcode": "required"
+      },
+      "outcome": {
+        "signal": "scope_by_postcode",
+        "manualReviewRequired": false
+      }
+    },
+    {
+      "ruleId": "DRC-002",
+      "name": "Product of activiteit moet aan lokale regeling matchen",
+      "priority": 95,
+      "legalStatus": "regeling",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Lokale wet- en regelgeving",
+          "section": "Doorzoek regelingen",
+          "url": "https://lokaleregelgeving.overheid.nl/"
+        }
+      ],
+      "conditions": {
+        "productOrActivity": "required"
+      },
+      "outcome": {
+        "signal": "local_regulation_match",
+        "manualReviewRequired": false
+      }
+    },
+    {
+      "ruleId": "DRC-003",
+      "name": "Bestuurslaagfilter beperkt fout-positieve matches",
+      "priority": 90,
+      "legalStatus": "regeling",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Lokale wet- en regelgeving",
+          "section": "Gemeenten, provincies en waterschappen",
+          "url": "https://lokaleregelgeving.overheid.nl/"
+        }
+      ],
+      "conditions": {
+        "bestuurslaag": "optional"
+      },
+      "outcome": {
+        "signal": "bestuurslaag_filter",
+        "manualReviewRequired": false
+      }
+    },
+    {
+      "ruleId": "DRC-004",
+      "name": "Bevoegd gezag moet expliciet terugkomen",
+      "priority": 85,
+      "legalStatus": "regeling",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Lokale wet- en regelgeving",
+          "section": "Lokale overheden",
+          "url": "https://lokaleregelgeving.overheid.nl/"
+        }
+      ],
+      "conditions": {
+        "bevoegdGezag": "derived"
+      },
+      "outcome": {
+        "signal": "authority_identified",
+        "manualReviewRequired": false
+      }
+    },
+    {
+      "ruleId": "DRC-005",
+      "name": "Proceduretype wordt alleen als brongegeven doorgegeven",
+      "priority": 80,
+      "legalStatus": "regeling",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Lokale wet- en regelgeving",
+          "section": "Algemeen verbindende voorschriften en beleidsregels",
+          "url": "https://lokaleregelgeving.overheid.nl/"
+        }
+      ],
+      "conditions": {
+        "procedureType": "derived"
+      },
+      "outcome": {
+        "signal": "procedure_type_found",
+        "manualReviewRequired": false
+      }
+    },
+    {
+      "ruleId": "DRC-006",
+      "name": "Open normen vereisen handmatige juridische beoordeling",
+      "priority": 75,
+      "legalStatus": "regeling",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Lokale wet- en regelgeving",
+          "section": "Inhoudelijke regeling blijft bij bevoegd gezag",
+          "url": "https://lokaleregelgeving.overheid.nl/"
+        }
+      ],
+      "conditions": {
+        "openNormen": "present"
+      },
+      "outcome": {
+        "signal": "manual_review_open_norm",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Open norm in lokale regeling."
+      }
+    },
+    {
+      "ruleId": "DRC-007",
+      "name": "Meerdere matches vereisen keuze door behandelaar",
+      "priority": 70,
+      "legalStatus": "regeling",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Lokale wet- en regelgeving",
+          "section": "Postcode kan meerdere organisaties raken",
+          "url": "https://lokaleregelgeving.overheid.nl/"
+        }
+      ],
+      "conditions": {
+        "matchCount": {
+          "gt": 1
+        }
+      },
+      "outcome": {
+        "signal": "multiple_authorities",
+        "manualReviewRequired": true
+      }
+    },
+    {
+      "ruleId": "DRC-008",
+      "name": "SourceRefs blijven verplicht in het antwoord",
+      "priority": 65,
+      "legalStatus": "regeling",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Lokale wet- en regelgeving",
+          "section": "Informatie hergebruiken",
+          "url": "https://lokaleregelgeving.overheid.nl/"
+        }
+      ],
+      "conditions": {
+        "sourceRefs": "required"
+      },
+      "outcome": {
+        "signal": "source_refs_required",
+        "manualReviewRequired": false
+      }
+    },
+    {
+      "ruleId": "DRC-009",
+      "name": "Geen match is geen juridische afwijzing",
+      "priority": 60,
+      "legalStatus": "regeling",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Lokale wet- en regelgeving",
+          "section": "Doorzoek lokale overheden",
+          "url": "https://lokaleregelgeving.overheid.nl/"
+        }
+      ],
+      "conditions": {
+        "matchCount": 0
+      },
+      "outcome": {
+        "signal": "not_found_manual_review",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Geen lokale regeling gevonden."
+      }
+    }
+  ],
+  "metadata": {
+    "juridischeContext": {
+      "wet": "Lokale wet- en regelgeving/CVDR + SRU",
+      "wetVersieLaatstGecheckt": "2026-07-06",
+      "tariefVersie": "2026.1"
+    },
+    "bronverificatieDatum": "2026-07-06",
+    "acceptatieType": "draft"
+  },
+  "approval": {
+    "type": "self",
+    "reviewer": "D. Landman",
+    "role": "maker",
+    "date": "2026-07-06",
+    "scope": "L1 preflight voor postcode/product/activiteit matching",
+    "limitations": [
+      "Geen onafhankelijke juridische review",
+      "Niet productiegeschikt zonder jurist-acceptatie",
+      "Open normen worden alleen gesignaleerd"
+    ]
+  },
+  "maturityLevel": "L1-poc"
+}

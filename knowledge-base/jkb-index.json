@@ -3109,7 +3109,8 @@
       {
         "type": "wet",
         "title": "Wet basisregistratie personen",
-        "section": "art. 3.1"
+        "section": "art. 3.1",
+        "bwbId": "BWBR0033715"
       }
     ],
     "priority": 100,
@@ -3154,7 +3155,7 @@
         "value": "volledig"
       }
     ],
-    "content_hash": "f03ba6875ac567f24d476a443c746c4e043fa4111717681aebd618e98261b8b1"
+    "content_hash": "bf613ae865d96530b5933721d67093e368a728ffa4e70ec2f7635f750723ce0f"
   },
   {
     "rule_id": "BRP-002",
@@ -3177,7 +3178,8 @@
       {
         "type": "wet",
         "title": "Wet basisregistratie personen",
-        "section": "art. 3.1"
+        "section": "art. 3.1",
+        "bwbId": "BWBR0033715"
       },
       {
         "type": "wet",
@@ -3223,7 +3225,7 @@
         "value": "Geen wettelijke grondslag voor opvraag"
       }
     ],
-    "content_hash": "dfde971d871f90cb36a69e246acedd8640c310217f0a4628c7ea6e0bf08dd3ae"
+    "content_hash": "5f72a63dabe8157fbacf35c0af1f561d4a94dce4d6d3f244e3a10d179c2e3860"
   },
   {
     "rule_id": "BRP-003",
@@ -3247,7 +3249,8 @@
       {
         "type": "wet",
         "title": "Wet basisregistratie personen",
-        "section": "art. 3.1"
+        "section": "art. 3.1",
+        "bwbId": "BWBR0033715"
       }
     ],
     "priority": 100,
@@ -3287,7 +3290,7 @@
         "value": "Derde zonder wettelijke taak — geen toegang"
       }
     ],
-    "content_hash": "32b5a003f84b3a26330118de9a5d041b70560dc4a1ae304505159664bd5bf81a"
+    "content_hash": "ac3d1976e918b90e13c067e7e0f1679222118db51908b16cb431d58dd7aaef6a"
   },
   {
     "rule_id": "BRP-004",
@@ -3312,7 +3315,8 @@
       {
         "type": "wet",
         "title": "Wet basisregistratie personen",
-        "section": "art. 3.2"
+        "section": "art. 3.2",
+        "bwbId": "BWBR0033715"
       },
       {
         "type": "wet",
@@ -3368,7 +3372,7 @@
         "value": "beperkt_tot_noodzakelijk"
       }
     ],
-    "content_hash": "df8db28074e3584407f6e4caccdd8e6c3cc182063630796790f67eb8166ebc26"
+    "content_hash": "a84d5a75ac747c4b143a67303ef003d9bf636990bdfe47046c984f23802fe925"
   },
   {
     "rule_id": "BAG-001",
@@ -3391,7 +3395,8 @@
       {
         "type": "wet",
         "title": "Wet basisregistratie adressen en gebouwen",
-        "section": "art. 6.1"
+        "section": "art. 6.1",
+        "bwbId": "BWBR0023466"
       }
     ],
     "priority": 100,
@@ -3426,7 +3431,7 @@
         "value": "open_data"
       }
     ],
-    "content_hash": "e4815fe48bdd307918d9669c76c9220b22e7c531cca3f3825f290082b7c5f29c"
+    "content_hash": "a83377db963d2000cc8a9ab887efec0ded9776838c09134bebd5cf22704634ad"
   },
   {
     "rule_id": "NHR-001",
@@ -3450,7 +3455,8 @@
       {
         "type": "wet",
         "title": "Handelsregisterwet 2007",
-        "section": "art. 2.1"
+        "section": "art. 2.1",
+        "bwbId": "BWBR0021777"
       }
     ],
     "priority": 100,
@@ -3490,7 +3496,7 @@
         "value": "publiek_toegankelijk"
       }
     ],
-    "content_hash": "7793793a6d20eef7ea0852b8575ca83244f39aa277045cfca132b27c871d75da"
+    "content_hash": "49bdfac8a5f9ff6c10efde619f259c78e38d83056e047337fa869923f46244f3"
   },
   {
     "rule_id": "NHR-002",
@@ -3515,7 +3521,8 @@
       {
         "type": "wet",
         "title": "Handelsregisterwet 2007",
-        "section": "art. 2.3"
+        "section": "art. 2.3",
+        "bwbId": "BWBR0021777"
       }
     ],
     "priority": 100,
@@ -3560,7 +3567,7 @@
         "value": true
       }
     ],
-    "content_hash": "ef0214417de87627b97b254a6edcc50d158fbf48614083cbf999e87390cd91a6"
+    "content_hash": "07b5e831a1ad6c7c364919fb6348d1e94c395b0bf61cf44fb1fa95eb5f4c95b8"
   },
   {
     "rule_id": "BRT-001",
@@ -3582,18 +3589,19 @@
     "source_refs": [
       {
         "type": "wet",
-        "title": "Wet basisregistratie topografie",
-        "section": "art. 3"
+        "title": "Wet basisregistratie grootschalige topografie",
+        "section": "art. 3",
+        "bwbId": "BWBR0034026"
       }
     ],
     "priority": 100,
     "jurist_acordering": {},
-    "nl_text": "Regel BRT-001 uit domein 'basisregistraties' (versie 2025.1): BRT topografische data — open data vrij toegankelijk. Voorwaarden: registratie is BRT. Uitkomst: toegang: ja; scope: volledig; vorm: open_data. Bron: Wet basisregistratie topografie art. 3.",
-    "embedding_text": "basisregistraties BRT-001 BRT topografische data — open data vrij toegankelijk Wet basisregistratie topografie BRT True volledig open_data",
+    "nl_text": "Regel BRT-001 uit domein 'basisregistraties' (versie 2025.1): BRT topografische data — open data vrij toegankelijk. Voorwaarden: registratie is BRT. Uitkomst: toegang: ja; scope: volledig; vorm: open_data. Bron: Wet basisregistratie grootschalige topografie art. 3.",
+    "embedding_text": "basisregistraties BRT-001 BRT topografische data — open data vrij toegankelijk Wet basisregistratie grootschalige topografie BRT True volledig open_data",
     "graph_nodes": [
       {
         "type": "legal_source",
-        "title": "Wet basisregistratie topografie",
+        "title": "Wet basisregistratie grootschalige topografie",
         "section": "art. 3",
         "url": ""
       },
@@ -3618,7 +3626,7 @@
         "value": "open_data"
       }
     ],
-    "content_hash": "a2d9a977e1612208219174bffcbb37e633524e6b56b100c82ad31193512bf552"
+    "content_hash": "8e6994b7a8873e82b86e23f8d5e4c0a161fc235312745bfc704ce198652d85ee"
   },
   {
     "rule_id": "WOZ-001",
@@ -3642,7 +3650,8 @@
       {
         "type": "wet",
         "title": "Wet waardering onroerende zaken",
-        "section": "art. 22"
+        "section": "art. 22",
+        "bwbId": "BWBR0007119"
       }
     ],
     "priority": 100,
@@ -3682,7 +3691,7 @@
         "value": "volledig"
       }
     ],
-    "content_hash": "fdc1244c7bce6c6e5e17575a881b292d5b1c89fcfede427f56b002e8ab0c27aa"
+    "content_hash": "0f18c50313deeedcfb98e910e6996c3ac9ed86d0f23cd6595160738cda3bee36"
   },
   {
     "rule_id": "WOZ-002",
@@ -3707,7 +3716,8 @@
       {
         "type": "wet",
         "title": "Wet waardering onroerende zaken",
-        "section": "art. 23"
+        "section": "art. 23",
+        "bwbId": "BWBR0007119"
       }
     ],
     "priority": 100,
@@ -3752,7 +3762,7 @@
         "value": "eigen_object"
       }
     ],
-    "content_hash": "d8d44f8b370de3fd8ec4c9ef2d2787ad1594ff1e27501489824104ae7ad088a0"
+    "content_hash": "c57f583625b16c5f13b4c45faf28807ebfd44e43347d02e0d9810c10d1a4d4ad"
   },
   {
     "rule_id": "WOZ-003",
@@ -3777,7 +3787,8 @@
       {
         "type": "wet",
         "title": "Wet waardering onroerende zaken",
-        "section": "art. 22"
+        "section": "art. 22",
+        "bwbId": "BWBR0007119"
       }
     ],
     "priority": 100,
@@ -3822,7 +3833,7 @@
         "value": "Derde zonder wettelijke grondslag"
       }
     ],
-    "content_hash": "b8d973fb290c0359645c254ef472ea78548bf783600df3e57e41b43d872521b8"
+    "content_hash": "7fc8405a69ddcc6ed30676230f6a2f9a443f1b508b62ef603d09350502e2fb63"
   },
   {
     "rule_id": "KV-001",
@@ -16509,6 +16520,434 @@
     "content_hash": "fb36e396efc26c0ef4abeb69debf8d88f043e5ec857b8e8fba0ae80fa25a104b"
   },
   {
+    "rule_id": "DRC-001",
+    "domain": "decentrale-regelcheck",
+    "version": "2026.1",
+    "valid_from": "2026-07-06",
+    "valid_until": "2026-12-31",
+    "name": "Postcode-context is de eerste scopefilter",
+    "conditions": {
+      "postcode": "required"
+    },
+    "outcome": {
+      "signal": "scope_by_postcode",
+      "manualReviewRequired": false
+    },
+    "source_refs": [
+      {
+        "type": "regeling",
+        "title": "Lokale wet- en regelgeving",
+        "section": "Zoek op locatie",
+        "url": "https://lokaleregelgeving.overheid.nl/"
+      }
+    ],
+    "priority": 100,
+    "jurist_acordering": {},
+    "nl_text": "Regel DRC-001 uit domein 'decentrale-regelcheck' (versie 2026.1): Postcode-context is de eerste scopefilter. Voorwaarden: postcode is required. Uitkomst: signal: scope_by_postcode. Bron: Lokale wet- en regelgeving Zoek op locatie.",
+    "embedding_text": "decentrale-regelcheck DRC-001 Postcode-context is de eerste scopefilter Lokale wet- en regelgeving required scope_by_postcode",
+    "graph_nodes": [
+      {
+        "type": "legal_source",
+        "title": "Lokale wet- en regelgeving",
+        "section": "Zoek op locatie",
+        "url": "https://lokaleregelgeving.overheid.nl/"
+      },
+      {
+        "type": "condition",
+        "field": "postcode",
+        "value": "required"
+      },
+      {
+        "type": "outcome",
+        "field": "signal",
+        "value": "scope_by_postcode"
+      }
+    ],
+    "content_hash": "3e4db8caaeb5708d1ac9ef0dc8fd77fb6b881ed7f1417dc766949855e2130a4e"
+  },
+  {
+    "rule_id": "DRC-002",
+    "domain": "decentrale-regelcheck",
+    "version": "2026.1",
+    "valid_from": "2026-07-06",
+    "valid_until": "2026-12-31",
+    "name": "Product of activiteit moet aan lokale regeling matchen",
+    "conditions": {
+      "productOrActivity": "required"
+    },
+    "outcome": {
+      "signal": "local_regulation_match",
+      "manualReviewRequired": false
+    },
+    "source_refs": [
+      {
+        "type": "regeling",
+        "title": "Lokale wet- en regelgeving",
+        "section": "Doorzoek regelingen",
+        "url": "https://lokaleregelgeving.overheid.nl/"
+      }
+    ],
+    "priority": 95,
+    "jurist_acordering": {},
+    "nl_text": "Regel DRC-002 uit domein 'decentrale-regelcheck' (versie 2026.1): Product of activiteit moet aan lokale regeling matchen. Voorwaarden: productOrActivity is required. Uitkomst: signal: local_regulation_match. Bron: Lokale wet- en regelgeving Doorzoek regelingen.",
+    "embedding_text": "decentrale-regelcheck DRC-002 Product of activiteit moet aan lokale regeling matchen Lokale wet- en regelgeving required local_regulation_match",
+    "graph_nodes": [
+      {
+        "type": "legal_source",
+        "title": "Lokale wet- en regelgeving",
+        "section": "Doorzoek regelingen",
+        "url": "https://lokaleregelgeving.overheid.nl/"
+      },
+      {
+        "type": "condition",
+        "field": "productOrActivity",
+        "value": "required"
+      },
+      {
+        "type": "outcome",
+        "field": "signal",
+        "value": "local_regulation_match"
+      }
+    ],
+    "content_hash": "741beaf4905e878daca3f0c578105b159a61dd35ee882e4d08b33bfc2b088eeb"
+  },
+  {
+    "rule_id": "DRC-003",
+    "domain": "decentrale-regelcheck",
+    "version": "2026.1",
+    "valid_from": "2026-07-06",
+    "valid_until": "2026-12-31",
+    "name": "Bestuurslaagfilter beperkt fout-positieve matches",
+    "conditions": {
+      "bestuurslaag": "optional"
+    },
+    "outcome": {
+      "signal": "bestuurslaag_filter",
+      "manualReviewRequired": false
+    },
+    "source_refs": [
+      {
+        "type": "regeling",
+        "title": "Lokale wet- en regelgeving",
+        "section": "Gemeenten, provincies en waterschappen",
+        "url": "https://lokaleregelgeving.overheid.nl/"
+      }
+    ],
+    "priority": 90,
+    "jurist_acordering": {},
+    "nl_text": "Regel DRC-003 uit domein 'decentrale-regelcheck' (versie 2026.1): Bestuurslaagfilter beperkt fout-positieve matches. Voorwaarden: bestuurslaag is optional. Uitkomst: signal: bestuurslaag_filter. Bron: Lokale wet- en regelgeving Gemeenten, provincies en waterschappen.",
+    "embedding_text": "decentrale-regelcheck DRC-003 Bestuurslaagfilter beperkt fout-positieve matches Lokale wet- en regelgeving optional bestuurslaag_filter",
+    "graph_nodes": [
+      {
+        "type": "legal_source",
+        "title": "Lokale wet- en regelgeving",
+        "section": "Gemeenten, provincies en waterschappen",
+        "url": "https://lokaleregelgeving.overheid.nl/"
+      },
+      {
+        "type": "condition",
+        "field": "bestuurslaag",
+        "value": "optional"
+      },
+      {
+        "type": "outcome",
+        "field": "signal",
+        "value": "bestuurslaag_filter"
+      }
+    ],
+    "content_hash": "5bda177000f1df2b2667aa269c7c128112a730a37ef2a9312acc9c21ea4102f4"
+  },
+  {
+    "rule_id": "DRC-004",
+    "domain": "decentrale-regelcheck",
+    "version": "2026.1",
+    "valid_from": "2026-07-06",
+    "valid_until": "2026-12-31",
+    "name": "Bevoegd gezag moet expliciet terugkomen",
+    "conditions": {
+      "bevoegdGezag": "derived"
+    },
+    "outcome": {
+      "signal": "authority_identified",
+      "manualReviewRequired": false
+    },
+    "source_refs": [
+      {
+        "type": "regeling",
+        "title": "Lokale wet- en regelgeving",
+        "section": "Lokale overheden",
+        "url": "https://lokaleregelgeving.overheid.nl/"
+      }
+    ],
+    "priority": 85,
+    "jurist_acordering": {},
+    "nl_text": "Regel DRC-004 uit domein 'decentrale-regelcheck' (versie 2026.1): Bevoegd gezag moet expliciet terugkomen. Voorwaarden: bevoegdGezag is derived. Uitkomst: signal: authority_identified. Bron: Lokale wet- en regelgeving Lokale overheden.",
+    "embedding_text": "decentrale-regelcheck DRC-004 Bevoegd gezag moet expliciet terugkomen Lokale wet- en regelgeving derived authority_identified",
+    "graph_nodes": [
+      {
+        "type": "legal_source",
+        "title": "Lokale wet- en regelgeving",
+        "section": "Lokale overheden",
+        "url": "https://lokaleregelgeving.overheid.nl/"
+      },
+      {
+        "type": "condition",
+        "field": "bevoegdGezag",
+        "value": "derived"
+      },
+      {
+        "type": "outcome",
+        "field": "signal",
+        "value": "authority_identified"
+      }
+    ],
+    "content_hash": "9b6d9ed37a8707ebfe14e8d1d04725c37bca77d38b6c132dd6b4ebcba4540e7b"
+  },
+  {
+    "rule_id": "DRC-005",
+    "domain": "decentrale-regelcheck",
+    "version": "2026.1",
+    "valid_from": "2026-07-06",
+    "valid_until": "2026-12-31",
+    "name": "Proceduretype wordt alleen als brongegeven doorgegeven",
+    "conditions": {
+      "procedureType": "derived"
+    },
+    "outcome": {
+      "signal": "procedure_type_found",
+      "manualReviewRequired": false
+    },
+    "source_refs": [
+      {
+        "type": "regeling",
+        "title": "Lokale wet- en regelgeving",
+        "section": "Algemeen verbindende voorschriften en beleidsregels",
+        "url": "https://lokaleregelgeving.overheid.nl/"
+      }
+    ],
+    "priority": 80,
+    "jurist_acordering": {},
+    "nl_text": "Regel DRC-005 uit domein 'decentrale-regelcheck' (versie 2026.1): Proceduretype wordt alleen als brongegeven doorgegeven. Voorwaarden: procedureType is derived. Uitkomst: signal: procedure_type_found. Bron: Lokale wet- en regelgeving Algemeen verbindende voorschriften en beleidsregels.",
+    "embedding_text": "decentrale-regelcheck DRC-005 Proceduretype wordt alleen als brongegeven doorgegeven Lokale wet- en regelgeving derived procedure_type_found",
+    "graph_nodes": [
+      {
+        "type": "legal_source",
+        "title": "Lokale wet- en regelgeving",
+        "section": "Algemeen verbindende voorschriften en beleidsregels",
+        "url": "https://lokaleregelgeving.overheid.nl/"
+      },
+      {
+        "type": "condition",
+        "field": "procedureType",
+        "value": "derived"
+      },
+      {
+        "type": "outcome",
+        "field": "signal",
+        "value": "procedure_type_found"
+      }
+    ],
+    "content_hash": "59bc61b805e57c187b702b995c1b359937813a26f51b122a54157d3de83fd37f"
+  },
+  {
+    "rule_id": "DRC-006",
+    "domain": "decentrale-regelcheck",
+    "version": "2026.1",
+    "valid_from": "2026-07-06",
+    "valid_until": "2026-12-31",
+    "name": "Open normen vereisen handmatige juridische beoordeling",
+    "conditions": {
+      "openNormen": "present"
+    },
+    "outcome": {
+      "signal": "manual_review_open_norm",
+      "manualReviewRequired": true,
+      "manualReviewReason": "Open norm in lokale regeling."
+    },
+    "source_refs": [
+      {
+        "type": "regeling",
+        "title": "Lokale wet- en regelgeving",
+        "section": "Inhoudelijke regeling blijft bij bevoegd gezag",
+        "url": "https://lokaleregelgeving.overheid.nl/"
+      }
+    ],
+    "priority": 75,
+    "jurist_acordering": {},
+    "nl_text": "Regel DRC-006 uit domein 'decentrale-regelcheck' (versie 2026.1): Open normen vereisen handmatige juridische beoordeling. Voorwaarden: openNormen is present. Uitkomst: signal: manual_review_open_norm; manualReviewReason: Open norm in lokale regeling.. Bron: Lokale wet- en regelgeving Inhoudelijke regeling blijft bij bevoegd gezag.",
+    "embedding_text": "decentrale-regelcheck DRC-006 Open normen vereisen handmatige juridische beoordeling Lokale wet- en regelgeving present manual_review_open_norm Open norm in lokale regeling.",
+    "graph_nodes": [
+      {
+        "type": "legal_source",
+        "title": "Lokale wet- en regelgeving",
+        "section": "Inhoudelijke regeling blijft bij bevoegd gezag",
+        "url": "https://lokaleregelgeving.overheid.nl/"
+      },
+      {
+        "type": "condition",
+        "field": "openNormen",
+        "value": "present"
+      },
+      {
+        "type": "outcome",
+        "field": "signal",
+        "value": "manual_review_open_norm"
+      },
+      {
+        "type": "outcome",
+        "field": "manualReviewReason",
+        "value": "Open norm in lokale regeling."
+      }
+    ],
+    "content_hash": "1b183d9c367c2aec112913dc50b53b091239e44c9e557605e5d593e47e2bebed"
+  },
+  {
+    "rule_id": "DRC-007",
+    "domain": "decentrale-regelcheck",
+    "version": "2026.1",
+    "valid_from": "2026-07-06",
+    "valid_until": "2026-12-31",
+    "name": "Meerdere matches vereisen keuze door behandelaar",
+    "conditions": {
+      "matchCount": {
+        "gt": 1
+      }
+    },
+    "outcome": {
+      "signal": "multiple_authorities",
+      "manualReviewRequired": true
+    },
+    "source_refs": [
+      {
+        "type": "regeling",
+        "title": "Lokale wet- en regelgeving",
+        "section": "Postcode kan meerdere organisaties raken",
+        "url": "https://lokaleregelgeving.overheid.nl/"
+      }
+    ],
+    "priority": 70,
+    "jurist_acordering": {},
+    "nl_text": "Regel DRC-007 uit domein 'decentrale-regelcheck' (versie 2026.1): Meerdere matches vereisen keuze door behandelaar. Voorwaarden: matchCount groter dan 1. Uitkomst: signal: multiple_authorities. Bron: Lokale wet- en regelgeving Postcode kan meerdere organisaties raken.",
+    "embedding_text": "decentrale-regelcheck DRC-007 Meerdere matches vereisen keuze door behandelaar Lokale wet- en regelgeving  multiple_authorities",
+    "graph_nodes": [
+      {
+        "type": "legal_source",
+        "title": "Lokale wet- en regelgeving",
+        "section": "Postcode kan meerdere organisaties raken",
+        "url": "https://lokaleregelgeving.overheid.nl/"
+      },
+      {
+        "type": "condition",
+        "field": "matchCount",
+        "value": "{\"gt\": 1}"
+      },
+      {
+        "type": "outcome",
+        "field": "signal",
+        "value": "multiple_authorities"
+      }
+    ],
+    "content_hash": "dca8af6c83de15c9e878f012c0c2449856c8fd5b8fe77a341baf301bfb116993"
+  },
+  {
+    "rule_id": "DRC-008",
+    "domain": "decentrale-regelcheck",
+    "version": "2026.1",
+    "valid_from": "2026-07-06",
+    "valid_until": "2026-12-31",
+    "name": "SourceRefs blijven verplicht in het antwoord",
+    "conditions": {
+      "sourceRefs": "required"
+    },
+    "outcome": {
+      "signal": "source_refs_required",
+      "manualReviewRequired": false
+    },
+    "source_refs": [
+      {
+        "type": "regeling",
+        "title": "Lokale wet- en regelgeving",
+        "section": "Informatie hergebruiken",
+        "url": "https://lokaleregelgeving.overheid.nl/"
+      }
+    ],
+    "priority": 65,
+    "jurist_acordering": {},
+    "nl_text": "Regel DRC-008 uit domein 'decentrale-regelcheck' (versie 2026.1): SourceRefs blijven verplicht in het antwoord. Voorwaarden: sourceRefs is required. Uitkomst: signal: source_refs_required. Bron: Lokale wet- en regelgeving Informatie hergebruiken.",
+    "embedding_text": "decentrale-regelcheck DRC-008 SourceRefs blijven verplicht in het antwoord Lokale wet- en regelgeving required source_refs_required",
+    "graph_nodes": [
+      {
+        "type": "legal_source",
+        "title": "Lokale wet- en regelgeving",
+        "section": "Informatie hergebruiken",
+        "url": "https://lokaleregelgeving.overheid.nl/"
+      },
+      {
+        "type": "condition",
+        "field": "sourceRefs",
+        "value": "required"
+      },
+      {
+        "type": "outcome",
+        "field": "signal",
+        "value": "source_refs_required"
+      }
+    ],
+    "content_hash": "ef1b7ceaf6acab3cc139c0411911b0d36b0d50d19fef6c0104a5e529f5edbcba"
+  },
+  {
+    "rule_id": "DRC-009",
+    "domain": "decentrale-regelcheck",
+    "version": "2026.1",
+    "valid_from": "2026-07-06",
+    "valid_until": "2026-12-31",
+    "name": "Geen match is geen juridische afwijzing",
+    "conditions": {
+      "matchCount": 0
+    },
+    "outcome": {
+      "signal": "not_found_manual_review",
+      "manualReviewRequired": true,
+      "manualReviewReason": "Geen lokale regeling gevonden."
+    },
+    "source_refs": [
+      {
+        "type": "regeling",
+        "title": "Lokale wet- en regelgeving",
+        "section": "Doorzoek lokale overheden",
+        "url": "https://lokaleregelgeving.overheid.nl/"
+      }
+    ],
+    "priority": 60,
+    "jurist_acordering": {},
+    "nl_text": "Regel DRC-009 uit domein 'decentrale-regelcheck' (versie 2026.1): Geen match is geen juridische afwijzing. Voorwaarden: matchCount = 0. Uitkomst: signal: not_found_manual_review; manualReviewReason: Geen lokale regeling gevonden.. Bron: Lokale wet- en regelgeving Doorzoek lokale overheden.",
+    "embedding_text": "decentrale-regelcheck DRC-009 Geen match is geen juridische afwijzing Lokale wet- en regelgeving 0 not_found_manual_review Geen lokale regeling gevonden.",
+    "graph_nodes": [
+      {
+        "type": "legal_source",
+        "title": "Lokale wet- en regelgeving",
+        "section": "Doorzoek lokale overheden",
+        "url": "https://lokaleregelgeving.overheid.nl/"
+      },
+      {
+        "type": "condition",
+        "field": "matchCount",
+        "value": 0
+      },
+      {
+        "type": "outcome",
+        "field": "signal",
+        "value": "not_found_manual_review"
+      },
+      {
+        "type": "outcome",
+        "field": "manualReviewReason",
+        "value": "Geen lokale regeling gevonden."
+      }
+    ],
+    "content_hash": "c96deb82b3b2268f07bd93f9e36cecde854a23de62b7425ca5f1c4fe0c4df3fc"
+  },
+  {
     "rule_id": "DVC-001",
     "domain": "dienstverlening-check",
     "version": "2026.1",
@@ -29180,7 +29619,8 @@
       {
         "type": "wet",
         "title": "Omgevingswet",
-        "section": "art. 5.1"
+        "section": "art. 5.1",
+        "bwbId": "BWBR0037885"
       },
       {
         "type": "besluit",
@@ -29231,7 +29671,7 @@
         "value": "gemeente"
       }
     ],
-    "content_hash": "17b806917136f82df887de054e4a1f608bed0ce934fc9643e4315ef5c4434fd8"
+    "content_hash": "d18bb27d46caf182ccc7ac711cf7dbb3bceacb2d57f4940f62d2508c99fcfc1a"
   },
   {
     "rule_id": "OW-B-002",
@@ -29390,7 +29830,8 @@
       {
         "type": "wet",
         "title": "Omgevingswet",
-        "section": "art. 5.1"
+        "section": "art. 5.1",
+        "bwbId": "BWBR0037885"
       },
       {
         "type": "besluit",
@@ -29441,7 +29882,7 @@
         "value": "gemeente"
       }
     ],
-    "content_hash": "c3bcc67c910e4e6965550eb946c2d8990220efc9e83821152fda65ad7f4d879a"
+    "content_hash": "8ee7b7074c03967dc3e4956efb90fdaceda909f145bea27460662dc08e1b0a0a"
   },
   {
     "rule_id": "OW-S-002",
@@ -29682,7 +30123,8 @@
       {
         "type": "wet",
         "title": "Omgevingswet",
-        "section": "art. 5.1"
+        "section": "art. 5.1",
+        "bwbId": "BWBR0037885"
       },
       {
         "type": "besluit",
@@ -29738,7 +30180,7 @@
         "value": "gemeente"
       }
     ],
-    "content_hash": "2b6fe811b9ded48fdcaa6b05ab9fe5733296c06e0576438726ca9e65e95c8ec9"
+    "content_hash": "98d43f59b3f721d7822abc7120a775ecbb9ac90ba738c1027f70fa350460e0b4"
   },
   {
     "rule_id": "OW-G-002",
@@ -29836,7 +30278,8 @@
       {
         "type": "wet",
         "title": "Omgevingswet",
-        "section": "art. 5.1"
+        "section": "art. 5.1",
+        "bwbId": "BWBR0037885"
       },
       {
         "type": "besluit",
@@ -29887,7 +30330,7 @@
         "value": "provincie"
       }
     ],
-    "content_hash": "ad184671a9c461169fcc96ccc49545f3f9fa35182a2c91cc1925db7ea12adc01"
+    "content_hash": "9179523408fd24caeedde18f209773b6dfda51ecb589b4f1200042ac0916dbf2"
   },
   {
     "rule_id": "OW-O-002",
@@ -30047,7 +30490,8 @@
       {
         "type": "wet",
         "title": "Omgevingswet",
-        "section": "art. 5.1"
+        "section": "art. 5.1",
+        "bwbId": "BWBR0037885"
       },
       {
         "type": "besluit",
@@ -30098,7 +30542,7 @@
         "value": "waterschap"
       }
     ],
-    "content_hash": "cc6c2546cdf5aa73e63c3857a58d4c08b7190b86c1e2868dd909afffc1970c7d"
+    "content_hash": "c992b7b28230f89446d625bce225c3cb7ad2ebe8595f632583a9f4b34cc0bff7"
   },
   {
     "rule_id": "OW-W-002",
@@ -30195,7 +30639,8 @@
       {
         "type": "wet",
         "title": "Omgevingswet",
-        "section": "art. 5.3"
+        "section": "art. 5.3",
+        "bwbId": "BWBR0037885"
       }
     ],
     "priority": 190,
@@ -30235,7 +30680,7 @@
         "value": "rijk"
       }
     ],
-    "content_hash": "22d0ea799d8bde6461a3ef6ee5addd048d255eabfa8471920703ab0f5c1ffaf6"
+    "content_hash": "90a55fb4256f58d7087fb4feae510d30e5367520ac2803698b6f805c3ea9e48c"
   },
   {
     "rule_id": "OW-U-001",
@@ -30259,7 +30704,8 @@
       {
         "type": "wet",
         "title": "Omgevingswet",
-        "section": "art. 5.1"
+        "section": "art. 5.1",
+        "bwbId": "BWBR0037885"
       },
       {
         "type": "besluit",
@@ -30310,7 +30756,7 @@
         "value": "gemeente"
       }
     ],
-    "content_hash": "02f55e4d97573b811b0e835fa2d997b20fa05fef0dd2bfd4df6abce14c6aa0d0"
+    "content_hash": "aa7d103bb96a850dd0bb71eae1cb9be182aeff41c79768327cf2d0a7b8f36e49"
   },
   {
     "rule_id": "OW-U-002",
@@ -30334,7 +30780,8 @@
       {
         "type": "wet",
         "title": "Omgevingswet",
-        "section": "art. 5.1"
+        "section": "art. 5.1",
+        "bwbId": "BWBR0037885"
       },
       {
         "type": "besluit",
@@ -30385,7 +30832,7 @@
         "value": "gemeente"
       }
     ],
-    "content_hash": "c1d48d3cfe7c7f3eea4521e48b9db46e70b64bcd42f47b352c359f95d4a6babf"
+    "content_hash": "223c04172ebfebd9276e3acb311d1bff3a98a2de3d387c987111b8187fd08077"
   },
   {
     "rule_id": "OW-U-003",
@@ -30407,7 +30854,8 @@
       {
         "type": "wet",
         "title": "Omgevingswet",
-        "section": "art. 5.3"
+        "section": "art. 5.3",
+        "bwbId": "BWBR0037885"
       }
     ],
     "priority": 200,
@@ -30437,7 +30885,7 @@
         "value": true
       }
     ],
-    "content_hash": "ed8e5deeb14f37832ddf2b074423b3a3ddbd5d3e6906223d9e0be90974702d0a"
+    "content_hash": "e7ed71fc738148dbe85660405f19bf88eb32ff6f92a7fc889662f5eace55f834"
   },
   {
     "rule_id": "OW-U-004",
@@ -30462,7 +30910,8 @@
       {
         "type": "wet",
         "title": "Omgevingswet",
-        "section": "art. 5.1 lid 4"
+        "section": "art. 5.1 lid 4",
+        "bwbId": "BWBR0037885"
       }
     ],
     "priority": 200,
@@ -30507,7 +30956,7 @@
         "value": "gemeente"
       }
     ],
-    "content_hash": "2e0e9a6a74c4953cd2722e3cc9f344b6b2a73051199f764f34e18a7833ae56d2"
+    "content_hash": "f400fb6bf1ad72d866b33c9523771186be0d02a2917eebe84b6a76fa96f63480"
   },
   {
     "rule_id": "OW-U-005",
@@ -30530,7 +30979,8 @@
       {
         "type": "wet",
         "title": "Omgevingswet",
-        "section": "art. 5.1"
+        "section": "art. 5.1",
+        "bwbId": "BWBR0037885"
       },
       {
         "type": "besluit",
@@ -30576,7 +31026,7 @@
         "value": "omgevingsvergunning_met_ontheffing"
       }
     ],
-    "content_hash": "59b4444d5bda25ef46dc4c9021a43d1a0935a0b9a1374721a322824f86c5466d"
+    "content_hash": "775d6ae3c56bb90bc49365d013091cc682319581fa58da3d0fd3408afa5010b0"
   },
   {
     "rule_id": "OS-API-001",
@@ -32696,7 +33146,8 @@
       },
       {
         "type": "wet",
-        "title": "Ioaw"
+        "title": "Ioaw",
+        "bwbId": "BWBR0004044"
       }
     ],
     "priority": 290,
@@ -32737,7 +33188,7 @@
         "value": "IOAW"
       }
     ],
-    "content_hash": "efb699d6f7b9548918f8ce4aed32877599601628aa7e8601bf6cbc78a92bed78"
+    "content_hash": "1e82fbdd5612b4c674194ebfdfd9df9d00d44b87bd7bf95fb81d2084fd161a7d"
   },
   {
     "rule_id": "PW-2025-016",
@@ -34656,6 +35107,392 @@
       }
     ],
     "content_hash": "cc2cc68086417488263847a19e3c6b56fa661bd887317e8dbfdfbaa74ab27657"
+  },
+  {
+    "rule_id": "STTR-001",
+    "domain": "sttr-preflight",
+    "version": "2026.1",
+    "valid_from": "2026-07-06",
+    "valid_until": "2026-12-31",
+    "name": "Toepasbare-regelbestand moet identificeerbaar zijn",
+    "conditions": {
+      "packageId": "required"
+    },
+    "outcome": {
+      "signal": "package_found",
+      "manualReviewRequired": false
+    },
+    "source_refs": [
+      {
+        "type": "standaard",
+        "title": "STTR/IMTR",
+        "section": "Standaard toepasbare regels",
+        "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/"
+      }
+    ],
+    "priority": 100,
+    "jurist_acordering": {},
+    "nl_text": "Regel STTR-001 uit domein 'sttr-preflight' (versie 2026.1): Toepasbare-regelbestand moet identificeerbaar zijn. Voorwaarden: packageId is required. Uitkomst: signal: package_found. Bron: STTR/IMTR Standaard toepasbare regels.",
+    "embedding_text": "sttr-preflight STTR-001 Toepasbare-regelbestand moet identificeerbaar zijn STTR/IMTR required package_found",
+    "graph_nodes": [
+      {
+        "type": "legal_source",
+        "title": "STTR/IMTR",
+        "section": "Standaard toepasbare regels",
+        "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/"
+      },
+      {
+        "type": "condition",
+        "field": "packageId",
+        "value": "required"
+      },
+      {
+        "type": "outcome",
+        "field": "signal",
+        "value": "package_found"
+      }
+    ],
+    "content_hash": "0757a55cc37347255a2bb0f99f80350411ca21b0a73a8f7a380b813d6bee3aab"
+  },
+  {
+    "rule_id": "STTR-002",
+    "domain": "sttr-preflight",
+    "version": "2026.1",
+    "valid_from": "2026-07-06",
+    "valid_until": "2026-12-31",
+    "name": "STTR 3.0.x past bij de actuele ondersteunde versie",
+    "conditions": {
+      "sttrVersion": "3.0.x"
+    },
+    "outcome": {
+      "signal": "sttr_version_fit",
+      "manualReviewRequired": false
+    },
+    "source_refs": [
+      {
+        "type": "standaard",
+        "title": "STTR/IMTR",
+        "section": "Versie 3.0",
+        "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/"
+      }
+    ],
+    "priority": 95,
+    "jurist_acordering": {},
+    "nl_text": "Regel STTR-002 uit domein 'sttr-preflight' (versie 2026.1): STTR 3.0.x past bij de actuele ondersteunde versie. Voorwaarden: sttrVersion is 3.0.x. Uitkomst: signal: sttr_version_fit. Bron: STTR/IMTR Versie 3.0.",
+    "embedding_text": "sttr-preflight STTR-002 STTR 3.0.x past bij de actuele ondersteunde versie STTR/IMTR 3.0.x sttr_version_fit",
+    "graph_nodes": [
+      {
+        "type": "legal_source",
+        "title": "STTR/IMTR",
+        "section": "Versie 3.0",
+        "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/"
+      },
+      {
+        "type": "condition",
+        "field": "sttrVersion",
+        "value": "3.0.x"
+      },
+      {
+        "type": "outcome",
+        "field": "signal",
+        "value": "sttr_version_fit"
+      }
+    ],
+    "content_hash": "28650fe1716587487e05448c37a36967c663ca9ca8c39a3d6fe3c8cd290ec09e"
+  },
+  {
+    "rule_id": "STTR-003",
+    "domain": "sttr-preflight",
+    "version": "2026.1",
+    "valid_from": "2026-07-06",
+    "valid_until": "2026-12-31",
+    "name": "RTR-versie moet aanwezig zijn",
+    "conditions": {
+      "rtrVersion": "required"
+    },
+    "outcome": {
+      "signal": "rtr_version_present",
+      "manualReviewRequired": false
+    },
+    "source_refs": [
+      {
+        "type": "standaard",
+        "title": "STTR/IMTR",
+        "section": "Registratie toepasbare regels",
+        "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/"
+      }
+    ],
+    "priority": 90,
+    "jurist_acordering": {},
+    "nl_text": "Regel STTR-003 uit domein 'sttr-preflight' (versie 2026.1): RTR-versie moet aanwezig zijn. Voorwaarden: rtrVersion is required. Uitkomst: signal: rtr_version_present. Bron: STTR/IMTR Registratie toepasbare regels.",
+    "embedding_text": "sttr-preflight STTR-003 RTR-versie moet aanwezig zijn STTR/IMTR required rtr_version_present",
+    "graph_nodes": [
+      {
+        "type": "legal_source",
+        "title": "STTR/IMTR",
+        "section": "Registratie toepasbare regels",
+        "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/"
+      },
+      {
+        "type": "condition",
+        "field": "rtrVersion",
+        "value": "required"
+      },
+      {
+        "type": "outcome",
+        "field": "signal",
+        "value": "rtr_version_present"
+      }
+    ],
+    "content_hash": "e4e675897fddb73e418ee7164194d49be269810431a119eafcdf6a9551a5cac7"
+  },
+  {
+    "rule_id": "STTR-004",
+    "domain": "sttr-preflight",
+    "version": "2026.1",
+    "valid_from": "2026-07-06",
+    "valid_until": "2026-12-31",
+    "name": "JREM mapping moet mappedRuleIds bevatten",
+    "conditions": {
+      "jremMapping.mappedRuleIds": "required"
+    },
+    "outcome": {
+      "signal": "jrem_mapping_present",
+      "manualReviewRequired": false
+    },
+    "source_refs": [
+      {
+        "type": "standaard",
+        "title": "STTR/IMTR",
+        "section": "Informatiemodel toepasbare regels",
+        "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/"
+      }
+    ],
+    "priority": 85,
+    "jurist_acordering": {},
+    "nl_text": "Regel STTR-004 uit domein 'sttr-preflight' (versie 2026.1): JREM mapping moet mappedRuleIds bevatten. Voorwaarden: jremMapping.mappedRuleIds is required. Uitkomst: signal: jrem_mapping_present. Bron: STTR/IMTR Informatiemodel toepasbare regels.",
+    "embedding_text": "sttr-preflight STTR-004 JREM mapping moet mappedRuleIds bevatten STTR/IMTR required jrem_mapping_present",
+    "graph_nodes": [
+      {
+        "type": "legal_source",
+        "title": "STTR/IMTR",
+        "section": "Informatiemodel toepasbare regels",
+        "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/"
+      },
+      {
+        "type": "condition",
+        "field": "jremMapping.mappedRuleIds",
+        "value": "required"
+      },
+      {
+        "type": "outcome",
+        "field": "signal",
+        "value": "jrem_mapping_present"
+      }
+    ],
+    "content_hash": "75b2772250bdd045c41c046d1fc7e1fdb9d0e26a907e6c45037124b47d42c665"
+  },
+  {
+    "rule_id": "STTR-005",
+    "domain": "sttr-preflight",
+    "version": "2026.1",
+    "valid_from": "2026-07-06",
+    "valid_until": "2026-12-31",
+    "name": "Valide pakket zonder verificatieproblemen kan door",
+    "conditions": {
+      "issues": 0
+    },
+    "outcome": {
+      "signal": "preflight_pass",
+      "manualReviewRequired": false
+    },
+    "source_refs": [
+      {
+        "type": "standaard",
+        "title": "STTR/IMTR",
+        "section": "Verificatiematrix versie 3.0.0",
+        "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/"
+      }
+    ],
+    "priority": 80,
+    "jurist_acordering": {},
+    "nl_text": "Regel STTR-005 uit domein 'sttr-preflight' (versie 2026.1): Valide pakket zonder verificatieproblemen kan door. Voorwaarden: issues = 0. Uitkomst: signal: preflight_pass. Bron: STTR/IMTR Verificatiematrix versie 3.0.0.",
+    "embedding_text": "sttr-preflight STTR-005 Valide pakket zonder verificatieproblemen kan door STTR/IMTR 0 preflight_pass",
+    "graph_nodes": [
+      {
+        "type": "legal_source",
+        "title": "STTR/IMTR",
+        "section": "Verificatiematrix versie 3.0.0",
+        "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/"
+      },
+      {
+        "type": "condition",
+        "field": "issues",
+        "value": 0
+      },
+      {
+        "type": "outcome",
+        "field": "signal",
+        "value": "preflight_pass"
+      }
+    ],
+    "content_hash": "1521334d16b602a3e59a3ef7f32256062e87b994b173a0ff46b9b46a6e586478"
+  },
+  {
+    "rule_id": "STTR-006",
+    "domain": "sttr-preflight",
+    "version": "2026.1",
+    "valid_from": "2026-07-06",
+    "valid_until": "2026-12-31",
+    "name": "Niet-actuele STTR-versie is een verificatieprobleem",
+    "conditions": {
+      "sttrVersionFit": false
+    },
+    "outcome": {
+      "signal": "sttr_version_mismatch",
+      "manualReviewRequired": true,
+      "manualReviewReason": "STTR-versie past niet bij actuele ondersteunde versie."
+    },
+    "source_refs": [
+      {
+        "type": "standaard",
+        "title": "STTR/IMTR",
+        "section": "Afspraken over ondersteunen van versies",
+        "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/"
+      }
+    ],
+    "priority": 75,
+    "jurist_acordering": {},
+    "nl_text": "Regel STTR-006 uit domein 'sttr-preflight' (versie 2026.1): Niet-actuele STTR-versie is een verificatieprobleem. Voorwaarden: sttrVersionFit is nee. Uitkomst: signal: sttr_version_mismatch; manualReviewReason: STTR-versie past niet bij actuele ondersteunde versie.. Bron: STTR/IMTR Afspraken over ondersteunen van versies.",
+    "embedding_text": "sttr-preflight STTR-006 Niet-actuele STTR-versie is een verificatieprobleem STTR/IMTR False sttr_version_mismatch STTR-versie past niet bij actuele ondersteunde versie.",
+    "graph_nodes": [
+      {
+        "type": "legal_source",
+        "title": "STTR/IMTR",
+        "section": "Afspraken over ondersteunen van versies",
+        "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/"
+      },
+      {
+        "type": "condition",
+        "field": "sttrVersionFit",
+        "value": false
+      },
+      {
+        "type": "outcome",
+        "field": "signal",
+        "value": "sttr_version_mismatch"
+      },
+      {
+        "type": "outcome",
+        "field": "manualReviewReason",
+        "value": "STTR-versie past niet bij actuele ondersteunde versie."
+      }
+    ],
+    "content_hash": "affd899e2e415f50929fb55720e3d274737a786b8ddf50c5d3ddb23f5a788d38"
+  },
+  {
+    "rule_id": "STTR-007",
+    "domain": "sttr-preflight",
+    "version": "2026.1",
+    "valid_from": "2026-07-06",
+    "valid_until": "2026-12-31",
+    "name": "Ontbrekende JREM mapping blokkeert preflight",
+    "conditions": {
+      "jremMappingFit": false
+    },
+    "outcome": {
+      "signal": "jrem_mapping_missing",
+      "manualReviewRequired": true,
+      "manualReviewReason": "JREM mapping ontbreekt."
+    },
+    "source_refs": [
+      {
+        "type": "standaard",
+        "title": "STTR/IMTR",
+        "section": "IMTR conceptrelaties",
+        "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/"
+      }
+    ],
+    "priority": 70,
+    "jurist_acordering": {},
+    "nl_text": "Regel STTR-007 uit domein 'sttr-preflight' (versie 2026.1): Ontbrekende JREM mapping blokkeert preflight. Voorwaarden: jremMappingFit is nee. Uitkomst: signal: jrem_mapping_missing; manualReviewReason: JREM mapping ontbreekt.. Bron: STTR/IMTR IMTR conceptrelaties.",
+    "embedding_text": "sttr-preflight STTR-007 Ontbrekende JREM mapping blokkeert preflight STTR/IMTR False jrem_mapping_missing JREM mapping ontbreekt.",
+    "graph_nodes": [
+      {
+        "type": "legal_source",
+        "title": "STTR/IMTR",
+        "section": "IMTR conceptrelaties",
+        "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/"
+      },
+      {
+        "type": "condition",
+        "field": "jremMappingFit",
+        "value": false
+      },
+      {
+        "type": "outcome",
+        "field": "signal",
+        "value": "jrem_mapping_missing"
+      },
+      {
+        "type": "outcome",
+        "field": "manualReviewReason",
+        "value": "JREM mapping ontbreekt."
+      }
+    ],
+    "content_hash": "64057a70083689e07acb38ed0983aa439d550c10c2e1bb2f3dfe04a618ac178f"
+  },
+  {
+    "rule_id": "STTR-008",
+    "domain": "sttr-preflight",
+    "version": "2026.1",
+    "valid_from": "2026-07-06",
+    "valid_until": "2026-12-31",
+    "name": "Onbekend pakket vereist handmatige controle",
+    "conditions": {
+      "packageFound": false
+    },
+    "outcome": {
+      "signal": "package_not_found",
+      "manualReviewRequired": true,
+      "manualReviewReason": "Toepasbare-regelbestand niet gevonden."
+    },
+    "source_refs": [
+      {
+        "type": "standaard",
+        "title": "STTR/IMTR",
+        "section": "Aanleveren aan RTR",
+        "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/"
+      }
+    ],
+    "priority": 65,
+    "jurist_acordering": {},
+    "nl_text": "Regel STTR-008 uit domein 'sttr-preflight' (versie 2026.1): Onbekend pakket vereist handmatige controle. Voorwaarden: packageFound is nee. Uitkomst: signal: package_not_found; manualReviewReason: Toepasbare-regelbestand niet gevonden.. Bron: STTR/IMTR Aanleveren aan RTR.",
+    "embedding_text": "sttr-preflight STTR-008 Onbekend pakket vereist handmatige controle STTR/IMTR False package_not_found Toepasbare-regelbestand niet gevonden.",
+    "graph_nodes": [
+      {
+        "type": "legal_source",
+        "title": "STTR/IMTR",
+        "section": "Aanleveren aan RTR",
+        "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/"
+      },
+      {
+        "type": "condition",
+        "field": "packageFound",
+        "value": false
+      },
+      {
+        "type": "outcome",
+        "field": "signal",
+        "value": "package_not_found"
+      },
+      {
+        "type": "outcome",
+        "field": "manualReviewReason",
+        "value": "Toepasbare-regelbestand niet gevonden."
+      }
+    ],
+    "content_hash": "8915a8c35ce35db1a6cec56f54b09837fe460d8cbfa679b2a7b3d4735afb8707"
   },
   {
     "rule_id": "TZ-2025-001",
@@ -37316,6 +38153,388 @@
       }
     ],
     "content_hash": "6d79f7d0f4cf4a3d76dc538ca00e959ca0999aa9b954f6381e2f96ec3c6d41ea"
+  },
+  {
+    "rule_id": "WOO-001",
+    "domain": "woo-publicatieplicht-preflight",
+    "version": "2026.1",
+    "valid_from": "2026-07-06",
+    "valid_until": "2026-12-31",
+    "name": "Organisatie moet in Woo-index-context bekend zijn",
+    "conditions": {
+      "organisatie": "required"
+    },
+    "outcome": {
+      "signal": "organisation_required",
+      "manualReviewRequired": false
+    },
+    "source_refs": [
+      {
+        "type": "regeling",
+        "title": "Woo-index",
+        "section": "Alle Woo-informatie op een rij",
+        "url": "https://organisaties.overheid.nl/woo"
+      }
+    ],
+    "priority": 100,
+    "jurist_acordering": {},
+    "nl_text": "Regel WOO-001 uit domein 'woo-publicatieplicht-preflight' (versie 2026.1): Organisatie moet in Woo-index-context bekend zijn. Voorwaarden: organisatie is required. Uitkomst: signal: organisation_required. Bron: Woo-index Alle Woo-informatie op een rij.",
+    "embedding_text": "woo-publicatieplicht-preflight WOO-001 Organisatie moet in Woo-index-context bekend zijn Woo-index required organisation_required",
+    "graph_nodes": [
+      {
+        "type": "legal_source",
+        "title": "Woo-index",
+        "section": "Alle Woo-informatie op een rij",
+        "url": "https://organisaties.overheid.nl/woo"
+      },
+      {
+        "type": "condition",
+        "field": "organisatie",
+        "value": "required"
+      },
+      {
+        "type": "outcome",
+        "field": "signal",
+        "value": "organisation_required"
+      }
+    ],
+    "content_hash": "e69d31cce6dc82e179de9a8532c16ad05dac3708afebda07b178e8f10a9ffc92"
+  },
+  {
+    "rule_id": "WOO-002",
+    "domain": "woo-publicatieplicht-preflight",
+    "version": "2026.1",
+    "valid_from": "2026-07-06",
+    "valid_until": "2026-12-31",
+    "name": "Documentlocatie moet voor het documenttype bestaan",
+    "conditions": {
+      "documentLocation": "required"
+    },
+    "outcome": {
+      "signal": "document_location_found",
+      "manualReviewRequired": false
+    },
+    "source_refs": [
+      {
+        "type": "regeling",
+        "title": "Woo-index",
+        "section": "Locaties van verplicht te publiceren documenten",
+        "url": "https://organisaties.overheid.nl/woo"
+      }
+    ],
+    "priority": 95,
+    "jurist_acordering": {},
+    "nl_text": "Regel WOO-002 uit domein 'woo-publicatieplicht-preflight' (versie 2026.1): Documentlocatie moet voor het documenttype bestaan. Voorwaarden: documentLocation is required. Uitkomst: signal: document_location_found. Bron: Woo-index Locaties van verplicht te publiceren documenten.",
+    "embedding_text": "woo-publicatieplicht-preflight WOO-002 Documentlocatie moet voor het documenttype bestaan Woo-index required document_location_found",
+    "graph_nodes": [
+      {
+        "type": "legal_source",
+        "title": "Woo-index",
+        "section": "Locaties van verplicht te publiceren documenten",
+        "url": "https://organisaties.overheid.nl/woo"
+      },
+      {
+        "type": "condition",
+        "field": "documentLocation",
+        "value": "required"
+      },
+      {
+        "type": "outcome",
+        "field": "signal",
+        "value": "document_location_found"
+      }
+    ],
+    "content_hash": "3b7c1b24443830e9a6d9f781b7bcc1ac5805dd1d72f4c1b95928afb3801c12d1"
+  },
+  {
+    "rule_id": "WOO-003",
+    "domain": "woo-publicatieplicht-preflight",
+    "version": "2026.1",
+    "valid_from": "2026-07-06",
+    "valid_until": "2026-12-31",
+    "name": "TOOI-code is verplicht voor machineleesbare organisatiecontext",
+    "conditions": {
+      "metadata.tooiCode": "required"
+    },
+    "outcome": {
+      "signal": "tooi_metadata_present",
+      "manualReviewRequired": false
+    },
+    "source_refs": [
+      {
+        "type": "regeling",
+        "title": "Woo-index",
+        "section": "Onderdeel van Register van Overheidsorganisaties",
+        "url": "https://organisaties.overheid.nl/woo"
+      }
+    ],
+    "priority": 90,
+    "jurist_acordering": {},
+    "nl_text": "Regel WOO-003 uit domein 'woo-publicatieplicht-preflight' (versie 2026.1): TOOI-code is verplicht voor machineleesbare organisatiecontext. Voorwaarden: metadata.tooiCode is required. Uitkomst: signal: tooi_metadata_present. Bron: Woo-index Onderdeel van Register van Overheidsorganisaties.",
+    "embedding_text": "woo-publicatieplicht-preflight WOO-003 TOOI-code is verplicht voor machineleesbare organisatiecontext Woo-index required tooi_metadata_present",
+    "graph_nodes": [
+      {
+        "type": "legal_source",
+        "title": "Woo-index",
+        "section": "Onderdeel van Register van Overheidsorganisaties",
+        "url": "https://organisaties.overheid.nl/woo"
+      },
+      {
+        "type": "condition",
+        "field": "metadata.tooiCode",
+        "value": "required"
+      },
+      {
+        "type": "outcome",
+        "field": "signal",
+        "value": "tooi_metadata_present"
+      }
+    ],
+    "content_hash": "15938d91b58f551f21778dcaf50f1a743f712c31fd2ab321a746f5eef89e2e29"
+  },
+  {
+    "rule_id": "WOO-004",
+    "domain": "woo-publicatieplicht-preflight",
+    "version": "2026.1",
+    "valid_from": "2026-07-06",
+    "valid_until": "2026-12-31",
+    "name": "Documenttype moet expliciet in metadata staan",
+    "conditions": {
+      "metadata.documentType": "required"
+    },
+    "outcome": {
+      "signal": "document_type_metadata_present",
+      "manualReviewRequired": false
+    },
+    "source_refs": [
+      {
+        "type": "regeling",
+        "title": "Woo-index",
+        "section": "Woo-documenten en -informatie",
+        "url": "https://organisaties.overheid.nl/woo"
+      }
+    ],
+    "priority": 85,
+    "jurist_acordering": {},
+    "nl_text": "Regel WOO-004 uit domein 'woo-publicatieplicht-preflight' (versie 2026.1): Documenttype moet expliciet in metadata staan. Voorwaarden: metadata.documentType is required. Uitkomst: signal: document_type_metadata_present. Bron: Woo-index Woo-documenten en -informatie.",
+    "embedding_text": "woo-publicatieplicht-preflight WOO-004 Documenttype moet expliciet in metadata staan Woo-index required document_type_metadata_present",
+    "graph_nodes": [
+      {
+        "type": "legal_source",
+        "title": "Woo-index",
+        "section": "Woo-documenten en -informatie",
+        "url": "https://organisaties.overheid.nl/woo"
+      },
+      {
+        "type": "condition",
+        "field": "metadata.documentType",
+        "value": "required"
+      },
+      {
+        "type": "outcome",
+        "field": "signal",
+        "value": "document_type_metadata_present"
+      }
+    ],
+    "content_hash": "e1512136f7f5eccaafc18e52764d0dc53fd11b2698dbbafc0148ad61485c14d9"
+  },
+  {
+    "rule_id": "WOO-005",
+    "domain": "woo-publicatieplicht-preflight",
+    "version": "2026.1",
+    "valid_from": "2026-07-06",
+    "valid_until": "2026-12-31",
+    "name": "Publicatiedatum moet beschikbaar zijn",
+    "conditions": {
+      "metadata.publishedAt": "required"
+    },
+    "outcome": {
+      "signal": "published_at_present",
+      "manualReviewRequired": false
+    },
+    "source_refs": [
+      {
+        "type": "regeling",
+        "title": "Woo-index",
+        "section": "Verplicht publiceren",
+        "url": "https://organisaties.overheid.nl/woo"
+      }
+    ],
+    "priority": 80,
+    "jurist_acordering": {},
+    "nl_text": "Regel WOO-005 uit domein 'woo-publicatieplicht-preflight' (versie 2026.1): Publicatiedatum moet beschikbaar zijn. Voorwaarden: metadata.publishedAt is required. Uitkomst: signal: published_at_present. Bron: Woo-index Verplicht publiceren.",
+    "embedding_text": "woo-publicatieplicht-preflight WOO-005 Publicatiedatum moet beschikbaar zijn Woo-index required published_at_present",
+    "graph_nodes": [
+      {
+        "type": "legal_source",
+        "title": "Woo-index",
+        "section": "Verplicht publiceren",
+        "url": "https://organisaties.overheid.nl/woo"
+      },
+      {
+        "type": "condition",
+        "field": "metadata.publishedAt",
+        "value": "required"
+      },
+      {
+        "type": "outcome",
+        "field": "signal",
+        "value": "published_at_present"
+      }
+    ],
+    "content_hash": "aaa7de9032c71a137420bef2e92cae45361e1aef64ba7236af31134179b95176"
+  },
+  {
+    "rule_id": "WOO-006",
+    "domain": "woo-publicatieplicht-preflight",
+    "version": "2026.1",
+    "valid_from": "2026-07-06",
+    "valid_until": "2026-12-31",
+    "name": "Bron-URL moet naar het concrete document verwijzen",
+    "conditions": {
+      "metadata.sourceUrl": "required"
+    },
+    "outcome": {
+      "signal": "source_url_present",
+      "manualReviewRequired": false
+    },
+    "source_refs": [
+      {
+        "type": "regeling",
+        "title": "Woo-index",
+        "section": "Documentlocaties per organisatie",
+        "url": "https://organisaties.overheid.nl/woo"
+      }
+    ],
+    "priority": 75,
+    "jurist_acordering": {},
+    "nl_text": "Regel WOO-006 uit domein 'woo-publicatieplicht-preflight' (versie 2026.1): Bron-URL moet naar het concrete document verwijzen. Voorwaarden: metadata.sourceUrl is required. Uitkomst: signal: source_url_present. Bron: Woo-index Documentlocaties per organisatie.",
+    "embedding_text": "woo-publicatieplicht-preflight WOO-006 Bron-URL moet naar het concrete document verwijzen Woo-index required source_url_present",
+    "graph_nodes": [
+      {
+        "type": "legal_source",
+        "title": "Woo-index",
+        "section": "Documentlocaties per organisatie",
+        "url": "https://organisaties.overheid.nl/woo"
+      },
+      {
+        "type": "condition",
+        "field": "metadata.sourceUrl",
+        "value": "required"
+      },
+      {
+        "type": "outcome",
+        "field": "signal",
+        "value": "source_url_present"
+      }
+    ],
+    "content_hash": "98c05dae26e0a2e7441a9b72bde2cf720cccc515a699d68f9628d7e5f91019b5"
+  },
+  {
+    "rule_id": "WOO-007",
+    "domain": "woo-publicatieplicht-preflight",
+    "version": "2026.1",
+    "valid_from": "2026-07-06",
+    "valid_until": "2026-12-31",
+    "name": "Ontbrekende metadata vereist pre-publicatieherstel",
+    "conditions": {
+      "missingMetadata": {
+        "gt": 0
+      }
+    },
+    "outcome": {
+      "signal": "missing_metadata_manual_review",
+      "manualReviewRequired": true,
+      "manualReviewReason": "Woo/DiWoo metadata ontbreekt."
+    },
+    "source_refs": [
+      {
+        "type": "regeling",
+        "title": "Woo-index",
+        "section": "Woo-documenten",
+        "url": "https://organisaties.overheid.nl/woo"
+      }
+    ],
+    "priority": 70,
+    "jurist_acordering": {},
+    "nl_text": "Regel WOO-007 uit domein 'woo-publicatieplicht-preflight' (versie 2026.1): Ontbrekende metadata vereist pre-publicatieherstel. Voorwaarden: missingMetadata groter dan 0. Uitkomst: signal: missing_metadata_manual_review; manualReviewReason: Woo/DiWoo metadata ontbreekt.. Bron: Woo-index Woo-documenten.",
+    "embedding_text": "woo-publicatieplicht-preflight WOO-007 Ontbrekende metadata vereist pre-publicatieherstel Woo-index  missing_metadata_manual_review Woo/DiWoo metadata ontbreekt.",
+    "graph_nodes": [
+      {
+        "type": "legal_source",
+        "title": "Woo-index",
+        "section": "Woo-documenten",
+        "url": "https://organisaties.overheid.nl/woo"
+      },
+      {
+        "type": "condition",
+        "field": "missingMetadata",
+        "value": "{\"gt\": 0}"
+      },
+      {
+        "type": "outcome",
+        "field": "signal",
+        "value": "missing_metadata_manual_review"
+      },
+      {
+        "type": "outcome",
+        "field": "manualReviewReason",
+        "value": "Woo/DiWoo metadata ontbreekt."
+      }
+    ],
+    "content_hash": "6ef8817b88df20ab27204497c663def2a359d01fdf3617b3334835c967ef2bd7"
+  },
+  {
+    "rule_id": "WOO-008",
+    "domain": "woo-publicatieplicht-preflight",
+    "version": "2026.1",
+    "valid_from": "2026-07-06",
+    "valid_until": "2026-12-31",
+    "name": "Onbekend documenttype is een handmatige controle",
+    "conditions": {
+      "documentFound": false
+    },
+    "outcome": {
+      "signal": "document_type_not_found",
+      "manualReviewRequired": true,
+      "manualReviewReason": "Documenttype of organisatie niet gevonden."
+    },
+    "source_refs": [
+      {
+        "type": "regeling",
+        "title": "Woo-index",
+        "section": "Zoek Woo",
+        "url": "https://organisaties.overheid.nl/woo"
+      }
+    ],
+    "priority": 65,
+    "jurist_acordering": {},
+    "nl_text": "Regel WOO-008 uit domein 'woo-publicatieplicht-preflight' (versie 2026.1): Onbekend documenttype is een handmatige controle. Voorwaarden: documentFound is nee. Uitkomst: signal: document_type_not_found; manualReviewReason: Documenttype of organisatie niet gevonden.. Bron: Woo-index Zoek Woo.",
+    "embedding_text": "woo-publicatieplicht-preflight WOO-008 Onbekend documenttype is een handmatige controle Woo-index False document_type_not_found Documenttype of organisatie niet gevonden.",
+    "graph_nodes": [
+      {
+        "type": "legal_source",
+        "title": "Woo-index",
+        "section": "Zoek Woo",
+        "url": "https://organisaties.overheid.nl/woo"
+      },
+      {
+        "type": "condition",
+        "field": "documentFound",
+        "value": false
+      },
+      {
+        "type": "outcome",
+        "field": "signal",
+        "value": "document_type_not_found"
+      },
+      {
+        "type": "outcome",
+        "field": "manualReviewReason",
+        "value": "Documenttype of organisatie niet gevonden."
+      }
+    ],
+    "content_hash": "59553dee6de78455c3b6c302e7b70fb3d2a48c683a42324b89d7c7106a4c5a8c"
   },
   {
     "rule_id": "WW-001",

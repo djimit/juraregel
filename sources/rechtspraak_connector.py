@@ -58,9 +58,17 @@ class RechtspraakConnector(BaseConnector):
         """Check Rechtspraak endpoint."""
         try:
             url = f"{RECHTSPRAAK_API}?max=1"
-            req = urllib.request.Request(url, method="HEAD")
+            req = urllib.request.Request(
+                url,
+                headers={"User-Agent": "JuraRegel source-health/2026.1"},
+            )
             with urllib.request.urlopen(req, timeout=10) as resp:
-                return {"source": "Rechtspraak", "status": "ok", "http_code": resp.status}
+                return {
+                    "source": "Rechtspraak",
+                    "status": "ok",
+                    "http_code": resp.status,
+                    "checked_url": url,
+                }
         except Exception as e:
             return {"source": "Rechtspraak", "status": "error", "error": str(e)}
 

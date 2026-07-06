@@ -1,6 +1,6 @@
 {
-  "total_rules": 665,
-  "total_domains": 27,
+  "total_rules": 690,
+  "total_domains": 30,
   "domains": {
     "algoritmeregister": {
       "rule_count": 20,
@@ -81,6 +81,15 @@
       "rule_count": 15,
       "versions": [
         "2025.1"
+      ],
+      "source_types": [
+        "regeling"
+      ]
+    },
+    "decentrale-regelcheck": {
+      "rule_count": 9,
+      "versions": [
+        "2026.1"
       ],
       "source_types": [
         "regeling"
@@ -215,6 +224,15 @@
         "regeling"
       ]
     },
+    "sttr-preflight": {
+      "rule_count": 8,
+      "versions": [
+        "2026.1"
+      ],
+      "source_types": [
+        "standaard"
+      ]
+    },
     "toeslagen": {
       "rule_count": 19,
       "versions": [
@@ -241,6 +259,15 @@
       ],
       "source_types": [
         "wetsartikel"
+      ]
+    },
+    "woo-publicatieplicht-preflight": {
+      "rule_count": 8,
+      "versions": [
+        "2026.1"
+      ],
+      "source_types": [
+        "regeling"
       ]
     },
     "ww-uitkering": {

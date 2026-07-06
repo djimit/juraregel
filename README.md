@@ -2,9 +2,9 @@
 
 [![JuraRegel CI](https://github.com/djimit/juraregel/actions/workflows/juraregel-ci.yml/badge.svg)](https://github.com/djimit/juraregel/actions/workflows/juraregel-ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Use Cases](https://img.shields.io/badge/Use%20Cases-28%20%283%20L1%2C%2026%20L0%29-blue)](https://github.com/djimit/juraregel)
-[![Tests](https://img.shields.io/badge/Tests-64%2B-green)](https://github.com/djimit/juraregel)
-[![Regels](https://img.shields.io/badge/JREM%20Regels-665%20%28PoC%29-purple)](https://github.com/djimit/juraregel)
+[![Use Cases](https://img.shields.io/badge/Use%20Cases-32%20%286%20L1%2C%2026%20L0%29-blue)](https://github.com/djimit/juraregel)
+[![Tests](https://img.shields.io/badge/Tests-500%2B-green)](https://github.com/djimit/juraregel)
+[![Regels](https://img.shields.io/badge/JREM%20Regels-690%20%28PoC%29-purple)](https://github.com/djimit/juraregel)
 [![Agentic](https://img.shields.io/badge/Agentic-Platform-orange)](https://github.com/djimit/juraregel)
 [![MCP](https://img.shields.io/badge/MCP-12%20tools%20%2B%203%20resources%20%2B%203%20prompts-teal)](https://github.com/djimit/juraregel)
 [![BDD](https://img.shields.io/badge/BDD-7%20scenarios-brightgreen)](https://github.com/djimit/juraregel)
@@ -47,7 +47,7 @@ Huidige status: de meeste use cases zijn L1 (PoC). Griffierecht en publicatie zi
 - **JREM** — Judicial Rule Exchange Model, versioned JSON Schema standaard (v1.0.0 → v1.1.0) voor juridische regels
 - **Rule APIs** — stateless, idempotente APIs met uitleg, bronverwijzingen en audit trail
 - **MCP Server** — 12 tools + 3 resources + 3 prompts voor LLM-agents (Claude, GPT, lokale LLMs)
-- **Knowledge Base** — 665 regels semantisch doorzoekbaar (Qdrant vector store + SQLite FTS5)
+- **Knowledge Base** — 690 regels semantisch doorzoekbaar (Qdrant vector store + SQLite FTS5)
 - **BDD Tests** — Gherkin scenarios voor legal team acceptatie (pytest-bdd)
 - **BWB Harvester** — automatische wetwijziging-detectie via BWB API
 - **CI/CD Gates** — 18+ gates: per-use-case (14), JKB (5), extraction (3), schema versioning, BDD, harvester health

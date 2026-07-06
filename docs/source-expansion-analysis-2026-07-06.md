@@ -7,7 +7,8 @@ Datum: 2026-07-06
 - Git: `main` op `e83a700` (`docs: restore architecture diagram`), working tree was schoon bij start.
 - JKB bij start: 655 regels, 26 domeinen.
 - JKB na uitvoering eerste bouwslice: 665 regels, 27 domeinen.
-- Huidige echte source connectors: BWB/wetten.overheid.nl, EUR-Lex, PLOOI, Rechtspraak.
+- JKB na hardening/preflights: 690 regels, 30 domeinen.
+- Huidige echte source connectors: BWB/wetten.overheid.nl, EUR-Lex, PLOOI, Rechtspraak, UPL, TOOI/ROO, CVDR/SRU, Woo-index/DiWoo, STTR/RTR.
 - Feitelijke JREM sourceRef-domeinen: vooral `wetten.overheid.nl`, `www.bio-overheid.nl`, `www.iso.org`, `www.overheid.nl`, `modellen.jenvgegevens.nl`, `github.com`, `www.ncsc.nl`, `www.rechtspraak.nl`, `www.forumstandaardisatie.nl`, `logius-standaarden.github.io`, `www.noraonline.nl`, `developer.overheid.nl`.
 
 De kern-gat-analyse: JuraRegel heeft al veel domeinnamen en PoC-regels, maar gebruikt nog weinig primaire bronregisters als levende input. Vooral decentrale regelgeving, productcatalogi, Woo-publicatieketens, toegankelijkheidsregisters en interoperabiliteitsassessment ontbreken als bronconnectors of als harde verificatiebron.

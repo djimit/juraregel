@@ -14,7 +14,8 @@
         {
           "type": "wet",
           "title": "Wet basisregistratie personen",
-          "section": "art. 3.1"
+          "section": "art. 3.1",
+          "bwbId": "BWBR0033715"
         }
       ],
       "conditions": {
@@ -38,7 +39,8 @@
         {
           "type": "wet",
           "title": "Wet basisregistratie personen",
-          "section": "art. 3.1"
+          "section": "art. 3.1",
+          "bwbId": "BWBR0033715"
         },
         {
           "type": "wet",
@@ -65,7 +67,8 @@
         {
           "type": "wet",
           "title": "Wet basisregistratie personen",
-          "section": "art. 3.1"
+          "section": "art. 3.1",
+          "bwbId": "BWBR0033715"
         }
       ],
       "conditions": {
@@ -88,7 +91,8 @@
         {
           "type": "wet",
           "title": "Wet basisregistratie personen",
-          "section": "art. 3.2"
+          "section": "art. 3.2",
+          "bwbId": "BWBR0033715"
         },
         {
           "type": "wet",
@@ -117,7 +121,8 @@
         {
           "type": "wet",
           "title": "Wet basisregistratie adressen en gebouwen",
-          "section": "art. 6.1"
+          "section": "art. 6.1",
+          "bwbId": "BWBR0023466"
         }
       ],
       "conditions": {
@@ -139,7 +144,8 @@
         {
           "type": "wet",
           "title": "Handelsregisterwet 2007",
-          "section": "art. 2.1"
+          "section": "art. 2.1",
+          "bwbId": "BWBR0021777"
         }
       ],
       "conditions": {
@@ -162,7 +168,8 @@
         {
           "type": "wet",
           "title": "Handelsregisterwet 2007",
-          "section": "art. 2.3"
+          "section": "art. 2.3",
+          "bwbId": "BWBR0021777"
         }
       ],
       "conditions": {
@@ -185,8 +192,9 @@
       "sourceRefs": [
         {
           "type": "wet",
-          "title": "Wet basisregistratie topografie",
-          "section": "art. 3"
+          "title": "Wet basisregistratie grootschalige topografie",
+          "section": "art. 3",
+          "bwbId": "BWBR0034026"
         }
       ],
       "conditions": {
@@ -208,7 +216,8 @@
         {
           "type": "wet",
           "title": "Wet waardering onroerende zaken",
-          "section": "art. 22"
+          "section": "art. 22",
+          "bwbId": "BWBR0007119"
         }
       ],
       "conditions": {
@@ -231,7 +240,8 @@
         {
           "type": "wet",
           "title": "Wet waardering onroerende zaken",
-          "section": "art. 23"
+          "section": "art. 23",
+          "bwbId": "BWBR0007119"
         }
       ],
       "conditions": {
@@ -255,7 +265,8 @@
         {
           "type": "wet",
           "title": "Wet waardering onroerende zaken",
-          "section": "art. 22"
+          "section": "art. 22",
+          "bwbId": "BWBR0007119"
         }
       ],
       "conditions": {

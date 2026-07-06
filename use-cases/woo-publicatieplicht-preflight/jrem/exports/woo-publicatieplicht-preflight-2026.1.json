@@ -1,0 +1,207 @@
+{
+  "schemaVersion": "1.1.0",
+  "ruleSetId": "woo-publicatieplicht-preflight",
+  "version": "2026.1",
+  "validFrom": "2026-07-06",
+  "validUntil": "2026-12-31",
+  "jurisdiction": "NL",
+  "domain": "woo-publicatieplicht-preflight",
+  "procedureType": "woo-publicatieplicht-preflight",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "WOO-001",
+      "name": "Organisatie moet in Woo-index-context bekend zijn",
+      "priority": 100,
+      "legalStatus": "regeling",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Woo-index",
+          "section": "Alle Woo-informatie op een rij",
+          "url": "https://organisaties.overheid.nl/woo"
+        }
+      ],
+      "conditions": {
+        "organisatie": "required"
+      },
+      "outcome": {
+        "signal": "organisation_required",
+        "manualReviewRequired": false
+      }
+    },
+    {
+      "ruleId": "WOO-002",
+      "name": "Documentlocatie moet voor het documenttype bestaan",
+      "priority": 95,
+      "legalStatus": "regeling",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Woo-index",
+          "section": "Locaties van verplicht te publiceren documenten",
+          "url": "https://organisaties.overheid.nl/woo"
+        }
+      ],
+      "conditions": {
+        "documentLocation": "required"
+      },
+      "outcome": {
+        "signal": "document_location_found",
+        "manualReviewRequired": false
+      }
+    },
+    {
+      "ruleId": "WOO-003",
+      "name": "TOOI-code is verplicht voor machineleesbare organisatiecontext",
+      "priority": 90,
+      "legalStatus": "regeling",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Woo-index",
+          "section": "Onderdeel van Register van Overheidsorganisaties",
+          "url": "https://organisaties.overheid.nl/woo"
+        }
+      ],
+      "conditions": {
+        "metadata.tooiCode": "required"
+      },
+      "outcome": {
+        "signal": "tooi_metadata_present",
+        "manualReviewRequired": false
+      }
+    },
+    {
+      "ruleId": "WOO-004",
+      "name": "Documenttype moet expliciet in metadata staan",
+      "priority": 85,
+      "legalStatus": "regeling",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Woo-index",
+          "section": "Woo-documenten en -informatie",
+          "url": "https://organisaties.overheid.nl/woo"
+        }
+      ],
+      "conditions": {
+        "metadata.documentType": "required"
+      },
+      "outcome": {
+        "signal": "document_type_metadata_present",
+        "manualReviewRequired": false
+      }
+    },
+    {
+      "ruleId": "WOO-005",
+      "name": "Publicatiedatum moet beschikbaar zijn",
+      "priority": 80,
+      "legalStatus": "regeling",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Woo-index",
+          "section": "Verplicht publiceren",
+          "url": "https://organisaties.overheid.nl/woo"
+        }
+      ],
+      "conditions": {
+        "metadata.publishedAt": "required"
+      },
+      "outcome": {
+        "signal": "published_at_present",
+        "manualReviewRequired": false
+      }
+    },
+    {
+      "ruleId": "WOO-006",
+      "name": "Bron-URL moet naar het concrete document verwijzen",
+      "priority": 75,
+      "legalStatus": "regeling",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Woo-index",
+          "section": "Documentlocaties per organisatie",
+          "url": "https://organisaties.overheid.nl/woo"
+        }
+      ],
+      "conditions": {
+        "metadata.sourceUrl": "required"
+      },
+      "outcome": {
+        "signal": "source_url_present",
+        "manualReviewRequired": false
+      }
+    },
+    {
+      "ruleId": "WOO-007",
+      "name": "Ontbrekende metadata vereist pre-publicatieherstel",
+      "priority": 70,
+      "legalStatus": "regeling",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Woo-index",
+          "section": "Woo-documenten",
+          "url": "https://organisaties.overheid.nl/woo"
+        }
+      ],
+      "conditions": {
+        "missingMetadata": {
+          "gt": 0
+        }
+      },
+      "outcome": {
+        "signal": "missing_metadata_manual_review",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Woo/DiWoo metadata ontbreekt."
+      }
+    },
+    {
+      "ruleId": "WOO-008",
+      "name": "Onbekend documenttype is een handmatige controle",
+      "priority": 65,
+      "legalStatus": "regeling",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Woo-index",
+          "section": "Zoek Woo",
+          "url": "https://organisaties.overheid.nl/woo"
+        }
+      ],
+      "conditions": {
+        "documentFound": false
+      },
+      "outcome": {
+        "signal": "document_type_not_found",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Documenttype of organisatie niet gevonden."
+      }
+    }
+  ],
+  "metadata": {
+    "juridischeContext": {
+      "wet": "Woo-index + DiWoo metadata",
+      "wetVersieLaatstGecheckt": "2026-07-06",
+      "tariefVersie": "2026.1"
+    },
+    "bronverificatieDatum": "2026-07-06",
+    "acceptatieType": "draft"
+  },
+  "approval": {
+    "type": "self",
+    "reviewer": "D. Landman",
+    "role": "maker",
+    "date": "2026-07-06",
+    "scope": "L1 preflight voor Woo-publicatiemetadata",
+    "limitations": [
+      "Geen onafhankelijke juridische review",
+      "Niet productiegeschikt zonder jurist-acceptatie",
+      "Controleert metadata compleetheid, niet documentinhoud"
+    ]
+  },
+  "maturityLevel": "L1-poc"
+}

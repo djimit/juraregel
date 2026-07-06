@@ -1,0 +1,9 @@
+regels voor woo-publicatieplicht-preflight versie 2026.1
+
+regel WOO-003 "TOOI-code is verplicht voor machineleesbare organisatiecontext"
+wanneer publicatiemetadata geen tooiCode bevat
+dan markeer metadata als incompleet
+
+regel WOO-007 "Ontbrekende metadata vereist pre-publicatieherstel"
+wanneer verplichte Woo metadata ontbreekt
+dan zet manualReviewRequired op waar

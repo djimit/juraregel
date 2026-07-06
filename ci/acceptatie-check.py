@@ -4,6 +4,15 @@ import json, sys
 from datetime import datetime
 from pathlib import Path
 
+
+def _parse_iso_date(value: str, field: str) -> tuple[datetime | None, str | None]:
+    if not value:
+        return None, f"juristAccordering.{field} ontbreekt"
+    try:
+        return datetime.fromisoformat(value), None
+    except Exception:
+        return None, f"Ongeldige {field} datum: {value}"
+
 def check_acceptatie(jrem_path: str) -> tuple[str, str]:
     """Returns (status, message). status: PASS, FAIL, or SKIP."""
     with open(jrem_path) as f:
@@ -17,25 +26,26 @@ def check_acceptatie(jrem_path: str) -> tuple[str, str]:
     if not accordering or acceptatie_type == "draft":
         return "SKIP", f"Draft JREM (acceptatieType={acceptatie_type}) — geen jurist-acceptatie vereist"
     
-    # Check geaccondeerdDoor
     naam = accordering.get("geaccondeerdDoor", "")
     if not naam:
         return "FAIL", "juristAccordering.geaccondeerdDoor is leeg"
-    
-    # Check geldigTot not expired
+
+    datum, err = _parse_iso_date(accordering.get("datum"), "datum")
+    if err:
+        return "FAIL", err
+
     geldig_tot = accordering.get("geldigTot")
-    if geldig_tot:
-        try:
-            gt = datetime.fromisoformat(geldig_tot)
-            if gt < datetime.now():
-                return "FAIL", f"Acceptatie verlopen op {geldig_tot}"
-        except Exception:
-            return "FAIL", f"Ongeldige geldigTot datum: {geldig_tot}"
-    
-    # Check versie matches JREM version
+    gt, err = _parse_iso_date(geldig_tot, "geldigTot")
+    if err:
+        return "FAIL", err
+    if gt.date() < datetime.now().date():
+        return "FAIL", f"Acceptatie verlopen op {geldig_tot}"
+
     accorderings_versie = accordering.get("versie", "")
     jrem_versie = data.get("version", "")
-    if accorderings_versie and accorderings_versie != jrem_versie:
+    if not accorderings_versie:
+        return "FAIL", "juristAccordering.versie ontbreekt"
+    if accorderings_versie != jrem_versie:
         return "FAIL", f"Acceptatie versie ({accorderings_versie}) komt niet overeen met JREM versie ({jrem_versie})"
     
     return "PASS", f"Acceptatie geldig: {naam}, tot {geldig_tot}"

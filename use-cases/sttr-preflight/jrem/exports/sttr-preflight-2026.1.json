@@ -1,0 +1,206 @@
+{
+  "schemaVersion": "1.1.0",
+  "ruleSetId": "sttr-preflight",
+  "version": "2026.1",
+  "validFrom": "2026-07-06",
+  "validUntil": "2026-12-31",
+  "jurisdiction": "NL",
+  "domain": "sttr-preflight",
+  "procedureType": "sttr-preflight",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "STTR-001",
+      "name": "Toepasbare-regelbestand moet identificeerbaar zijn",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "STTR/IMTR",
+          "section": "Standaard toepasbare regels",
+          "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/"
+        }
+      ],
+      "conditions": {
+        "packageId": "required"
+      },
+      "outcome": {
+        "signal": "package_found",
+        "manualReviewRequired": false
+      }
+    },
+    {
+      "ruleId": "STTR-002",
+      "name": "STTR 3.0.x past bij de actuele ondersteunde versie",
+      "priority": 95,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "STTR/IMTR",
+          "section": "Versie 3.0",
+          "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/"
+        }
+      ],
+      "conditions": {
+        "sttrVersion": "3.0.x"
+      },
+      "outcome": {
+        "signal": "sttr_version_fit",
+        "manualReviewRequired": false
+      }
+    },
+    {
+      "ruleId": "STTR-003",
+      "name": "RTR-versie moet aanwezig zijn",
+      "priority": 90,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "STTR/IMTR",
+          "section": "Registratie toepasbare regels",
+          "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/"
+        }
+      ],
+      "conditions": {
+        "rtrVersion": "required"
+      },
+      "outcome": {
+        "signal": "rtr_version_present",
+        "manualReviewRequired": false
+      }
+    },
+    {
+      "ruleId": "STTR-004",
+      "name": "JREM mapping moet mappedRuleIds bevatten",
+      "priority": 85,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "STTR/IMTR",
+          "section": "Informatiemodel toepasbare regels",
+          "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/"
+        }
+      ],
+      "conditions": {
+        "jremMapping.mappedRuleIds": "required"
+      },
+      "outcome": {
+        "signal": "jrem_mapping_present",
+        "manualReviewRequired": false
+      }
+    },
+    {
+      "ruleId": "STTR-005",
+      "name": "Valide pakket zonder verificatieproblemen kan door",
+      "priority": 80,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "STTR/IMTR",
+          "section": "Verificatiematrix versie 3.0.0",
+          "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/"
+        }
+      ],
+      "conditions": {
+        "issues": 0
+      },
+      "outcome": {
+        "signal": "preflight_pass",
+        "manualReviewRequired": false
+      }
+    },
+    {
+      "ruleId": "STTR-006",
+      "name": "Niet-actuele STTR-versie is een verificatieprobleem",
+      "priority": 75,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "STTR/IMTR",
+          "section": "Afspraken over ondersteunen van versies",
+          "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/"
+        }
+      ],
+      "conditions": {
+        "sttrVersionFit": false
+      },
+      "outcome": {
+        "signal": "sttr_version_mismatch",
+        "manualReviewRequired": true,
+        "manualReviewReason": "STTR-versie past niet bij actuele ondersteunde versie."
+      }
+    },
+    {
+      "ruleId": "STTR-007",
+      "name": "Ontbrekende JREM mapping blokkeert preflight",
+      "priority": 70,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "STTR/IMTR",
+          "section": "IMTR conceptrelaties",
+          "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/"
+        }
+      ],
+      "conditions": {
+        "jremMappingFit": false
+      },
+      "outcome": {
+        "signal": "jrem_mapping_missing",
+        "manualReviewRequired": true,
+        "manualReviewReason": "JREM mapping ontbreekt."
+      }
+    },
+    {
+      "ruleId": "STTR-008",
+      "name": "Onbekend pakket vereist handmatige controle",
+      "priority": 65,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "STTR/IMTR",
+          "section": "Aanleveren aan RTR",
+          "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/"
+        }
+      ],
+      "conditions": {
+        "packageFound": false
+      },
+      "outcome": {
+        "signal": "package_not_found",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Toepasbare-regelbestand niet gevonden."
+      }
+    }
+  ],
+  "metadata": {
+    "juridischeContext": {
+      "wet": "STTR/IMTR + RTR",
+      "wetVersieLaatstGecheckt": "2026-07-06",
+      "tariefVersie": "2026.1"
+    },
+    "bronverificatieDatum": "2026-07-06",
+    "acceptatieType": "draft"
+  },
+  "approval": {
+    "type": "self",
+    "reviewer": "D. Landman",
+    "role": "maker",
+    "date": "2026-07-06",
+    "scope": "L1 preflight voor STTR/RTR/JREM mapping",
+    "limitations": [
+      "Geen onafhankelijke juridische review",
+      "Niet productiegeschikt zonder jurist-acceptatie",
+      "Controleert package-metadata, niet volledige DSO-validatie"
+    ]
+  },
+  "maturityLevel": "L1-poc"
+}

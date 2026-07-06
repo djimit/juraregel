@@ -1,0 +1,47 @@
+{
+  "packages": [
+    {
+      "packageId": "evenement-melding-amsterdam",
+      "sttrVersion": "3.0.1",
+      "imtrVersion": "3.0.1",
+      "rtrVersion": "2026.1",
+      "status": "valid",
+      "issues": [],
+      "jremMapping": {
+        "ruleSetId": "decentrale-regelcheck",
+        "mappedRuleIds": ["DRC-001", "DRC-002", "DRC-006"]
+      },
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "STTR/IMTR",
+          "section": "Versie 3.0",
+          "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/"
+        }
+      ]
+    },
+    {
+      "packageId": "kapvergunning-legacy",
+      "sttrVersion": "2.0",
+      "imtrVersion": "2.0",
+      "rtrVersion": "2025.1",
+      "status": "invalid",
+      "issues": [
+        "STTR-versie is niet de actuele ondersteunde versie",
+        "JREM mapping ontbreekt mappedRuleIds"
+      ],
+      "jremMapping": {
+        "ruleSetId": "decentrale-regelcheck",
+        "mappedRuleIds": []
+      },
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "STTR/IMTR",
+          "section": "Versie 2.0",
+          "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/"
+        }
+      ]
+    }
+  ]
+}

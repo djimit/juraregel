@@ -52,10 +52,18 @@ class BWBConnector(BaseConnector):
     def health_check(self) -> dict:
         """Check BWB endpoint."""
         try:
-            url = f"{BWB_BASE}/api/v1/wetten"
-            req = urllib.request.Request(url, method="HEAD")
+            url = f"{BWB_BASE}/BWBR0033715"
+            req = urllib.request.Request(
+                url,
+                headers={"User-Agent": "JuraRegel source-health/2026.1"},
+            )
             with urllib.request.urlopen(req, timeout=10) as resp:
-                return {"source": "BWB", "status": "ok", "http_code": resp.status}
+                return {
+                    "source": "BWB",
+                    "status": "ok",
+                    "http_code": resp.status,
+                    "checked_url": url,
+                }
         except Exception as e:
             return {"source": "BWB", "status": "error", "error": str(e)}
 

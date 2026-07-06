@@ -1,0 +1,58 @@
+{
+  "records": [
+    {
+      "postcode": "1011AB",
+      "bestuurslaag": "gemeente",
+      "bevoegdGezag": "gemeente Amsterdam",
+      "product": "evenementenvergunning",
+      "activiteit": "evenement organiseren",
+      "regeling": "Algemene Plaatselijke Verordening Amsterdam 2008",
+      "procedureType": "vergunning",
+      "openNormen": ["openbare orde", "veiligheid"],
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Lokale wet- en regelgeving",
+          "section": "Algemene Plaatselijke Verordening Amsterdam 2008",
+          "url": "https://lokaleregelgeving.overheid.nl/"
+        }
+      ]
+    },
+    {
+      "postcode": "1011AB",
+      "bestuurslaag": "provincie",
+      "bevoegdGezag": "provincie Noord-Holland",
+      "product": "omgevingsvergunning",
+      "activiteit": "natuuractiviteit",
+      "regeling": "Omgevingsverordening Noord-Holland 2022",
+      "procedureType": "vergunning",
+      "openNormen": ["gebiedsspecifieke beoordeling"],
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Lokale wet- en regelgeving",
+          "section": "Omgevingsverordening Noord-Holland 2022",
+          "url": "https://lokaleregelgeving.overheid.nl/"
+        }
+      ]
+    },
+    {
+      "postcode": "1011AB",
+      "bestuurslaag": "waterschap",
+      "bevoegdGezag": "Waterschap Amstel Gooi en Vecht",
+      "product": "watervergunning",
+      "activiteit": "lozen op oppervlaktewater",
+      "regeling": "Waterschapsverordening Amstel Gooi en Vecht",
+      "procedureType": "vergunning",
+      "openNormen": [],
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Lokale wet- en regelgeving",
+          "section": "Waterschapsverordening Amstel Gooi en Vecht",
+          "url": "https://lokaleregelgeving.overheid.nl/"
+        }
+      ]
+    }
+  ]
+}

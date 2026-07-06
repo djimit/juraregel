@@ -123,5 +123,18 @@
     },
     "bronverificatieDatum": "2026-07-06",
     "acceptatieType": "draft"
-  }
+  },
+  "approval": {
+    "type": "self",
+    "reviewer": "D. Landman",
+    "role": "maker",
+    "date": "2026-07-06",
+    "scope": "L1 preflight voor UPL en TOOI/ROO dienstverlening-check",
+    "limitations": [
+      "Geen onafhankelijke juridische review",
+      "Niet productiegeschikt zonder jurist-acceptatie",
+      "Controleert bronregistratie-signalen, niet volledige juridische besluitvorming"
+    ]
+  },
+  "maturityLevel": "L1-poc"
 }

@@ -1,0 +1,36 @@
+{
+  "organisations": [
+    {
+      "organisatie": "gemeente Amsterdam",
+      "tooiCode": "gm0363",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Woo-index",
+          "section": "gemeente Amsterdam",
+          "url": "https://organisaties.overheid.nl/woo"
+        }
+      ],
+      "documents": [
+        {
+          "documentType": "beschikking",
+          "location": "https://www.amsterdam.nl/woo/beschikkingen/sitemap.xml",
+          "metadata": {
+            "tooiCode": "gm0363",
+            "documentType": "beschikking",
+            "publishedAt": "2026-07-01",
+            "sourceUrl": "https://www.amsterdam.nl/woo/beschikkingen/voorbeeld"
+          }
+        },
+        {
+          "documentType": "convenant",
+          "location": "https://www.amsterdam.nl/woo/convenanten/sitemap.xml",
+          "metadata": {
+            "documentType": "convenant",
+            "sourceUrl": "https://www.amsterdam.nl/woo/convenanten/voorbeeld"
+          }
+        }
+      ]
+    }
+  ]
+}

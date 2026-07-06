@@ -1,0 +1,9 @@
+regels voor sttr-preflight versie 2026.1
+
+regel STTR-002 "STTR 3.0.x past bij de actuele ondersteunde versie"
+wanneer sttrVersion begint met 3.0
+dan markeer sttrVersionFit als waar
+
+regel STTR-007 "Ontbrekende JREM mapping blokkeert preflight"
+wanneer mappedRuleIds ontbreken
+dan zet manualReviewRequired op waar

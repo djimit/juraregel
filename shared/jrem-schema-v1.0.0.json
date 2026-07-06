@@ -80,7 +80,10 @@
         "dienstverlening-check",
         "traceability",
         "compliance-debt",
-        "regulatory-impact"
+        "regulatory-impact",
+        "decentrale-regelcheck",
+        "woo-publicatieplicht-preflight",
+        "sttr-preflight"
       ]
     },
     "procedureType": {
@@ -93,7 +96,10 @@
         "activiteit-toetsing",
         "bijstandsberekening",
         "toegangsbeoordeling",
-        "toeslagen-berekening"
+        "toeslagen-berekening",
+        "decentrale-regelcheck",
+        "woo-publicatieplicht-preflight",
+        "sttr-preflight"
       ]
     },
     "conflictResolution": {
