@@ -512,4 +512,4 @@ Zie [CONTRIBUTING.md](CONTRIBUTING.md) (JREM open-source) voor bijdrage richtlij
 
 ## Over Djimit Rules
 
-JuraRegel is ontwikkeld door [Djimit Rules](https://github.com/djimit) als onderdeel van het Legal RuleOps Platform. De Rechtspraak is het pilot-domein. JuraRegel is herbruikbaar bij elke overheidsorganisatie die met administratief-juridische regels werkt.
+JuraRegel is ontwikkeld door [Djimit Rules](https://github.com/djimit) als onderdeel van het Legal RuleOps Platform. De openbare data van de Rechtspraak is de pilot mee gedaan. JuraRegel is herbruikbaar bij elke overheidsorganisatie die met administratief juridische regels werkt.
