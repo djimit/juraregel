@@ -18,6 +18,13 @@ Controleer of Woo-publicatie metadata en vindbaarheid klaar zijn voor publicatie
 - Woo-harvester publicatievoorwaarden
 - TOOI/ROO waardelijsten
 
+## Live read-only pad
+
+- `https://organisaties.overheid.nl/woo/zoeken`
+- Parameters: `keyword`, `maximumRecords`, `pageNumber`, `sortOrder`.
+- Detailpad: publieke Woo-index organisatiepagina's, sectie `Locaties Woo-documenten`.
+- De connector leest publicatielocaties en informatiecategorieen, geen documentbody's.
+
 ## Output
 
 - ontbrekende metadata
@@ -28,3 +35,4 @@ Controleer of Woo-publicatie metadata en vindbaarheid klaar zijn voor publicatie
 ## Niet Doen
 
 Geen documenten publiceren of muteren; dit is alleen preflight.
+Geen private documentinhoud ophalen of opslaan.

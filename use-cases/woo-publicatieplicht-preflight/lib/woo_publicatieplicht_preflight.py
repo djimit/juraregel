@@ -8,6 +8,14 @@ def _norm(value: str) -> str:
     return " ".join((value or "").casefold().split())
 
 
+def _same_document_type(left: str, right: str) -> bool:
+    left = _norm(left)
+    right = _norm(right)
+    if left == right:
+        return True
+    return bool(left and right and (left in right or right in left))
+
+
 @dataclass
 class WooPreflightRequest:
     organisatie: str
@@ -22,7 +30,8 @@ def check_woo_publicatieplicht(req: WooPreflightRequest, documents: list[dict]) 
     matches = [
         doc
         for doc in documents
-        if doc.get("organisatie") == organisatie and doc.get("documentType") == document_type
+        if doc.get("organisatie") == organisatie
+        and _same_document_type(document_type, doc.get("documentType", ""))
     ]
 
     if not matches:
@@ -30,7 +39,7 @@ def check_woo_publicatieplicht(req: WooPreflightRequest, documents: list[dict]) 
             "documentFound": False,
             "missingMetadata": list(REQUIRED_METADATA),
             "manualReviewRequired": True,
-            "manualReviewReason": "Documenttype of organisatie niet gevonden in Woo-index/DiWoo fixture.",
+            "manualReviewReason": "Documenttype of organisatie niet gevonden in Woo-index/DiWoo bronlaag.",
             "appliedRules": ["WOO-001", "WOO-008"],
             "sourceRefs": [],
         }

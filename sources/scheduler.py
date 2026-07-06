@@ -55,11 +55,24 @@ def run_ingest() -> dict:
             results[cls.__name__] = {"error": str(e)}
     return results
 
+def run_live_smoke() -> list[dict]:
+    """Run optional live smoke checks for connectors that expose them."""
+    results = []
+    for cls in (CVDRSRUConnector, WooDiWooConnector, STTRRTRConnector):
+        try:
+            connector = cls()
+            results.append(connector.live_smoke())
+        except Exception as e:
+            results.append({"source": cls.__name__, "status": "error", "error": str(e)})
+    return results
+
 if __name__ == "__main__":
     import sys
     if "--health" in sys.argv:
         print(json.dumps(run_health_checks(), indent=2))
     elif "--ingest" in sys.argv:
         print(json.dumps(run_ingest(), indent=2))
+    elif "--live-smoke" in sys.argv:
+        print(json.dumps(run_live_smoke(), indent=2))
     else:
-        print("Usage: python3 sources/scheduler.py [--health|--ingest]")
+        print("Usage: python3 sources/scheduler.py [--health|--ingest|--live-smoke]")

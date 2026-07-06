@@ -22,6 +22,7 @@ def test_valid_sttr_package_passes_preflight():
 
     assert result["packageFound"] is True
     assert result["sttrVersionFit"] is True
+    assert result["imtrVersionFit"] is True
     assert result["rtrVersionFit"] is True
     assert result["jremMappingFit"] is True
     assert result["manualReviewRequired"] is False
@@ -33,6 +34,7 @@ def test_legacy_sttr_package_requires_manual_review():
 
     assert result["packageFound"] is True
     assert result["sttrVersionFit"] is False
+    assert result["imtrVersionFit"] is False
     assert result["jremMappingFit"] is False
     assert result["manualReviewRequired"] is True
     assert "STTR-006" in result["appliedRules"]
@@ -45,6 +47,46 @@ def test_unknown_package_requires_manual_review():
     assert result["packageFound"] is False
     assert result["manualReviewRequired"] is True
     assert result["appliedRules"] == ["STTR-008"]
+
+
+def test_missing_rtr_version_blocks_preflight():
+    packages = [{
+        "packageId": "zonder-rtr",
+        "packageLabel": "zonder-rtr",
+        "sttrVersion": "3.0.1",
+        "imtrVersion": "3.0.1",
+        "rtrVersion": "",
+        "status": "metadata-only",
+        "issues": [],
+        "jremMapping": {"mappedRuleIds": ["DRC-001"]},
+        "sourceRefs": [],
+    }]
+
+    result = check_sttr_package(STTRPreflightRequest("zonder-rtr"), packages)
+
+    assert result["rtrVersionFit"] is False
+    assert result["manualReviewRequired"] is True
+    assert "RTR-versie ontbreekt." in result["manualReviewReason"]
+
+
+def test_missing_mapped_rule_ids_blocks_preflight():
+    packages = [{
+        "packageId": "zonder-mapping",
+        "packageLabel": "zonder-mapping",
+        "sttrVersion": "3.0.1",
+        "imtrVersion": "3.0.1",
+        "rtrVersion": "2026.1",
+        "status": "metadata-only",
+        "issues": [],
+        "jremMapping": {"mappedRuleIds": []},
+        "sourceRefs": [],
+    }]
+
+    result = check_sttr_package(STTRPreflightRequest("zonder-mapping"), packages)
+
+    assert result["jremMappingFit"] is False
+    assert result["manualReviewRequired"] is True
+    assert "STTR-007" in result["appliedRules"]
 
 
 def test_jrem_export_validates_against_shared_schema():

@@ -1,61 +1,65 @@
 # JuraRegel Trust Report
 
-**Datum:** 2026-07-05
-**Versie:** 2.1.1
-**Commit:** 4fd21b7
+**Datum:** 2026-07-07
+**Repo:** `djimit/juraregel`
+**Head:** `55ebadf`
+**Status:** technisch PoC-ready; niet productie-ready zonder eindgates.
 
-## Maturity Overview
+## Executive Readiness
 
-| Level | Count | Description |
-|-------|-------|-------------|
-| L0-demo | 26 | Regelmatige exports, geen externe review | Example rules, no external review |
-| L1-poc | 3 | Griffierecht, Publicatie, Toeslagen | Schema validates, tests pass, self-approved |
-| L2-pilot | 0 | Independent legal review required |
-| L3-production | 0 | Full assurance pipeline required |
+JuraRegel heeft 690 JKB-regels over 30 domeinen. De huidige JREM exports hebben 26 `L0-demo` en 7 `L1-poc` rulesets. Er zijn geen `L2-pilot` of `L3-production` claims.
 
-## Flagship Use Case: Griffierecht
+De nieuwe live bronlaag is read-only en gebruikt alleen openbare metadata/search-pagina's. De bronlaag ondersteunt preflight-signalen, geen finale juridische besluiten.
 
-**Status:** L1-poc (closest to L2)
-- Deterministic rule engine
-- 36 rules with source references
-- Regression tests between 2025/2026 versions
-- Explainability + audit hashes
-- **Blocker for L2:** No independent legal review
+## CI Evidence
 
-## CI Status
+| Check | Status | Evidence |
+|---|---:|---|
+| Laatste GitHub Actions run | pass | run `28827497816`, commit `55ebadf`, conclusion `success` |
+| JKB coverage | pass | `knowledge-base/jkb-summary.json`: 690 regels, 30 domeinen |
+| Source health | pass/deprecated | BWB, EUR-Lex, Rechtspraak, UPL, TOOI/ROO, CVDR/SRU, Woo-index/DiWoo en STTR/IMTR+RTR `ok`; PLOOI bewust `deprecated` |
+| Live harvester smoke | pass | CVDR 3 resultaten; Woo-index 5 organisaties; STTR ondersteund `3.0`, `2.0`, `1.5` |
+| Jurist gate policy | pass as policy | L2/L3 faalt zonder uitgebreide juristAccordering; L3 vereist indicator-disclaimer en `indicator-only` boundary |
 
-| Check | Status | Notes |
-|-------|--------|-------|
-| Schema validation | ✅ Pass | jrem-core.json + v1.1.0 |
-| JREM validation | ✅ Pass | 0 errors, 0 warnings |
-| BDD tests | ✅ Pass | 7/7 scenarios |
-| CLI | ✅ Pass | All commands work |
-| Legal review | ⚠️ Warn (PoC) / Fail (Pilot) | 29 self-approved, maturity-aware gating |
+## Live Harvester Status
 
-## Security Status
+| Bron | Live pad | Status | Grenzen |
+|---|---|---:|---|
+| CVDR/SRU | `https://lokaleregelgeving.overheid.nl/ZoekResultaat` met `locatie`, `tekst`, `count` | ok | Normaliseert zoekresultaten en sourceRefs; haalt geen volledige regelingsteksten in bulk op |
+| Woo-index/DiWoo | `https://organisaties.overheid.nl/woo/zoeken` en organisatiepagina's | ok | Leest publicatielocaties/categorieen; haalt geen documentbody's of private inhoud op |
+| STTR/IMTR+RTR | `https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/` | ok | Leest ondersteunde versies en lokale package-metadata; geen DSO/RTR submission-client |
 
-| Control | Status | Notes |
-|---------|--------|-------|
-| Auth | ✅ API key | JURAREGEL_API_KEY env var |
-| CORS | ✅ Restricted | JURAREGEL_CORS_ORIGINS env var |
-| Audit logging | ⚠️ Basic | Hash chain, no persistence |
-| Rate limiting | ⚠️ In-memory | Not for production |
-| TLS | ❌ Not implemented | Reverse proxy needed |
-| OAuth2/OIDC | ❌ Not implemented | Planned for L3 |
+## Maturity And Acceptance
 
-## Known Limitations
+| Domein | Maturity | Acceptance | Readiness |
+|---|---:|---:|---|
+| `decentrale-regelcheck` | L1-poc | draft/self | Live CVDR metadata-preflight; productiepromotie geblokkeerd tot juristacceptatie |
+| `woo-publicatieplicht-preflight` | L1-poc | draft/self | Live Woo publicatielocatie-preflight; metadata-only, geen documentinhoud |
+| `sttr-preflight` | L1-poc | draft/self | Live STTR versie-discovery en package metadata checks; geen formele DSO-validatie |
+| Overige JREM exports | L0-demo/L1-poc | self of draft/full metadata | Geen L2/L3 readiness claim |
 
-1. All exports are self-approved (no independent legal review)
-2. BIO2 evidence store is SQLite (PoC only)
-3. No persistent audit logging
-4. No production-grade authentication
-5. CI not yet verified via GitHub Actions runs
-6. No SBOM or dependency scanning
+## L2/L3 Gate Contract
 
-## Next Steps to L2
+Voor `L2-*` en `L3-*` vereist de gate:
 
-1. Independent legal review for Griffierecht
-2. Evidence persistence for BIO2
-3. Production CI verification
-4. Threat model documentation
-5. Security baseline assessment
+- `approval.type` is niet `self`.
+- `metadata.acceptatieType` is `full` of `update`.
+- `metadata.juristAccordering` bevat `geaccondeerdDoor`, `rol`, `organisatie`, `datum`, `geldigTot`, `versie`, `scope`, `bronSnapshot`, `verklaring` en niet-lege `beperkingen`.
+- `juristAccordering.versie` is gelijk aan JREM `version`.
+- `geldigTot` is niet verlopen.
+- `L3-*` bevat `metadata.indicatorDisclaimer` en `metadata.manualReviewBoundary=indicator-only`.
+
+## Human Gates Remaining
+
+1. Bevestig of openbare endpoints volstaan of dat geauthenticeerde endpoints gebruikt mogen worden.
+2. Geef publicatie-approval voor dit trust report en source reports.
+3. Lever jurist-acceptatie metadata per domein dat naar L2/L3 moet.
+4. Keur eventuele L2/L3 maturity-wijzigingen expliciet goed.
+5. Keur commit en push goed.
+
+## Residual Risk
+
+- CVDR en Woo zijn HTML-search gebaseerde publieke contracten; bij markupwijziging degraderen de live-smokes in plaats van stil verkeerde data te leveren.
+- Woo `tooiCode` en `publishedAt` zijn niet altijd beschikbaar op de publieke Woo-index detailpagina; ontbrekende metadata blijft manual review.
+- STTR package checks zijn metadata-preflights; volledige XSD/verificatiematrix/DSO-submission blijft buiten scope.
+- Er is nog geen onafhankelijke juridische acceptatie voor de drie nieuwe L1-preflightdomeinen.

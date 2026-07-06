@@ -521,6 +521,27 @@
             },
             "versie": {
               "type": "string"
+            },
+            "rol": {
+              "type": "string"
+            },
+            "organisatie": {
+              "type": "string"
+            },
+            "scope": {
+              "type": "string"
+            },
+            "bronSnapshot": {
+              "type": "string"
+            },
+            "verklaring": {
+              "type": "string"
+            },
+            "beperkingen": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           }
         },
@@ -534,6 +555,15 @@
             "draft",
             "full",
             "update"
+          ]
+        },
+        "indicatorDisclaimer": {
+          "type": "string"
+        },
+        "manualReviewBoundary": {
+          "type": "string",
+          "enum": [
+            "indicator-only"
           ]
         }
       }
@@ -564,7 +594,9 @@
         "type": {
           "type": "string",
           "enum": [
-            "self"
+            "self",
+            "jurist",
+            "independent"
           ]
         },
         "reviewer": {

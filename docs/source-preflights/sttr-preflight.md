@@ -18,6 +18,12 @@ Voorkom DSO/RTR-afkeur door toepasbare-regelbestanden vooraf te toetsen.
 - RTR aansluitvoorwaarden
 - STOP/TPOD
 
+## Live read-only pad
+
+- `https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/`
+- De connector leest het publieke blok met ondersteunde STTR/IMTR versies.
+- Lokale package metadata kan als JSON of eenvoudige XML worden geparsed.
+
 ## Output
 
 - STTR-versiefit
@@ -28,3 +34,4 @@ Voorkom DSO/RTR-afkeur door toepasbare-regelbestanden vooraf te toetsen.
 ## Niet Doen
 
 Geen inhoudelijke vergunningbeslissing nemen; alleen leveringsfit toetsen.
+Geen DSO/RTR submission-client en geen volledige XSD/verificatiematrix-validatie in deze slice.

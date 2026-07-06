@@ -29,6 +29,28 @@ def test_complete_woo_metadata_passes_preflight():
     assert {"WOO-002", "WOO-003", "WOO-004", "WOO-005", "WOO-006"}.issubset(result["appliedRules"])
 
 
+def test_live_woo_category_plural_matches_document_type():
+    documents = [{
+        "organisatie": "gemeente amsterdam",
+        "organisatieLabel": "Gemeente Amsterdam",
+        "documentType": "beschikkingen",
+        "documentTypeLabel": "Beschikkingen",
+        "location": "https://zoek.officielebekendmakingen.nl/resultaten?q=beschikking",
+        "metadata": {
+            "tooiCode": "gm0363",
+            "documentType": "beschikkingen",
+            "publishedAt": "2026-07-01",
+            "sourceUrl": "https://zoek.officielebekendmakingen.nl/resultaten?q=beschikking",
+        },
+        "sourceRefs": [{"title": "Woo-index", "url": "https://organisaties.overheid.nl/woo/25698/Gemeente_Amsterdam"}],
+    }]
+
+    result = check_woo_publicatieplicht(WooPreflightRequest("gemeente Amsterdam", "beschikking"), documents)
+
+    assert result["documentFound"] is True
+    assert result["missingMetadata"] == []
+
+
 def test_missing_diwoo_metadata_requires_manual_review():
     result = check_woo_publicatieplicht(
         WooPreflightRequest("gemeente Amsterdam", "convenant"),

@@ -1,7 +1,7 @@
 from sources.bwb_connector import BWBConnector
 from sources.plooi_connector import PLOOIConnector
 from sources.rechtspraak_connector import RechtspraakConnector
-from sources.scheduler import SOURCE_HEALTH_STATUSES
+from sources.scheduler import SOURCE_HEALTH_STATUSES, run_live_smoke
 
 
 class FakeResponse:
@@ -51,3 +51,22 @@ def test_plooi_health_is_classified_as_deprecated(monkeypatch):
 
 def test_source_health_status_contract_includes_degraded_and_unsupported_method():
     assert SOURCE_HEALTH_STATUSES == {"ok", "degraded", "deprecated", "unsupported_method", "error"}
+
+
+def test_live_smoke_contract_uses_new_preflight_connectors(monkeypatch):
+    monkeypatch.setattr(
+        "sources.cvdr_sru_connector.CVDRSRUConnector.live_smoke",
+        lambda self: {"source": "CVDR/SRU", "status": "ok"},
+    )
+    monkeypatch.setattr(
+        "sources.woo_diwoo_connector.WooDiWooConnector.live_smoke",
+        lambda self: {"source": "Woo-index/DiWoo", "status": "ok"},
+    )
+    monkeypatch.setattr(
+        "sources.sttr_rtr_connector.STTRRTRConnector.live_smoke",
+        lambda self: {"source": "STTR/IMTR+RTR", "status": "ok"},
+    )
+
+    results = run_live_smoke()
+
+    assert [item["source"] for item in results] == ["CVDR/SRU", "Woo-index/DiWoo", "STTR/IMTR+RTR"]

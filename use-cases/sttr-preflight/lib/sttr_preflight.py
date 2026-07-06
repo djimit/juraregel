@@ -13,7 +13,16 @@ class STTRPreflightRequest:
     packageId: str
 
 
-def check_sttr_package(req: STTRPreflightRequest, packages: list[dict]) -> dict:
+def _version_fit(version: str, supported_versions: list[str] | tuple[str, ...]) -> bool:
+    return any((version or "").startswith(supported) for supported in supported_versions)
+
+
+def check_sttr_package(
+    req: STTRPreflightRequest,
+    packages: list[dict],
+    supported_versions: list[str] | tuple[str, ...] | None = None,
+) -> dict:
+    supported_versions = supported_versions or (SUPPORTED_STTR_MAJOR,)
     package_id = _norm(req.packageId)
     package = next((item for item in packages if item.get("packageId") == package_id), None)
 
@@ -21,6 +30,7 @@ def check_sttr_package(req: STTRPreflightRequest, packages: list[dict]) -> dict:
         return {
             "packageFound": False,
             "sttrVersionFit": False,
+            "imtrVersionFit": False,
             "rtrVersionFit": False,
             "jremMappingFit": False,
             "manualReviewRequired": True,
@@ -31,7 +41,8 @@ def check_sttr_package(req: STTRPreflightRequest, packages: list[dict]) -> dict:
 
     applied = ["STTR-001"]
     issues = list(package.get("issues", []))
-    sttr_fit = package.get("sttrVersion", "").startswith(SUPPORTED_STTR_MAJOR)
+    sttr_fit = _version_fit(package.get("sttrVersion", ""), supported_versions)
+    imtr_fit = _version_fit(package.get("imtrVersion", ""), supported_versions)
     rtr_fit = bool(package.get("rtrVersion"))
     mapped_rule_ids = package.get("jremMapping", {}).get("mappedRuleIds", [])
     mapping_fit = bool(mapped_rule_ids)
@@ -40,7 +51,10 @@ def check_sttr_package(req: STTRPreflightRequest, packages: list[dict]) -> dict:
         applied.append("STTR-002")
     else:
         applied.append("STTR-006")
-        issues.append("STTR-versie past niet bij actuele ondersteunde versie 3.0.x.")
+        issues.append("STTR-versie past niet bij actuele ondersteunde versie.")
+
+    if not imtr_fit:
+        issues.append("IMTR-versie ontbreekt of past niet bij ondersteunde versies.")
 
     if rtr_fit:
         applied.append("STTR-003")
@@ -60,6 +74,7 @@ def check_sttr_package(req: STTRPreflightRequest, packages: list[dict]) -> dict:
         "packageFound": True,
         "packageId": package.get("packageLabel"),
         "sttrVersionFit": sttr_fit,
+        "imtrVersionFit": imtr_fit,
         "rtrVersionFit": rtr_fit,
         "jremMappingFit": mapping_fit,
         "mappedRuleIds": mapped_rule_ids,
