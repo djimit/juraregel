@@ -2,7 +2,7 @@
 
 **Datum:** 2026-07-07
 **Repo:** `djimit/juraregel`
-**Head:** `55ebadf`
+**Head:** `cfa1753`
 **Status:** technisch PoC-ready; niet productie-ready zonder eindgates.
 
 ## Executive Readiness
@@ -15,11 +15,12 @@ De nieuwe live bronlaag is read-only en gebruikt alleen openbare metadata/search
 
 | Check | Status | Evidence |
 |---|---:|---|
-| Laatste GitHub Actions run | pass | run `28827497816`, commit `55ebadf`, conclusion `success` |
+| Laatste GitHub Actions run | pass | run `28829466813`, commit `cfa1753`, conclusion `success` |
 | JKB coverage | pass | `knowledge-base/jkb-summary.json`: 690 regels, 30 domeinen |
 | Source health | pass/deprecated | BWB, EUR-Lex, Rechtspraak, UPL, TOOI/ROO, CVDR/SRU, Woo-index/DiWoo en STTR/IMTR+RTR `ok`; PLOOI bewust `deprecated` |
 | Live harvester smoke | pass | CVDR 3 resultaten; Woo-index 5 organisaties; STTR ondersteund `3.0`, `2.0`, `1.5` |
 | Jurist gate policy | pass as policy | L2/L3 faalt zonder uitgebreide juristAccordering; L3 vereist indicator-disclaimer en `indicator-only` boundary |
+| L2 promotion preflight | pass as guard | 3 target packages checked; 0 ready, 0 blocking; placeholders houden L2-promotie tegen |
 
 ## Live Harvester Status
 
@@ -37,6 +38,16 @@ De nieuwe live bronlaag is read-only en gebruikt alleen openbare metadata/search
 | `woo-publicatieplicht-preflight` | L1-poc | draft/self | Live Woo publicatielocatie-preflight; metadata-only, geen documentinhoud |
 | `sttr-preflight` | L1-poc | draft/self | Live STTR versie-discovery en package metadata checks; geen formele DSO-validatie |
 | Overige JREM exports | L0-demo/L1-poc | self of draft/full metadata | Geen L2/L3 readiness claim |
+
+## L2 Acceptance Package Status
+
+| Domein | Package status | Reviewer metadata | Source snapshot | Scenario acceptance | Claim |
+|---|---:|---:|---:|---:|---|
+| `decentrale-regelcheck` | template-ready | placeholder | placeholder dates | placeholder decisions | Geen L2 claim; blijft `L1-poc` |
+| `woo-publicatieplicht-preflight` | template-ready | placeholder | placeholder dates | placeholder decisions | Geen L2 claim; blijft `L1-poc` |
+| `sttr-preflight` | template-ready | placeholder | placeholder dates | placeholder decisions | Geen L2 claim; blijft `L1-poc` |
+
+De acceptance templates staan in `docs/acceptance-templates/`. Ze zijn machineleesbaar en human-fillable, maar niet juridisch geaccepteerd zolang placeholders aanwezig zijn. `ci/l2_promotion_preflight.py` rapporteert daarom `ready=false` voor alle drie domeinen en blokkeert alleen als een JREM export al naar `L2-*` of `L3-*` is gezet zonder geldige metadata.
 
 ## L2/L3 Gate Contract
 

@@ -29,5 +29,9 @@ echo "=== Legal Review Gate ==="
 bash ci/legal-review-gate.sh 2>&1
 
 echo ""
+echo "=== L2 Promotion Preflight ==="
+python3 ci/l2_promotion_preflight.py 2>&1
+
+echo ""
 echo "=== Alle gates voltooid ==="
 echo "╚═══════════════════════════════════════════════════════════╝"

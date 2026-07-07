@@ -1,0 +1,47 @@
+{
+  "ruleSetId": "sttr-preflight",
+  "version": "2026.1",
+  "maturityTarget": "L2-pilot",
+  "reviewer": {
+    "geaccondeerdDoor": "__JURIST_NAAM__",
+    "rol": "__JURIST_ROL__",
+    "organisatie": "__ORGANISATIE__"
+  },
+  "review": {
+    "datum": "__REVIEW_DATUM_YYYY-MM-DD__",
+    "geldigTot": "__GELDIG_TOT_YYYY-MM-DD__",
+    "scope": "L2 pilot voor STTR/IMTR/RTR package metadata en JREM traceability preflight.",
+    "bronSnapshot": "__BRON_SNAPSHOT_ID_OF_DATUM__",
+    "verklaring": "__JURIDISCHE_VERKLARING_BINNEN_SCOPE__",
+    "beperkingen": [
+      "__BEPERKING_1__",
+      "__BEPERKING_2__"
+    ]
+  },
+  "sourceSnapshotRefs": [
+    {
+      "name": "STTR/IMTR standaarden",
+      "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    },
+    {
+      "name": "RTR aansluitcontext",
+      "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    }
+  ],
+  "scenarioAcceptance": [
+    {
+      "scenario": "actuele STTR/IMTR versie wordt als passend herkend",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "ontbrekende RTR-versie of JREM mapping blokkeert preflight",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "output blijft preflight en claimt geen volledige DSO/RTR-validatie",
+      "accepted": "__TRUE_FALSE__"
+    }
+  ]
+}

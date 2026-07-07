@@ -1,0 +1,52 @@
+{
+  "ruleSetId": "decentrale-regelcheck",
+  "version": "2026.1",
+  "maturityTarget": "L2-pilot",
+  "reviewer": {
+    "geaccondeerdDoor": "__JURIST_NAAM__",
+    "rol": "__JURIST_ROL__",
+    "organisatie": "__ORGANISATIE__"
+  },
+  "review": {
+    "datum": "__REVIEW_DATUM_YYYY-MM-DD__",
+    "geldigTot": "__GELDIG_TOT_YYYY-MM-DD__",
+    "scope": "L2 pilot voor postcode/product/activiteit preflight met CVDR/SRU, UPL en TOOI/ROO context.",
+    "bronSnapshot": "__BRON_SNAPSHOT_ID_OF_DATUM__",
+    "verklaring": "__JURIDISCHE_VERKLARING_BINNEN_SCOPE__",
+    "beperkingen": [
+      "__BEPERKING_1__",
+      "__BEPERKING_2__"
+    ]
+  },
+  "sourceSnapshotRefs": [
+    {
+      "name": "CVDR/SRU lokale regelgeving",
+      "url": "https://lokaleregelgeving.overheid.nl/",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    },
+    {
+      "name": "UPL uniforme productnamen",
+      "url": "https://standaarden.overheid.nl/upl",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    },
+    {
+      "name": "TOOI/ROO organisatiecontext",
+      "url": "https://standaarden.overheid.nl/tooi",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    }
+  ],
+  "scenarioAcceptance": [
+    {
+      "scenario": "postcode plus product levert relevante lokale regeling en bevoegd gezag op",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "open norm of meerdere matches forceert manualReviewRequired",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "geen match wordt niet als juridisch afwijzingsbesluit behandeld",
+      "accepted": "__TRUE_FALSE__"
+    }
+  ]
+}

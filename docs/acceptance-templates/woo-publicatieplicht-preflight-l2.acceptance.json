@@ -1,0 +1,52 @@
+{
+  "ruleSetId": "woo-publicatieplicht-preflight",
+  "version": "2026.1",
+  "maturityTarget": "L2-pilot",
+  "reviewer": {
+    "geaccondeerdDoor": "__JURIST_NAAM__",
+    "rol": "__JURIST_ROL__",
+    "organisatie": "__ORGANISATIE__"
+  },
+  "review": {
+    "datum": "__REVIEW_DATUM_YYYY-MM-DD__",
+    "geldigTot": "__GELDIG_TOT_YYYY-MM-DD__",
+    "scope": "L2 pilot voor Woo/DiWoo publicatiemetadata-preflight zonder documentbody-ingest.",
+    "bronSnapshot": "__BRON_SNAPSHOT_ID_OF_DATUM__",
+    "verklaring": "__JURIDISCHE_VERKLARING_BINNEN_SCOPE__",
+    "beperkingen": [
+      "__BEPERKING_1__",
+      "__BEPERKING_2__"
+    ]
+  },
+  "sourceSnapshotRefs": [
+    {
+      "name": "Woo-index publicatielocaties",
+      "url": "https://organisaties.overheid.nl/woo",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    },
+    {
+      "name": "DiWoo metadata verwachtingen",
+      "url": "https://standaarden.overheid.nl/diwoo",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    },
+    {
+      "name": "TOOI/ROO organisatiecontext",
+      "url": "https://standaarden.overheid.nl/tooi",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    }
+  ],
+  "scenarioAcceptance": [
+    {
+      "scenario": "organisatie en documenttype leiden naar concrete publicatielocatie",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "ontbrekende TOOI-code, publicatiedatum of bron-URL blokkeert preflight",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "preflight verwerkt metadata, niet documentinhoud of private informatie",
+      "accepted": "__TRUE_FALSE__"
+    }
+  ]
+}

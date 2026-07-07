@@ -14,6 +14,31 @@
 3. Is it correct that missing `tooiCode`, `publishedAt` or `sourceUrl` triggers manual review?
 4. Does the implementation correctly avoid ingesting document bodies or private content?
 
+## L2 Decision Checklist
+
+- Scope is limited to Woo/DiWoo metadata preflight.
+- Missing `tooiCode`, `publishedAt`, `sourceUrl`, organisation or documenttype remains blocking/manual review.
+- Source references must point to public Woo-index, DiWoo and TOOI/ROO context.
+- Implementation must not ingest document bodies, private content or non-public locations.
+
+## Source Snapshot
+
+- Woo-index public page snapshot: `2026-07-07`, `https://organisaties.overheid.nl/woo/zoeken?keyword=Amsterdam&maximumRecords=5&pageNumber=1&sortOrder=0`, live smoke count `5`.
+- DiWoo metadata expectation snapshot: to be confirmed in the filled acceptance template.
+- TOOI/ROO organisation context snapshot: to be confirmed in the filled acceptance template.
+
+## Scenario Acceptance
+
+- Organisation plus documenttype resolves to candidate publication location.
+- Missing required metadata blocks the preflight.
+- Preflight uses metadata only and does not process document bodies.
+
+## L2 Limitations
+
+- L2 covers publication metadata checks only.
+- The preflight is not an information-law decision and does not approve document content.
+- No L2 promotion is allowed until the acceptance template is filled with real jurist metadata.
+
 ## Required Acceptance Metadata
 
 - `geaccondeerdDoor`
