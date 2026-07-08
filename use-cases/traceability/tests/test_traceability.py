@@ -33,3 +33,38 @@ class TestJREMValidation:
     def test_source_refs(self):
         inst = json.load(open(JREM_DIR / "traceability-2025.1.json"))
         for r in inst["rules"]: assert len(r["sourceRefs"]) >= 1
+
+class TestEvidenceEnvelope:
+    def test_matrix_entry_has_evidence_envelope(self):
+        sys.path.insert(0, str(Path(__file__).parent.parent / "lib"))
+        from traceability_engine import build_traceability_matrix
+        matrix = build_traceability_matrix(Path(__file__).parent.parent.parent.parent)
+        entry = next(e for e in matrix["matrix"] if e["domain"] == "traceability")
+        envelope = entry["evidenceEnvelope"]
+        assert envelope["envelopeId"].startswith("sha256:")
+        assert envelope["ruleId"] == entry["ruleId"]
+        assert envelope["api"]["endpoint"] == entry["apiEndpoint"]
+        assert envelope["acceptance"]["acceptatieType"] in {"draft", "full", "update"}
+
+    def test_evidence_envelope_id_is_stable(self):
+        sys.path.insert(0, str(Path(__file__).parent.parent / "lib"))
+        from traceability_engine import build_traceability_matrix
+        base = Path(__file__).parent.parent.parent.parent
+        first = build_traceability_matrix(base)["matrix"][0]["evidenceEnvelope"]["envelopeId"]
+        second = build_traceability_matrix(base)["matrix"][0]["evidenceEnvelope"]["envelopeId"]
+        assert first == second
+
+    def test_explicit_rule_test_mapping(self, tmp_path):
+        sys.path.insert(0, str(Path(__file__).parent.parent / "lib"))
+        from traceability_engine import _test_refs_for_rule
+        test_file = tmp_path / "use-cases" / "sample" / "tests" / "test_sample.py"
+        test_file.parent.mkdir(parents=True)
+        test_file.write_text("""
+def test_rule_is_applied():
+    assert "RULE-001"
+
+def test_other_rule():
+    assert "RULE-002"
+""")
+        refs = _test_refs_for_rule(tmp_path, "sample", "RULE-001")
+        assert refs == ["test_rule_is_applied"]

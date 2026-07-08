@@ -1,7 +1,97 @@
 """Traceability Engine — maps wet → RegelSpraak → JREM → API → database → test → audit."""
+import hashlib
 import json
 from pathlib import Path
-from typing import Optional
+
+
+def _stable_hash(data: dict) -> str:
+    payload = json.dumps(data, sort_keys=True, separators=(",", ":"), ensure_ascii=False)
+    return "sha256:" + hashlib.sha256(payload.encode()).hexdigest()
+
+
+def _test_refs_for_rule(base_dir: Path, domain: str, rule_id: str) -> list[str]:
+    test_file = base_dir / "use-cases" / domain / "tests" / f"test_{domain.replace('-', '_')}.py"
+    if not test_file.exists():
+        return []
+
+    refs = []
+    lines = test_file.read_text().splitlines()
+    for i, line in enumerate(lines):
+        stripped = line.strip()
+        if not stripped.startswith("def test_"):
+            continue
+        context = "\n".join(lines[i:i + 20])
+        if rule_id in context:
+            refs.append(stripped.split("def ", 1)[1].split("(", 1)[0])
+    return refs
+
+
+def _acceptance_status(jrem: dict) -> dict:
+    metadata = jrem.get("metadata", {})
+    accordering = metadata.get("juristAccordering")
+    acceptatie_type = metadata.get("acceptatieType", "draft")
+    if accordering and acceptatie_type != "draft":
+        jurist_status = "accepted"
+    elif acceptatie_type == "draft":
+        jurist_status = "missing"
+    else:
+        jurist_status = "review-required"
+    return {
+        "acceptatieType": acceptatie_type,
+        "juristStatus": jurist_status,
+    }
+
+
+def build_evidence_envelope(
+    *,
+    base_dir: Path,
+    domain: str,
+    rule: dict,
+    jrem: dict,
+    source_refs: list[dict],
+    api_endpoint: str,
+    port: int,
+    db_constraint: str,
+    test_reference: str,
+) -> dict:
+    test_refs = _test_refs_for_rule(base_dir, domain, rule["ruleId"])
+    implementation = {
+        "constraint": {
+            "sql": db_constraint if db_constraint.startswith("CHECK ") else None,
+            "status": "generated" if db_constraint.startswith("CHECK ") else "not-applicable",
+        },
+        "testFile": test_reference,
+        "tests": test_refs,
+    }
+    identity = {
+        "domain": domain,
+        "ruleSetId": jrem.get("ruleSetId", domain),
+        "ruleId": rule["ruleId"],
+        "jremVersion": jrem.get("version", ""),
+        "sourceRefs": source_refs,
+        "apiEndpoint": api_endpoint,
+        "dbConstraint": db_constraint,
+        "testReference": test_reference,
+    }
+    return {
+        "envelopeId": _stable_hash(identity),
+        "domain": domain,
+        "ruleSetId": jrem.get("ruleSetId", domain),
+        "ruleId": rule["ruleId"],
+        "jremVersion": jrem.get("version", ""),
+        "maturityLevel": jrem.get("maturityLevel", ""),
+        "sourceRefs": source_refs,
+        "api": {
+            "endpoint": api_endpoint,
+            "port": port,
+        },
+        "decision": {
+            "outcome": rule.get("outcome", {}),
+            "manualReviewRequired": rule.get("outcome", {}).get("manualReviewRequired", False),
+        },
+        "implementation": implementation,
+        "acceptance": _acceptance_status(jrem),
+    }
 
 def build_traceability_matrix(base_dir: Path) -> dict:
     """Build a full traceability matrix across all use cases."""
@@ -40,15 +130,31 @@ def build_traceability_matrix(base_dir: Path) -> dict:
                             parts.append(f"{field} {sql_op} {val}")
                 db_constraint = f"CHECK ({' AND '.join(parts)})" if parts else "-- no conditions"
                 
-                matrix.append({
+                domain = d["domain"]
+                port = port_map.get(domain, 8500)
+                api_endpoint = f"POST /v1/{domain}/calculate"
+                test_reference = f"tests/test_{domain.replace('-','_')}.py"
+                entry = {
                     "ruleId": rule["ruleId"], "ruleName": rule.get("name",""), "domain": d["domain"],
-                    "port": port_map.get(d["domain"], 8500), "wetBron": sources, "conditions": conditions,
+                    "port": port, "wetBron": sources, "conditions": conditions,
                     "outcome": rule.get("outcome",{}).get("category",""), "jremFile": jf.name,
                     "jremVersion": jrem.get("version",""), "legalStatus": rule.get("legalStatus",""),
-                    "dbConstraint": db_constraint, "apiEndpoint": f"POST /v1/{d['domain']}/calculate",
-                    "testReference": f"tests/test_{d['domain'].replace('-','_')}.py",
+                    "dbConstraint": db_constraint, "apiEndpoint": api_endpoint,
+                    "testReference": test_reference,
                     "auditTrail": "GET /v1/audit/{calculationId}",
-                })
+                }
+                entry["evidenceEnvelope"] = build_evidence_envelope(
+                    base_dir=base_dir,
+                    domain=domain,
+                    rule=rule,
+                    jrem=jrem,
+                    source_refs=sources,
+                    api_endpoint=api_endpoint,
+                    port=port,
+                    db_constraint=db_constraint,
+                    test_reference=test_reference,
+                )
+                matrix.append(entry)
     return {"matrix": matrix, "totalRules": len(matrix), "totalDomains": len(domains)}
 
 def get_impact_analysis(base_dir: Path, changed_source: str) -> dict:
