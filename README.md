@@ -2,8 +2,8 @@
 
 [![JuraRegel CI](https://github.com/djimit/juraregel/actions/workflows/juraregel-ci.yml/badge.svg)](https://github.com/djimit/juraregel/actions/workflows/juraregel-ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Use Cases](https://img.shields.io/badge/Use%20Cases-32%20%286%20L1%2C%2026%20L0%29-blue)](https://github.com/djimit/juraregel)
-[![Tests](https://img.shields.io/badge/Tests-500%2B-green)](https://github.com/djimit/juraregel)
+[![Rule Sets](https://img.shields.io/badge/Rule%20Sets-33%20%287%20L1%2C%2026%20L0%29-blue)](https://github.com/djimit/juraregel)
+[![Tests](https://img.shields.io/badge/Tests-semantic%20gates-green)](https://github.com/djimit/juraregel)
 [![Regels](https://img.shields.io/badge/JREM%20Regels-690%20%28PoC%29-purple)](https://github.com/djimit/juraregel)
 [![Agentic](https://img.shields.io/badge/Agentic-Platform-orange)](https://github.com/djimit/juraregel)
 [![MCP](https://img.shields.io/badge/MCP-12%20tools%20%2B%203%20resources%20%2B%203%20prompts-teal)](https://github.com/djimit/juraregel)
@@ -39,15 +39,24 @@ JuraRegel gebruikt vier maturity-niveaus per use case:
 | L2 | Pilot | Onafhankelijke juridische review, evidence model, auditlog | CI faalt bij self-approval |
 | L3 | Production | Legal sign-off, required checks, threat model, SBOM, OAuth2 | Volledige assurance pipeline |
 
-Huidige status: de meeste use cases zijn L1 (PoC). Griffierecht en publicatie zijn het dichtst bij L2.
+Huidige status: 26 exports zijn L0 en 7 exports L1. Geen regelset is L2 of L3.
+
+### Uitvoerbaarheidscontract
+
+Alle JREM-sets zijn doorzoekbare catalogi. Alleen `griffierecht`, `toeslagen`,
+`omgevingswet`, `basisregistraties` en `participatiewet` hebben een bewezen
+`calculate`-pad. Andere `/calculate`-routes antwoorden `409 catalog_only` totdat
+hun domeinspecifieke inputmodel, scenario-oracles en onafhankelijke review bestaan.
+BIO2, NORA, NCSC en standaardenendpoints zijn inventarisaties; zonder aangeleverde
+evidence rapporteren zij geen compliance-oordeel.
 
 ## Wat JuraRegel doet
 
 - **Pseudonimiseringsrichtlijn Engine** — classificeert persoonsgegevens in uitspraken conform de richtlijn (particulier → pseudonimiseer, professional/organisatie/overheid → niet pseudonimiseer)
 - **JREM** — Judicial Rule Exchange Model, versioned JSON Schema standaard (v1.0.0 → v1.1.0) voor juridische regels
-- **Rule APIs** — stateless, idempotente APIs met uitleg, bronverwijzingen en audit trail
+- **Rule APIs** — vijf uitvoerbare domeinen; overige domeinen zijn expliciet catalog-only
 - **MCP Server** — 12 tools + 3 resources + 3 prompts voor LLM-agents (Claude, GPT, lokale LLMs)
-- **Knowledge Base** — 690 regels semantisch doorzoekbaar (Qdrant vector store + SQLite FTS5)
+- **Knowledge Base** — 690 regels doorzoekbaar met SQLite FTS5; vector search is optioneel en evaluatie-pending
 - **BDD Tests** — Gherkin scenarios voor legal team acceptatie (pytest-bdd)
 - **BWB Harvester** — automatische wetwijziging-detectie via BWB API
 - **CI/CD Gates** — 18+ gates: per-use-case (14), JKB (5), extraction (3), schema versioning, BDD, harvester health
@@ -64,7 +73,8 @@ De engine (V4.2) classificeert gedetecteerde persoonsgegevens in rechterlijke ui
 | Rechtspersoon | Niet pseudonimiseren | Adres van B.V. → laten staan |
 | Overheid | Niet pseudonimiseren | Adres van gemeente → laten staan |
 
-**Nauwkeurigheid**: Gevalideerd op dataset van 25.127 uitspraken (48.702 detecties). Geen onafhankelijke gouden standaardvalidatie — resultaten zijn indicatief, niet juridisch bindend.
+**Evaluatiestatus**: er is nog geen onafhankelijk geannoteerde gouden standaard.
+Resultaten zijn indicatief, niet juridisch bindend; zie [het AI-evaluatiecontract](docs/ai-evaluation-contract.md).
 
 De engine implementeert de uitzonderingen uit de pseudonimiseringsrichtlijn:
 - Professionals bij de procedure (advocaten, notarissen, deurwaarders) → niet pseudonimiseren
@@ -78,14 +88,14 @@ De engine implementeert de uitzonderingen uit de pseudonimiseringsrichtlijn:
 |---|---|---|---|
 | Prijs | €0 (maar uren werk) | €10K-€100K/jaar | **€0 (open-source)** |
 | Bronverwijzing per regel | Handmatig | Soms | **Altijd (JREM sourceRef)** |
-| Testbaarheid | Geen | Beperkt | **207 tests + 14 CI gates** |
+| Testbaarheid | Geen | Beperkt | **Executable scenario- en semantiekgates** |
 | Uitleg aan burgers | Niet mogelijk | Niet mogelijk | **Redeneerstappen + bronverwijzing** |
 | Versiebeheer | Excel/version control | Vendor-locked | **Git + JREM versioning** |
 | Developer SDK | Niet beschikbaar | Vendor-locked | **TypeScript SDK (MIT)** |
 | Zelf hosten | n.v.t. | Cloud-only | **Docker compose (localhost)** |
-| Rule Maturity Model | Niet | Niet | **L1-L4 classificatie** |
+| Rule Maturity Model | Niet | Niet | **L0-L3 classificatie** |
 | NORA compliance | Niet | Soms | **NORA matrix (15 principes)** |
-| Pseudonimisering | Handmatig | Niet | **V4.2 engine (hoog op 25K)** |
+| Pseudonimisering | Handmatig | Niet | **V4.2 pilot, onafhankelijke evaluatie pending** |
 
 ## Use Case: Griffierecht
 
@@ -99,7 +109,7 @@ De engine implementeert de uitzonderingen uit de pseudonimiseringsrichtlijn:
 | Financieel beheer | Geen audit trail van griffierecht-berekeningen | Elke berekening heeft inputHash, rulesetHash, timestamp |
 
 - 18 JREM regels voor civiele dagvaardingszaken (kanton + handel)
-- 57 tests — 14 CI gates — Rule API op `localhost:8490`
+- Executable scenario-, bron- en semantiekgates — Rule API op `localhost:8490`
 - Juridische context in elke response (wet, BWBR-id, accordering)
 
 ### Voorbeeld
@@ -131,7 +141,7 @@ curl -X POST http://127.0.0.1:8490/v1/griffierecht/calculate \
 
 | Rol | Probleem | Oplossing |
 |---|---|---|
-| CISO | 167 BIO2 maatregelen handmatig bijhouden in spreadsheet — foutgevoelig en verouderd | Rule API checkt per maatregel: compliant ja/nee + ISO referentie |
+| CISO | 167 BIO2 maatregelen handmatig bijhouden | Evidence-rapport groepeert aangeleverde beoordelingen per maatregel |
 | Bestuurder | Onduidelijk welke maatregelen nog open staan | Compliance rapport: per categorie score + totaal % compliant |
 | CIP | Geen gestandaardiseerd controle-instrument voor alle entiteiten | JuraRegel als open-source compliance tool — één standaard |
 | ENSIA-verantwoordelijke | Handmatige rapportage is tijdrovend en inconsistent | `GET /v1/bio2/rapport/{orgId}` genereert ENSIA-gealigned rapport |
@@ -143,7 +153,7 @@ De [BIO2](https://www.bio-overheid.nl/category/producten/bio) is het normenkader
 - 4 categorieën: organisatorisch (72), technologisch (66), fysiek (17), mensgericht (12)
 - Elke maatregel gekoppeld aan ISO 27002 clause (bronverwijzing)
 - Rule API op `localhost:8494` — ENSIA-gealigned compliance rapport
-- 18 tests — 14 CI gates
+- Catalogus + evidence store; geen compliance-oordeel zonder evidence
 
 ### Voorbeeld
 
@@ -161,7 +171,7 @@ curl http://127.0.0.1:8494/v1/bio2/rapport/gemeente-amsterdam
 
 | Rol | Probleem | Oplossing |
 |---|---|---|
-| Architect | 22 standaarden handmatig bijhouden — verouderd | Rule API checkt per standaard: compliant ja/nee |
+| Architect | 22 standaarden handmatig bijhouden | Doorzoekbare, versieerbare standaardencatalogus |
 | CIO | Onduidelijk welke verplichte standaarden ontbreken | Compliance rapport per categorie |
 | Forum Standaardisatie | Geen gestandaardiseerd controle-instrument | JuraRegel als open-source compliance tool |
 | Monitor-verantwoordelijke | Handmatige rapportage inconsistent | `GET /v1/fs/rapport/{orgId}` — Monitor aligned |
@@ -171,7 +181,7 @@ De [Forum Standaardisatie](https://www.forumstandaardisatie.nl/open-standaarden/
 - **22 standaarden** (16 verplicht + 6 streefbeeld) in 4 categorieën
 - Interoperabiliteit (OAuth, SAML, OData, StUF, ebMS), Veiligheid (DKIM, DMARC, SPF, TLS, DNSSEC), Document (PDF, OOXML, ODF, eFactuur), Identiteit (eIDAS, iGOV)
 - Rule API op `localhost:8495` met standaarden listing en Monitor aligned rapport
-- 15 tests — 14 CI gates
+- Catalogusendpoint; geen compliance-oordeel zonder evidence
 
 ### Voorbeeld
 
@@ -189,7 +199,7 @@ curl http://127.0.0.1:8495/v1/fs/rapport/ministerie-bzk
 
 | Rol | Probleem | Oplossing |
 |---|---|---|
-| API architect | API Design Rules handmatig per endpoint | Rule API checkt per regel: compliant ja/nee |
+| API architect | API Design Rules handmatig per endpoint | Doorzoekbare regelcatalogus met bronverwijzingen |
 | Security engineer | OAuth/OIDC profiel incompleet | Check NL GOV Assurance Profile OAuth 2.0 |
 | Event architect | CloudEvents niet conforme | Check NL GOV Profile for CloudEvents |
 | Integratie architect | Digikoppeling protocol onduidelijk | Check WUS/ebMS/certificaat regels |
@@ -200,7 +210,7 @@ curl http://127.0.0.1:8495/v1/fs/rapport/ministerie-bzk
 - **Authenticatie** (4): OAuth 2.0 NL GOV Assurance Profile, eIDAS SAML, OpenID Connect, JWT
 - **Events** (3): CloudEvents structured mode, extensies
 - **Digikoppeling** (3): WUS 3.0, ebMS 3.0, PKIoverheid certificaten
-- Rule API op `localhost:8496` — 16 tests — 14 CI gates
+- Catalogusendpoint op `localhost:8496`; `calculate` is geblokkeerd
 
 ### Voorbeeld
 
@@ -218,7 +228,7 @@ curl http://127.0.0.1:8496/v1/os/rapport/ministerie-bzk
 
 | Rol | Probleem | Oplossing |
 |---|---|---|
-| Enterprise architect | NORA compliance handmatig per principe | Rule API checkt 15 NORA principes |
+| Enterprise architect | NORA-principes handmatig beheren | Catalogus en matrix van 15 principes |
 | CIO | Onduidelijk welke principes open staan | NORA compliance matrix met use case mapping |
 | TOGAF architect | Principes niet gekoppeld aan implementatie | Matrix mapped principes → JuraRegel use cases |
 
@@ -253,7 +263,7 @@ NORA is de **overkoepelende architectuurlaag** die alle use cases verbindt. 15 p
 
 | Rol | Probleem | Oplossing |
 |---|---|---|
-| Security engineer | 32 NCSC richtlijnen handmatig | Rule API checkt per richtlijn: compliant ja/nee |
+| Security engineer | 32 NCSC richtlijnen handmatig | Catalogus van richtlijnen; beoordeling vereist externe evidence |
 | CISO | Onbekend wat open staat | Compliance rapport per categorie (TLS, webapp, basisprincipes) |
 | Web developer | Webapp richtlijnen onduidelijk | Check input validatie, output encoding, CSRF, CSP |
 | SRE-er | TLS richtlijnen niet systematisch | Check TLS 1.2+, cipher suites, HSTS, cert pinning |
@@ -274,7 +284,7 @@ curl http://127.0.0.1:8500/v1/ncsc/rapport/gemeente-amsterdam
 
 ### Docker Compose
 ```bash
-docker compose up  # Start alle 8 Rule APIs
+docker compose up  # Start griffierecht en publicatie
 ```
 
 ### CLI: Nieuwe Use Case Scaffolden
@@ -293,7 +303,7 @@ jobs:
 ```
 
 ### Dashboard
-Open `dashboard/index.html` voor een visueel overzicht van alle 10 use cases met poorten, regels en status.
+Open `dashboard/index.html` voor een historisch catalogusoverzicht; alleen de in het uitvoerbaarheidscontract genoemde diensten mogen als rekenservice worden behandeld.
 
 ### Contributing
 Zie [CONTRIBUTING.md](CONTRIBUTING.md) voor de use case template en bijdrage richtlijnen.
@@ -305,17 +315,17 @@ Zie [docs/nora-compliance-matrix.md](docs/nora-compliance-matrix.md) voor de Mer
 
 | Rol | Wat JuraRegel biedt | Start hier |
 |---|---|---|
-| AI Engineer | EU AI Act compliance (12 regels) | [EU AI Act use case](docs/eu-ai-act-use-case.md) |
+| AI Engineer | EU AI Act regelcatalogus | [EU AI Act use case](docs/eu-ai-act-use-case.md) |
 | Data Engineer | AVG data minimisation, bewaartermijnen | [AVG use case](docs/avg-gdpr-use-case.md) |
 | Software Ontwikkelaar | TypeScript SDK, CLI, OpenAPI, code examples | [SDK README](sdk/typescript/README.md), [examples](docs/examples/) |
 | Solution Architect | NORA matrix, API Design Rules, ADR template | [NORA use case](docs/nora-use-case.md), [ADR template](docs/templates/adr-template.md) |
 | Security Expert | BIO2 (162), NCSC (32), threat model template | [BIO2](docs/bio2-use-case.md), [NCSC](docs/ncsc-use-case.md), [threat model](docs/templates/threat-model-template.md) |
-| DevOps Engineer | Docker compose, Helm chart, GitHub Actions | [Docker](#docker), [Helm](helm/), [CI](.github/workflows/) |
+| DevOps Engineer | Docker compose, GitHub Actions | [Docker](#docker), [CI](.github/workflows/) |
 | SRE | Health endpoints, Grafana dashboard, runbook | [Grafana](docs/sre/grafana-dashboard.json), [runbook](docs/sre/runbook-template.md) |
-| Tester | 451+ tests (unit + BDD + MCP), test templates | [CONTRIBUTING](CONTRIBUTING.md), [user story template](docs/templates/user-story-template.md) |
+| Tester | Scenario-, bron-, compile-, API- en MCP-gates | [CONTRIBUTING](CONTRIBUTING.md), [user story template](docs/templates/user-story-template.md) |
 | Product Owner | Compliance rapporten, ROI template, comparison | [Comparison table](#waarom-juraregel), [user story template](docs/templates/user-story-template.md) |
 | Enterprise Architect | NORA compliance matrix, TOGAF mapping, C4 | [NORA matrix](docs/nora-compliance-matrix.md), [ADR template](docs/templates/adr-template.md) |
-| Compliance Officer | Multi-framework compliance, ENSIA rapport | [Executive dashboard](dashboard/executive.html), [Postman](docs/juraregel-postman-collection.json) |
+| Compliance Officer | Frameworkinventaris en evidence-gaten | [Executive dashboard](dashboard/executive.html), [Postman](docs/juraregel-postman-collection.json) |
 | CISO | BIO2 + NCSC + Cybersecuritybeeld 2025 | [Executive dashboard](dashboard/executive.html), [NCSC](docs/ncsc-use-case.md) |
 | Jurist | RegelSpraak CNL, bronverwijzingen, acceptatie | [Rule Extraction Sprint](docs/rule-extraction-sprint.md), [maturity model](docs/maturity-model.md) |
 | Privacy Officer | AVG/GDPR regels, DPIA template | [AVG use case](docs/avg-gdpr-use-case.md), [DPIA template](docs/templates/dpia-template.md) |
@@ -335,26 +345,27 @@ Zie [docs/nora-compliance-matrix.md](docs/nora-compliance-matrix.md) voor de Mer
 | Code examples | [docs/examples/](docs/examples/) — Python, Java, C#, Go, TypeScript | Ontwikkelaars |
 | Executive dashboard | [dashboard/executive.html](dashboard/executive.html) | C-level |
 | Compliance matrix | [shared/compliance_matrix.py](shared/compliance_matrix.py) | Compliance officers |
-| Helm chart | [helm/juraregel/](helm/juraregel/) | DevOps |
 
 ## Installatie
 
 ### TypeScript SDK
 ```bash
-npm install @juraregel/sdk
+npm install --prefix sdk/typescript
+npm --prefix sdk/typescript run build
 ```
+De SDK is lokaal en exporteert alleen de uitvoerbare `GriffierechtClient`.
 
 ### CLI
 ```bash
-npx juraregel init avg 8500    # Scaffold nieuwe use case
-npx juraregel check             # Run CI gates
-npx juraregel serve griffierecht # Start API
-npx juraregel validate use-cases/griffierecht/jrem/exports/griffierecht-civiel-2026.1.json
+npm run init -- avg 8500       # Lokale repo-tool; het npm-package wordt niet gepubliceerd
+npm run check                  # Run CI gates
+npm run serve -- griffierecht # Start API
+node bin/juraregel.mjs validate use-cases/griffierecht/jrem/exports/griffierecht-civiel-2026.1.json
 ```
 
 ### Docker
 ```bash
-docker compose up  # Start alle 10 Rule APIs (ports 8490-8499)
+docker compose up  # Start griffierecht :8490 en publicatie :8493
 ```
 
 ### Dashboard
@@ -443,12 +454,9 @@ ci/
 
 | Bestand | Beschrijving |
 |---|---|
-| `use-cases/publicatie/lib/richtlijn_engine.py` | V1: Basis classificatie (95% target) |
-| `use-cases/publicatie/lib/richtlijn_engine_v2.py` | V2: Sentence-level + confidence scoring (99% target) |
-| `use-cases/publicatie/lib/richtlijn_engine_v3.py` | V3: Scanner-level fixes (99.995% target) |
-| `use-cases/publicatie/lib/richtlijn_engine_v4.py` | V4.2: Final — `\bOM\b` fix, particulier confirm, woont-aan override (hoog op 25K) |
+| `use-cases/publicatie/lib/richtlijn_engine_v4.py` | Enige actuele engine; onafhankelijke evaluatie pending |
 | `use-cases/publicatie/regelspraak/pseudonimiseringsrichtlijn.rspraak` | 17 RegelSpraak regels conform richtlijn |
-| `use-cases/publicatie/tests/test_richtlijn_engine.py` | 16 tests voor de engine |
+| `use-cases/publicatie/tests/test_richtlijn_engine.py` | Gerichte regressietests voor de actuele engine |
 
 ## Installatie
 
@@ -489,7 +497,7 @@ Zie `jrem-open-source/` voor het standalone JREM schema, validator en examples.
 | Metriek | Waarde |
 |---|---|
 | Use cases | 4 (griffierecht, procesreglement, classificatie, publicatie) |
-| Tests | 451+ (unit + BDD + MCP) |
+| Tests | Semantische scenario-, bron-, API-, BDD- en MCP-gates |
 | CI gates | 14 per use case |
 | JREM regels | 46 |
 | Pseudonimisering engine | V4.2 — hoog op 25.127 uitspraken |

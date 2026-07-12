@@ -1,0 +1,83 @@
+{
+  "ruleSetId": "eu-ai-act",
+  "version": "2025.1",
+  "maturityTarget": "L2-pilot",
+  "reviewer": {
+    "geaccondeerdDoor": "__JURIST_NAAM__",
+    "rol": "__JURIST_ROL__",
+    "organisatie": "__ORGANISATIE__"
+  },
+  "review": {
+    "datum": "__REVIEW_DATUM_YYYY-MM-DD__",
+    "geldigTot": "__GELDIG_TOT_YYYY-MM-DD__",
+    "scope": "L2 pilot voor EU AI Act - risicoclassificatie, conformity assessment, transparantie en fundamentele rechten.",
+    "bronSnapshot": "__BRON_SNAPSHOT_ID_OF_DATUM__",
+    "verklaring": "__JURIDISCHE_VERKLARING_BINNEN_SCOPE__",
+    "beperkingen": [
+      "__BEPERKING_1__",
+      "__BEPERKING_2__"
+    ]
+  },
+  "sourceSnapshotRefs": [
+    {
+      "name": "EU AI Act (Verordening (EU) 2024/1689)",
+      "url": "https://wetten.overheid.nl/BWBR0048300",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    },
+    {
+      "name": "eu-ai-act JREM export",
+      "url": "use-cases/eu-ai-act/jrem/exports/eu-ai-act-2025.1.json",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    }
+  ],
+  "scenarioAcceptance": [
+    {
+      "scenario": "AIA-SC-AIA-001: AI-systeem classificatie - verboden",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "AIA-SC-AIA-002: AI-systeem classificatie - hoog-risico",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "AIA-SC-AIA-003: AI-systeem classificatie - beperkt-risico",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "AIA-SC-AIA-004: AI-systeem classificatie - minimaal-risico",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "AIA-SC-AIA-005: Risicobeheersysteem verplicht",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "AIA-SC-AIA-006: Data governance verplicht",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "AIA-SC-AIA-007: Technische documentatie verplicht",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "AIA-SC-AIA-008: Logboek bijhouden verplicht",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "AIA-SC-AIA-009: Transparantie tegenover gebruikers",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "AIA-SC-AIA-010: Deepfake transparantie",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "AIA-SC-AIA-011: Fundamentele rechten impactbeoordeling",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "AIA-SC-AIA-012: Conformity assessment verplicht",
+      "accepted": "__TRUE_FALSE__"
+    }
+  ]
+}

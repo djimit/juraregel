@@ -8,14 +8,14 @@ export class JuraregelClient {
     return r.json();
   }
 
-  async calculate(domain: string, request: any): Promise<any> {
+  protected async calculateDomain<T>(domain: string, request: unknown): Promise<T> {
     const r = await fetch(`${this.baseUrl}/v1/${domain}/calculate`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(request),
     });
     if (!r.ok) throw new Error(`API error: ${r.status} ${r.statusText}`);
-    return r.json();
+    return r.json() as Promise<T>;
   }
 
   async getAudit(calculationId: string): Promise<any> {

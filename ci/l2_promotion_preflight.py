@@ -26,6 +26,26 @@ TARGETS = [
         "jrem": "use-cases/sttr-preflight/jrem/exports/sttr-preflight-2026.1.json",
         "template": "docs/acceptance-templates/sttr-preflight-l2.acceptance.json",
     },
+    {
+        "ruleSetId": "procesreglement",
+        "jrem": "use-cases/procesreglement/jrem/exports/procesreglement-civiel-2026.1.json",
+        "template": "docs/acceptance-templates/procesreglement-l2.acceptance.json",
+    },
+    {
+        "ruleSetId": "classificatie",
+        "jrem": "use-cases/classificatie/jrem/exports/classificatie-zaak-intake-2026.1.json",
+        "template": "docs/acceptance-templates/classificatie-l2.acceptance.json",
+    },
+    {
+        "ruleSetId": "eu-ai-act",
+        "jrem": "use-cases/eu-ai-act/jrem/exports/eu-ai-act-2025.1.json",
+        "template": "docs/acceptance-templates/eu-ai-act-l2.acceptance.json",
+    },
+    {
+        "ruleSetId": "avg-gdpr",
+        "jrem": "use-cases/avg-gdpr/jrem/exports/avg-gdpr-2025.1.json",
+        "template": "docs/acceptance-templates/avg-gdpr-l2.acceptance.json",
+    },
 ]
 
 REQUIRED_TEMPLATE_FIELDS = (

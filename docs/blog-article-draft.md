@@ -1,5 +1,9 @@
 # JuraRegel: Nederlandse overheidsregels als code — niet als PDF
 
+> **Archiefconcept — niet actueel.** Dit document bevat historische aantallen,
+> deploymentclaims en intern gemeten ML-resultaten. Gebruik de repository-README
+> als actuele capability- en maturitybron.
+
 *Een engineer-to-engineer verslag van het bouwen van een open-source Legal RuleOps Platform. Wat werkt, wat niet (nog), en hoe je het gebruikt.*
 
 ---

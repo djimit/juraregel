@@ -121,7 +121,8 @@ python3 tools/jkb-builder.py
 python3 tools/jkb-keyword.py index
 
 # Vector store indexeren (vereist embedding API)
-python3 tools/jkb-vectorstore.py index
+python3 tools/jkb-builder.py
+python3 tools/jkb_vectorstore.py index
 
 # JREM exports migreren naar v1.1.0
 python3 tools/jrem-migrate.py

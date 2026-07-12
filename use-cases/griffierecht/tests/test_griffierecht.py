@@ -23,7 +23,7 @@ sys.path.insert(0, str(SHARED))
 from api_base import create_app, load_jrem as _load_jrem, list_versions as _list_versions
 
 JREM_DIR = Path(__file__).parent.parent / "jrem" / "exports"
-app = create_app("griffierecht", JREM_DIR, 8490)
+app = create_app("griffierecht", JREM_DIR, 8490, calculate_capability=True)
 
 def load_jrem(version):
     return _load_jrem(JREM_DIR, version)

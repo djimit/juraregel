@@ -26,9 +26,17 @@ jobs:
         with:
           node-version: 20
       - name: Install deps
-        run: pip install fastapi uvicorn pydantic jsonschema pytest httpx pyyaml pytest-bdd
+        run: pip install -r requirements.txt
       - name: Schema check
         run: python3 ci/check-schema.py
+      - name: Compile all Python
+        run: python3 -m compileall -q shared sources tools mcp-server use-cases ci features
+      - name: Rule semantics
+        run: python3 ci/validate-rule-semantics.py
+      - name: Source quality
+        run: python3 ci/source_quality.py
+      - name: OpenAPI from applications
+        run: python3 tools/generate_openapi.py
       - name: Run unit tests
         run: python3 -m pytest use-cases/*/tests/ -q --no-header
       - name: Run CI helper tests
@@ -43,6 +51,8 @@ jobs:
         run: python3 -m pytest features/ -q --no-header
       - name: CLI check
         run: node bin/juraregel.mjs --help
+      - name: TypeScript SDK check
+        run: npm ci --prefix sdk/typescript && npm --prefix sdk/typescript run check
 
   lint:
     runs-on: ubuntu-latest
@@ -68,6 +78,14 @@ jobs:
         run: pip install -r requirements.txt
       - name: Schema check
         run: python3 ci/check-schema.py
+      - name: Compile all Python
+        run: python3 -m compileall -q shared sources tools mcp-server use-cases ci features
+      - name: Rule semantics
+        run: python3 ci/validate-rule-semantics.py
+      - name: Source quality
+        run: python3 ci/source_quality.py
+      - name: OpenAPI from applications
+        run: python3 tools/generate_openapi.py
       - name: Strict JREM validation
         run: python3 ci/validate-jrem.py
       - name: Legal review gate (strict)

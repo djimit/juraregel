@@ -1,99 +1,11 @@
-version: "3.9"
 services:
   griffierecht:
     build: .
-    command: python use-cases/griffierecht/api/app.py
     ports: ["8490:8490"]
-  procesreglement:
-    build: .
-    command: python use-cases/procesreglement/api/app.py
-    ports: ["8491:8491"]
-  classificatie:
-    build: .
-    command: python use-cases/classificatie/api/app.py
-    ports: ["8492:8492"]
+
   publicatie:
     build: .
-    command: python use-cases/publicatie/api/app.py
+    command: ["uvicorn", "app:app", "--app-dir", "use-cases/publicatie/api", "--host", "0.0.0.0", "--port", "8493"]
     ports: ["8493:8493"]
-  bio2:
-    build: .
-    command: python use-cases/bio2/api/app.py
-    ports: ["8494:8494"]
-  forumstandaardisatie:
-    build: .
-    command: python use-cases/forumstandaardisatie/api/app.py
-    ports: ["8495:8495"]
-  overheidsstandaarden:
-    build: .
-    command: python use-cases/overheidsstandaarden/api/app.py
-    ports: ["8496:8496"]
-  nora:
-    build: .
-    command: python use-cases/nora/api/app.py
-    ports: ["8497:8497"]
-  eu-ai-act:
-    build: .
-    command: python use-cases/eu-ai-act/api/app.py
-    ports: ["8498:8498"]
-  avg-gdpr:
-    build: .
-    command: python use-cases/avg-gdpr/api/app.py
-    ports: ["8499:8499"]
-  ncsc:
-    build: .
-    command: python use-cases/ncsc/api/app.py
-    ports: ["8500:8500"]
-
-  nis2:
-    build: .
-    command: python use-cases/nis2/api/app.py
-    ports: ["8501:8501"]
-  btw-tarieven:
-    build: .
-    command: python use-cases/btw-tarieven/api/app.py
-    ports: ["8502:8502"]
-  ww-uitkering:
-    build: .
-    command: python use-cases/ww-uitkering/api/app.py
-    ports: ["8503:8503"]
-  ind-verblijfsregels:
-    build: .
-    command: python use-cases/ind-verblijfsregels/api/app.py
-    ports: ["8504:8504"]
-  wmo:
-    build: .
-    command: python use-cases/wmo/api/app.py
-    ports: ["8505:8505"]
-  gegevensdelingsbeleid:
-    build: .
-    command: python use-cases/gegevensdelingsbeleid/api/app.py
-    ports: ["8506:8506"]
-  dpia-model:
-    build: .
-    command: python use-cases/dpia-model/api/app.py
-    ports: ["8507:8507"]
-  algoritmeregister:
-    build: .
-    command: python use-cases/algoritmeregister/api/app.py
-    ports: ["8508:8508"]
-  data-overheid-dcat:
-    build: .
-    command: python use-cases/data-overheid-dcat/api/app.py
-    ports: ["8509:8509"]
-  api-registratie:
-    build: .
-    command: python use-cases/api-registratie/api/app.py
-    ports: ["8510:8510"]
-  traceability:
-    build: .
-    command: python use-cases/traceability/api/app.py
-    ports: ["8511:8511"]
-  compliance-debt:
-    build: .
-    command: python use-cases/compliance-debt/api/app.py
-    ports: ["8512:8512"]
-  regulatory-impact:
-    build: .
-    command: python use-cases/regulatory-impact/api/app.py
-    ports: ["8513:8513"]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8493/v1/health')"]

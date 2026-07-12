@@ -1,0 +1,39 @@
+{
+  "ruleSetId": "procesreglement-civiel-dagvaarding",
+  "version": "2026.1",
+  "maturityTarget": "L2-pilot",
+  "reviewer": {
+    "geaccondeerdDoor": "__JURIST_NAAM__",
+    "rol": "__JURIST_ROL__",
+    "organisatie": "__ORGANISATIE__"
+  },
+  "review": {
+    "datum": "__REVIEW_DATUM_YYYY-MM-DD__",
+    "geldigTot": "__GELDIG_TOT_YYYY-MM-DD__",
+    "scope": "L2 pilot voor procesreglement civiel dagvaarding - digitale indiening, griffierechten en bijlijsten.",
+    "bronSnapshot": "__BRON_SNAPSHOT_ID_OF_DATUM__",
+    "verklaring": "__JURIDISCHE_VERKLARING_BINNEN_SCOPE__",
+    "beperkingen": [
+      "__BEPERKING_1__",
+      "__BEPERKING_2__"
+    ]
+  },
+  "sourceSnapshotRefs": [
+    {
+      "name": "Wet Rv (Wet op de Rechterlijke Vorming)",
+      "url": "https://wetten.overheid.nl/BWBR0002534",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    },
+    {
+      "name": "procesreglement-civiel JREM export",
+      "url": "use-cases/procesreglement/jrem/exports/procesreglement-civiel-2026.1.json",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    }
+  ],
+  "scenarioAcceptance": [
+    {
+      "scenario": "PR-SC-001: Dagvaarding handel - digitaal verplicht",
+      "accepted": "__TRUE_FALSE__"
+    }
+  ]
+}

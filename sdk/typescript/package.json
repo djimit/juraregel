@@ -1,24 +1,21 @@
 {
   "name": "@juraregel/sdk",
   "version": "1.0.0",
+  "private": true,
   "description": "TypeScript SDK for JuraRegel Legal RuleOps Platform",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "exports": {
-    ".": "./src/index.ts",
-    "./griffierecht": "./src/griffierecht.ts",
-    "./bio2": "./src/bio2.ts",
-    "./forumstandaardisatie": "./src/forumstandaardisatie.ts",
-    "./overheidsstandaarden": "./src/overheidsstandaarden.ts",
-    "./nora": "./src/nora.ts",
-    "./eu-ai-act": "./src/eu-ai-act.ts",
-    "./avg-gdpr": "./src/avg-gdpr.ts"
+    ".": "./dist/index.js",
+    "./griffierecht": "./dist/griffierecht.js"
   },
   "scripts": {
     "build": "tsc",
     "check": "tsc --noEmit"
   },
+  "files": ["dist/"],
+  "devDependencies": {"typescript": "5.8.3"},
   "license": "MIT",
   "repository": {
     "type": "git",

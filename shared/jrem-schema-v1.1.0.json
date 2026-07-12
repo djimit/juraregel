@@ -433,7 +433,7 @@
             ],
             "properties": {
               "griffierecht": {
-                "type": "number",
+                "type": ["number", "null"],
                 "minimum": 0
               },
               "category": {

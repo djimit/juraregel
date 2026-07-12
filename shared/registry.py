@@ -3,6 +3,16 @@ import json
 from pathlib import Path
 from typing import Optional
 
+
+CALCULATE_DOMAINS = {
+    "griffierecht", "basisregistraties", "omgevingswet",
+    "participatiewet", "toeslagen",
+}
+
+
+def can_calculate(domain: str) -> bool:
+    return domain in CALCULATE_DOMAINS
+
 def list_domains(base_dir: Path = None) -> list[dict]:
     """List all domains with their versions."""
     if base_dir is None:

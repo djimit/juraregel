@@ -3,17 +3,31 @@ import { readFile, writeFile, mkdir } from "fs/promises";
 import { existsSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
-import { execSync } from "child_process";
+import { spawnSync } from "child_process";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
+
+function safeName(value) {
+  if (!/^[a-z0-9-]+$/.test(value || "")) {
+    console.error("Domeinnaam mag alleen kleine letters, cijfers en koppeltekens bevatten");
+    process.exit(1);
+  }
+  return value;
+}
+
+function run(command, args) {
+  const result = spawnSync(command, args, { cwd: ROOT, stdio: "inherit" });
+  if (result.status !== 0) process.exit(result.status ?? 1);
+}
 
 const commands = {
   init: "Scaffold een nieuwe use case: juraregel init <domein> <port>",
   check: "Run CI gates: juraregel check [use-case]",
   serve: "Start een Rule API: juraregel serve <use-case>",
   validate: "Valideer een JREM export: juraregel validate <jrem-file>",
-  generate: "Genereer JREM from parser: juraregel generate <domein>",  help: "Toon dit overzicht"
+  generate: "Genereer JREM from parser: juraregel generate <domein>",
+  help: "Toon dit overzicht"
 };
 
 function help() {
@@ -26,6 +40,10 @@ function help() {
 
 async function init(domein, port) {
   if (!domein || !port) { console.error("Usage: juraregel init <domein> <port>"); process.exit(1); }
+  domein = safeName(domein);
+  if (!/^\d+$/.test(port) || Number(port) < 1024 || Number(port) > 65535) {
+    console.error("Port moet een getal tussen 1024 en 65535 zijn"); process.exit(1);
+  }
   const dir = join(ROOT, "use-cases", domein);
   if (existsSync(dir)) { console.error(`Use case '${domein}' bestaat al`); process.exit(1); }
   
@@ -48,14 +66,13 @@ async function init(domein, port) {
 }
 
 async function check(useCase) {
-  const cmd = useCase ? `bash ci/run-gates.sh use-cases/${useCase}` : "bash ci/run-all-gates.sh";
-  try { execSync(cmd, { cwd: ROOT, stdio: "inherit" }); }
-  catch { process.exit(1); }
+  if (useCase) run("bash", ["ci/run-gates.sh", `use-cases/${safeName(useCase)}`]);
+  else run("bash", ["ci/run-all-gates.sh"]);
 }
 
 async function serve(useCase) {
   if (!useCase) { console.error("Usage: juraregel serve <use-case>"); process.exit(1); }
-  execSync(`python3 use-cases/${useCase}/api/app.py`, { cwd: ROOT, stdio: "inherit" });
+  run("python3", [`use-cases/${safeName(useCase)}/api/app.py`]);
 }
 
 
@@ -74,15 +91,14 @@ async function generate(domein) {
   const parser = parserMap[domein];
   if (!parser) { console.error(`No parser found for '${domein}'. Available: ${Object.keys(parserMap).join(", ")}`); process.exit(1); }
   try {
-    execSync(`python3 ${parser}`, { cwd: ROOT, stdio: "inherit" });
+    run("python3", [parser]);
     console.log(`✅ Generated JREM for ${domein}`);
   } catch { console.error(`Failed to generate for ${domein}`); process.exit(1); }
 }
 
 async function validate(jremFile) {
   if (!jremFile) { console.error("Usage: juraregel validate <jrem-file>"); process.exit(1); }
-  try { execSync(`python3 shared/validate.py --schema shared/jrem-schema.json --instance ${jremFile}`, { cwd: ROOT, stdio: "inherit" }); }
-  catch { process.exit(1); }
+  run("python3", ["shared/validate.py", "--schema", "shared/jrem-schema.json", "--instance", jremFile]);
 }
 
 const [cmd, ...args] = process.argv.slice(2);
@@ -90,7 +106,12 @@ switch (cmd) {
   case "init": await init(args[0], args[1]); break;
   case "check": await check(args[0]); break;
   case "serve": await serve(args[0]); break;
-  case "validate": await validate(args[0]); break;  case "generate": await generate(args[0]); break;
-  case "help": case "--help": case undefined: help(); break;
+  case "validate": await validate(args[0]); break;
+  case "generate": await generate(args[0]); break;
+  case "help":
+  case "--help":
+  case undefined:
+    help();
+    break;
   default: console.error(`Unknown command: ${cmd}`); help(); process.exit(1);
 }

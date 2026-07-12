@@ -1,9 +1,12 @@
 # Step definitions for JuraRegel BDD features
 import json
+import sys
 from pathlib import Path
 from pytest_bdd import given, when, then, parsers
 
 REPO_ROOT = Path(__file__).parent.parent.parent
+sys.path.insert(0, str(REPO_ROOT / "shared"))
+from rule_engine import select_rule
 
 def load_jrem(domain):
     domain = domain.strip('"')
@@ -14,45 +17,9 @@ def load_jrem(domain):
     return json.loads(files[0].read_text())
 
 def match_rule(jrem_data, input_data):
-    rules = jrem_data.get("rules", [])
-    sorted_rules = sorted(rules, key=lambda r: r.get("priority", 0), reverse=True)
-    for rule in sorted_rules:
-        conditions = rule.get("conditions", {})
-        all_match = True
-        for key, condition in conditions.items():
-            if key == "periode": continue
-            val = input_data.get(key)
-            if condition is None: continue
-            elif val is None:
-                all_match = False
-                break
-            elif isinstance(condition, str):
-                if str(val) != condition:
-                    all_match = False
-                    break
-            elif isinstance(condition, dict):
-                cond_f = {k: v for k, v in condition.items() if k in ("gt", "gte", "lt", "lte")}
-                if not isinstance(val, (int, float)):
-                    all_match = False
-                    break
-                if "gt" in cond_f and not (val > cond_f["gt"]):
-                    all_match = False
-                    break
-                if "gte" in cond_f and not (val >= cond_f["gte"]):
-                    all_match = False
-                    break
-                if "lt" in cond_f and not (val < cond_f["lt"]):
-                    all_match = False
-                    break
-                if "lte" in cond_f and not (val <= cond_f["lte"]):
-                    all_match = False
-                    break
-            elif isinstance(condition, bool):
-                if val != condition:
-                    all_match = False
-                    break
-        if all_match:
-            return {"matchedRule": rule, "outcome": rule.get("outcome", {}), "conditions": conditions}
+    rule = select_rule(jrem_data.get("rules", []), input_data)
+    if rule:
+        return {"matchedRule": rule, "outcome": rule.get("outcome", {}), "conditions": rule.get("conditions", {})}
     return {"matchedRule": None, "outcome": {}, "conditions": {}}
 
 @given(parsers.parse("the domain {domain} is loaded"))
@@ -84,7 +51,7 @@ def when_zorgtoeslag_bereken(ctx):
 @when("I run the BIO2 compliance check", target_fixture="compliance_result")
 def when_bio2_compliance(ctx):
     rules = ctx["jrem"].get("rules", [])
-    return {"domain": "bio2", "framework": "bio2", "total_rules": len(rules), "compliance_percentage": 0.0, "gaps": [{"rule_id": r["ruleId"]} for r in rules[:5]]}
+    return {"domain": "bio2", "framework": "bio2", "total_rules": len(rules), "compliance_percentage": None, "gaps": [{"rule_id": r["ruleId"], "status": "not_assessed"} for r in rules]}
 
 @when("I calculate the social assistance", target_fixture="calc_result")
 def when_bijstand_bereken(ctx):
@@ -117,9 +84,9 @@ def then_bron_is(calc_result, source):
 def then_total_rules(compliance_result, count):
     assert compliance_result["total_rules"] == count
 
-@then("the compliance percentage is between 0 and 100")
+@then("the compliance percentage is unavailable without evidence")
 def then_compliance_pct(compliance_result):
-    assert 0 <= compliance_result["compliance_percentage"] <= 100
+    assert compliance_result["compliance_percentage"] is None
 
 @then("the result contains a list of gaps")
 def then_gaps(compliance_result):

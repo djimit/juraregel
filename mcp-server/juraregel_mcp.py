@@ -17,6 +17,10 @@ import sys
 from pathlib import Path
 from typing import Any, Optional
 
+sys.path.insert(0, str(Path(__file__).parent.parent / "shared"))
+from rule_engine import select_rule
+from registry import can_calculate
+
 # ─── Domain Registry ──────────────────────────────────────────
 # Maps domain → (port, jrem_path)
 # Ports match the use case app.py files
@@ -150,91 +154,47 @@ def match_rule(domain: str, input_data: dict) -> dict:
     """
     jrem = load_jrem(domain)
     rules = jrem.get("rules", [])
-    sorted_rules = sorted(rules, key=lambda r: r.get("priority", 0), reverse=True)
-    
-    for rule in sorted_rules:
-        conditions = rule.get("conditions", {})
-        all_match = True
-        
-        for key, condition in conditions.items():
-            if key == "periode":
-                continue
-            
-            val = input_data.get(key)
-            
-            # Match logic
-            if condition is None:
-                continue
-            elif val is None:
-                all_match = False
-                break
-            elif isinstance(condition, str):
-                if val != condition:
-                    all_match = False
-                    break
-            elif isinstance(condition, list):
-                if val not in condition:
-                    all_match = False
-                    break
-            elif isinstance(condition, dict):
-                # Filter out non-comparison keys like "periode"
-                cond_filtered = {k: v for k, v in condition.items() if k in ("gt", "gte", "lt", "lte")}
-                if not isinstance(val, (int, float)):
-                    all_match = False
-                    break
-                if "gt" in cond_filtered and not (val > cond_filtered["gt"]):
-                    all_match = False
-                    break
-                if "gte" in cond_filtered and not (val >= cond_filtered["gte"]):
-                    all_match = False
-                    break
-                if "lt" in cond_filtered and not (val < cond_filtered["lt"]):
-                    all_match = False
-                    break
-                if "lte" in cond_filtered and not (val <= cond_filtered["lte"]):
-                    all_match = False
-                    break
-            elif isinstance(condition, bool):
-                if val != condition:
-                    all_match = False
-                    break
-            else:
-                if val != condition:
-                    all_match = False
-                    break
-        
-        if all_match:
-            import hashlib
-            from datetime import datetime, timezone
-            input_hash = hashlib.sha256(json.dumps(input_data, sort_keys=True).encode()).hexdigest()[:16]
-            ruleset_hash = hashlib.sha256(json.dumps(jrem, sort_keys=True).encode()).hexdigest()[:16]
-            
-            return {
-                "calculationId": f"calc-{input_hash}",
-                "ruleSetVersion": jrem["version"],
-                "domain": domain,
-                "result": {
-                    "matchedRule": {"ruleId": rule["ruleId"], "name": rule["name"]},
-                    "outcome": rule.get("outcome", {})
-                },
-                "explanation": {
-                    "summary": rule["name"],
-                    "appliedRules": [rule["ruleId"]],
-                    "sourceRefs": rule.get("sourceRefs", []),
-                    "conditions": rule.get("conditions", {})
-                },
-                "audit": {
-                    "inputHash": f"sha256:{input_hash}",
-                    "rulesetHash": f"sha256:{ruleset_hash}",
-                    "timestamp": datetime.now(timezone.utc).isoformat()
-                }
+    if not can_calculate(domain):
+        return {
+            "domain": domain,
+            "status": "catalog_only",
+            "result": {"matchedRule": None, "outcome": {}},
+            "explanation": {"summary": "Deze regelset heeft geen bewezen calculate-contract."},
+        }
+    rule = select_rule(rules, input_data)
+    if rule:
+        import hashlib
+        from datetime import datetime, timezone
+        input_hash = hashlib.sha256(json.dumps(input_data, sort_keys=True).encode()).hexdigest()
+        ruleset_hash = hashlib.sha256(json.dumps(jrem, sort_keys=True).encode()).hexdigest()
+
+        return {
+            "calculationId": f"calc-{input_hash[:16]}",
+            "ruleSetVersion": jrem["version"],
+            "domain": domain,
+            "result": {
+                "matchedRule": {"ruleId": rule["ruleId"], "name": rule["name"]},
+                "outcome": rule.get("outcome", {})
+            },
+            "explanation": {
+                "summary": rule["name"],
+                "appliedRules": [rule["ruleId"]],
+                "sourceRefs": rule.get("sourceRefs", []),
+                "conditions": rule.get("conditions", {})
+            },
+            "audit": {
+                "inputHash": f"sha256:{input_hash}",
+                "rulesetHash": f"sha256:{ruleset_hash}",
+                "timestamp": datetime.now(timezone.utc).isoformat()
             }
+        }
     
     return {
         "domain": domain,
         "result": {"matchedRule": None, "outcome": {}},
         "explanation": {"summary": "Geen passende regel gevonden voor deze input"},
-        "warnings": ["Geen match — verifieer input of raadpleeg een jurist"]
+        "status": "catalog_only" if not any(r.get("conditions") for r in rules) else "no_match",
+        "warnings": ["Geen uitvoerbare match — verifieer input en regelset"]
     }
 
 def get_sources(domain: str) -> list[dict]:
@@ -289,7 +249,7 @@ def get_audit_trail(domain: str, rule_id: str) -> dict:
         "jrem": f"use-cases/{domain}/jrem/exports/",
         "tests": test_refs,
         "review": f"docs/review-requests/review-request-{domain}.md",
-        "openapi": f"openapi/{domain}.yaml",
+        "openapi": f"http://127.0.0.1:{DOMAINS[domain]['port']}/openapi.json",
         "version": jrem.get("version"),
         "validFrom": jrem.get("validFrom"),
         "validUntil": jrem.get("validUntil")
@@ -408,42 +368,27 @@ def explain(domain: str, input_data: dict) -> dict:
     }
 
 def check_compliance(domain: str, framework: str = None) -> dict:
-    """Check compliance of a domain against a framework (BIO2, NIS2, AVG)."""
+    """Report assessment coverage; no evidence means no compliance percentage."""
     jrem = load_jrem(domain)
     rules = jrem.get("rules", [])
     
     total = len(rules)
-    compliant = 0
-    manual_review = 0
-    gaps = []
-    
-    for rule in rules:
-        outcome = rule.get("outcome", {})
-        if outcome.get("compliant") == True or outcome.get("vergunningplichtig") == False:
-            compliant += 1
-        elif outcome.get("manualReviewRequired"):
-            manual_review += 1
-            gaps.append({
-                "rule_id": rule["ruleId"],
-                "name": rule["name"],
-                "status": "manual_review_required",
-                "source_refs": rule.get("sourceRefs", [])
-            })
-        else:
-            gaps.append({
-                "rule_id": rule["ruleId"],
-                "name": rule["name"],
-                "status": "unknown",
-                "source_refs": rule.get("sourceRefs", [])
-            })
+    gaps = [{
+        "rule_id": rule["ruleId"],
+        "name": rule["name"],
+        "status": "not_assessed",
+        "source_refs": rule.get("sourceRefs", []),
+    } for rule in rules]
     
     return {
         "domain": domain,
         "framework": framework or domain,
         "total_rules": total,
-        "compliant": compliant,
-        "manual_review": manual_review,
-        "compliance_percentage": round(compliant / total * 100, 1) if total > 0 else 0,
+        "status": "insufficient_evidence",
+        "assessed": 0,
+        "compliant": None,
+        "manual_review": 0,
+        "compliance_percentage": None,
         "gaps": gaps[:10],
         "gap_count": len(gaps),
         "version": jrem.get("version"),
@@ -539,16 +484,42 @@ def get_resource_list() -> list[dict]:
         for d in domains_summary if "error" not in d
     ]
 
+
+def build_live_summary() -> dict:
+    """Summarize both versioned exports and the latest export per repository domain."""
+    exports = []
+    repository_domains = set()
+    logical_domains = set()
+    for path in sorted(JREM_BASE.glob("*/jrem/exports/*.json")):
+        with path.open(encoding="utf-8") as handle:
+            document = json.load(handle)
+        exports.append(document)
+        repository_domains.add(path.parents[2].name)
+        if document.get("domain"):
+            logical_domains.add(document["domain"])
+
+    current_domains = [item for item in list_all_domains() if "error" not in item]
+    versioned_rule_count = sum(len(document.get("rules", [])) for document in exports)
+    current_rule_count = sum(item["ruleCount"] for item in current_domains)
+    return {
+        # Backwards-compatible field: historically this meant all indexed exports.
+        "total_rules": versioned_rule_count,
+        "total_versioned_rules": versioned_rule_count,
+        "total_current_rules": current_rule_count,
+        "total_rule_sets": len(exports),
+        "total_repository_domains": len(repository_domains),
+        "total_logical_domains": len(logical_domains),
+        "domains": current_domains,
+        "generated_from": "live JREM exports",
+    }
+
 def read_resource(uri: str) -> dict | list | None:
     """Read a specific MCP resource by URI."""
     if uri == "laws://list":
         return list_all_domains()
     
     if uri == "laws://summary":
-        kb_path = Path(__file__).parent.parent / "knowledge-base" / "jkb-summary.json"
-        if kb_path.exists():
-            return json.loads(kb_path.read_text())
-        return {"error": "Knowledge base summary not found. Run: python3 tools/jkb-builder.py"}
+        return build_live_summary()
     
     if uri.startswith("laws://") and uri.endswith("/spec"):
         domain = uri.replace("laws://", "").replace("/spec", "")
@@ -760,7 +731,7 @@ def handle_request(msg: dict) -> dict:
                     },
                     {
                         "name": "juraregel.calculate",
-                        "description": "Calculate a legal result by matching input against rules. Returns the matched rule, outcome, explanation, source references, and audit trail.",
+                        "description": "Calculate only for domains with a proven executable contract; catalog-only domains return catalog_only.",
                         "inputSchema": {
                             "type": "object",
                             "properties": {
@@ -833,7 +804,7 @@ def handle_request(msg: dict) -> dict:
                     },
                     {
                         "name": "juraregel.check_compliance",
-                        "description": "Compliance check voor een domein tegen een framework (BIO2, NIS2, AVG). Geeft percentage en gaps.",
+                        "description": "Rapporteert assessment-dekking. Zonder evidence is het percentage onbekend en zijn regels not_assessed.",
                         "inputSchema": {
                             "type": "object",
                             "properties": {
