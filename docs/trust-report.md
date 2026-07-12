@@ -16,7 +16,7 @@ De nieuwe live bronlaag is read-only en gebruikt alleen openbare metadata/search
 | Check | Status | Evidence |
 |---|---:|---|
 | Laatste GitHub Actions run | pass | run `28829466813`, commit `cfa1753`, conclusion `success` |
-| JKB coverage | pass | `knowledge-base/jkb-summary.json`: 690 regels, 30 domeinen |
+| JKB coverage | generated | `python3 tools/jkb-builder.py`: 690 regels, 30 JREM-domeinnamen |
 | Source health | pass/deprecated | BWB, EUR-Lex, Rechtspraak, UPL, TOOI/ROO, CVDR/SRU, Woo-index/DiWoo en STTR/IMTR+RTR `ok`; PLOOI bewust `deprecated` |
 | Live harvester smoke | pass | CVDR 3 resultaten; Woo-index 5 organisaties; STTR ondersteund `3.0`, `2.0`, `1.5` |
 | Jurist gate policy | pass as policy | L2/L3 faalt zonder uitgebreide juristAccordering; L3 vereist indicator-disclaimer en `indicator-only` boundary |

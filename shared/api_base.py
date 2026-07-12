@@ -9,26 +9,26 @@ input validatie, juridischeContext, error handling, structured output.
 """
 
 import hashlib
+import hmac
 import json
 import os
-import sys
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Optional, Any
+from typing import Optional
 
 from fastapi import FastAPI, HTTPException, Depends, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from pydantic import BaseModel, Field, field_validator
-import os
 import logging
 
-# ─── Production Readiness Config (env vars, backward compatible) ───
-TLS_KEY = os.environ.get("JURAREGEL_TLS_KEY")
-TLS_CERT = os.environ.get("JURAREGEL_TLS_CERT")
+try:
+    from .rule_engine import select_rule
+except ImportError:  # use-case apps add shared/ directly to sys.path
+    from rule_engine import select_rule
+
 AUTH_ENABLED = os.environ.get("JURAREGEL_AUTH_ENABLED", "").lower() == "true"
-RATE_LIMIT = os.environ.get("JURAREGEL_RATE_LIMIT", "")
-METRICS_ENABLED = os.environ.get("JURAREGEL_METRICS_ENABLED", "").lower() == "true"
 LOG_FORMAT = os.environ.get("JURAREGEL_LOG_FORMAT", "plain")
 
 # Structured logging
@@ -53,37 +53,9 @@ def verify_token(credentials: HTTPAuthorizationCredentials = Depends(security)):
     api_key = os.environ.get("JURAREGEL_API_KEY", "")
     if not api_key:
         raise HTTPException(status_code=401, detail="API key not configured")
-    if token != api_key:
+    if not hmac.compare_digest(token, api_key):
         raise HTTPException(status_code=401, detail="Invalid API key")
     return token
-    if not False:
-        raise HTTPException(status_code=401, detail="Invalid token")
-    return token
-
-# Rate limiting (simple in-memory, for PoC)
-_rate_store = {}
-def check_rate_limit(request: Request):
-    """Simple rate limiting per IP. Only active when JURAREGEL_RATE_LIMIT is set."""
-    if not RATE_LIMIT:
-        return  # no rate limiting
-    client_ip = request.client.host if request.client else "unknown"
-    limit, period = RATE_LIMIT.split("/")
-    limit = int(limit)
-    period_seconds = {"second": 1, "minute": 60, "hour": 3600}.get(period, 60)
-    key = f"{client_ip}:{int(datetime.now().timestamp()) // period_seconds}"
-    _rate_store[key] = _rate_store.get(key, 0) + 1
-    if _rate_store[key] > limit:
-        raise HTTPException(status_code=429, detail="Rate limit exceeded")
-
-# Prometheus metrics (optional)
-if METRICS_ENABLED:
-    try:
-        from prometheus_fastapi_instrumentator import Instrumentator
-        _metrics_available = True
-    except ImportError:
-        _metrics_available = False
-else:
-    _metrics_available = False
 
 # ─── Models ───
 
@@ -150,6 +122,10 @@ class CalculateRequest(BaseModel):
 # ─── JREM Loading ───
 
 _jrem_cache: dict[str, dict] = {}
+_GENERIC_CONDITION_FIELDS = {
+    "zaakstroom", "rol", "partijType", "verweerStatus",
+    "bijzondereCategorie", "vorderingWaarde",
+}
 
 def load_jrem(jrem_dir: Path, version: str = "2026.1") -> dict:
     """Load a JREM export by version string."""
@@ -199,6 +175,17 @@ def list_versions(jrem_dir: Path) -> list[dict]:
             "hasAcceptatie": bool(data.get("metadata", {}).get("juristAccordering", {}).get("geaccondeerdDoor")),
         })
     return versions
+
+
+def supports_generic_calculation(jrem_dir: Path) -> bool:
+    """True only when every executable condition fits the griffierecht model."""
+    condition_fields = set()
+    for filepath in jrem_dir.glob("*.json"):
+        with filepath.open() as f:
+            data = json.load(f)
+        for rule in data.get("rules", []):
+            condition_fields.update((rule.get("conditions") or {}).keys())
+    return bool(condition_fields) and condition_fields <= _GENERIC_CONDITION_FIELDS
 
 
 def select_version(jrem_dir: Path, calculation_date: str, tariefjaar: Optional[int] = None) -> str:
@@ -351,7 +338,13 @@ def store_audit(calculation_id: str, request: CalculateRequest, response_data: d
 
 # ─── Factory ───
 
-def create_app(domain: str, jrem_dir: Path, port: int, endpoint_prefix: str = None) -> FastAPI:
+def create_app(
+    domain: str,
+    jrem_dir: Path,
+    port: int,
+    endpoint_prefix: str = None,
+    calculate_capability: bool = False,
+) -> FastAPI:
     """
     Factory: create a FastAPI instance for a specific legal domain.
     
@@ -370,16 +363,47 @@ def create_app(domain: str, jrem_dir: Path, port: int, endpoint_prefix: str = No
     )
     app.add_middleware(CORSMiddleware, allow_origins=os.environ.get("JURAREGEL_CORS_ORIGINS", "http://localhost:3000").split(","), allow_methods=["*"], allow_headers=["*"])
 
+    @app.middleware("http")
+    async def authenticate(request: Request, call_next):
+        if AUTH_ENABLED and request.url.path not in {"/v1/health", "/docs", "/openapi.json"}:
+            expected = os.environ.get("JURAREGEL_API_KEY", "")
+            supplied = request.headers.get("authorization", "").removeprefix("Bearer ")
+            if not expected or not hmac.compare_digest(supplied, expected):
+                return JSONResponse(status_code=401, content={"detail": "Invalid API key"})
+        return await call_next(request)
+
+    # Only griffierecht is implemented by this factory. Domain-specific apps
+    # replace this route with their own typed calculation endpoint.
+    generic_calculate = domain == "griffierecht" and supports_generic_calculation(jrem_dir)
+    if not calculate_capability:
+        @app.post(f"{prefix}/calculate")
+        def catalog_only_calculate():
+            raise HTTPException(
+                status_code=409,
+                detail={
+                    "code": "catalog_only",
+                    "domain": domain,
+                    "message": "Deze regelset is door de gedeelde API alleen als catalogus beschikbaar.",
+                },
+            )
+
     @app.get("/v1/health")
     def health():
         try:
             versions = list_versions(jrem_dir)
+            latest = load_jrem(jrem_dir, versions[-1]["version"]) if versions else {}
         except Exception as e:
             return {"status": "degraded", "error": str(e), "domain": domain}
-        maturity = os.environ.get("JURAREGEL_MATURITY", "L1-poc")
-        approval = "self-approved"
+        maturity = latest.get("maturityLevel", "L0-demo")
+        approval = (latest.get("approval") or {}).get("type", "missing")
         limitations = ["PoC, not production-ready", "Self-approved rules", "Results indicative, not legally binding"]
-        return {"status": "ok", "service": f"{domain}-rule-api", "version": "1.0.0", "domain": domain, "rulesetVersions": versions, "maturityLevel": maturity, "approvalStatus": approval, "limitations": limitations}
+        return {
+            "status": "ok", "service": f"{domain}-rule-api", "version": "1.0.0",
+            "domain": domain, "rulesetVersions": versions, "maturityLevel": maturity,
+            "approvalStatus": approval,
+            "capabilities": {"catalog": True, "calculate": calculate_capability},
+            "limitations": limitations,
+        }
 
     @app.get(f"{prefix}/versions")
     def get_versions():
@@ -475,8 +499,3 @@ def create_app(domain: str, jrem_dir: Path, port: int, endpoint_prefix: str = No
         return _audit_store[calculation_id]
 
     return app
-
-
-# ─── Production TLS support in __main__ ───
-# When using api_base.py directly, add TLS via env vars:
-# JURAREGEL_TLS_KEY=/path/to/key.pem JURAREGEL_TLS_CERT=/path/to/cert.pem python3 app.py

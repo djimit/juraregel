@@ -1,5 +1,9 @@
 # JuraRegel Presentatie Outline (15 min, 5 slides)
 
+> **Archief — niet gebruiken als actuele productclaim.** Zie de capability- en
+> maturity-status in de repository-README; cijfers hieronder zijn historisch en
+> niet onafhankelijk gevalideerd.
+
 ## Slide 1: Het Probleem (3 min)
 - Nederlandse overheidsregels staan in PDFs, niet in code
 - Compliance checking is handmatig, foutgevoelig, niet-auditeerbaar

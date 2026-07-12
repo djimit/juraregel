@@ -62,7 +62,7 @@ def check_pii(request: PiiCheckRequest):
         "license_plate": "[kenteken]",
     }
     
-    from richtlijn_engine_v2 import get_sentence
+    from richtlijn_engine_v4 import get_sentence
     
     for d in result.decisions:
         cls = {

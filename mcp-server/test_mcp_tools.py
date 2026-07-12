@@ -86,7 +86,9 @@ def test_check_compliance():
     result = call_tool("juraregel.check_compliance", {"domain": "bio2"})
     assert "total_rules" in result
     assert result["total_rules"] == 162
-    print(f"  check_compliance(bio2): {result['total_rules']} rules, {result['compliance_percentage']}%")
+    assert result["status"] == "insufficient_evidence"
+    assert result["compliance_percentage"] is None
+    print(f"  check_compliance(bio2): {result['total_rules']} rules, no evidence")
 
 def test_get_playbook_not_found():
     result = call_tool("juraregel.get_playbook", {"playbook_id": "nonexistent"})

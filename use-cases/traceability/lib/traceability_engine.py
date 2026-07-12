@@ -1,4 +1,5 @@
 """Traceability Engine — maps wet → RegelSpraak → JREM → API → database → test → audit."""
+import ast
 import hashlib
 import json
 from pathlib import Path
@@ -9,28 +10,33 @@ def _stable_hash(data: dict) -> str:
     return "sha256:" + hashlib.sha256(payload.encode()).hexdigest()
 
 
-def _test_refs_for_rule(base_dir: Path, domain: str, rule_id: str) -> list[str]:
-    test_file = base_dir / "use-cases" / domain / "tests" / f"test_{domain.replace('-', '_')}.py"
-    if not test_file.exists():
-        return []
+def _test_files(base_dir: Path, domain: str) -> list[Path]:
+    return sorted((base_dir / "use-cases" / domain / "tests").glob("test_*.py"))
 
+
+def _test_refs_for_rule(base_dir: Path, domain: str, rule_id: str) -> list[str]:
     refs = []
-    lines = test_file.read_text().splitlines()
-    for i, line in enumerate(lines):
-        stripped = line.strip()
-        if not stripped.startswith("def test_"):
-            continue
-        context = "\n".join(lines[i:i + 20])
-        if rule_id in context:
-            refs.append(stripped.split("def ", 1)[1].split("(", 1)[0])
+    for test_file in _test_files(base_dir, domain):
+        tree = ast.parse(test_file.read_text())
+        for node in ast.walk(tree):
+            if not isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)) or not node.name.startswith("test_"):
+                continue
+            literals = {
+                child.value for child in ast.walk(node)
+                if isinstance(child, ast.Constant) and isinstance(child.value, str)
+            }
+            if rule_id in literals:
+                refs.append(f"{test_file.relative_to(base_dir)}::{node.name}")
     return refs
 
 
 def _acceptance_status(jrem: dict) -> dict:
     metadata = jrem.get("metadata", {})
-    accordering = metadata.get("juristAccordering")
+    approval = jrem.get("approval") or {}
+    accordering = metadata.get("juristAccordering") or approval
     acceptatie_type = metadata.get("acceptatieType", "draft")
-    if accordering and acceptatie_type != "draft":
+    independent = approval.get("type") in {"peer-review", "legal-team", "external"}
+    if accordering and independent and acceptatie_type != "draft":
         jurist_status = "accepted"
     elif acceptatie_type == "draft":
         jurist_status = "missing"
@@ -62,6 +68,7 @@ def build_evidence_envelope(
         },
         "testFile": test_reference,
         "tests": test_refs,
+        "status": "observed" if test_refs else "unverified",
     }
     identity = {
         "domain": domain,
@@ -80,6 +87,7 @@ def build_evidence_envelope(
         "ruleId": rule["ruleId"],
         "jremVersion": jrem.get("version", ""),
         "maturityLevel": jrem.get("maturityLevel", ""),
+        "rulesetHash": _stable_hash(jrem),
         "sourceRefs": source_refs,
         "api": {
             "endpoint": api_endpoint,
@@ -97,7 +105,7 @@ def build_traceability_matrix(base_dir: Path) -> dict:
     """Build a full traceability matrix across all use cases."""
     import sys
     sys.path.insert(0, str(base_dir / "shared"))
-    from registry import list_domains
+    from registry import can_calculate, list_domains
     domains = list_domains(base_dir / "use-cases")
     
     port_map = {
@@ -109,6 +117,8 @@ def build_traceability_matrix(base_dir: Path) -> dict:
         "gegevensdelingsbeleid": 8506, "dpia-model": 8507,
         "algoritmeregister": 8508, "data-overheid-dcat": 8509, "api-registratie": 8510,
         "traceability": 8511, "compliance-debt": 8512, "regulatory-impact": 8513,
+        "toeslagen": 8514, "omgevingswet": 8515, "basisregistraties": 8516,
+        "participatiewet": 8517,
     }
     
     matrix = []
@@ -120,20 +130,13 @@ def build_traceability_matrix(base_dir: Path) -> dict:
             for rule in jrem.get("rules", []):
                 sources = [{"title": ref.get("title",""), "section": ref.get("section",""), "url": ref.get("url","")} for ref in rule.get("sourceRefs", [])]
                 conditions = rule.get("conditions", {})
-                parts = []
-                for field, cond in conditions.items():
-                    if isinstance(cond, list):
-                        parts.append(f"{field} IN ({','.join(repr(v) for v in cond)})")
-                    elif isinstance(cond, dict):
-                        for op, val in cond.items():
-                            sql_op = {"gt": ">", "gte": ">=", "lt": "<", "lte": "<="}.get(op, op)
-                            parts.append(f"{field} {sql_op} {val}")
-                db_constraint = f"CHECK ({' AND '.join(parts)})" if parts else "-- no conditions"
+                db_constraint = "-- not materialized"
                 
                 domain = d["domain"]
-                port = port_map.get(domain, 8500)
-                api_endpoint = f"POST /v1/{domain}/calculate"
-                test_reference = f"tests/test_{domain.replace('-','_')}.py"
+                port = port_map.get(domain)
+                api_endpoint = f"POST /v1/{domain}/calculate" if can_calculate(domain) else None
+                test_files = _test_files(base_dir, domain)
+                test_reference = str(test_files[0].relative_to(base_dir)) if test_files else None
                 entry = {
                     "ruleId": rule["ruleId"], "ruleName": rule.get("name",""), "domain": d["domain"],
                     "port": port, "wetBron": sources, "conditions": conditions,
@@ -141,7 +144,7 @@ def build_traceability_matrix(base_dir: Path) -> dict:
                     "jremVersion": jrem.get("version",""), "legalStatus": rule.get("legalStatus",""),
                     "dbConstraint": db_constraint, "apiEndpoint": api_endpoint,
                     "testReference": test_reference,
-                    "auditTrail": "GET /v1/audit/{calculationId}",
+                    "auditTrail": "GET /v1/audit/{calculationId}" if api_endpoint else None,
                 }
                 entry["evidenceEnvelope"] = build_evidence_envelope(
                     base_dir=base_dir,
@@ -168,8 +171,8 @@ def get_impact_analysis(base_dir: Path, changed_source: str) -> dict:
     return {
         "changedSource": changed_source, "affectedRules": len(affected),
         "affectedDomains": list(set(e["domain"] for e in affected)),
-        "affectedAPIs": list(set(e["apiEndpoint"] for e in affected)),
-        "affectedTests": list(set(e["testReference"] for e in affected)),
+        "affectedAPIs": sorted({e["apiEndpoint"] for e in affected if e["apiEndpoint"]}),
+        "affectedTests": sorted({e["testReference"] for e in affected if e["testReference"]}),
         "affectedDBConstraints": [e["dbConstraint"] for e in affected],
         "details": affected,
     }

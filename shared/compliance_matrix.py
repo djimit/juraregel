@@ -59,5 +59,5 @@ def _group_by_framework(matrix: list) -> dict:
     grouped = defaultdict(lambda: {"domeinen": 0, "regels": 0})
     for m in matrix:
         grouped[m["framework"]]["domeinen"] += 1
-        grouped[m["framework"]["regels"] += m["regels"]
+        grouped[m["framework"]]["regels"] += m["regels"]
     return dict(grouped)

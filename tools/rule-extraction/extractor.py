@@ -46,11 +46,31 @@ def recognize_structure(text: str) -> list[dict]:
     return articles
 
 def extract_rules(text: str, domain: str, llm_client=None) -> list[dict]:
-    """Extract rules from text. Uses LLM if available, falls back to pattern extraction."""
+    """Extract proposals; an injected LLM callable never bypasses human review."""
     articles = recognize_structure(text)
     rules = []
 
     for art in articles:
+        if llm_client is not None:
+            response = llm_client(EXTRACTION_PROMPT_TEMPLATE.format(artikel_tekst=art["text"]))
+            proposals = json.loads(response) if isinstance(response, str) else response
+            if not isinstance(proposals, list):
+                raise ValueError("LLM extraction must return a JSON array")
+            for proposal in proposals:
+                if not isinstance(proposal, dict) or not {"name", "conditions", "outcome"} <= proposal.keys():
+                    raise ValueError("LLM extraction returned an invalid rule proposal")
+                proposal.update({
+                    "domain": domain,
+                    "review_status": "pending",
+                    "interpretatieMethode": "LLM-assisteerd",
+                    "source_refs": proposal.get("sourceRefs") or [{
+                        "type": "wet", "title": domain,
+                        "section": f"art. {art['artikel_nummer']}",
+                    }],
+                })
+                rules.append(proposal)
+            continue
+
         # Pattern-based extraction as fallback / seed
         conditions = _extract_conditions(art["text"])
         outcome = _extract_outcome(art["text"])
@@ -99,7 +119,7 @@ def _extract_outcome(text: str) -> dict:
     outcome = {}
 
     # Right/benefit
-    if re.search(r'recht\s+op', text, re.IGNORECASE):
+    if re.search(r'\brecht\s+op\b', text, re.IGNORECASE):
         outcome["recht"] = True
 
     # Amount
@@ -134,7 +154,7 @@ def _score_confidence(text: str, conditions: dict, outcome: dict) -> int:
         score += 10
 
     # Penalty for vague language
-    vague_terms = ['redelijkerwijs', 'in redere zin', 'naar gelang', 'indien', 'tenzij']
+    vague_terms = ['redelijkerwijs', 'in redelijke zin', 'naar gelang', 'indien', 'tenzij']
     for term in vague_terms:
         if term in text.lower():
             score -= 15

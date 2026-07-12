@@ -2,16 +2,17 @@
 
 TypeScript SDK for the JuraRegel Legal RuleOps Platform.
 
-## Install
+## Local build
 
 ```bash
-npm install @juraregel/sdk
+npm install
+npm run build
 ```
 
 ## Usage
 
 ```typescript
-import { GriffierechtClient } from "@juraregel/sdk";
+import { GriffierechtClient } from "./dist/index.js";
 
 const client = new GriffierechtClient("http://127.0.0.1:8490");
 
@@ -42,12 +43,8 @@ console.log(result.explanation.reasoningSteps); // ["Rechtsgebied is civiel...",
 | Client | Domain | Port |
 |---|---|---|
 | GriffierechtClient | griffierecht | 8490 |
-| Bio2Client | bio2 | 8494 |
-| ForumStandaardisatieClient | forumstandaardisatie | 8495 |
-| OverheidsstandaardenClient | overheidsstandaarden | 8496 |
-| NoraClient | nora | 8497 |
-| EuAiActClient | eu-ai-act | 8498 |
-| AvgGdprClient | avg-gdpr | 8499 |
+
+Andere domeinen zijn catalog-only of hebben geen stabiel, getypeerd calculate-contract.
 
 ## License
 

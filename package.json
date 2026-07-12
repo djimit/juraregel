@@ -1,7 +1,8 @@
 {
   "name": "juraregel",
   "version": "1.0.0",
-  "description": "JuraRegel \u2014 Legal RuleOps Platform CLI",
+  "private": true,
+  "description": "JuraRegel — Legal RuleOps Platform CLI",
   "type": "module",
   "bin": {
     "juraregel": "bin/juraregel.mjs"
@@ -9,7 +10,9 @@
   "scripts": {
     "init": "node bin/juraregel.mjs init",
     "check": "node bin/juraregel.mjs check",
-    "serve": "node bin/juraregel.mjs serve"
+    "serve": "node bin/juraregel.mjs serve",
+    "test": "PYTHON=.venv/bin/python; [ -x \"$PYTHON\" ] || PYTHON=python3; \"$PYTHON\" -m pytest use-cases/*/tests/ ci/test_*.py mcp-server/test_*.py features/ sources/test_*.py shared/test_*.py tools/test_*.py tools/rule-extraction/test_*.py governance/test_*.py -q --no-header",
+    "sdk:check": "npm --prefix sdk/typescript run check"
   },
   "license": "MIT",
   "repository": {

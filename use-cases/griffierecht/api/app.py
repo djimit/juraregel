@@ -7,7 +7,7 @@ sys.path.insert(0, str(SHARED_DIR))
 from api_base import create_app
 
 JREM_DIR = Path(__file__).parent.parent / "jrem" / "exports"
-app = create_app("griffierecht", JREM_DIR, 8490)
+app = create_app("griffierecht", JREM_DIR, 8490, calculate_capability=True)
 
 if __name__ == "__main__":
     import uvicorn

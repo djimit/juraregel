@@ -9,7 +9,7 @@ Feature: BIO2 compliance audit
   Scenario: Compliance check returns total rule count
     When I run the BIO2 compliance check
     Then the total number of rules is 162
-    And the compliance percentage is between 0 and 100
+    And the compliance percentage is unavailable without evidence
 
   Scenario: Compliance check returns gaps
     When I run the BIO2 compliance check

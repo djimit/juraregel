@@ -6,6 +6,9 @@ ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT_DIR"
 
 PASS=0; FAIL=0
+JKB_DIR=".data/knowledge-base"
+python3 tools/jkb-builder.py --output "$JKB_DIR" >/dev/null
+JKB_INDEX="$JKB_DIR/jkb-index.json"
 
 pass_gate() { echo "  PASS: $1"; PASS=$((PASS + 1)); }
 fail_gate() { echo "  FAIL: $1"; FAIL=$((FAIL + 1)); }
@@ -16,7 +19,7 @@ echo "========================================"
 
 # Gate 1: Index count matches JREM exports
 echo "Gate 1/5: Index count matches JREM exports"
-INDEX_COUNT=$(python3 -c "import json; print(len(json.load(open('knowledge-base/jkb-index.json'))))")
+INDEX_COUNT=$(python3 -c "import json; print(len(json.load(open('$JKB_INDEX'))))")
 JREM_COUNT=0
 for f in use-cases/*/jrem/exports/*.json; do
   [ -f "$f" ] || continue
@@ -33,7 +36,7 @@ fi
 echo "Gate 2/5: All entries have required fields"
 MISSING=$(python3 -c "
 import json
-idx = json.load(open('knowledge-base/jkb-index.json'))
+idx = json.load(open('$JKB_INDEX'))
 fields = ['nl_text', 'embedding_text', 'graph_nodes', 'content_hash']
 bad = []
 for e in idx:
@@ -53,7 +56,7 @@ fi
 echo "Gate 3/5: Content hash validation"
 HASH_OK=$(python3 -c "
 import json, hashlib
-idx = json.load(open('knowledge-base/jkb-index.json'))
+idx = json.load(open('$JKB_INDEX'))
 bad = 0
 for e in idx:
     # Reconstruct original rule from hash — verify hash is valid SHA256
@@ -71,7 +74,7 @@ fi
 # Gate 4: Vector store coverage (if .qdrant exists)
 echo "Gate 4/5: Vector store coverage"
 if [ -d ".qdrant" ]; then
-  COVERAGE=$(python3 tools/jkb-vectorstore.py --check-coverage 2>/dev/null) || COVERAGE='{"complete": false, "error": "qdrant not available"}'
+  COVERAGE=$(python3 tools/jkb_vectorstore.py --check-coverage 2>/dev/null) || COVERAGE='{"complete": false, "error": "qdrant not available"}'
   COMPLETE=$(echo "$COVERAGE" | python3 -c "import json,sys; print(json.load(sys.stdin)['complete'])")
   if [ "$COMPLETE" = "True" ]; then
     pass_gate "Vector store coverage complete"
@@ -79,7 +82,7 @@ if [ -d ".qdrant" ]; then
     fail_gate "Vector store coverage incomplete: $COVERAGE"
   fi
 else
-  echo "  SKIP: .qdrant not found (run: python3 tools/jkb-vectorstore.py index)"
+  echo "  SKIP: .qdrant not found (run: python3 tools/jkb_vectorstore.py index)"
 fi
 
 # Gate 5: Keyword store coverage (if .keyword.db exists)

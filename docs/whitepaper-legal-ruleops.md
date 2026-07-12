@@ -1,5 +1,9 @@
 # Legal RuleOps: From PDFs to APIs
 
+> **Archiefconcept — niet actueel.** Product-, maturity- en nauwkeurigheidsclaims
+> hieronder zijn historisch en niet onafhankelijk gevalideerd. Zie de
+> repository-README voor het actuele contract.
+
 ## Hoe Nederlandse overheidsregels digitaal, testbaar en uitlegbaar worden
 
 ---

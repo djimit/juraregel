@@ -13,16 +13,76 @@ V4 verbeteringen t.o.v. V3.1:
 
 import re
 from dataclasses import dataclass
-from richtlijn_engine import (
-    PersoonType, PseudonimiseringsStatus, RichtlijnDecision,
+from enum import Enum
+
+
+class PersoonType(Enum):
+    PARTICULAR = "particulier"
+    PROFESSIONAL = "professional"
+    RECHTSPERSOON = "rechtspersoon"
+    OVERHEID = "overheid"
+    ONBEKEND = "onbekend"
+
+
+class PseudonimiseringsStatus(Enum):
+    PSEUDONIMISEER = "pseudonimiseer"
+    NIET_PSEUDONIMISEER = "niet_pseudonimiseer"
+    HANDMATIGE_CONTROLE = "handmatige_controle"
+
+
+@dataclass
+class RichtlijnDecision:
+    gegeven_type: str
+    match: str
+    start_idx: int
+    end_idx: int
+    persoon_type: PersoonType
+    status: PseudonimiseringsStatus
+    reden: str
+    context_snippet: str
+
+
+@dataclass
+class RichtlijnDecisionV2(RichtlijnDecision):
+    confidence: float = 1.0
+    sentence: str = ""
+    classification_method: str = "keyword"
+
+
+@dataclass
+class RichtlijnResult:
+    ecli: str
+    totaal_gedetecteerd: int
+    te_pseudonimiseren: int
+    niet_pseudonimiseren: int
+    handmatige_controle: int
+    decisions: list[RichtlijnDecision]
+    accuracy_notes: str
+
+
+SENTENCE_BOUNDARY = re.compile(r"[.!?]\s+|\n\n")
+
+
+def get_sentence(text: str, idx: int) -> str:
+    start = 0
+    for match in SENTENCE_BOUNDARY.finditer(text[:idx]):
+        start = match.end()
+    end = len(text)
+    for match in SENTENCE_BOUNDARY.finditer(text[idx:]):
+        end = idx + match.start()
+        break
+    return text[start:end]
+
+
+ZAAKNUMMER_CONTEXT = re.compile(
+    r"zaak\s+(?:met\s+)?nummer|zaaknummer|zaakn|registratien|kenmerk|"
+    r"dossiern|parketnummer|inschrijving|procedure\s+nummer", re.IGNORECASE,
 )
-from richtlijn_engine_v2 import (
-    get_sentence, RichtlijnDecisionV2, classify_context_v2,
-    PROFESSIONAL_V2, RECHTSPERSOON_V2
-)
-from richtlijn_engine_v3 import (
-    ZAAKNUMMER_CONTEXT, REFERENCE_NUMBER, COURT_ADDRESS,
-    PARTIJ_CONTEXT, PARTICULIER_CONTEXT
+REFERENCE_NUMBER = re.compile(r"PL\d|STK\s|procedure\s+\d|R\d[/]|/HA/|/RB/|/RVS/", re.IGNORECASE)
+PARTIJ_CONTEXT = re.compile(
+    r"\beiser\b|\bgedaagde\b|\bpartij\b|\bverzoeker\b|\bverweerder\b|"
+    r"\bbetrokkene\b|\bbelanghebbende\b|\bcliënt\b|\bverdachte\b|\bslachtoffer\b",
+    re.IGNORECASE,
 )
 
 # ─── V4: Fixed keyword patterns ───
@@ -260,7 +320,6 @@ def scan_met_richtlijn_v4(text, ecli="", rechtsgebied=""):
     import sys
     from pathlib import Path
     sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent.parent / "importer" / "rechtspraak"))
-    from richtlijn_engine import RichtlijnResult
     try:
         from pseudonymize import scan_decision
     except ModuleNotFoundError:
@@ -278,4 +337,4 @@ def scan_met_richtlijn_v4(text, ecli="", rechtsgebied=""):
     
     return RichtlijnResult(ecli=ecli, totaal_gedetecteerd=len(decisions),
         te_pseudonimiseren=te, niet_pseudonimiseren=nie, handmatige_controle=han,
-        decisions=decisions, accuracy_notes=f"V4: {(te+nie)/max(len(decisions),1)*100:.4f}% definitive")
+        decisions=decisions, accuracy_notes="V4 rules applied; independent evaluation pending")

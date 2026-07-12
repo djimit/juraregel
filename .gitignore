@@ -9,3 +9,6 @@ __pycache__/
 .env
 .env.local
 .keyword.db
+.data/
+node_modules/
+sdk/typescript/dist/

@@ -1,15 +1,14 @@
-FROM python:3.12-slim AS builder
-WORKDIR /app
-COPY shared/ /app/shared/
-COPY use-cases/ /app/use-cases/
-RUN pip install --no-cache-dir fastapi uvicorn pydantic jsonschema pyyaml httpx pytest
-
 FROM python:3.12-slim
+
 WORKDIR /app
-COPY --from=builder /app/ /app/
-RUN useradd -m juraregel
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt \
+    && useradd --create-home juraregel
+COPY --chown=juraregel:juraregel shared/ shared/
+COPY --chown=juraregel:juraregel use-cases/ use-cases/
+
 USER juraregel
+EXPOSE 8490 8493
 HEALTHCHECK --interval=30s --timeout=5s --start-period=10s \
-  CMD python3 -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8490/v1/health')" || exit 1
-EXPOSE 8490-8515
-CMD ["python3", "use-cases/griffierecht/api/app.py"]
+  CMD python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8490/v1/health')"
+CMD ["uvicorn", "app:app", "--app-dir", "use-cases/griffierecht/api", "--host", "0.0.0.0", "--port", "8490"]

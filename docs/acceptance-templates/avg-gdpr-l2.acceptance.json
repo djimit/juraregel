@@ -1,0 +1,75 @@
+{
+  "ruleSetId": "avg-gdpr",
+  "version": "2025.1",
+  "maturityTarget": "L2-pilot",
+  "reviewer": {
+    "geaccondeerdDoor": "__JURIST_NAAM__",
+    "rol": "__JURIST_ROL__",
+    "organisatie": "__ORGANISATIE__"
+  },
+  "review": {
+    "datum": "__REVIEW_DATUM_YYYY-MM-DD__",
+    "geldigTot": "__GELDIG_TOT_YYYY-MM-DD__",
+    "scope": "L2 pilot voor AVG/GDPR - DPIA, bewaartermijn, rechten betrokkenen, verwerkingsgrondslagen en informatieplicht.",
+    "bronSnapshot": "__BRON_SNAPSHOT_ID_OF_DATUM__",
+    "verklaring": "__JURIDISCHE_VERKLARING_BINNEN_SCOPE__",
+    "beperkingen": [
+      "__BEPERKING_1__",
+      "__BEPERKING_2__"
+    ]
+  },
+  "sourceSnapshotRefs": [
+    {
+      "name": "AVG (Verordening (EU) 2016/679)",
+      "url": "https://wetten.overheid.nl/BWBR0040930",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    },
+    {
+      "name": "avg-gdpr JREM export",
+      "url": "use-cases/avg-gdpr/jrem/exports/avg-gdpr-2025.1.json",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    }
+  ],
+  "scenarioAcceptance": [
+    {
+      "scenario": "AVG-SC-AVG-001: DPIA vereist bij grootschalige verwerking",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "AVG-SC-AVG-002: DPIA vereist bij systematische monitoring",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "AVG-SC-AVG-003: Bewaartermijn - niet langer dan noodzakelijk",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "AVG-SC-AVG-004: Recht op inzage",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "AVG-SC-AVG-005: Recht op rectificatie",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "AVG-SC-AVG-006: Recht op vergetelheid",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "AVG-SC-AVG-007: Recht op dataportabiliteit",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "AVG-SC-AVG-008: Data minimalisation",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "AVG-SC-AVG-009: Verwerkingsregister verplicht",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "AVG-SC-AVG-010: Functionaris voor gegevensbescherming (FG)",
+      "accepted": "__TRUE_FALSE__"
+    }
+  ]
+}

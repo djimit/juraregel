@@ -1017,8 +1017,8 @@
         "verweerStatus": "ingediend"
       },
       "expected": {
-        "griffierecht": 0,
-        "category": "kanton_gedaagde_niet_versuldigd",
+        "griffierecht": null,
+        "category": "kanton_gedaagde_niet_verschuldigd",
         "appliedRules": [
           "GR-KAN-2026-004"
         ]
@@ -1061,7 +1061,7 @@
         "verweerStatus": "niet_ingediend"
       },
       "expected": {
-        "griffierecht": 0,
+        "griffierecht": null,
         "category": "gedaagde_geen_verweer",
         "appliedRules": [
           "GR-CIV-2026-013"
@@ -1083,7 +1083,7 @@
         "verweerStatus": "onbekend"
       },
       "expected": {
-        "griffierecht": 0,
+        "griffierecht": null,
         "category": "gedaagde_verweer_onbekend",
         "appliedRules": [
           "GR-CIV-2026-014"

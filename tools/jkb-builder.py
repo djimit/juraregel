@@ -7,10 +7,11 @@ Leest alle JREM exports en genereert drie representaties per regel:
 2. Nederlandse natuurlijke taal (human-readable)
 3. Embedding-ready tekst (LLM-searchable)
 
-Output: knowledge-base/jkb-index.json + knowledge-base/jkb-summary.json
+Output: .data/knowledge-base/jkb-index.json + jkb-summary.json (generated, untracked)
 """
 import json
 import hashlib
+import argparse
 import sys
 from pathlib import Path
 from typing import Any
@@ -224,11 +225,15 @@ def validate_index(use_cases_dir: Path, index_path: Path) -> dict:
     }
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--output", type=Path)
+    parser.add_argument("--check-only", action="store_true")
+    args = parser.parse_args()
     repo_root = Path(__file__).parent.parent
     use_cases = repo_root / "use-cases"
-    output = repo_root / "knowledge-base"
+    output = args.output or repo_root / ".data" / "knowledge-base"
     
-    if "--check-only" in sys.argv:
+    if args.check_only:
         result = validate_index(use_cases, output / "jkb-index.json")
         print(json.dumps(result, indent=2))
         sys.exit(0 if result["valid"] else 1)

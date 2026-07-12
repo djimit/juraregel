@@ -8,7 +8,7 @@ def get_repo_root():
     return Path(__file__).parent.parent
 
 def load_jkb_index():
-    path = get_repo_root() / "knowledge-base" / "jkb-index.json"
+    path = get_repo_root() / ".data" / "knowledge-base" / "jkb-index.json"
     return json.loads(path.read_text())
 
 def init_db(path=DB_PATH):

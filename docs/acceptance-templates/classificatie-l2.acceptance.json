@@ -1,0 +1,43 @@
+{
+  "ruleSetId": "classificatie-zaak-intake",
+  "version": "2026.1",
+  "maturityTarget": "L2-pilot",
+  "reviewer": {
+    "geaccondeerdDoor": "__JURIST_NAAM__",
+    "rol": "__JURIST_ROL__",
+    "organisatie": "__ORGANISATIE__"
+  },
+  "review": {
+    "datum": "__REVIEW_DATUM_YYYY-MM-DD__",
+    "geldigTot": "__GELDIG_TOT_YYYY-MM-DD__",
+    "scope": "L2 pilot voor classificatie zaak intake - kanton/handel bevoegdheid, proceduretype en specialisatie.",
+    "bronSnapshot": "__BRON_SNAPSHOT_ID_OF_DATUM__",
+    "verklaring": "__JURIDISCHE_VERKLARING_BINNEN_SCOPE__",
+    "beperkingen": [
+      "__BEPERKING_1__",
+      "__BEPERKING_2__"
+    ]
+  },
+  "sourceSnapshotRefs": [
+    {
+      "name": "Wet Rv (Wet op de Rechterlijke Vorming)",
+      "url": "https://wetten.overheid.nl/BWBR0002534",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    },
+    {
+      "name": "classificatie-zaak-intake JREM export",
+      "url": "use-cases/classificatie/jrem/exports/classificatie-zaak-intake-2026.1.json",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    }
+  ],
+  "scenarioAcceptance": [
+    {
+      "scenario": "CL-SC-001: Vordering euro5.000 -> kanton",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "CL-SC-002: Vordering euro50.000 -> handel",
+      "accepted": "__TRUE_FALSE__"
+    }
+  ]
+}
