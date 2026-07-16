@@ -1,0 +1,466 @@
+{
+  "schemaVersion": "1.1.0",
+  "ruleSetId": "judicial-ai-assurance",
+  "version": "2026.1",
+  "validFrom": "2026-07-16",
+  "validUntil": "2026-12-31",
+  "jurisdiction": "NL",
+  "domain": "judicial-ai-assurance",
+  "procedureType": "judicial-ai-assurance",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "JAI-001",
+      "name": "Onderbouw subsidiariteit voordat generatieve AI wordt ingezet",
+      "priority": 120,
+      "legalStatus": "regeling",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "CEPEJ Guidelines on the use of generative AI for courts",
+          "section": "paragraphs 13-16, technological neutrality and subsidiarity",
+          "url": "https://rm.coe.int/cepej-2025-18final-en-draft-guidelines-on-the-use-of-generative-ai-for/48802a4ad1",
+          "bronVersie": "2025-12-19",
+          "bronDatum": "2025-12-19"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "signal": "subsidiarity_evidence_required",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Probleem, conventionele alternatieven en noodzaak van generatieve AI moeten vooraf aantoonbaar zijn.",
+        "assurance": {
+          "controlClass": "hard-stop",
+          "decision": "block-until-evidence",
+          "sourceAuthority": ["authoritative-soft-law"],
+          "evidenceRequired": ["problem-definition", "conventional-alternatives", "necessity-and-proportionality"],
+          "reusesDomains": ["regulatory-impact"]
+        }
+      }
+    },
+    {
+      "ruleId": "JAI-002",
+      "name": "Classificeer beslisimpact, juridische openheid en AI Act-risico",
+      "priority": 115,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Regulation (EU) 2024/1689 (AI Act)",
+          "section": "Annex III, point 8(a), administration of justice",
+          "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+          "bronVersie": "2024-06-13",
+          "bronDatum": "2024-06-13"
+        },
+        {
+          "type": "standaard",
+          "title": "CEPEJ Guidelines on the use of generative AI for courts",
+          "section": "paragraphs 22-26, unsuitable applications and human decision-making",
+          "url": "https://rm.coe.int/cepej-2025-18final-en-draft-guidelines-on-the-use-of-generative-ai-for/48802a4ad1",
+          "bronVersie": "2025-12-19",
+          "bronDatum": "2025-12-19"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "signal": "judicial_ai_risk_classification_required",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Modeltype alleen is onvoldoende; functie, juridische beslisruimte en handelingsbevoegdheid bepalen het risico.",
+        "assurance": {
+          "controlClass": "hard-stop",
+          "decision": "block-until-evidence",
+          "sourceAuthority": ["binding-law", "authoritative-soft-law"],
+          "evidenceRequired": ["intended-purpose", "decision-impact", "legal-openness", "action-authority", "ai-act-classification"],
+          "reusesDomains": ["eu-ai-act", "regulatory-impact"]
+        }
+      }
+    },
+    {
+      "ruleId": "JAI-003",
+      "name": "Rechterlijke bevoegdheid en toegang tot een menselijke rechter blijven gewaarborgd",
+      "priority": 110,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "European Convention on Human Rights",
+          "section": "Article 6(1), independent and impartial tribunal established by law",
+          "url": "https://www.echr.coe.int/documents/d/echr/convention_ENG",
+          "bronVersie": "1950-11-04",
+          "bronDatum": "1950-11-04"
+        },
+        {
+          "type": "standaard",
+          "title": "CEPEJ Guidelines on the use of generative AI for courts",
+          "section": "paragraphs 55-63, exclusive judicial authority and access to a court",
+          "url": "https://rm.coe.int/cepej-2025-18final-en-draft-guidelines-on-the-use-of-generative-ai-for/48802a4ad1",
+          "bronVersie": "2025-12-19",
+          "bronDatum": "2025-12-19"
+        },
+        {
+          "type": "standaard",
+          "title": "Council of Europe Framework Convention on AI (CETS 225)",
+          "section": "Article 5(1), judicial independence and access to justice",
+          "url": "https://rm.coe.int/1680afae3c",
+          "bronVersie": "2024-09-05",
+          "bronDatum": "2024-09-05"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "signal": "human_judicial_authority_required",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Feitenwaardering, bewijswaardering, rechtsinterpretatie en de eindbeslissing mogen niet aan AI worden gedelegeerd.",
+        "assurance": {
+          "controlClass": "hard-stop",
+          "decision": "block-until-evidence",
+          "sourceAuthority": ["binding-law", "treaty-framework", "authoritative-soft-law"],
+          "evidenceRequired": ["human-judge-access", "reserved-human-functions", "fallback-procedure"],
+          "reusesDomains": []
+        }
+      }
+    },
+    {
+      "ruleId": "JAI-004",
+      "name": "AI-uitvoer is niet bindend en mag geen afwijkingsmotivering afdwingen",
+      "priority": 105,
+      "legalStatus": "regeling",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "CEPEJ Guidelines on the use of generative AI for courts",
+          "section": "paragraphs 57-60, judicial independence, non-binding output and automation bias",
+          "url": "https://rm.coe.int/cepej-2025-18final-en-draft-guidelines-on-the-use-of-generative-ai-for/48802a4ad1",
+          "bronVersie": "2025-12-19",
+          "bronDatum": "2025-12-19"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "signal": "non_binding_output_required",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Een professional moet zelfstandig kunnen beoordelen, verwerpen en uitschakelen zonder druk of afwijkingsplicht.",
+        "assurance": {
+          "controlClass": "hard-stop",
+          "decision": "block-until-evidence",
+          "sourceAuthority": ["authoritative-soft-law"],
+          "evidenceRequired": ["opt-out", "no-departure-justification", "automation-bias-controls", "independent-analysis-procedure"],
+          "reusesDomains": []
+        }
+      }
+    },
+    {
+      "ruleId": "JAI-005",
+      "name": "AI-gebruik is transparant, betwistbaar en verenigbaar met equality of arms",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "European Convention on Human Rights",
+          "section": "Articles 6 and 13, fair trial and effective remedy",
+          "url": "https://www.echr.coe.int/documents/d/echr/convention_ENG",
+          "bronVersie": "1950-11-04",
+          "bronDatum": "1950-11-04"
+        },
+        {
+          "type": "standaard",
+          "title": "Council of Europe Framework Convention on AI (CETS 225)",
+          "section": "Articles 14 and 15, remedies and procedural safeguards",
+          "url": "https://rm.coe.int/1680afae3c",
+          "bronVersie": "2024-09-05",
+          "bronDatum": "2024-09-05"
+        },
+        {
+          "type": "standaard",
+          "title": "CEPEJ Guidelines on the use of generative AI for courts",
+          "section": "paragraphs 50-54, 61-63 and 69-70, fairness, disclosure, access and remedy",
+          "url": "https://rm.coe.int/cepej-2025-18final-en-draft-guidelines-on-the-use-of-generative-ai-for/48802a4ad1",
+          "bronVersie": "2025-12-19",
+          "bronDatum": "2025-12-19"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "signal": "procedural_contestability_required",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Partijen moeten materieel AI-gebruik kennen, kunnen tegenspreken en een effectief herstelpad hebben.",
+        "assurance": {
+          "controlClass": "hard-stop",
+          "decision": "block-until-evidence",
+          "sourceAuthority": ["binding-law", "treaty-framework", "authoritative-soft-law"],
+          "evidenceRequired": ["party-disclosure", "equality-of-arms-assessment", "contest-procedure", "effective-remedy"],
+          "reusesDomains": ["traceability"]
+        }
+      }
+    },
+    {
+      "ruleId": "JAI-006",
+      "name": "Iedere inhoudelijke AI-claim is herleidbaar tot een authentieke bron",
+      "priority": 95,
+      "legalStatus": "regeling",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "CEPEJ Guidelines on the use of generative AI for courts",
+          "section": "paragraphs 51-54 and 74, traceability, certified legal sources and statement-level sources",
+          "url": "https://rm.coe.int/cepej-2025-18final-en-draft-guidelines-on-the-use-of-generative-ai-for/48802a4ad1",
+          "bronVersie": "2025-12-19",
+          "bronDatum": "2025-12-19"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "signal": "claim_to_source_lineage_required",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Niet-herleidbare juridische of feitelijke inhoud kan niet professioneel worden geverifieerd.",
+        "assurance": {
+          "controlClass": "hard-stop",
+          "decision": "block-until-evidence",
+          "sourceAuthority": ["authoritative-soft-law"],
+          "evidenceRequired": ["document-id", "passage-id", "source-version", "source-hash", "retrieval-record", "model-and-prompt-version"],
+          "reusesDomains": ["traceability"]
+        }
+      }
+    },
+    {
+      "ruleId": "JAI-007",
+      "name": "Voer vooraf en iteratief een grondrechten-, risico- en impactbeoordeling uit",
+      "priority": 90,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Regulation (EU) 2024/1689 (AI Act)",
+          "section": "Article 27, fundamental rights impact assessment for high-risk AI systems",
+          "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+          "bronVersie": "2024-06-13",
+          "bronDatum": "2024-06-13"
+        },
+        {
+          "type": "standaard",
+          "title": "Council of Europe Framework Convention on AI (CETS 225)",
+          "section": "Article 16, risk and impact management framework",
+          "url": "https://rm.coe.int/1680afae3c",
+          "bronVersie": "2024-09-05",
+          "bronDatum": "2024-09-05"
+        },
+        {
+          "type": "standaard",
+          "title": "HUDERIA Methodology and Model",
+          "section": "Part I, COBRA, stakeholder engagement, risk and impact assessment, mitigation and iterative review",
+          "url": "https://rm.coe.int/huderia-methodology-and-model-adopted-provisional-version-2026/48802ac001",
+          "bronVersie": "2026-02-25",
+          "bronDatum": "2026-02-25"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "signal": "fundamental_rights_assessment_required",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Risico moet contextueel en gedurende de hele levenscyclus worden beoordeeld; een modelschatting is geen impactanalyse.",
+        "assurance": {
+          "controlClass": "required-evidence",
+          "decision": "review-required",
+          "sourceAuthority": ["binding-law", "treaty-framework", "implementation-method"],
+          "evidenceRequired": ["ai-act-fria-or-applicability", "huderia-cobra", "stakeholder-engagement", "mitigation-plan", "iterative-review"],
+          "reusesDomains": ["eu-ai-act", "dpia-model", "avg-gdpr", "regulatory-impact"]
+        }
+      }
+    },
+    {
+      "ruleId": "JAI-008",
+      "name": "Gerechtelijke data en infrastructuur blijven effectief onder publieke regie",
+      "priority": 85,
+      "legalStatus": "wettelijk",
+      "sourceRefs": [
+        {
+          "type": "regeling",
+          "title": "Regulation (EU) 2016/679 (GDPR)",
+          "section": "Articles 5, 25 and 32, data principles, data protection by design and security",
+          "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng",
+          "bronVersie": "2016-04-27",
+          "bronDatum": "2016-04-27"
+        },
+        {
+          "type": "standaard",
+          "title": "CEPEJ Guidelines on the use of generative AI for courts",
+          "section": "paragraphs 27-35 and 67-68, secure tools, public control, audit, exit and pseudonymisation",
+          "url": "https://rm.coe.int/cepej-2025-18final-en-draft-guidelines-on-the-use-of-generative-ai-for/48802a4ad1",
+          "bronVersie": "2025-12-19",
+          "bronDatum": "2025-12-19"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "signal": "public_control_and_data_governance_required",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Hosting alleen bewijst geen publieke regie; contractuele, technische en operationele controle moeten aantoonbaar zijn.",
+        "assurance": {
+          "controlClass": "hard-stop",
+          "decision": "block-until-evidence",
+          "sourceAuthority": ["binding-law", "authoritative-soft-law"],
+          "evidenceRequired": ["data-residency", "key-control", "no-training-clause", "subprocessor-control", "audit-right", "exit-and-portability", "retention-and-deletion"],
+          "reusesDomains": ["avg-gdpr", "gegevensdelingsbeleid", "dpia-model", "bio2", "ncsc"]
+        }
+      }
+    },
+    {
+      "ruleId": "JAI-009",
+      "name": "Opschaling vereist onafhankelijke evaluatie, monitoring en terugdraaibaarheid",
+      "priority": 80,
+      "legalStatus": "regeling",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "CEPEJ Guidelines on the use of generative AI for courts",
+          "section": "paragraphs 34-37, 60, 65, 73, 75 and 77, staged evaluation, audit, monitoring and rollback",
+          "url": "https://rm.coe.int/cepej-2025-18final-en-draft-guidelines-on-the-use-of-generative-ai-for/48802a4ad1",
+          "bronVersie": "2025-12-19",
+          "bronDatum": "2025-12-19"
+        },
+        {
+          "type": "standaard",
+          "title": "CEPEJ Assessment Tool for the Operationalisation of the Ethical Charter",
+          "section": "29-question assessment tool and risks 4, 10, 11 and 12",
+          "url": "https://rm.coe.int/cepej-2023-16rev-operationalisation-ai-ethical-charter-en/1680b65218",
+          "bronVersie": "2025-06-05",
+          "bronDatum": "2025-06-05"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "signal": "independent_assurance_required",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Kwaliteitsgemiddelden mogen geen constitutionele of procedurele hard stop compenseren.",
+        "assurance": {
+          "controlClass": "hard-stop",
+          "decision": "block-until-evidence",
+          "sourceAuthority": ["authoritative-soft-law"],
+          "evidenceRequired": ["independent-evaluation", "task-specific-gold-set", "subgroup-and-bias-analysis", "drift-monitoring", "incident-plan", "stop-criteria", "rollback-test"],
+          "reusesDomains": ["traceability", "compliance-debt"]
+        }
+      }
+    },
+    {
+      "ruleId": "JAI-010",
+      "name": "Behandel processtukken en externe inhoud als onvertrouwde AI-invoer",
+      "priority": 75,
+      "legalStatus": "regeling",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "CEPEJ Guidelines on the use of generative AI for courts",
+          "section": "paragraphs 30 and 40, security audits and hidden prompt instructions in documents",
+          "url": "https://rm.coe.int/cepej-2025-18final-en-draft-guidelines-on-the-use-of-generative-ai-for/48802a4ad1",
+          "bronVersie": "2025-12-19",
+          "bronDatum": "2025-12-19"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "signal": "untrusted_content_controls_required",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Procespartijen kunnen documenten bewust of onbewust laten ingrijpen op retrieval, prompts of agenttools.",
+        "assurance": {
+          "controlClass": "required-evidence",
+          "decision": "review-required",
+          "sourceAuthority": ["authoritative-soft-law"],
+          "evidenceRequired": ["content-isolation", "indirect-prompt-injection-tests", "least-privilege-tools", "default-deny-egress", "retrieval-poisoning-tests", "security-incident-response"],
+          "reusesDomains": ["bio2", "ncsc", "traceability"]
+        }
+      }
+    },
+    {
+      "ruleId": "JAI-011",
+      "name": "AI krijgt geen autonome formele handelings- of schrijfbevoegdheid",
+      "priority": 70,
+      "legalStatus": "regeling",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "CEPEJ Guidelines on the use of generative AI for courts",
+          "section": "paragraphs 55-60, exclusive responsibility, non-binding assistance and human review",
+          "url": "https://rm.coe.int/cepej-2025-18final-en-draft-guidelines-on-the-use-of-generative-ai-for/48802a4ad1",
+          "bronVersie": "2025-12-19",
+          "bronDatum": "2025-12-19"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "signal": "formal_action_authorisation_required",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Opslaan, verzenden, indienen, registreren of beslissen vereist een afzonderlijke bevoegde menselijke autorisatie.",
+        "assurance": {
+          "controlClass": "hard-stop",
+          "decision": "block-until-evidence",
+          "sourceAuthority": ["authoritative-soft-law"],
+          "evidenceRequired": ["proposal-only-ai-output", "separate-human-validation", "separate-human-authorisation", "capability-deny-by-default", "immutable-action-log"],
+          "reusesDomains": ["traceability", "api-registratie"]
+        }
+      }
+    },
+    {
+      "ruleId": "JAI-012",
+      "name": "Behoud kritisch vakmanschap, opleiding en een werkbaar niet-AI-pad",
+      "priority": 65,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "Council of Europe Framework Convention on AI (CETS 225)",
+          "section": "Article 20, digital literacy and specific expert skills",
+          "url": "https://rm.coe.int/1680afae3c",
+          "bronVersie": "2024-09-05",
+          "bronDatum": "2024-09-05"
+        },
+        {
+          "type": "standaard",
+          "title": "CEPEJ Guidelines on the use of generative AI for courts",
+          "section": "paragraphs 42-48, critical evaluation, training and independent consultation of original sources",
+          "url": "https://rm.coe.int/cepej-2025-18final-en-draft-guidelines-on-the-use-of-generative-ai-for/48802a4ad1",
+          "bronVersie": "2025-12-19",
+          "bronDatum": "2025-12-19"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "signal": "professional_competence_required",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Menselijke verantwoordelijkheid is niet reëel zonder actuele competentie, zelfstandige bronraadpleging en een niet-AI-werkpad.",
+        "assurance": {
+          "controlClass": "required-evidence",
+          "decision": "review-required",
+          "sourceAuthority": ["treaty-framework", "authoritative-soft-law"],
+          "evidenceRequired": ["role-based-training", "competence-assessment", "independent-source-workflow", "non-ai-fallback", "deskilling-monitoring"],
+          "reusesDomains": []
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "juridischeContext": {
+      "wet": "ECHR, EU AI Act, CETS 225 and CEPEJ judicial AI guidance",
+      "wetVersieLaatstGecheckt": "2026-07-16",
+      "tariefVersie": "2026.1"
+    },
+    "bronverificatieDatum": "2026-07-16",
+    "acceptatieType": "draft",
+    "indicatorDisclaimer": "Dit profiel inventariseert assurance-eisen. Het berekent geen juridische goedkeuring en vervangt geen beoordeling door een bevoegde jurist of rechterlijke governancefunctie."
+  },
+  "approval": {
+    "type": "self",
+    "reviewer": "D. Landman",
+    "role": "maker",
+    "date": "2026-07-16",
+    "scope": "Catalog-only ontwerp- en assuranceprofiel voor AI in en rond rechterlijke processen",
+    "limitations": [
+      "Geen onafhankelijke juridische review",
+      "Geen productiegeschiktheid of conformity assessment",
+      "CEPEJ- en HUDERIA-bronnen zijn niet als bindende wet gemodelleerd",
+      "CETS 225-toepasselijkheid en verdragsstatus vereisen beoordeling per inzetcontext",
+      "OpenMythos- en Djimitflo-bewijsadapters vallen buiten deze bouwslice"
+    ]
+  },
+  "maturityLevel": "L1-poc"
+}

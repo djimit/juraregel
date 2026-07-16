@@ -1,0 +1,209 @@
+{
+  "profileVersion": "2026.1",
+  "verifiedOn": "2026-07-16",
+  "hierarchy": [
+    {
+      "rank": 1,
+      "class": "binding-law",
+      "use": "Direct legal basis where applicable; applicability must be established per use case."
+    },
+    {
+      "rank": 2,
+      "class": "treaty-framework",
+      "use": "Human-rights and rule-of-law framework; treaty status and domestic effect require legal review."
+    },
+    {
+      "rank": 3,
+      "class": "authoritative-soft-law",
+      "use": "Judiciary-specific interpretation and safeguards; never represented as binding legislation."
+    },
+    {
+      "rank": 4,
+      "class": "implementation-method",
+      "use": "Assessment or technical evidence method supporting a control, not an independent legal basis."
+    },
+    {
+      "rank": 5,
+      "class": "context-only",
+      "use": "Comparative practice or discovery source; cannot justify a control by itself."
+    }
+  ],
+  "sources": [
+    {
+      "id": "ECHR",
+      "title": "European Convention on Human Rights",
+      "class": "binding-law",
+      "usage": "control-basis",
+      "date": "1950-11-04",
+      "url": "https://www.echr.coe.int/documents/d/echr/convention_ENG"
+    },
+    {
+      "id": "EU-AI-ACT",
+      "title": "Regulation (EU) 2024/1689 (AI Act)",
+      "class": "binding-law",
+      "usage": "control-basis",
+      "date": "2024-06-13",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng"
+    },
+    {
+      "id": "GDPR",
+      "title": "Regulation (EU) 2016/679 (GDPR)",
+      "class": "binding-law",
+      "usage": "composed-domain",
+      "date": "2016-04-27",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng"
+    },
+    {
+      "id": "CETS-225",
+      "title": "Framework Convention on Artificial Intelligence and Human Rights, Democracy and the Rule of Law",
+      "class": "treaty-framework",
+      "usage": "control-basis",
+      "date": "2024-09-05",
+      "url": "https://rm.coe.int/1680afae3c"
+    },
+    {
+      "id": "CONVENTION-108-PLUS",
+      "title": "Convention 108+",
+      "class": "treaty-framework",
+      "usage": "composed-domain",
+      "date": "2018-05-18",
+      "url": "https://rm.coe.int/convention-108-convention-for-the-protection-of-individuals-with-regar/16808b36f1"
+    },
+    {
+      "id": "CEPEJ-ETHICAL-CHARTER",
+      "title": "European Ethical Charter on the use of AI in judicial systems and their environment",
+      "class": "authoritative-soft-law",
+      "usage": "control-basis",
+      "date": "2018-12-04",
+      "url": "https://rm.coe.int/ethical-charter-en-for-publication-4-december-2018/16808f699c"
+    },
+    {
+      "id": "CEPEJ-ASSESSMENT-2025",
+      "title": "Assessment Tool for the Operationalisation of the CEPEJ Ethical Charter",
+      "class": "authoritative-soft-law",
+      "usage": "control-basis",
+      "date": "2025-06-05",
+      "url": "https://rm.coe.int/cepej-2023-16rev-operationalisation-ai-ethical-charter-en/1680b65218"
+    },
+    {
+      "id": "CEPEJ-GENAI-2025",
+      "title": "Guidelines on the use of generative artificial intelligence for courts",
+      "class": "authoritative-soft-law",
+      "usage": "control-basis",
+      "date": "2025-12-19",
+      "url": "https://rm.coe.int/cepej-2025-18final-en-draft-guidelines-on-the-use-of-generative-ai-for/48802a4ad1"
+    },
+    {
+      "id": "CEPEJ-ACTION-2026-2029",
+      "title": "CEPEJ Valletta Action Plan 2026-2029",
+      "class": "authoritative-soft-law",
+      "usage": "portfolio-context",
+      "date": "2025-12-09",
+      "url": "https://rm.coe.int/cepej-2025-12-en-action-plan-2026-2029/488029d875"
+    },
+    {
+      "id": "CCJE-OPINION-26",
+      "title": "CCJE Opinion No. 26: Moving forward - the use of assistive technology in the judiciary",
+      "class": "authoritative-soft-law",
+      "usage": "control-basis",
+      "date": "2023-12-01",
+      "url": "https://rm.coe.int/opinion-no-26-2023-final/1680adade7"
+    },
+    {
+      "id": "RECHTSPRAAK-AI-STRATEGY",
+      "title": "Verantwoord en innovatief: AI voor een rechtvaardige Rechtspraak",
+      "class": "authoritative-soft-law",
+      "usage": "national-context",
+      "retrievedOn": "2026-07-16",
+      "url": "https://www.rechtspraak.nl/organisatie-en-contact/innovatie-binnen-de-rechtspraak/ai-strategie"
+    },
+    {
+      "id": "HUDERIA-2026",
+      "title": "HUDERIA Methodology and Model",
+      "class": "implementation-method",
+      "usage": "control-evidence",
+      "date": "2026-02-25",
+      "url": "https://rm.coe.int/huderia-methodology-and-model-adopted-provisional-version-2026/48802ac001"
+    },
+    {
+      "id": "IAMA-2026",
+      "title": "Impact Assessment Mensenrechten en Algoritmes",
+      "class": "implementation-method",
+      "usage": "control-evidence",
+      "retrievedOn": "2026-07-16",
+      "url": "https://www.digitaleoverheid.nl/nieuws/iama-aangepast-aan-praktijk-en-regelgeving/"
+    },
+    {
+      "id": "NIST-AI-600-1",
+      "title": "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile",
+      "class": "implementation-method",
+      "usage": "technical-evidence",
+      "date": "2024-07-26",
+      "url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence"
+    },
+    {
+      "id": "ENISA-MULTILAYER-AI",
+      "title": "Multilayer Framework for Good Cybersecurity Practices for AI",
+      "class": "implementation-method",
+      "usage": "technical-evidence",
+      "retrievedOn": "2026-07-16",
+      "url": "https://www.enisa.europa.eu/publications/multilayer-framework-for-good-cybersecurity-practices-for-ai"
+    },
+    {
+      "id": "OWASP-LLM-TOP-10",
+      "title": "OWASP Top 10 for Large Language Model Applications",
+      "class": "implementation-method",
+      "usage": "technical-evidence",
+      "retrievedOn": "2026-07-16",
+      "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/"
+    },
+    {
+      "id": "CEPEJ-RESOURCE-CENTRE",
+      "title": "CEPEJ Resource Centre on Cyberjustice and AI",
+      "class": "context-only",
+      "usage": "discovery-only",
+      "retrievedOn": "2026-07-16",
+      "url": "https://www.coe.int/en/web/cepej/resource-centre-on-cyberjustice-and-ai"
+    },
+    {
+      "id": "CEPEJ-GLOSSARY",
+      "title": "CEPEJ Cyberjustice Glossary",
+      "class": "context-only",
+      "usage": "terminology-only",
+      "retrievedOn": "2026-07-16",
+      "url": "https://www.coe.int/en/web/cepej/glossary-2"
+    },
+    {
+      "id": "CEPEJ-SPAIN-2026",
+      "title": "Spain country presentation on automation",
+      "class": "context-only",
+      "usage": "case-study-only",
+      "retrievedOn": "2026-07-16",
+      "url": "https://rm.coe.int/roundtable-automation-spain-1-/48802c460a"
+    },
+    {
+      "id": "CEPEJ-FRANCE-2026",
+      "title": "France country presentation on automation",
+      "class": "context-only",
+      "usage": "case-study-only",
+      "retrievedOn": "2026-07-16",
+      "url": "https://rm.coe.int/roundtable-automation-france/48802c4429"
+    },
+    {
+      "id": "CEPEJ-CROATIA-2026",
+      "title": "Croatia country presentation on automation",
+      "class": "context-only",
+      "usage": "case-study-only",
+      "retrievedOn": "2026-07-16",
+      "url": "https://rm.coe.int/roundtable-automation-croatia/48802c4427"
+    },
+    {
+      "id": "CEPEJ-ESTONIA-2026",
+      "title": "Estonia country presentation on automation",
+      "class": "context-only",
+      "usage": "case-study-only",
+      "retrievedOn": "2026-07-16",
+      "url": "https://rm.coe.int/roundtable-automation-estonia/48802c4428"
+    }
+  ]
+}

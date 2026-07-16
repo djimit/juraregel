@@ -57,6 +57,7 @@ DOMAINS = {
     "decentrale-regelcheck": {"port": 8518, "version": "2026.1"},
     "woo-publicatieplicht-preflight": {"port": 8519, "version": "2026.1"},
     "sttr-preflight":       {"port": 8520, "version": "2026.1"},
+    "judicial-ai-assurance": {"port": 8521, "version": "2026.1"},
 }
 
 # ─── JREM Direct Access (no API server needed) ────────────────
@@ -471,7 +472,7 @@ def get_resource_list() -> list[dict]:
         {
             "uri": "laws://summary",
             "name": "Knowledge Base samenvatting",
-            "description": "Samenvatting van alle 690+ regels per domein uit de JKB index.",
+            "description": "Samenvatting van alle regels per domein uit de JKB index.",
             "mimeType": "application/json",
         },
     ] + [

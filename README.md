@@ -2,9 +2,9 @@
 
 [![JuraRegel CI](https://github.com/djimit/juraregel/actions/workflows/juraregel-ci.yml/badge.svg)](https://github.com/djimit/juraregel/actions/workflows/juraregel-ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Rule Sets](https://img.shields.io/badge/Rule%20Sets-33%20%287%20L1%2C%2026%20L0%29-blue)](https://github.com/djimit/juraregel)
+[![Rule Sets](https://img.shields.io/badge/Rule%20Sets-34%20%288%20L1%2C%2026%20L0%29-blue)](https://github.com/djimit/juraregel)
 [![Tests](https://img.shields.io/badge/Tests-semantic%20gates-green)](https://github.com/djimit/juraregel)
-[![Regels](https://img.shields.io/badge/JREM%20Regels-690%20%28PoC%29-purple)](https://github.com/djimit/juraregel)
+[![Regels](https://img.shields.io/badge/JREM%20Regels-702%20%28PoC%29-purple)](https://github.com/djimit/juraregel)
 [![Agentic](https://img.shields.io/badge/Agentic-Platform-orange)](https://github.com/djimit/juraregel)
 [![MCP](https://img.shields.io/badge/MCP-12%20tools%20%2B%203%20resources%20%2B%203%20prompts-teal)](https://github.com/djimit/juraregel)
 [![BDD](https://img.shields.io/badge/BDD-7%20scenarios-brightgreen)](https://github.com/djimit/juraregel)
@@ -39,7 +39,7 @@ JuraRegel gebruikt vier maturity-niveaus per use case:
 | L2 | Pilot | Onafhankelijke juridische review, evidence model, auditlog | CI faalt bij self-approval |
 | L3 | Production | Legal sign-off, required checks, threat model, SBOM, OAuth2 | Volledige assurance pipeline |
 
-Huidige status: 26 exports zijn L0 en 7 exports L1. Geen regelset is L2 of L3.
+Huidige status: 26 exports zijn L0 en 8 exports L1. Geen regelset is L2 of L3.
 
 ### Uitvoerbaarheidscontract
 
@@ -56,7 +56,7 @@ evidence rapporteren zij geen compliance-oordeel.
 - **JREM** — Judicial Rule Exchange Model, versioned JSON Schema standaard (v1.0.0 → v1.1.0) voor juridische regels
 - **Rule APIs** — vijf uitvoerbare domeinen; overige domeinen zijn expliciet catalog-only
 - **MCP Server** — 12 tools + 3 resources + 3 prompts voor LLM-agents (Claude, GPT, lokale LLMs)
-- **Knowledge Base** — 690 regels doorzoekbaar met SQLite FTS5; vector search is optioneel en evaluatie-pending
+- **Knowledge Base** — 702 regels doorzoekbaar met SQLite FTS5; vector search is optioneel en evaluatie-pending
 - **BDD Tests** — Gherkin scenarios voor legal team acceptatie (pytest-bdd)
 - **BWB Harvester** — automatische wetwijziging-detectie via BWB API
 - **CI/CD Gates** — 18+ gates: per-use-case (14), JKB (5), extraction (3), schema versioning, BDD, harvester health
@@ -245,6 +245,19 @@ NORA is de **overkoepelende architectuurlaag** die alle use cases verbindt. 15 p
 
 12 regels (classificatie, conformity, transparantie, rechten). Rule API op `localhost:8498`. Bron: EUR-Lex.
 
+## Use Case: Judicial AI Assurance — Rechtspraak onder menselijke regie
+
+**Als** rechterlijke governance- of assurancefunctie **wil ik** per AI-use-case
+aantoonbare, niet-compenseerbare controles **zodat** efficiëntiewinst nooit
+rechterlijke autonomie, toegang tot een menselijke rechter of betwistbaarheid vervangt.
+
+Het catalog-only profiel bevat 12 controls, waaronder 9 hard stops voor onder
+meer rechterlijke bevoegdheid, niet-bindende AI-uitvoer, equality of arms,
+bronherleidbaarheid, publieke regie en formele handelingsbevoegdheid. De vier
+CEPEJ-landenpresentaties zijn uitsluitend als contextbron geregistreerd. De API
+op `localhost:8521` retourneert voor berekeningen bewust `409 catalog_only`.
+Zie het [bouw- en assurancecontract](goals/juraregel-judicial-ai-assurance/GOAL.md).
+
 ## Use Case: AVG/GDPR — Privacy Compliance
 
 **Als** privacy officer of FG **wil ik** automatisch valideren of mijn organisatie voldoet aan de AVG **zodat** ik niet handmatig 10 artikelen hoef te checken.
@@ -429,6 +442,7 @@ graph TB
 | Overheidsstandaarden | 24 | **PoC** | 8496 |
 | NORA | 15 | **PoC** | 8497 |
 | EU AI Act | 12 | PoC | 8498 |
+| Judicial AI Assurance | 12 | **PoC, catalog-only** | 8521 |
 | AVG/GDPR | 10 | PoC | 8499 |
 | **NCSC** | **32** | **PoC** | **8500** |
 | Procesreglement | 4 | PoC | 8491 |
