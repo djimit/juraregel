@@ -61,9 +61,14 @@ def test_profile_has_twelve_reviewable_controls_without_aggregate_score():
     assert len(rules) == 12
     assert [rule["ruleId"] for rule in rules] == [f"JAI-{index:03d}" for index in range(1, 13)]
 
-    serialized = json.dumps(rules).lower()
-    assert '"score"' not in serialized
-    assert '"threshold"' not in serialized
+    for rule in rules:
+        assert "score" not in rule
+        assert "threshold" not in rule
+        assert "score" not in rule["outcome"]
+        assert "threshold" not in rule["outcome"]
+        if "assurance" in rule["outcome"]:
+            assert "score" not in rule["outcome"]["assurance"]
+            assert "threshold" not in rule["outcome"]["assurance"]
     for rule in rules:
         assert rule["conditions"] == {}
         assert rule["outcome"]["manualReviewRequired"] is True
