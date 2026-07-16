@@ -28,7 +28,9 @@ def load_source_register() -> dict:
 def load_client() -> TestClient:
     app_path = USE_CASE / "api" / "app.py"
     spec = importlib.util.spec_from_file_location("judicial_ai_assurance_api", app_path)
+    assert spec is not None, f"Spec kon niet worden geladen voor {app_path}"
     module = importlib.util.module_from_spec(spec)
+    assert spec.loader is not None, "Spec loader is None"
     spec.loader.exec_module(module)
     return TestClient(module.app)
 
