@@ -34,10 +34,10 @@ def test_resource_read_summary():
     result = call_mcp("resources/read", {"uri": "laws://summary"})
     assert "result" in result
     data = json.loads(result["result"]["contents"][0]["text"])
-    assert data["total_rules"] == data["total_versioned_rules"] == 690
+    assert data["total_rules"] == data["total_versioned_rules"] == 702
     assert data["total_current_rules"] <= data["total_versioned_rules"]
-    assert data["total_rule_sets"] == 33
-    assert data["total_repository_domains"] == 32
+    assert data["total_rule_sets"] == 34
+    assert data["total_repository_domains"] == 33
     print("  resources/read(laws://summary): OK")
 
 def test_resource_read_spec():

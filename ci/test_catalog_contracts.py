@@ -14,7 +14,8 @@ CATALOG_DOMAINS = (
     "btw-tarieven", "classificatie", "compliance-debt", "data-overheid-dcat",
     "dpia-model", "eu-ai-act", "forumstandaardisatie", "gegevensdelingsbeleid",
     "ind-verblijfsregels", "ncsc", "nis2", "nora", "overheidsstandaarden",
-    "procesreglement", "publicatie", "regulatory-impact", "traceability", "wmo",
+    "procesreglement", "publicatie", "regulatory-impact", "traceability",
+    "judicial-ai-assurance", "wmo",
     "ww-uitkering",
 )
 

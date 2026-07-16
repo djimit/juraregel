@@ -83,7 +83,8 @@
         "regulatory-impact",
         "decentrale-regelcheck",
         "woo-publicatieplicht-preflight",
-        "sttr-preflight"
+        "sttr-preflight",
+        "judicial-ai-assurance"
       ]
     },
     "procedureType": {
@@ -99,7 +100,8 @@
         "toeslagen-berekening",
         "decentrale-regelcheck",
         "woo-publicatieplicht-preflight",
-        "sttr-preflight"
+        "sttr-preflight",
+        "judicial-ai-assurance"
       ]
     },
     "conflictResolution": {

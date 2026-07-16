@@ -1,0 +1,21 @@
+regels voor judicial-ai-assurance versie 2026.1
+
+regel JAI-001 "Onderbouw subsidiariteit voordat generatieve AI wordt ingezet"
+wanneer een gerechtelijke AI-toepassing wordt voorgesteld
+dan blokkeer voortgang totdat probleem, conventionele alternatieven en noodzaak zijn vastgelegd
+
+regel JAI-003 "Rechterlijke bevoegdheid blijft exclusief menselijk"
+wanneer AI feiten, recht, bewijs of een beslissing kan vormen
+dan blokkeer delegatie en vereis betekenisvolle toegang tot een menselijke rechter
+
+regel JAI-005 "AI-gebruik moet betwistbaar zijn"
+wanneer AI een proceshandeling of rechterlijk oordeel materieel ondersteunt
+dan vereis bekendmaking, tegenspraak, equality of arms en een effectief rechtsmiddel
+
+regel JAI-006 "Iedere inhoudelijke claim moet naar een authentieke bron herleidbaar zijn"
+wanneer AI juridische of feitelijke inhoud produceert
+dan vereis claim-to-source lineage met bron-, passage-, versie- en systeemgegevens
+
+regel JAI-011 "AI krijgt geen autonome formele handelingsbevoegdheid"
+wanneer een AI-systeem wil opslaan, verzenden, indienen of beslissen
+dan vereis afzonderlijke validatie en autorisatie door een bevoegde professional
