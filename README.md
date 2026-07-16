@@ -258,6 +258,13 @@ CEPEJ-landenpresentaties zijn uitsluitend als contextbron geregistreerd. De API
 op `localhost:8521` retourneert voor berekeningen bewust `409 catalog_only`.
 Zie het [bouw- en assurancecontract](goals/juraregel-judicial-ai-assurance/GOAL.md).
 
+De statische [Judicial AI Admission & Evidence Gate](playground/judicial-ai.html)
+laat drie synthetische scenario's zien en verbindt het profiel met
+provider-neutrale OpenMythos- en Djimitflo-evidence. De demo berekent geen
+compliancescore: ontbrekende of gefaalde hard-stop-evidence blokkeert, en zonder
+een versiegebonden menselijke eindbeslissing blijft de uitkomst
+`review-required`. Zie het [integratie- en verificatiecontract](docs/judicial-ai-admission-demo.md).
+
 ## Use Case: AVG/GDPR — Privacy Compliance
 
 **Als** privacy officer of FG **wil ik** automatisch valideren of mijn organisatie voldoet aan de AVG **zodat** ik niet handmatig 10 artikelen hoef te checken.

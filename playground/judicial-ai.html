@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta property="og:title" content="Djimit Judicial AI Admission & Evidence Gate">
+  <meta property="og:description" content="Een niet-scorende demonstratie van juridische controls, modelgedrag, uitvoeringsbewijs en een menselijke eindgate.">
+  <title>Judicial AI Admission &amp; Evidence Gate</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#08111f;color:#e5eefb;font:16px/1.55 system-ui,sans-serif}main{max-width:1100px;margin:auto;padding:2rem}
+    a{color:#7dd3fc}h1{font-size:clamp(1.8rem,5vw,3.4rem);line-height:1.05;margin:.6rem 0}.lede{max-width:760px;color:#a9bad0}.meta,.panel{background:#101d30;border:1px solid #263b57;border-radius:14px;padding:1rem;margin:1rem 0}
+    .meta{display:flex;gap:1rem;flex-wrap:wrap}.meta span{color:#a9bad0}.meta strong{color:#fff}label{display:block;font-weight:700;margin-bottom:.35rem}select{width:100%;max-width:620px;padding:.7rem;border:1px solid #45617f;border-radius:8px;background:#0c1728;color:#fff;font:inherit}
+    .status{display:inline-block;padding:.3rem .65rem;border-radius:999px;font-weight:800;letter-spacing:.02em}.blocked{background:#5f1b26;color:#fecdd3}.review-required{background:#573b0b;color:#fde68a}.conditionally-admissible{background:#064e3b;color:#a7f3d0}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:.8rem}.control{border:1px solid #263b57;border-left:5px solid #64748b;border-radius:10px;padding:.8rem;background:#0b1728}.control.blocked-border{border-left-color:#fb7185}.control.review-border{border-left-color:#fbbf24}
+    .control h3{font-size:1rem;margin:0 0 .25rem}.control p{margin:.25rem 0;color:#a9bad0;font-size:.9rem}.tag{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:#8fa8c4}.list{margin:.25rem 0 0;padding-left:1.2rem;color:#c9d6e6}.evidence{font-size:.88rem;border-top:1px solid #263b57;padding:.65rem 0}.evidence:first-child{border-top:0}.failed{color:#fda4af}.observed{color:#93c5fd}.notice{border-left:4px solid #38bdf8}.hash{overflow-wrap:anywhere;font:12px ui-monospace,monospace;color:#7f96b1}.footer{color:#8196af;font-size:.85rem;margin-top:2rem}
+    @media(max-width:600px){main{padding:1rem}.meta{display:block}.meta div{margin:.3rem 0}}
+  </style>
+</head>
+<body>
+<main>
+  <a href="index.html">← JuraRegel Playground</a>
+  <h1>Judicial AI Admission &amp; Evidence Gate</h1>
+  <p class="lede">Djimit-demonstratie: JuraRegel-controls, OpenMythos-gedragsevidence en Djimitflo-uitvoeringsbewijs blijven afzonderlijke bewijslagen. Negen hard stops kunnen nooit worden gecompenseerd door een hoge modelscore.</p>
+
+  <div class="meta" id="profile" aria-live="polite"></div>
+  <div class="panel notice"><strong>Geen juridisch oordeel.</strong> <span id="disclaimer">Evidence pack laden…</span></div>
+
+  <section class="panel">
+    <label for="scenario">Demonstratiescenario</label>
+    <select id="scenario"></select>
+    <div id="summary" aria-live="polite"></div>
+  </section>
+
+  <section>
+    <h2>Controluitkomsten</h2>
+    <div class="grid" id="controls"></div>
+  </section>
+
+  <section class="panel">
+    <h2>Bewijsprovenance</h2>
+    <div id="evidence"></div>
+  </section>
+
+  <p class="footer">Statische, synthetische PoC. De menselijke eindgate wordt niet door deze pagina gesimuleerd. Bundle: <span class="hash" id="bundleHash"></span></p>
+</main>
+<script>
+  const $ = id => document.getElementById(id);
+  const text = (tag, value, className) => {const node=document.createElement(tag);node.textContent=value;if(className)node.className=className;return node};
+  let data;
+
+  function renderScenario(index){
+    const item=data.scenarios[index];
+    const summary=$("summary");summary.replaceChildren();
+    const heading=text("h2",item.title);heading.append(" ",text("span",item.status,item.status+" status"));summary.append(heading,text("p",item.summary));
+    if(item.blockedControls.length)summary.append(text("p","Niet-compenseerbare blokkades: "+item.blockedControls.join(", "),"failed"));
+    else summary.append(text("p","Geen hard stop geactiveerd; bevoegde menselijke beoordeling blijft vereist.","observed"));
+
+    const controls=$("controls");controls.replaceChildren();
+    item.controls.forEach(control=>{
+      const card=document.createElement("article");card.className="control "+(control.status==="blocked"?"blocked-border":"review-border");
+      card.append(text("div",control.controlId+" · "+control.controlClass,"tag"),text("h3",control.name),text("p",control.status,control.status==="blocked"?"failed":"observed"));
+      if(control.missingEvidence.length)card.append(list("Ontbreekt",control.missingEvidence));
+      if(control.failedEvidence.length)card.append(list("Gefaalde evidence",control.failedEvidence));
+      card.append(text("p",control.evidenceRefs.length?"Evidence: "+control.evidenceRefs.join(", "):"Geen evidence"));controls.append(card);
+    });
+
+    const evidence=$("evidence");evidence.replaceChildren();
+    item.evidence.forEach(record=>{
+      const row=document.createElement("div");row.className="evidence";
+      row.append(text("strong",record.id+" · "+record.sourceSystem),text("span"," "+record.status,record.status),text("p",record.summary),text("div",record.artifactRef,"hash"));
+      if(record.artifactHash)row.append(text("div","Artifact: "+record.artifactHash,"hash"));
+      row.append(text("div","Record: "+record.recordHash,"hash"));
+      evidence.append(row);
+    });
+  }
+
+  function list(label,values){const wrap=document.createElement("div");wrap.append(text("strong",label));const ul=document.createElement("ul");ul.className="list";values.forEach(value=>ul.append(text("li",value)));wrap.append(ul);return wrap}
+
+  fetch("judicial-ai-demo.json").then(response=>{if(!response.ok)throw new Error("Evidence pack niet beschikbaar");return response.json()}).then(payload=>{
+    data=payload;$("disclaimer").textContent=data.disclaimer;$("bundleHash").textContent=data.bundleHash;
+    const profile=$("profile");profile.append(meta("Profiel",data.profile.domain+" "+data.profile.version),meta("Maturity",data.profile.status),meta("Controls",String(data.profile.ruleCount)),meta("Hard stops",String(data.profile.hardStopCount)));
+    data.scenarios.forEach((item,index)=>{const option=document.createElement("option");option.value=index;option.textContent=item.title+" — "+item.status;$("scenario").append(option)});
+    $("scenario").addEventListener("change",event=>renderScenario(Number(event.target.value)));renderScenario(0);
+  }).catch(error=>{$("disclaimer").textContent=error.message;$("disclaimer").className="failed"});
+
+  function meta(label,value){const node=document.createElement("div");node.append(text("span",label+": "),text("strong",value));return node}
+</script>
+</body>
+</html>

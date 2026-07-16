@@ -1,3 +1,4 @@
+import copy
 import importlib.util
 import json
 import sys
@@ -11,6 +12,8 @@ ROOT = Path(__file__).resolve().parents[3]
 USE_CASE = Path(__file__).resolve().parents[1]
 JREM_PATH = USE_CASE / "jrem" / "exports" / "judicial-ai-assurance-2026.1.json"
 SOURCE_REGISTER_PATH = USE_CASE / "sources" / "source-register.json"
+DEMO_DIR = USE_CASE / "demo"
+DEMO_OUTPUT_PATH = ROOT / "playground" / "judicial-ai-demo.json"
 
 sys.path.insert(0, str(ROOT / "shared"))
 
@@ -33,6 +36,24 @@ def load_client() -> TestClient:
     assert spec.loader is not None, "Spec loader is None"
     spec.loader.exec_module(module)
     return TestClient(module.app)
+
+
+def load_demo_module():
+    module_path = DEMO_DIR / "admission_gate.py"
+    spec = importlib.util.spec_from_file_location("judicial_ai_admission_gate", module_path)
+    assert spec is not None and spec.loader is not None
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def load_adapter_module():
+    module_path = DEMO_DIR / "evidence_adapter.py"
+    spec = importlib.util.spec_from_file_location("judicial_ai_evidence_adapter", module_path)
+    assert spec is not None and spec.loader is not None
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
 
 
 def test_jrem_validates_against_shared_schema():
@@ -127,3 +148,145 @@ def test_composed_domains_exist_and_are_not_duplicated_as_runtime_dependencies()
     assert reused <= available
     assert {"eu-ai-act", "avg-gdpr", "dpia-model", "traceability"} <= reused
     assert not (USE_CASE / "lib").exists()
+
+
+def test_admission_demo_is_deterministic_non_scoring_and_schema_valid():
+    module = load_demo_module()
+    generated = module.build_demo(JREM_PATH, DEMO_DIR / "scenarios.json")
+    committed = json.loads(DEMO_OUTPUT_PATH.read_text())
+    schema = json.loads((DEMO_DIR / "evidence-bundle.schema.json").read_text())
+
+    assert generated == committed
+    jsonschema.Draft202012Validator(schema).validate(generated)
+    assert [item["status"] for item in generated["scenarios"]] == [
+        "review-required", "blocked", "blocked"
+    ]
+    assert generated["profile"]["hardStopCount"] == 9
+    assert "score" not in json.dumps(generated).lower()
+
+
+def test_admission_demo_requires_matching_human_final_decision():
+    module = load_demo_module()
+    profile = load_jrem()
+    scenarios = json.loads((DEMO_DIR / "scenarios.json").read_text())
+    scenario = copy.deepcopy(scenarios["scenarios"][0])
+
+    scenario["humanDecision"] = {
+        "decision": "approved",
+        "profileVersion": "2025.1",
+        "actor": "independent-reviewer",
+        "role": "jurist",
+        "reason": "synthetic test only"
+    }
+    wrong_version = module.evaluate_scenario(profile, scenarios["commonEvidence"], scenario)
+    assert wrong_version["status"] == "review-required"
+
+    scenario["humanDecision"]["profileVersion"] = profile["version"]
+    approved = module.evaluate_scenario(profile, scenarios["commonEvidence"], scenario)
+    assert approved["status"] == "conditionally-admissible"
+
+    scenario["humanDecision"]["actor"] = ""
+    incomplete_approval = module.evaluate_scenario(profile, scenarios["commonEvidence"], scenario)
+    assert incomplete_approval["status"] == "review-required"
+
+
+def test_admission_demo_fails_closed_without_hard_stop_evidence():
+    module = load_demo_module()
+    profile = load_jrem()
+    scenarios = json.loads((DEMO_DIR / "scenarios.json").read_text())
+    common = [
+        item for item in scenarios["commonEvidence"]
+        if "source-hash" not in item["artifactTypes"]
+    ]
+    result = module.evaluate_scenario(profile, common, scenarios["scenarios"][0])
+
+    assert result["status"] == "blocked"
+    jai_006 = next(item for item in result["controls"] if item["controlId"] == "JAI-006")
+    assert jai_006["status"] == "blocked"
+    assert "source-hash" in jai_006["missingEvidence"]
+
+
+def test_required_evidence_failure_cannot_auto_approve_but_is_not_a_hard_stop():
+    module = load_demo_module()
+    profile = load_jrem()
+    scenarios = json.loads((DEMO_DIR / "scenarios.json").read_text())
+    scenario = copy.deepcopy(scenarios["scenarios"][0])
+    scenario["evidence"] = [{
+        "sourceSystem": "openmythos",
+        "status": "failed",
+        "artifactRef": "demo://security/failure",
+        "summary": "Synthetic security test failure.",
+        "artifactTypes": ["indirect-prompt-injection-tests"]
+    }]
+
+    result = module.evaluate_scenario(profile, scenarios["commonEvidence"], scenario)
+    jai_010 = next(item for item in result["controls"] if item["controlId"] == "JAI-010")
+    assert jai_010["status"] == "review-required"
+    assert jai_010["failedEvidence"] == ["indirect-prompt-injection-tests"]
+    assert result["status"] == "review-required"
+
+
+def test_static_demo_uses_generated_pack_without_simulating_human_approval():
+    html = (ROOT / "playground" / "judicial-ai.html").read_text()
+    index = (ROOT / "playground" / "index.html").read_text()
+
+    assert 'fetch("judicial-ai-demo.json")' in html
+    assert "humanDecision" not in html
+    assert ".innerHTML" not in html
+    assert 'href="judicial-ai.html"' in index
+
+
+def test_openmythos_adapter_preserves_negative_oracle_evidence():
+    adapter = load_adapter_module()
+    fixtures = DEMO_DIR / "fixtures"
+    record = adapter.adapt_openmythos(
+        fixtures / "openmythos-run.jsonl",
+        fixtures / "openmythos-oracle.jsonl",
+        "fixture-openmythos-run",
+    )
+
+    assert record["sourceSystem"] == "openmythos"
+    assert record["status"] == "failed"
+    assert record["runId"] == "fixture-openmythos-run"
+    assert record["artifactTypes"] == [
+        "independent-evaluation", "indirect-prompt-injection-tests"
+    ]
+    assert record["artifactHash"].startswith("sha256:")
+    assert "1 oracle failures" in record["summary"]
+
+
+def test_openmythos_adapter_rejects_an_oracle_for_an_unknown_case(tmp_path):
+    adapter = load_adapter_module()
+    fixtures = DEMO_DIR / "fixtures"
+    unknown_oracle = tmp_path / "oracle.jsonl"
+    unknown_oracle.write_text(
+        '{"case_id":"unknown-001","oracle_applicable":true,"oracle_pass":true}\n'
+    )
+
+    try:
+        adapter.adapt_openmythos(fixtures / "openmythos-run.jsonl", unknown_oracle)
+    except ValueError as error:
+        assert "unknown run cases" in str(error)
+    else:
+        raise AssertionError("Unknown oracle case was accepted")
+
+
+def test_djimitflo_adapter_does_not_turn_a_score_into_admission():
+    adapter = load_adapter_module()
+    record = adapter.adapt_djimitflo(DEMO_DIR / "fixtures" / "djimitflo-run.json")
+
+    assert record["sourceSystem"] == "djimitflo"
+    assert record["status"] == "observed"
+    assert record["runId"] == "6a6f2ca0-370f-460e-94b4-cfa660cfa1b1"
+    assert "overall_score" not in record
+    assert "score" not in record["summary"].lower()
+    assert "deepseek-v4-pro:cloud" in record["summary"]
+
+    normalized = load_demo_module().normalise_evidence([record])[0]
+    bundle_schema = json.loads((DEMO_DIR / "evidence-bundle.schema.json").read_text())
+    evidence_schema = {
+        "$schema": bundle_schema["$schema"],
+        "$defs": bundle_schema["$defs"],
+        **bundle_schema["properties"]["scenarios"]["items"]["properties"]["evidence"]["items"],
+    }
+    jsonschema.Draft202012Validator(evidence_schema).validate(normalized)
