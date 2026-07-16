@@ -121,7 +121,8 @@ def test_composed_domains_exist_and_are_not_duplicated_as_runtime_dependencies()
     reused = {
         domain
         for rule in load_jrem()["rules"]
-        for domain in rule["outcome"]["assurance"]["reusesDomains"]
+        if "assurance" in rule["outcome"]
+        for domain in rule["outcome"]["assurance"].get("reusesDomains", [])
     }
     assert reused <= available
     assert {"eu-ai-act", "avg-gdpr", "dpia-model", "traceability"} <= reused
