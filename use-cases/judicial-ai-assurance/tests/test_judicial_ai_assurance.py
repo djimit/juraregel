@@ -100,6 +100,7 @@ def test_every_control_source_is_ranked_and_context_only_sources_are_excluded():
     for rule in load_jrem()["rules"]:
         authorities = set(rule["outcome"]["assurance"]["sourceAuthority"])
         for source_ref in rule["sourceRefs"]:
+            assert source_ref["url"] in source_by_url, f"Bron-URL {source_ref['url']} ontbreekt in source-register.json"
             source = source_by_url[source_ref["url"]]
             assert source["class"] != "context-only"
             assert source["class"] in authorities
