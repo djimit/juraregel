@@ -1,0 +1,20 @@
+agent: griffierecht-rule-api
+version: "2026.1"
+description: "Policy for griffierecht calculations — L2 pilot. High-value calculations require human approval."
+
+rules:
+  # Read operations — always permitted
+  - permit: calculate
+  - permit: list_versions
+  - permit: get_rule
+  - permit: health_check
+
+  # High-value calculations — require human approval
+  - require_approval: calculate
+    when: "vorderingWaarde > 100000"
+
+  # Mutating actions — always blocked at L2
+  - forbid: modify_ruleset
+  - forbid: delete_audit_trail
+  - forbid: override_maturity_level
+  - forbid: bypass_gate
