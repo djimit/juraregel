@@ -1,3 +1,27 @@
+## [2.5.0] - 2026-07-17 — NEDERUS v2.0 + eIDAS 2.0 Combined Release
+
+### NEDERUS v2.0
+- 8 unified controls (was 5): +NED-06 (CRA), +NED-07 (DSA), +NED-08 (AI Liability)
+- 8 frameworks (was 5): +CRA, DSA, AI Liability Directive
+- Tier system: priority (>=3 frameworks) + standard (>=2)
+- Per-framework crosswalks (8 files: NIST, EU AI Act, BIO2, NIS2, NORA, CRA, DSA, AI Liability)
+- Validation pipeline with tier classification
+- Djimitflo integration artifacts (~120 lines TS)
+- OpenSpec change: openspec/changes/nederus-framework-v1/
+
+### eIDAS 2.0
+- 32 rules, 21 categories, port 8523
+- Full eIDAS 1.0 + 2.0 coverage
+- API: wallet-status, deadlines, rapport, categorieen
+- 52 tests passed
+
+### MCP Server
+- 16 tools (was 12): +nederus.list/get/crosswalk/lookup
+- NEDERUS_CONTROLS v2.0 data
+- eidas domain registered
+
+---
+
 ## [2.4.1] - 2026-07-17 — eIDAS 2.0 Full Implementation
 
 ### Added
