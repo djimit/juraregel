@@ -1,0 +1,374 @@
+version: "2.0.0"
+last_updated: "2026-07-17"
+frameworks:
+  nist_ai_rmf: "1.0"
+  eu_ai_act: "2024/1689"
+  bio2: "2.2"
+  nis2: "2022/2555"
+  nora: "2024"
+  cra: "2024/2847"
+  dsa: "2022/2065"
+  ai_liability: "2024/2853"
+
+selection_criteria:
+  priority: "Control appears in >=3 frameworks (highest overlap)"
+  standard: "Control appears in >=2 frameworks (proven overlap)"
+  minimum: ">=2 frameworks for inclusion"
+
+controls:
+  - id: NED-01
+    title: AI Impact Assessment
+    description: >
+      Conduct and document impact assessments before deploying AI systems.
+      Assess risks to individuals, groups, and society. Determine risk classification
+      per applicable frameworks. Obtain stakeholder sign-off before deployment.
+    severity: high
+    frameworks:
+      nist_ai_rmf:
+        function: MAP
+        reference: "MAP-1.1: Identify and assess risks to individuals, groups, and society"
+        relation: equivalent
+      eu_ai_act:
+        reference: "Art. 9(2): Risk management system; Art. 27: Fundamental Rights Impact Assessment"
+        relation: equivalent
+      bio2:
+        reference: "A.5-6: Risicoanalyse en -behandeling"
+        relation: partial
+      nis2:
+        reference: "Art. 21: Risk management measures"
+        relation: partial
+      nora:
+        reference: "Grondslag-toets: Beoordeling grondslag bij AI-toepassingen"
+        relation: partial
+      cra:
+        reference: "Art. 10: Risk assessment for products with digital elements"
+        relation: partial
+      dsa:
+        reference: "gap"
+        relation: gap
+      ai_liability:
+        reference: "Art. 3: Burden of proof in AI damage claims"
+        relation: partial
+    evidence_required:
+      - Documented impact assessment with scope, stakeholders, and methodology
+      - Risk classification per EU AI Act Art. 6 (prohibited/high-risk/limited/minimal)
+      - Fundamental Rights Impact Assessment (FRIA) for high-risk systems
+      - Stakeholder sign-off and review trail
+    implementation_guidance: >
+      Use the unified NEDERUS Impact Assessment template (see crosswalks/eu-ai-act.md).
+      Map results to each framework's specific reporting format. For BIO2, integrate
+      with existing risk management process (A.5-6). For NIS2, ensure assessment covers
+      cybersecurity risks per Art. 21. For CRA, include product-level risk assessment.
+
+  - id: NED-02
+    title: Bias & Fairness Testing
+    description: >
+      Test AI systems for bias and unfair outcomes across relevant demographic groups.
+      Document testing methodology, results, and remediation actions. Monitor for
+      drift post-deployment.
+    severity: high
+    frameworks:
+      nist_ai_rmf:
+        function: MAP + MEASURE
+        reference: "MAP-2.3: Potential impacts to individuals; MEASURE-1.2: AI system trustworthiness"
+        relation: equivalent
+      eu_ai_act:
+        reference: "Art. 10: Data and data governance — bias monitoring in training data"
+        relation: equivalent
+      bio2:
+        reference: "gap"
+        relation: gap
+      nis2:
+        reference: "gap"
+        relation: gap
+      nora:
+        reference: "Evenredigheid: AI-besluiten mogen niet discrimineren"
+        relation: partial
+      cra:
+        reference: "gap"
+        relation: gap
+      dsa:
+        reference: "Art. 27: Transparency of recommender system parameters"
+        relation: partial
+      ai_liability:
+        reference: "Art. 4(3): Non-compliance with instructions as contributory cause"
+        relation: partial
+    evidence_required:
+      - Bias testing methodology document
+      - Test results with demographic breakdown
+      - Remediation plan for identified biases
+      - Post-deployment monitoring schedule
+    implementation_guidance: >
+      BIO2, NIS2, and CRA do not address AI-specific bias; this control fills that gap.
+      Use EU AI Act Art. 10 as the primary reference for bias testing methodology.
+      For NORA compliance, document how fairness aligns with the Evenredigheid principle.
+      For DSA, document recommender system fairness if applicable.
+
+  - id: NED-03
+    title: Human Oversight
+    description: >
+      Ensure effective human oversight of AI systems. Define oversight roles,
+      intervention capabilities, and escalation procedures. Document oversight
+      arrangements in system documentation.
+    severity: high
+    frameworks:
+      nist_ai_rmf:
+        function: GOVERN + MANAGE
+        reference: "GOVERN-1.4: Human oversight policies; MANAGE-2.1: Human intervention"
+        relation: equivalent
+      eu_ai_act:
+        reference: "Art. 14: Human oversight measures for high-risk AI systems"
+        relation: equivalent
+      bio2:
+        reference: "gap"
+        relation: gap
+      nis2:
+        reference: "gap"
+        relation: gap
+      nora:
+        reference: "Proportionaliteit: Menselijke tussenkomst bij proportionele AI-inzet"
+        relation: partial
+      cra:
+        reference: "gap"
+        relation: gap
+      dsa:
+        reference: "gap"
+        relation: gap
+      ai_liability:
+        reference: "Art. 4(1): Human oversight as defense against liability"
+        relation: partial
+    evidence_required:
+      - Documented human oversight plan per AI system
+      - Defined oversight roles and responsibilities
+      - Intervention procedures (stop, override, escalate)
+      - Training records for oversight personnel
+    implementation_guidance: >
+      BIO2, NIS2, CRA, and DSA address access control generically but not AI-specific oversight.
+      EU AI Act Art. 14 is the primary reference. For NORA, document how oversight
+      ensures proportional AI use. For AI Liability, document oversight as defense.
+
+  - id: NED-04
+    title: Transparency & Explainability
+    description: >
+      Ensure AI system decisions are explainable to affected individuals and
+      oversight bodies. Provide meaningful information about system logic,
+      data sources, and decision criteria. Meet transparency obligations per
+      applicable frameworks.
+    severity: medium
+    frameworks:
+      nist_ai_rmf:
+        function: MEASURE
+        reference: "MEASURE-1.3: Explainability and interpretability"
+        relation: equivalent
+      eu_ai_act:
+        reference: "Art. 13: Transparency and provision of information; Art. 50: Transparency obligations"
+        relation: equivalent
+      bio2:
+        reference: "gap"
+        relation: gap
+      nis2:
+        reference: "gap"
+        relation: gap
+      nora:
+        reference: "Openbaarheid: Transparantie over AI-besluitvorming"
+        relation: partial
+      cra:
+        reference: "Art. 13: Information and instructions to users"
+        relation: partial
+      dsa:
+        reference: "Art. 27: Transparency of recommender systems; Art. 39: Data access for vetted researchers"
+        relation: equivalent
+      ai_liability:
+        reference: "Art. 5: Right to access information about AI systems"
+        relation: partial
+    evidence_required:
+      - System documentation describing AI logic and decision criteria
+      - User-facing transparency notices (what AI is used, why, how to contest)
+      - Technical documentation for oversight bodies
+      - Records of transparency requests and responses
+    implementation_guidance: >
+      EU AI Act Art. 13 and Art. 50 define specific transparency obligations.
+      For DSA compliance, document recommender system transparency per Art. 27.
+      For CRA, provide user instructions per Art. 13.
+      For NORA, document how transparency supports the Openbaarheid principle.
+
+  - id: NED-05
+    title: Incident Response & Reporting
+    description: >
+      Establish incident response procedures for AI systems. Report serious incidents
+      per applicable timelines. Document root cause, impact, and remediation.
+      Maintain incident register for audit purposes.
+    severity: high
+    frameworks:
+      nist_ai_rmf:
+        function: MANAGE
+        reference: "MANAGE-2.3: Incident response and recovery"
+        relation: equivalent
+      eu_ai_act:
+        reference: "Art. 72: Reporting of serious incidents"
+        relation: equivalent
+      bio2:
+        reference: "C.6-7: Incident response and reporting"
+        relation: equivalent
+      nis2:
+        reference: "Art. 23: Incident reporting (24h preliminary, 1 month detailed)"
+        relation: equivalent
+      nora:
+        reference: "gap"
+        relation: gap
+      cra:
+        reference: "Art. 11: Vulnerability handling and incident reporting"
+        relation: equivalent
+      dsa:
+        reference: "Art. 13: Notice and action mechanisms"
+        relation: partial
+      ai_liability:
+        reference: "Art. 8: Disclosure of AI-related evidence"
+        relation: partial
+    evidence_required:
+      - Documented AI incident response plan
+      - Incident register with classification and timeline
+      - Evidence of timely reporting to relevant authorities
+      - Post-incident review reports with remediation actions
+      - Vulnerability disclosure process (CRA compliance)
+    implementation_guidance: >
+      CONFLICT RESOLVED: NIS2 requires 24h preliminary notification; EU AI Act Art. 72
+      allows 15 days for initial report. Apply most stringent: 24h to national CSIRT
+      (NIS2), 15-day formal report to EU AI Office (EU AI Act). For CRA, implement
+      vulnerability handling per Art. 11. See crosswalks/conflicts.md for full resolution.
+
+  - id: NED-06
+    title: Secure Development & Vulnerability Management
+    description: >
+      Implement secure development practices for AI systems with digital elements.
+      Establish vulnerability handling processes, patch management, and secure
+      by design principles. Report vulnerabilities and incidents per CRA timelines.
+    severity: high
+    frameworks:
+      nist_ai_rmf:
+        function: GOVERN
+        reference: "GOVERN-1.2: Secure development policies"
+        relation: partial
+      eu_ai_act:
+        reference: "Art. 15: Accuracy, robustness, and cybersecurity"
+        relation: partial
+      bio2:
+        reference: "B.3: Beveiliging in ontwikkeling en onderhoud"
+        relation: equivalent
+      nis2:
+        reference: "Art. 21(2)(d): Security in network/system development"
+        relation: partial
+      nora:
+        reference: "Beveiliging is basisvoorwaarde"
+        relation: partial
+      cra:
+        reference: "Art. 11: Vulnerability handling; Art. 13: Secure by design"
+        relation: equivalent
+      dsa:
+        reference: "gap"
+        relation: gap
+      ai_liability:
+        reference: "Art. 4(3): Product security as defense factor"
+        relation: partial
+    evidence_required:
+      - Secure development lifecycle documentation
+      - Vulnerability disclosure policy and process
+      - Patch management records
+      - Penetration test reports for AI systems
+      - CRA conformity assessment (if applicable)
+    implementation_guidance: >
+      CRA is the primary framework for this control (EU 2024/2847, in force 2026-2027).
+      BIO2 B.3 provides the baseline for government organizations. EU AI Act Art. 15
+      requires cybersecurity resilience. For AI Liability, document security measures
+      as defense against negligence claims. Note: CRA applies to products with digital
+      elements placed on the EU market — PoC platforms may be exempt.
+
+  - id: NED-07
+    title: Platform Transparency & Content Governance
+    description: >
+      Ensure transparency of algorithmic content moderation and recommender systems.
+      Provide notice-and-action mechanisms for illegal content. Enable data access
+      for vetted researchers. Document platform governance decisions.
+    severity: medium
+    frameworks:
+      nist_ai_rmf:
+        function: MEASURE
+        reference: "MEASURE-1.1: Metrics for platform governance"
+        relation: partial
+      eu_ai_act:
+        reference: "Art. 13: Transparency obligations for AI systems"
+        relation: partial
+      bio2:
+        reference: "gap"
+        relation: gap
+      nis2:
+        reference: "gap"
+        relation: gap
+      nora:
+        reference: "Openbaarheid: Transparantie over dienstverlening"
+        relation: partial
+      cra:
+        reference: "gap"
+        relation: gap
+      dsa:
+        reference: "Art. 13-15: Notice and action; Art. 27: Recommender transparency; Art. 39: Data access"
+        relation: equivalent
+      ai_liability:
+        reference: "Art. 5: Access to information for damage claims"
+        relation: partial
+    evidence_required:
+      - Content moderation policy and procedures
+      - Recommender system transparency disclosures
+      - Notice-and-action mechanism documentation
+      - Data access policy for vetted researchers
+    implementation_guidance: >
+      DSA is the primary framework for this control (EU 2022/2065). Relevant for
+      organizations operating platforms with AI-driven content moderation or
+      recommender systems. EU AI Act Art. 13 provides additional transparency
+      requirements. For AI Liability, document platform decisions for evidence preservation.
+
+  - id: NED-08
+    title: AI Liability & Evidence Preservation
+    description: >
+      Establish processes for preserving AI-related evidence for potential damage
+      claims. Document AI system behavior, decisions, and human oversight interactions.
+      Enable disclosure of evidence per AI Liability Directive requirements.
+    severity: high
+    frameworks:
+      nist_ai_rmf:
+        function: MANAGE
+        reference: "MANAGE-3: AI risk management documentation"
+        relation: partial
+      eu_ai_act:
+        reference: "Art. 12: Record-keeping and logging"
+        relation: equivalent
+      bio2:
+        reference: "C.4: Logging en monitoring"
+        relation: partial
+      nis2:
+        reference: "Art. 23: Incident documentation"
+        relation: partial
+      nora:
+        reference: "Verantwoordelijkheid: Aantoonbare AI-governance"
+        relation: partial
+      cra:
+        reference: "Art. 11: Incident and vulnerability documentation"
+        relation: partial
+      dsa:
+        reference: "Art. 13: Content moderation records"
+        relation: partial
+      ai_liability:
+        reference: "Art. 3: Burden of proof; Art. 5: Disclosure; Art. 8: Evidence"
+        relation: equivalent
+    evidence_required:
+      - AI system logging and record-keeping policy
+      - Evidence preservation procedures for damage claims
+      - Documentation of AI system behavior and decisions
+      - Human oversight interaction logs
+      - Disclosure procedures for court proceedings
+    implementation_guidance: >
+      AI Liability Directive (EU 2024/2853) is the primary framework, deadline December 2026.
+      EU AI Act Art. 12 requires record-keeping for high-risk systems. BIO2 C.4 provides
+      logging baseline. For DSA, preserve content moderation records. Key: document
+      that AI system behavior was traceable and human oversight was present — this is
+      the primary defense against liability claims.

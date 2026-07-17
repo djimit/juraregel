@@ -84,7 +84,9 @@
         "decentrale-regelcheck",
         "woo-publicatieplicht-preflight",
         "sttr-preflight",
-        "judicial-ai-assurance"
+        "judicial-ai-assurance",
+        "itgc-kader",
+        "eidas"
       ]
     },
     "procedureType": {
@@ -101,7 +103,9 @@
         "decentrale-regelcheck",
         "woo-publicatieplicht-preflight",
         "sttr-preflight",
-        "judicial-ai-assurance"
+        "judicial-ai-assurance",
+        "itgc-kader",
+        "eidas-compliance"
       ]
     },
     "conflictResolution": {

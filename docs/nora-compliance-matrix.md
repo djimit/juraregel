@@ -42,3 +42,20 @@ graph TD
 | Event-driven | Overheidsstandaarden | 8496 | 24 |
 | Gegevensuitwisseling | Overheidsstandaarden | 8496 | 24 |
 | Sovereignty | BIO2 | 8494 | 162 |
+
+## NEDERUS Mapping
+
+NEDERUS (Nederlandse Unified AI Standards) koppelt NORA principes aan EU AI Act,
+BIO2 en NIS2. De matrix hieronder toont welke NEDERUS controls dekking bieden
+voor elk NORA principe.
+
+| NORA Principe | NEDERUS Control | EU AI Act | BIO2 | NIS2 |
+|---|---|---|---|---|
+| Grondslag-toets | NED-01 | Art. 9(2), Art. 27 | A.5-6 | Art. 21 |
+| Evenredigheid | NED-02 | Art. 10 | — | — |
+| Proportionaliteit | NED-03 | Art. 14 | — | — |
+| Openbaarheid | NED-04 | Art. 13, Art. 50 | — | — |
+| Verantwoordelijkheid | NED-01, NED-03 | Art. 9, Art. 14 | A.5-6 | — |
+
+Zie [NEDERUS repository](https://github.com/djimit/nederus-framework) voor de
+volledige mapping-matrix en crosswalk-documentatie.

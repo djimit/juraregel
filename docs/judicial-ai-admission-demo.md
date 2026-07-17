@@ -28,6 +28,19 @@ Er bestaat geen gemiddelde score. Een goede modelbenchmark kan een ontbrekende
 waarborgen voor rechterlijke bevoegdheid, bronlineage of formele autorisatie
 nooit compenseren.
 
+## NEDERUS Koppeling
+
+Het Judicial AI Assurance profiel raakt meerdere frameworks. De NEDERUS controls
+(NED-01 t/m NED-05) bieden de multi-jurisdictionele mapping:
+
+| NEDERUS Control | Relevantie voor Judicial AI |
+|---|---|
+| NED-01 AI Impact Assessment | Vereist vóór inzet AI in rechterlijke context |
+| NED-03 Human Oversight | Essentieel: rechterlijke autonomie vereist menselijke regie |
+| NED-04 Transparency | Bronherleidbaarheid voor rechterlijke besluitvorming |
+
+Zie [NEDERUS use case](../docs/nederus-use-case.md) voor de volledige mapping.
+
 ## Genereren
 
 ```bash

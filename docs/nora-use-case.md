@@ -54,3 +54,17 @@ NORA is niet use case #8 — NORA is de **overkoepelende architectuurlaag** die 
 | TOGAF architect | Principes niet gekoppeld aan implementatie | Matrix mapped principes naar JuraRegel use cases |
 | Bestuurder | NORA compliance niet aantoonbaar | Audit trail per principe met bronverwijzing |
 
+## NEDERUS Koppeling
+
+NORA is één van de vijf frameworks in het [NEDERUS](../openspec/changes/nederus-framework-v1/sources/README.md) framework. De NORA compliance matrix is direct herbruikbaar als NEDERUS mapping-input:
+
+| NORA Principe | NEDERUS Control | Overige Frameworks |
+|---|---|---|
+| Grondslag-toets | NED-01 | EU AI Act Art. 9(2), BIO2 A.5-6, NIS2 Art. 21 |
+| Evenredigheid | NED-02 | EU AI Act Art. 10 |
+| Proportionaliteit | NED-03 | EU AI Act Art. 14 |
+| Openbaarheid | NED-04 | EU AI Act Art. 13, Art. 50 |
+| Verantwoordelijkheid | NED-01, NED-03 | EU AI Act Art. 9, Art. 14, BIO2 A.5-6 |
+
+Zie de [NEDERUS NORA crosswalk](../openspec/changes/nederus-framework-v1/sources/crosswalks/nora.md) voor de volledige mapping met grondslag-niveau detail.
+

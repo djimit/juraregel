@@ -15,6 +15,21 @@
 ## Human Escalation
 - [Wanneer escaleren]
 
+## NEDERUS Koppeling (optioneel)
+
+Als de playbook betrekking heeft op AI-systemen, voeg dan een NEDERUS-sectie toe:
+
+```
+## NEDERUS Koppeling
+
+| NEDERUS Control | Frameworks | Relevantie |
+|---|---|---|
+| NED-01 AI Impact Assessment | EU AI Act, BIO2, NIS2, NORA | Vereist vóór AI-deploy |
+| NED-05 Incident Response | EU AI Act, BIO2, NIS2 | Bij AI-incidenten |
+```
+
+Zie [NEDERUS repository](https://github.com/djimit/nederus-framework) voor de volledige mapping.
+
 ## Voorbeeld
 **User:** [Vraag]
 **Agent:** [Stappen]

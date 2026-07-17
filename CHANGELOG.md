@@ -1,3 +1,94 @@
+## [2.4.1] - 2026-07-17 — eIDAS 2.0 Full Implementation
+
+### Added
+- eIDAS use case: 32 regels, 21 categorieen, port 8523
+- API endpoints: wallet-status, deadlines, rapport/{orgId}, categorieen
+- Agent playbook: docs/agent-playbooks/eidas.md
+- Tests: 30+ test cases (JREM validation + compliance scenarios + deadline checks)
+- RegelSpraak: eidas-2026.rspraak (32 regels)
+- JREM schema: eidas domain + eidas-compliance procedureType toegevoegd
+- Documentatie: docs/eidas-use-case.md (volledig met voorbeelden)
+
+### eIDAS Coverage
+- eIDAS 1.0: 5 vertrouwensdiensten (handtekening, zegel, tijdsstempel, ERD, website-auth)
+- eIDAS 2.0: QAA, Electronic Archival, EUDI-wallet (7 regels), PID, certificering
+- Grensoverschrijdende erkenning (3 regels)
+- TSP-kwalificatie, trust lists, kwaliteitskeurmerken
+- DPIA, security levels, private sector, implementing acts
+
+### Correcties
+- Deadline gecorrigeerd: September 2026 → December 2026
+- NL wallet status: niet beschikbaar, verwacht 2027-Q1
+
+---
+
+## [2.4.0] - 2026-07-17 — eIDAS 2.0 Use Case v1
+- RegelSpraak specificatie (eidas-2026.rspraak)
+- JREM export (eidas-2026.1.json) met 20 regels, 8 categorieen
+- API app met wallet-status en deadline endpoints
+- 11 test cases (JREM validation + compliance scenarios)
+- MCP server: eidas domain geregistreerd
+- Documentatie: docs/eidas-use-case.md
+
+### eIDAS Coverage
+- eIDAS 1.0: 5 vertrouwensdiensten (handtekening, zegel, tijdsstempel, ERD, website-auth)
+- eIDAS 2.0: EUDI-wallet (4 statussen), attributenuitwisseling, kwaliteitskeurmerken
+- Grensoverschrijdende erkenning (eIDAS Node + wallet interoperabiliteit)
+- TSP-kwalificatie en trust list publicatie
+
+---
+
+## [2.3.0] - 2026-07-17 — NEDERUS v2.0 Expansion
+
+### Added
+- NEDERUS v2.0: 8 controls (was 5), 8 frameworks (was 5)
+- 3 new controls: NED-06 (Secure Development/CRA), NED-07 (Platform Transparency/DSA), NED-08 (AI Liability)
+- 3 new frameworks: Cyber Resilience Act, Digital Services Act, AI Liability Directive
+- Tier system: Priority (≥3 frameworks) + Standard (≥2 frameworks)
+- NEDERUS framework matrix in README.md (8×8 visual matrix)
+- MCP server: `nederus.lookup` tool (search by ID, framework, or keyword)
+- MCP server: NEDERUS_CONTROLS updated to v2.0 with 8 frameworks
+- Crosswalks: cra.md, dsa.md, ai-liability.md
+
+### Changed
+- Selection criteria: ≥3 → tier-based (priority/standard)
+- Generator: auto-determines tier from framework count
+- Validator: tier classification check + minimum framework check
+- MCP server: `nederus_list_controls` uses normalized framework names
+
+---
+
+## [2.2.0] - 2026-07-17 — NEDERUS Multi-Jurisdictional Mapping
+
+### Added
+- NEDERUS use case in README.md met 5 unified controls (NED-01 t/m NED-05)
+- Use Case Maturity tabel: NEDERUS als extern framework toegevoegd
+- NEDERUS-koppeling in BIO2 use case documentatie
+- NEDERUS-koppeling in EU AI Act use case documentatie
+- NEDERUS-koppeling in NIS2 agent playbook
+- NORA compliance matrix: NEDERUS mapping sectie
+- Architectuur diagram: NEDERUS Framework als bron toegevoegd
+- Validatie sectie: NEDERUS controls metriek
+- Compliance Officer rol: NEDERUS Framework link
+
+### Changed
+- README.md: NEDERUS use case sectie (na AVG/GDPR, voor NCSC)
+- docs/nora-compliance-matrix.md: NEDERUS mapping tabel toegevoegd
+- docs/bio2-use-case.md: NEDERUS koppeling + mapping tabel
+- docs/eu-ai-act-use-case.md: NEDERUS koppeling + mapping tabel
+- docs/agent-playbooks/nis2.md: NEDERUS koppeling + conflict documentatie
+- docs/nora-use-case.md: NEDERUS koppeling + principe mapping
+- docs/judicial-ai-admission-demo.md: NEDERUS koppeling
+- docs/agent-playbooks/_template.md: NEDERUS sectie template
+- CONTRIBUTING.md: NEDERUS contributie richtlijnen
+- mcp-server/juraregel_mcp.py: 3 NEDERUS tools (list_controls, get_control, crosswalk)
+
+### Added
+- docs/nederus-use-case.md: Dedicated NEDERUS use case documentatie
+- docs/nederus-mcp-tools.md: MCP tools documentatie
+
+---
+
 ## [2.1.2] - 2026-07-05 -- Maturity Model & Evidence
 
 ### Added

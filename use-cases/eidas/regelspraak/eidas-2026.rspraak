@@ -1,0 +1,203 @@
+# eIDAS 2.0 RegelSpraak Specificatie
+# European Digital Identity Framework — Nederlandse implementatie
+# Bron: Verordening (EU) 2014/910 (eIDAS) + Verordening (EU) 2024/1183 (eIDAS 2.0)
+
+begrip organisatieId: "Unieke identificatie van de overheidsorganisatie." type: tekst.
+begrip vertrouwensdienst: "Type vertrouwensdienst." waarden: elektronisch_handtekening, elektronisch_zegel, elektronisch_tijdsstempel, elektronisch_geregistreerde_zending, website_authenticatie, eudiwallet.
+begrip assuranceLevel: "Betrouwbaarheidsniveau." waarden: laag, substantieel, hoog.
+begrip walletStatus: "Status EUDI-wallet implementatie." waarden: niet_gestart, in_ontwikkeling, piloot, productie.
+begrip crossBorder: "Grensoverschrijdende erkenning vereist." waarden: ja, nee.
+
+# Artikel 3 — Vertrouwensdiensten
+
+regel EID-001 "Kwalificeerde elektronische handtekening":
+  als vertrouwensdienst is "elektronisch_handtekening"
+  en assuranceLevel is "hoog"
+  dan is compliant ja
+  en is categorie "eidas_handtekening"
+  en is artikel "eIDAS Art. 25(1): Gelijkwaardigheid aan handgeschreven handtekening"
+  en is bewijs "PKIoverheid certificaat + HSM of cloud HSM"
+  en is deadline "2026-01-01".
+
+regel EID-002 "Kwalificeerde elektronische zegel":
+  als vertrouwensdienst is "elektronisch_zegel"
+  en assuranceLevel is "hoog"
+  dan is compliant ja
+  en is categorie "eidas_zegel"
+  en is artikel "eIDAS Art. 35(2): Gelijkwaardigheid aan zegel"
+  en is bewijs "PKIoverheid certificaat voor zegel"
+  en is deadline "2026-01-01".
+
+regel EID-003 "Kwalificeerde elektronische tijdsstempel":
+  als vertrouwensdienst is "elektronisch_tijdsstempel"
+  dan is compliant ja
+  en is categorie "eidas_tijdsstempel"
+  en is artikel "eIDAS Art. 42: Juridische gevolgen tijdsstempel"
+  en is bewijs "TSP met EN 2100-1 certificering"
+  en is deadline "2026-01-01".
+
+regel EID-004 "Kwalificeerde elektronische geregistreerde zending":
+  als vertrouwensdienst is "elektronisch_geregistreerde_zending"
+  dan is compliant ja
+  en is categorie "eidas_erd"
+  en is artikel "eIDAS Art. 43: Gelijkwaardigheid aan aangetekende brief"
+  en is bewijs "TSP met ERD-certificering"
+  en is deadline "2026-01-01".
+
+regel EID-005 "Kwalificeerde website-authenticatie":
+  als vertrouwensdienst is "website_authenticatie"
+  dan is compliant ja
+  en is categorie "eidas_webauth"
+  en is artikel "eIDAS Art. 45: Vertrouwelijkheid communicatie"
+  en is bewijs "QWAC certificaat + EV SSL"
+  en is deadline "2026-01-01".
+
+# Artikel 12a — European Digital Identity Wallet (eIDAS 2.0)
+
+regel EID-006 "EUDI-wallet implementatie verplicht":
+  als vertrouwensdienst is "eudiwallet"
+  en walletStatus is "productie"
+  dan is compliant ja
+  en is categorie "eidas_wallet"
+  en is artikel "eIDAS 2.0 Art. 6a: European Digital Identity Wallet"
+  en is bewijs "Wallet implementatie conform EN 419241 + ISO 18013-5"
+  en is deadline "2026-09-29".
+
+regel EID-007 "EUDI-wallet pilootfase":
+  als vertrouwensdienst is "eudiwallet"
+  en walletStatus is "piloot"
+  dan is compliant ja
+  en is categorie "eidas_wallet"
+  en is artikel "eIDAS 2.0 Art. 6a: Wallet in pilootfase"
+  en is bewijs "Pilootrapport + conformiteitsbeoordeling"
+  en is deadline "2026-09-29".
+
+regel EID-008 "EUDI-wallet in ontwikkeling":
+  als vertrouwensdienst is "eudiwallet"
+  en walletStatus is "in_ontwikkeling"
+  dan is compliant nee
+  en is categorie "eidas_wallet"
+  en is artikel "eIDAS 2.0 Art. 6a: Wallet ontwikkeling vereist"
+  en is bewijs "Ontwikkelingsplan + roadmap"
+  en is deadline "2026-09-29"
+  en is actie "Versnellen naar piloot vóór deadline".
+
+regel EID-009 "EUDI-wallet niet gestart":
+  als vertrouwensdienst is "eudiwallet"
+  en walletStatus is "niet_gestart"
+  dan is compliant nee
+  en is categorie "eidas_wallet"
+  en is artikel "eIDAS 2.0 Art. 6a: Wallet verplicht"
+  en is bewijs "Geen bewijs beschikbaar"
+  en is deadline "2026-09-29"
+  en is actie "START DIRECT: verplichte deadline nadert".
+
+# Artikel 6c — Grensoverschrijdende erkenning
+
+regel EID-010 "Grensoverschrijdende erkenning":
+  als crossBorder is "ja"
+  en vertrouwensdienst is "elektronisch_handtekening"
+  dan is compliant ja
+  en is categorie "eidas_crossborder"
+  en is artikel "eIDAS Art. 13 + Art. 25: Wederzijdse erkenning"
+  en is bewijs "eIDAS Node configuratie + Trust List"
+  en is deadline "2024-09-29".
+
+regel EID-011 "Grensoverschrijdende wallet":
+  als crossBorder is "ja"
+  en vertrouwensdienst is "eudiwallet"
+  en walletStatus is "productie"
+  dan is compliant ja
+  en is categorie "eidas_crossborder"
+  en is artikel "eIDAS 2.0 Art. 6j: Wallet interoperabiliteit"
+  en is bewijs "EUDI-wallet erkend in andere lidstaten"
+  en is deadline "2026-09-29".
+
+# Artikel 7 — Kwalificatie en toezicht
+
+regel EID-012 "Kwalificeerde TSP certificering":
+  als vertrouwensdienst is "elektronisch_handtekening"
+  of vertrouwensdienst is "elektronisch_zegel"
+  dan is compliant ja
+  en is categorie "eidas_tsp"
+  en is artikel "eIDAS Art. 21: Toezicht op kwalificeerde TSP's"
+  en is bewijs "Conformiteitsattest door nationale toezichthouder (OPTA/ACM)"
+  en is deadline "2026-01-01".
+
+regel EID-013 "Niet-gekwalificeerde dienst":
+  als vertrouwensdienst is "elektronisch_handtekening"
+  en assuranceLevel is "laag"
+  dan is compliant nee
+  en is categorie "eidas_tsp"
+  en is artikel "eIDAS Art. 25: Alleen kwalificeerde handtekeningen hebben juridische gelijkwaardigheid"
+  en is bewijs "Upgrade naar kwalificeerde TSP vereist"
+  en is deadline "2026-01-01"
+  en is actie "Migreer naar kwalificeerde TSP voor juridische geldigheid".
+
+# Artikel 12 — Legaliteit en niet-discriminatie
+
+regel EID-014 "Niet-discriminatie elektronische identiteit":
+  als crossBorder is "ja"
+  dan is compliant ja
+  en is categorie "eidas_niet_discriminatie"
+  en is artikel "eIDAS Art. 4(4): Gelijke toegang tot diensten"
+  en is bewijs "Toegangsbeleid zonder discriminatie op basis van nationaliteit"
+  en is deadline "2024-09-29".
+
+# Artikel 6l — Attribuut-uitwisseling (eIDAS 2.0)
+
+regel EID-015 "Elektronische attributen uitwisselen":
+  als vertrouwensdienst is "eudiwallet"
+  en walletStatus is "productie"
+  dan is compliant ja
+  en is categorie "eidas_attributen"
+  en is artikel "eIDAS 2.0 Art. 12d: Gedeelde attributen"
+  en is bewijs "eHerkenning attributen + BSNk via wallet"
+  en is deadline "2026-09-29".
+
+regel EID-016 "eHerkenning integratie met wallet":
+  als vertrouwensdienst is "eudiwallet"
+  en crossBorder is "ja"
+  dan is compliant ja
+  en is categorie "eidas_attributen"
+  en is artikel "eIDAS 2.0 Art. 6l: Nationale eID integratie"
+  en is bewijs "eHerkenning 5.0+ wallet-koppeling"
+  en is deadline "2026-09-29".
+
+# Artikel 6p — Publieke registers
+
+regel EID-017 "Trust List publicatie":
+  als vertrouwensdienst is "elektronisch_handtekening"
+  of vertrouwensdienst is "elektronisch_zegel"
+  dan is compliant ja
+  en is categorie "eidas_trustlist"
+  en is artikel "eIDAS Art. 22: EU Trust List"
+  en is bewijs "TSP geregistreerd in EU Trusted List (EUTL)"
+  en is deadline "2024-09-29".
+
+regel EID-018 "Nationale trustlist synchronisatie":
+  als vertrouwensdienst is "eudiwallet"
+  dan is compliant ja
+  en is categorie "eidas_trustlist"
+  en is artikel "eIDAS 2.0 Art. 6p: Nationale wallet trustlists"
+  en is bewijs "NL wallet trustlist gesynchroniseerd met EUTL"
+  en is deadline "2026-09-29".
+
+# Artikel 6e — Kwaliteitskeurmerken
+
+regel EID-019 "Wallet kwaliteitskeurmerk":
+  als vertrouwensdienst is "eudiwallet"
+  en walletStatus is "productie"
+  dan is compliant ja
+  en is categorie "eidas_keurmerk"
+  en is artikel "eIDAS 2.0 Art. 6e: Kwaliteitskeurmerken voor wallets"
+  en is bewijs "Keurmerk conform eIDAS 2.0 specificaties"
+  en is deadline "2027-09-29".
+
+regel EID-020 "PID Provider certificering":
+  als vertrouwensdienst is "eudiwallet"
+  dan is compliant ja
+  en is categorie "eidas_keurmerk"
+  en is artikel "eIDAS 2.0 Art. 6a(4): PID als vereiste attribuut"
+  en is bewijs "Rijksdienst voor Identiteitsgegevens (RvIG) als PID provider"
+  en is deadline "2026-09-29".

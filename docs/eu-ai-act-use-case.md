@@ -18,3 +18,17 @@
 | Compliance officer | Conformity assessment onduidelijk | Check art. 9-12 + 43 regels |
 | Bestuurder | Fundamentele rechten impact onbekend | Check art. 27 vereisten |
 
+## NEDERUS Koppeling
+
+De EU AI Act is primair wettelijk kader in het [NEDERUS](../openspec/changes/nederus-framework-v1/sources/README.md) framework. Alle 5 NEDERUS controls dekken EU AI Act artikelen:
+
+| NEDERUS Control | EU AI Act Articles | JuraRegel Implementatie |
+|---|---|---|
+| NED-01 AI Impact Assessment | Art. 9(2), Art. 27 (FRIA) | `POST /v1/eu-ai-act/classify` |
+| NED-02 Bias & Fairness Testing | Art. 10 (Data governance) | Via JREM regels |
+| NED-03 Human Oversight | Art. 14 | Via JREM regels |
+| NED-04 Transparency | Art. 13, Art. 50 | Via JREM regels |
+| NED-05 Incident Response | Art. 72 | Via JREM regels |
+
+Zie de [NEDERUS crosswalk voor EU AI Act](../openspec/changes/nederus-framework-v1/sources/crosswalks/eu-ai-act.md) voor artikel-niveau mapping.
+

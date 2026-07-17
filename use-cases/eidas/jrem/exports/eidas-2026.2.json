@@ -1,0 +1,272 @@
+{
+  "schemaVersion": "1.1.0",
+  "ruleSetId": "eidas",
+  "version": "2026.2",
+  "validFrom": "2026-01-01",
+  "validUntil": "2027-12-31",
+  "jurisdiction": "NL",
+  "domain": "eidas",
+  "procedureType": "eidas-compliance",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "EID-001",
+      "name": "Kwalificeerde elektronische handtekening — juridische gelijkwaardigheid",
+      "priority": 300,
+      "sourceRefs": [
+        {"type": "wet", "title": "eIDAS Verordening (EU) 2014/910 — Art. 25(1)", "section": "Gelijkwaardigheid aan handgeschreven handtekening", "url": "https://eur-lex.europa.eu/eli/reg/2014/910"},
+        {"type": "regeling", "title": "Wet elektronische handtekeningen (Weh) — Art. 1a", "section": "NL implementatie", "url": "https://wetten.overheid.nl/BWBR0025165/"}
+      ],
+      "conditions": {"vertrouwensdienst": "elektronisch_handtekening", "assuranceLevel": "hoog"},
+      "outcome": {"compliant": true, "category": "eidas_handtekening", "confidence": "deterministic", "deadline": "2026-01-01", "evidenceRequired": "PKIoverheid certificaat + HSM", "article": "eIDAS Art. 25(1)"}
+    },
+    {
+      "ruleId": "EID-002",
+      "name": "Kwalificeerde elektronische zegel — rechtspersonen",
+      "priority": 300,
+      "sourceRefs": [{"type": "wet", "title": "eIDAS Verordening (EU) 2014/910 — Art. 35(2)", "section": "Gelijkwaardigheid aan zegel", "url": "https://eur-lex.europa.eu/eli/reg/2014/910"}],
+      "conditions": {"vertrouwensdienst": "elektronisch_zegel", "assuranceLevel": "hoog"},
+      "outcome": {"compliant": true, "category": "eidas_zegel", "confidence": "deterministic", "deadline": "2026-01-01", "evidenceRequired": "PKIoverheid certificaat voor zegel", "article": "eIDAS Art. 35(2)"}
+    },
+    {
+      "ruleId": "EID-003",
+      "name": "Kwalificeerde elektronische tijdsstempel",
+      "priority": 250,
+      "sourceRefs": [{"type": "wet", "title": "eIDAS Verordening (EU) 2014/910 — Art. 42", "section": "Juridische gevolgen tijdsstempel", "url": "https://eur-lex.europa.eu/eli/reg/2014/910"}],
+      "conditions": {"vertrouwensdienst": "elektronisch_tijdsstempel"},
+      "outcome": {"compliant": true, "category": "eidas_tijdsstempel", "confidence": "deterministic", "deadline": "2026-01-01", "evidenceRequired": "TSP met EN 2100-1 certificering", "article": "eIDAS Art. 42"}
+    },
+    {
+      "ruleId": "EID-004",
+      "name": "Kwalificeerde elektronische geregistreerde zending",
+      "priority": 250,
+      "sourceRefs": [{"type": "wet", "title": "eIDAS Verordening (EU) 2014/910 — Art. 43", "section": "Gelijkwaardigheid aan aangetekende brief", "url": "https://eur-lex.europa.eu/eli/reg/2014/910"}],
+      "conditions": {"vertrouwensdienst": "elektronisch_geregistreerde_zending"},
+      "outcome": {"compliant": true, "category": "eidas_erd", "confidence": "deterministic", "deadline": "2026-01-01", "evidenceRequired": "TSP met ERD-certificering", "article": "eIDAS Art. 43"}
+    },
+    {
+      "ruleId": "EID-005",
+      "name": "Kwalificeerde website-authenticatie",
+      "priority": 250,
+      "sourceRefs": [{"type": "wet", "title": "eIDAS Verordening (EU) 2014/910 — Art. 45", "section": "Vertrouwelijkheid communicatie", "url": "https://eur-lex.europa.eu/eli/reg/2014/910"}],
+      "conditions": {"vertrouwensdienst": "website_authenticatie"},
+      "outcome": {"compliant": true, "category": "eidas_webauth", "confidence": "deterministic", "deadline": "2026-01-01", "evidenceRequired": "QWAC certificaat + EV SSL", "article": "eIDAS Art. 45"}
+    },
+    {
+      "ruleId": "EID-006",
+      "name": "Kwalificeerde attestatie van attributen (QAA) — nieuw in eIDAS 2.0",
+      "priority": 350,
+      "sourceRefs": [{"type": "wet", "title": "eIDAS 2.0 Verordening (EU) 2024/1183 — Art. 3(16a)", "section": "Nieuwe vertrouwensdienst: Qualified Attestation of Attributes", "url": "https://eur-lex.europa.eu/eli/reg/2024/1183"}],
+      "conditions": {"vertrouwensdienst": "attestatie_attributen"},
+      "outcome": {"compliant": true, "category": "eidas_qaa", "confidence": "deterministic", "deadline": "2026-12-01", "evidenceRequired": "TSP gecertificeerd voor QAA conform Art. 3(16a)", "article": "eIDAS 2.0 Art. 3(16a): Qualified Attestation of Attributes"}
+    },
+    {
+      "ruleId": "EID-007",
+      "name": "Elektronisch archief — nieuw in eIDAS 2.0",
+      "priority": 250,
+      "sourceRefs": [{"type": "wet", "title": "eIDAS 2.0 Verordening (EU) 2024/1183 — Art. 3(16b)", "section": "Nieuwe vertrouwensdienst: Electronic Archival", "url": "https://eur-lex.europa.eu/eli/reg/2024/1183"}],
+      "conditions": {"vertrouwensdienst": "elektronisch_archief"},
+      "outcome": {"compliant": true, "category": "eidas_archief", "confidence": "deterministic", "deadline": "2026-12-01", "evidenceRequired": "TSP gecertificeerd voor elektronisch archief", "article": "eIDAS 2.0 Art. 3(16b): Electronic Archival"}
+    },
+    {
+      "ruleId": "EID-008",
+      "name": "EUDI-wallet productie — verplicht eind 2026",
+      "priority": 500,
+      "sourceRefs": [{"type": "wet", "title": "eIDAS 2.0 Verordening (EU) 2024/1183 — Art. 6a", "section": "European Digital Identity Wallet", "url": "https://eur-lex.europa.eu/eli/reg/2024/1183"}],
+      "conditions": {"vertrouwensdienst": "eudiwallet", "walletStatus": "productie"},
+      "outcome": {"compliant": true, "category": "eidas_wallet", "confidence": "deterministic", "deadline": "2026-12-01", "evidenceRequired": "Wallet in productie conform EN 419241 + ISO 18013-5", "article": "eIDAS 2.0 Art. 6a"}
+    },
+    {
+      "ruleId": "EID-009",
+      "name": "EUDI-wallet pilootfase — tijdelijke compliantie",
+      "priority": 400,
+      "sourceRefs": [{"type": "wet", "title": "eIDAS 2.0 Verordening (EU) 2024/1183 — Art. 6a", "section": "Wallet piloot", "url": "https://eur-lex.europa.eu/eli/reg/2024/1183"}],
+      "conditions": {"vertrouwensdienst": "eudiwallet", "walletStatus": "piloot"},
+      "outcome": {"compliant": true, "category": "eidas_wallet", "confidence": "deterministic", "deadline": "2026-12-01", "evidenceRequired": "Pilootrapport + conformiteitsbeoordeling", "article": "eIDAS 2.0 Art. 6a", "warning": "Tijdelijk — productie vereist vóór deadline"}
+    },
+    {
+      "ruleId": "EID-010",
+      "name": "EUDI-wallet in ontwikkeling — actie vereist",
+      "priority": 450,
+      "sourceRefs": [{"type": "wet", "title": "eIDAS 2.0 Verordening (EU) 2024/1183 — Art. 6a", "section": "Wallet ontwikkeling", "url": "https://eur-lex.europa.eu/eli/reg/2024/1183"}],
+      "conditions": {"vertrouwensdienst": "eudiwallet", "walletStatus": "in_ontwikkeling"},
+      "outcome": {"compliant": false, "category": "eidas_wallet", "confidence": "deterministic", "deadline": "2026-12-01", "evidenceRequired": "Ontwikkelingsplan + roadmap", "article": "eIDAS 2.0 Art. 6a", "actionRequired": "Versnellen naar productie"}
+    },
+    {
+      "ruleId": "EID-011",
+      "name": "EUDI-wallet niet gestart — KRITIEK",
+      "priority": 500,
+      "sourceRefs": [{"type": "wet", "title": "eIDAS 2.0 Verordening (EU) 2024/1183 — Art. 6a", "section": "Wallet verplicht", "url": "https://eur-lex.europa.eu/eli/reg/2024/1183"}],
+      "conditions": {"vertrouwensdienst": "eudiwallet", "walletStatus": "niet_gestart"},
+      "outcome": {"compliant": false, "category": "eidas_wallet", "confidence": "deterministic", "deadline": "2026-12-01", "evidenceRequired": "Geen bewijs", "article": "eIDAS 2.0 Art. 6a", "actionRequired": "START DIRECT — deadline december 2026", "risk": "CRITICAL"}
+    },
+    {
+      "ruleId": "EID-012",
+      "name": "Wallet user-centric design — sole control (Art. 6a(3))",
+      "priority": 400,
+      "sourceRefs": [{"type": "wet", "title": "eIDAS 2.0 Verordening (EU) 2024/1183 — Art. 6a(3)", "section": "Sole control door gebruiker", "url": "https://eur-lex.europa.eu/eli/reg/2024/1183"}],
+      "conditions": {"vertrouwensdienst": "eudiwallet", "walletStatus": "productie"},
+      "outcome": {"compliant": true, "category": "eidas_wallet_design", "confidence": "deterministic", "deadline": "2026-12-01", "evidenceRequired": "User-centric design documentatie + sole control architectuur", "article": "eIDAS 2.0 Art. 6a(3): Sole control"}
+    },
+    {
+      "ruleId": "EID-013",
+      "name": "PID (Person Identification Data) minimum dataset",
+      "priority": 400,
+      "sourceRefs": [{"type": "wet", "title": "eIDAS 2.0 Verordening (EU) 2024/1183 — Art. 6a(4)", "section": "PID als vereiste attribuut", "url": "https://eur-lex.europa.eu/eli/reg/2024/1183"}],
+      "conditions": {"vertrouwensdienst": "eudiwallet"},
+      "outcome": {"compliant": true, "category": "eidas_pid", "confidence": "deterministic", "deadline": "2026-12-01", "evidenceRequired": "PID dataset conform Annex VI (naam, geboortedatum, geslacht, nationaliteit)", "article": "eIDAS 2.0 Art. 6a(4): PID"}
+    },
+    {
+      "ruleId": "EID-014",
+      "name": "RvIG als PID-provider — Nederlandse aanwijzing",
+      "priority": 350,
+      "sourceRefs": [{"type": "regeling", "title": "RvIG — Rijksdienst voor Identiteitsgegevens", "section": "Nederlandse PID-provider", "url": "https://www.rvig.nl/"}],
+      "conditions": {"vertrouwensdienst": "eudiwallet", "crossBorder": "ja"},
+      "outcome": {"compliant": true, "category": "eidas_pid", "confidence": "deterministic", "deadline": "2026-12-01", "evidenceRequired": "RvIG aangewezen als PID-provider door Staatsecretaris BZK", "article": "eIDAS 2.0 Art. 6a(4) + NL implementatie"}
+    },
+    {
+      "ruleId": "EID-015",
+      "name": "RDI certificering — toezichthouder wallet",
+      "priority": 350,
+      "sourceRefs": [{"type": "regeling", "title": "RDI — Rijksinspectie Digitale Infrastructuur", "section": "Certificeringsautoriteit wallets", "url": "https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties/organisaties/rijksinspectie-digitale-infrastructuur"}],
+      "conditions": {"vertrouwensdienst": "eudiwallet"},
+      "outcome": {"compliant": true, "category": "eidas_certificering", "confidence": "deterministic", "deadline": "2026-12-01", "evidenceRequired": "RDI gecertificeerd als nationale certificeringsautoriteit", "article": "eIDAS 2.0 Art. 6d: Conformiteitsbeoordeling"}
+    },
+    {
+      "ruleId": "EID-016",
+      "name": "Grensoverschrijdende erkenning — wederzijdse acceptatie",
+      "priority": 300,
+      "sourceRefs": [{"type": "wet", "title": "eIDAS Verordening (EU) 2014/910 — Art. 13 + Art. 25", "section": "Wederzijdse erkenning", "url": "https://eur-lex.europa.eu/eli/reg/2014/910"}],
+      "conditions": {"crossBorder": "ja", "vertrouwensdienst": "elektronisch_handtekening"},
+      "outcome": {"compliant": true, "category": "eidas_crossborder", "confidence": "deterministic", "deadline": "2024-09-29", "evidenceRequired": "eIDAS Node configuratie + Trust List", "article": "eIDAS Art. 13 + Art. 25"}
+    },
+    {
+      "ruleId": "EID-017",
+      "name": "Grensoverschrijdende wallet interoperabiliteit",
+      "priority": 350,
+      "sourceRefs": [{"type": "wet", "title": "eIDAS 2.0 Verordening (EU) 2024/1183 — Art. 6j", "section": "Wallet interoperabiliteit", "url": "https://eur-lex.europa.eu/eli/reg/2024/1183"}],
+      "conditions": {"crossBorder": "ja", "vertrouwensdienst": "eudiwallet", "walletStatus": "productie"},
+      "outcome": {"compliant": true, "category": "eidas_crossborder", "confidence": "deterministic", "deadline": "2026-12-01", "evidenceRequired": "Wallet erkend in andere EU-lidstaten", "article": "eIDAS 2.0 Art. 6j"}
+    },
+    {
+      "ruleId": "EID-018",
+      "name": "Grensoverschrijdende wallet-acceptatie door overheid",
+      "priority": 400,
+      "sourceRefs": [{"type": "wet", "title": "eIDAS 2.0 Verordening (EU) 2024/1183 — Art. 6a(6)", "section": "Verplichte acceptatie door overheid", "url": "https://eur-lex.europa.eu/eli/reg/2024/1183"}],
+      "conditions": {"crossBorder": "ja", "vertrouwensdienst": "eudiwallet"},
+      "outcome": {"compliant": true, "category": "eidas_crossborder", "confidence": "deterministic", "deadline": "2026-12-01", "evidenceRequired": "Overheidsdiensten accepteren EU-wallets", "article": "eIDAS 2.0 Art. 6a(6): Verplichte acceptatie"}
+    },
+    {
+      "ruleId": "EID-019",
+      "name": "Kwalificeerde TSP — toezicht en certificering",
+      "priority": 300,
+      "sourceRefs": [{"type": "wet", "title": "eIDAS Verordening (EU) 2014/910 — Art. 21", "section": "Toezicht op kwalificeerde TSP's", "url": "https://eur-lex.europa.eu/eli/reg/2014/910"}],
+      "conditions": {"vertrouwensdienst": ["elektronisch_handtekening", "elektronisch_zegel"]},
+      "outcome": {"compliant": true, "category": "eidas_tsp", "confidence": "deterministic", "deadline": "2026-01-01", "evidenceRequired": "Conformiteitsattest door OPTA/ACM", "article": "eIDAS Art. 21"}
+    },
+    {
+      "ruleId": "EID-020",
+      "name": "Niet-gekwalificeerde dienst — upgrade vereist",
+      "priority": 350,
+      "sourceRefs": [{"type": "wet", "title": "eIDAS Verordening (EU) 2014/910 — Art. 25", "section": "Alleen kwalificeerde = juridische gelijkwaardigheid", "url": "https://eur-lex.europa.eu/eli/reg/2014/910"}],
+      "conditions": {"vertrouwensdienst": "elektronisch_handtekening", "assuranceLevel": "laag"},
+      "outcome": {"compliant": false, "category": "eidas_tsp", "confidence": "deterministic", "deadline": "2026-01-01", "evidenceRequired": "Upgrade naar kwalificeerde TSP", "article": "eIDAS Art. 25", "actionRequired": "Migreer naar kwalificeerde TSP"}
+    },
+    {
+      "ruleId": "EID-021",
+      "name": "Niet-discriminatie elektronische identiteit",
+      "priority": 200,
+      "sourceRefs": [{"type": "wet", "title": "eIDAS Verordening (EU) 2014/910 — Art. 4(4)", "section": "Gelijke toegang", "url": "https://eur-lex.europa.eu/eli/reg/2014/910"}],
+      "conditions": {"crossBorder": "ja"},
+      "outcome": {"compliant": true, "category": "eidas_niet_discriminatie", "confidence": "deterministic", "deadline": "2024-09-29", "evidenceRequired": "Toegangsbeleid zonder discriminatie", "article": "eIDAS Art. 4(4)"}
+    },
+    {
+      "ruleId": "EID-022",
+      "name": "Elektronische attributen uitwisselen via wallet",
+      "priority": 300,
+      "sourceRefs": [{"type": "wet", "title": "eIDAS 2.0 Verordening (EU) 2024/1183 — Art. 12d", "section": "Gedeelde attributen", "url": "https://eur-lex.europa.eu/eli/reg/2024/1183"}],
+      "conditions": {"vertrouwensdienst": "eudiwallet", "walletStatus": "productie"},
+      "outcome": {"compliant": true, "category": "eidas_attributen", "confidence": "deterministic", "deadline": "2026-12-01", "evidenceRequired": "eHerkenning attributen + BSNk via wallet", "article": "eIDAS 2.0 Art. 12d"}
+    },
+    {
+      "ruleId": "EID-023",
+      "name": "eHerkenning integratie met EUDI-wallet",
+      "priority": 350,
+      "sourceRefs": [{"type": "wet", "title": "eIDAS 2.0 Verordening (EU) 2024/1183 — Art. 6l", "section": "Nationale eID integratie", "url": "https://eur-lex.europa.eu/eli/reg/2024/1183"}],
+      "conditions": {"vertrouwensdienst": "eudiwallet", "crossBorder": "ja"},
+      "outcome": {"compliant": true, "category": "eidas_attributen", "confidence": "deterministic", "deadline": "2026-12-01", "evidenceRequired": "eHerkenning 5.0+ wallet-koppeling", "article": "eIDAS 2.0 Art. 6l"}
+    },
+    {
+      "ruleId": "EID-024",
+      "name": "DigiD integratie met EUDI-wallet",
+      "priority": 350,
+      "sourceRefs": [{"type": "regeling", "title": "Logius — DigiD en eIDAS 2.0", "section": "DigiD wallet-ondersteuning", "url": "https://www.logius.nl/"}],
+      "conditions": {"vertrouwensdienst": "eudiwallet"},
+      "outcome": {"compliant": true, "category": "eidas_attributen", "confidence": "deterministic", "deadline": "2026-12-01", "evidenceRequired": "DigiD beschikbaar via EUDI-wallet", "article": "eIDAS 2.0 Art. 6l + NL DigiD implementatie"}
+    },
+    {
+      "ruleId": "EID-025",
+      "name": "Trust List publicatie — EU Trusted List",
+      "priority": 250,
+      "sourceRefs": [{"type": "wet", "title": "eIDAS Verordening (EU) 2014/910 — Art. 22", "section": "EU Trust List", "url": "https://eur-lex.europa.eu/eli/reg/2014/910"}],
+      "conditions": {"vertrouwensdienst": ["elektronisch_handtekening", "elektronisch_zegel"]},
+      "outcome": {"compliant": true, "category": "eidas_trustlist", "confidence": "deterministic", "deadline": "2024-09-29", "evidenceRequired": "TSP in EU Trusted List (EUTL)", "article": "eIDAS Art. 22"}
+    },
+    {
+      "ruleId": "EID-026",
+      "name": "Nationale trustlist synchronisatie met EUTL",
+      "priority": 250,
+      "sourceRefs": [{"type": "wet", "title": "eIDAS 2.0 Verordening (EU) 2024/1183 — Art. 6p", "section": "Nationale wallet trustlists", "url": "https://eur-lex.europa.eu/eli/reg/2024/1183"}],
+      "conditions": {"vertrouwensdienst": "eudiwallet"},
+      "outcome": {"compliant": true, "category": "eidas_trustlist", "confidence": "deterministic", "deadline": "2026-12-01", "evidenceRequired": "NL wallet trustlist gesynchroniseerd met EUTL", "article": "eIDAS 2.0 Art. 6p"}
+    },
+    {
+      "ruleId": "EID-027",
+      "name": "Wallet kwaliteitskeurmerk — eIDAS 2.0",
+      "priority": 200,
+      "sourceRefs": [{"type": "wet", "title": "eIDAS 2.0 Verordening (EU) 2024/1183 — Art. 6e", "section": "Kwaliteitskeurmerken", "url": "https://eur-lex.europa.eu/eli/reg/2024/1183"}],
+      "conditions": {"vertrouwensdienst": "eudiwallet", "walletStatus": "productie"},
+      "outcome": {"compliant": true, "category": "eidas_keurmerk", "confidence": "deterministic", "deadline": "2027-12-01", "evidenceRequired": "Keurmerk conform eIDAS 2.0 specificaties", "article": "eIDAS 2.0 Art. 6e"}
+    },
+    {
+      "ruleId": "EID-028",
+      "name": "Private sector wallet-acceptatie — 1 jaar na overheid",
+      "priority": 300,
+      "sourceRefs": [{"type": "wet", "title": "eIDAS 2.0 Verordening (EU) 2024/1183 — Art. 6a(6)", "section": "Private sector verplichtingen", "url": "https://eur-lex.europa.eu/eli/reg/2024/1183"}],
+      "conditions": {"vertrouwensdienst": "eudiwallet", "crossBorder": "ja"},
+      "outcome": {"compliant": true, "category": "eidas_private", "confidence": "deterministic", "deadline": "2027-12-01", "evidenceRequired": "Banken, telecom, energie accepteren wallet", "article": "eIDAS 2.0 Art. 6a(6): Private sector"}
+    },
+    {
+      "ruleId": "EID-029",
+      "name": "Wallet security levels — LoA laag/substantieel/hoog",
+      "priority": 300,
+      "sourceRefs": [{"type": "wet", "title": "eIDAS 2.0 Verordening (EU) 2024/1183 — Art. 6a(5)", "section": "Security levels", "url": "https://eur-lex.europa.eu/eli/reg/2024/1183"}],
+      "conditions": {"vertrouwensdienst": "eudiwallet"},
+      "outcome": {"compliant": true, "category": "eidas_security", "confidence": "deterministic", "deadline": "2026-12-01", "evidenceRequired": "Wallet ondersteunt LoA laag, substantieel en hoog", "article": "eIDAS 2.0 Art. 6a(5): Security levels"}
+    },
+    {
+      "ruleId": "EID-030",
+      "name": "Conformiteitsbeoordeling wallet vóór uitrol",
+      "priority": 400,
+      "sourceRefs": [{"type": "wet", "title": "eIDAS 2.0 Verordening (EU) 2024/1183 — Art. 6d", "section": "Conformiteitsbeoordeling", "url": "https://eur-lex.europa.eu/eli/reg/2024/1183"}],
+      "conditions": {"vertrouwensdienst": "eudiwallet"},
+      "outcome": {"compliant": true, "category": "eidas_certificering", "confidence": "deterministic", "deadline": "2026-12-01", "evidenceRequired": "Conformiteitsbeoordeling door aangemeld orgaan", "article": "eIDAS 2.0 Art. 6d"}
+    },
+    {
+      "ruleId": "EID-031",
+      "name": "DPIA voor wallet-implementatie",
+      "priority": 300,
+      "sourceRefs": [{"type": "wet", "title": "AVG Art. 35 + eIDAS 2.0 Art. 6a", "section": "Data Protection Impact Assessment", "url": "https://eur-lex.europa.eu/eli/reg/2016/679"}],
+      "conditions": {"vertrouwensdienst": "eudiwallet"},
+      "outcome": {"compliant": true, "category": "eidas_privacy", "confidence": "deterministic", "deadline": "2026-12-01", "evidenceRequired": "DPIA voor wallet-implementatie", "article": "AVG Art. 35 + eIDAS 2.0"}
+    },
+    {
+      "ruleId": "EID-032",
+      "name": "Implementing Acts — technische specificaties wallet",
+      "priority": 250,
+      "sourceRefs": [{"type": "regeling", "title": "Implementing Regulation (EU) 2024/2977", "section": "Wallet technische specificaties", "url": "https://eur-lex.europa.eu/eli/reg_impl/2024/2977"}],
+      "conditions": {"vertrouwensdienst": "eudiwallet"},
+      "outcome": {"compliant": true, "category": "eidas_implementing", "confidence": "deterministic", "deadline": "2026-12-01", "evidenceRequired": "Wallet voldoen aan Implementing Regulation 2024/2977", "article": "Implementing Regulation (EU) 2024/2977"}
+    }
+  ]
+}

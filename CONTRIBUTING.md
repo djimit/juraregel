@@ -51,3 +51,13 @@ bash ci/run-gates.sh use-cases/<domein>/
 - Alle CI gates PASS
 - JREM export valideert
 - Bronverwijzingen aanwezig per regel
+
+## NEDERUS Multi-Jurisdictional Controls
+
+Voor use cases die AI-systemen raken, voeg dan een NEDERUS-koppeling toe:
+
+1. Identificeer welke NEDERUS controls (NED-01 t/m NED-05) relevant zijn
+2. Documenteer de mapping in de use case `.md`
+3. Voeg MCP tool integratie toe als de use case een API heeft
+
+Zie [docs/nederus-use-case.md](docs/nederus-use-case.md) voor het volledige NEDERUS-framework.

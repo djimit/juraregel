@@ -100,3 +100,14 @@ Het CIP (Centrum voor Informatiebeveiliging en Privacybescherming) beheert de BI
 | Auditor | Geen audit trail van compliance | Elke check heeft calculationId + hashes |
 | Security Expert | ISO 27002 koppeling ontbreekt | Elke maatregel heeft ISO 27002 sourceRef |
 
+## NEDERUS Koppeling
+
+BIO2 is één van de vier frameworks in het [NEDERUS](../openspec/changes/nederus-framework-v1/sources/README.md) framework. NED-01 (AI Impact Assessment) en NED-05 (Incident Response) mappen naar BIO2 controls:
+
+| NEDERUS Control | BIO2 Mapping | Gebruik |
+|---|---|---|
+| NED-01 AI Impact Assessment | A.5-6: Risicoanalyse en -behandeling | Eén risicoanalyse voor BIO2 + EU AI Act + NIS2 + NORA |
+| NED-05 Incident Response | C.6-7: Incident response | Eén incidentproces voor BIO2 + NIS2 melding |
+
+Zie de [NEDERUS crosswalk voor BIO2](../openspec/changes/nederus-framework-v1/sources/crosswalks/bio2.md) voor de volledige mapping.
+

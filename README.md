@@ -4,9 +4,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Rule Sets](https://img.shields.io/badge/Rule%20Sets-34%20%288%20L1%2C%2026%20L0%29-blue)](https://github.com/djimit/juraregel)
 [![Tests](https://img.shields.io/badge/Tests-semantic%20gates-green)](https://github.com/djimit/juraregel)
-[![Regels](https://img.shields.io/badge/JREM%20Regels-702%20%28PoC%29-purple)](https://github.com/djimit/juraregel)
+[![Regels](https://img.shields.io/badge/JREM%20Regels-750%20%28PoC%29-purple)](https://github.com/djimit/juraregel)
 [![Agentic](https://img.shields.io/badge/Agentic-Platform-orange)](https://github.com/djimit/juraregel)
-[![MCP](https://img.shields.io/badge/MCP-12%20tools%20%2B%203%20resources%20%2B%203%20prompts-teal)](https://github.com/djimit/juraregel)
+[![MCP](https://img.shields.io/badge/MCP-16%20tools%20%2B%203%20resources%20%2B%203%20prompts-teal)](https://github.com/djimit/juraregel)
 [![BDD](https://img.shields.io/badge/BDD-7%20scenarios-brightgreen)](https://github.com/djimit/juraregel)
 [![Schema](https://img.shields.io/badge/JREM-Schema%20v1.1.0-lightblue)](https://github.com/djimit/juraregel)
 
@@ -56,7 +56,7 @@ evidence rapporteren zij geen compliance-oordeel.
 - **JREM** — Judicial Rule Exchange Model, versioned JSON Schema standaard (v1.0.0 → v1.1.0) voor juridische regels
 - **Rule APIs** — vijf uitvoerbare domeinen; overige domeinen zijn expliciet catalog-only
 - **MCP Server** — 12 tools + 3 resources + 3 prompts voor LLM-agents (Claude, GPT, lokale LLMs)
-- **Knowledge Base** — 702 regels doorzoekbaar met SQLite FTS5; vector search is optioneel en evaluatie-pending
+- **Knowledge Base** — 750 regels doorzoekbaar met SQLite FTS5; vector search is optioneel en evaluatie-pending
 - **BDD Tests** — Gherkin scenarios voor legal team acceptatie (pytest-bdd)
 - **BWB Harvester** — automatische wetwijziging-detectie via BWB API
 - **CI/CD Gates** — 18+ gates: per-use-case (14), JKB (5), extraction (3), schema versioning, BDD, harvester health
@@ -277,6 +277,65 @@ een versiegebonden menselijke eindbeslissing blijft de uitkomst
 
 10 regels (DPIA, bewaartermijn, rechten, minimisation). Rule API op `localhost:8499`. Bron: wetten.overheid.nl (UAVG).
 
+## Use Case: NEDERUS — Multi-Jurisdictional AI Compliance Mapping
+
+**Als** compliance officer bij een overheidsorganisatie **wil ik** één set controls die tegelijkertijd voldoet aan EU AI Act, BIO2, NIS2 en NORA **zodat** ik niet vier aparte compliance-processen hoef te draaien.
+
+| Rol | Probleem | Oplossing |
+|---|---|---|
+| Compliance officer | 4 frameworks × eigen risicoanalyse, eigen rapportage | NEDERUS unified controls: één assessment, vier dekkingen |
+| CISO | BIO2 + NIS2 overlappen maar gebruiken andere terminologie | NEDERUS mapping toont exact welke maatregelen overlappen |
+| Enterprise architect | NORA principes niet direct gekoppeld aan EU AI Act vereisten | NEDERUS koppelt NORA grondslagen aan EU AI Act artikelen |
+| AI developer | Onbekend of AI-systeem aan alle kaders voldoet | NED-01 t/m NED-05 als startpunt voor compliance review |
+
+NEDERUS (Nederlandse Unified AI Standards) is een open framework dat 5 unified controls definieert die **alle vijf** dekken: NIST AI RMF (functioneel), EU AI Act (wettelijk), BIO2 (beveiliging), NIS2 (cybersecurity), NORA (architectuur).
+
+### NEDERUS Controls in JuraRegel
+
+| NEDERUS Control | JuraRegel Use Cases | Frameworks |
+|---|---|---|
+| NED-01 AI Impact Assessment | EU AI Act, NORA, BIO2, NIS2 | All 4 |
+| NED-02 Bias & Fairness Testing | EU AI Act, NORA | EU AI Act + NORA |
+| NED-03 Human Oversight | EU AI Act, NORA | EU AI Act + NORA |
+| NED-04 Transparency | EU AI Act, NORA | EU AI Act + NORA |
+| NED-05 Incident Response | EU AI Act, BIO2, NIS2 | 3 frameworks |
+
+- **Repository**: [github.com/djimit/nederus-framework](https://github.com/djimit/nederus-framework)
+- **Frameworks**: NIST RMF, EU AI Act, BIO2, NIS2, NORA, CRA, DSA, AI Liability Directive
+- **Crosswalks**: 8 per-framework documenten met artikel-niveau verwijzingen
+- **Validation**: Structural (CI) + Tier classification (≥3 = priority) + Operational (pilot)
+- **MCP Tools**: `nederus.list_controls`, `nederus.get_control`, `nederus.crosswalk`, `nederus.lookup`
+- **License**: CC-BY 4.0
+
+### NEDERUS v2.0 Framework Matrix
+
+| | NIST | EU AI Act | BIO2 | NIS2 | NORA | CRA | DSA | AI Liability |
+|---|------|-----------|------|------|------|-----|-----|-------------|
+| NED-01 Impact Assessment | ✅ | ✅ | ◐ | ◐ | ◐ | ◐ | — | ◐ |
+| NED-02 Bias & Fairness | ✅ | ✅ | — | — | ◐ | — | ◐ | ◐ |
+| NED-03 Human Oversight | ✅ | ✅ | — | — | ◐ | — | — | ◐ |
+| NED-04 Transparency | ✅ | ✅ | — | — | ◐ | ◐ | ✅ | ◐ |
+| NED-05 Incident Response | ✅ | ✅ | ✅ | ✅ | — | ✅ | ◐ | ◐ |
+| NED-06 Secure Development | ◐ | ◐ | ✅ | ◐ | ◐ | ✅ | — | ◐ |
+| NED-07 Platform Transparency | ◐ | ◐ | — | — | ◐ | — | ✅ | ◐ |
+| NED-08 AI Liability | ◐ | ✅ | ◐ | ◐ | ◐ | ◐ | ◐ | ✅ |
+
+> ✅ = equivalent · ◐ = partial | — = gap | Based on NEDERUS v2.0 controls.yaml
+
+### Voorbeeld: Unified Impact Assessment
+
+```bash
+# NED-01: Één assessment, vier frameworks
+# EU AI Act Art. 9(2) + Art. 27 (FRIA)
+# BIO2 A.5-6 (Risicoanalyse)
+# NIS2 Art. 21 (Risk management)
+# NORA Grondslag-toets
+
+curl http://127.0.0.1:8498/v1/eu-ai-act/classify \
+  -d '{"systemType": "high-risk", "domain": "public-services"}'
+# → classification + linked NEDERUS controls + per-framework requirements
+```
+
 ## Use Case: NCSC — ICT-beveiligingsrichtlijnen
 
 **Als** security engineer **wil ik** automatisch valideren of mijn systemen voldoen aan de NCSC ICT-beveiligingsrichtlijnen **zodat** ik niet handmatig 32 richtlijnen hoef te checken.
@@ -336,6 +395,7 @@ Zie [docs/nora-compliance-matrix.md](docs/nora-compliance-matrix.md) voor de Mer
 | Rol | Wat JuraRegel biedt | Start hier |
 |---|---|---|
 | AI Engineer | EU AI Act regelcatalogus | [EU AI Act use case](docs/eu-ai-act-use-case.md) |
+| Identity Architect | eIDAS 2.0 wallet + vertrouwensdiensten | [eIDAS use case](docs/eidas-use-case.md) |
 | Data Engineer | AVG data minimisation, bewaartermijnen | [AVG use case](docs/avg-gdpr-use-case.md) |
 | Software Ontwikkelaar | TypeScript SDK, CLI, OpenAPI, code examples | [SDK README](sdk/typescript/README.md), [examples](docs/examples/) |
 | Solution Architect | NORA matrix, API Design Rules, ADR template | [NORA use case](docs/nora-use-case.md), [ADR template](docs/templates/adr-template.md) |
@@ -345,7 +405,7 @@ Zie [docs/nora-compliance-matrix.md](docs/nora-compliance-matrix.md) voor de Mer
 | Tester | Scenario-, bron-, compile-, API- en MCP-gates | [CONTRIBUTING](CONTRIBUTING.md), [user story template](docs/templates/user-story-template.md) |
 | Product Owner | Compliance rapporten, ROI template, comparison | [Comparison table](#waarom-juraregel), [user story template](docs/templates/user-story-template.md) |
 | Enterprise Architect | NORA compliance matrix, TOGAF mapping, C4 | [NORA matrix](docs/nora-compliance-matrix.md), [ADR template](docs/templates/adr-template.md) |
-| Compliance Officer | Frameworkinventaris en evidence-gaten | [Executive dashboard](dashboard/executive.html), [Postman](docs/juraregel-postman-collection.json) |
+| Compliance Officer | Frameworkinventaris en evidence-gaten, multi-jurisdictionele mapping | [Executive dashboard](dashboard/executive.html), [Postman](docs/juraregel-postman-collection.json), [NEDERUS Framework](https://github.com/djimit/nederus-framework) |
 | CISO | BIO2 + NCSC + Cybersecuritybeeld 2025 | [Executive dashboard](dashboard/executive.html), [NCSC](docs/ncsc-use-case.md) |
 | Jurist | RegelSpraak CNL, bronverwijzingen, acceptatie | [Rule Extraction Sprint](docs/rule-extraction-sprint.md), [maturity model](docs/maturity-model.md) |
 | Privacy Officer | AVG/GDPR regels, DPIA template | [AVG use case](docs/avg-gdpr-use-case.md), [DPIA template](docs/templates/dpia-template.md) |
@@ -403,6 +463,7 @@ graph TB
         N[noraonline.nl]
         EU[EUR-Lex — EU AI Act]
         AVG[wetten.overheid.nl — AVG]
+        NED[NEDERUS Framework\nMulti-jurisdictionele mapping]
     end
 
     subgraph "JuraRegel Platform"
@@ -450,8 +511,11 @@ graph TB
 | NORA | 15 | **PoC** | 8497 |
 | EU AI Act | 12 | PoC | 8498 |
 | Judicial AI Assurance | 12 | **PoC, catalog-only** | 8521 |
+| ADR ITGC-kader v1.1 | 48 | **L1-PoC, catalog-only** | 8522 |
 | AVG/GDPR | 10 | PoC | 8499 |
-| **NCSC** | **32** | **PoC** | **8500** |
+| NCSC | 32 | PoC | 8500 |
+| **eIDAS 2.0** | **32** | **PoC** | **8523** |
+| **NEDERUS** | **8 unified controls** | **v2.0 (external repo)** | **—** |
 | Procesreglement | 4 | PoC | 8491 |
 | Classificatie | 3 | PoC | 8492 |
 | Publicatie/PII | 3 | **PoC** (engine V4.2) | 8493 |
@@ -517,12 +581,15 @@ Zie `jrem-open-source/` voor het standalone JREM schema, validator en examples.
 
 | Metriek | Waarde |
 |---|---|
-| Use cases | 4 (griffierecht, procesreglement, classificatie, publicatie) |
-| Tests | Semantische scenario-, bron-, API-, BDD- en MCP-gates |
+| Use cases | 14 use cases + NEDERUS v2.0 multi-jurisdictionele mapping |
+| Tests | Semantische scenario-, bron-, API-, BDD-, MCP-gates + 52 eIDAS tests |
 | CI gates | 14 per use case |
-| JREM regels | 46 |
+| JREM regels | 750+ (incl. 32 eIDAS regels) |
 | Pseudonimisering engine | V4.2 — hoog op 25.127 uitspraken |
-| Open standaarden | 7 compliant (pseudonimiseringsrichtlijn, AVG/GDPR, JSON Schema, MIT, ECLI, BWBR) |
+| Open standaarden | 9 compliant (+ eIDAS 2.0, NEDERUS CC-BY) |
+| NEDERUS controls | 8 unified controls (NED-01 t/m NED-08), 8 frameworks gemapped |
+| eIDAS regels | 32 regels, 21 categorieën, 8 frameworks |
+| MCP tools | 16 tools (incl. nederus.list/get/crosswalk/lookup) |
 
 ## Licentie
 

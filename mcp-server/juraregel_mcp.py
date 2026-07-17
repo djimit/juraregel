@@ -26,38 +26,40 @@ from registry import can_calculate
 # Ports match the use case app.py files
 
 DOMAINS = {
-    "griffierecht":         {"port": 8490, "version": "2026.1"},
-    "procesreglement":      {"port": 8491, "version": "2026.1"},
-    "classificatie":        {"port": 8492, "version": "2026.1"},
-    "publicatie":           {"port": 8493, "version": "2026.1"},
-    "bio2":                 {"port": 8494, "version": "2025.1"},
+    "griffierecht": {"port": 8490, "version": "2026.1"},
+    "procesreglement": {"port": 8491, "version": "2026.1"},
+    "classificatie": {"port": 8492, "version": "2026.1"},
+    "publicatie": {"port": 8493, "version": "2026.1"},
+    "bio2": {"port": 8494, "version": "2025.1"},
     "forumstandaardisatie": {"port": 8495, "version": "2025.1"},
     "overheidsstandaarden": {"port": 8496, "version": "2025.1"},
-    "nora":                 {"port": 8497, "version": "2025.1"},
-    "eu-ai-act":            {"port": 8498, "version": "2025.1"},
-    "avg-gdpr":             {"port": 8499, "version": "2025.1"},
-    "ncsc":                 {"port": 8500, "version": "2025.1"},
-    "nis2":                 {"port": 8501, "version": "2025.1"},
-    "btw-tarieven":         {"port": 8502, "version": "2025.1"},
-    "ww-uitkering":         {"port": 8503, "version": "2025.1"},
-    "ind-verblijfsregels":  {"port": 8504, "version": "2025.1"},
-    "wmo":                  {"port": 8505, "version": "2025.1"},
+    "nora": {"port": 8497, "version": "2025.1"},
+    "eu-ai-act": {"port": 8498, "version": "2025.1"},
+    "avg-gdpr": {"port": 8499, "version": "2025.1"},
+    "ncsc": {"port": 8500, "version": "2025.1"},
+    "nis2": {"port": 8501, "version": "2025.1"},
+    "btw-tarieven": {"port": 8502, "version": "2025.1"},
+    "ww-uitkering": {"port": 8503, "version": "2025.1"},
+    "ind-verblijfsregels": {"port": 8504, "version": "2025.1"},
+    "wmo": {"port": 8505, "version": "2025.1"},
     "gegevensdelingsbeleid": {"port": 8506, "version": "2025.1"},
-    "dpia-model":           {"port": 8507, "version": "2025.1"},
-    "algoritmeregister":    {"port": 8508, "version": "2025.1"},
-    "data-overheid-dcat":   {"port": 8509, "version": "2025.1"},
-    "api-registratie":      {"port": 8510, "version": "2025.1"},
-    "traceability":         {"port": 8511, "version": "2025.1"},
-    "compliance-debt":      {"port": 8512, "version": "2025.1"},
-    "regulatory-impact":    {"port": 8513, "version": "2025.1"},
-    "toeslagen":            {"port": 8514, "version": "2025.1"},
-    "omgevingswet":         {"port": 8515, "version": "2025.1"},
-    "basisregistraties":    {"port": 8516, "version": "2025.1"},
-    "participatiewet":      {"port": 8517, "version": "2025.1"},
+    "dpia-model": {"port": 8507, "version": "2025.1"},
+    "algoritmeregister": {"port": 8508, "version": "2025.1"},
+    "data-overheid-dcat": {"port": 8509, "version": "2025.1"},
+    "api-registratie": {"port": 8510, "version": "2025.1"},
+    "traceability": {"port": 8511, "version": "2025.1"},
+    "compliance-debt": {"port": 8512, "version": "2025.1"},
+    "regulatory-impact": {"port": 8513, "version": "2025.1"},
+    "toeslagen": {"port": 8514, "version": "2025.1"},
+    "omgevingswet": {"port": 8515, "version": "2025.1"},
+    "basisregistraties": {"port": 8516, "version": "2025.1"},
+    "participatiewet": {"port": 8517, "version": "2025.1"},
     "decentrale-regelcheck": {"port": 8518, "version": "2026.1"},
     "woo-publicatieplicht-preflight": {"port": 8519, "version": "2026.1"},
-    "sttr-preflight":       {"port": 8520, "version": "2026.1"},
+    "sttr-preflight": {"port": 8520, "version": "2026.1"},
     "judicial-ai-assurance": {"port": 8521, "version": "2026.1"},
+    "itgc-kader": {"port": 8522, "version": "2026.1"},
+    "eidas": {"port": 8523, "version": "2026.1"},
 }
 
 # ─── JREM Direct Access (no API server needed) ────────────────
@@ -67,24 +69,26 @@ JREM_BASE = Path(__file__).parent.parent / "use-cases"
 
 _jrem_cache: dict[str, dict] = {}
 
+
 def load_jrem(domain: str) -> dict:
     """Load the latest JREM export for a domain."""
     if domain in _jrem_cache:
         return _jrem_cache[domain]
-    
+
     jrem_dir = JREM_BASE / domain / "jrem" / "exports"
     if not jrem_dir.exists():
         raise FileNotFoundError(f"No JREM exports for domain '{domain}' at {jrem_dir}")
-    
+
     files = sorted(jrem_dir.glob("*.json"), key=lambda f: f.name, reverse=True)
     if not files:
         raise FileNotFoundError(f"No JREM files in {jrem_dir}")
-    
+
     with open(files[0]) as f:
         data = json.load(f)
-    
+
     _jrem_cache[domain] = data
     return data
+
 
 def list_all_domains() -> list[dict]:
     """List all available domains with metadata."""
@@ -92,18 +96,23 @@ def list_all_domains() -> list[dict]:
     for domain, info in DOMAINS.items():
         try:
             jrem = load_jrem(domain)
-            result.append({
-                "domain": domain,
-                "version": jrem.get("version", "?"),
-                "validFrom": jrem.get("validFrom"),
-                "validUntil": jrem.get("validUntil"),
-                "ruleCount": len(jrem.get("rules", [])),
-                "port": info["port"],
-                "jurisdiction": jrem.get("jurisdiction", "NL"),
-            })
+            result.append(
+                {
+                    "domain": domain,
+                    "version": jrem.get("version", "?"),
+                    "validFrom": jrem.get("validFrom"),
+                    "validUntil": jrem.get("validUntil"),
+                    "ruleCount": len(jrem.get("rules", [])),
+                    "port": info["port"],
+                    "jurisdiction": jrem.get("jurisdiction", "NL"),
+                }
+            )
         except Exception:
-            result.append({"domain": domain, "error": "JREM not found", "port": info["port"]})
+            result.append(
+                {"domain": domain, "error": "JREM not found", "port": info["port"]}
+            )
     return result
+
 
 def get_rules(domain: str, rule_id: str = None) -> list[dict] | dict:
     """Get rules for a domain, optionally filtered by ruleId."""
@@ -116,37 +125,311 @@ def get_rules(domain: str, rule_id: str = None) -> list[dict] | dict:
         return {"error": f"Rule {rule_id} not found in {domain}"}
     return rules
 
+
 def search_rules(query: str, domain: str = None) -> list[dict]:
     """Search rules by keyword in ruleId, name, or sourceRefs."""
     results = []
     domains_to_search = [domain] if domain else list(DOMAINS.keys())
-    
+
     query_words = [w.lower() for w in query.split() if len(w) >= 3]
-    
+
     for d in domains_to_search:
         try:
             jrem = load_jrem(d)
             for rule in jrem.get("rules", []):
                 # Search in ruleId, name, sourceRefs
                 searchable = (
-                    rule.get("ruleId", "") + " " +
-                    rule.get("name", "") + " " +
-                    " ".join(s.get("title", "") + " " + s.get("section", "") for s in rule.get("sourceRefs", []))
+                    rule.get("ruleId", "")
+                    + " "
+                    + rule.get("name", "")
+                    + " "
+                    + " ".join(
+                        s.get("title", "") + " " + s.get("section", "")
+                        for s in rule.get("sourceRefs", [])
+                    )
                 ).lower()
-                
+
                 # Match if ALL query words are found in the searchable text
                 if all(word in searchable for word in query_words):
-                    results.append({
-                        "ruleId": rule["ruleId"],
-                        "domain": d,
-                        "name": rule["name"][:100],
-                        "sourceRefs": rule.get("sourceRefs", [])[:2],
-                        "relevance": "high" if all(w in rule.get("ruleId", "").lower() for w in query_words) else "partial"
-                    })
+                    results.append(
+                        {
+                            "ruleId": rule["ruleId"],
+                            "domain": d,
+                            "name": rule["name"][:100],
+                            "sourceRefs": rule.get("sourceRefs", [])[:2],
+                            "relevance": "high"
+                            if all(
+                                w in rule.get("ruleId", "").lower() for w in query_words
+                            )
+                            else "partial",
+                        }
+                    )
         except Exception:
             continue
-    
+
     return results[:20]  # limit to 20 results
+
+
+# ─── NEDERUS Multi-Jurisdictional Controls v2.0 ───────────────
+# Lightweight in-memory NEDERUS controls (full data lives in nederus-framework repo)
+
+NEDERUS_CONTROLS = [
+    {
+        "id": "NED-01",
+        "title": "AI Impact Assessment",
+        "severity": "high",
+        "frameworks": {
+            "nist_ai_rmf": {
+                "function": "MAP",
+                "reference": "MAP-1.1",
+                "relation": "equivalent",
+            },
+            "eu_ai_act": {"reference": "Art. 9(2), Art. 27", "relation": "equivalent"},
+            "bio2": {"reference": "A.5-6", "relation": "partial"},
+            "nis2": {"reference": "Art. 21", "relation": "partial"},
+            "nora": {"reference": "Grondslag-toets", "relation": "partial"},
+            "cra": {"reference": "Art. 10", "relation": "partial"},
+            "dsa": {"reference": "gap", "relation": "gap"},
+            "ai_liability": {"reference": "Art. 3", "relation": "partial"},
+        },
+    },
+    {
+        "id": "NED-02",
+        "title": "Bias & Fairness Testing",
+        "severity": "high",
+        "frameworks": {
+            "nist_ai_rmf": {
+                "function": "MAP+MEASURE",
+                "reference": "MAP-2.3+MEASURE-1.2",
+                "relation": "equivalent",
+            },
+            "eu_ai_act": {"reference": "Art. 10", "relation": "equivalent"},
+            "bio2": {"reference": "gap", "relation": "gap"},
+            "nis2": {"reference": "gap", "relation": "gap"},
+            "nora": {"reference": "Evenredigheid", "relation": "partial"},
+            "cra": {"reference": "gap", "relation": "gap"},
+            "dsa": {"reference": "Art. 27", "relation": "partial"},
+            "ai_liability": {"reference": "Art. 4(3)", "relation": "partial"},
+        },
+    },
+    {
+        "id": "NED-03",
+        "title": "Human Oversight",
+        "severity": "high",
+        "frameworks": {
+            "nist_ai_rmf": {
+                "function": "GOVERN+MANAGE",
+                "reference": "GOVERN-1.4+MANAGE-2.1",
+                "relation": "equivalent",
+            },
+            "eu_ai_act": {"reference": "Art. 14", "relation": "equivalent"},
+            "bio2": {"reference": "gap", "relation": "gap"},
+            "nis2": {"reference": "gap", "relation": "gap"},
+            "nora": {"reference": "Proportionaliteit", "relation": "partial"},
+            "cra": {"reference": "gap", "relation": "gap"},
+            "dsa": {"reference": "gap", "relation": "gap"},
+            "ai_liability": {"reference": "Art. 4(1)", "relation": "partial"},
+        },
+    },
+    {
+        "id": "NED-04",
+        "title": "Transparency & Explainability",
+        "severity": "medium",
+        "frameworks": {
+            "nist_ai_rmf": {
+                "function": "MEASURE",
+                "reference": "MEASURE-1.3",
+                "relation": "equivalent",
+            },
+            "eu_ai_act": {"reference": "Art. 13, Art. 50", "relation": "equivalent"},
+            "bio2": {"reference": "gap", "relation": "gap"},
+            "nis2": {"reference": "gap", "relation": "gap"},
+            "nora": {"reference": "Openbaarheid", "relation": "partial"},
+            "cra": {"reference": "Art. 13", "relation": "partial"},
+            "dsa": {"reference": "Art. 27, Art. 39", "relation": "equivalent"},
+            "ai_liability": {"reference": "Art. 5", "relation": "partial"},
+        },
+    },
+    {
+        "id": "NED-05",
+        "title": "Incident Response & Reporting",
+        "severity": "high",
+        "frameworks": {
+            "nist_ai_rmf": {
+                "function": "MANAGE",
+                "reference": "MANAGE-2.3",
+                "relation": "equivalent",
+            },
+            "eu_ai_act": {"reference": "Art. 72", "relation": "equivalent"},
+            "bio2": {"reference": "C.6-7", "relation": "equivalent"},
+            "nis2": {"reference": "Art. 23", "relation": "equivalent"},
+            "nora": {"reference": "gap", "relation": "gap"},
+            "cra": {"reference": "Art. 11, Art. 14", "relation": "equivalent"},
+            "dsa": {"reference": "Art. 13", "relation": "partial"},
+            "ai_liability": {"reference": "Art. 8", "relation": "partial"},
+        },
+    },
+    {
+        "id": "NED-06",
+        "title": "Secure Development & Vulnerability Management",
+        "severity": "high",
+        "frameworks": {
+            "nist_ai_rmf": {
+                "function": "GOVERN",
+                "reference": "GOVERN-1.2",
+                "relation": "partial",
+            },
+            "eu_ai_act": {"reference": "Art. 15", "relation": "partial"},
+            "bio2": {"reference": "B.3", "relation": "equivalent"},
+            "nis2": {"reference": "Art. 21(2)(d)", "relation": "partial"},
+            "nora": {
+                "reference": "Beveiliging is basisvoorwaarde",
+                "relation": "partial",
+            },
+            "cra": {"reference": "Art. 11, Art. 12", "relation": "equivalent"},
+            "dsa": {"reference": "gap", "relation": "gap"},
+            "ai_liability": {"reference": "Art. 4(3)", "relation": "partial"},
+        },
+    },
+    {
+        "id": "NED-07",
+        "title": "Platform Transparency & Content Governance",
+        "severity": "medium",
+        "frameworks": {
+            "nist_ai_rmf": {
+                "function": "MEASURE",
+                "reference": "MEASURE-1.1",
+                "relation": "partial",
+            },
+            "eu_ai_act": {"reference": "Art. 13", "relation": "partial"},
+            "bio2": {"reference": "gap", "relation": "gap"},
+            "nis2": {"reference": "gap", "relation": "gap"},
+            "nora": {"reference": "Openbaarheid", "relation": "partial"},
+            "cra": {"reference": "gap", "relation": "gap"},
+            "dsa": {
+                "reference": "Art. 13-15, Art. 27, Art. 39",
+                "relation": "equivalent",
+            },
+            "ai_liability": {"reference": "Art. 5", "relation": "partial"},
+        },
+    },
+    {
+        "id": "NED-08",
+        "title": "AI Liability & Evidence Preservation",
+        "severity": "high",
+        "frameworks": {
+            "nist_ai_rmf": {
+                "function": "MANAGE",
+                "reference": "MANAGE-3",
+                "relation": "partial",
+            },
+            "eu_ai_act": {"reference": "Art. 12", "relation": "equivalent"},
+            "bio2": {"reference": "C.4", "relation": "partial"},
+            "nis2": {"reference": "Art. 23", "relation": "partial"},
+            "nora": {"reference": "Verantwoordelijkheid", "relation": "partial"},
+            "cra": {"reference": "Art. 11", "relation": "partial"},
+            "dsa": {"reference": "Art. 13", "relation": "partial"},
+            "ai_liability": {
+                "reference": "Art. 3, Art. 5, Art. 8",
+                "relation": "equivalent",
+            },
+        },
+    },
+]
+
+
+def nederus_list_controls(framework: str = None) -> dict:
+    """List all NEDERUS controls, optionally filtered by framework."""
+    if framework:
+        normalized = _normalize_framework(framework)
+        filtered = []
+        for ctrl in NEDERUS_CONTROLS:
+            if normalized in ctrl["frameworks"]:
+                filtered.append(ctrl)
+        return {"framework": framework, "controls": filtered, "count": len(filtered)}
+    return {"controls": NEDERUS_CONTROLS, "count": len(NEDERUS_CONTROLS)}
+
+
+def nederus_lookup(query: str) -> dict:
+    """
+    Generic NEDERUS lookup — search by control ID, framework name, or keyword.
+
+    Examples:
+      nederus_lookup("NED-01") → control detail
+      nederus_lookup("eu-ai-act") → all controls for EU AI Act
+      nederus_lookup("impact") → controls matching keyword
+    """
+    query_lower = query.lower().strip()
+
+    # Try control ID match
+    for ctrl in NEDERUS_CONTROLS:
+        if ctrl["id"].lower() == query_lower:
+            return {"match_type": "control_id", "control": ctrl}
+
+    # Try framework match
+    normalized = _normalize_framework(query)
+    for ctrl in NEDERUS_CONTROLS:
+        if normalized in ctrl["frameworks"]:
+            return nederus_list_controls(query)
+
+    # Try keyword match in title
+    matching = [c for c in NEDERUS_CONTROLS if query_lower in c["title"].lower()]
+    if matching:
+        return {
+            "match_type": "keyword",
+            "query": query,
+            "controls": matching,
+            "count": len(matching),
+        }
+
+    return {
+        "error": f"No match for '{query}'",
+        "suggestion": "Try: NED-01..NED-08, eu-ai-act, bio2, nis2, nora, cra, dsa, ai-liability, or a keyword",
+    }
+
+
+def nederus_get_control(control_id: str) -> dict:
+    """Get a specific NEDERUS control by ID."""
+    for ctrl in NEDERUS_CONTROLS:
+        if ctrl["id"].lower() == control_id.lower():
+            return ctrl
+    return {
+        "error": f"Control {control_id} not found",
+        "available": [c["id"] for c in NEDERUS_CONTROLS],
+    }
+
+
+def _normalize_framework(fw: str) -> str:
+    """Normalize framework name to internal key (eu-ai-act → eu_ai_act)."""
+    return fw.lower().replace("-", "_").replace(" ", "_")
+
+
+def nederus_crosswalk(source: str, target: str) -> dict:
+    """Show crosswalk between two frameworks via NEDERUS controls."""
+    source = _normalize_framework(source)
+    target = _normalize_framework(target)
+    applicable = []
+    for ctrl in NEDERUS_CONTROLS:
+        fw = ctrl["frameworks"]
+        if source in fw and target in fw:
+            applicable.append(
+                {
+                    "control_id": ctrl["id"],
+                    "control_title": ctrl["title"],
+                    "source_ref": fw[source]["reference"],
+                    "target_ref": fw[target]["reference"],
+                    "source_relation": fw[source]["relation"],
+                    "target_relation": fw[target]["relation"],
+                }
+            )
+    return {
+        "source_framework": source,
+        "target_framework": target,
+        "overlapping_controls": applicable,
+        "count": len(applicable),
+        "note": "Full crosswalk at https://github.com/djimit/nederus-framework",
+    }
+
 
 def match_rule(domain: str, input_data: dict) -> dict:
     """
@@ -160,14 +443,21 @@ def match_rule(domain: str, input_data: dict) -> dict:
             "domain": domain,
             "status": "catalog_only",
             "result": {"matchedRule": None, "outcome": {}},
-            "explanation": {"summary": "Deze regelset heeft geen bewezen calculate-contract."},
+            "explanation": {
+                "summary": "Deze regelset heeft geen bewezen calculate-contract."
+            },
         }
     rule = select_rule(rules, input_data)
     if rule:
         import hashlib
         from datetime import datetime, timezone
-        input_hash = hashlib.sha256(json.dumps(input_data, sort_keys=True).encode()).hexdigest()
-        ruleset_hash = hashlib.sha256(json.dumps(jrem, sort_keys=True).encode()).hexdigest()
+
+        input_hash = hashlib.sha256(
+            json.dumps(input_data, sort_keys=True).encode()
+        ).hexdigest()
+        ruleset_hash = hashlib.sha256(
+            json.dumps(jrem, sort_keys=True).encode()
+        ).hexdigest()
 
         return {
             "calculationId": f"calc-{input_hash[:16]}",
@@ -175,28 +465,31 @@ def match_rule(domain: str, input_data: dict) -> dict:
             "domain": domain,
             "result": {
                 "matchedRule": {"ruleId": rule["ruleId"], "name": rule["name"]},
-                "outcome": rule.get("outcome", {})
+                "outcome": rule.get("outcome", {}),
             },
             "explanation": {
                 "summary": rule["name"],
                 "appliedRules": [rule["ruleId"]],
                 "sourceRefs": rule.get("sourceRefs", []),
-                "conditions": rule.get("conditions", {})
+                "conditions": rule.get("conditions", {}),
             },
             "audit": {
                 "inputHash": f"sha256:{input_hash}",
                 "rulesetHash": f"sha256:{ruleset_hash}",
-                "timestamp": datetime.now(timezone.utc).isoformat()
-            }
+                "timestamp": datetime.now(timezone.utc).isoformat(),
+            },
         }
-    
+
     return {
         "domain": domain,
         "result": {"matchedRule": None, "outcome": {}},
         "explanation": {"summary": "Geen passende regel gevonden voor deze input"},
-        "status": "catalog_only" if not any(r.get("conditions") for r in rules) else "no_match",
-        "warnings": ["Geen uitvoerbare match — verifieer input en regelset"]
+        "status": "catalog_only"
+        if not any(r.get("conditions") for r in rules)
+        else "no_match",
+        "warnings": ["Geen uitvoerbare match — verifieer input en regelset"],
     }
+
 
 def get_sources(domain: str) -> list[dict]:
     """Get all unique source references for a domain."""
@@ -210,9 +503,10 @@ def get_sources(domain: str) -> list[dict]:
                     "title": ref.get("title", ""),
                     "section": ref.get("section", ""),
                     "type": ref.get("type", ""),
-                    "url": ref.get("url", "")
+                    "url": ref.get("url", ""),
                 }
     return list(sources.values())
+
 
 def get_audit_trail(domain: str, rule_id: str) -> dict:
     """Get the full traceability chain for a rule: wet → code → test → audit."""
@@ -222,10 +516,10 @@ def get_audit_trail(domain: str, rule_id: str) -> dict:
         if r["ruleId"] == rule_id:
             rule = r
             break
-    
+
     if not rule:
         return {"error": f"Rule {rule_id} not found in {domain}"}
-    
+
     # Find test file
     test_file = JREM_BASE / domain / "tests" / f"test_{domain.replace('-', '_')}.py"
     test_refs = []
@@ -237,15 +531,18 @@ def get_audit_trail(domain: str, rule_id: str) -> dict:
             for i, line in enumerate(lines):
                 if "def test_" in line and i < len(lines):
                     # Check next 10 lines for rule_id reference
-                    context = "\n".join(lines[i:i+15])
+                    context = "\n".join(lines[i : i + 15])
                     if rule_id in context:
                         test_name = line.split("def ")[1].split("(")[0]
                         test_refs.append(test_name)
-    
+
     return {
         "ruleId": rule_id,
         "domain": domain,
-        "wet": [ref.get("title", "") + " " + ref.get("section", "") for ref in rule.get("sourceRefs", [])],
+        "wet": [
+            ref.get("title", "") + " " + ref.get("section", "")
+            for ref in rule.get("sourceRefs", [])
+        ],
         "code": f"use-cases/{domain}/api/app.py",
         "jrem": f"use-cases/{domain}/jrem/exports/",
         "tests": test_refs,
@@ -253,37 +550,38 @@ def get_audit_trail(domain: str, rule_id: str) -> dict:
         "openapi": f"http://127.0.0.1:{DOMAINS[domain]['port']}/openapi.json",
         "version": jrem.get("version"),
         "validFrom": jrem.get("validFrom"),
-        "validUntil": jrem.get("validUntil")
+        "validUntil": jrem.get("validUntil"),
     }
+
 
 def version_diff(domain: str, v1: str, v2: str) -> dict:
     """Compare two JREM versions of a domain."""
     jrem_dir = JREM_BASE / domain / "jrem" / "exports"
     results = {"added": [], "removed": [], "modified": []}
-    
+
     versions = {}
     for f in jrem_dir.glob("*.json"):
         data = json.loads(f.read_text())
         versions[data["version"]] = data
-    
+
     if v1 not in versions:
         return {"error": f"Version {v1} not found. Available: {list(versions.keys())}"}
     if v2 not in versions:
         return {"error": f"Version {v2} not found. Available: {list(versions.keys())}"}
-    
+
     rules_v1 = {r["ruleId"]: r for r in versions[v1]["rules"]}
     rules_v2 = {r["ruleId"]: r for r in versions[v2]["rules"]}
-    
+
     for rid in rules_v2:
         if rid not in rules_v1:
             results["added"].append(rid)
         elif rules_v1[rid] != rules_v2[rid]:
             results["modified"].append(rid)
-    
+
     for rid in rules_v1:
         if rid not in rules_v2:
             results["removed"].append(rid)
-    
+
     return results
 
 
@@ -292,11 +590,13 @@ def semantic_search(query: str, domain: str = None, limit: int = 10) -> list:
     repo_root = Path(__file__).parent.parent
     try:
         from tools.jkb_vectorstore import init_qdrant, search as vec_search
+
         client = init_qdrant(str(repo_root / ".qdrant"))
         return vec_search(client, query, domain=domain, limit=limit)
     except Exception:
         # Fallback: keyword search via SQLite FTS5
         import sqlite3
+
         db_path = repo_root / ".keyword.db"
         if not db_path.exists():
             return [
@@ -312,7 +612,7 @@ def semantic_search(query: str, domain: str = None, limit: int = 10) -> list:
                 for r in search_rules(query, domain)[:limit]
             ]
         conn = sqlite3.connect(str(db_path))
-        terms = query.replace('"', '').strip().split()
+        terms = query.replace('"', "").strip().split()
         fts_query = " ".join('"' + t + '"' for t in terms if t)
         if domain:
             sql = "SELECT rule_id, domain, name, nl_text FROM rules WHERE rules MATCH ? AND domain = ? ORDER BY rank LIMIT ?"
@@ -321,7 +621,17 @@ def semantic_search(query: str, domain: str = None, limit: int = 10) -> list:
             sql = "SELECT rule_id, domain, name, nl_text FROM rules WHERE rules MATCH ? ORDER BY rank LIMIT ?"
             rows = conn.execute(sql, (fts_query, limit)).fetchall()
         conn.close()
-        return [{"rule_id": r[0], "domain": r[1], "name": r[2], "nl_text": r[3][:200], "score": None} for r in rows]
+        return [
+            {
+                "rule_id": r[0],
+                "domain": r[1],
+                "name": r[2],
+                "nl_text": r[3][:200],
+                "score": None,
+            }
+            for r in rows
+        ]
+
 
 def build_reasoning(matched_result: dict) -> list[str]:
     """Build reasoning steps from a matched rule result."""
@@ -329,9 +639,11 @@ def build_reasoning(matched_result: dict) -> list[str]:
     rule = matched_result.get("result", {}).get("matchedRule", {})
     explanation = matched_result.get("explanation", {})
     conditions = explanation.get("conditions", {})
-    
-    steps.append(f"Regel {rule.get('ruleId', '?')} '{rule.get('name', '?')}' geevalueerd")
-    
+
+    steps.append(
+        f"Regel {rule.get('ruleId', '?')} '{rule.get('name', '?')}' geevalueerd"
+    )
+
     for key, val in conditions.items():
         if key == "periode":
             continue
@@ -345,16 +657,21 @@ def build_reasoning(matched_result: dict) -> list[str]:
             steps.append(f"Voorwaarde {key}: {' en '.join(parts)}")
         else:
             steps.append(f"Voorwaarde {key}: {val}")
-    
+
     outcome = matched_result.get("result", {}).get("outcome", {})
-    outcome_parts = [f"{k}: {v}" for k, v in outcome.items() if k not in ("confidence", "manualReviewRequired")]
+    outcome_parts = [
+        f"{k}: {v}"
+        for k, v in outcome.items()
+        if k not in ("confidence", "manualReviewRequired")
+    ]
     if outcome_parts:
         steps.append(f"Uitkomst: {'; '.join(outcome_parts)}")
-    
+
     if matched_result.get("result", {}).get("matchedRule", {}).get("ruleId") is None:
         steps.append("Geen regel matchte met de gegeven input")
-    
+
     return steps
+
 
 def explain(domain: str, input_data: dict) -> dict:
     """Explain a calculation in natural language with reasoning steps."""
@@ -368,19 +685,23 @@ def explain(domain: str, input_data: dict) -> dict:
         "matched_rule": result.get("result", {}).get("matchedRule"),
     }
 
+
 def check_compliance(domain: str, framework: str = None) -> dict:
     """Report assessment coverage; no evidence means no compliance percentage."""
     jrem = load_jrem(domain)
     rules = jrem.get("rules", [])
-    
+
     total = len(rules)
-    gaps = [{
-        "rule_id": rule["ruleId"],
-        "name": rule["name"],
-        "status": "not_assessed",
-        "source_refs": rule.get("sourceRefs", []),
-    } for rule in rules]
-    
+    gaps = [
+        {
+            "rule_id": rule["ruleId"],
+            "name": rule["name"],
+            "status": "not_assessed",
+            "source_refs": rule.get("sourceRefs", []),
+        }
+        for rule in rules
+    ]
+
     return {
         "domain": domain,
         "framework": framework or domain,
@@ -395,26 +716,34 @@ def check_compliance(domain: str, framework: str = None) -> dict:
         "version": jrem.get("version"),
     }
 
+
 def get_playbook(playbook_id: str) -> dict:
     """Get an agent playbook by ID."""
     playbooks_dir = Path(__file__).parent.parent / "docs" / "agent-playbooks"
     playbook_file = playbooks_dir / f"{playbook_id}.md"
-    
+
     if playbook_file.exists():
-        return {"playbook_id": playbook_id, "content": playbook_file.read_text(), "source": str(playbook_file)}
-    
+        return {
+            "playbook_id": playbook_id,
+            "content": playbook_file.read_text(),
+            "source": str(playbook_file),
+        }
+
     # List available playbooks
     available = []
     if playbooks_dir.exists():
-        available = [f.stem for f in playbooks_dir.glob("*.md") if f.name != "_template.md"]
-    
+        available = [
+            f.stem for f in playbooks_dir.glob("*.md") if f.name != "_template.md"
+        ]
+
     return {"error": f"Playbook '{playbook_id}' not found", "available": available}
+
 
 def get_governance(domain: str, rule_id: str = None) -> dict:
     """Get governance info for a domain or specific rule."""
     governance_dir = Path(__file__).parent.parent / "governance"
     registry_file = governance_dir / "governance-registry.jsonld"
-    
+
     if registry_file.exists():
         registry = json.loads(registry_file.read_text())
         if rule_id:
@@ -427,9 +756,12 @@ def get_governance(domain: str, rule_id: str = None) -> dict:
             for entry in graph:
                 if entry.get("domain") == domain:
                     return entry
-            return {"error": f"Domain {domain} not in governance registry", "available": [e.get("domain") for e in graph]}
+            return {
+                "error": f"Domain {domain} not in governance registry",
+                "available": [e.get("domain") for e in graph],
+            }
         return registry
-    
+
     # Fallback: derive from JREM
     jrem = load_jrem(domain)
     return {
@@ -440,11 +772,13 @@ def get_governance(domain: str, rule_id: str = None) -> dict:
         "rules_count": len(jrem.get("rules", [])),
     }
 
+
 # ─── MCP Protocol (stdio) ─────────────────────────────────────
 # Simple MCP-over-stdio implementation for agent integration
 
 
 # ─── MCP Resources ─────────────────────────────────────────────
+
 
 def get_resource_list() -> list[dict]:
     """List all available MCP resources."""
@@ -452,16 +786,18 @@ def get_resource_list() -> list[dict]:
     for domain, info in DOMAINS.items():
         try:
             jrem = load_jrem(domain)
-            domains_summary.append({
-                "domain": domain,
-                "version": jrem.get("version", "?"),
-                "ruleCount": len(jrem.get("rules", [])),
-                "validFrom": jrem.get("validFrom"),
-                "validUntil": jrem.get("validUntil"),
-            })
+            domains_summary.append(
+                {
+                    "domain": domain,
+                    "version": jrem.get("version", "?"),
+                    "ruleCount": len(jrem.get("rules", [])),
+                    "validFrom": jrem.get("validFrom"),
+                    "validUntil": jrem.get("validUntil"),
+                }
+            )
         except Exception:
             domains_summary.append({"domain": domain, "error": "JREM not found"})
-    
+
     return [
         {
             "uri": "laws://list",
@@ -482,7 +818,8 @@ def get_resource_list() -> list[dict]:
             "description": f"Volledige JREM specificatie voor domein {d['domain']} ({d.get('ruleCount', '?')} regels, versie {d.get('version', '?')}).",
             "mimeType": "application/json",
         }
-        for d in domains_summary if "error" not in d
+        for d in domains_summary
+        if "error" not in d
     ]
 
 
@@ -514,21 +851,22 @@ def build_live_summary() -> dict:
         "generated_from": "live JREM exports",
     }
 
+
 def read_resource(uri: str) -> dict | list | None:
     """Read a specific MCP resource by URI."""
     if uri == "laws://list":
         return list_all_domains()
-    
+
     if uri == "laws://summary":
         return build_live_summary()
-    
+
     if uri.startswith("laws://") and uri.endswith("/spec"):
         domain = uri.replace("laws://", "").replace("/spec", "")
         try:
             return load_jrem(domain)
         except Exception as e:
             return {"error": str(e)}
-    
+
     if uri.startswith("profile://"):
         domain = uri.replace("profile://", "")
         try:
@@ -551,10 +889,12 @@ def read_resource(uri: str) -> dict | list | None:
             }
         except Exception as e:
             return {"error": str(e)}
-    
+
     return None
 
+
 # ─── MCP Prompts ──────────────────────────────────────────────
+
 
 def get_prompt_list() -> list[dict]:
     """List all available MCP prompts."""
@@ -563,28 +903,58 @@ def get_prompt_list() -> list[dict]:
             "name": "check_all_benefits",
             "description": "Controleer alle mogelijke uitkeringen/toeslagen voor een persoon (zorgtoeslag, huurtoeslag, bijstand, AOW).",
             "arguments": [
-                {"name": "leeftijd", "description": "Leeftijd van de persoon", "required": True},
-                {"name": "inkomen", "description": "Jaarinkomen in euro", "required": True},
-                {"name": "huishouden", "description": "Type huishouden (alleenstaande, samenwonend, alleenstaande_ouder)", "required": True},
+                {
+                    "name": "leeftijd",
+                    "description": "Leeftijd van de persoon",
+                    "required": True,
+                },
+                {
+                    "name": "inkomen",
+                    "description": "Jaarinkomen in euro",
+                    "required": True,
+                },
+                {
+                    "name": "huishouden",
+                    "description": "Type huishouden (alleenstaande, samenwonend, alleenstaande_ouder)",
+                    "required": True,
+                },
             ],
         },
         {
             "name": "explain_calculation",
             "description": "Leg een JuraRegel berekening uit in natuurlijke taal met redeneerstappen en bronverwijzingen.",
             "arguments": [
-                {"name": "domain", "description": "Domein (bijv. toeslagen, participatiewet)", "required": True},
-                {"name": "input", "description": "Input data als JSON object", "required": True},
+                {
+                    "name": "domain",
+                    "description": "Domein (bijv. toeslagen, participatiewet)",
+                    "required": True,
+                },
+                {
+                    "name": "input",
+                    "description": "Input data als JSON object",
+                    "required": True,
+                },
             ],
         },
         {
             "name": "compare_scenarios",
-            "description": "Vergelijk twee scenario's voor hetzelfde domein (bijv. alleenstaand vs samenwonend).",            "arguments": [
+            "description": "Vergelijk twee scenario's voor hetzelfde domein (bijv. alleenstaand vs samenwonend).",
+            "arguments": [
                 {"name": "domain", "description": "Domein", "required": True},
-                {"name": "scenario_a", "description": "Eerste scenario als JSON", "required": True},
-                {"name": "scenario_b", "description": "Tweede scenario als JSON", "required": True},
+                {
+                    "name": "scenario_a",
+                    "description": "Eerste scenario als JSON",
+                    "required": True,
+                },
+                {
+                    "name": "scenario_b",
+                    "description": "Tweede scenario als JSON",
+                    "required": True,
+                },
             ],
         },
     ]
+
 
 def get_prompt(name: str, arguments: dict) -> dict | None:
     """Get a specific prompt with filled-in arguments."""
@@ -599,9 +969,12 @@ def get_prompt(name: str, arguments: dict) -> dict | None:
                     "content": f"Controleer alle mogelijke uitkeringen voor een {huishouden} persoon van {leeftijd} jaar met een jaarinkomen van EUR {inkomen}. Gebruik juraregel.check_compliance voor BIO2 en juraregel.calculate voor toeslagen en bijstand.",
                 }
             ],
-            "metadata": {"domains": ["toeslagen", "participatiewet"], "input": arguments},
+            "metadata": {
+                "domains": ["toeslagen", "participatiewet"],
+                "input": arguments,
+            },
         }
-    
+
     if name == "explain_calculation":
         domain = arguments.get("domain", "")
         input_data = arguments.get("input", {})
@@ -614,7 +987,7 @@ def get_prompt(name: str, arguments: dict) -> dict | None:
             ],
             "metadata": {"domain": domain, "input": input_data},
         }
-    
+
     if name == "compare_scenarios":
         domain = arguments.get("domain", "")
         a = arguments.get("scenario_a", {})
@@ -628,15 +1001,16 @@ def get_prompt(name: str, arguments: dict) -> dict | None:
             ],
             "metadata": {"domain": domain, "scenario_a": a, "scenario_b": b},
         }
-    
+
     return None
+
 
 def handle_request(msg: dict) -> dict:
     """Handle an MCP tool call."""
     method = msg.get("method", "")
     params = msg.get("params", {})
     msg_id = msg.get("id")
-    
+
     if method == "initialize":
         return {
             "jsonrpc": "2.0",
@@ -644,17 +1018,17 @@ def handle_request(msg: dict) -> dict:
             "result": {
                 "protocolVersion": "2024-11-05",
                 "capabilities": {"tools": {}, "resources": {}, "prompts": {}},
-                "serverInfo": {"name": "juraregel", "version": "2.1.0"}
-            }
+                "serverInfo": {"name": "juraregel", "version": "2.1.0"},
+            },
         }
-    
+
     elif method == "resources/list":
         return {
             "jsonrpc": "2.0",
             "id": msg_id,
-            "result": {"resources": get_resource_list()}
+            "result": {"resources": get_resource_list()},
         }
-    
+
     elif method == "resources/read":
         uri = params.get("uri", "")
         data = read_resource(uri)
@@ -662,23 +1036,29 @@ def handle_request(msg: dict) -> dict:
             return {
                 "jsonrpc": "2.0",
                 "id": msg_id,
-                "error": {"code": -32602, "message": f"Unknown resource: {uri}"}
+                "error": {"code": -32602, "message": f"Unknown resource: {uri}"},
             }
         return {
             "jsonrpc": "2.0",
             "id": msg_id,
             "result": {
-                "contents": [{"uri": uri, "mimeType": "application/json", "text": json.dumps(data, indent=2, ensure_ascii=False)}]
-            }
+                "contents": [
+                    {
+                        "uri": uri,
+                        "mimeType": "application/json",
+                        "text": json.dumps(data, indent=2, ensure_ascii=False),
+                    }
+                ]
+            },
         }
-    
+
     elif method == "prompts/list":
         return {
             "jsonrpc": "2.0",
             "id": msg_id,
-            "result": {"prompts": get_prompt_list()}
+            "result": {"prompts": get_prompt_list()},
         }
-    
+
     elif method == "prompts/get":
         name = params.get("name", "")
         arguments = params.get("arguments", {})
@@ -687,14 +1067,10 @@ def handle_request(msg: dict) -> dict:
             return {
                 "jsonrpc": "2.0",
                 "id": msg_id,
-                "error": {"code": -32602, "message": f"Unknown prompt: {name}"}
+                "error": {"code": -32602, "message": f"Unknown prompt: {name}"},
             }
-        return {
-            "jsonrpc": "2.0",
-            "id": msg_id,
-            "result": prompt
-        }
-    
+        return {"jsonrpc": "2.0", "id": msg_id, "result": prompt}
+
     elif method == "tools/list":
         return {
             "jsonrpc": "2.0",
@@ -704,7 +1080,7 @@ def handle_request(msg: dict) -> dict:
                     {
                         "name": "juraregel.list_domains",
                         "description": "List all available JuraRegel domains with metadata (rule count, version, validity).",
-                        "inputSchema": {"type": "object", "properties": {}}
+                        "inputSchema": {"type": "object", "properties": {}},
                     },
                     {
                         "name": "juraregel.get_rules",
@@ -712,11 +1088,17 @@ def handle_request(msg: dict) -> dict:
                         "inputSchema": {
                             "type": "object",
                             "properties": {
-                                "domain": {"type": "string", "description": "Domain name (e.g. 'toeslagen', 'omgevingswet', 'bio2')"},
-                                "rule_id": {"type": "string", "description": "Optional: specific rule ID to look up"}
+                                "domain": {
+                                    "type": "string",
+                                    "description": "Domain name (e.g. 'toeslagen', 'omgevingswet', 'bio2')",
+                                },
+                                "rule_id": {
+                                    "type": "string",
+                                    "description": "Optional: specific rule ID to look up",
+                                },
                             },
-                            "required": ["domain"]
-                        }
+                            "required": ["domain"],
+                        },
                     },
                     {
                         "name": "juraregel.search_rules",
@@ -724,11 +1106,17 @@ def handle_request(msg: dict) -> dict:
                         "inputSchema": {
                             "type": "object",
                             "properties": {
-                                "query": {"type": "string", "description": "Search query (keyword or phrase)"},
-                                "domain": {"type": "string", "description": "Optional: limit search to one domain"}
+                                "query": {
+                                    "type": "string",
+                                    "description": "Search query (keyword or phrase)",
+                                },
+                                "domain": {
+                                    "type": "string",
+                                    "description": "Optional: limit search to one domain",
+                                },
                             },
-                            "required": ["query"]
-                        }
+                            "required": ["query"],
+                        },
                     },
                     {
                         "name": "juraregel.calculate",
@@ -736,11 +1124,17 @@ def handle_request(msg: dict) -> dict:
                         "inputSchema": {
                             "type": "object",
                             "properties": {
-                                "domain": {"type": "string", "description": "Domain name (e.g. 'toeslagen', 'omgevingswet')"},
-                                "input": {"type": "object", "description": "Input data matching the domain's rule conditions"}
+                                "domain": {
+                                    "type": "string",
+                                    "description": "Domain name (e.g. 'toeslagen', 'omgevingswet')",
+                                },
+                                "input": {
+                                    "type": "object",
+                                    "description": "Input data matching the domain's rule conditions",
+                                },
                             },
-                            "required": ["domain", "input"]
-                        }
+                            "required": ["domain", "input"],
+                        },
                     },
                     {
                         "name": "juraregel.get_sources",
@@ -748,10 +1142,13 @@ def handle_request(msg: dict) -> dict:
                         "inputSchema": {
                             "type": "object",
                             "properties": {
-                                "domain": {"type": "string", "description": "Domain name"}
+                                "domain": {
+                                    "type": "string",
+                                    "description": "Domain name",
+                                }
                             },
-                            "required": ["domain"]
-                        }
+                            "required": ["domain"],
+                        },
                     },
                     {
                         "name": "juraregel.trace",
@@ -759,11 +1156,17 @@ def handle_request(msg: dict) -> dict:
                         "inputSchema": {
                             "type": "object",
                             "properties": {
-                                "domain": {"type": "string", "description": "Domain name"},
-                                "rule_id": {"type": "string", "description": "Rule ID to trace"}
+                                "domain": {
+                                    "type": "string",
+                                    "description": "Domain name",
+                                },
+                                "rule_id": {
+                                    "type": "string",
+                                    "description": "Rule ID to trace",
+                                },
                             },
-                            "required": ["domain", "rule_id"]
-                        }
+                            "required": ["domain", "rule_id"],
+                        },
                     },
                     {
                         "name": "juraregel.version_diff",
@@ -771,12 +1174,21 @@ def handle_request(msg: dict) -> dict:
                         "inputSchema": {
                             "type": "object",
                             "properties": {
-                                "domain": {"type": "string", "description": "Domain name"},
-                                "v1": {"type": "string", "description": "First version (e.g. '2025.1')"},
-                                "v2": {"type": "string", "description": "Second version (e.g. '2026.1')"}
+                                "domain": {
+                                    "type": "string",
+                                    "description": "Domain name",
+                                },
+                                "v1": {
+                                    "type": "string",
+                                    "description": "First version (e.g. '2025.1')",
+                                },
+                                "v2": {
+                                    "type": "string",
+                                    "description": "Second version (e.g. '2026.1')",
+                                },
                             },
-                            "required": ["domain", "v1", "v2"]
-                        }
+                            "required": ["domain", "v1", "v2"],
+                        },
                     },
                     {
                         "name": "juraregel.semantic_search",
@@ -784,12 +1196,21 @@ def handle_request(msg: dict) -> dict:
                         "inputSchema": {
                             "type": "object",
                             "properties": {
-                                "query": {"type": "string", "description": "Zoekopdracht in natuurlijke taal"},
-                                "domain": {"type": "string", "description": "Optioneel: beperk tot domein"},
-                                "limit": {"type": "integer", "description": "Max resultaten (default 10)"}
+                                "query": {
+                                    "type": "string",
+                                    "description": "Zoekopdracht in natuurlijke taal",
+                                },
+                                "domain": {
+                                    "type": "string",
+                                    "description": "Optioneel: beperk tot domein",
+                                },
+                                "limit": {
+                                    "type": "integer",
+                                    "description": "Max resultaten (default 10)",
+                                },
                             },
-                            "required": ["query"]
-                        }
+                            "required": ["query"],
+                        },
                     },
                     {
                         "name": "juraregel.explain",
@@ -797,11 +1218,17 @@ def handle_request(msg: dict) -> dict:
                         "inputSchema": {
                             "type": "object",
                             "properties": {
-                                "domain": {"type": "string", "description": "Domein naam"},
-                                "input": {"type": "object", "description": "Input data voor de berekening"}
+                                "domain": {
+                                    "type": "string",
+                                    "description": "Domein naam",
+                                },
+                                "input": {
+                                    "type": "object",
+                                    "description": "Input data voor de berekening",
+                                },
                             },
-                            "required": ["domain", "input"]
-                        }
+                            "required": ["domain", "input"],
+                        },
                     },
                     {
                         "name": "juraregel.check_compliance",
@@ -809,11 +1236,17 @@ def handle_request(msg: dict) -> dict:
                         "inputSchema": {
                             "type": "object",
                             "properties": {
-                                "domain": {"type": "string", "description": "Domein naam"},
-                                "framework": {"type": "string", "description": "Framework (bio2, nis2, avg-gdpr). Optioneel."}
+                                "domain": {
+                                    "type": "string",
+                                    "description": "Domein naam",
+                                },
+                                "framework": {
+                                    "type": "string",
+                                    "description": "Framework (bio2, nis2, avg-gdpr). Optioneel.",
+                                },
                             },
-                            "required": ["domain"]
-                        }
+                            "required": ["domain"],
+                        },
                     },
                     {
                         "name": "juraregel.get_playbook",
@@ -821,10 +1254,13 @@ def handle_request(msg: dict) -> dict:
                         "inputSchema": {
                             "type": "object",
                             "properties": {
-                                "playbook_id": {"type": "string", "description": "Playbook ID (bijv. toeslagen, bio2, nis2)"}
+                                "playbook_id": {
+                                    "type": "string",
+                                    "description": "Playbook ID (bijv. toeslagen, bio2, nis2)",
+                                }
                             },
-                            "required": ["playbook_id"]
-                        }
+                            "required": ["playbook_id"],
+                        },
                     },
                     {
                         "name": "juraregel.get_governance",
@@ -832,20 +1268,86 @@ def handle_request(msg: dict) -> dict:
                         "inputSchema": {
                             "type": "object",
                             "properties": {
-                                "domain": {"type": "string", "description": "Domein naam"},
-                                "rule_id": {"type": "string", "description": "Optioneel: specifieke regel ID"}
+                                "domain": {
+                                    "type": "string",
+                                    "description": "Domein naam",
+                                },
+                                "rule_id": {
+                                    "type": "string",
+                                    "description": "Optioneel: specifieke regel ID",
+                                },
                             },
-                            "required": ["domain"]
-                        }
+                            "required": ["domain"],
+                        },
+                    },
+                    {
+                        "name": "nederus.list_controls",
+                        "description": "Lijst alle NEDERUS unified controls met multi-jurisdictionele framework mapping (EU AI Act, BIO2, NIS2, NORA).",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {
+                                "framework": {
+                                    "type": "string",
+                                    "description": "Optioneel: filter op framework (eu-ai-act, bio2, nis2, nora, nist-rmf)",
+                                }
+                            },
+                            "required": [],
+                        },
+                    },
+                    {
+                        "name": "nederus.get_control",
+                        "description": "Detail van één NEDERUS control: framework mappings, evidence requirements, implementation guidance.",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {
+                                "control_id": {
+                                    "type": "string",
+                                    "description": "Control ID (NED-01 t/m NED-05)",
+                                }
+                            },
+                            "required": ["control_id"],
+                        },
+                    },
+                    {
+                        "name": "nederus.crosswalk",
+                        "description": "Volledige crosswalk tussen twee frameworks. Toont welke NEDERUS controls de overlap dekken.",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {
+                                "source_framework": {
+                                    "type": "string",
+                                    "description": "Bron framework",
+                                },
+                                "target_framework": {
+                                    "type": "string",
+                                    "description": "Doel framework",
+                                },
+                            },
+                            "required": ["source_framework", "target_framework"],
+                        },
+                    },
+                    {
+                        "name": "nederus.lookup",
+                        "description": "Zoek NEDERUS controls op control ID (NED-01), framework (eu-ai-act), of keyword (impact).",
+                        "inputSchema": {
+                            "type": "object",
+                            "properties": {
+                                "query": {
+                                    "type": "string",
+                                    "description": "Zoekopdracht: control ID, framework naam, of keyword",
+                                }
+                            },
+                            "required": ["query"],
+                        },
                     },
                 ]
-            }
+            },
         }
-    
+
     elif method == "tools/call":
         tool_name = params.get("name", "")
         args = params.get("arguments", {})
-        
+
         try:
             if tool_name == "juraregel.list_domains":
                 result = list_all_domains()
@@ -862,7 +1364,9 @@ def handle_request(msg: dict) -> dict:
             elif tool_name == "juraregel.version_diff":
                 result = version_diff(args["domain"], args["v1"], args["v2"])
             elif tool_name == "juraregel.semantic_search":
-                result = semantic_search(args["query"], args.get("domain"), args.get("limit", 10))
+                result = semantic_search(
+                    args["query"], args.get("domain"), args.get("limit", 10)
+                )
             elif tool_name == "juraregel.explain":
                 result = explain(args["domain"], args["input"])
             elif tool_name == "juraregel.check_compliance":
@@ -871,32 +1375,48 @@ def handle_request(msg: dict) -> dict:
                 result = get_playbook(args["playbook_id"])
             elif tool_name == "juraregel.get_governance":
                 result = get_governance(args["domain"], args.get("rule_id"))
+            elif tool_name == "nederus.list_controls":
+                result = nederus_list_controls(args.get("framework"))
+            elif tool_name == "nederus.get_control":
+                result = nederus_get_control(args["control_id"])
+            elif tool_name == "nederus.crosswalk":
+                result = nederus_crosswalk(
+                    args["source_framework"], args["target_framework"]
+                )
+            elif tool_name == "nederus.lookup":
+                result = nederus_lookup(args["query"])
             else:
                 return {
                     "jsonrpc": "2.0",
                     "id": msg_id,
-                    "error": {"code": -32601, "message": f"Unknown tool: {tool_name}"}
+                    "error": {"code": -32601, "message": f"Unknown tool: {tool_name}"},
                 }
-            
+
             return {
                 "jsonrpc": "2.0",
                 "id": msg_id,
                 "result": {
-                    "content": [{"type": "text", "text": json.dumps(result, indent=2, ensure_ascii=False)}]
-                }
+                    "content": [
+                        {
+                            "type": "text",
+                            "text": json.dumps(result, indent=2, ensure_ascii=False),
+                        }
+                    ]
+                },
             }
         except Exception as e:
             return {
                 "jsonrpc": "2.0",
                 "id": msg_id,
-                "error": {"code": -32603, "message": str(e)}
+                "error": {"code": -32603, "message": str(e)},
             }
-    
+
     return {
         "jsonrpc": "2.0",
         "id": msg_id,
-        "error": {"code": -32601, "message": f"Unknown method: {method}"}
+        "error": {"code": -32601, "message": f"Unknown method: {method}"},
     }
+
 
 def main():
     """MCP server main loop over stdio."""
@@ -910,6 +1430,7 @@ def main():
             print(json.dumps(response), flush=True)
         except json.JSONDecodeError:
             continue
+
 
 if __name__ == "__main__":
     main()

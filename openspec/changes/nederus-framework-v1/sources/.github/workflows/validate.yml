@@ -1,0 +1,33 @@
+name: NEDERUS Validation
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Run structural validation
+        run: python scripts/validate.py
+
+      - name: Regenerate matrix (dry-run)
+        run: |
+          python scripts/generate_matrix.py --check
+          if ! diff -q mapping-matrix.csv <(python scripts/generate_matrix.py --stdout); then
+            echo "ERROR: mapping-matrix.csv is out of sync with controls.yaml"
+            echo "Run 'python scripts/generate_matrix.py' locally and commit the result."
+            exit 1
+          fi
