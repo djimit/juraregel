@@ -1,0 +1,455 @@
+# DPIA Generator RegelSpraak Specificatie
+# Data Protection Impact Assessment — Volledige document-generatie
+#
+# Implementeert:
+# - EDPB DPIA Template 2026 (7 secties: 0-6)
+# - Autoriteit Persoonsgegevens DPIA-checklist + verplichte lijst
+# - KCBR Model DPIA Rijksdienst (4 delen: A-D)
+# - AVG Art. 35 lid 7a-f (minimum inhoud DPIA)
+#
+# Bronnen:
+# - https://www.edpb.europa.eu/public-consultations/template-for-data-protection-impact-assessment_en
+# - https://www.autoriteitpersoonsgegevens.nl/en/themes/basic-gdpr/gdpr-in-practice/data-protection-impact-assessment-dpia
+# - https://www.kcbr.nl/ontwikkelen-beleid-en-regelgeving/beleidskompas/verplichte-kwaliteitseisen/data-protection-impact-assessment
+
+# ═══════════════════════════════════════════════════════════════
+# SECTIE 0: DPIA TECHNICAL SHEET (EDPB Sectie 0)
+# ═══════════════════════════════════════════════════════════════
+
+regel DPG-001 "DPG-001 DPIA technische fiche verplicht":
+  als dpiaVersion is leeg
+  dan is compliant nee
+  en is sectie "0_technical_sheet"
+  en is actie "Vul DPIA-versie, datum, auteur en goedkeuring in"
+  en is verplicht "ja"
+  en is bron "EDPB Template Sectie 0 + AVG Art. 35 lid 7".
+
+regel DPG-002 "DPG-002 Versiebeheer DPIA":
+  als dpiaVersieLog is leeg
+  dan is compliant nee
+  en is sectie "0_technical_sheet"
+  en is actie "Documenteer wijzigingshistorie (versie, datum, wijziging, auteur)"
+  en is verplicht "ja"
+  en is bron "EDPB Template Sectie 0.5: Version log".
+
+# ═══════════════════════════════════════════════════════════════
+# SECTIE 1: CONTEXT VAN DE VERWERKING (EDPB Sectie 1 + KCBR Deel A)
+# ═══════════════════════════════════════════════════════════════
+
+regel DPG-010 "DPG-010 Verwerkingsbeschrijving verplicht":
+  als verwerkingsDoel is leeg
+  dan is compliant nee
+  en is sectie "1_context"
+  en is actie "Beschrijf het doel van de verwerking"
+  en is verplicht "ja"
+  en is bron "EDPB Template Sectie 1.1 + AVG Art. 35 lid 7a".
+
+regel DPG-011 "DPG-011 Verantwoordelijke identificatie":
+  als verantwoordelijke is leeg
+  dan is compliant nee
+  en is sectie "1_context"
+  en is actie "Identificeer de verwerkingsverantwoordelijke (naam, contact)"
+  en is verplicht "ja"
+  en is bron "EDPB Template Sectie 1.2 + AVG Art. 4(7)".
+
+regel DPG-012 "DPG-012 Gegevenscategorieen verplicht":
+  als gegevensCategorieen is leeg
+  dan is compliant nee
+  en is sectie "1_context"
+  en is actie "Lijst alle verwerkte gegevenscategorieen"
+  en is verplicht "ja"
+  en is bron "EDPB Template Sectie 1.3 + AVG Art. 35 lid 7a".
+
+regel DPG-013 "DPG-013 Betrokkenen categorieen":
+  als betrokkenen is leeg
+  dan is compliant nee
+  en is sectie "1_context"
+  en is actie "Identificeer categorieen betrokkenen (burgers, werknemers, kinderen)"
+  en is verplicht "ja"
+  en is bron "EDPB Template Sectie 1.4".
+
+regel DPG-014 "DPG-014 Rechtsgrond verplicht":
+  als rechtsgrond is leeg
+  dan is compliant nee
+  en is sectie "1_context"
+  en is actie "Geef de rechtsgrond voor de verwerking (Art. 6 AVG)"
+  en is verplicht "ja"
+  en is bron "EDPB Template Sectie 1.5 + AVG Art. 6".
+
+regel DPG-015 "DPG-015 Bewaartermijn":
+  als bewaartermijn is leeg
+  dan is compliant nee
+  en is sectie "1_context"
+  en is actie "Specificeer de bewaartermijn per gegevenscategorie"
+  en is verplicht "ja"
+  en is bron "EDPB Template Sectie 1.6 + AVG Art. 5 lid 1e".
+
+regel DPG-016 "DPG-016 Gegevensontvangers":
+  als ontvangers is leeg
+  dan is compliant nee
+  en is sectie "1_context"
+  en is actie "Lijst ontvangers van de gegevens (intern, extern, derde landen)"
+  en is verplicht "ja"
+  en is bron "EDPB Template Sectie 1.7 + AVG Art. 13 lid 1e".
+
+regel DPG-017 "DPG-017 Derde landen transfer":
+  als derdeLanden is "ja"
+  als beschermingsNiveau is leeg
+  dan is compliant nee
+  en is sectie "1_context"
+  en is actie "Documenteer passende waarborgen (BCR, SCC, adequaat besluit)"
+  en is verplicht "ja"
+  en is bron "EDPB Template Sectie 1.8 + AVG Art. 44-49".
+
+regel DPG-018 "DPG-018 Verwerkingsactiviteiten overzicht":
+  als verwerkingsActiviteiten is leeg
+  dan is compliant nee
+  en is sectie "1_context"
+  en is actie "Beschrijf de verwerkingsactiviteiten (verzamelen, opslaan, delen, wissen)"
+  en is verplicht "ja"
+  en is bron "KCBR Deel A: Beschrijving feitelijke situatie".
+
+# ═══════════════════════════════════════════════════════════════
+# SECTIE 2: ESSENTIEEL — DREMPELTOETS (EDPB Sectie 2 + AP-Checklist)
+# ═══════════════════════════════════════════════════════════════
+
+regel DPG-020 "DPG-020 Drempeltoets verplicht":
+  als dpiaVerplicht is leeg
+  dan is compliant nee
+  en is sectie "2_essentieel"
+  en is actie "Voer drempeltoets uit: raadpleeg AP-lijst + 9-criteria AVG Art. 35(3)"
+  en is verplicht "ja"
+  en is bron "AP DPIA-checklist + AVG Art. 35 lid 3".
+
+regel DPG-021 "DPG-021 AP-lijst check":
+  als opApLijst is leeg
+  dan is compliant nee
+  en is sectie "2_essentieel"
+  en is actie "Check of verwerking op AP-lijst staat (12 categorien)"
+  en is verplicht "ja"
+  en is bron "AP-lijst: https://www.autoriteitpersoonsgegevens.nl/documenten/lijst-verplichte-dpia".
+
+regel DPG-022 "DPG-022 Negen criteria AVG Art. 35(3)":
+  als criteriaScore < 2
+  dan is compliant nee
+  en is sectie "2_essentieel"
+  en is actie "Evalueer 9 criteria: systematische beoordeling, grootschalig, bijzondere categorie, gevangenis, nieuwe tech, kwetsbare groepen, innovatieve gebruik, hindering toegang, profiling"
+  en is verplicht "ja"
+  en is bron "AVG Art. 35 lid 3a-3c + AP-richtlijnen".
+
+regel DPG-023 "DPG-023 Pre-scan DPIA (KCBR)":
+  als preScanUitgevoerd is "nee"
+  dan is compliant nee
+  en is sectie "2_essentieel"
+  en is actie "Voer pre-scan DPIA uit (KCBR Model DPIA Rijksdienst)"
+  en is verplicht "ja"
+  en is bron "KCBR: Pre-scan DPIA + Model DPIA Rijksdienst".
+
+regel DPG-024 "DPG-024 DPIA niet verplicht — documenteer":
+  als dpiaVerplicht is "nee"
+  dan is compliant ja
+  en is sectie "2_essentieel"
+  en is actie "Documenteer waarom DPIA niet verplicht is (bewijs)"
+  en is verplicht "ja"
+  en is bron "AVG Art. 35 lid 1 + AP-richtlijnen".
+
+# ═══════════════════════════════════════════════════════════════
+# SECTIE 3: NOODZAAK EN PROPORTIONALITEIT (EDPB Sectie 3 + KCBR Deel B)
+# ═══════════════════════════════════════════════════════════════
+
+regel DPG-030 "DPG-030 Noodzaak verplicht":
+  als noodzaak is leeg
+  dan is compliant nee
+  en is sectie "3_noodzaak"
+  en is actie "Beschrijf waarom de verwerking noodzakelijk is"
+  en is verplicht "ja"
+  en is bron "EDPB Template Sectie 3.1 + AVG Art. 5 lid 1c".
+
+regel DPG-031 "DPG-031 Proportionaliteit":
+  als proportionaliteit is leeg
+  dan is compliant nee
+  en is sectie "3_noodzaak"
+  en is actie "Toon dat de verwerking evenredig is met het doel"
+  en is verplicht "ja"
+  en is bron "EDPB Template Sectie 3.2 + AVG Art. 5 lid 1b".
+
+regel DPG-032 "DPG-032 Alternatieven evaluatie":
+  als alternatieven is leeg
+  dan is compliant nee
+  en is sectie "3_noodzaak"
+  en is actie "Evalueer alternatieven voor de verwerking (minder ingrijpend)"
+  en is verplicht "ja"
+  en is bron "EDPB Template Sectie 3.3 + KCBR Deel B".
+
+regel DPG-033 "DPG-033 Data minimalisatie":
+  als dataMinimalisatie is "nee"
+  dan is compliant nee
+  en is sectie "3_noodzaak"
+  en is actie "Minimaliseer gegevensverwerking (alleen wat noodzakelijk)"
+  en is verplicht "ja"
+  en is bron "AVG Art. 5 lid 1c + EDPB Template Sectie 3.4".
+
+regel DPG-034 "DPG-034 Doelbinding":
+  als doelbinding is "nee"
+  dan is compliant nee
+  en is sectie "3_noodzaak"
+  en is actie "Gegevens alleen voor gespecificeerde doeleinden gebruiken"
+  en is verplicht "ja"
+  en is bron "AVG Art. 5 lid 1b".
+
+# ═══════════════════════════════════════════════════════════════
+# SECTIE 4: RISICO-INSCHATTING (EDPB Sectie 4 + KCBR Deel C)
+# ═══════════════════════════════════════════════════════════════
+
+regel DPG-040 "DPG-040 Risico-inschatting verplicht":
+  als risicoInschatting is leeg
+  dan is compliant nee
+  en is sectie "4_risico"
+  en is actie "Beschrijf risico's voor rechten en vrijheden betrokkenen"
+  en is verplicht "ja"
+  en is bron "EDPB Template Sectie 4.1 + AVG Art. 35 lid 7d".
+
+regel DPG-041 "DPG-041 Risico-bronen identificatie":
+  als risicoBronnen is leeg
+  dan is compliant nee
+  en is sectie "4_risico"
+  en is actie "Identificeer bronnen van risico (toegang, wijziging, verlies, onthulling)"
+  en is verplicht "ja"
+  en is bron "EDPB Template Sectie 4.2".
+
+regel DPG-042 "DPG-042 Impact per risico":
+  als impactPerRisico is leeg
+  dan is compliant nee
+  en is sectie "4_risico"
+  en is actie "Beoordeel impact per risico (laag/middel/hoog/zeer_hoog)"
+  en is verplicht "ja"
+  en is bron "EDPB Template Sectie 4.3".
+
+regel DPG-043 "DPG-043 Waarschijnlijkheid per risico":
+  als waarschijnlijkheidPerRisico is leeg
+  dan is compliant nee
+  en is sectie "4_risico"
+  en is actie "Beoordeel waarschijnlijkheid per risico (laag/middel/hoog)"
+  en is verplicht "ja"
+  en is bron "EDPB Template Sectie 4.4".
+
+regel DPG-044 "DPG-044 Risicoscore matrix":
+  als risicoMatrix is leeg
+  dan is compliant nee
+  en is sectie "4_risico"
+  en is actie "Maak risico-matrix (impact x waarschijnlijkheid = risicoscore)"
+  en is verplicht "ja"
+  en is bron "KCBR Deel C: Risico-analyse + NEN-ISO 27005".
+
+regel DPG-045 "DPG-045 Kwetsbare groepen":
+  als kwetsbareGroepen is "ja"
+  als extraBehoeften is leeg
+  dan is compliant nee
+  en is sectie "4_risico"
+  en is actie "Beschrijf extra risico's voor kwetsbare groepen (kinderen, bejaarden, uitkeringsgerechtigden)"
+  en is verplicht "ja"
+  en is bron "AVG Art. 35(3b) + EDPB Guidelines on DPIA".
+
+# ═══════════════════════════════════════════════════════════════
+# SECTIE 5: MAATREGELEN (EDPB Sectie 5 + KCBR Deel D)
+# ═══════════════════════════════════════════════════════════════
+
+regel DPG-050 "DPG-050 Maatregelen verplicht":
+  als maatregelen is leeg
+  dan is compliant nee
+  en is sectie "5_maatregelen"
+  en is actie "Definieer maatregelen om risico's te mitigeren"
+  en is verplicht "ja"
+  en is bron "EDPB Template Sectie 5.1 + AVG Art. 35 lid 7d".
+
+regel DPG-051 "DPG-051 Technische maatregelen":
+  als technischeMaatregelen is leeg
+  dan is compliant nee
+  en is sectie "5_maatregelen"
+  en is actie "Beschrijf technische maatregelen (encryptie, pseudonimisatie, toegangscontrole, logging)"
+  en is verplicht "ja"
+  en is bron "EDPB Template Sectie 5.2 + AVG Art. 32".
+
+regel DPG-052 "DPG-052 Organisatorische maatregelen":
+  als organisatorischeMaatregelen is leeg
+  dan is compliant nee
+  en is sectie "5_maatregelen"
+  en is actie "Beschrijf organisatorische maatregelen (beleid, training, DPO, audits)"
+  en is verplicht "ja"
+  en is bron "EDPB Template Sectie 5.3 + AVG Art. 24".
+
+regel DPG-053 "DPG-053 Residuaal risico":
+  als residuaalRisico is leeg
+  dan is compliant nee
+  en is sectie "5_maatregelen"
+  en is actie "Beoordeel residuaal risico na maatregelen"
+  en is verplicht "ja"
+  en is bron "EDPB Template Sectie 5.4".
+
+regel DPG-054 "DPG-054 Residuaal risico hoog — voorafgaand overleg":
+  als residuaalRisico is "hoog"
+  dan is compliant nee
+  en is sectie "5_maatregelen"
+  en is actie "Raadpleeg Autoriteit Persoonsgegevens (voorafgaand overleg Art. 36)"
+  en is verplicht "ja"
+  en is bron "AVG Art. 36 lid 1 + EDPB Template Sectie 5.5".
+
+regel DPG-055 "DPG-055 Privacy by design maatregelen":
+  als privacyByDesign is "nee"
+  dan is compliant nee
+  en is sectie "5_maatregelen"
+  en is actie "Implementeer privacy by design + by default"
+  en is verplicht "ja"
+  en is bron "AVG Art. 25 + EDPB Template Sectie 5.6".
+
+regel DPG-056 "DPG-056 Bewaking en evaluatie":
+  als bewaking is leeg
+  dan is compliant nee
+  en is sectie "5_maatregelen"
+  en is actie "Definieer bewaking en evaluatie van maatregelen (KPI's, frequentie)"
+  en is verplicht "ja"
+  en is bron "EDPB Template Sectie 5.7".
+
+# ═══════════════════════════════════════════════════════════════
+# SECTIE 6: CONCLUSIE EN GOEDKEURING (EDPB Sectie 6)
+# ═══════════════════════════════════════════════════════════════
+
+regel DPG-060 "DPG-060 Conclusie verplicht":
+  als conclusie is leeg
+  dan is compliant nee
+  en is sectie "6_conclusie"
+  en is actie "Formuleer conclusie: acceptabel met maatregelen of onacceptabel"
+  en is verplicht "ja"
+  en is bron "EDPB Template Sectie 6.1".
+
+regel DPG-061 "DPG-061 Goedkeuring DPO":
+  als dpoGoedkeuring is "nee"
+  dan is compliant nee
+  en is sectie "6_conclusie"
+  en is actie "DPO moet DPIA goedkeuren (Art. 35 lid 2)"
+  en is verplicht "ja"
+  en is bron "AVG Art. 35 lid 2 + Art. 38".
+
+regel DPG-062 "DPG-062 Goedkeuring verantwoordelijke":
+  als managementGoedkeuring is "nee"
+  dan is compliant nee
+  en is sectie "6_conclusie"
+  en is actie "Management/verantwoordelijke moet DPIA goedkeuren"
+  en is verplicht "ja"
+  en is bron "EDPB Template Sectie 6.2".
+
+regel DPG-063 "DPG-063 Herziening planning":
+  als herzieningDatum is leeg
+  dan is compliant nee
+  en is sectie "6_conclusie"
+  en is actie "Plan volgende herziening (minimaal jaarlijks, Art. 35 lid 11)"
+  en is verplicht "ja"
+  en is bron "AVG Art. 35 lid 11".
+
+regel DPG-064 "DPG-064 Openstaande acties":
+  als openstaandeActies is "ja"
+  dan is compliant nee
+  en is sectie "6_conclusie"
+  en is actie "Documenteer openstaande acties + verantwoordelijke + deadline"
+  en is verplicht "ja"
+  en is bron "EDPB Template Sectie 6.3".
+
+# ═══════════════════════════════════════════════════════════════
+# AP VERPLICHTE LIJST — 12 CATEGORIEN
+# ═══════════════════════════════════════════════════════════════
+
+regel DPG-070 "DPG-070 AP-categorie 1: Grootschalige bijzondere categorieen":
+  als apCategorie is "1"
+  dan is compliant nee
+  en is sectie "2_essentieel"
+  en is dpiaVerplicht "ja"
+  en is artikel "AVG Art. 35 lid 3a"
+  en is bron "AP-lijst Categorie 1".
+
+regel DPG-071 "DPG-071 AP-categorie 2: Grootschalige strafrechtelijke gegevens":
+  als apCategorie is "2"
+  dan is compliant nee
+  en is sectie "2_essentieel"
+  en is dpiaVerplicht "ja"
+  en is artikel "AVG Art. 35 lid 3b"
+  en is bron "AP-lijst Categorie 2".
+
+regel DPG-072 "DPG-072 AP-categorie 3: Grootschalige bevolkingsregisters":
+  als apCategorie is "3"
+  dan is compliant nee
+  en is sectie "2_essentieel"
+  en is dpiaVerplicht "ja"
+  en is artikel "AVG Art. 35 lid 3c"
+  en is bron "AP-lijst Categorie 3".
+
+regel DPG-073 "DPG-073 AP-categorie 4: Systeemevaluatie (profiling)":
+  als apCategorie is "4"
+  dan is compliant nee
+  en is sectie "2_essentieel"
+  en is dpiaVerplicht "ja"
+  en is artikel "AVG Art. 35 lid 3a"
+  en is bron "AP-lijst Categorie 4".
+
+regel DPG-074 "DPG-074 AP-categorie 5: Innovatieve technologie":
+  als apCategorie is "5"
+  dan is compliant nee
+  en is sectie "2_essentieel"
+  en is dpiaVerplicht "ja"
+  en is artikel "AVG Art. 35 lid 3a"
+  en is bron "AP-lijst Categorie 5".
+
+regel DPG-075 "DPG-075 AP-categorie 6: Gezichtsherkenning / biometrie":
+  als apCategorie is "6"
+  dan is compliant nee
+  en is sectie "2_essentieel"
+  en is dpiaVerplicht "ja"
+  en is artikel "AVG Art. 35 lid 3a"
+  en is bron "AP-lijst Categorie 6".
+
+regel DPG-076 "DPG-076 AP-categorie 7: Gezondheidsgegevens grootschalig":
+  als apCategorie is "7"
+  dan is compliant nee
+  en is sectie "2_essentieel"
+  en is dpiaVerplicht "ja"
+  en is artikel "AVG Art. 35 lid 3a"
+  en is bron "AP-lijst Categorie 7".
+
+regel DPG-077 "DPG-077 AP-categorie 8: Data matching / combinatie":
+  als apCategorie is "8"
+  dan is compliant nee
+  en is sectie "2_essentieel"
+  en is dpiaVerplicht "ja"
+  en is artikel "AVG Art. 35 lid 3a"
+  en is bron "AP-lijst Categorie 8".
+
+regel DPG-078 "DPG-078 AP-categorie 9: Kwetsbare groepen":
+  als apCategorie is "9"
+  dan is compliant nee
+  en is sectie "2_essentieel"
+  en is dpiaVerplicht "ja"
+  en is artikel "AVG Art. 35 lid 3b"
+  en is bron "AP-lijst Categorie 9".
+
+regel DPG-079 "DPG-079 AP-categorie 10: Nieuwe technologie / AI":
+  als apCategorie is "10"
+  dan is compliant nee
+  en is sectie "2_essentieel"
+  en is dpiaVerplicht "ja"
+  en is artikel "AVG Art. 35 lid 3a"
+  en is bron "AP-lijst Categorie 10".
+
+regel DPG-080 "DPG-080 AP-categorie 11: Uitsluiting recht of vrijheid":
+  als apCategorie is "11"
+  dan is compliant nee
+  en is sectie "2_essentieel"
+  en is dpiaVerplicht "ja"
+  en is artikel "AVG Art. 35 lid 3c"
+  en is bron "AP-lijst Categorie 11".
+
+regel DPG-081 "DPG-081 AP-categorie 12: Toegangscontrole overheidsdiensten":
+  als apCategorie is "12"
+  dan is compliant nee
+  en is sectie "2_essentieel"
+  en is dpiaVerplicht "ja"
+  en is artikel "AVG Art. 35 lid 3c"
+  en is bron "AP-lijst Categorie 12".

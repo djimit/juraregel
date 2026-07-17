@@ -87,7 +87,8 @@
         "judicial-ai-assurance",
         "itgc-kader",
         "eidas",
-        "bia-biv-dpia"
+        "bia-biv-dpia",
+        "dpia-generator"
       ]
     },
     "procedureType": {

@@ -1,0 +1,1079 @@
+{
+  "schemaVersion": "1.1.0",
+  "ruleSetId": "dpia-generator",
+  "version": "2026.1",
+  "validFrom": "2026-01-01",
+  "validUntil": "2027-12-31",
+  "jurisdiction": "NL",
+  "domain": "dpia-generator",
+  "procedureType": "activiteit-toetsing",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "DPG-001",
+      "name": "technische_fiche",
+      "priority": 100,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "EDPB DPIA Template 2026 Sectie 0",
+          "section": "DPIA technical sheet",
+          "url": "https://www.edpb.europa.eu/public-consultations/template-for-data-protection-impact-assessment_en"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "sectie": "0_technical_sheet",
+        "verplicht": true,
+        "artikel": "AVG Art. 35 lid 7"
+      }
+    },
+    {
+      "ruleId": "DPG-002",
+      "name": "versiebeheer",
+      "priority": 100,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "EDPB DPIA Template 2026 Sectie 0.5",
+          "section": "Version log",
+          "url": "https://www.edpb.europa.eu/public-consultations/template-for-data-protection-impact-assessment_en"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "sectie": "0_technical_sheet",
+        "verplicht": true,
+        "artikel": "AVG Art. 35 lid 7"
+      }
+    },
+    {
+      "ruleId": "DPG-010",
+      "name": "verwerkingsbeschrijving",
+      "priority": 400,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "EDPB Template Sectie 1.1 + AVG Art. 35 lid 7a",
+          "section": "Description of processing",
+          "url": "https://www.edpb.europa.eu/public-consultations/template-for-data-protection-impact-assessment_en"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "sectie": "1_context",
+        "verplicht": true,
+        "artikel": "AVG Art. 35 lid 7a"
+      }
+    },
+    {
+      "ruleId": "DPG-011",
+      "name": "verantwoordelijke",
+      "priority": 400,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "EDPB Template Sectie 1.2 + AVG Art. 4(7)",
+          "section": "Controller identification",
+          "url": "https://www.edpb.europa.eu/public-consultations/template-for-data-protection-impact-assessment_en"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "sectie": "1_context",
+        "verplicht": true,
+        "artikel": "AVG Art. 4(7)"
+      }
+    },
+    {
+      "ruleId": "DPG-012",
+      "name": "gegevenscategorieen",
+      "priority": 400,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "EDPB Template Sectie 1.3",
+          "section": "Categories of data",
+          "url": "https://www.edpb.europa.eu/public-consultations/template-for-data-protection-impact-assessment_en"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "sectie": "1_context",
+        "verplicht": true,
+        "artikel": "AVG Art. 35 lid 7a"
+      }
+    },
+    {
+      "ruleId": "DPG-013",
+      "name": "betrokkenen",
+      "priority": 400,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "EDPB Template Sectie 1.4",
+          "section": "Categories of data subjects",
+          "url": "https://www.edpb.europa.eu/public-consultations/template-for-data-protection-impact-assessment_en"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "sectie": "1_context",
+        "verplicht": true,
+        "artikel": "AVG Art. 35 lid 7a"
+      }
+    },
+    {
+      "ruleId": "DPG-014",
+      "name": "rechtsgrond",
+      "priority": 400,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "EDPB Template Sectie 1.5 + AVG Art. 6",
+          "section": "Legal basis",
+          "url": "https://www.edpb.europa.eu/public-consultations/template-for-data-protection-impact-assessment_en"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "sectie": "1_context",
+        "verplicht": true,
+        "artikel": "AVG Art. 6"
+      }
+    },
+    {
+      "ruleId": "DPG-015",
+      "name": "bewaartermijn",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "EDPB Template Sectie 1.6 + AVG Art. 5(1e)",
+          "section": "Retention period",
+          "url": "https://www.edpb.europa.eu/public-consultations/template-for-data-protection-impact-assessment_en"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "sectie": "1_context",
+        "verplicht": true,
+        "artikel": "AVG Art. 5 lid 1e"
+      }
+    },
+    {
+      "ruleId": "DPG-016",
+      "name": "ontvangers",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "EDPB Template Sectie 1.7",
+          "section": "Recipients",
+          "url": "https://www.edpb.europa.eu/public-consultations/template-for-data-protection-impact-assessment_en"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "sectie": "1_context",
+        "verplicht": true,
+        "artikel": "AVG Art. 13 lid 1e"
+      }
+    },
+    {
+      "ruleId": "DPG-017",
+      "name": "derde_landen",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "EDPB Template Sectie 1.8 + AVG Art. 44-49",
+          "section": "Third country transfers",
+          "url": "https://www.edpb.europa.eu/public-consultations/template-for-data-protection-impact-assessment_en"
+        }
+      ],
+      "conditions": {
+        "derdeLanden": "ja"
+      },
+      "outcome": {
+        "compliant": "conditional",
+        "sectie": "1_context",
+        "verplicht": true,
+        "artikel": "AVG Art. 44-49"
+      }
+    },
+    {
+      "ruleId": "DPG-018",
+      "name": "verwerkingsactiviteiten",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "KCBR Deel A: Beschrijving feitelijke situatie",
+          "section": "Processing activities",
+          "url": "https://www.kcbr.nl/ontwikkelen-beleid-en-regelgeving/beleidskompas/verplichte-kwaliteitseisen/data-protection-impact-assessment"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "sectie": "1_context",
+        "verplicht": true,
+        "artikel": "KCBR Model DPIA"
+      }
+    },
+    {
+      "ruleId": "DPG-020",
+      "name": "drempeltoets",
+      "priority": 500,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "AP DPIA-checklist + AVG Art. 35 lid 3",
+          "section": "Threshold test",
+          "url": "https://www.autoriteitpersoonsgegevens.nl/en/themes/basic-gdpr/gdpr-in-practice/data-protection-impact-assessment-dpia"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "sectie": "2_essentieel",
+        "verplicht": true,
+        "artikel": "AVG Art. 35 lid 3"
+      }
+    },
+    {
+      "ruleId": "DPG-021",
+      "name": "ap_lijst_check",
+      "priority": 500,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "AP-lijst verplichte DPIA",
+          "section": "Mandatory DPIA list",
+          "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/lijst-verplichte-dpia"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "sectie": "2_essentieel",
+        "verplicht": true,
+        "artikel": "AVG Art. 35 lid 4"
+      }
+    },
+    {
+      "ruleId": "DPG-022",
+      "name": "negen_criteria",
+      "priority": 400,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "AVG Art. 35 lid 3a-3c",
+          "section": "9 criteria",
+          "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_35"
+        }
+      ],
+      "conditions": {
+        "criteriaScore_min": 2
+      },
+      "outcome": {
+        "compliant": false,
+        "sectie": "2_essentieel",
+        "verplicht": true,
+        "artikel": "AVG Art. 35 lid 3a-3c",
+        "actionRequired": "Evalueer 9 criteria"
+      }
+    },
+    {
+      "ruleId": "DPG-023",
+      "name": "pre_scan_kcbr",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "KCBR: Pre-scan DPIA",
+          "section": "Pre-scan",
+          "url": "https://www.kcbr.nl/ontwikkelen-beleid-en-regelgeving/beleidskompas/verplichte-kwaliteitseisen/data-protection-impact-assessment"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "sectie": "2_essentieel",
+        "verplicht": true,
+        "artikel": "KCBR Model DPIA"
+      }
+    },
+    {
+      "ruleId": "DPG-024",
+      "name": "dpia_niet_verplicht_documenteer",
+      "priority": 200,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "AVG Art. 35 lid 1",
+          "section": "Not required",
+          "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_35"
+        }
+      ],
+      "conditions": {
+        "dpiaVerplicht": "nee"
+      },
+      "outcome": {
+        "compliant": true,
+        "sectie": "2_essentieel",
+        "verplicht": true,
+        "artikel": "AVG Art. 35 lid 1"
+      }
+    },
+    {
+      "ruleId": "DPG-030",
+      "name": "noodzaak",
+      "priority": 400,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "EDPB Template Sectie 3.1 + AVG Art. 5(1c)",
+          "section": "Necessity",
+          "url": "https://www.edpb.europa.eu/public-consultations/template-for-data-protection-impact-assessment_en"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "sectie": "3_noodzaak",
+        "verplicht": true,
+        "artikel": "AVG Art. 5 lid 1c"
+      }
+    },
+    {
+      "ruleId": "DPG-031",
+      "name": "proportionaliteit",
+      "priority": 400,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "EDPB Template Sectie 3.2",
+          "section": "Proportionality",
+          "url": "https://www.edpb.europa.eu/public-consultations/template-for-data-protection-impact-assessment_en"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "sectie": "3_noodzaak",
+        "verplicht": true,
+        "artikel": "AVG Art. 5 lid 1b"
+      }
+    },
+    {
+      "ruleId": "DPG-032",
+      "name": "alternatieven",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "EDPB Template Sectie 3.3 + KCBR Deel B",
+          "section": "Alternatives",
+          "url": "https://www.edpb.europa.eu/public-consultations/template-for-data-protection-impact-assessment_en"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "sectie": "3_noodzaak",
+        "verplicht": true,
+        "artikel": "KCBR Deel B"
+      }
+    },
+    {
+      "ruleId": "DPG-033",
+      "name": "data_minimalisatie",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "AVG Art. 5(1c) + EDPB Sectie 3.4",
+          "section": "Data minimisation",
+          "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_5"
+        }
+      ],
+      "conditions": {
+        "dataMinimalisatie": "nee"
+      },
+      "outcome": {
+        "compliant": false,
+        "sectie": "3_noodzaak",
+        "verplicht": true,
+        "artikel": "AVG Art. 5 lid 1c"
+      }
+    },
+    {
+      "ruleId": "DPG-034",
+      "name": "doelbinding",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "AVG Art. 5(1b)",
+          "section": "Purpose limitation",
+          "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_5"
+        }
+      ],
+      "conditions": {
+        "doelbinding": "nee"
+      },
+      "outcome": {
+        "compliant": false,
+        "sectie": "3_noodzaak",
+        "verplicht": true,
+        "artikel": "AVG Art. 5 lid 1b"
+      }
+    },
+    {
+      "ruleId": "DPG-040",
+      "name": "risico_inschatting",
+      "priority": 500,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "EDPB Template Sectie 4.1 + AVG Art. 35 lid 7d",
+          "section": "Risk assessment",
+          "url": "https://www.edpb.europa.eu/public-consultations/template-for-data-protection-impact-assessment_en"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "sectie": "4_risico",
+        "verplicht": true,
+        "artikel": "AVG Art. 35 lid 7d"
+      }
+    },
+    {
+      "ruleId": "DPG-041",
+      "name": "risico_bronnen",
+      "priority": 400,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "EDPB Template Sectie 4.2",
+          "section": "Risk sources",
+          "url": "https://www.edpb.europa.eu/public-consultations/template-for-data-protection-impact-assessment_en"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "sectie": "4_risico",
+        "verplicht": true,
+        "artikel": "AVG Art. 35 lid 7d"
+      }
+    },
+    {
+      "ruleId": "DPG-042",
+      "name": "impact_per_risico",
+      "priority": 400,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "EDPB Template Sectie 4.3",
+          "section": "Impact per risk",
+          "url": "https://www.edpb.europa.eu/public-consultations/template-for-data-protection-impact-assessment_en"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "sectie": "4_risico",
+        "verplicht": true,
+        "artikel": "AVG Art. 35 lid 7d"
+      }
+    },
+    {
+      "ruleId": "DPG-043",
+      "name": "waarschijnlijkheid_per_risico",
+      "priority": 400,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "EDPB Template Sectie 4.4",
+          "section": "Likelihood per risk",
+          "url": "https://www.edpb.europa.eu/public-consultations/template-for-data-protection-impact-assessment_en"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "sectie": "4_risico",
+        "verplicht": true,
+        "artikel": "AVG Art. 35 lid 7d"
+      }
+    },
+    {
+      "ruleId": "DPG-044",
+      "name": "risico_matrix",
+      "priority": 400,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "KCBR Deel C: Risico-analyse + NEN-ISO 27005",
+          "section": "Risk matrix",
+          "url": "https://www.kcbr.nl/ontwikkelen-beleid-en-regelgeving/beleidskompas/verplichte-kwaliteitseisen/data-protection-impact-assessment"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "sectie": "4_risico",
+        "verplicht": true,
+        "artikel": "NEN-ISO 27005"
+      }
+    },
+    {
+      "ruleId": "DPG-045",
+      "name": "kwetsbare_groepen",
+      "priority": 400,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "AVG Art. 35(3b) + EDPB Guidelines",
+          "section": "Vulnerable groups",
+          "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_35"
+        }
+      ],
+      "conditions": {
+        "kwetsbareGroepen": "ja"
+      },
+      "outcome": {
+        "compliant": false,
+        "sectie": "4_risico",
+        "verplicht": true,
+        "artikel": "AVG Art. 35 lid 3b"
+      }
+    },
+    {
+      "ruleId": "DPG-050",
+      "name": "maatregelen",
+      "priority": 500,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "EDPB Template Sectie 5.1 + AVG Art. 35 lid 7d",
+          "section": "Mitigation measures",
+          "url": "https://www.edpb.europa.eu/public-consultations/template-for-data-protection-impact-assessment_en"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "sectie": "5_maatregelen",
+        "verplicht": true,
+        "artikel": "AVG Art. 35 lid 7d"
+      }
+    },
+    {
+      "ruleId": "DPG-051",
+      "name": "technische_maatregelen",
+      "priority": 400,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "EDPB Template Sectie 5.2 + AVG Art. 32",
+          "section": "Technical measures",
+          "url": "https://www.edpb.europa.eu/public-consultations/template-for-data-protection-impact-assessment_en"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "sectie": "5_maatregelen",
+        "verplicht": true,
+        "artikel": "AVG Art. 32"
+      }
+    },
+    {
+      "ruleId": "DPG-052",
+      "name": "organisatorische_maatregelen",
+      "priority": 400,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "EDPB Template Sectie 5.3 + AVG Art. 24",
+          "section": "Organisational measures",
+          "url": "https://www.edpb.europa.eu/public-consultations/template-for-data-protection-impact-assessment_en"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "sectie": "5_maatregelen",
+        "verplicht": true,
+        "artikel": "AVG Art. 24"
+      }
+    },
+    {
+      "ruleId": "DPG-053",
+      "name": "residuaal_risico",
+      "priority": 400,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "EDPB Template Sectie 5.4",
+          "section": "Residual risk",
+          "url": "https://www.edpb.europa.eu/public-consultations/template-for-data-protection-impact-assessment_en"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "sectie": "5_maatregelen",
+        "verplicht": true,
+        "artikel": "AVG Art. 35 lid 7e"
+      }
+    },
+    {
+      "ruleId": "DPG-054",
+      "name": "voorafgaand_overleg",
+      "priority": 500,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "AVG Art. 36 lid 1 + EDPB Sectie 5.5",
+          "section": "Prior consultation",
+          "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_36"
+        }
+      ],
+      "conditions": {
+        "residuaalRisico": "hoog"
+      },
+      "outcome": {
+        "compliant": false,
+        "sectie": "5_maatregelen",
+        "verplicht": true,
+        "artikel": "AVG Art. 36 lid 1",
+        "actionRequired": "Raadpleeg Autoriteit Persoonsgegevens"
+      }
+    },
+    {
+      "ruleId": "DPG-055",
+      "name": "privacy_by_design",
+      "priority": 400,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "AVG Art. 25 + EDPB Sectie 5.6",
+          "section": "Privacy by design",
+          "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_25"
+        }
+      ],
+      "conditions": {
+        "privacyByDesign": "nee"
+      },
+      "outcome": {
+        "compliant": false,
+        "sectie": "5_maatregelen",
+        "verplicht": true,
+        "artikel": "AVG Art. 25"
+      }
+    },
+    {
+      "ruleId": "DPG-056",
+      "name": "bewaking_evaluatie",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "EDPB Template Sectie 5.7",
+          "section": "Monitoring",
+          "url": "https://www.edpb.europa.eu/public-consultations/template-for-data-protection-impact-assessment_en"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "sectie": "5_maatregelen",
+        "verplicht": true,
+        "artikel": "AVG Art. 35 lid 7f"
+      }
+    },
+    {
+      "ruleId": "DPG-060",
+      "name": "conclusie",
+      "priority": 400,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "EDPB Template Sectie 6.1",
+          "section": "Conclusion",
+          "url": "https://www.edpb.europa.eu/public-consultations/template-for-data-protection-impact-assessment_en"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "sectie": "6_conclusie",
+        "verplicht": true,
+        "artikel": "AVG Art. 35 lid 7"
+      }
+    },
+    {
+      "ruleId": "DPG-061",
+      "name": "dpo_goedkeuring",
+      "priority": 500,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "AVG Art. 35 lid 2 + Art. 38",
+          "section": "DPO approval",
+          "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_35"
+        }
+      ],
+      "conditions": {
+        "dpoGoedkeuring": "nee"
+      },
+      "outcome": {
+        "compliant": false,
+        "sectie": "6_conclusie",
+        "verplicht": true,
+        "artikel": "AVG Art. 35 lid 2"
+      }
+    },
+    {
+      "ruleId": "DPG-062",
+      "name": "management_goedkeuring",
+      "priority": 400,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "EDPB Template Sectie 6.2",
+          "section": "Management approval",
+          "url": "https://www.edpb.europa.eu/public-consultations/template-for-data-protection-impact-assessment_en"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "sectie": "6_conclusie",
+        "verplicht": true,
+        "artikel": "AVG Art. 35 lid 7"
+      }
+    },
+    {
+      "ruleId": "DPG-063",
+      "name": "herziening_planning",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "AVG Art. 35 lid 11",
+          "section": "Review planning",
+          "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_35"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "sectie": "6_conclusie",
+        "verplicht": true,
+        "artikel": "AVG Art. 35 lid 11"
+      }
+    },
+    {
+      "ruleId": "DPG-064",
+      "name": "openstaande_acties",
+      "priority": 200,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "EDPB Template Sectie 6.3",
+          "section": "Outstanding actions",
+          "url": "https://www.edpb.europa.eu/public-consultations/template-for-data-protection-impact-assessment_en"
+        }
+      ],
+      "conditions": {
+        "openstaandeActies": "ja"
+      },
+      "outcome": {
+        "compliant": false,
+        "sectie": "6_conclusie",
+        "verplicht": true,
+        "artikel": "AVG Art. 35 lid 7"
+      }
+    },
+    {
+      "ruleId": "DPG-070",
+      "name": "ap_categorie_1",
+      "priority": 500,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "AP-lijst Categorie 1",
+          "section": "Grootschalige bijzondere categorieen",
+          "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/lijst-verplichte-dpia"
+        }
+      ],
+      "conditions": {
+        "apCategorie": "1"
+      },
+      "outcome": {
+        "compliant": false,
+        "sectie": "2_essentieel",
+        "dpiaVerplicht": true,
+        "artikel": "AVG Art. 35 lid 3a"
+      }
+    },
+    {
+      "ruleId": "DPG-071",
+      "name": "ap_categorie_2",
+      "priority": 500,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "AP-lijst Categorie 2",
+          "section": "Strafrechtelijke gegevens",
+          "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/lijst-verplichte-dpia"
+        }
+      ],
+      "conditions": {
+        "apCategorie": "2"
+      },
+      "outcome": {
+        "compliant": false,
+        "sectie": "2_essentieel",
+        "dpiaVerplicht": true,
+        "artikel": "AVG Art. 35 lid 3b"
+      }
+    },
+    {
+      "ruleId": "DPG-072",
+      "name": "ap_categorie_3",
+      "priority": 500,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "AP-lijst Categorie 3",
+          "section": "Bevolkingsregisters",
+          "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/lijst-verplichte-dpia"
+        }
+      ],
+      "conditions": {
+        "apCategorie": "3"
+      },
+      "outcome": {
+        "compliant": false,
+        "sectie": "2_essentieel",
+        "dpiaVerplicht": true,
+        "artikel": "AVG Art. 35 lid 3c"
+      }
+    },
+    {
+      "ruleId": "DPG-073",
+      "name": "ap_categorie_4",
+      "priority": 500,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "AP-lijst Categorie 4",
+          "section": "Systeemevaluatie/profiling",
+          "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/lijst-verplichte-dpia"
+        }
+      ],
+      "conditions": {
+        "apCategorie": "4"
+      },
+      "outcome": {
+        "compliant": false,
+        "sectie": "2_essentieel",
+        "dpiaVerplicht": true,
+        "artikel": "AVG Art. 35 lid 3a"
+      }
+    },
+    {
+      "ruleId": "DPG-074",
+      "name": "ap_categorie_5",
+      "priority": 500,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "AP-lijst Categorie 5",
+          "section": "Innovatieve technologie",
+          "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/lijst-verplichte-dpia"
+        }
+      ],
+      "conditions": {
+        "apCategorie": "5"
+      },
+      "outcome": {
+        "compliant": false,
+        "sectie": "2_essentieel",
+        "dpiaVerplicht": true,
+        "artikel": "AVG Art. 35 lid 3a"
+      }
+    },
+    {
+      "ruleId": "DPG-075",
+      "name": "ap_categorie_6",
+      "priority": 500,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "AP-lijst Categorie 6",
+          "section": "Gezichtsherkenning/biometrie",
+          "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/lijst-verplichte-dpia"
+        }
+      ],
+      "conditions": {
+        "apCategorie": "6"
+      },
+      "outcome": {
+        "compliant": false,
+        "sectie": "2_essentieel",
+        "dpiaVerplicht": true,
+        "artikel": "AVG Art. 35 lid 3a"
+      }
+    },
+    {
+      "ruleId": "DPG-076",
+      "name": "ap_categorie_7",
+      "priority": 500,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "AP-lijst Categorie 7",
+          "section": "Gezondheidsgegevens",
+          "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/lijst-verplichte-dpia"
+        }
+      ],
+      "conditions": {
+        "apCategorie": "7"
+      },
+      "outcome": {
+        "compliant": false,
+        "sectie": "2_essentieel",
+        "dpiaVerplicht": true,
+        "artikel": "AVG Art. 35 lid 3a"
+      }
+    },
+    {
+      "ruleId": "DPG-077",
+      "name": "ap_categorie_8",
+      "priority": 500,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "AP-lijst Categorie 8",
+          "section": "Data matching/combinatie",
+          "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/lijst-verplichte-dpia"
+        }
+      ],
+      "conditions": {
+        "apCategorie": "8"
+      },
+      "outcome": {
+        "compliant": false,
+        "sectie": "2_essentieel",
+        "dpiaVerplicht": true,
+        "artikel": "AVG Art. 35 lid 3a"
+      }
+    },
+    {
+      "ruleId": "DPG-078",
+      "name": "ap_categorie_9",
+      "priority": 500,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "AP-lijst Categorie 9",
+          "section": "Kwetsbare groepen",
+          "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/lijst-verplichte-dpia"
+        }
+      ],
+      "conditions": {
+        "apCategorie": "9"
+      },
+      "outcome": {
+        "compliant": false,
+        "sectie": "2_essentieel",
+        "dpiaVerplicht": true,
+        "artikel": "AVG Art. 35 lid 3b"
+      }
+    },
+    {
+      "ruleId": "DPG-079",
+      "name": "ap_categorie_10",
+      "priority": 500,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "AP-lijst Categorie 10",
+          "section": "Nieuwe technologie/AI",
+          "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/lijst-verplichte-dpia"
+        }
+      ],
+      "conditions": {
+        "apCategorie": "10"
+      },
+      "outcome": {
+        "compliant": false,
+        "sectie": "2_essentieel",
+        "dpiaVerplicht": true,
+        "artikel": "AVG Art. 35 lid 3a"
+      }
+    },
+    {
+      "ruleId": "DPG-080",
+      "name": "ap_categorie_11",
+      "priority": 500,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "AP-lijst Categorie 11",
+          "section": "Uitsluiting recht/vrijheid",
+          "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/lijst-verplichte-dpia"
+        }
+      ],
+      "conditions": {
+        "apCategorie": "11"
+      },
+      "outcome": {
+        "compliant": false,
+        "sectie": "2_essentieel",
+        "dpiaVerplicht": true,
+        "artikel": "AVG Art. 35 lid 3c"
+      }
+    },
+    {
+      "ruleId": "DPG-081",
+      "name": "ap_categorie_12",
+      "priority": 500,
+      "sourceRefs": [
+        {
+          "type": "wet",
+          "title": "AP-lijst Categorie 12",
+          "section": "Toegangscontrole overheid",
+          "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/lijst-verplichte-dpia"
+        }
+      ],
+      "conditions": {
+        "apCategorie": "12"
+      },
+      "outcome": {
+        "compliant": false,
+        "sectie": "2_essentieel",
+        "dpiaVerplicht": true,
+        "artikel": "AVG Art. 35 lid 3c"
+      }
+    }
+  ]
+}
