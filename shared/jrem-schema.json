@@ -88,7 +88,8 @@
         "itgc-kader",
         "eidas",
         "bia-biv-dpia",
-        "dpia-generator"
+        "dpia-generator",
+        "iso27001"
       ]
     },
     "procedureType": {

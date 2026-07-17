@@ -1,3 +1,22 @@
+## [2.7.0] - 2026-07-17 — ISO 27001 ISMS + SoA Generator
+
+### Added
+- ISO 27001 ISMS use case: 28 regels, port 8526
+- ISMS clausules 4-10: 8 regels (scope, beleid, risicoanalyse, SoA, doelstellingen)
+- Statement of Applicability generator: 14 Annex A controls + BIO2 mapping
+- Asset register: 2 regels (inventaris + eigenaar)
+- Risicobehandeling: 4 strategieën (accepteeren, verminderen, vermijden, overdragen)
+- API: /soa/generate, /soa/template, /risico/behandeling, /isms/documenten
+- 20 tests passed
+
+### BIO2 → ISO 27001 Mapping
+- BIO2 A.5-6 → A.5.1.1, A.6.1.1, A.6.1.2
+- BIO2 A.8 → A.8.1, A.8.2, A.8.3
+- BIO2 A.10 → A.8.24, A.8.11
+- BIO2 B.3 → A.8.28, A.8.9
+
+---
+
 ## [2.6.0] - 2026-07-17 — BIA-BIV-DPIA Integrated Risk Assessment
 
 ### Added
