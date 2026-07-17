@@ -1,3 +1,25 @@
+## [2.6.0] - 2026-07-17 — BIA-BIV-DPIA Integrated Risk Assessment
+
+### Added
+- BIA-BIV-DPIA use case: 32 regels, port 8524
+- Business Impact Analyse: 5 regels (proces, hersteltijd, impact)
+- BIV classificatie: 6 regels (beschikbaarheid, integriteit, vertrouwelijkheid)
+- Risico-analyse: 6 regels (kritiek, hoog, acceptabel, residuaal)
+- DPIA: 12 regels (AVG Art. 35, AP-lijst, boete, FRIA)
+- Combinatie: 3 regels (integrale BIA+BIV+DPIA)
+- 15 tests passed
+
+### Wetelijke Basis
+- AVG Art. 35(1)(3a)(7)(7a-f)(11): DPIA verplichting + inhoud + herziening
+- AVG Art. 36(2): Voorafgaand overleg AP
+- AVG Art. 25: Privacy by design
+- BIO2 A.5-6: Risicoanalyse + BIA
+- BIO2 A.8: Classificatie (BIV)
+- NEN-ISO/IEC 27001:2017 A.8.2: BIA
+- EU AI Act Art. 27: FRIA voor AI
+
+---
+
 ## [2.5.0] - 2026-07-17 — NEDERUS v2.0 + eIDAS 2.0 Combined Release
 
 ### NEDERUS v2.0

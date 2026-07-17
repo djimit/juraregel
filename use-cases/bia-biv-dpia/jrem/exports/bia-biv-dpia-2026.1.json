@@ -1,0 +1,205 @@
+{
+  "schemaVersion": "1.1.0",
+  "ruleSetId": "bia-biv-dpia",
+  "version": "2026.1",
+  "validFrom": "2026-01-01",
+  "validUntil": "2027-12-31",
+  "jurisdiction": "NL",
+  "domain": "bia-biv-dpia",
+  "procedureType": "activiteit-toetsing",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "BIA-001", "name": "Procesidentificatie", "priority": 100,
+      "sourceRefs": [{"type": "standaard", "title": "BIO2 A.5-6: Risicoanalyse", "section": "Procesidentificatie", "url": "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/cybersecurity/bio-en-ensia/baseline-informatiebeveiliging-overheid/"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "bia_proces", "confidence": "deterministic", "article": "BIO2 A.5-6"}
+    },
+    {
+      "ruleId": "BIA-002", "name": "hersteltijd_kritisch", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "NEN-ISO/IEC 27001:2017 A.8.2", "section": "Business impact analysis", "url": "https://www.iso.org/standard/75652.html"}],
+      "conditions": {"impactNiveau": "kritiek", "hersteltijd_max": 4},
+      "outcome": {"compliant": true, "category": "bia_herstel", "confidence": "deterministic", "article": "NEN-ISO 27001:2017 A.8.2"}
+    },
+    {
+      "ruleId": "BIA-003", "name": "hersteltijd_catastrofaal", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "NEN-ISO/IEC 27001:2017 A.8.2", "section": "Catastrofale impact", "url": "https://www.iso.org/standard/75652.html"}],
+      "conditions": {"impactNiveau": "catastrofaal", "hersteltijd_max": 1},
+      "outcome": {"compliant": true, "category": "bia_herstel", "confidence": "deterministic", "article": "NEN-ISO 27001:2017 A.8.2"}
+    },
+    {
+      "ruleId": "BIA-004", "name": "hersteltijd_beperkt", "priority": 200,
+      "sourceRefs": [{"type": "standaard", "title": "NEN-ISO/IEC 27001:2017 A.8.2", "section": "Beperkte impact", "url": "https://www.iso.org/standard/75652.html"}],
+      "conditions": {"impactNiveau": "beperkt", "hersteltijd_max": 24},
+      "outcome": {"compliant": true, "category": "bia_herstel", "confidence": "deterministic", "article": "NEN-ISO 27001:2017 A.8.2"}
+    },
+    {
+      "ruleId": "BIA-005", "name": "hersteltijd_te_lang", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "BIO2 A.5-6", "section": "Acceptabele hersteltijd", "url": "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/cybersecurity/bio-en-ensia/baseline-informatiebeveiliging-overheid/"}],
+      "conditions": {"impactNiveau": "aanzienlijk", "hersteltijd_max": 8},
+      "outcome": {"compliant": false, "category": "bia_herstel", "confidence": "deterministic", "actionRequired": "Hersteltijd verkorten", "article": "BIO2 A.5-6"}
+    },
+    {
+      "ruleId": "BIV-001", "name": "biv_classificatie", "priority": 100,
+      "sourceRefs": [{"type": "standaard", "title": "BIO2 A.8: Classificatie van informatie", "section": "BIV classificatie", "url": "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/cybersecurity/bio-en-ensia/baseline-informatiebeveiliging-overheid/"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "biv_classificatie", "confidence": "deterministic", "article": "BIO2 A.8"}
+    },
+    {
+      "ruleId": "BIV-002", "name": "biv_beschikbaarheid_hoog", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "BIO2 A.11: Beheer van beschikbaarheid", "section": "Hoge beschikbaarheid", "url": "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/cybersecurity/bio-en-ensia/baseline-informatiebeveiliging-overheid/"}],
+      "conditions": {"beschikbaarheid_min": "zeer_hoog"},
+      "outcome": {"compliant": true, "category": "biv_beschikbaarheid", "confidence": "deterministic", "maatregel": "Redundantie + failover", "article": "BIO2 A.11"}
+    },
+    {
+      "ruleId": "BIV-003", "name": "biv_integriteit_hoog", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "BIO2 A.12: Beheer van integriteit", "section": "Hoge integriteit", "url": "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/cybersecurity/bio-en-ensia/baseline-informatiebeveiliging-overheid/"}],
+      "conditions": {"integriteit_min": "zeer_hoog"},
+      "outcome": {"compliant": true, "category": "biv_integriteit", "confidence": "deterministic", "maatregel": "Validatie + checksums + audit trail", "article": "BIO2 A.12"}
+    },
+    {
+      "ruleId": "BIV-004", "name": "biv_vertrouwelijkheid_hoog", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "BIO2 A.8 + A.10: Classificatie + Cryptografie", "section": "Hoge vertrouwelijkheid", "url": "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/cybersecurity/bio-en-ensia/baseline-informatiebeveiliging-overheid/"}],
+      "conditions": {"vertrouwelijkheid_min": "zeer_hoog"},
+      "outcome": {"compliant": true, "category": "biv_vertrouwelijkheid", "confidence": "deterministic", "maatregel": "Encryptie + toegangscontrole + logging", "article": "BIO2 A.8 + A.10"}
+    },
+    {
+      "ruleId": "BIV-005", "name": "biv_mismatch", "priority": 250,
+      "sourceRefs": [{"type": "standaard", "title": "BIO2 A.5-6: Consistente risico-afweging", "section": "BIV consistentie", "url": "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/cybersecurity/bio-en-ensia/baseline-informatiebeveiliging-overheid/"}],
+      "conditions": {"vertrouwelijkheid_min": "zeer_hoog", "integriteit_max": "laag"},
+      "outcome": {"compliant": false, "category": "biv_mismatch", "confidence": "deterministic", "actionRequired": "Verhoog integriteit", "article": "BIO2 A.5-6"}
+    },
+    {
+      "ruleId": "BIV-006", "name": "biv_score_berekening", "priority": 200,
+      "sourceRefs": [{"type": "standaard", "title": "BIO2 A.5-6", "section": "BIV score", "url": "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/cybersecurity/bio-en-ensia/baseline-informatiebeveiliging-overheid/"}],
+      "conditions": {"beschikbaarheid_min": "hoog", "integriteit_min": "zeer_hoog", "vertrouwelijkheid_min": "hoog"},
+      "outcome": {"compliant": true, "category": "biv_score", "confidence": "deterministic", "max_score": 12, "article": "BIO2 A.5-6"}
+    },
+    {
+      "ruleId": "RIS-001", "name": "risico_berekening", "priority": 100,
+      "sourceRefs": [{"type": "standaard", "title": "NEN-ISO 27005 + BIO2 A.5-6", "section": "Risicoberekening", "url": "https://www.iso.org/standard/75652.html"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "risico_berekening", "confidence": "deterministic", "article": "NEN-ISO 27005"}
+    },
+    {
+      "ruleId": "RIS-002", "name": "risico_kritiek", "priority": 500,
+      "sourceRefs": [{"type": "standaard", "title": "BIO2 A.5-6: Acceptatiecriteria", "section": "Kritiek risico", "url": "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/cybersecurity/bio-en-ensia/baseline-informatiebeveiliging-overheid/"}],
+      "conditions": {"risicoNiveau": "kritiek"},
+      "outcome": {"compliant": false, "category": "risico_kritiek", "confidence": "deterministic", "prioriteit": "P0", "actionRequired": "Directe maatregel of stop verwerking", "article": "BIO2 A.5-6"}
+    },
+    {
+      "ruleId": "RIS-003", "name": "risico_zeer_hoog", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "BIO2 A.5-6", "section": "Zeer hoog risico", "url": "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/cybersecurity/bio-en-ensia/baseline-informatiebeveiliging-overheid/"}],
+      "conditions": {"risicoNiveau": "zeer_hoog"},
+      "outcome": {"compliant": false, "category": "risico_hoog", "confidence": "deterministic", "prioriteit": "P1", "actionRequired": "Maatregel vóór verwerking", "article": "BIO2 A.5-6"}
+    },
+    {
+      "ruleId": "RIS-004", "name": "risico_hoog_acceptatie", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "BIO2 A.5-6", "section": "Hoog risico acceptatie", "url": "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/cybersecurity/bio-en-ensia/baseline-informatiebeveiliging-overheid/"}],
+      "conditions": {"risicoNiveau": "hoog"},
+      "outcome": {"compliant": "conditional", "category": "risico_hoog", "confidence": "deterministic", "prioriteit": "P2", "actionRequired": "Management acceptatie + maatregelen", "article": "BIO2 A.5-6"}
+    },
+    {
+      "ruleId": "RIS-005", "name": "risico_acceptabel", "priority": 100,
+      "sourceRefs": [{"type": "standaard", "title": "BIO2 A.5-6", "section": "Acceptabel risico", "url": "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/cybersecurity/bio-en-ensia/baseline-informatiebeveiliging-overheid/"}],
+      "conditions": {"risicoNiveau": "laag"},
+      "outcome": {"compliant": true, "category": "risico_acceptabel", "confidence": "deterministic", "article": "BIO2 A.5-6"}
+    },
+    {
+      "ruleId": "RIS-006", "name": "risico_residuaal", "priority": 200,
+      "sourceRefs": [{"type": "standaard", "title": "BIO2 A.5-6", "section": "Residuaal risico", "url": "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/cybersecurity/bio-en-ensia/baseline-informatiebeveiliging-overheid/"}],
+      "conditions": {"risicoNiveau": "hoog", "beperkingsMaatregelen": "ja", "residuaalRisico_max": "laag"},
+      "outcome": {"compliant": true, "category": "risico_residuaal", "confidence": "deterministic", "article": "BIO2 A.5-6"}
+    },
+    {
+      "ruleId": "DPI-001", "name": "dpia_verplicht_niet_uitgevoerd", "priority": 500,
+      "sourceRefs": [{"type": "wet", "title": "AVG Art. 35 lid 1", "section": "DPIA verplichting", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_35"}],
+      "conditions": {"dpiaVerplicht": "ja", "dpiaUitgevoerd": "nee"},
+      "outcome": {"compliant": false, "category": "dpia_verplicht", "confidence": "deterministic", "prioriteit": "P0", "artikel": "AVG Art. 35 lid 1", "actionRequired": "Start DPIA vóór verwerking", "boete": "Tot 10M EUR of 2% wereldwijze omzet"}
+    },
+    {
+      "ruleId": "DPI-002", "name": "dpia_uitgevoerd_compliant", "priority": 200,
+      "sourceRefs": [{"type": "wet", "title": "AVG Art. 35 lid 1", "section": "DPIA uitgevoerd", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_35"}],
+      "conditions": {"dpiaVerplicht": "ja", "dpiaUitgevoerd": "ja"},
+      "outcome": {"compliant": true, "category": "dpia_uitgevoerd", "confidence": "deterministic", "artikel": "AVG Art. 35 lid 1"}
+    },
+    {
+      "ruleId": "DPI-003", "name": "dpia_bijzondere_categorie", "priority": 400,
+      "sourceRefs": [{"type": "wet", "title": "AVG Art. 35 lid 3a + AP-lijst", "section": "Bijzondere categorie", "url": "https://www.autoriteitpersoonsgegevens.nl/documenten/lijst-verplichte-dpia"}],
+      "conditions": {"gegevensSoort": "bijzondere_categorie"},
+      "outcome": {"compliant": false, "category": "dpia_bijzonder", "confidence": "deterministic", "dpiaVerplicht": true, "artikel": "AVG Art. 35 lid 3a", "actionRequired": "DPIA verplicht voor bijzondere categorieën"}
+    },
+    {
+      "ruleId": "DPI-004", "name": "dpia_grootschalig", "priority": 400,
+      "sourceRefs": [{"type": "wet", "title": "AVG Art. 35 lid 3a", "section": "Grootschalige verwerking", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_35"}],
+      "conditions": {"gegevensSoort": "persoonsgeevoelige"},
+      "outcome": {"compliant": false, "category": "dpia_grootschalig", "confidence": "deterministic", "dpiaVerplicht": true, "artikel": "AVG Art. 35 lid 3a", "actionRequired": "DPIA verplicht voor grootschalige verwerking"}
+    },
+    {
+      "ruleId": "DPI-005", "name": "dpia_maatregelen", "priority": 300,
+      "sourceRefs": [{"type": "wet", "title": "AVG Art. 35 lid 7d", "section": "Beperkingsmaatregelen", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_35"}],
+      "conditions": {"dpiaUitgevoerd": "ja", "beperkingsMaatregelen": "nee"},
+      "outcome": {"compliant": false, "category": "dpia_maatregelen", "confidence": "deterministic", "artikel": "AVG Art. 35 lid 7d", "actionRequired": "Implementeer beperkingsmaatregelen"}
+    },
+    {
+      "ruleId": "DPI-006", "name": "dpia_afronden", "priority": 300,
+      "sourceRefs": [{"type": "wet", "title": "AVG Art. 35 lid 7", "section": "DPIA afronding", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_35"}],
+      "conditions": {"dpiaUitgevoerd": "gedeeltelijk"},
+      "outcome": {"compliant": false, "category": "dpia_afronden", "confidence": "deterministic", "prioriteit": "P1", "artikel": "AVG Art. 35 lid 7", "actionRequired": "Rond DPIA af"}
+    },
+    {
+      "ruleId": "DPI-007", "name": "dpia_herziening", "priority": 200,
+      "sourceRefs": [{"type": "wet", "title": "AVG Art. 35 lid 11", "section": "Periodieke herziening", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_35"}],
+      "conditions": {"dpiaUitgevoerd": "ja"},
+      "outcome": {"compliant": "conditional", "category": "dpia_herziening", "confidence": "deterministic", "artikel": "AVG Art. 35 lid 11", "actionRequired": "Herzie DPIA minimaal jaarlijks"}
+    },
+    {
+      "ruleId": "DPI-008", "name": "dpia_niet_vereist", "priority": 100,
+      "sourceRefs": [{"type": "wet", "title": "AVG Art. 35 lid 1", "section": "Geen DPIA nodig", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_35"}],
+      "conditions": {"dpiaVerplicht": "nee"},
+      "outcome": {"compliant": true, "category": "dpia_niet_vereist", "confidence": "deterministic", "artikel": "AVG Art. 35 lid 1"}
+    },
+    {
+      "ruleId": "DPI-009", "name": "dpia_advies_toezichthouder", "priority": 300,
+      "sourceRefs": [{"type": "wet", "title": "AVG Art. 36 lid 2", "section": "Voorafgaand overleg", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_36"}],
+      "conditions": {"risicoNiveau": "kritiek", "dpiaUitgevoerd": "ja"},
+      "outcome": {"compliant": "conditional", "category": "dpia_advies", "confidence": "deterministic", "artikel": "AVG Art. 36 lid 2", "actionRequired": "Raadpleeg Autoriteit Persoonsgegevens"}
+    },
+    {
+      "ruleId": "DPI-010", "name": "dpia_privacy_design", "priority": 200,
+      "sourceRefs": [{"type": "wet", "title": "AVG Art. 25", "section": "Privacy by design", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_25"}],
+      "conditions": {"dpiaUitgevoerd": "ja"},
+      "outcome": {"compliant": true, "category": "dpia_privacy_design", "confidence": "deterministic", "artikel": "AVG Art. 25", "maatregel": "Privacy by design + by default"}
+    },
+    {
+      "ruleId": "DPI-011", "name": "dpia_documentatie", "priority": 200,
+      "sourceRefs": [{"type": "wet", "title": "AVG Art. 35 lid 7a-f", "section": "DPIA minimum inhoud", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_35"}],
+      "conditions": {"dpiaUitgevoerd": "ja"},
+      "outcome": {"compliant": true, "category": "dpia_documentatie", "confidence": "deterministic", "artikel": "AVG Art. 35 lid 7a-f", "vereiste": "Beschrijving + beoordeling + maatregelen"}
+    },
+    {
+      "ruleId": "DPI-012", "name": "dpia_ai_fria", "priority": 400,
+      "sourceRefs": [{"type": "wet", "title": "EU AI Act Art. 27 + AVG Art. 35", "section": "FRIA voor AI", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689"}],
+      "conditions": {"gegevensSoort": "bijzondere_categorie", "dpiaVerplicht": "ja"},
+      "outcome": {"compliant": false, "category": "dpia_ai", "confidence": "deterministic", "artikel": "EU AI Act Art. 27", "actionRequired": "DPIA + FRIA voor AI-systemen"}
+    },
+    {
+      "ruleId": "COM-001", "name": "combi_kritiek", "priority": 500,
+      "sourceRefs": [{"type": "wet", "title": "BIO2 + AVG Art. 35 + NEN-ISO 27001", "section": "Integrale aanpak", "url": "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/cybersecurity/bio-en-ensia/baseline-informatiebeveiliging-overheid/"}],
+      "conditions": {"impactNiveau": "kritiek", "risicoNiveau": "hoog", "dpiaVerplicht": "ja"},
+      "outcome": {"compliant": false, "category": "com_kritiek", "confidence": "deterministic", "prioriteit": "P0", "actionRequired": "Integrale aanpassing: BIA + BIV + DPIA + continuïteitsplan"}
+    },
+    {
+      "ruleId": "COM-002", "name": "combi_acceptabel", "priority": 100,
+      "sourceRefs": [{"type": "standaard", "title": "BIO2 A.5-6 + AVG Art. 35", "section": "Acceptabel", "url": "https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/cybersecurity/bio-en-ensia/baseline-informatiebeveiliging-overheid/"}],
+      "conditions": {"risicoNiveau": "laag", "dpiaVerplicht": "nee"},
+      "outcome": {"compliant": true, "category": "com_acceptabel", "confidence": "deterministic"}
+    },
+    {
+      "ruleId": "COM-003", "name": "combi_biv_dpia", "priority": 300,
+      "sourceRefs": [{"type": "wet", "title": "AVG Art. 35 + BIO2 A.8 + A.10", "section": "BIV + DPIA", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_35"}],
+      "conditions": {"vertrouwelijkheid_min": "zeer_hoog", "dpiaVerplicht": "ja"},
+      "outcome": {"compliant": false, "category": "com_biv_dpia", "confidence": "deterministic", "prioriteit": "P1", "actionRequired": "DPIA + encryptie + toegangscontrole + audit"}
+    }
+  ]
+}

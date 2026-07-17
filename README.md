@@ -515,6 +515,7 @@ graph TB
 | AVG/GDPR | 10 | PoC | 8499 |
 | NCSC | 32 | PoC | 8500 |
 | **eIDAS 2.0** | **32** | **PoC** | **8523** |
+| **BIA-BIV-DPIA** | **32** | **PoC** | **8524** |
 | **NEDERUS** | **8 unified controls** | **v2.0 (external repo)** | **—** |
 | Procesreglement | 4 | PoC | 8491 |
 | Classificatie | 3 | PoC | 8492 |
@@ -581,7 +582,7 @@ Zie `jrem-open-source/` voor het standalone JREM schema, validator en examples.
 
 | Metriek | Waarde |
 |---|---|
-| Use cases | 14 use cases + NEDERUS v2.0 multi-jurisdictionele mapping |
+| Use cases | 15 use cases + NEDERUS v2.0 multi-jurisdictionele mapping |
 | Tests | Semantische scenario-, bron-, API-, BDD-, MCP-gates + 52 eIDAS tests |
 | CI gates | 14 per use case |
 | JREM regels | 750+ (incl. 32 eIDAS regels) |
@@ -589,7 +590,7 @@ Zie `jrem-open-source/` voor het standalone JREM schema, validator en examples.
 | Open standaarden | 9 compliant (+ eIDAS 2.0, NEDERUS CC-BY) |
 | NEDERUS controls | 8 unified controls (NED-01 t/m NED-08), 8 frameworks gemapped |
 | eIDAS regels | 32 regels, 21 categorieën, 8 frameworks |
-| MCP tools | 16 tools (incl. nederus.list/get/crosswalk/lookup) |
+| MCP tools | 16 tools (incl. nederus.list/get/crosswalk/lookup + bia-biv-dpia) |
 
 ## Licentie
 

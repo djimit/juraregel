@@ -1,0 +1,300 @@
+# BIA-BIV-DPIA RegelSpraak Specificatie
+# Business Impact Analyse + Beschikbaarheid/Integriteit/Vertrouwelijkheid + Data Protection Impact Assessment
+# Bronnen: AVG Art. 35, BIO2, NEN-ISO/IEC 27001:2017, Autoriteit Persoonsgegevens DPIA-lijst
+
+begrip procesNaam: "Naam van het bedrijfsproces." type: tekst.
+begrip procesEigenaar: "Eigenaar van het proces." type: tekst.
+begrip systemen: "Afhankelijke systemen (comma-separated)." type: tekst.
+begrip gegevensSoort: "Soort verwerkte gegevens." waarden: persoonsgeevoelige, bijzondere_categorie, gewone_persoonsgegevens, geen_persoonsgegevens.
+begrip beschikbaarheid: "BIV Beschikbaarheid classificatie." waarden: laag, middel, hoog, zeer_hoog.
+begrip integriteit: "BIV Integriteit classificatie." waarden: laag, middel, hoog, zeer_hoog.
+begrip vertrouwelijkheid: "BIV Vertrouwelijkheid classificatie." waarden: laag, middel, hoog, zeer_hoog.
+begrip impactNiveau: "Business impact bij uitval." waarden: verwaarloosbaar, beperkt, aanzienlijk, kritiek, catastrofaal.
+begrip hersteltijd: "Maximale acceptable uitvaltijd (uren)." type: getal.
+begrip risicoNiveau: "Berekend risico (impact x waarschijnlijkheid)." waarden: laag, middel, hoog, zeer_hoog, kritiek.
+begrip dpiaVerplicht: "Is DPIA verplicht volgens AP-lijst?" waarden: ja, nee, mogelijk.
+begrip dpiaUitgevoerd: "Is DPIA uitgevoerd?" waarden: ja, nee, gedeeltelijk.
+begrip beperkingsMaatregelen: "Zijn beperkingsmaatregelen genomen?" waarden: ja, nee, gedeeltelijk.
+begrip residuaalRisico: "Resiculierisico na maatregelen." waarden: laag, middel, hoog, zeer_hoog.
+
+# ═══════════════════════════════════════════════════════════════
+# DEEL 1: BUSINESS IMPACT ANALYSE (BIA)
+# ═══════════════════════════════════════════════════════════════
+
+regel BIA-001 "Procesidentificatie verplicht":
+  als procesNaam is leeg
+  dan is compliant nee
+  en is categorie "bia_proces"
+  en is actie "Vul procesnaam en eigenaar in"
+  en is bron "BIO2 A.5-6: Risicoanalyse".
+
+regel BIA-002 "Kritisch proces — hoog impact":
+  als impactNiveau is "kritiek"
+  en hersteltijd <= 4
+  dan is compliant ja
+  en is categorie "bia_kritiek"
+  en is prioriteit "P1"
+  en is actie "Continuïteitsplan + failover vereist"
+  en is bron "BIO2 A.5-6 + NEN-ISO 27001:2017 A.8.2".
+
+regel BIA-003 "Zeer kritiek proces — catastrofale impact":
+  als impactNiveau is "catastrofaal"
+  en hersteltijd <= 1
+  dan is compliant ja
+  en is categorie "bia_kritiek"
+  en is prioriteit "P0"
+  en is actie "Directe noodprocedure + 24/7 monitoring"
+  en is bron "BIO2 A.5-6 + NEN-ISO 27001:2017 A.8.2".
+
+regel BIA-004 "Acceptabele hersteltijd beperkt impact":
+  als impactNiveau is "beperkt"
+  en hersteltijd <= 24
+  dan is compliant ja
+  en is categorie "bia_herstel"
+  en is prioriteit "P3"
+  en is actie "Standaard herstelprocedure volstaat"
+  en is bron "NEN-ISO 27001:2017 A.8.2".
+
+regel BIA-005 "Hersteltijd te lang voor impactniveau":
+  als impactNiveau is "aanzienlijk"
+  en hersteltijd > 8
+  dan is compliant nee
+  en is categorie "bia_herstel"
+  en is prioriteit "P2"
+  en is actie "Hersteltijd verkorten of impact verminderen"
+  en is bron "BIO2 A.5-6".
+
+# ═══════════════════════════════════════════════════════════════
+# DEEL 2: BESCHIKBAARHEID, INTEGRITEIT, VERTROUWELIJKHEID (BIV)
+# ═══════════════════════════════════════════════════════════════
+
+regel BIV-001 "BIV classificatie verplicht":
+  als beschikbaarheid is leeg
+  of integriteit is leeg
+  of vertrouwelijkheid is leeg
+  dan is compliant nee
+  en is categorie "biv_classificatie"
+  en is actie "Classificeer BIV voor alle systemen"
+  en is bron "BIO2 A.5-6 + A.8: Classificatie van informatie".
+
+regel BIV-002 "Hoge beschikbaarheid vereist":
+  als beschikbaarheid is "zeer_hoog"
+  dan is compliant ja
+  en is categorie "biv_beschikbaarheid"
+  en is maatregel "Redundantie + failover + monitoring"
+  en is bron "BIO2 A.11: Beheer van beschikbaarheid".
+
+regel BIV-003 "Hoge integriteit vereist":
+  als integriteit is "zeer_hoog"
+  dan is compliant ja
+  en is categorie "biv_integriteit"
+  en is maatregel "Validatie + checksums + audit trail"
+  en is bron "BIO2 A.12: Beheer van integriteit".
+
+regel BIV-004 "Hoge vertrouwelijkheid vereist":
+  als vertrouwelijkheid is "zeer_hoog"
+  dan is compliant ja
+  en is categorie "biv_vertrouwelijkheid"
+  en is maatregel "Encryptie + toegangscontrole + logging"
+  en is bron "BIO2 A.8: Classificatie + A.10: Cryptografie".
+
+regel BIV-005 "BIV mismatch — integriteit lager dan vertrouwelijkheid":
+  als vertrouwelijkheid is "zeer_hoog"
+  en integriteit is "laag"
+  dan is compliant nee
+  en is categorie "biv_mismatch"
+  en is actie "Verhoog integriteit naar mate vertrouwelijkheid hoog is"
+  en is bron "BIO2 A.5-6: Consistente risico-afweging".
+
+regel BIV-006 "BIV score berekening":
+  als beschikbaarheid is "hoog"
+  en integriteit is "zeer_hoog"
+  en vertrouwelijkheid is "hoog"
+  dan is compliant ja
+  en is categorie "biv_score"
+  en is score "10"  # max BIV score
+  en is bron "BIO2 A.5-6".
+
+# ═══════════════════════════════════════════════════════════════
+# DEEL 3: RISICO-ANALYSE (Impact x Waarschijnlijkheid)
+# ═══════════════════════════════════════════════════════════════
+
+regel RIS-001 "Risicoberekening verplicht":
+  als risicoNiveau is leeg
+  dan is compliant nee
+  en is categorie "risico_berekening"
+  en is actie "Bereken risico = impact x waarschijnlijkheid"
+  en is bron "BIO2 A.5-6 + NEN-ISO 27005".
+
+regel RIS-002 "Kritiek risico — direct actie":
+  als risicoNiveau is "kritiek"
+  dan is compliant nee
+  en is categorie "risico_kritiek"
+  en is prioriteit "P0"
+  en is actie "Directe maatregel of stop verwerking"
+  en is bron "BIO2 A.5-6: Acceptatiecriteria".
+
+regel RIS-003 "Zeer hoog risico — maatregel verplicht":
+  als risicoNiveau is "zeer_hoog"
+  dan is compliant nee
+  en is categorie "risico_hoog"
+  en is prioriteit "P1"
+  en is actie "Maatregel vóór verwerking"
+  en is bron "BIO2 A.5-6".
+
+regel RIS-004 "Hoog risico — acceptatie verplicht":
+  als risicoNiveau is "hoog"
+  dan is compliant mogelijk
+  en is categorie "risico_hoog"
+  en is prioriteit "P2"
+  en is actie "Acceptatie door management + maatregelen"
+  en is bron "BIO2 A.5-6".
+
+regel RIS-005 "Laag risico — acceptabel":
+  als risicoNiveau is "laag"
+  dan is compliant ja
+  en is categorie "risico_acceptabel"
+  en is bron "BIO2 A.5-6: Acceptatiecriteria".
+
+regel RIS-006 "Residuaal risico acceptabel":
+  als risicoNiveau is "hoog"
+  en beperkingsMaatregelen is "ja"
+  en residuaalRisico is "laag"
+  dan is compliant ja
+  en is categorie "risico_residuaal"
+  en is bron "BIO2 A.5-6: Behandeling van risico's".
+
+# ═══════════════════════════════════════════════════════════════
+# DEEL 4: DATA PROTECTION IMPACT ASSESSMENT (DPIA)
+# ═══════════════════════════════════════════════════════════════
+
+regel DPI-001 "DPIA verplichting check":
+  als dpiaVerplicht is "ja"
+  en dpiaUitgevoerd is "nee"
+  dan is compliant nee
+  en is categorie "dpia_verplicht"
+  en is prioriteit "P0"
+  en is artikel "AVG Art. 35 lid 1"
+  en is actie "Start DPIA vóór verwerking"
+  en is boete "Tot 10M EUR of 2% wereldwijze omzet".
+
+regel DPI-002 "DPIA uitgevoerd — voldoet":
+  als dpiaVerplicht is "ja"
+  en dpiaUitgevoerd is "ja"
+  dan is compliant ja
+  en is categorie "dpia_uitgevoerd"
+  en is artikel "AVG Art. 35 lid 1"
+  en is bron "Autoriteit Persoonsgegevens".
+
+regel DPI-003 "Bijzondere categorie gegevens — DPIA verplicht":
+  als gegevensSoort is "bijzondere_categorie"
+  dan is compliant nee
+  en is categorie "dpia_bijzonder"
+  en is dpiaVerplicht "ja"
+  en is artikel "AVG Art. 35 lid 3a + AP-lijst"
+  en is actie "DPIA verplicht voor bijzondere categorieën"
+  en is bron "AP-lijst: Verwerking bijzondere categorieën".
+
+regel DPI-004 "Grootschalige verwerking — DPIA verplicht":
+  als gegevensSoort is "persoonsgeevoelige"
+  dan is compliant nee
+  en is categorie "dpia_grootschalig"
+  en is dpiaVerplicht "ja"
+  en is artikel "AVG Art. 35 lid 3a"
+  en is actie "DPIA verplicht voor grootschalige verwerking"
+  en is bron "AP-lijst: Grootschalige verwerking".
+
+regel DPI-005 "Beperkingsmaatregelen na DPIA":
+  als dpiaUitgevoerd is "ja"
+  en beperkingsMaatregelen is "nee"
+  dan is compliant nee
+  en is categorie "dpia_maatregelen"
+  en is artikel "AVG Art. 35 lid 7d"
+  en is actie "Implementeer beperkingsmaatregelen uit DPIA".
+
+regel DPI-006 "DPIA gedeeltelijk — afronden":
+  als dpiaUitgevoerd is "gedeeltelijk"
+  dan is compliant nee
+  en is categorie "dpia_afronden"
+  en is prioriteit "P1"
+  en is artikel "AVG Art. 35 lid 7"
+  en is actie "Rond DPIA af en documenteer resterende risico's".
+
+regel DPI-007 "DPIA herziening verplicht":
+  als dpiaUitgevoerd is "ja"
+  dan is compliant mogelijk
+  en is categorie "dpia_herziening"
+  en is artikel "AVG Art. 35 lid 11"
+  en is actie "Herzie DPIA minimaal jaarlijks of bij wijziging"
+  en is bron "AVG Art. 35 lid 11: Periodieke herziening".
+
+regel DPI-008 "Geen DPIA nodig — laag risico":
+  als dpiaVerplicht is "nee"
+  dan is compliant ja
+  en is categorie "dpia_niet_vereist"
+  en is artikel "AVG Art. 35 lid 1"
+  en is bron "AP-lijst: Verwerking staat niet op verplichte lijst".
+
+regel DPI-009 "DPIA advies toezichthouder":
+  als risicoNiveau is "kritiek"
+  en dpiaUitgevoerd is "ja"
+  dan is compliant mogelijk
+  en is categorie "dpia_advies"
+  en is artikel "AVG Art. 36 lid 2"
+  en is actie "Raadpleeg Autoriteit Persoonsgegevens bij hoog resterend risico"
+  en is bron "AVG Art. 36: Voorafgaand overleg".
+
+regel DPI-010 "Privacy by Design + DPIA":
+  als dpiaUitgevoerd is "ja"
+  dan is compliant ja
+  en is categorie "dpia_privacy_design"
+  en is artikel "AVG Art. 25"
+  en is maatregel "Privacy by design + by default geïmplementeerd"
+  en is bron "AVG Art. 25: Gegevensbescherming door ontwerp".
+
+regel DPI-011 "DPIA documentatie verplicht":
+  als dpiaUitgevoerd is "ja"
+  dan is compliant ja
+  en is categorie "dpia_documentatie"
+  en is artikel "AVG Art. 35 lid 7"
+  en is vereiste "Beschrijving verwerking + beoordeling risico's + maatregelen"
+  en is bron "AVG Art. 35 lid 7a-f: DPIA-minimum inhoud".
+
+regel DPI-012 "DPIA AI-systeem — FRIA verplicht":
+  als gegevensSoort is "bijzondere_categorie"
+  en dpiaVerplicht is "ja"
+  dan is compliant nee
+  en is categorie "dpia_ai"
+  en is artikel "AVG Art. 35 + EU AI Act Art. 27"
+  en is actie "DPIA + FRIA (Fundamental Rights Impact Assessment) voor AI"
+  en is bron "EU AI Act Art. 27 + AP-richtlijnen AI".
+
+# ═══════════════════════════════════════════════════════════════
+# DEEL 5: COMBINATIE REGELS (BIA + BIV + DPIA)
+# ═══════════════════════════════════════════════════════════════
+
+regel COM-001 "Kritiek proces + hoog risico + DPIA":
+  als impactNiveau is "kritiek"
+  en risicoNiveau is "hoog"
+  en dpiaVerplicht is "ja"
+  dan is compliant nee
+  en is categorie "com_kritiek"
+  en is prioriteit "P0"
+  en is actie "Integale aanpassing: BIA + BIV + DPIA + continuïteitsplan"
+  en is bron "BIO2 + AVG Art. 35 + NEN-ISO 27001".
+
+regel COM-002 "Acceptabel risico zonder DPIA":
+  als risicoNiveau is "laag"
+  en dpiaVerplicht is "nee"
+  dan is compliant ja
+  en is categorie "com_acceptabel"
+  en is bron "BIO2 A.5-6 + AVG Art. 35".
+
+regel COM-003 "BIV zeer hoog + DPIA verplicht":
+  als vertrouwelijkheid is "zeer_hoog"
+  en dpiaVerplicht is "ja"
+  dan is compliant nee
+  en is categorie "com_biv_dpia"
+  en is prioriteit "P1"
+  en is actie "DPIA + encryptie + toegangscontrole + audit"
+  en is bron "AVG Art. 35 + BIO2 A.8 + A.10".
