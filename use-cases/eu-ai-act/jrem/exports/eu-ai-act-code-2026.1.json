@@ -1,0 +1,192 @@
+{
+  "schemaVersion": "1.1.0",
+  "ruleSetId": "eu-ai-act-code",
+  "version": "2026.1",
+  "validFrom": "2026-01-01",
+  "validUntil": "2027-12-31",
+  "jurisdiction": "EU",
+  "domain": "eu-ai-act-code-compliance",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "AIR-09-01",
+      "name": "LLM call error handling",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "article": "Art 9(1)",
+      "category": "risk-management",
+      "detection": "auto",
+      "sourceRefs": [{"type": "wetsartikel", "title": "EU AI Act Art 9(1)", "section": "AIR-09-01", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/art_9"}],
+      "conditions": {"pattern": "try/except rond LLM API calls", "scanType": "code"},
+      "outcome": {"verdict": "conditional", "severity": "error", "fix_hint": "Wrap LLM API calls in try/except to handle failures gracefully"}
+    },
+    {
+      "ruleId": "AIR-09-02",
+      "name": "Fallback/recovery patterns",
+      "priority": 50,
+      "legalStatus": "wettelijk",
+      "article": "Art 9(2)",
+      "category": "risk-management",
+      "detection": "auto",
+      "sourceRefs": [{"type": "wetsartikel", "title": "EU AI Act Art 9(2)", "section": "AIR-09-02", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/art_9"}],
+      "conditions": {"pattern": "fallback, retry, backoff, tenacity", "scanType": "code"},
+      "outcome": {"verdict": "conditional", "severity": "warning", "fix_hint": "Add fallback logic for LLM failures (retry, default response, alternative model)"}
+    },
+    {
+      "ruleId": "AIR-10-01",
+      "name": "Input validation / schema enforcement",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "article": "Art 10(2)",
+      "category": "data-governance",
+      "detection": "auto",
+      "sourceRefs": [{"type": "wetsartikel", "title": "EU AI Act Art 10(2)", "section": "AIR-10-01", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/art_10"}],
+      "conditions": {"pattern": "pydantic, zod, dataclass, json_schema, validate", "scanType": "code"},
+      "outcome": {"verdict": "conditional", "severity": "warning", "fix_hint": "Use Pydantic models or Zod schemas to validate inputs before LLM calls"}
+    },
+    {
+      "ruleId": "AIR-10-02",
+      "name": "PII handling in code",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "article": "Art 10(3)",
+      "category": "data-governance",
+      "detection": "auto",
+      "sourceRefs": [{"type": "wetsartikel", "title": "EU AI Act Art 10(3) + AVG Art 32", "section": "AIR-10-02", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/art_10"}],
+      "conditions": {"pattern": "pii, redact, mask, anonymize, scrub, presidio", "scanType": "code"},
+      "outcome": {"verdict": "conditional", "severity": "warning", "fix_hint": "Add PII detection before sending data to LLM providers"}
+    },
+    {
+      "ruleId": "AIR-11-01",
+      "name": "Code documentation (docstrings)",
+      "priority": 50,
+      "legalStatus": "wettelijk",
+      "article": "Art 11(1)",
+      "category": "documentation",
+      "detection": "auto",
+      "sourceRefs": [{"type": "wetsartikel", "title": "EU AI Act Art 11(1)", "section": "AIR-11-01", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/art_11"}],
+      "conditions": {"pattern": "docstring coverage on public functions", "scanType": "code", "threshold": 60},
+      "outcome": {"verdict": "conditional", "severity": "warning", "fix_hint": "Add docstrings to public functions and classes explaining purpose and parameters"}
+    },
+    {
+      "ruleId": "AIR-11-02",
+      "name": "Type annotations",
+      "priority": 50,
+      "legalStatus": "wettelijk",
+      "article": "Art 11(2)",
+      "category": "documentation",
+      "detection": "auto",
+      "sourceRefs": [{"type": "wetsartikel", "title": "EU AI Act Art 11(2)", "section": "AIR-11-02", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/art_11"}],
+      "conditions": {"pattern": "type hints on function signatures", "scanType": "code", "threshold": 50},
+      "outcome": {"verdict": "conditional", "severity": "warning", "fix_hint": "Add type hints to function signatures for better documentation and tooling"}
+    },
+    {
+      "ruleId": "AIR-12-01",
+      "name": "Application logging",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "article": "Art 12(1)",
+      "category": "record-keeping",
+      "detection": "auto",
+      "sourceRefs": [{"type": "wetsartikel", "title": "EU AI Act Art 12(1)", "section": "AIR-12-01", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/art_12"}],
+      "conditions": {"pattern": "import logging, structlog, loguru, pino, winston", "scanType": "code"},
+      "outcome": {"verdict": "conditional", "severity": "error", "fix_hint": "Add import logging and log key decisions, errors, and LLM interactions"}
+    },
+    {
+      "ruleId": "AIR-12-02",
+      "name": "Tracing / observability",
+      "priority": 50,
+      "legalStatus": "wettelijk",
+      "article": "Art 12(2)",
+      "category": "record-keeping",
+      "detection": "auto",
+      "sourceRefs": [{"type": "wetsartikel", "title": "EU AI Act Art 12(2)", "section": "AIR-12-02", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/art_12"}],
+      "conditions": {"pattern": "opentelemetry, otel, langsmith, langfuse, helicone, arize", "scanType": "code"},
+      "outcome": {"verdict": "conditional", "severity": "warning", "fix_hint": "Add OpenTelemetry, LangSmith, or similar to track AI decisions"}
+    },
+    {
+      "ruleId": "AIR-14-01",
+      "name": "Human-in-the-loop patterns",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "article": "Art 14(1)",
+      "category": "human-oversight",
+      "detection": "auto",
+      "sourceRefs": [{"type": "wetsartikel", "title": "EU AI Act Art 14(1)", "section": "AIR-14-01", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/art_14"}],
+      "conditions": {"pattern": "human_in_the_loop, require_approval, approval_gate, confirm", "scanType": "code"},
+      "outcome": {"verdict": "conditional", "severity": "warning", "fix_hint": "Add human approval gates for high-risk actions"}
+    },
+    {
+      "ruleId": "AIR-14-02",
+      "name": "Usage limits / budget controls",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "article": "Art 14(3)",
+      "category": "human-oversight",
+      "detection": "auto",
+      "sourceRefs": [{"type": "wetsartikel", "title": "EU AI Act Art 14(3)", "section": "AIR-14-02", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/art_14"}],
+      "conditions": {"pattern": "rate_limit, max_tokens, max_iterations, budget, token_limit", "scanType": "code"},
+      "outcome": {"verdict": "conditional", "severity": "warning", "fix_hint": "Set max_tokens, max_iterations, or budget limits to prevent runaway agents"}
+    },
+    {
+      "ruleId": "AIR-15-01",
+      "name": "Retry / backoff logic",
+      "priority": 50,
+      "legalStatus": "wettelijk",
+      "article": "Art 15(1)",
+      "category": "robustness",
+      "detection": "auto",
+      "sourceRefs": [{"type": "wetsartikel", "title": "EU AI Act Art 15(1)", "section": "AIR-15-01", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/art_15"}],
+      "conditions": {"pattern": "retry, backoff, tenacity, exponential_backoff", "scanType": "code"},
+      "outcome": {"verdict": "conditional", "severity": "warning", "fix_hint": "Add retry logic with exponential backoff for LLM API calls"}
+    },
+    {
+      "ruleId": "AIR-15-02",
+      "name": "Prompt injection defense",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "article": "Art 15(2)",
+      "category": "robustness",
+      "detection": "auto",
+      "sourceRefs": [{"type": "wetsartikel", "title": "EU AI Act Art 15(2)", "section": "AIR-15-02", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/art_15"}],
+      "conditions": {"pattern": "injection, sanitize, escape, guardrail, content_filter, moderation", "scanType": "code"},
+      "outcome": {"verdict": "conditional", "severity": "warning", "fix_hint": "Add input sanitization or use guardrails to detect prompt injection"}
+    },
+    {
+      "ruleId": "AIR-15-03",
+      "name": "LLM output validation",
+      "priority": 100,
+      "legalStatus": "wettelijk",
+      "article": "Art 15(3)",
+      "category": "robustness",
+      "detection": "auto",
+      "sourceRefs": [{"type": "wetsartikel", "title": "EU AI Act Art 15(3)", "section": "AIR-15-03", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/art_15"}],
+      "conditions": {"pattern": "output_parser, OutputParser, response_model, structured_output, zod.parse", "scanType": "code"},
+      "outcome": {"verdict": "conditional", "severity": "warning", "fix_hint": "Use output parsers (Pydantic, JSON schema) to validate LLM responses"}
+    },
+    {
+      "ruleId": "AIR-15-04",
+      "name": "Unsafe code execution",
+      "priority": 200,
+      "legalStatus": "wettelijk",
+      "article": "Art 15(4)",
+      "category": "robustness",
+      "detection": "auto",
+      "sourceRefs": [{"type": "wetsartikel", "title": "EU AI Act Art 15(4)", "section": "AIR-15-04", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/art_15"}],
+      "conditions": {"pattern": "eval(, exec(, Function(, subprocess.call(shell=True), os.system(", "scanType": "code"},
+      "outcome": {"verdict": "conditional", "severity": "critical", "fix_hint": "Avoid eval/exec on user input or LLM-generated content. Use sandboxed execution."}
+    }
+  ],
+  "metadata": {
+    "juridischeContext": {
+      "wet": "EU AI Act",
+      "wetBwbrId": "BWBR0048300",
+      "scannerVersion": "2026.1-air-port",
+      "portedFrom": "airblackbox/airbox (Apache-2.0)"
+    },
+    "bronverificatieDatum": "2026-07-17",
+    "acceptatieType": "self",
+    "disclaimer": "Code-level compliance scan. Does not replace legal review or conformity assessment."
+  },
+  "maturityLevel": "L1-poc"
+}
