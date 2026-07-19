@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.1.0",
+  "ruleSetId": "cobit",
+  "version": "2026.1",
+  "validFrom": "2026-01-01",
+  "validUntil": "2027-12-31",
+  "jurisdiction": "INT",
+  "domain": "cobit",
+  "procedureType": "activiteit-toetsing",
+  "conflictResolution": "first-match",
+  "rules": [
+    {"ruleId": "COBIT-EDM", "name": "evaluate_direct_monitor", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "COBIT 2019 EDM", "section": "Evaluate, Direct and Monitor", "url": "https://www.isaca.org/cobit"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "governance", "artikel": "COBIT EDM"}},
+    {"ruleId": "COBIT-APO", "name": "align_plan_organize", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "COBIT 2019 APO", "section": "Align, Plan and Organize", "url": "https://www.isaca.org/cobit"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "governance"}},
+    {"ruleId": "COBIT-BAI", "name": "build_acquire_implement", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "COBIT 2019 BAI", "section": "Build, Acquire and Implement", "url": "https://www.isaca.org/cobit"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "management"}},
+    {"ruleId": "COBIT-DSS", "name": "deliver_service_support", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "COBIT 2019 DSS", "section": "Deliver, Service and Support", "url": "https://www.isaca.org/cobit"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "operations"}},
+    {"ruleId": "COBIT-MEA", "name": "monitor_evaluate_assess", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "COBIT 2019 MEA", "section": "Monitor, Evaluate and Assess", "url": "https://www.isaca.org/cobit"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "monitoring"}},
+    {"ruleId": "COBIT-01", "name": "managed_it_risk", "priority": 500, "sourceRefs": [{"type": "standaard", "title": "COBIT APO12", "section": "Managed risk", "url": "https://www.isaca.org/cobit"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "risk", "linked_iso31000": "RM-5"}},
+    {"ruleId": "COBIT-02", "name": "managed_security", "priority": 500, "sourceRefs": [{"type": "standaard", "title": "COBIT DSS05", "section": "Managed security services", "url": "https://www.isaca.org/cobit"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "security", "linked_iso27001": "6"}},
+    {"ruleId": "COBIT-03", "name": "managed_data", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "COBIT BAI07", "section": "Managed data lifecycle", "url": "https://www.isaca.org/cobit"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "data"}},
+    {"ruleId": "COBIT-04", "name": "managed_continuity", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "COBIT DSS04", "section": "Managed continuity", "url": "https://www.isaca.org/cobit"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "continuity", "linked_iso22301": "8"}},
+    {"ruleId": "COBIT-05", "name": "managed_change", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "COBIT BAI06", "section": "Managed IT changes", "url": "https://www.isaca.org/cobit"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "change"}},
+    {"ruleId": "COBIT-06", "name": "managed_service_requests", "priority": 300, "sourceRefs": [{"type": "standaard", "title": "COBIT DSS02", "section": "Managed service requests and incidents", "url": "https://www.isaca.org/cobit"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "operations"}},
+    {"ruleId": "COBIT-07", "name": "managed_performance", "priority": 300, "sourceRefs": [{"type": "standaard", "title": "COBIT MEA01", "section": "Managed performance and conformance", "url": "https://www.isaca.org/cobit"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "monitoring"}}
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.1.0",
+  "ruleSetId": "soc2",
+  "version": "2026.1",
+  "validFrom": "2026-01-01",
+  "validUntil": "2027-12-31",
+  "jurisdiction": "US",
+  "domain": "soc2",
+  "procedureType": "activiteit-toetsing",
+  "conflictResolution": "first-match",
+  "rules": [
+    {"ruleId": "SOC2-CC1", "name": "control_environment", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "SOC 2 CC1", "section": "Control environment (integrity, ethics, oversight)", "url": "https://www.aicpa.org/soc4so"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "common_criteria", "artikel": "SOC 2 CC1"}},
+    {"ruleId": "SOC2-CC2", "name": "communication_information", "priority": 300, "sourceRefs": [{"type": "standaard", "title": "SOC 2 CC2", "section": "Communication and information", "url": "https://www.aicpa.org/soc4so"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "common_criteria"}},
+    {"ruleId": "SOC2-CC3", "name": "risk_assessment", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "SOC 2 CC3", "section": "Risk assessment", "url": "https://www.aicpa.org/soc4so"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "common_criteria", "linked_iso31000": "RM-5"}},
+    {"ruleId": "SOC2-CC4", "name": "monitoring_activities", "priority": 300, "sourceRefs": [{"type": "standaard", "title": "SOC 2 CC4", "section": "Monitoring of controls", "url": "https://www.aicpa.org/soc4so"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "common_criteria"}},
+    {"ruleId": "SOC2-CC5", "name": "control_activities", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "SOC 2 CC5", "section": "Control activities", "url": "https://www.aicpa.org/soc4so"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "common_criteria"}},
+    {"ruleId": "SOC2-C1", "name": "logical_access_controls", "priority": 500, "sourceRefs": [{"type": "standaard", "title": "SOC 2 C1", "section": "Logical and physical access controls", "url": "https://www.aicpa.org/soc4so"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "availability", "linked_iso27002": "A.8.2"}},
+    {"ruleId": "SOC2-C2", "name": "system_operations", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "SOC 2 C2", "section": "System operations (monitoring, incident)", "url": "https://www.aicpa.org/soc4so"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "availability"}},
+    {"ruleId": "SOC2-C3", "name": "change_management", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "SOC 2 C3", "section": "Change management", "url": "https://www.aicpa.org/soc4so"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "availability"}},
+    {"ruleId": "SOC2-C4", "name": "risk_mitigation", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "SOC 2 C4", "section": "Risk mitigation (business continuity)", "url": "https://www.aicpa.org/soc4so"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "availability", "linked_iso22301": "8"}},
+    {"ruleId": "SOC2-P1", "name": "privacy_notice", "priority": 500, "sourceRefs": [{"type": "standaard", "title": "SOC 2 P1", "section": "Privacy: notice and communication", "url": "https://www.aicpa.org/soc4so"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "privacy", "linked_iso27701": "7.2.2"}},
+    {"ruleId": "SOC2-P2", "name": "choice_consent", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "SOC 2 P2", "section": "Privacy: choice and consent", "url": "https://www.aicpa.org/soc4so"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "privacy"}},
+    {"ruleId": "SOC2-P3", "name": "collection_use", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "SOC 2 P3", "section": "Privacy: collection and use", "url": "https://www.aicpa.org/soc4so"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "privacy"}},
+    {"ruleId": "SOC2-P4", "name": "access_correction", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "SOC 2 P4", "section": "Privacy: access and correction", "url": "https://www.aicpa.org/soc4so"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "privacy"}},
+    {"ruleId": "SOC2-P5", "name": "data_quality_integrity", "priority": 300, "sourceRefs": [{"type": "standaard", "title": "SOC 2 P5", "section": "Privacy: data quality and integrity", "url": "https://www.aicpa.org/soc4so"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "privacy"}},
+    {"ruleId": "SOC2-P6", "name": "data_retention_disposal", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "SOC 2 P6", "section": "Privacy: retention and disposal", "url": "https://www.aicpa.org/soc4so"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "privacy"}},
+    {"ruleId": "SOC2-T1", "name": "security_availability_confidentiality", "priority": 500, "sourceRefs": [{"type": "standaard", "title": "SOC 2 TSC", "section": "Trust Services Criteria (security, availability, confidentiality)", "url": "https://www.aicpa.org/soc4so"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "trust_services", "linked_iso27001": "6"}}
+  ]
+}

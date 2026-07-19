@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "1.1.0",
+  "ruleSetId": "pci-dss",
+  "version": "2026.1",
+  "validFrom": "2026-01-01",
+  "validUntil": "2027-12-31",
+  "jurisdiction": "INT",
+  "domain": "pci-dss",
+  "procedureType": "activiteit-toetsing",
+  "conflictResolution": "first-match",
+  "rules": [
+    {"ruleId": "PCI-1", "name": "firewall_configuration", "priority": 500, "sourceRefs": [{"type": "standaard", "title": "PCI DSS v4.0 Req 1", "section": "Install and maintain network security controls", "url": "https://www.pcisecuritystandards.org/"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "network_security", "artikel": "PCI DSS 1"}},
+    {"ruleId": "PCI-2", "name": "no_default_credentials", "priority": 500, "sourceRefs": [{"type": "standaard", "title": "PCI DSS v4.0 Req 2", "section": "Never use vendor-supplied defaults", "url": "https://www.pcisecuritystandards.org/"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "access_control"}},
+    {"ruleId": "PCI-3", "name": "protect_stored_data", "priority": 500, "sourceRefs": [{"type": "standaard", "title": "PCI DSS v4.0 Req 3", "section": "Protect stored account data", "url": "https://www.pcisecuritystandards.org/"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "data_protection", "linked_iso27002": "A.8.11"}},
+    {"ruleId": "PCI-4", "name": "encrypt_transmission", "priority": 500, "sourceRefs": [{"type": "standaard", "title": "PCI DSS v4.0 Req 4", "section": "Encrypt transmission of cardholder data", "url": "https://www.pcisecuritystandards.org/"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "encryption", "linked_iso27002": "A.8.24"}},
+    {"ruleId": "PCI-5", "name": "malware_protection", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "PCI DSS v4.0 Req 5", "section": "Protect systems from malicious software", "url": "https://www.pcisecuritystandards.org/"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "endpoint_security"}},
+    {"ruleId": "PCI-6", "name": "secure_systems_apps", "priority": 500, "sourceRefs": [{"type": "standaard", "title": "PCI DSS v4.0 Req 6", "section": "Develop and maintain secure systems", "url": "https://www.pcisecuritystandards.org/"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "secure_development", "linked_iso27002": "A.8.28"}},
+    {"ruleId": "PCI-7", "name": "restrict_access_need_to_know", "priority": 500, "sourceRefs": [{"type": "standaard", "title": "PCI DSS v4.0 Req 7", "section": "Restrict access by business need to know", "url": "https://www.pcisecuritystandards.org/"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "access_control", "linked_iso27002": "A.8.2"}},
+    {"ruleId": "PCI-8", "name": "identify_authenticate_users", "priority": 500, "sourceRefs": [{"type": "standaard", "title": "PCI DSS v4.0 Req 8", "section": "Identify users and authenticate access", "url": "https://www.pcisecuritystandards.org/"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "authentication", "linked_iso27002": "A.8.5"}},
+    {"ruleId": "PCI-9", "name": "restrict_physical_access", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "PCI DSS v4.0 Req 9", "section": "Restrict physical access to cardholder data", "url": "https://www.pcisecuritystandards.org/"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "physical_security"}},
+    {"ruleId": "PCI-10", "name": "log_monitor_access", "priority": 500, "sourceRefs": [{"type": "standaard", "title": "PCI DSS v4.0 Req 10", "section": "Log and monitor all access", "url": "https://www.pcisecuritystandards.org/"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "logging_monitoring", "linked_iso27002": "A.8.15"}},
+    {"ruleId": "PCI-11", "name": "security_testing", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "PCI DSS v4.0 Req 11", "section": "Test security of systems regularly", "url": "https://www.pcisecuritystandards.org/"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "testing", "linked_iso27002": "A.8.8"}},
+    {"ruleId": "PCI-12", "name": "security_policy", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "PCI DSS v4.0 Req 12", "section": "Support security with organizational policies", "url": "https://www.pcisecuritystandards.org/"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "policy", "linked_iso27001": "5.2"}}
+  ]
+}

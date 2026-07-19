@@ -1,3 +1,20 @@
+## [4.0.0] - 2026-07-17 — Major Expansion: NEN 7510 + NIST CSF + ISO 20000 + PCI-DSS + COBIT + SOC 2
+
+### Added (6 new frameworks, 105 new rules)
+- NEN 7510: 15 regels — Zorg informatiebeveiliging (IGJ, MedMij, BSN)
+- NIST CSF 2.0: 24 regels — Govern, Identify, Protect, Detect, Respond, Recover
+- ISO 20000-1: 16 regels — IT Service Management (SLA, incident, change)
+- PCI-DSS v4.0: 12 regels — Betalingsveiligheid (encryptie, access, logging)
+- COBIT 2019: 12 regels — IT Governance (EDM, APO, BAI, DSS, MEA)
+- SOC 2: 16 regels — Trust Services Criteria (security, privacy, availability)
+
+### Total
+- Use cases: 30 (was 24)
+- Totaal regels: 1017+ (was 961)
+- API ports: 8490-8540
+
+---
+
 ## [3.4.0] - 2026-07-17 — ISO 9001 Quality Management System
 
 ### Added

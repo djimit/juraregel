@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.1.0",
+  "ruleSetId": "nen7510",
+  "version": "2026.1",
+  "validFrom": "2026-01-01",
+  "validUntil": "2027-12-31",
+  "jurisdiction": "NL",
+  "domain": "nen7510",
+  "procedureType": "activiteit-toetsing",
+  "conflictResolution": "first-match",
+  "rules": [
+    {"ruleId": "NEN-1", "name": "isms_zorg", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "NEN 7510-1:2024", "section": "ISMS voor zorg", "url": "https://www.nen.nl"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "isms", "artikel": "NEN 7510-1"}},
+    {"ruleId": "NEN-2", "name": "risicoanalyse_zorg", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "NEN 7510-1", "section": "Risicoanalyse patiëntgegevens", "url": "https://www.nen.nl"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "risico", "linked_iso27001": "6.1.2"}},
+    {"ruleId": "NEN-3", "name": "bescherming_patiëntendata", "priority": 500, "sourceRefs": [{"type": "standaard", "title": "NEN 7510-1", "section": "Bescherming persoonsgegevens in de zorg", "url": "https://www.nen.nl"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "privacy", "linked_iso27701": "7.2"}},
+    {"ruleId": "NEN-4", "name": "toegangscontrole_zorg", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "NEN 7510-2", "section": "Toegangscontrole medische gegevens", "url": "https://www.nen.nl"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "toegang"}},
+    {"ruleId": "NEN-5", "name": "audit_trail_zorg", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "NEN 7510-2", "section": "Logging van toegang tot patiëntgegevens", "url": "https://www.nen.nl"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "logging"}},
+    {"ruleId": "NEN-6", "name": "encryptie_zorg", "priority": 500, "sourceRefs": [{"type": "standaard", "title": "NEN 7510-2", "section": "Encryptie van patiëndata", "url": "https://www.nen.nl"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "beveiliging"}},
+    {"ruleId": "NEN-7", "name": "back_herstel_zorg", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "NEN 7510-2", "section": "Backup en herstel medische systemen", "url": "https://www.nen.nl"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "continuiteit", "linked_iso22301": "8.4"}},
+    {"ruleId": "NEN-8", "name": "incident_response_zorg", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "NEN 7510-2", "section": "Incidentrespons bij datalek", "url": "https://www.nen.nl"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "incident"}},
+    {"ruleId": "NEN-9", "name": "leveranciersmanagement_zorg", "priority": 300, "sourceRefs": [{"type": "standaard", "title": "NEN 7510-2", "section": "Beheer van leveranciers", "url": "https://www.nen.nl"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "leveranciers"}},
+    {"ruleId": "NEN-10", "name": "fysieke_beveiliging_zorg", "priority": 300, "sourceRefs": [{"type": "standaard", "title": "NEN 7510-2", "section": "Fysieke beveiliging serverruimtes", "url": "https://www.nen.nl"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "fysiek"}},
+    {"ruleId": "NEN-11", "name": "medewerkerstraining_zorg", "priority": 300, "sourceRefs": [{"type": "standaard", "title": "NEN 7510-2", "section": "Privacytraining medewerkers", "url": "https://www.nen.nl"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "training"}},
+    {"ruleId": "NEN-12", "name": "dpia_zorg_verplicht", "priority": 500, "sourceRefs": [{"type": "standaard", "title": "NEN 7510-2 + AVG", "section": "DPIA verplicht bij hoog risico", "url": "https://www.nen.nl"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "privacy", "linked_dpia": true}},
+    {"ruleId": "NEN-13", "name": "bsn_zorg", "priority": 500, "sourceRefs": [{"type": "standaard", "title": "NEN 7510-2 + BSN-k", "section": "Veilige verwerking BSN in zorg", "url": "https://www.nen.nl"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "privacy"}},
+    {"ruleId": "NEN-14", "name": "medmij_compliantie", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "NEN 7510-2 + MedMij", "section": "MedMij-infrastructuur compliantie", "url": "https://www.nen.nl"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "interoperabiliteit"}},
+    {"ruleId": "NEN-15", "name": "igj_toetsing", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "NEN 7510-1", "section": "IGJ-inspectie kader", "url": "https://www.nen.nl"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "toezicht"}}
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.1.0",
+  "ruleSetId": "iso20000",
+  "version": "2026.1",
+  "validFrom": "2026-01-01",
+  "validUntil": "2027-12-31",
+  "jurisdiction": "INT",
+  "domain": "iso20000",
+  "procedureType": "activiteit-toetsing",
+  "conflictResolution": "first-match",
+  "rules": [
+    {"ruleId": "ITSM-4", "name": "itsms_context", "priority": 300, "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 20000-1:2018 Clause 4", "section": "Context of the organization", "url": "https://www.iso.org/standard/70636"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "itsms_context"}},
+    {"ruleId": "ITSM-5", "name": "itsms_leadership", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 20000-1:2018 Clause 5", "section": "Leadership", "url": "https://www.iso.org/standard/70636"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "itsms_leadership"}},
+    {"ruleId": "ITSM-6", "name": "itsms_planning", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 20000-1:2018 Clause 6", "section": "Planning (risks, objectives)", "url": "https://www.iso.org/standard/70636"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "itsms_planning", "linked_iso31000": "RM-5"}},
+    {"ruleId": "ITSM-7", "name": "itsms_support", "priority": 300, "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 20000-1:2018 Clause 7", "section": "Support (resources, competence, communication)", "url": "https://www.iso.org/standard/70636"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "itsms_support"}},
+    {"ruleId": "ITSM-8", "name": "itsms_operation", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 20000-1:2018 Clause 8", "section": "Operation of the SMS", "url": "https://www.iso.org/standard/70636"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "itsms_operation"}},
+    {"ruleId": "ITSM-8.1", "name": "service_portfolio", "priority": 300, "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 20000-1:2018 8.2", "section": "Service portfolio management", "url": "https://www.iso.org/standard/70636"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "itsms_service"}},
+    {"ruleId": "ITSM-8.2", "name": "service_level_management", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 20000-1:2018 8.3", "section": "Service level management (SLA)", "url": "https://www.iso.org/standard/70636"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "itsms_service"}},
+    {"ruleId": "ITSM-8.3", "name": "service_continuity_availability", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 20000-1:2018 8.4", "section": "Service continuity and availability", "url": "https://www.iso.org/standard/70636"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "itsms_service", "linked_iso22301": "8.2"}},
+    {"ruleId": "ITSM-8.4", "name": "capacity_management", "priority": 300, "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 20000-1:2018 8.5", "section": "Capacity management", "url": "https://www.iso.org/standard/70636"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "itsms_service"}},
+    {"ruleId": "ITSM-8.5", "name": "demand_management", "priority": 300, "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 20000-1:2018 8.6", "section": "Demand management", "url": "https://www.iso.org/standard/70636"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "itsms_service"}},
+    {"ruleId": "ITSM-8.6", "name": "service_design_build", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 20000-1:2018 8.7", "section": "Service design and transition", "url": "https://www.iso.org/standard/70636"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "itsms_service"}},
+    {"ruleId": "ITSM-8.7", "name": "release_change_management", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 20000-1:2018 8.8", "section": "Release and change management", "url": "https://www.iso.org/standard/70636"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "itsms_service", "linked_iso27002": "A.8.9"}},
+    {"ruleId": "ITSM-8.8", "name": "incident_problem_management", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 20000-1:2018 8.9", "section": "Incident and problem management", "url": "https://www.iso.org/standard/70636"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "itsms_service"}},
+    {"ruleId": "ITSM-8.9", "name": "service_request_management", "priority": 300, "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 20000-1:2018 8.10", "section": "Service request management", "url": "https://www.iso.org/standard/70636"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "itsms_service"}},
+    {"ruleId": "ITSM-9", "name": "itsms_evaluation", "priority": 300, "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 20000-1:2018 Clause 9", "section": "Performance evaluation", "url": "https://www.iso.org/standard/70636"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "itsms_evaluation"}},
+    {"ruleId": "ITSM-10", "name": "itsms_improvement", "priority": 300, "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 20000-1:2018 Clause 10", "section": "Improvement (continual, corrective)", "url": "https://www.iso.org/standard/70636"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "itsms_improvement"}}
+  ]
+}
