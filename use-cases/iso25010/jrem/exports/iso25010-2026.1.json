@@ -1,0 +1,725 @@
+{
+  "schemaVersion": "1.1.0",
+  "ruleSetId": "iso25010",
+  "version": "2026.1",
+  "validFrom": "2026-01-01",
+  "validUntil": "2027-12-31",
+  "jurisdiction": "INT",
+  "domain": "iso25010",
+  "procedureType": "activiteit-toetsing",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "QA-1.1",
+      "name": "functional_completeness",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 25010:2023 4.1.1",
+          "section": "Functional completeness",
+          "url": "https://www.iso.org/standard/78176"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "category": "functional_suitability",
+        "sub_characteristic": "functional_completeness",
+        "artikel": "ISO 25010:2023 4.1.1"
+      }
+    },
+    {
+      "ruleId": "QA-1.2",
+      "name": "functional_correctness",
+      "priority": 400,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 25010:2023 4.1.2",
+          "section": "Functional correctness",
+          "url": "https://www.iso.org/standard/78176"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "category": "functional_suitability",
+        "sub_characteristic": "functional_correctness",
+        "artikel": "ISO 25010:2023 4.1.2"
+      }
+    },
+    {
+      "ruleId": "QA-1.3",
+      "name": "functional_appropriateness",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 25010:2023 4.1.3",
+          "section": "Functional appropriateness",
+          "url": "https://www.iso.org/standard/78176"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "category": "functional_suitability",
+        "sub_characteristic": "functional_appropriateness",
+        "artikel": "ISO 25010:2023 4.1.3"
+      }
+    },
+    {
+      "ruleId": "QA-2.1",
+      "name": "time_behaviour",
+      "priority": 400,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 25010:2023 4.2.1",
+          "section": "Time behaviour",
+          "url": "https://www.iso.org/standard/78176"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "category": "performance_efficiency",
+        "sub_characteristic": "time_behaviour",
+        "artikel": "ISO 25010:2023 4.2.1"
+      }
+    },
+    {
+      "ruleId": "QA-2.2",
+      "name": "resource_utilization",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 25010:2023 4.2.2",
+          "section": "Resource utilization",
+          "url": "https://www.iso.org/standard/78176"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "category": "performance_efficiency",
+        "sub_characteristic": "resource_utilization",
+        "artikel": "ISO 25010:2023 4.2.2"
+      }
+    },
+    {
+      "ruleId": "QA-2.3",
+      "name": "capacity",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 25010:2023 4.2.3",
+          "section": "Capacity",
+          "url": "https://www.iso.org/standard/78176"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "category": "performance_efficiency",
+        "sub_characteristic": "capacity",
+        "artikel": "ISO 25010:2023 4.2.3"
+      }
+    },
+    {
+      "ruleId": "QA-3.1",
+      "name": "co_existence",
+      "priority": 200,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 25010:2023 4.3.1",
+          "section": "Co-existence",
+          "url": "https://www.iso.org/standard/78176"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "category": "compatibility",
+        "sub_characteristic": "co_existence",
+        "artikel": "ISO 25010:2023 4.3.1"
+      }
+    },
+    {
+      "ruleId": "QA-3.2",
+      "name": "interoperability",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 25010:2023 4.3.2",
+          "section": "Interoperability",
+          "url": "https://www.iso.org/standard/78176"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "category": "compatibility",
+        "sub_characteristic": "interoperability",
+        "artikel": "ISO 25010:2023 4.3.2"
+      }
+    },
+    {
+      "ruleId": "QA-4.1",
+      "name": "appropriateness_recognizability",
+      "priority": 200,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 25010:2023 4.4.1",
+          "section": "Appropriateness recognizability",
+          "url": "https://www.iso.org/standard/78176"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "category": "interaction_capability",
+        "sub_characteristic": "appropriateness_recognizability",
+        "artikel": "ISO 25010:2023 4.4.1"
+      }
+    },
+    {
+      "ruleId": "QA-4.2",
+      "name": "learnability",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 25010:2023 4.4.2",
+          "section": "Learnability",
+          "url": "https://www.iso.org/standard/78176"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "category": "interaction_capability",
+        "sub_characteristic": "learnability",
+        "artikel": "ISO 25010:2023 4.4.2"
+      }
+    },
+    {
+      "ruleId": "QA-4.3",
+      "name": "operability",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 25010:2023 4.4.3",
+          "section": "Operability",
+          "url": "https://www.iso.org/standard/78176"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "category": "interaction_capability",
+        "sub_characteristic": "operability",
+        "artikel": "ISO 25010:2023 4.4.3"
+      }
+    },
+    {
+      "ruleId": "QA-4.4",
+      "name": "user_error_protection",
+      "priority": 400,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 25010:2023 4.4.4",
+          "section": "User error protection",
+          "url": "https://www.iso.org/standard/78176"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "category": "interaction_capability",
+        "sub_characteristic": "user_error_protection",
+        "artikel": "ISO 25010:2023 4.4.4"
+      }
+    },
+    {
+      "ruleId": "QA-4.5",
+      "name": "user_engagement",
+      "priority": 200,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 25010:2023 4.4.5",
+          "section": "User engagement",
+          "url": "https://www.iso.org/standard/78176"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "category": "interaction_capability",
+        "sub_characteristic": "user_engagement",
+        "artikel": "ISO 25010:2023 4.4.5"
+      }
+    },
+    {
+      "ruleId": "QA-4.6",
+      "name": "inclusivity",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 25010:2023 4.4.6",
+          "section": "Inclusivity",
+          "url": "https://www.iso.org/standard/78176"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "category": "interaction_capability",
+        "sub_characteristic": "inclusivity",
+        "artikel": "ISO 25010:2023 4.4.6",
+        "linked_use_cases": [
+          "wdo"
+        ]
+      }
+    },
+    {
+      "ruleId": "QA-4.7",
+      "name": "user_assistance",
+      "priority": 200,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 25010:2023 4.4.7",
+          "section": "User assistance",
+          "url": "https://www.iso.org/standard/78176"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "category": "interaction_capability",
+        "sub_characteristic": "user_assistance",
+        "artikel": "ISO 25010:2023 4.4.7"
+      }
+    },
+    {
+      "ruleId": "QA-4.8",
+      "name": "self_descriptiveness",
+      "priority": 200,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 25010:2023 4.4.8",
+          "section": "Self-descriptiveness",
+          "url": "https://www.iso.org/standard/78176"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "category": "interaction_capability",
+        "sub_characteristic": "self_descriptiveness",
+        "artikel": "ISO 25010:2023 4.4.8"
+      }
+    },
+    {
+      "ruleId": "QA-5.1",
+      "name": "maturity",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 25010:2023 4.5.1",
+          "section": "Maturity",
+          "url": "https://www.iso.org/standard/78176"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "category": "reliability",
+        "sub_characteristic": "maturity",
+        "artikel": "ISO 25010:2023 4.5.1"
+      }
+    },
+    {
+      "ruleId": "QA-5.2",
+      "name": "availability",
+      "priority": 400,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 25010:2023 4.5.2",
+          "section": "Availability",
+          "url": "https://www.iso.org/standard/78176"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "category": "reliability",
+        "sub_characteristic": "availability",
+        "artikel": "ISO 25010:2023 4.5.2"
+      }
+    },
+    {
+      "ruleId": "QA-5.3",
+      "name": "fault_tolerance",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 25010:2023 4.5.3",
+          "section": "Fault tolerance",
+          "url": "https://www.iso.org/standard/78176"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "category": "reliability",
+        "sub_characteristic": "fault_tolerance",
+        "artikel": "ISO 25010:2023 4.5.3"
+      }
+    },
+    {
+      "ruleId": "QA-5.4",
+      "name": "recoverability",
+      "priority": 400,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 25010:2023 4.5.4",
+          "section": "Recoverability",
+          "url": "https://www.iso.org/standard/78176"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "category": "reliability",
+        "sub_characteristic": "recoverability",
+        "artikel": "ISO 25010:2023 4.5.4",
+        "linked_use_cases": [
+          "bia-biv-dpia"
+        ]
+      }
+    },
+    {
+      "ruleId": "QA-6.1",
+      "name": "confidentiality",
+      "priority": 500,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 25010:2023 4.6.1",
+          "section": "Confidentiality",
+          "url": "https://www.iso.org/standard/78176"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "category": "security",
+        "sub_characteristic": "confidentiality",
+        "artikel": "ISO 25010:2023 4.6.1",
+        "linked_use_cases": [
+          "iso27001"
+        ]
+      }
+    },
+    {
+      "ruleId": "QA-6.2",
+      "name": "integrity",
+      "priority": 500,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 25010:2023 4.6.2",
+          "section": "Integrity",
+          "url": "https://www.iso.org/standard/78176"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "category": "security",
+        "sub_characteristic": "integrity",
+        "artikel": "ISO 25010:2023 4.6.2",
+        "linked_use_cases": [
+          "iso27001"
+        ]
+      }
+    },
+    {
+      "ruleId": "QA-6.3",
+      "name": "non_repudiation",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 25010:2023 4.6.3",
+          "section": "Non-repudiation",
+          "url": "https://www.iso.org/standard/78176"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "category": "security",
+        "sub_characteristic": "non_repudiation",
+        "artikel": "ISO 25010:2023 4.6.3"
+      }
+    },
+    {
+      "ruleId": "QA-6.4",
+      "name": "accountability",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 25010:2023 4.6.4",
+          "section": "Accountability",
+          "url": "https://www.iso.org/standard/78176"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "category": "security",
+        "sub_characteristic": "accountability",
+        "artikel": "ISO 25010:2023 4.6.4"
+      }
+    },
+    {
+      "ruleId": "QA-6.5",
+      "name": "authenticity",
+      "priority": 400,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 25010:2023 4.6.5",
+          "section": "Authenticity",
+          "url": "https://www.iso.org/standard/78176"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "category": "security",
+        "sub_characteristic": "authenticity",
+        "artikel": "ISO 25010:2023 4.6.5"
+      }
+    },
+    {
+      "ruleId": "QA-7.1",
+      "name": "modularity",
+      "priority": 200,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 25010:2023 4.7.1",
+          "section": "Modularity",
+          "url": "https://www.iso.org/standard/78176"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "category": "maintainability",
+        "sub_characteristic": "modularity",
+        "artikel": "ISO 25010:2023 4.7.1"
+      }
+    },
+    {
+      "ruleId": "QA-7.2",
+      "name": "reusability",
+      "priority": 200,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 25010:2023 4.7.2",
+          "section": "Reusability",
+          "url": "https://www.iso.org/standard/78176"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "category": "maintainability",
+        "sub_characteristic": "reusability",
+        "artikel": "ISO 25010:2023 4.7.2"
+      }
+    },
+    {
+      "ruleId": "QA-7.3",
+      "name": "analysability",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 25010:2023 4.7.3",
+          "section": "Analysability",
+          "url": "https://www.iso.org/standard/78176"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "category": "maintainability",
+        "sub_characteristic": "analysability",
+        "artikel": "ISO 25010:2023 4.7.3"
+      }
+    },
+    {
+      "ruleId": "QA-7.4",
+      "name": "modifiability",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 25010:2023 4.7.4",
+          "section": "Modifiability",
+          "url": "https://www.iso.org/standard/78176"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "category": "maintainability",
+        "sub_characteristic": "modifiability",
+        "artikel": "ISO 25010:2023 4.7.4"
+      }
+    },
+    {
+      "ruleId": "QA-7.5",
+      "name": "testability",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 25010:2023 4.7.5",
+          "section": "Testability",
+          "url": "https://www.iso.org/standard/78176"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "category": "maintainability",
+        "sub_characteristic": "testability",
+        "artikel": "ISO 25010:2023 4.7.5"
+      }
+    },
+    {
+      "ruleId": "QA-8.1",
+      "name": "adaptability",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 25010:2023 4.8.1",
+          "section": "Adaptability",
+          "url": "https://www.iso.org/standard/78176"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "category": "flexibility",
+        "sub_characteristic": "adaptability",
+        "artikel": "ISO 25010:2023 4.8.1"
+      }
+    },
+    {
+      "ruleId": "QA-8.2",
+      "name": "installability",
+      "priority": 200,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 25010:2023 4.8.2",
+          "section": "Installability",
+          "url": "https://www.iso.org/standard/78176"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "category": "flexibility",
+        "sub_characteristic": "installability",
+        "artikel": "ISO 25010:2023 4.8.2"
+      }
+    },
+    {
+      "ruleId": "QA-8.3",
+      "name": "replaceability",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 25010:2023 4.8.3",
+          "section": "Replaceability",
+          "url": "https://www.iso.org/standard/78176"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "category": "flexibility",
+        "sub_characteristic": "replaceability",
+        "artikel": "ISO 25010:2023 4.8.3"
+      }
+    },
+    {
+      "ruleId": "QA-9.1",
+      "name": "health_safety",
+      "priority": 400,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 25010:2023 4.9.1",
+          "section": "Health and safety",
+          "url": "https://www.iso.org/standard/78176"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "category": "safety",
+        "sub_characteristic": "health_safety",
+        "artikel": "ISO 25010:2023 4.9.1"
+      }
+    },
+    {
+      "ruleId": "QA-9.2",
+      "name": "environmental_protection",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 25010:2023 4.9.2",
+          "section": "Environmental protection",
+          "url": "https://www.iso.org/standard/78176"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "compliant": "conditional",
+        "category": "safety",
+        "sub_characteristic": "environmental_protection",
+        "artikel": "ISO 25010:2023 4.9.2"
+      }
+    }
+  ]
+}

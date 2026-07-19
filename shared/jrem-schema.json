@@ -90,7 +90,8 @@
         "bia-biv-dpia",
         "dpia-generator",
         "iso27001",
-        "wdo"
+        "wdo",
+        "iso25010"
       ]
     },
     "procedureType": {
