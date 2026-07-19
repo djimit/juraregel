@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JuraRegel — Compliance Automation voor de Overheid</title>
+    <style>
+        :root { --primary: #1a365d; --accent: #2b6cb0; --success: #38a169; --bg: #f7fafc; --card: #ffffff; --text: #2d3748; --border: #e2e8f0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: var(--text); line-height: 1.6; }
+        .hero { background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); color: white; padding: 6rem 2rem; text-align: center; }
+        .hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 1rem; }
+        .hero .subtitle { font-size: 1.25rem; opacity: 0.9; max-width: 700px; margin: 0 auto 2rem; }
+        .hero .stats { display: flex; justify-content: center; gap: 3rem; margin-top: 3rem; flex-wrap: wrap; }
+        .hero .stat { text-align: center; }
+        .hero .stat .number { font-size: 2.5rem; font-weight: 800; }
+        .hero .stat .label { font-size: 0.875rem; opacity: 0.8; text-transform: uppercase; letter-spacing: 0.05em; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; }
+        .section-title { font-size: 2rem; font-weight: 700; text-align: center; margin-bottom: 3rem; }
+        .frameworks { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+        .framework { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; text-align: center; transition: transform 0.2s, box-shadow 0.2s; }
+        .framework:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .framework .icon { font-size: 2rem; margin-bottom: 0.5rem; }
+        .framework .name { font-weight: 600; font-size: 0.875rem; }
+        .framework .rules { font-size: 0.75rem; color: #718096; margin-top: 0.25rem; }
+        .cta { background: var(--primary); color: white; padding: 4rem 2rem; text-align: center; border-radius: 16px; margin: 4rem 0; }
+        .cta h2 { font-size: 2rem; margin-bottom: 1rem; }
+        .cta p { opacity: 0.9; margin-bottom: 2rem; }
+        .cta .button { display: inline-block; background: white; color: var(--primary); padding: 1rem 2rem; border-radius: 8px; font-weight: 600; text-decoration: none; }
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 4rem 0; }
+        .feature { padding: 2rem; }
+        .feature h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+        .feature p { color: #718096; }
+        .footer { background: var(--primary); color: white; padding: 2rem; text-align: center; opacity: 0.8; font-size: 0.875rem; }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>JuraRegel</h1>
+        <p class="subtitle">Compliance Automation voor de Nederlandse Overheid. Eén platform, 30 frameworks, 1000+ regels — automatisch gevalideerd en geadviseerd.</p>
+        <div class="stats">
+            <div class="stat"><div class="number">30</div><div class="label">Frameworks</div></div>
+            <div class="stat"><div class="number">1.017+</div><div class="label">Regels</div></div>
+            <div class="stat"><div class="number">51</div><div class="label">API Poorten</div></div>
+            <div class="stat"><div class="number">16</div><div class="label">MCP Tools</div></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="section-title">Ondersteunde Frameworks</h2>
+        <div class="frameworks">
+            <div class="framework"><div class="icon">🛡️</div><div class="name">ISO 27001</div><div class="rules">28 regels</div></div>
+            <div class="framework"><div class="icon">🔒</div><div class="name">ISO 27002</div><div class="rules">34 regels</div></div>
+            <div class="framework"><div class="icon">👤</div><div class="name">ISO 27701</div><div class="rules">24 regels</div></div>
+            <div class="framework"><div class="icon">🔄</div><div class="name">ISO 22301</div><div class="rules">24 regels</div></div>
+            <div class="framework"><div class="icon">⚠️</div><div class="name">ISO 31000</div><div class="rules">21 regels</div></div>
+            <div class="framework"><div class="icon">⭐</div><div class="name">ISO 9001</div><div class="rules">27 regels</div></div>
+            <div class="framework"><div class="icon">💻</div><div class="name">ISO 25010</div><div class="rules">35 regels</div></div>
+            <div class="framework"><div class="icon">🏥</div><div class="name">NEN 7510</div><div class="rules">15 regels</div></div>
+            <div class="framework"><div class="icon">🇺🇸</div><div class="name">NIST CSF 2.0</div><div class="rules">24 regels</div></div>
+            <div class="framework"><div class="icon">💳</div><div class="name">PCI-DSS v4.0</div><div class="rules">12 regels</div></div>
+            <div class="framework"><div class="icon">🏛️</div><div class="name">COBIT 2019</div><div class="rules">12 regels</div></div>
+            <div class="framework"><div class="icon">🤝</div><div class="name">SOC 2</div><div class="rules">16 regels</div></div>
+            <div class="framework"><div class="icon">🇪🇺</div><div class="name">eIDAS 2.0</div><div class="rules">32 regels</div></div>
+            <div class="framework"><div class="icon">🤖</div><div class="name">EU AI Act</div><div class="rules">12 regels</div></div>
+            <div class="framework"><div class="icon">🔗</div><div class="name">NEDERUS</div><div class="rules">8 controls</div></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="features">
+            <div class="feature"><h3>🤖 AI-Adviser</h3><p>Automatische multi-framework analyse met geprioriteerd actieplan, kosten-inschatting en kwartaalplanning.</p></div>
+            <div class="feature"><h3>🔌 API-First</h3><p>51 REST API's, MCP server met 16 tools, webhook-notificaties. Integreer met bestaande systemen.</p></div>
+            <div class="feature"><h3>☁️ Multi-tenant</h3><p>JuraRegel Cloud: SaaS voor meerdere organisaties, met usage tracking en role-based access.</p></div>
+            <div class="feature"><h3>📊 Executive Dashboard</h3><p>Real-time compliance scores per framework, trend-analyse, gap-visualisatie.</p></div>
+            <div class="feature"><h3>🔄 Automatische Updates</h3><p>Regels worden automatisch bijgewerkt bij wijzigingen in wet- en regelgeving (EUR-Lex, wetten.overheid.nl).</p></div>
+            <div class="feature"><h3>📝 Document Generatie</h3><p>Genereer DPIA's, BIA-rapporten, SoA-documenten en compliance-rapporten automatisch.</p></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="cta">
+            <h2>Klaar om compliance te automatiseren?</h2>
+            <p>Start met een gratis pilot voor uw gemeente, provincie of overheidsorganisatie.</p>
+            <a href="mailto:framework@djimit.nl" class="button">Vraag een Pilot Aan</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>JuraRegel v4.0.0 — Open Source Compliance Platform — github.com/djimit/juraregel</p>
+    </div>
+</body>
+</html>
