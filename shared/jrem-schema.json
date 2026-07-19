@@ -91,7 +91,8 @@
         "dpia-generator",
         "iso27001",
         "wdo",
-        "iso25010"
+        "iso25010",
+        "iso27002"
       ]
     },
     "procedureType": {

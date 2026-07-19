@@ -1,0 +1,217 @@
+{
+  "schemaVersion": "1.1.0",
+  "ruleSetId": "iso27002",
+  "version": "2026.1",
+  "validFrom": "2026-01-01",
+  "validUntil": "2027-12-31",
+  "jurisdiction": "INT",
+  "domain": "iso27002",
+  "procedureType": "activiteit-toetsing",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "27002-A.5", "name": "organizational_controls", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 27002:2022 A.5", "section": "Organizational controls", "url": "https://www.iso.org/standard/75652"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "organizational", "control_theme": "A.5", "artikel": "ISO 27002:2022 A.5", "linked_bio2": ["A.5-6", "A.6"]}
+    },
+    {
+      "ruleId": "27002-A.5.1", "name": "policies_for_information_security", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 27002:2022 A.5.1", "section": "Policies for information security", "url": "https://www.iso.org/standard/75652"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "organizational", "control_id": "A.5.1", "linked_bio2": ["A.5-6"]}
+    },
+    {
+      "ruleId": "27002-A.5.2", "name": "information_security_roles", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 27002:2022 A.5.2", "section": "Information security roles and responsibilities", "url": "https://www.iso.org/standard/75652"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "organizational", "control_id": "A.5.2", "linked_bio2": ["A.7"]}
+    },
+    {
+      "ruleId": "27002-A.5.7", "name": "threat_intelligence", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 27002:2022 A.5.7", "section": "Threat intelligence", "url": "https://www.iso.org/standard/75652"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "organizational", "control_id": "A.5.7", "linked_bio2": ["A.5-6"]}
+    },
+    {
+      "ruleId": "27002-A.5.9", "name": "inventory_of_information_assets", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 27002:2022 A.5.9", "section": "Inventory of information and other associated assets", "url": "https://www.iso.org/standard/75652"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "organizational", "control_id": "A.5.9", "linked_bio2": ["A.8"]}
+    },
+    {
+      "ruleId": "27002-A.5.12", "name": "classification_of_information", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 27002:2022 A.5.12", "section": "Classification of information", "url": "https://www.iso.org/standard/75652"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "organizational", "control_id": "A.5.12", "linked_bio2": ["A.8"]}
+    },
+    {
+      "ruleId": "27002-A.5.14", "name": "information_transfer", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 27002:2022 A.5.14", "section": "Information transfer", "url": "https://www.iso.org/standard/75652"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "organizational", "control_id": "A.5.14", "linked_bio2": ["A.9"]}
+    },
+    {
+      "ruleId": "27002-A.5.33", "name": "protection_of_records", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 27002:2022 A.5.33", "section": "Protection of records", "url": "https://www.iso.org/standard/75652"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "organizational", "control_id": "A.5.33", "linked_bio2": ["A.8"]}
+    },
+    {
+      "ruleId": "27002-A.5.34", "name": "privacy_and_protection_of_pii", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 27002:2022 A.5.34", "section": "Privacy and protection of PII", "url": "https://www.iso.org/standard/75652"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "organizational", "control_id": "A.5.34", "linked_bio2": ["A.8"], "linked_dpia": true}
+    },
+    {
+      "ruleId": "27002-A.6", "name": "people_controls", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 27002:2022 A.6", "section": "People controls", "url": "https://www.iso.org/standard/75652"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "people", "control_theme": "A.6", "artikel": "ISO 27002:2022 A.6", "linked_bio2": ["A.7"]}
+    },
+    {
+      "ruleId": "27002-A.6.1", "name": "screening", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 27002:2022 A.6.1", "section": "Screening", "url": "https://www.iso.org/standard/75652"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "people", "control_id": "A.6.1", "linked_bio2": ["A.7"]}
+    },
+    {
+      "ruleId": "27002-A.6.2", "name": "terms_and_conditions_of_employment", "priority": 200,
+      "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 27002:2022 A.6.2", "section": "Terms and conditions of employment", "url": "https://www.iso.org/standard/75652"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "people", "control_id": "A.6.2", "linked_bio2": ["A.7"]}
+    },
+    {
+      "ruleId": "27002-A.6.3", "name": "information_security_awareness", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 27002:2022 A.6.3", "section": "Information security awareness, education and training", "url": "https://www.iso.org/standard/75652"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "people", "control_id": "A.6.3", "linked_bio2": ["A.7"]}
+    },
+    {
+      "ruleId": "27002-A.6.5", "name": "responsibilities_after_termination", "priority": 200,
+      "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 27002:2022 A.6.5", "section": "Responsibilities after termination or change of employment", "url": "https://www.iso.org/standard/75652"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "people", "control_id": "A.6.5", "linked_bio2": ["A.7"]}
+    },
+    {
+      "ruleId": "27002-A.6.6", "name": "confidentiality_agreements", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 27002:2022 A.6.6", "section": "Confidentiality or non-disclosure agreements", "url": "https://www.iso.org/standard/75652"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "people", "control_id": "A.6.6", "linked_bio2": ["A.7"]}
+    },
+    {
+      "ruleId": "27002-A.7", "name": "physical_controls", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 27002:2022 A.7", "section": "Physical controls", "url": "https://www.iso.org/standard/75652"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "physical", "control_theme": "A.7", "artikel": "ISO 27002:2022 A.7", "linked_bio2": ["B.7", "B.13"]}
+    },
+    {
+      "ruleId": "27002-A.7.1", "name": "physical_security_perimeters", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 27002:2022 A.7.1", "section": "Physical security perimeters", "url": "https://www.iso.org/standard/75652"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "physical", "control_id": "A.7.1", "linked_bio2": ["B.7"]}
+    },
+    {
+      "ruleId": "27002-A.7.4", "name": "physical_security_monitoring", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 27002:2022 A.7.4", "section": "Physical security monitoring", "url": "https://www.iso.org/standard/75652"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "physical", "control_id": "A.7.4", "linked_bio2": ["B.7"]}
+    },
+    {
+      "ruleId": "27002-A.7.9", "name": "security_of_assets_off_premises", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 27002:2022 A.7.9", "section": "Security of assets off-premises", "url": "https://www.iso.org/standard/75652"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "physical", "control_id": "A.7.9", "linked_bio2": ["B.7"]}
+    },
+    {
+      "ruleId": "27002-A.7.11", "name": "supporting_utilities", "priority": 200,
+      "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 27002:2022 A.7.11", "section": "Supporting utilities (power, cooling, etc.)", "url": "https://www.iso.org/standard/75652"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "physical", "control_id": "A.7.11", "linked_bio2": ["B.13"]}
+    },
+    {
+      "ruleId": "27002-A.8", "name": "technological_controls", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 27002:2022 A.8", "section": "Technological controls", "url": "https://www.iso.org/standard/75652"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "technological", "control_theme": "A.8", "artikel": "ISO 27002:2022 A.8", "linked_bio2": ["B.3", "B.4", "B.5", "B.6", "B.8", "B.9", "B.10", "B.11", "B.12"]}
+    },
+    {
+      "ruleId": "27002-A.8.1", "name": "user_endpoint_devices", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 27002:2022 A.8.1", "section": "User endpoint devices", "url": "https://www.iso.org/standard/75652"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "technological", "control_id": "A.8.1", "linked_bio2": ["B.5"]}
+    },
+    {
+      "ruleId": "27002-A.8.2", "name": "privileged_access_rights", "priority": 500,
+      "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 27002:2022 A.8.2", "section": "Privileged access rights", "url": "https://www.iso.org/standard/75652"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "technological", "control_id": "A.8.2", "linked_bio2": ["B.5"]}
+    },
+    {
+      "ruleId": "27002-A.8.3", "name": "information_access_restriction", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 27002:2022 A.8.3", "section": "Information access restriction", "url": "https://www.iso.org/standard/75652"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "technological", "control_id": "A.8.3", "linked_bio2": ["B.5"]}
+    },
+    {
+      "ruleId": "27002-A.8.5", "name": "secure_authentication", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 27002:2022 A.8.5", "section": "Secure authentication", "url": "https://www.iso.org/standard/75652"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "technological", "control_id": "A.8.5", "linked_bio2": ["B.5"]}
+    },
+    {
+      "ruleId": "27002-A.8.8", "name": "management_of_technical_vulnerabilities", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 27002:2022 A.8.8", "section": "Management of technical vulnerabilities", "url": "https://www.iso.org/standard/75652"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "technological", "control_id": "A.8.8", "linked_bio2": ["B.3"]}
+    },
+    {
+      "ruleId": "27002-A.8.9", "name": "configuration_management", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 27002:2022 A.8.9", "section": "Configuration management", "url": "https://www.iso.org/standard/75652"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "technological", "control_id": "A.8.9", "linked_bio2": ["B.3"]}
+    },
+    {
+      "ruleId": "27002-A.8.11", "name": "data_masking", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 27002:2022 A.8.11", "section": "Data masking", "url": "https://www.iso.org/standard/75652"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "technological", "control_id": "A.8.11", "linked_bio2": ["B.4"]}
+    },
+    {
+      "ruleId": "27002-A.8.12", "name": "data_leakage_prevention", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 27002:2022 A.8.12", "section": "Data leakage prevention", "url": "https://www.iso.org/standard/75652"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "technological", "control_id": "A.8.12", "linked_bio2": ["B.4"]}
+    },
+    {
+      "ruleId": "27002-A.8.15", "name": "logging", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 27002:2022 A.8.15", "section": "Logging", "url": "https://www.iso.org/standard/75652"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "technological", "control_id": "A.8.15", "linked_bio2": ["C.4"]}
+    },
+    {
+      "ruleId": "27002-A.8.16", "name": "monitoring_activities", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 27002:2022 A.8.16", "section": "Monitoring activities", "url": "https://www.iso.org/standard/75652"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "technological", "control_id": "A.8.16", "linked_bio2": ["C.4"]}
+    },
+    {
+      "ruleId": "27002-A.8.23", "name": "web_filtering", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 27002:2022 A.8.23", "section": "Web filtering", "url": "https://www.iso.org/standard/75652"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "technological", "control_id": "A.8.23", "linked_bio2": ["B.6"]}
+    },
+    {
+      "ruleId": "27002-A.8.24", "name": "use_of_cryptography", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 27002:2022 A.8.24", "section": "Use of cryptography", "url": "https://www.iso.org/standard/75652"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "technological", "control_id": "A.8.24", "linked_bio2": ["A.10"]}
+    },
+    {
+      "ruleId": "27002-A.8.28", "name": "secure_coding", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO/IEC 27002:2022 A.8.28", "section": "Secure coding", "url": "https://www.iso.org/standard/75652"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "technological", "control_id": "A.8.28", "linked_bio2": ["B.3"]}
+    }
+  ]
+}
