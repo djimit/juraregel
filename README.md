@@ -531,6 +531,11 @@ graph TB
 | **PCI-DSS v4.0** | **12** | **PoC** | **8538** |
 | **COBIT 2019** | **12** | **PoC** | **8539** |
 | **SOC 2** | **16** | **PoC** | **8540** |
+| **NIS2 Volledig** | **24** | **PoC** | **8541** |
+| **ISO 14001** | **16** | **PoC** | **8542** |
+| **ISO 45001** | **17** | **PoC** | **8543** |
+| **BDI** | **14** | **PoC** | **8544** |
+| **Algoritmeregister + FRIA** | **20** | **PoC** | **8545** |
 | **NEDERUS** | **8 unified controls** | **v2.0 (external repo)** | **—** |
 | Procesreglement | 4 | PoC | 8491 |
 | Classificatie | 3 | PoC | 8492 |
@@ -597,10 +602,10 @@ Zie `jrem-open-source/` voor het standalone JREM schema, validator en examples.
 
 | Metriek | Waarde |
 |---|---|
-| Use cases | 30 use cases + NEDERUS v2.0 multi-jurisdictionele mapping |
+| Use cases | 35 use cases + NEDERUS v2.0 multi-jurisdictionele mapping |
 | Tests | Semantische scenario-, bron-, API-, BDD-, MCP-gates + 52 eIDAS tests |
 | CI gates | 14 per use case |
-| JREM regels | 1017+ (incl. alle ISO, NIST, PCI, COBIT, SOC, NEN-normen) |
+| JREM regels | 1137+ (incl. alle ISO, NIST, PCI, COBIT, SOC, NEN, BDI, NIS2-normen) |
 | Pseudonimisering engine | V4.2 — hoog op 25.127 uitspraken |
 | Open standaarden | 9 compliant (+ eIDAS 2.0, NEDERUS CC-BY) |
 | NEDERUS controls | 8 unified controls (NED-01 t/m NED-08), 8 frameworks gemapped |

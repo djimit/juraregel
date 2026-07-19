@@ -1,3 +1,19 @@
+## [4.1.0] - 2026-07-17 — Audit, Proces, Business, IV & Uitbreiding
+
+### Added (5 new frameworks, 120 new rules)
+- NIS2 Volledig: 24 regels — Cybersecurity risico, incident melding (24h/72h/1m), boetes tot €10M
+- ISO 14001: 16 regels — Milieu management, aspecten, impacts, compliance
+- ISO 45001: 17 regels — Arbeidsomstandigheden, hazard identificatie, worker participation
+- BDI (Baseline Digitale Infrastructuur): 14 regels — Digitale soevereiniteit, cloud, data locatie
+- Algoritmeregister + FRIA: 20 regels — EU AI Act, FRIA, bias monitoring, CE-markering
+
+### Total
+- Use cases: 35 (was 30)
+- Totaal regels: 1137+ (was 1017)
+- API ports: 8490-8545
+
+---
+
 ## [4.0.0] - 2026-07-17 — Major Expansion: NEN 7510 + NIST CSF + ISO 20000 + PCI-DSS + COBIT + SOC 2
 
 ### Added (6 new frameworks, 105 new rules)
