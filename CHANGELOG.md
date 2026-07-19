@@ -1,3 +1,17 @@
+## [2.8.0] - 2026-07-17 — Wet Digitale Overheid + Gemeente Pilot
+
+### Added
+- Wet Digitale Overheid use case: 16 regels, port 8528
+- Wdo Art. 1-7 + Wmebv toegankelijkheidseisen
+- 7 gekoppelde frameworks (Forum Standaardisatie, BIO2, eIDAS, NORA, etc.)
+- Gemeente Pilot Onboarding Flow: 8-stap workflow
+  - BIA (kritieke processen) → BIV (classificatie) → Risico → DPIA → Actieplan → Rapport
+  - Compliance score berekening
+  - Automatische actie-generatie
+- 12 pilot tests passed
+
+---
+
 ## [2.7.0] - 2026-07-17 — ISO 27001 ISMS + SoA Generator
 
 ### Added
