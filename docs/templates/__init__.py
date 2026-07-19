@@ -33,6 +33,11 @@ from .overige import (
     arbobeleid_template,
     zorg_ib_beleid_template,
 )
+from .iama_fria_dpia import (
+    dpia_rijksdienst_template,
+    iama_template,
+    fria_eu_template,
+)
 
 # ─── Template registry ──────────────────────────────────────
 
@@ -60,6 +65,10 @@ TEMPLATES = {
     "milieubeleid": milieubeleid_template,
     "arbobeleid": arbobeleid_template,
     "zorg_ib_beleid": zorg_ib_beleid_template,
+    # Gedetailleerde assessments
+    "dpia_rijksdienst": dpia_rijksdienst_template,
+    "iama": iama_template,
+    "fria_eu": fria_eu_template,
 }
 
 
