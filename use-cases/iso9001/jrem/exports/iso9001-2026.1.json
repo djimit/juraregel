@@ -1,0 +1,175 @@
+{
+  "schemaVersion": "1.1.0",
+  "ruleSetId": "iso9001",
+  "version": "2026.1",
+  "validFrom": "2026-01-01",
+  "validUntil": "2027-12-31",
+  "jurisdiction": "INT",
+  "domain": "iso9001",
+  "procedureType": "activiteit-toetsing",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "QMS-4.1", "name": "qms_context_organization", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 9001:2015 Clause 4.1", "section": "Understanding the organization and its context", "url": "https://www.iso.org/standard/62085"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "qms_context", "verplicht": true, "artikel": "ISO 9001:2015 4.1"}
+    },
+    {
+      "ruleId": "QMS-4.2", "name": "qms_interested_parties", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 9001:2015 Clause 4.2", "section": "Understanding the needs and expectations of interested parties", "url": "https://www.iso.org/standard/62085"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "qms_context", "verplicht": true, "artikel": "ISO 9001:2015 4.2"}
+    },
+    {
+      "ruleId": "QMS-4.3", "name": "qms_scope", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 9001:2015 Clause 4.3", "section": "Determining the scope of the QMS", "url": "https://www.iso.org/standard/62085"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "qms_context", "verplicht": true, "artikel": "ISO 9001:2015 4.3"}
+    },
+    {
+      "ruleId": "QMS-5.1", "name": "qms_leadership_commitment", "priority": 500,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 9001:2015 Clause 5.1", "section": "Leadership and commitment", "url": "https://www.iso.org/standard/62085"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "qms_leadership", "verplicht": true, "artikel": "ISO 9001:2015 5.1"}
+    },
+    {
+      "ruleId": "QMS-5.2", "name": "qms_quality_policy", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 9001:2015 Clause 5.2", "section": "Quality policy", "url": "https://www.iso.org/standard/62085"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "qms_leadership", "verplicht": true, "artikel": "ISO 9001:2015 5.2"}
+    },
+    {
+      "ruleId": "QMS-5.3", "name": "qms_roles_responsibilities", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 9001:2015 Clause 5.3", "section": "Organizational roles, responsibilities and authorities", "url": "https://www.iso.org/standard/62085"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "qms_leadership", "verplicht": true, "artikel": "ISO 9001:2015 5.3"}
+    },
+    {
+      "ruleId": "QMS-6.1", "name": "qms_risk_opportunity", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 9001:2015 Clause 6.1", "section": "Actions to address risks and opportunities", "url": "https://www.iso.org/standard/62085"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "qms_planning", "verplicht": true, "artikel": "ISO 9001:2015 6.1", "linked_iso31000": "RM-5.4"}
+    },
+    {
+      "ruleId": "QMS-6.2", "name": "qms_quality_objectives", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 9001:2015 Clause 6.2", "section": "Quality objectives and planning to achieve them", "url": "https://www.iso.org/standard/62085"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "qms_planning", "verplicht": true, "artikel": "ISO 9001:2015 6.2"}
+    },
+    {
+      "ruleId": "QMS-6.3", "name": "qms_planning_changes", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 9001:2015 Clause 6.3", "section": "Planning of changes", "url": "https://www.iso.org/standard/62085"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "qms_planning", "verplicht": true, "artikel": "ISO 9001:2015 6.3"}
+    },
+    {
+      "ruleId": "QMS-7.1", "name": "qms_resources", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 9001:2015 Clause 7.1", "section": "Resources (people, infrastructure, environment)", "url": "https://www.iso.org/standard/62085"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "qms_support", "verplicht": true, "artikel": "ISO 9001:2015 7.1"}
+    },
+    {
+      "ruleId": "QMS-7.2", "name": "qms_competence", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 9001:2015 Clause 7.2", "section": "Competence of personnel", "url": "https://www.iso.org/standard/62085"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "qms_support", "verplicht": true, "artikel": "ISO 9001:2015 7.2"}
+    },
+    {
+      "ruleId": "QMS-7.3", "name": "qms_awareness", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 9001:2015 Clause 7.3", "section": "Awareness of quality policy and objectives", "url": "https://www.iso.org/standard/62085"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "qms_support", "verplicht": true, "artikel": "ISO 9001:2015 7.3"}
+    },
+    {
+      "ruleId": "QMS-7.4", "name": "qms_communication", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 9001:2015 Clause 7.4", "section": "Internal and external communication", "url": "https://www.iso.org/standard/62085"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "qms_support", "verplicht": true, "artikel": "ISO 9001:2015 7.4"}
+    },
+    {
+      "ruleId": "QMS-7.5", "name": "qms_documented_information", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 9001:2015 Clause 7.5", "section": "Documented information (documents and records)", "url": "https://www.iso.org/standard/62085"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "qms_support", "verplicht": true, "artikel": "ISO 9001:2015 7.5"}
+    },
+    {
+      "ruleId": "QMS-8.1", "name": "qms_operational_planning", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 9001:2015 Clause 8.1", "section": "Operational planning and control", "url": "https://www.iso.org/standard/62085"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "qms_operation", "verplicht": true, "artikel": "ISO 9001:2015 8.1"}
+    },
+    {
+      "ruleId": "QMS-8.2", "name": "qms_customer_communication", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 9001:2015 Clause 8.2", "section": "Requirements for products and services", "url": "https://www.iso.org/standard/62085"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "qms_operation", "verplicht": true, "artikel": "ISO 9001:2015 8.2"}
+    },
+    {
+      "ruleId": "QMS-8.3", "name": "qms_design_development", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 9001:2015 Clause 8.3", "section": "Design and development of products and services", "url": "https://www.iso.org/standard/62085"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "qms_operation", "verplicht": true, "artikel": "ISO 9001:2015 8.3"}
+    },
+    {
+      "ruleId": "QMS-8.4", "name": "qms_external_providers", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 9001:2015 Clause 8.4", "section": "Control of externally provided processes, products and services", "url": "https://www.iso.org/standard/62085"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "qms_operation", "verplicht": true, "artikel": "ISO 9001:2015 8.4"}
+    },
+    {
+      "ruleId": "QMS-8.5", "name": "qms_production_service", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 9001:2015 Clause 8.5", "section": "Production and service provision", "url": "https://www.iso.org/standard/62085"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "qms_operation", "verplicht": true, "artikel": "ISO 9001:2015 8.5"}
+    },
+    {
+      "ruleId": "QMS-8.6", "name": "qms_release_products", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 9001:2015 Clause 8.6", "section": "Release of products and services", "url": "https://www.iso.org/standard/62085"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "qms_operation", "verplicht": true, "artikel": "ISO 9001:2015 8.6"}
+    },
+    {
+      "ruleId": "QMS-8.7", "name": "qms_nonconforming_output", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 9001:2015 Clause 8.7", "section": "Control of nonconforming outputs", "url": "https://www.iso.org/standard/62085"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "qms_operation", "verplicht": true, "artikel": "ISO 9001:2015 8.7"}
+    },
+    {
+      "ruleId": "QMS-9.1", "name": "qms_monitoring_measurement", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 9001:2015 Clause 9.1", "section": "Monitoring, measurement, analysis and evaluation", "url": "https://www.iso.org/standard/62085"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "qms_evaluation", "verplicht": true, "artikel": "ISO 9001:2015 9.1"}
+    },
+    {
+      "ruleId": "QMS-9.2", "name": "qms_internal_audit", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 9001:2015 Clause 9.2", "section": "Internal audit", "url": "https://www.iso.org/standard/62085"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "qms_evaluation", "verplicht": true, "artikel": "ISO 9001:2015 9.2"}
+    },
+    {
+      "ruleId": "QMS-9.3", "name": "qms_management_review", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 9001:2015 Clause 9.3", "section": "Management review", "url": "https://www.iso.org/standard/62085"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "qms_evaluation", "verplicht": true, "artikel": "ISO 9001:2015 9.3"}
+    },
+    {
+      "ruleId": "QMS-10.1", "name": "qms_continual_improvement", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 9001:2015 Clause 10.1", "section": "Continual improvement", "url": "https://www.iso.org/standard/62085"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "qms_improvement", "verplicht": true, "artikel": "ISO 9001:2015 10.1"}
+    },
+    {
+      "ruleId": "QMS-10.2", "name": "qms_nonconformity_corrective", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 9001:2015 Clause 10.2", "section": "Nonconformity and corrective action", "url": "https://www.iso.org/standard/62085"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "qms_improvement", "verplicht": true, "artikel": "ISO 9001:2015 10.2"}
+    },
+    {
+      "ruleId": "QMS-10.3", "name": "qms_update", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 9001:2015 Clause 10.3", "section": "Update (continual improvement of suitability, adequacy, effectiveness)", "url": "https://www.iso.org/standard/62085"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "qms_improvement", "verplicht": true, "artikel": "ISO 9001:2015 10.3"}
+    }
+  ]
+}

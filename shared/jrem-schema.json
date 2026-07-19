@@ -95,7 +95,8 @@
         "iso27002",
         "iso27701",
         "iso22301",
-        "iso31000"
+        "iso31000",
+        "iso9001"
       ]
     },
     "procedureType": {
