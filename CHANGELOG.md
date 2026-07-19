@@ -1,3 +1,19 @@
+## [3.0.0] - 2026-07-17 — ISO 27002 + BIO2 Mapping
+
+### Added
+- ISO 27002 use case: 34 regels, port 8530
+- 4 categorieën: Organizational, People, Physical, Technological
+- BIO2 → ISO 27002 mapping (16 BIO2-maatregelen → 34 ISO controls)
+- API: /bio2-mapping, /controls-by-category, /compliance-gap/{orgId}
+- 11 tests passed
+
+### Mapping
+- BIO2 A.5-6 → ISO A.5.1, A.5.7, A.5.9, A.5.12
+- BIO2 B.5 → ISO A.8.1, A.8.2, A.8.3, A.8.5
+- BIO2 C.4 → ISO A.8.15, A.8.16
+
+---
+
 ## [2.9.0] - 2026-07-17 — ISO 25010 Software Quality Model
 
 ### Added
