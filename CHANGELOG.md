@@ -1,3 +1,22 @@
+## [3.1.0] - 2026-07-17 — ISO 27701 Privacy Information Management
+
+### Added
+- ISO 27701 use case: 24 regels, port 8531
+- PII Controller vs Processor rol-bepaling
+- AVG → ISO 27701 mapping (9 koppelingen)
+- Certificering-pad (9-18 maanden, €15K-€75K)
+- Cross-links: DPIA Generator, ISO 27001/27002, ISO 25010, NIS2
+- 13 tests passed
+
+### PIMS Categorien
+- Privacy governance: 6 regels (policy, by design, minimalisatie, consent, rights, PIA)
+- Privacy operations: 5 regels (sharing, breach, retention, accuracy, transparency)
+- Controller obligations: 1 rol-specifiek
+- Processor obligations: 3 rol-specifieke
+- PIMS improvement: 4 regels (documentation, audit, review, continual improvement)
+
+---
+
 ## [3.0.0] - 2026-07-17 — ISO 27002 + BIO2 Mapping
 
 ### Added

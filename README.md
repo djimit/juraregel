@@ -521,6 +521,7 @@ graph TB
 | **Wet Digitale Overheid** | **16** | **PoC** | **8528** |
 | **ISO 25010** | **35** | **PoC** | **8529** |
 | **ISO 27002** | **34** | **PoC** | **8530** |
+| **ISO 27701** | **24** | **PoC** | **8531** |
 | **NEDERUS** | **8 unified controls** | **v2.0 (external repo)** | **—** |
 | Procesreglement | 4 | PoC | 8491 |
 | Classificatie | 3 | PoC | 8492 |
@@ -587,7 +588,7 @@ Zie `jrem-open-source/` voor het standalone JREM schema, validator en examples.
 
 | Metriek | Waarde |
 |---|---|
-| Use cases | 20 use cases + NEDERUS v2.0 multi-jurisdictionele mapping |
+| Use cases | 21 use cases + NEDERUS v2.0 multi-jurisdictionele mapping |
 | Tests | Semantische scenario-, bron-, API-, BDD-, MCP-gates + 52 eIDAS tests |
 | CI gates | 14 per use case |
 | JREM regels | 780+ (incl. 32 eIDAS, 28 ISO 27001 regels) |
