@@ -1,3 +1,23 @@
+## [3.2.0] - 2026-07-17 — ISO 22301 Business Continuity Management
+
+### Added
+- ISO 22301 use case: 24 regels, port 8532
+- BCMS levenscyclus: Plan-Do-Check-Act
+- BIA-BCP koppeling (BIA analyse → BCP response)
+- RTO/RPO advies API (kritiek ≤4u, aanzienlijk ≤8u, beperkt ≤24u)
+- Exercise & testing programme (jaarlijstse test verplicht)
+- 15 tests passed
+
+### BCMS Categorieen
+- Context + Leadership: 3 regels
+- Analysis (BIA/RTO/RPO): 4 regels
+- Strategy + Implementation: 5 regels
+- Testing + Evaluation: 6 regels
+- Improvement: 2 regels
+- Recovery targets: 3 regels
+
+---
+
 ## [3.1.0] - 2026-07-17 — ISO 27701 Privacy Information Management
 
 ### Added
