@@ -92,7 +92,8 @@
         "iso27001",
         "wdo",
         "iso25010",
-        "iso27002"
+        "iso27002",
+        "iso27701"
       ]
     },
     "procedureType": {

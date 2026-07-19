@@ -1,0 +1,530 @@
+{
+  "schemaVersion": "1.1.0",
+  "ruleSetId": "iso27701",
+  "version": "2026.1",
+  "validFrom": "2026-01-01",
+  "validUntil": "2027-12-31",
+  "jurisdiction": "INT",
+  "domain": "iso27701",
+  "procedureType": "activiteit-toetsing",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "PIMS-3.1",
+      "name": "pims_scope",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 27701:2019 Clause 5.2",
+          "section": "Scope of the PIMS",
+          "url": "https://www.iso.org/standard/71670"
+        }
+      ],
+      "outcome": {
+        "compliant": "conditional",
+        "category": "pims_scope",
+        "verplicht": true,
+        "artikel": "ISO 27701:2019 5.2",
+        "linked_iso27001": "4.3"
+      },
+      "conditions": {}
+    },
+    {
+      "ruleId": "PIMS-3.2",
+      "name": "pims_context",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 27701:2019 Clause 5.1",
+          "section": "Understanding the organization and its context",
+          "url": "https://www.iso.org/standard/71670"
+        }
+      ],
+      "outcome": {
+        "compliant": "conditional",
+        "category": "pims_context",
+        "verplicht": true,
+        "artikel": "ISO 27701:2019 5.1",
+        "linked_iso27001": "4.1"
+      },
+      "conditions": {}
+    },
+    {
+      "ruleId": "PIMS-3.3",
+      "name": "pims_leadership",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 27701:2019 Clause 5.3",
+          "section": "Leadership and commitment",
+          "url": "https://www.iso.org/standard/71670"
+        }
+      ],
+      "outcome": {
+        "compliant": "conditional",
+        "category": "pims_leadership",
+        "verplicht": true,
+        "artikel": "ISO 27701:2019 5.3",
+        "linked_iso27001": "5.1"
+      },
+      "conditions": {}
+    },
+    {
+      "ruleId": "PIMS-4.1",
+      "name": "pii_controller_obligations",
+      "priority": 500,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 27701:2019 Clause 7.2",
+          "section": "Conditions for PII controllers",
+          "url": "https://www.iso.org/standard/71670"
+        }
+      ],
+      "outcome": {
+        "compliant": "conditional",
+        "category": "controller_obligations",
+        "verplicht": true,
+        "artikel": "ISO 27701:2019 7.2",
+        "linked_dpia": true,
+        "linked_avg": "Art. 5-22",
+        "rol": "controller"
+      },
+      "conditions": {}
+    },
+    {
+      "ruleId": "PIMS-4.2",
+      "name": "pii_processor_obligations",
+      "priority": 500,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 27701:2019 Clause 7.3",
+          "section": "Conditions for PII processors",
+          "url": "https://www.iso.org/standard/71670"
+        }
+      ],
+      "outcome": {
+        "compliant": "conditional",
+        "category": "processor_obligations",
+        "verplicht": true,
+        "artikel": "ISO 27701:2019 7.3",
+        "linked_avg": "Art. 28",
+        "rol": "processor"
+      },
+      "conditions": {}
+    },
+    {
+      "ruleId": "PIMS-5.1",
+      "name": "privacy_policy",
+      "priority": 400,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 27701:2019 7.2.2",
+          "section": "Privacy policy for PII processing",
+          "url": "https://www.iso.org/standard/71670"
+        }
+      ],
+      "outcome": {
+        "compliant": "conditional",
+        "category": "privacy_governance",
+        "verplicht": true,
+        "artikel": "ISO 27701:2019 7.2.2",
+        "linked_avg": "Art. 13-14"
+      },
+      "conditions": {}
+    },
+    {
+      "ruleId": "PIMS-5.2",
+      "name": "privacy_by_design_default",
+      "priority": 500,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 27701:2019 7.2.3",
+          "section": "Privacy by design and privacy by default",
+          "url": "https://www.iso.org/standard/71670"
+        }
+      ],
+      "outcome": {
+        "compliant": "conditional",
+        "category": "privacy_governance",
+        "verplicht": true,
+        "artikel": "ISO 27701:2019 7.2.3",
+        "linked_avg": "Art. 25",
+        "linked_iso25010": "QA-1.1"
+      },
+      "conditions": {}
+    },
+    {
+      "ruleId": "PIMS-5.3",
+      "name": "data_minimisation_privacy",
+      "priority": 400,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 27701:2019 7.2.4",
+          "section": "Data minimisation",
+          "url": "https://www.iso.org/standard/71670"
+        }
+      ],
+      "outcome": {
+        "compliant": "conditional",
+        "category": "privacy_governance",
+        "verplicht": true,
+        "artikel": "ISO 27701:2019 7.2.4",
+        "linked_avg": "Art. 5.1c"
+      },
+      "conditions": {}
+    },
+    {
+      "ruleId": "PIMS-5.4",
+      "name": "consent_management",
+      "priority": 500,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 27701:2019 7.2.5",
+          "section": "Consent and choice",
+          "url": "https://www.iso.org/standard/71670"
+        }
+      ],
+      "outcome": {
+        "compliant": "conditional",
+        "category": "privacy_governance",
+        "verplicht": true,
+        "artikel": "ISO 27701:2019 7.2.5",
+        "linked_avg": "Art. 6-7"
+      },
+      "conditions": {}
+    },
+    {
+      "ruleId": "PIMS-5.5",
+      "name": "data_subject_rights",
+      "priority": 500,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 27701:2019 7.2.6",
+          "section": "PII data subject rights",
+          "url": "https://www.iso.org/standard/71670"
+        }
+      ],
+      "outcome": {
+        "compliant": "conditional",
+        "category": "privacy_governance",
+        "verplicht": true,
+        "artikel": "ISO 27701:2019 7.2.6",
+        "linked_avg": "Art. 12-22"
+      },
+      "conditions": {}
+    },
+    {
+      "ruleId": "PIMS-5.6",
+      "name": "privacy_impact_assessment",
+      "priority": 500,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 27701:2019 7.2.7",
+          "section": "Privacy impact assessment",
+          "url": "https://www.iso.org/standard/71670"
+        }
+      ],
+      "outcome": {
+        "compliant": "conditional",
+        "category": "privacy_assessment",
+        "verplicht": true,
+        "artikel": "ISO 27701:2019 7.2.7",
+        "linked_avg": "Art. 35",
+        "linked_dpia": true
+      },
+      "conditions": {}
+    },
+    {
+      "ruleId": "PIMS-5.7",
+      "name": "dpia_mandatory_high_risk",
+      "priority": 500,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 27701:2019 7.2.8",
+          "section": "DPIA for high-risk processing",
+          "url": "https://www.iso.org/standard/71670"
+        }
+      ],
+      "outcome": {
+        "compliant": false,
+        "category": "privacy_assessment",
+        "verplicht": true,
+        "artikel": "ISO 27701:2019 7.2.8",
+        "linked_dpia": true,
+        "linked_avg": "Art. 35.1",
+        "actionRequired": "DPIA uitvoeren vóór verwerking",
+        "risico_threshold": "hoog"
+      },
+      "conditions": {}
+    },
+    {
+      "ruleId": "PIMS-6.1",
+      "name": "pii_sharing_transfer",
+      "priority": 400,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 27701:2019 7.2.9",
+          "section": "PII sharing, transfer, and disclosure",
+          "url": "https://www.iso.org/standard/71670"
+        }
+      ],
+      "outcome": {
+        "compliant": "conditional",
+        "category": "privacy_operations",
+        "verplicht": true,
+        "artikel": "ISO 27701:2019 7.2.9",
+        "linked_avg": "Art. 44-49"
+      },
+      "conditions": {}
+    },
+    {
+      "ruleId": "PIMS-6.2",
+      "name": "privacy_breach_notification",
+      "priority": 500,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 27701:2019 7.2.10",
+          "section": "Personal data breach notification",
+          "url": "https://www.iso.org/standard/71670"
+        }
+      ],
+      "outcome": {
+        "compliant": "conditional",
+        "category": "privacy_operations",
+        "verplicht": true,
+        "artikel": "ISO 27701:2019 7.2.10",
+        "linked_avg": "Art. 33-34",
+        "linked_nis2": "Art. 23"
+      },
+      "conditions": {}
+    },
+    {
+      "ruleId": "PIMS-6.3",
+      "name": "data_retention_deletion",
+      "priority": 400,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 27701:2019 7.2.11",
+          "section": "Retention and deletion of PII",
+          "url": "https://www.iso.org/standard/71670"
+        }
+      ],
+      "outcome": {
+        "compliant": "conditional",
+        "category": "privacy_operations",
+        "verplicht": true,
+        "artikel": "ISO 27701:2019 7.2.11",
+        "linked_avg": "Art. 5.1e, 17"
+      },
+      "conditions": {}
+    },
+    {
+      "ruleId": "PIMS-6.4",
+      "name": "data_accuracy",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 27701:2019 7.2.12",
+          "section": "Accuracy and quality of PII",
+          "url": "https://www.iso.org/standard/71670"
+        }
+      ],
+      "outcome": {
+        "compliant": "conditional",
+        "category": "privacy_operations",
+        "verplicht": true,
+        "artikel": "ISO 27701:2019 7.2.12",
+        "linked_avg": "Art. 5.1d"
+      },
+      "conditions": {}
+    },
+    {
+      "ruleId": "PIMS-6.5",
+      "name": "transparency_information",
+      "priority": 400,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 27701:2019 7.2.13",
+          "section": "Transparency and information",
+          "url": "https://www.iso.org/standard/71670"
+        }
+      ],
+      "outcome": {
+        "compliant": "conditional",
+        "category": "privacy_operations",
+        "verplicht": true,
+        "artikel": "ISO 27701:2019 7.2.13",
+        "linked_avg": "Art. 12-14"
+      },
+      "conditions": {}
+    },
+    {
+      "ruleId": "PIMS-7.1",
+      "name": "processor_dpa",
+      "priority": 400,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 27701:2019 7.3.2",
+          "section": "Data processing agreements",
+          "url": "https://www.iso.org/standard/71670"
+        }
+      ],
+      "outcome": {
+        "compliant": "conditional",
+        "category": "processor_specific",
+        "verplicht": true,
+        "artikel": "ISO 27701:2019 7.3.2",
+        "linked_avg": "Art. 28",
+        "rol": "processor"
+      },
+      "conditions": {}
+    },
+    {
+      "ruleId": "PIMS-7.2",
+      "name": "processor_sub_processing",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 27701:2019 7.3.3",
+          "section": "Sub-processing management",
+          "url": "https://www.iso.org/standard/71670"
+        }
+      ],
+      "outcome": {
+        "compliant": "conditional",
+        "category": "processor_specific",
+        "verplicht": true,
+        "artikel": "ISO 27701:2019 7.3.3",
+        "linked_avg": "Art. 28.3",
+        "rol": "processor"
+      },
+      "conditions": {}
+    },
+    {
+      "ruleId": "PIMS-7.3",
+      "name": "processor_security_measures",
+      "priority": 500,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 27701:2019 7.3.4",
+          "section": "Security measures for PII processing",
+          "url": "https://www.iso.org/standard/71670"
+        }
+      ],
+      "outcome": {
+        "compliant": "conditional",
+        "category": "processor_specific",
+        "verplicht": true,
+        "artikel": "ISO 27701:2019 7.3.4",
+        "linked_iso27002": "A.8",
+        "linked_avg": "Art. 32",
+        "rol": "processor"
+      },
+      "conditions": {}
+    },
+    {
+      "ruleId": "PIMS-8.1",
+      "name": "pims_documentation",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 27701:2019 Clause 7.4",
+          "section": "PIMS documentation",
+          "url": "https://www.iso.org/standard/71670"
+        }
+      ],
+      "outcome": {
+        "compliant": "conditional",
+        "category": "pims_documentation",
+        "verplicht": true,
+        "artikel": "ISO 27701:2019 7.4",
+        "linked_iso27001": "7.5"
+      },
+      "conditions": {}
+    },
+    {
+      "ruleId": "PIMS-8.2",
+      "name": "pims_internal_audit",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 27701:2019 Clause 7.5",
+          "section": "Internal audit of PIMS",
+          "url": "https://www.iso.org/standard/71670"
+        }
+      ],
+      "outcome": {
+        "compliant": "conditional",
+        "category": "pims_improvement",
+        "verplicht": true,
+        "artikel": "ISO 27701:2019 7.5",
+        "linked_iso27001": "9.2"
+      },
+      "conditions": {}
+    },
+    {
+      "ruleId": "PIMS-8.3",
+      "name": "pims_management_review",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 27701:2019 Clause 7.6",
+          "section": "Management review of PIMS",
+          "url": "https://www.iso.org/standard/71670"
+        }
+      ],
+      "outcome": {
+        "compliant": "conditional",
+        "category": "pims_improvement",
+        "verplicht": true,
+        "artikel": "ISO 27701:2019 7.6",
+        "linked_iso27001": "9.3"
+      },
+      "conditions": {}
+    },
+    {
+      "ruleId": "PIMS-8.4",
+      "name": "pims_continual_improvement",
+      "priority": 300,
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ISO/IEC 27701:2019 Clause 7.7",
+          "section": "Continual improvement of PIMS",
+          "url": "https://www.iso.org/standard/71670"
+        }
+      ],
+      "outcome": {
+        "compliant": "conditional",
+        "category": "pims_improvement",
+        "verplicht": true,
+        "artikel": "ISO 27701:2019 7.7",
+        "linked_iso27001": "10"
+      },
+      "conditions": {}
+    }
+  ]
+}
