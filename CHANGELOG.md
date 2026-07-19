@@ -1,3 +1,21 @@
+## [3.3.0] - 2026-07-17 — ISO 31000 Risk Management
+
+### Added
+- ISO 31000 use case: 21 regels, port 8533
+- Risicomanagement proces (7 stappen)
+- Risk score calculator (impact × likelihood, 5x5 matrix)
+- 4 behandelingsopties: vermijden, verminderen, overdragen, accepteren
+- Framework-koppeling: ISO 27001, 22301, 27701, BIA, NIS2, BIO2, EU AI Act
+- 13 tests passed
+
+### ISO 31000 Categorieen
+- Framework + Leadership: 4 regels
+- Process (identify, analyze, evaluate): 8 regels
+- Treatment: 3 regels
+- Improvement + Tools: 6 regels
+
+---
+
 ## [3.2.0] - 2026-07-17 — ISO 22301 Business Continuity Management
 
 ### Added
