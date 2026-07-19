@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.1.0",
+  "ruleSetId": "iso14001",
+  "version": "2026.1",
+  "validFrom": "2026-01-01",
+  "validUntil": "2027-12-31",
+  "jurisdiction": "INT",
+  "domain": "iso14001",
+  "procedureType": "activiteit-toetsing",
+  "conflictResolution": "first-match",
+  "rules": [
+    {"ruleId": "ENV-4.1", "name": "ems_context", "priority": 300, "sourceRefs": [{"type": "standaard", "title": "ISO 14001:2015 4.1", "section": "Context of the organization", "url": "https://www.iso.org/standard/60857"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "ems_context"}},
+    {"ruleId": "ENV-4.2", "name": "ems_interested_parties", "priority": 300, "sourceRefs": [{"type": "standaard", "title": "ISO 14001:2015 4.2", "section": "Interested parties", "url": "https://www.iso.org/standard/60857"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "ems_context"}},
+    {"ruleId": "ENV-4.3", "name": "ems_scope", "priority": 300, "sourceRefs": [{"type": "standaard", "title": "ISO 14001:2015 4.3", "section": "Scope of the EMS", "url": "https://www.iso.org/standard/60857"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "ems_context"}},
+    {"ruleId": "ENV-5.1", "name": "ems_leadership", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "ISO 14001:2015 5.1", "section": "Leadership and commitment", "url": "https://www.iso.org/standard/60857"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "ems_leadership"}},
+    {"ruleId": "ENV-5.2", "name": "ems_environmental_policy", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "ISO 14001:2015 5.2", "section": "Environmental policy", "url": "https://www.iso.org/standard/60857"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "ems_leadership"}},
+    {"ruleId": "ENV-6.1", "name": "ems_aspects_impacts", "priority": 500, "sourceRefs": [{"type": "standaard", "title": "ISO 14001:2015 6.1.2", "section": "Environmental aspects and impacts", "url": "https://www.iso.org/standard/60857"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "ems_planning"}},
+    {"ruleId": "ENV-6.2", "name": "ems_compliance_obligations", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "ISO 14001:2015 6.1.3", "section": "Compliance obligations", "url": "https://www.iso.org/standard/60857"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "ems_planning"}},
+    {"ruleId": "ENV-6.3", "name": "ems_objectives", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "ISO 14001:2015 6.2", "section": "Environmental objectives", "url": "https://www.iso.org/standard/60857"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "ems_planning"}},
+    {"ruleId": "ENV-7.1", "name": "ems_resources", "priority": 300, "sourceRefs": [{"type": "standaard", "title": "ISO 14001:2015 7.1", "section": "Resources", "url": "https://www.iso.org/standard/60857"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "ems_support"}},
+    {"ruleId": "ENV-7.2", "name": "ems_competence_awareness", "priority": 300, "sourceRefs": [{"type": "standaard", "title": "ISO 14001:2015 7.2-7.3", "section": "Competence and awareness", "url": "https://www.iso.org/standard/60857"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "ems_support"}},
+    {"ruleId": "ENV-8.1", "name": "ems_operational_control", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "ISO 14001:2015 8.1", "section": "Operational planning and control", "url": "https://www.iso.org/standard/60857"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "ems_operation"}},
+    {"ruleId": "ENV-8.2", "name": "ems_emergency_preparedness", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "ISO 14001:2015 8.2", "section": "Emergency preparedness and response", "url": "https://www.iso.org/standard/60857"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "ems_operation"}},
+    {"ruleId": "ENV-9.1", "name": "ems_monitoring", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "ISO 14001:2015 9.1", "section": "Monitoring, measurement, analysis", "url": "https://www.iso.org/standard/60857"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "ems_evaluation"}},
+    {"ruleId": "ENV-9.2", "name": "ems_internal_audit", "priority": 300, "sourceRefs": [{"type": "standaard", "title": "ISO 14001:2015 9.2", "section": "Internal audit", "url": "https://www.iso.org/standard/60857"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "ems_evaluation"}},
+    {"ruleId": "ENV-10.1", "name": "ems_continual_improvement", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "ISO 14001:2015 10", "section": "Continual improvement", "url": "https://www.iso.org/standard/60857"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "ems_improvement"}}
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.1.0",
+  "ruleSetId": "iso45001",
+  "version": "2026.1",
+  "validFrom": "2026-01-01",
+  "validUntil": "2027-12-31",
+  "jurisdiction": "INT",
+  "domain": "iso45001",
+  "procedureType": "activiteit-toetsing",
+  "conflictResolution": "first-match",
+  "rules": [
+    {"ruleId": "OH-4.1", "name": "ohsms_context", "priority": 300, "sourceRefs": [{"type": "standaard", "title": "ISO 45001:2018 4.1", "section": "Context of the organization", "url": "https://www.iso.org/standard/63787"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "ohsms_context"}},
+    {"ruleId": "OH-4.2", "name": "ohsms_workers_needs", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "ISO 45001:2018 4.2", "section": "Needs and expectations of workers", "url": "https://www.iso.org/standard/63787"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "ohsms_context"}},
+    {"ruleId": "OH-5.1", "name": "ohsms_leadership", "priority": 500, "sourceRefs": [{"type": "standaard", "title": "ISO 45001:2018 5.1", "section": "Leadership and commitment", "url": "https://www.iso.org/standard/63787"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "ohsms_leadership"}},
+    {"ruleId": "OH-5.2", "name": "ohsms_policy", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "ISO 45001:2018 5.2", "section": "OH&S policy", "url": "https://www.iso.org/standard/63787"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "ohsms_leadership"}},
+    {"ruleId": "OH-5.3", "name": "ohsms_worker_participation", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "ISO 45001:2018 5.3-5.4", "section": "Worker participation and consultation", "url": "https://www.iso.org/standard/63787"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "ohsms_leadership"}},
+    {"ruleId": "OH-6.1", "name": "ohsms_hazard_identification", "priority": 500, "sourceRefs": [{"type": "standaard", "title": "ISO 45001:2018 6.1.2", "section": "Hazard identification and assessment", "url": "https://www.iso.org/standard/63787"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "ohsms_planning"}},
+    {"ruleId": "OH-6.2", "name": "ohsms_legal_requirements", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "ISO 45001:2018 6.1.3", "section": "Determination of legal requirements", "url": "https://www.iso.org/standard/63787"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "ohsms_planning"}},
+    {"ruleId": "OH-6.3", "name": "ohsms_objectives", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "ISO 45001:2018 6.2", "section": "OH&S objectives", "url": "https://www.iso.org/standard/63787"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "ohsms_planning"}},
+    {"ruleId": "OH-7.1", "name": "ohsms_resources", "priority": 300, "sourceRefs": [{"type": "standaard", "title": "ISO 45001:2018 7.1", "section": "Resources", "url": "https://www.iso.org/standard/63787"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "ohsms_support"}},
+    {"ruleId": "OH-7.2", "name": "ohsms_competence", "priority": 300, "sourceRefs": [{"type": "standaard", "title": "ISO 45001:2018 7.2", "section": "Competence", "url": "https://www.iso.org/standard/63787"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "ohsms_support"}},
+    {"ruleId": "OH-8.1", "name": "ohsms_operational_control", "priority": 500, "sourceRefs": [{"type": "standaard", "title": "ISO 45001:2018 8.1", "section": "Operational planning and control", "url": "https://www.iso.org/standard/63787"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "ohsms_operation"}},
+    {"ruleId": "OH-8.2", "name": "ohsms_emergency_preparedness", "priority": 500, "sourceRefs": [{"type": "standaard", "title": "ISO 45001:2018 8.2", "section": "Emergency preparedness and response", "url": "https://www.iso.org/standard/63787"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "ohsms_operation"}},
+    {"ruleId": "OH-9.1", "name": "ohsms_monitoring", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "ISO 45001:2018 9.1", "section": "Monitoring, measurement, analysis", "url": "https://www.iso.org/standard/63787"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "ohsms_evaluation"}},
+    {"ruleId": "OH-9.2", "name": "ohsms_internal_audit", "priority": 300, "sourceRefs": [{"type": "standaard", "title": "ISO 45001:2018 9.2", "section": "Internal audit", "url": "https://www.iso.org/standard/63787"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "ohsms_evaluation"}},
+    {"ruleId": "OH-10.1", "name": "ohsms_incident_investigation", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "ISO 45001:2018 10.1", "section": "Incident, nonconformity and corrective action", "url": "https://www.iso.org/standard/63787"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "ohsms_improvement"}},
+    {"ruleId": "OH-10.2", "name": "ohsms_continual_improvement", "priority": 400, "sourceRefs": [{"type": "standaard", "title": "ISO 45001:2018 10.2", "section": "Continual improvement", "url": "https://www.iso.org/standard/63787"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "ohsms_improvement"}}
+  ]
+}

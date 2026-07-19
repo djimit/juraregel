@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.1.0",
+  "ruleSetId": "bdi",
+  "version": "2026.1",
+  "validFrom": "2026-01-01",
+  "validUntil": "2027-12-31",
+  "jurisdiction": "NL",
+  "domain": "bdi",
+  "procedureType": "activiteit-toetsing",
+  "conflictResolution": "first-match",
+  "rules": [
+    {"ruleId": "BDI-1", "name": "digitale_soevereiniteit", "priority": 500, "sourceRefs": [{"type": "beleid", "title": "Baseline Digitale Infrastructuur", "section": "Digitale soevereiniteit en controle", "url": "https://www.digitaleoverheid.nl/"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "soevereiniteit"}},
+    {"ruleId": "BDI-2", "name": "cloud_keuze_beleid", "priority": 400, "sourceRefs": [{"type": "beleid", "title": "BDI Cloudbeleid", "section": "Cloud-first met voorbehoud", "url": "https://www.digitaleoverheid.nl/"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "cloud"}},
+    {"ruleId": "BDI-3", "name": "data_locatie", "priority": 500, "sourceRefs": [{"type": "beleid", "title": "BDI Data Locatie", "section": "Data binnen EU/EER blijven", "url": "https://www.digitaleoverheid.nl/"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "data", "linked_eidas": true}},
+    {"ruleId": "BDI-4", "name": "interoperabiliteit", "priority": 400, "sourceRefs": [{"type": "beleid", "title": "BDI Interoperabiliteit", "section": "Open standaarden en API's", "url": "https://www.digitaleoverheid.nl/"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "interoperabiliteit", "linked_wdo": "Art. 2"}},
+    {"ruleId": "BDI-5", "name": "leveranciersonafhankelijkheid", "priority": 400, "sourceRefs": [{"type": "beleid", "title": "BDI Leveranciers", "section": "Vermijden vendor lock-in", "url": "https://www.digitaleoverheid.nl/"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "leveranciers"}},
+    {"ruleId": "BDI-6", "name": "toegankelijkheid", "priority": 400, "sourceRefs": [{"type": "beleid", "title": "BDI Toegankelijkheid", "section": "WCAG 2.1 AA compliance", "url": "https://www.digitaleoverheid.nl/"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "toegankelijkheid", "linked_wdo": "Art. 1"}},
+    {"ruleId": "BDI-7", "name": "beveiliging_infrastructuur", "priority": 500, "sourceRefs": [{"type": "beleid", "title": "BDI Beveiliging", "section": "Infrastructuurbeveiliging en monitoring", "url": "https://www.digitaleoverheid.nl/"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "beveiliging", "linked_nis2": "Art. 21"}},
+    {"ruleId": "BDI-8", "name": "netwerkbeveiliging", "priority": 500, "sourceRefs": [{"type": "beleid", "title": "BDI Netwerk", "section": "Segmentatie, encryptie, monitoring", "url": "https://www.digitaleoverheid.nl/"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "netwerk"}},
+    {"ruleId": "BDI-9", "name": "identiteit_toegang", "priority": 500, "sourceRefs": [{"type": "beleid", "title": "BDI Identiteit & Toegang", "section": "Zero trust, MFA, PAM", "url": "https://www.digitaleoverheid.nl/"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "identiteit", "linked_iso27002": "A.8"}},
+    {"ruleId": "BDI-10", "name": "loggen_monitoring", "priority": 400, "sourceRefs": [{"type": "beleid", "title": "BDI Logging", "section": "Centrale logging, SIEM, bewaartermijn", "url": "https://www.digitaleoverheid.nl/"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "logging"}},
+    {"ruleId": "BDI-11", "name": "backup_herstel", "priority": 400, "sourceRefs": [{"type": "beleid", "title": "BDI Backup", "section": "Regelmatige backups, restore-testen", "url": "https://www.digitaleoverheid.nl/"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "continuiteit", "linked_iso22301": "8.4"}},
+    {"ruleId": "BDI-12", "name": "incident_response", "priority": 500, "sourceRefs": [{"type": "beleid", "title": "BDI Incident Response", "section": "CSIRT, playbooks, oefeningen", "url": "https://www.digitaleoverheid.nl/"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "incident", "linked_nis2": "Art. 23"}},
+    {"ruleId": "BDI-13", "name": "software_leveranciers", "priority": 400, "sourceRefs": [{"type": "beleid", "title": "BDI Software", "section": "SBOM, vulnerability management, patching", "url": "https://www.digitaleoverheid.nl/"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "software"}},
+    {"ruleId": "BDI-14", "name": "privacy_by_design", "priority": 400, "sourceRefs": [{"type": "beleid", "title": "BDI Privacy", "section": "Privacy by design en by default", "url": "https://www.digitaleoverheid.nl/"}], "conditions": {}, "outcome": {"compliant": "conditional", "category": "privacy", "linked_iso27701": "7.2.3"}}
+  ]
+}
