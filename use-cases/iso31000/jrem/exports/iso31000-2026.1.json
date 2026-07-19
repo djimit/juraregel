@@ -1,0 +1,139 @@
+{
+  "schemaVersion": "1.1.0",
+  "ruleSetId": "iso31000",
+  "version": "2026.1",
+  "validFrom": "2026-01-01",
+  "validUntil": "2027-12-31",
+  "jurisdiction": "INT",
+  "domain": "iso31000",
+  "procedureType": "activiteit-toetsing",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "RM-4.1", "name": "rm_framework_design", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 31000:2018 Clause 4", "section": "Principles, framework and process", "url": "https://www.iso.org/standard/65694"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "rm_framework", "verplicht": true, "artikel": "ISO 31000:2018 4"}
+    },
+    {
+      "ruleId": "RM-4.2", "name": "rm_principles", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 31000:2018 4.1", "section": "Principles of risk management", "url": "https://www.iso.org/standard/65694"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "rm_framework", "verplicht": true, "artikel": "ISO 31000:2018 4.1"}
+    },
+    {
+      "ruleId": "RM-4.3", "name": "rm_integration_governance", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 31000:2018 4.2", "section": "Integration into organizational governance", "url": "https://www.iso.org/standard/65694"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "rm_framework", "verplicht": true, "artikel": "ISO 31000:2018 4.2"}
+    },
+    {
+      "ruleId": "RM-5.1", "name": "rm_leadership_commitment", "priority": 500,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 31000:2018 5.1", "section": "Leadership and commitment", "url": "https://www.iso.org/standard/65694"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "rm_leadership", "verplicht": true, "artikel": "ISO 31000:2018 5.1"}
+    },
+    {
+      "ruleId": "RM-5.2", "name": "rm_external_internal_context", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 31000:2018 5.2", "section": "External and internal context", "url": "https://www.iso.org/standard/65694"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "rm_process", "verplicht": true, "artikel": "ISO 31000:2018 5.2"}
+    },
+    {
+      "ruleId": "RM-5.3", "name": "rm_risk_criteria", "priority": 500,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 31000:2018 5.3", "section": "Establishing risk evaluation criteria", "url": "https://www.iso.org/standard/65694"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "rm_process", "verplicht": true, "artikel": "ISO 31000:2018 5.3"}
+    },
+    {
+      "ruleId": "RM-5.4", "name": "rm_risk_identification", "priority": 500,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 31000:2018 5.4", "section": "Risk identification", "url": "https://www.iso.org/standard/65694"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "rm_process", "verplicht": true, "artikel": "ISO 31000:2018 5.4", "linked_use_cases": ["bia-biv-dpia", "iso27001"]}
+    },
+    {
+      "ruleId": "RM-5.4a", "name": "rm_risk_register", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 31000:2018 5.4.2", "section": "Maintain risk register", "url": "https://www.iso.org/standard/65694"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "rm_process", "verplicht": true, "artikel": "ISO 31000:2018 5.4.2"}
+    },
+    {
+      "ruleId": "RM-5.5", "name": "rm_risk_analysis", "priority": 500,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 31000:2018 5.5", "section": "Risk analysis", "url": "https://www.iso.org/standard/65694"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "rm_process", "verplicht": true, "artikel": "ISO 31000:2018 5.5", "linked_use_cases": ["bia-biv-dpia"]}
+    },
+    {
+      "ruleId": "RM-5.5a", "name": "rm_impact_likelihood_matrix", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 31000:2018 5.5.2", "section": "Impact x likelihood assessment", "url": "https://www.iso.org/standard/65694"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "rm_process", "verplicht": true, "artikel": "ISO 31000:2018 5.5.2"}
+    },
+    {
+      "ruleId": "RM-5.6", "name": "rm_risk_evaluation", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 31000:2018 5.6", "section": "Risk evaluation", "url": "https://www.iso.org/standard/65694"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "rm_process", "verplicht": true, "artikel": "ISO 31000:2018 5.6"}
+    },
+    {
+      "ruleId": "RM-5.7", "name": "rm_risk_treatment", "priority": 500,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 31000:2018 5.7", "section": "Risk treatment", "url": "https://www.iso.org/standard/65694"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "rm_treatment", "verplicht": true, "artikel": "ISO 31000:2018 5.7", "linked_use_cases": ["iso27001", "iso22301"]}
+    },
+    {
+      "ruleId": "RM-5.7a", "name": "rm_treatment_options", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 31000:2018 5.7.2", "section": "Avoid, mitigate, transfer, accept", "url": "https://www.iso.org/standard/65694"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "rm_treatment", "verplicht": true, "artikel": "ISO 31000:2018 5.7.2"}
+    },
+    {
+      "ruleId": "RM-5.7b", "name": "rm_residual_risk_acceptance", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 31000:2018 5.7.3", "section": "Residual risk acceptance", "url": "https://www.iso.org/standard/65694"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "rm_treatment", "verplicht": true, "artikel": "ISO 31000:2018 5.7.3"}
+    },
+    {
+      "ruleId": "RM-5.8", "name": "rm_monitoring_review", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 31000:2018 5.8", "section": "Monitoring and review", "url": "https://www.iso.org/standard/65694"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "rm_improvement", "verplicht": true, "artikel": "ISO 31000:2018 5.8"}
+    },
+    {
+      "ruleId": "RM-5.9", "name": "rm_communication_consultation", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 31000:2018 5.9", "section": "Communication and consultation", "url": "https://www.iso.org/standard/65694"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "rm_process", "verplicht": true, "artikel": "ISO 31000:2018 5.9"}
+    },
+    {
+      "ruleId": "RM-5.10", "name": "rm_recording_reporting", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 31000:2018 5.10", "section": "Recording and reporting", "url": "https://www.iso.org/standard/65694"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "rm_process", "verplicht": true, "artikel": "ISO 31000:2018 5.10"}
+    },
+    {
+      "ruleId": "RM-6.1", "name": "rm_continual_improvement", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 31000:2018 6.1", "section": "Continual improvement of the framework", "url": "https://www.iso.org/standard/65694"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "rm_improvement", "verplicht": true, "artikel": "ISO 31000:2018 6.1"}
+    },
+    {
+      "ruleId": "RISK-MATRIX-001", "name": "rm_risk_matrix_definition", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 31000:2018 + ISO 31005", "section": "Risk matrix (impact x likelihood)", "url": "https://www.iso.org/standard/65694"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "rm_tools", "verplicht": true, "matrix_size": "5x5", "artikel": "ISO 31000:2018 5.5"}
+    },
+    {
+      "ruleId": "RISK-MATRIX-002", "name": "rm_risk_appetite", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 31000:2018 5.3.2", "section": "Risk appetite and tolerance", "url": "https://www.iso.org/standard/65694"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "rm_tools", "verplicht": true, "artikel": "ISO 31000:2018 5.3.2"}
+    },
+    {
+      "ruleId": "RISK-MATRIX-003", "name": "rm_risk_reporting_frequency", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 31000:2018 5.8.2", "section": "Periodic risk reporting", "url": "https://www.iso.org/standard/65694"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "rm_tools", "verplicht": true, "frequency_minimum": "quarterly", "artikel": "ISO 31000:2018 5.8.2"}
+    }
+  ]
+}
