@@ -1,3 +1,15 @@
+## [2.9.0] - 2026-07-17 — ISO 25010 Software Quality Model
+
+### Added
+- ISO 25010 use case: 35 regels, port 8529
+- 9 product quality characteristics (ISO/IEC 25010:2023)
+- 31 sub-characteristics met testbare regels
+- API: /quality-model, /evaluate (weighted scoring), /quality-model detail
+- Cross-links: inclusivity→Wdo, security→ISO 27001, recoverability→BIA-BIV-DPIA
+- 19 tests passed
+
+---
+
 ## [2.8.0] - 2026-07-17 — Wet Digitale Overheid + Gemeente Pilot
 
 ### Added
