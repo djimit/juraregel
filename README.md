@@ -524,6 +524,7 @@ graph TB
 | **ISO 27701** | **24** | **PoC** | **8531** |
 | **ISO 22301** | **24** | **PoC** | **8532** |
 | **ISO 31000** | **21** | **PoC** | **8533** |
+| **ISO 9001** | **27** | **PoC** | **8534** |
 | **NEDERUS** | **8 unified controls** | **v2.0 (external repo)** | **—** |
 | Procesreglement | 4 | PoC | 8491 |
 | Classificatie | 3 | PoC | 8492 |
@@ -590,7 +591,7 @@ Zie `jrem-open-source/` voor het standalone JREM schema, validator en examples.
 
 | Metriek | Waarde |
 |---|---|
-| Use cases | 23 use cases + NEDERUS v2.0 multi-jurisdictionele mapping |
+| Use cases | 24 use cases + NEDERUS v2.0 multi-jurisdictionele mapping |
 | Tests | Semantische scenario-, bron-, API-, BDD-, MCP-gates + 52 eIDAS tests |
 | CI gates | 14 per use case |
 | JREM regels | 780+ (incl. 32 eIDAS, 28 ISO 27001 regels) |

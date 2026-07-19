@@ -1,3 +1,23 @@
+## [3.4.0] - 2026-07-17 — ISO 9001 Quality Management System
+
+### Added
+- ISO 9001 use case: 27 regels, poort 8534
+- PDCA-cyclus: Plan-Do-Check-Act
+- 7 QMS categorieën: context, leadership, planning, support, operation, evaluation, improvement
+- Maturity assessment API (Initial → Optimized)
+- ISO-combinatie advisor (9001+27001, 9001+14001, 9001+22301, etc.)
+- 11 tests passed
+
+### QMS Categorieen
+- Context + Leadership: 6 regels
+- Planning: 3 regels
+- Support: 5 regels
+- Operation: 6 regels
+- Evaluation: 3 regels
+- Improvement: 3 regels
+
+---
+
 ## [3.3.0] - 2026-07-17 — ISO 31000 Risk Management
 
 ### Added
