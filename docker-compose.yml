@@ -1,11 +1,35 @@
-services:
-  griffierecht:
-    build: .
-    ports: ["8490:8490"]
+version: "3.9"
 
-  publicatie:
-    build: .
-    command: ["uvicorn", "app:app", "--app-dir", "use-cases/publicatie/api", "--host", "0.0.0.0", "--port", "8493"]
-    ports: ["8493:8493"]
-    healthcheck:
-      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8493/v1/health')"]
+services:
+  juraregel-mcp:
+    build: ./mcp-server
+    ports:
+      - "8490:8490"
+    volumes:
+      - ./use-cases:/app/use-cases
+    environment:
+      - JURAREGEL_ENV=production
+    restart: unless-stopped
+
+  juraregel-cloud:
+    build: ./cloud
+    ports:
+      - "8527:8527"
+    environment:
+      - JURAREGEL_ENV=production
+      - DATABASE_URL=sqlite:///data/juraregel.db
+    volumes:
+      - cloud-data:/app/data
+    restart: unless-stopped
+
+  juraregel-scraper:
+    build: ./scraper
+    environment:
+      - JURAREGEL_ENV=production
+      - CHECK_INTERVAL_HOURS=24
+    volumes:
+      - ./use-cases:/app/use-cases
+    restart: unless-stopped
+
+volumes:
+  cloud-data:

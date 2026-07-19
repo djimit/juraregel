@@ -92,7 +92,7 @@ def test_missing_mapped_rule_ids_blocks_preflight():
 def test_jrem_export_validates_against_shared_schema():
     import jsonschema
 
-    schema = json.loads((ROOT / "shared" / "jrem-schema.json").read_text())
+    schema = json.loads((ROOT / "shared" / "jrem-schema-v1.1.0.json").read_text())
     instance = json.loads(JREM.read_text())
     errors = list(jsonschema.Draft202012Validator(schema).iter_errors(instance))
     assert errors == []
@@ -105,3 +105,15 @@ def test_jrem_has_l1_rules_with_source_refs():
     for rule in instance["rules"]:
         assert rule["ruleId"].startswith("STTR-")
         assert rule["sourceRefs"]
+
+
+def test_jrem_has_no_source_quality_debt():
+    from ci.source_quality import issues_for_rule
+
+    instance = json.loads(JREM.read_text())
+    issues = [
+        issue
+        for rule in instance["rules"]
+        for issue in issues_for_rule(rule, instance)
+    ]
+    assert issues == []
