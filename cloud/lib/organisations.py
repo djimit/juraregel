@@ -134,7 +134,12 @@ class OrganisationStore:
             with open(self.store_path) as f:
                 data = json.load(f)
             for org_id, org_data in data.items():
-                self._organisations[org_id] = Organisation(**org_data)
+                # Filter out non-field keys (limits, current_month_usage are properties)
+                valid_fields = {
+                    f.name for f in Organisation.__dataclass_fields__.values()
+                }
+                filtered = {k: v for k, v in org_data.items() if k in valid_fields}
+                self._organisations[org_id] = Organisation(**filtered)
 
     def _save(self):
         data = {org_id: org.to_dict() for org_id, org in self._organisations.items()}

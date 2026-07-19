@@ -89,7 +89,8 @@
         "eidas",
         "bia-biv-dpia",
         "dpia-generator",
-        "iso27001"
+        "iso27001",
+        "wdo"
       ]
     },
     "procedureType": {

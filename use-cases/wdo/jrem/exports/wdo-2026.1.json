@@ -1,0 +1,109 @@
+{
+  "schemaVersion": "1.1.0",
+  "ruleSetId": "wdo",
+  "version": "2026.1",
+  "validFrom": "2026-01-01",
+  "validUntil": "2027-12-31",
+  "jurisdiction": "NL",
+  "domain": "wdo",
+  "procedureType": "activiteit-toetsing",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "WDO-1.1", "name": "toegankelijkheid_website", "priority": 400,
+      "sourceRefs": [{"type": "wet", "title": "Wet Digitale Overheid Art. 1.1", "section": "Toegankelijkheid van digitale dienstverlening", "url": "https://wetten.overheid.nl/BWBR0044038/"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "wdo_toegankelijkheid", "verplicht": true, "artikel": "Wdo Art. 1.1"}
+    },
+    {
+      "ruleId": "WDO-1.2", "name": "wcag_2.1_aa", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "Wdo Art. 1.2 + Wmebv", "section": "WCAG 2.1 AA conformiteit", "url": "https://www.w3.org/TR/WCAG21/"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "wdo_toegankelijkheid", "verplicht": true, "artikel": "Wdo Art. 1.2 + Wmebv"}
+    },
+    {
+      "ruleId": "WDO-1.3", "name": "toegankelijkheidsverklaring", "priority": 300,
+      "sourceRefs": [{"type": "wet", "title": "Wdo Art. 1.3", "section": "Toegankelijkheidsverklaring publiceren", "url": "https://wetten.overheid.nl/BWBR0044038/"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "wdo_toegankelijkheid", "verplicht": true, "artikel": "Wdo Art. 1.3"}
+    },
+    {
+      "ruleId": "WDO-2.1", "name": "open_standaarden_verplicht", "priority": 400,
+      "sourceRefs": [{"type": "wet", "title": "Wdo Art. 2.1", "section": "Verplicht gebruik open standaarden", "url": "https://wetten.overheid.nl/BWBR0044038/"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "wdo_standaarden", "verplicht": true, "artikel": "Wdo Art. 2.1", "linked_use_cases": ["forumstandaardisatie"]}
+    },
+    {
+      "ruleId": "WDO-2.2", "name": "api_design_rules", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "Wdo Art. 2.2 + Logius API Design Rules", "section": "API's voldoen aan Logius standaarden", "url": "https://logius-standaarden.github.io/API-Design-Rules/"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "wdo_standaarden", "verplicht": true, "artikel": "Wdo Art. 2.2", "linked_use_cases": ["overheidsstandaarden"]}
+    },
+    {
+      "ruleId": "WDO-2.3", "name": "open_data_delen", "priority": 300,
+      "sourceRefs": [{"type": "wet", "title": "Wdo Art. 2.3", "section": "Open data delen", "url": "https://wetten.overheid.nl/BWBR0044038/"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "wdo_standaarden", "verplicht": true, "artikel": "Wdo Art. 2.3"}
+    },
+    {
+      "ruleId": "WDO-3.1", "name": "digitale_toegankelijkheid", "priority": 400,
+      "sourceRefs": [{"type": "wet", "title": "Wdo Art. 3.1", "section": "Digitale toegankelijkheid voor iedereen", "url": "https://wetten.overheid.nl/BWBR0044038/"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "wdo_toegankelijkheid", "verplicht": true, "artikel": "Wdo Art. 3.1"}
+    },
+    {
+      "ruleId": "WDO-3.2", "name": "kanalen_keuze", "priority": 300,
+      "sourceRefs": [{"type": "wet", "title": "Wdo Art. 3.2", "section": "Meerdere kanalen voor dienstverlening", "url": "https://wetten.overheid.nl/BWBR0044038/"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "wdo_toegankelijkheid", "verplicht": true, "artikel": "Wdo Art. 3.2"}
+    },
+    {
+      "ruleId": "WDO-4.1", "name": "inclusie_digitale_vaardigheden", "priority": 200,
+      "sourceRefs": [{"type": "wet", "title": "Wdo Art. 4.1", "section": "Inclusie en digitale vaardigheden", "url": "https://wetten.overheid.nl/BWBR0044038/"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "wdo_inclusie", "verplicht": true, "artikel": "Wdo Art. 4.1"}
+    },
+    {
+      "ruleId": "WDO-5.1", "name": "veilig_dienstverlening", "priority": 400,
+      "sourceRefs": [{"type": "wet", "title": "Wdo Art. 5.1", "section": "Veilige digitale dienstverlening", "url": "https://wetten.overheid.nl/BWBR0044038/"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "wdo_beveiliging", "verplicht": true, "artikel": "Wdo Art. 5.1", "linked_use_cases": ["bio2", "nis2"]}
+    },
+    {
+      "ruleId": "WDO-5.2", "name": "identiteitsvoorziening", "priority": 300,
+      "sourceRefs": [{"type": "wet", "title": "Wdo Art. 5.2", "section": "Identiteitsvoorziening (DigiD, eHerkenning)", "url": "https://wetten.overheid.nl/BWBR0044038/"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "wdo_beveiliging", "verplicht": true, "artikel": "Wdo Art. 5.2", "linked_use_cases": ["eidas"]}
+    },
+    {
+      "ruleId": "WDO-6.1", "name": "privacy_bij_ontwerp", "priority": 400,
+      "sourceRefs": [{"type": "wet", "title": "Wdo Art. 6.1 + AVG Art. 25", "section": "Privacy by design", "url": "https://wetten.overheid.nl/BWBR0044038/"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "wdo_privacy", "verplicht": true, "artikel": "Wdo Art. 6.1 + AVG Art. 25", "linked_use_cases": ["dpia-generator"]}
+    },
+    {
+      "ruleId": "WDO-6.2", "name": "dpia_verplicht", "priority": 400,
+      "sourceRefs": [{"type": "wet", "title": "Wdo Art. 6.2 + AVG Art. 35", "section": "DPIA bij hoog risico", "url": "https://wetten.overheid.nl/BWBR0044038/"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "wdo_privacy", "verplicht": true, "artikel": "Wdo Art. 6.2 + AVG Art. 35", "linked_use_cases": ["dpia-generator"]}
+    },
+    {
+      "ruleId": "WDO-7.1", "name": "architectuur_documentatie", "priority": 300,
+      "sourceRefs": [{"type": "wet", "title": "Wdo Art. 7.1 + NORA", "section": "Architectuurdocumentatie conform NORA", "url": "https://wetten.overheid.nl/BWBR0044038/"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "wdo_architectuur", "verplicht": true, "artikel": "Wdo Art. 7.1", "linked_use_cases": ["nora"]}
+    },
+    {
+      "ruleId": "WMEBV-1", "name": "wmebv_toegankelijkheid", "priority": 500,
+      "sourceRefs": [{"type": "wet", "title": "Wet ministeriële regeling eisen beschikbaarheid (Wmebv)", "section": "Toegankelijkheidseisen websites en apps", "url": "https://wetten.overheid.nl/BWBR0045048/"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "wdo_wmebv", "verplicht": true, "artikel": "Wmebv", "deadline": "2026-01-01"}
+    },
+    {
+      "ruleId": "WMEBV-2", "name": "wmebv_uitzonderingen", "priority": 200,
+      "sourceRefs": [{"type": "wet", "title": "Wmebv Uitzonderingen", "section": "Uitzonderingen op toegankelijkheid", "url": "https://wetten.overheid.nl/BWBR0045048/"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "wdo_wmebv", "verplicht": false, "artikel": "Wmebv Uitzonderingen"}
+    }
+  ]
+}
