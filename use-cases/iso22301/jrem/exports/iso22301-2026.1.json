@@ -1,0 +1,157 @@
+{
+  "schemaVersion": "1.1.0",
+  "ruleSetId": "iso22301",
+  "version": "2026.1",
+  "validFrom": "2026-01-01",
+  "validUntil": "2027-12-31",
+  "jurisdiction": "INT",
+  "domain": "iso22301",
+  "procedureType": "activiteit-toetsing",
+  "conflictResolution": "first-match",
+  "rules": [
+    {
+      "ruleId": "BCMS-4.1", "name": "bcms_context", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 22301:2018 Clause 4.1", "section": "Understanding the organization and its context", "url": "https://www.iso.org/standard/75106"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "bcms_context", "verplicht": true, "artikel": "ISO 22301:2018 4.1"}
+    },
+    {
+      "ruleId": "BCMS-5.1", "name": "bcms_leadership", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 22301:2018 Clause 5.1", "section": "Leadership and commitment", "url": "https://www.iso.org/standard/75106"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "bcms_leadership", "verplicht": true, "artikel": "ISO 22301:2018 5.1"}
+    },
+    {
+      "ruleId": "BCMS-5.3", "name": "bcms_policy", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 22301:2018 Clause 5.3", "section": "Business continuity policy", "url": "https://www.iso.org/standard/75106"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "bcms_leadership", "verplicht": true, "artikel": "ISO 22301:2018 5.3"}
+    },
+    {
+      "ruleId": "BCMS-6.1", "name": "bcms_risk_assessment", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 22301:2018 Clause 6.1", "section": "Actions to address risks and opportunities", "url": "https://www.iso.org/standard/75106"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "bcms_planning", "verplicht": true, "artikel": "ISO 22301:2018 6.1", "linked_bia": "BIA-001"}
+    },
+    {
+      "ruleId": "BCMS-8.2", "name": "business_impact_analysis", "priority": 500,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 22301:2018 Clause 8.2", "section": "Business impact analysis", "url": "https://www.iso.org/standard/75106"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "bcms_analysis", "verplicht": true, "artikel": "ISO 22301:2018 8.2", "linked_use_cases": ["bia-biv-dpia"]}
+    },
+    {
+      "ruleId": "BCMS-8.2a", "name": "bia_recovery_time_objective", "priority": 500,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 22301:2018 8.2.2", "section": "Determine RTO for each critical activity", "url": "https://www.iso.org/standard/75106"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "bcms_analysis", "verplicht": true, "artikel": "ISO 22301:2018 8.2.2", "linked_bia": "BIA-002"}
+    },
+    {
+      "ruleId": "BCMS-8.2b", "name": "bia_recovery_point_objective", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 22301:2018 8.2.3", "section": "Determine RPO for data and systems", "url": "https://www.iso.org/standard/75106"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "bcms_analysis", "verplicht": true, "artikel": "ISO 22301:2018 8.2.3"}
+    },
+    {
+      "ruleId": "BCMS-8.3", "name": "business_continuity_strategy", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 22301:2018 Clause 8.3", "section": "Business continuity strategy", "url": "https://www.iso.org/standard/75106"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "bcms_strategy", "verplicht": true, "artikel": "ISO 22301:2018 8.3"}
+    },
+    {
+      "ruleId": "BCMS-8.4", "name": "business_continuity_procedures", "priority": 500,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 22301:2018 Clause 8.4", "section": "Establish and implement business continuity procedures", "url": "https://www.iso.org/standard/75106"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "bcms_implementation", "verplicht": true, "artikel": "ISO 22301:2018 8.4"}
+    },
+    {
+      "ruleId": "BCMS-8.4a", "name": "bcp_documentation", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 22301:2018 8.4.1", "section": "Documented business continuity plans", "url": "https://www.iso.org/standard/75106"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "bcms_implementation", "verplicht": true, "artikel": "ISO 22301:2018 8.4.1"}
+    },
+    {
+      "ruleId": "BCMS-8.4b", "name": "bcp_roles_responsibilities", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 22301:2018 8.4.2", "section": "Roles and responsibilities during disruption", "url": "https://www.iso.org/standard/75106"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "bcms_implementation", "verplicht": true, "artikel": "ISO 22301:2018 8.4.2"}
+    },
+    {
+      "ruleId": "BCMS-8.4c", "name": "bcp_communication_procedures", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 22301:2018 8.4.3", "section": "Communication during disruption", "url": "https://www.iso.org/standard/75106"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "bcms_implementation", "verplicht": true, "artikel": "ISO 22301:2018 8.4.3"}
+    },
+    {
+      "ruleId": "BCMS-8.5", "name": "bcms_exercising_testing", "priority": 500,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 22301:2018 Clause 8.5", "section": "Exercise and testing programme", "url": "https://www.iso.org/standard/75106"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "bcms_testing", "verplicht": true, "artikel": "ISO 22301:2018 8.5"}
+    },
+    {
+      "ruleId": "BCMS-8.5a", "name": "bcms_exercise_programme", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 22301:2018 8.5.1", "section": "Plan exercise programme", "url": "https://www.iso.org/standard/75106"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "bcms_testing", "verplicht": true, "artikel": "ISO 22301:2018 8.5.1"}
+    },
+    {
+      "ruleId": "BCMS-8.5b", "name": "bcms_exercise_frequency", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 22301:2018 8.5.2", "section": "Exercises at planned intervals", "url": "https://www.iso.org/standard/75106"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "bcms_testing", "verplicht": true, "artikel": "ISO 22301:2018 8.5.2"}
+    },
+    {
+      "ruleId": "BCMS-8.5c", "name": "bcms_post_exercise_review", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 22301:2018 8.5.3", "section": "Post-exercise review and improvement", "url": "https://www.iso.org/standard/75106"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "bcms_testing", "verplicht": true, "artikel": "ISO 22301:2018 8.5.3"}
+    },
+    {
+      "ruleId": "BCMS-9.1", "name": "bcms_monitoring_measurement", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 22301:2018 Clause 9.1", "section": "Monitoring, measurement, analysis and evaluation", "url": "https://www.iso.org/standard/75106"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "bcms_evaluation", "verplicht": true, "artikel": "ISO 22301:2018 9.1"}
+    },
+    {
+      "ruleId": "BCMS-9.2", "name": "bcms_internal_audit", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 22301:2018 Clause 9.2", "section": "Internal audit of BCMS", "url": "https://www.iso.org/standard/75106"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "bcms_evaluation", "verplicht": true, "artikel": "ISO 22301:2018 9.2"}
+    },
+    {
+      "ruleId": "BCMS-9.3", "name": "bcms_management_review", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 22301:2018 Clause 9.3", "section": "Management review", "url": "https://www.iso.org/standard/75106"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "bcms_evaluation", "verplicht": true, "artikel": "ISO 22301:2018 9.3"}
+    },
+    {
+      "ruleId": "BCMS-10.1", "name": "bcms_nonconformity_correction", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 22301:2018 Clause 10.1", "section": "Nonconformity and corrective action", "url": "https://www.iso.org/standard/75106"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "bcms_improvement", "verplicht": true, "artikel": "ISO 22301:2018 10.1"}
+    },
+    {
+      "ruleId": "BCMS-10.2", "name": "bcms_continual_improvement", "priority": 300,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 22301:2018 Clause 10.2", "section": "Continual improvement", "url": "https://www.iso.org/standard/75106"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "bcms_improvement", "verplicht": true, "artikel": "ISO 22301:2018 10.2"}
+    },
+    {
+      "ruleId": "RTO-001", "name": "rto_critical_4h", "priority": 500,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 22301:2018 8.2.2", "section": "RTO ≤ 4u voor kritieke processen", "url": "https://www.iso.org/standard/75106"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "recovery_targets", "verplicht": true, "rto_max": 4, "artikel": "ISO 22301:2018 RTO"}
+    },
+    {
+      "ruleId": "RTO-002", "name": "rto_important_24h", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 22301:2018 8.2.2", "section": "RTO ≤ 24u voor belangrijke processen", "url": "https://www.iso.org/standard/75106"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "recovery_targets", "verplicht": true, "rto_max": 24, "artikel": "ISO 22301:2018 RTO"}
+    },
+    {
+      "ruleId": "RPO-001", "name": "rpo_data_loss_tolerance", "priority": 400,
+      "sourceRefs": [{"type": "standaard", "title": "ISO 22301:2018 8.2.3", "section": "RPO data verlies tolerantie", "url": "https://www.iso.org/standard/75106"}],
+      "conditions": {},
+      "outcome": {"compliant": "conditional", "category": "recovery_targets", "verplicht": true, "artikel": "ISO 22301:2018 RPO"}
+    }
+  ]
+}
