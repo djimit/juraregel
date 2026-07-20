@@ -281,3 +281,44 @@ class TestCompliance:
         assert resp.status_code == 200
         data = resp.json()
         assert len(data["classifications"]) == 5
+
+
+class TestPolicies:
+    def test_list_policies(self):
+        resp = client.get("/api/v1/policies/")
+        assert resp.status_code == 200
+        data = resp.json()
+        assert len(data["policies"]) == 4
+
+    def test_evaluate_all(self):
+        resp = client.post(
+            "/api/v1/policies/evaluate",
+            json={
+                "context": {
+                    "purpose": "WOZ-waardering",
+                    "data_categories": ["Naam", "Adres", "WOZ-waarde", "Onnodig_veld"],
+                    "security_measures": ["encryptie", "toegangscontrole"],
+                    "ai_systems": True,
+                    "bias_examined": False,
+                }
+            },
+        )
+        assert resp.status_code == 200
+        data = resp.json()
+        assert "compliance_rate" in data
+        assert "violations" in data
+
+    def test_evaluate_specific(self):
+        resp = client.post(
+            "/api/v1/policies/evaluate/avg-art25-data-minimization",
+            json={
+                "context": {
+                    "purpose": "WOZ-waardering",
+                    "data_categories": ["Naam", "Adres", "Onnodig_veld"],
+                }
+            },
+        )
+        assert resp.status_code == 200
+        data = resp.json()
+        assert data["compliant"] is False
+        assert len(data["violations"]) > 0
