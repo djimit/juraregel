@@ -252,9 +252,9 @@ class ComplianceOrchestrator:
             except Exception:
                 pass  # Non-critical
 
-        relevant = knowledge_graph.search(activity.get("name", ""), top_k=5)
+        relevant = knowledge_graph.search(activity.get("name", ""), limit=5)
         return {
-            "nodes_total": knowledge_graph.size,
+            "nodes_total": len(knowledge_graph.nodes),
             "relevant_nodes": relevant,
             "coverage": len(relevant),
         }
