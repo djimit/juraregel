@@ -1,14 +1,14 @@
 "use client";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navItems = [
-  { href: "/", label: "Dashboard", icon: "📊" },
-  { href: "/compliance", label: "Compliance Score", icon: "⚖️" },
-  { href: "/agents", label: "AI Agents", icon: "🤖" },
-  { href: "/policies", label: "Policies", icon: "📋" },
-  { href: "/templates", label: "Templates", icon: "📄" },
-  { href: "/architecture", label: "Architectuur", icon: "🏗️" },
+  { href: "/", label: "Compliance Agent", icon: "🏛️" },
+  { href: "/reasoning", label: "Legal Reasoning", icon: "⚖️" },
+  { href: "/predictive", label: "Predictive", icon: "📊" },
+  { href: "/jurisdiction", label: "Jurisdictions", icon: "🌍" },
+  { href: "/digital-twin", label: "Digital Twin", icon: "🔮" },
 ];
 
 export default function Sidebar() {
@@ -18,7 +18,7 @@ export default function Sidebar() {
     <aside className="fixed left-0 top-0 h-screen w-64 bg-[#1a365d] text-white p-6 overflow-y-auto">
       <div className="mb-8">
         <h1 className="text-xl font-bold">🏛️ JuraRegel</h1>
-        <p className="text-sm text-blue-200 mt-1">Living Compliance Engine</p>
+        <p className="text-sm text-blue-200 mt-1">Legal Engineering Platform</p>
       </div>
       <nav className="space-y-1">
         {navItems.map((item) => {
@@ -32,6 +32,12 @@ export default function Sidebar() {
           );
         })}
       </nav>
+      <div className="absolute bottom-6 left-6 right-6">
+        <div className="bg-blue-800 rounded-lg p-4 text-sm">
+          <p className="font-semibold text-blue-100">Status</p>
+          <p className="text-blue-300 mt-1">● Live op :8096</p>
+        </div>
+      </div>
     </aside>
   );
 }
