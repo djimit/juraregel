@@ -195,18 +195,7 @@ class CIGates:
 
     def _gate_benchmark_score(self, ctx: dict) -> GateResult:
         """Run OpenMythos benchmark."""
-        import importlib.util
-        from pathlib import Path
-
-        spec = importlib.util.spec_from_file_location(
-            "benchmark_runner",
-            Path(__file__).resolve().parent.parent
-            / "openmythos-integration"
-            / "benchmark_runner.py",
-        )
-        mod = importlib.util.module_from_spec(spec)
-        spec.loader.exec_module(mod)
-        benchmark_runner = mod.benchmark_runner
+        from .benchmark_runner import benchmark_runner
 
         category = ctx.get("benchmark_category")
         if category:
