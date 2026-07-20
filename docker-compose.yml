@@ -1,35 +1,132 @@
-version: "3.9"
+# JuraRegel — Full stack: PostgreSQL + Qdrant + Keycloak + API + Dashboard
+#
+# Usage:
+#   docker compose up -d              # Start all services
+#   docker compose up -d postgres     # Start only PostgreSQL
+#   docker compose down               # Stop all
+#   docker compose logs -f api        # Follow API logs
+#
+# Services:
+#   postgres   — Multi-tenant database with RLS
+#   qdrant     — Vector store for RAG pipeline
+#   keycloak   — OAuth2 / OIDC authentication
+#   api        — JuraRegel REST API (FastAPI)
+#   dashboard  — JuraRegel Compliance Dashboard (Next.js)
 
 services:
-  juraregel-mcp:
-    build: ./mcp-server
+  # ─── PostgreSQL ────────────────────────────────────────────
+  postgres:
+    image: postgres:16-alpine
+    container_name: juraregel-postgres
+    environment:
+      POSTGRES_DB: juraregel
+      POSTGRES_USER: juraregel
+      POSTGRES_PASSWORD: juraregel
+      POSTGRES_INITDB_ARGS: "--encoding=UTF-8"
     ports:
-      - "8490:8490"
+      - "5432:5432"
     volumes:
-      - ./use-cases:/app/use-cases
-    environment:
-      - JURAREGEL_ENV=production
+      - juraregel-pgdata:/var/lib/postgresql/data
+      - ./api/sql/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U juraregel -d juraregel"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
     restart: unless-stopped
+    networks:
+      - juraregel-net
 
-  juraregel-cloud:
-    build: ./cloud
+  # ─── Qdrant Vector Store ──────────────────────────────────
+  qdrant:
+    image: qdrant/qdrant:v1.12.1
+    container_name: juraregel-qdrant
     ports:
-      - "8527:8527"
-    environment:
-      - JURAREGEL_ENV=production
-      - DATABASE_URL=sqlite:///data/juraregel.db
+      - "6333:6333"
+      - "6334:6334"
     volumes:
-      - cloud-data:/app/data
+      - juraregel-qdrant:/qdrant/storage
+    environment:
+      QDRANT__LOG_LEVEL: INFO
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:6333/healthz"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
     restart: unless-stopped
+    networks:
+      - juraregel-net
 
-  juraregel-scraper:
-    build: ./scraper
+  # ─── Keycloak (OAuth2 / OIDC) ─────────────────────────────
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.0.7
+    container_name: juraregel-keycloak
+    command: start-dev
     environment:
-      - JURAREGEL_ENV=production
-      - CHECK_INTERVAL_HOURS=24
-    volumes:
-      - ./use-cases:/app/use-cases
+      KC_DB: postgres
+      KC_DB_URL: jdbc:postgresql://postgres:5432/keycloak
+      KC_DB_USERNAME: juraregel
+      KC_DB_PASSWORD: juraregel
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+      KC_HOSTNAME: localhost
+      KC_HTTP_ENABLED: "true"
+    ports:
+      - "8081:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
     restart: unless-stopped
+    networks:
+      - juraregel-net
+
+  # ─── JuraRegel API ────────────────────────────────────────
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: juraregel-api
+    ports:
+      - "8080:8080"
+    environment:
+      DATABASE_URL: postgresql+asyncpg://juraregel:juraregel@postgres:5432/juraregel
+      QDRANT_URL: http://qdrant:6333
+      KEYCLOAK_URL: http://keycloak:8080
+      KEYCLOAK_REALM: juraregel
+      KEYCLOAK_CLIENT_ID: juraregel-api
+      JURAREGEL_CI_MODE: production
+    depends_on:
+      postgres:
+        condition: service_healthy
+      qdrant:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - juraregel-net
+
+  # ─── JuraRegel Dashboard ──────────────────────────────────
+  dashboard:
+    build:
+      context: ./dashboard
+      dockerfile: Dockerfile
+    container_name: juraregel-dashboard
+    ports:
+      - "3000:3000"
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:8080
+      NEXT_PUBLIC_KEYCLOAK_URL: http://localhost:8081
+    depends_on:
+      - api
+    restart: unless-stopped
+    networks:
+      - juraregel-net
 
 volumes:
-  cloud-data:
+  juraregel-pgdata:
+    driver: local
+  juraregel-qdrant:
+    driver: local
+
+networks:
+  juraregel-net:
+    driver: bridge

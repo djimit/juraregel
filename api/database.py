@@ -1,10 +1,11 @@
-"""Database layer — SQLAlchemy + asyncpg + Row Level Security.
+"""Database layer — SQLAlchemy with multi-backend support.
 
-Multi-tenant PostgreSQL with:
-- Async engine (asyncpg)
-- Row Level Security (RLS) for tenant isolation
-- Connection pooling
-- Migration support (Alembic-ready)
+Supports:
+- PostgreSQL (production, with RLS)
+- SQLite (development, no external dependencies)
+- Async operations via asyncpg/aiosqlite
+
+Auto-selects backend based on DATABASE_URL environment variable.
 """
 
 from __future__ import annotations
@@ -12,6 +13,19 @@ from __future__ import annotations
 import os
 from contextlib import asynccontextmanager
 from typing import AsyncGenerator
+
+# ─── Configuration ──────────────────────────────────────────────
+
+DATABASE_URL = os.getenv(
+    "DATABASE_URL",
+    "sqlite+aiosqlite:///./juraregel.db",
+)
+
+# Detect backend
+IS_POSTGRES = DATABASE_URL.startswith("postgresql")
+IS_SQLITE = DATABASE_URL.startswith("sqlite")
+
+# ─── Imports ──────────────────────────────────────────────────
 
 try:
     from sqlalchemy.ext.asyncio import (
@@ -31,23 +45,25 @@ except ImportError:
     class DeclarativeBase:  # type: ignore
         pass
 
-# ─── Configuration ──────────────────────────────────────────────
-
-DATABASE_URL = os.getenv(
-    "DATABASE_URL",
-    "postgresql+asyncpg://juraregel:juraregel@localhost:5432/juraregel",
-)
 
 # ─── Engine ────────────────────────────────────────────────────
 
 if HAS_SQLALCHEMY:
-    engine = create_async_engine(
-        DATABASE_URL,
-        echo=False,
-        pool_size=20,
-        max_overflow=10,
-        pool_pre_ping=True,
-    )
+    if IS_POSTGRES:
+        engine = create_async_engine(
+            DATABASE_URL,
+            echo=False,
+            pool_size=20,
+            max_overflow=10,
+            pool_pre_ping=True,
+        )
+    else:
+        # SQLite — development mode
+        engine = create_async_engine(
+            DATABASE_URL,
+            echo=False,
+            connect_args={"check_same_thread": False},
+        )
 
     async_session_factory = async_sessionmaker(
         engine,
@@ -84,11 +100,12 @@ async def get_session() -> AsyncGenerator[AsyncSession, None]:
 
 
 async def set_tenant_context(session: AsyncSession, tenant_id: str) -> None:
-    """Set the current tenant for RLS policies."""
-    await session.execute(
-        __import__("sqlalchemy").text("SET LOCAL app.current_org = :tenant_id"),
-        {"tenant_id": tenant_id},
-    )
+    """Set the current tenant for RLS policies (PostgreSQL only)."""
+    if IS_POSTGRES:
+        await session.execute(
+            __import__("sqlalchemy").text("SET LOCAL app.current_org = :tenant_id"),
+            {"tenant_id": tenant_id},
+        )
 
 
 async def init_database() -> None:
