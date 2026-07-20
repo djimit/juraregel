@@ -1,0 +1,51 @@
+{
+  "ruleSetId": "bewaarbeleid",
+  "version": "2026.1",
+  "maturityTarget": "L2-pilot",
+  "reviewer": {
+    "geaccondeerdDoor": "__JURIST_NAAM__",
+    "rol": "__JURIST_ROL__",
+    "organisatie": "__ORGANISATIE__"
+  },
+  "review": {
+    "datum": "__REVIEW_DATUM_YYYY-MM-DD__",
+    "geldigTot": "__GELDIG_TOT_YYYY-MM-DD__",
+    "scope": "L2 pilot voor Bewaarbeleid & Bewaarreglement — AVG Art. 5(1)(e) gestructureerde bewaartermijnen per categorie.",
+    "bronSnapshot": "__BRON_SNAPSHOT_ID_OF_DATUM__",
+    "verklaring": "__JURIDISCHE_VERKLARING_BINNEN_SCOPE__",
+    "beperkingen": [
+      "__BEPERKING_1__",
+      "__BEPERKING_2__"
+    ]
+  },
+  "sourceSnapshotRefs": [
+    {
+      "name": "AVG Art. 5(1)(e) — Storage limitation",
+      "url": "https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:32016R0679",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    },
+    {
+      "name": "Archiefwet 1995 — Overbrenging en vernietiging",
+      "url": "https://wetten.overheid.nl/BWBR0007376",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    }
+  ],
+  "scenarioAcceptance": [
+    {
+      "scenario": "BW-SC-001: Bewaartermijnen per categorie gedefinieerd",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "BW-SC-002: Vernietigingsproces gedocumenteerd",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "BW-SC-003: Uitzonderingen geregeld",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "BW-SC-004: Verantwoordelijkheden toegewezen",
+      "accepted": "__TRUE_FALSE__"
+    }
+  ]
+}

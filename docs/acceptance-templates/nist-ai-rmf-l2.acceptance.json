@@ -1,0 +1,51 @@
+{
+  "ruleSetId": "nist-ai-rmf",
+  "version": "2026.1",
+  "maturityTarget": "L2-pilot",
+  "reviewer": {
+    "geaccondeerdDoor": "__JURIST_NAAM__",
+    "rol": "__JURIST_ROL__",
+    "organisatie": "__ORGANISATIE__"
+  },
+  "review": {
+    "datum": "__REVIEW_DATUM_YYYY-MM-DD__",
+    "geldigTot": "__GELDIG_TOT_YYYY-MM-DD__",
+    "scope": "L2 pilot voor NIST AI RMF Mapping — 4 kerntuncties (Govern, Map, Measure, Manage) gemapt op JuraRegel templates.",
+    "bronSnapshot": "__BRON_SNAPSHOT_ID_OF_DATUM__",
+    "verklaring": "__JURIDISCHE_VERKLARING_BINNEN_SCOPE__",
+    "beperkingen": [
+      "__BEPERKING_1__",
+      "__BEPERKING_2__"
+    ]
+  },
+  "sourceSnapshotRefs": [
+    {
+      "name": "NIST AI 100-1 — AI Risk Management Framework 1.0",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    },
+    {
+      "name": "NIST AI 600-1 — Generative AI Profile",
+      "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    }
+  ],
+  "scenarioAcceptance": [
+    {
+      "scenario": "NIST-SC-001: GOVERN — risico-cultuur georganiseerd",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "NIST-SC-002: MAP — context en risico's geïdentificeerd",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "NIST-SC-003: MEASURE — risico's geëvalueerd",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "NIST-SC-004: MANAGE — risico's behandeld",
+      "accepted": "__TRUE_FALSE__"
+    }
+  ]
+}

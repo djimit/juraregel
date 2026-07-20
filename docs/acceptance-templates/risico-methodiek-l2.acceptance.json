@@ -1,0 +1,51 @@
+{
+  "ruleSetId": "risico-methodiek",
+  "version": "2026.1",
+  "maturityTarget": "L2-pilot",
+  "reviewer": {
+    "geaccondeerdDoor": "__JURIST_NAAM__",
+    "rol": "__JURIST_ROL__",
+    "organisatie": "__ORGANISATIE__"
+  },
+  "review": {
+    "datum": "__REVIEW_DATUM_YYYY-MM-DD__",
+    "geldigTot": "__GELDIG_TOT_YYYY-MM-DD__",
+    "scope": "L2 pilot voor Kwantitatieve Risico-Methodiek — ISO 27005 + CNIL PIA gebaseerde 4-niveau risicoschaal.",
+    "bronSnapshot": "__BRON_SNAPSHOT_ID_OF_DATUM__",
+    "verklaring": "__JURIDISCHE_VERKLARING_BINNEN_SCOPE__",
+    "beperkingen": [
+      "__BEPERKING_1__",
+      "__BEPERKING_2__"
+    ]
+  },
+  "sourceSnapshotRefs": [
+    {
+      "name": "ISO/IEC 27005:2022 — Information security risk management",
+      "url": "https://www.iso.org/standard/80585.html",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    },
+    {
+      "name": "CNIL PIA Methodology (Guide 1)",
+      "url": "https://www.cnil.fr/sites/cnil/files/atoms/files/cnil-pia-1-en-methodology.pdf",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    }
+  ],
+  "scenarioAcceptance": [
+    {
+      "scenario": "RM-SC-001: Impact-schaal G1-G4 correct toegepast",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "RM-SC-002: Waarschijnlijkheid-schaal G1-G4 correct toegepast",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "RM-SC-003: Risico-matrix 4x4 correct gebruikt",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "RM-SC-004: Residuaal risico gedocumenteerd",
+      "accepted": "__TRUE_FALSE__"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "ruleSetId": "bias-audit",
+  "version": "2026.1",
+  "maturityTarget": "L2-pilot",
+  "reviewer": {
+    "geaccondeerdDoor": "__JURIST_NAAM__",
+    "rol": "__JURIST_ROL__",
+    "organisatie": "__ORGANISATIE__"
+  },
+  "review": {
+    "datum": "__REVIEW_DATUM_YYYY-MM-DD__",
+    "geldigTot": "__GELDIG_TOT_YYYY-MM-DD__",
+    "scope": "L2 pilot voor Bias Audit Protocol — EU AI Act Art. 10(3) bias-onderzoek met kwantitatieve metrics.",
+    "bronSnapshot": "__BRON_SNAPSHOT_ID_OF_DATUM__",
+    "verklaring": "__JURIDISCHE_VERKLARING_BINNEN_SCOPE__",
+    "beperkingen": [
+      "__BEPERKING_1__",
+      "__BEPERKING_2__"
+    ]
+  },
+  "sourceSnapshotRefs": [
+    {
+      "name": "EU AI Act Art. 10(2)(f) + Art. 10(3) — Data governance and bias",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    },
+    {
+      "name": "NIST AI 600-1 — Generative AI Profile",
+      "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    }
+  ],
+  "scenarioAcceptance": [
+    {
+      "scenario": "BA-SC-001: Data-profilering met beschermde kenmerken",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "BA-SC-002: Demographic Parity gemeten (<5% verschil)",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "BA-SC-003: Equalized Odds gemeten (<10% verschil)",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "BA-SC-004: Disparate Impact gemeten (4/5 regel)",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "BA-SC-005: Bias-bronanalyse uitgevoerd",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "BA-SC-006: Remediation met gemeten verbetering",
+      "accepted": "__TRUE_FALSE__"
+    }
+  ]
+}

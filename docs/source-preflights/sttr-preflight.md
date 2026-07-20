@@ -13,8 +13,8 @@ Voorkom DSO/RTR-afkeur door toepasbare-regelbestanden vooraf te toetsen.
 
 ## Bronnen
 
-- STTR
-- IMTR
+- STTR 3.0.1, definitief op 1 augustus 2025
+- IMTR 3.0.1, definitief op 4 december 2025
 - RTR aansluitvoorwaarden
 - STOP/TPOD
 
@@ -35,3 +35,7 @@ Voorkom DSO/RTR-afkeur door toepasbare-regelbestanden vooraf te toetsen.
 
 Geen inhoudelijke vergunningbeslissing nemen; alleen leveringsfit toetsen.
 Geen DSO/RTR submission-client en geen volledige XSD/verificatiematrix-validatie in deze slice.
+
+## Fail-closed grens
+
+Een onbekend package, ontbrekende RTR-versie of ontbrekende JREM-mapping vereist handmatige controle.

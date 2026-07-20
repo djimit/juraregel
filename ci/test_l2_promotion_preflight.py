@@ -16,6 +16,7 @@ def valid_jrem(maturity="L1-poc", metadata=None, approval=None):
         "maturityLevel": maturity,
         "metadata": metadata or {"acceptatieType": "draft"},
         "approval": approval or {"type": "self"},
+        "rules": [],
     }
 
 
@@ -94,6 +95,25 @@ def test_filled_template_can_be_ready_for_l2_review(tmp_path):
     assert result["ready"] is True
     assert result["blocking"] is False
     assert result["reasons"] == []
+
+
+def test_filled_template_with_source_debt_is_not_ready(tmp_path):
+    jrem = valid_jrem()
+    jrem["rules"] = [{
+        "ruleId": "R-1",
+        "sourceRefs": [{
+            "type": "standaard",
+            "title": "Bron",
+            "section": "paragraaf 1",
+            "url": "https://example.test/source",
+        }],
+    }]
+    target = write_target(tmp_path, jrem, valid_template())
+
+    result = preflight.evaluate_target(tmp_path, target)
+
+    assert result["ready"] is False
+    assert "1 source-quality issue(s)" in result["reasons"]
 
 
 def test_expired_l2_jrem_acceptance_blocks(tmp_path):

@@ -29,7 +29,7 @@ for export in "$UC_DIR"/jrem/exports/*.json; do
   [ -f "$export" ] || continue
   found_export=1
   "$PYTHON" shared/validate.py \
-    --schema shared/jrem-schema.json \
+    --schema shared/jrem-schema-v1.1.0.json \
     --instance "$export"
 done
 if [ "$found_export" -eq 0 ]; then

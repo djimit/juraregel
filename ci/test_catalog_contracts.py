@@ -16,7 +16,7 @@ CATALOG_DOMAINS = (
     "ind-verblijfsregels", "ncsc", "nis2", "nora", "overheidsstandaarden",
     "procesreglement", "publicatie", "regulatory-impact", "traceability",
     "judicial-ai-assurance", "wmo",
-    "ww-uitkering",
+    "ww-uitkering", "itgc-kader",
 )
 
 

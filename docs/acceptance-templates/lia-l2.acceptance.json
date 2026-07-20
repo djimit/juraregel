@@ -1,0 +1,51 @@
+{
+  "ruleSetId": "lia",
+  "version": "2026.1",
+  "maturityTarget": "L2-pilot",
+  "reviewer": {
+    "geaccondeerdDoor": "__JURIST_NAAM__",
+    "rol": "__JURIST_ROL__",
+    "organisatie": "__ORGANISATIE__"
+  },
+  "review": {
+    "datum": "__REVIEW_DATUM_YYYY-MM-DD__",
+    "geldigTot": "__GELDIG_TOT_YYYY-MM-DD__",
+    "scope": "L2 pilot voor Legitimate Interest Assessment (LIA) — 3-staps proportionaliteitstoets bij Art. 6(1)(f) AVG.",
+    "bronSnapshot": "__BRON_SNAPSHOT_ID_OF_DATUM__",
+    "verklaring": "__JURIDISCHE_VERKLARING_BINNEN_SCOPE__",
+    "beperkingen": [
+      "__BEPERKING_1__",
+      "__BEPERKING_2__"
+    ]
+  },
+  "sourceSnapshotRefs": [
+    {
+      "name": "EDPB Guidelines 8/2022 on identifying legitimate interest",
+      "url": "https://edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-82022-identifying-legitimate-interest_en",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    },
+    {
+      "name": "AVG Art. 6(1)(f) — Gerechtvaardigd belang",
+      "url": "https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:32016R0679",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    }
+  ],
+  "scenarioAcceptance": [
+    {
+      "scenario": "LIA-SC-001: Purpose test — doel is legitiem en wettig",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "LIA-SC-002: Necessity test — verwerking is noodzakelijk",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "LIA-SC-003: Balancing test — belang weegt zwaarder dan rechten",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "LIA-SC-004: Compenserende maatregelen bij twijfel",
+      "accepted": "__TRUE_FALSE__"
+    }
+  ]
+}

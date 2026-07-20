@@ -1,0 +1,47 @@
+{
+  "ruleSetId": "value-sensitive-design",
+  "version": "2026.1",
+  "maturityTarget": "L2-pilot",
+  "reviewer": {
+    "geaccondeerdDoor": "__JURIST_NAAM__",
+    "rol": "__JURIST_ROL__",
+    "organisatie": "__ORGANISATIE__"
+  },
+  "review": {
+    "datum": "__REVIEW_DATUM_YYYY-MM-DD__",
+    "geldigTot": "__GELDIG_TOT_YYYY-MM-DD__",
+    "scope": "L2 pilot voor Value Sensitive Design Protocol — Friedman & Kahn methodologie met 3 onderzoeksfasen.",
+    "bronSnapshot": "__BRON_SNAPSHOT_ID_OF_DATUM__",
+    "verklaring": "__JURIDISCHE_VERKLARING_BINNEN_SCOPE__",
+    "beperkingen": [
+      "__BEPERKING_1__",
+      "__BEPERKING_2__"
+    ]
+  },
+  "sourceSnapshotRefs": [
+    {
+      "name": "Friedman & Kahn (2003) — Human values, ethics, and design",
+      "url": "https://doi.org/10.1007/978-94-010-0151-5_12",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    },
+    {
+      "name": "Friedman & Hendry (2019) — Value Sensitive Design: Shaping Technology with Moral Imagination",
+      "url": "https://mitpress.mit.edu/9780262039534/value-sensitive-design/",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    }
+  ],
+  "scenarioAcceptance": [
+    {
+      "scenario": "VSD-SC-001: Conceptual Investigation — waarden en stakeholders",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "VSD-SC-002: Empirical Investigation — context en gebruik",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "VSD-SC-003: Technological Investigation — ontwerp met waarden",
+      "accepted": "__TRUE_FALSE__"
+    }
+  ]
+}

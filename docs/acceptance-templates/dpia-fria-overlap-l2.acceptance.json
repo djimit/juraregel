@@ -1,5 +1,5 @@
 {
-  "ruleSetId": "procesreglement-civiel-dagvaarding",
+  "ruleSetId": "dpia-fria-overlap",
   "version": "2026.1",
   "maturityTarget": "L2-pilot",
   "reviewer": {
@@ -10,7 +10,7 @@
   "review": {
     "datum": "__REVIEW_DATUM_YYYY-MM-DD__",
     "geldigTot": "__GELDIG_TOT_YYYY-MM-DD__",
-    "scope": "L2 pilot voor procesreglement civiel dagvaarding - digitale indiening, griffierechten en bijlijsten.",
+    "scope": "L2 pilot voor DPIA ↔ FRIA Overlap-Matrix — voorkom dubbel werk bij gecombineerde privacy- en AI-impact assessments.",
     "bronSnapshot": "__BRON_SNAPSHOT_ID_OF_DATUM__",
     "verklaring": "__JURIDISCHE_VERKLARING_BINNEN_SCOPE__",
     "beperkingen": [
@@ -20,19 +20,27 @@
   },
   "sourceSnapshotRefs": [
     {
-      "name": "Wetboek van Burgerlijke Rechtsvordering (Rv)",
-      "url": "https://wetten.overheid.nl/BWBR0001827",
+      "name": "EU AI Act Art. 27(2) — DPIA as starting point",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
       "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
     },
     {
-      "name": "procesreglement-civiel JREM export",
-      "url": "use-cases/procesreglement/jrem/exports/procesreglement-civiel-2026.1.json",
+      "name": "EDPB/CNIL guidance on DPIA-FRIA articulation",
+      "url": "https://edpb.europa.eu",
       "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
     }
   ],
   "scenarioAcceptance": [
     {
-      "scenario": "PR-SC-001: Dagvaarding handel - digitaal verplicht",
+      "scenario": "OVL-SC-001: Overlap-secties geïdentificeerd",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "OVL-SC-002: FRIA-specifieke secties aangevuld",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "OVL-SC-003: Gezamenlijke workflow gedocumenteerd",
       "accepted": "__TRUE_FALSE__"
     }
   ]

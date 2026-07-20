@@ -17,9 +17,10 @@
       "sourceRefs": [
         {
           "type": "standaard",
-          "title": "STTR/IMTR",
-          "section": "Standaard toepasbare regels",
-          "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/"
+          "title": "JuraRegel STTR-preflightprofiel",
+          "section": "Input en live read-only pad",
+          "url": "https://github.com/djimit/juraregel/blob/main/docs/source-preflights/sttr-preflight.md",
+          "bronVersie": "2026-07-16"
         }
       ],
       "conditions": {
@@ -39,8 +40,9 @@
         {
           "type": "standaard",
           "title": "STTR/IMTR",
-          "section": "Versie 3.0",
-          "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/"
+          "section": "Status beschikbare versies STTR en IMTR",
+          "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/",
+          "bronDatum": "2026-07-16"
         }
       ],
       "conditions": {
@@ -59,9 +61,10 @@
       "sourceRefs": [
         {
           "type": "standaard",
-          "title": "STTR/IMTR",
-          "section": "Registratie toepasbare regels",
-          "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/"
+          "title": "Specificatie STTR 3.0.1",
+          "section": "Paragraaf 2.4 Aanleveren van toepasbare regels",
+          "url": "https://iplo.nl/publish/pages/162385/20250801-dso-specificatie-sttr-3-0-1_1.pdf",
+          "bronVersie": "2025-08-01"
         }
       ],
       "conditions": {
@@ -80,9 +83,10 @@
       "sourceRefs": [
         {
           "type": "standaard",
-          "title": "STTR/IMTR",
-          "section": "Informatiemodel toepasbare regels",
-          "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/"
+          "title": "JuraRegel STTR-preflightprofiel",
+          "section": "Output: JREM sourceRef mapping",
+          "url": "https://github.com/djimit/juraregel/blob/main/docs/source-preflights/sttr-preflight.md",
+          "bronVersie": "2026-07-16"
         }
       ],
       "conditions": {
@@ -101,9 +105,10 @@
       "sourceRefs": [
         {
           "type": "standaard",
-          "title": "STTR/IMTR",
+          "title": "Verificatiematrix STTR 3.0.0",
           "section": "Verificatiematrix versie 3.0.0",
-          "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/"
+          "url": "https://iplo.nl/publish/pages/162385/verificatiematrixsttr3-0-0.xlsx",
+          "bronVersie": "2025-07-01"
         }
       ],
       "conditions": {
@@ -124,7 +129,8 @@
           "type": "standaard",
           "title": "STTR/IMTR",
           "section": "Afspraken over ondersteunen van versies",
-          "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/"
+          "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/",
+          "bronDatum": "2026-07-16"
         }
       ],
       "conditions": {
@@ -144,9 +150,10 @@
       "sourceRefs": [
         {
           "type": "standaard",
-          "title": "STTR/IMTR",
-          "section": "IMTR conceptrelaties",
-          "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/"
+          "title": "JuraRegel STTR-preflightprofiel",
+          "section": "Fail-closed grens: ontbrekende JREM-mapping",
+          "url": "https://github.com/djimit/juraregel/blob/main/docs/source-preflights/sttr-preflight.md",
+          "bronVersie": "2026-07-16"
         }
       ],
       "conditions": {
@@ -166,9 +173,10 @@
       "sourceRefs": [
         {
           "type": "standaard",
-          "title": "STTR/IMTR",
-          "section": "Aanleveren aan RTR",
-          "url": "https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/"
+          "title": "JuraRegel STTR-preflightprofiel",
+          "section": "Fail-closed grens: onbekend package",
+          "url": "https://github.com/djimit/juraregel/blob/main/docs/source-preflights/sttr-preflight.md",
+          "bronVersie": "2026-07-16"
         }
       ],
       "conditions": {
@@ -184,10 +192,10 @@
   "metadata": {
     "juridischeContext": {
       "wet": "STTR/IMTR + RTR",
-      "wetVersieLaatstGecheckt": "2026-07-06",
+      "wetVersieLaatstGecheckt": "2026-07-16",
       "tariefVersie": "2026.1"
     },
-    "bronverificatieDatum": "2026-07-06",
+    "bronverificatieDatum": "2026-07-16",
     "acceptatieType": "draft"
   },
   "approval": {

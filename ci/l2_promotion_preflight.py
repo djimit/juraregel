@@ -8,6 +8,7 @@ import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from acceptance_metadata import validate_acceptance
+from source_quality import issues_for_rule
 
 
 TARGETS = [
@@ -185,6 +186,14 @@ def evaluate_target(root: Path, target: dict) -> dict:
     jrem = load_json(jrem_path)
     template = load_json(template_path)
 
+    source_issues = [
+        issue
+        for rule in jrem.get("rules", [])
+        for issue in issues_for_rule(rule, jrem)
+    ]
+    if source_issues:
+        reasons.append(f"{len(source_issues)} source-quality issue(s)")
+
     missing = missing_template_fields(template)
     if missing:
         reasons.extend(f"{field} ontbreekt" for field in missing)
@@ -207,6 +216,8 @@ def evaluate_target(root: Path, target: dict) -> dict:
 
     maturity = jrem.get("maturityLevel", "")
     if maturity.startswith(("L2-", "L3-")):
+        if source_issues:
+            blocking = True
         if (jrem.get("approval") or {}).get("type") == "self":
             reasons.append(f"JREM is self-approved at {maturity}")
             blocking = True

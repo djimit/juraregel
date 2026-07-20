@@ -120,6 +120,7 @@ def build_traceability_matrix(base_dir: Path) -> dict:
         "toeslagen": 8514, "omgevingswet": 8515, "basisregistraties": 8516,
         "participatiewet": 8517,
         "judicial-ai-assurance": 8521,
+        "itgc-kader": 8522,
     }
     
     matrix = []

@@ -1,0 +1,51 @@
+{
+  "ruleSetId": "dpia-pre-scan",
+  "version": "2026.1",
+  "maturityTarget": "L2-pilot",
+  "reviewer": {
+    "geaccondeerdDoor": "__JURIST_NAAM__",
+    "rol": "__JURIST_ROL__",
+    "organisatie": "__ORGANISATIE__"
+  },
+  "review": {
+    "datum": "__REVIEW_DATUM_YYYY-MM-DD__",
+    "geldigTot": "__GELDIG_TOT_YYYY-MM-DD__",
+    "scope": "L2 pilot voor Pre-scan DPIA — threshold assessment vóór volledige DPIA conform Handreiking Pre-scan DPIA v2.0 (aug 2024).",
+    "bronSnapshot": "__BRON_SNAPSHOT_ID_OF_DATUM__",
+    "verklaring": "__JURIDISCHE_VERKLARING_BINNEN_SCOPE__",
+    "beperkingen": [
+      "__BEPERKING_1__",
+      "__BEPERKING_2__"
+    ]
+  },
+  "sourceSnapshotRefs": [
+    {
+      "name": "Handreiking Pre-scan DPIA v2.0 (KCBR/JenV)",
+      "url": "https://modellen.jenvgegevens.nl/dpia/",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    },
+    {
+      "name": "EDPB WP29 Guidelines on DPIA",
+      "url": "https://ec.europa.eu/newsroom/article29/items/611236",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    }
+  ],
+  "scenarioAcceptance": [
+    {
+      "scenario": "PS-SC-001: AP-lijst check — verwerking staat op verplichte lijst",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "PS-SC-002: 9 EDPB-criteria — ≥2 positief = DPIA verplicht",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "PS-SC-003: Conclusie GO met volledige DPIA",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "PS-SC-004: Conclusie NO-GO met documentatie",
+      "accepted": "__TRUE_FALSE__"
+    }
+  ]
+}

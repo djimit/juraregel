@@ -1,0 +1,59 @@
+{
+  "ruleSetId": "human-oversight",
+  "version": "2026.1",
+  "maturityTarget": "L2-pilot",
+  "reviewer": {
+    "geaccondeerdDoor": "__JURIST_NAAM__",
+    "rol": "__JURIST_ROL__",
+    "organisatie": "__ORGANISATIE__"
+  },
+  "review": {
+    "datum": "__REVIEW_DATUM_YYYY-MM-DD__",
+    "geldigTot": "__GELDIG_TOT_YYYY-MM-DD__",
+    "scope": "L2 pilot voor Human Oversight Plan — EU AI Act Art. 14 menselijke tussenkomst bij hoog-risico AI.",
+    "bronSnapshot": "__BRON_SNAPSHOT_ID_OF_DATUM__",
+    "verklaring": "__JURIDISCHE_VERKLARING_BINNEN_SCOPE__",
+    "beperkingen": [
+      "__BEPERKING_1__",
+      "__BEPERKING_2__"
+    ]
+  },
+  "sourceSnapshotRefs": [
+    {
+      "name": "EU AI Act Art. 14 — Human oversight",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    },
+    {
+      "name": "A&O Shearman — Article 14 Deep Dive",
+      "url": "https://www.aoshearman.com/en/insights/ao-shearman-on-tech/zooming-in-on-ai-13-eu-ai-act-focus-on-fundamental-rights-impact-assessment-for-high-risk-ai-systems",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    }
+  ],
+  "scenarioAcceptance": [
+    {
+      "scenario": "HO-SC-001: Oversight-mechanismen geïmplementeerd",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "HO-SC-002: Begrijpen — uitlegbaarheid aanwezig",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "HO-SC-003: Interveniëren — mens kan ingrijpen",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "HO-SC-004: Overrulen — mens kan output negeren",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "HO-SC-005: Stoppen — kill-switch beschikbaar",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "HO-SC-006: Rollen + SLA gedefinieerd",
+      "accepted": "__TRUE_FALSE__"
+    }
+  ]
+}

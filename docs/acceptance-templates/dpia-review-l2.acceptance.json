@@ -1,0 +1,51 @@
+{
+  "ruleSetId": "dpia-review",
+  "version": "2026.1",
+  "maturityTarget": "L2-pilot",
+  "reviewer": {
+    "geaccondeerdDoor": "__JURIST_NAAM__",
+    "rol": "__JURIST_ROL__",
+    "organisatie": "__ORGANISATIE__"
+  },
+  "review": {
+    "datum": "__REVIEW_DATUM_YYYY-MM-DD__",
+    "geldigTot": "__GELDIG_TOT_YYYY-MM-DD__",
+    "scope": "L2 pilot voor DPIA Review Protocol — iteratief 'living document' proces met triggers en versiebeheer.",
+    "bronSnapshot": "__BRON_SNAPSHOT_ID_OF_DATUM__",
+    "verklaring": "__JURIDISCHE_VERKLARING_BINNEN_SCOPE__",
+    "beperkingen": [
+      "__BEPERKING_1__",
+      "__BEPERKING_2__"
+    ]
+  },
+  "sourceSnapshotRefs": [
+    {
+      "name": "EDPB WP29 Guidelines on DPIA — Section 4 (After the DPIA)",
+      "url": "https://ec.europa.eu/newsroom/article29/items/611236",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    },
+    {
+      "name": "CNIL PIA — DPIA as a living document",
+      "url": "https://www.cnil.fr/en/privacy-impact-assessment-pia",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    }
+  ],
+  "scenarioAcceptance": [
+    {
+      "scenario": "DR-SC-001: Review-triggers gedefinieerd",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "DR-SC-002: Review-proces gestructureerd",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "DR-SC-003: Versiebeheer en changelog",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "DR-SC-004: Periodieke review gepland",
+      "accepted": "__TRUE_FALSE__"
+    }
+  ]
+}

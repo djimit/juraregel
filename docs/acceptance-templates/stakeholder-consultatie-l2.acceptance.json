@@ -1,0 +1,51 @@
+{
+  "ruleSetId": "stakeholder-consultatie",
+  "version": "2026.1",
+  "maturityTarget": "L2-pilot",
+  "reviewer": {
+    "geaccondeerdDoor": "__JURIST_NAAM__",
+    "rol": "__JURIST_ROL__",
+    "organisatie": "__ORGANISATIE__"
+  },
+  "review": {
+    "datum": "__REVIEW_DATUM_YYYY-MM-DD__",
+    "geldigTot": "__GELDIG_TOT_YYYY-MM-DD__",
+    "scope": "L2 pilot voor Stakeholder Consultatie Protocol — AVG Art. 35(2) consultatie van betrokkenen.",
+    "bronSnapshot": "__BRON_SNAPSHOT_ID_OF_DATUM__",
+    "verklaring": "__JURIDISCHE_VERKLARING_BINNEN_SCOPE__",
+    "beperkingen": [
+      "__BEPERKING_1__",
+      "__BEPERKING_2__"
+    ]
+  },
+  "sourceSnapshotRefs": [
+    {
+      "name": "AVG Art. 35(2) — Seek views of data subjects",
+      "url": "https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:32016R0679",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    },
+    {
+      "name": "EDPB WP29 Guidelines on DPIA — Section 3.4 Consultation",
+      "url": "https://ec.europa.eu/newsroom/article29/items/611236",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    }
+  ],
+  "scenarioAcceptance": [
+    {
+      "scenario": "SC-SC-001: Consultatie-passendheid getoetst",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "SC-SC-002: Stakeholders geïdentificeerd",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "SC-SC-003: Consultatie-methode gekozen en uitgevoerd",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "SC-SC-004: Resultaten verwerkt in DPIA",
+      "accepted": "__TRUE_FALSE__"
+    }
+  ]
+}

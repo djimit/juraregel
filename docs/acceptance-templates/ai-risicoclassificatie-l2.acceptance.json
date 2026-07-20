@@ -1,0 +1,55 @@
+{
+  "ruleSetId": "ai-risicoclassificatie",
+  "version": "2026.1",
+  "maturityTarget": "L2-pilot",
+  "reviewer": {
+    "geaccondeerdDoor": "__JURIST_NAAM__",
+    "rol": "__JURIST_ROL__",
+    "organisatie": "__ORGANISATIE__"
+  },
+  "review": {
+    "datum": "__REVIEW_DATUM_YYYY-MM-DD__",
+    "geldigTot": "__GELDIG_TOT_YYYY-MM-DD__",
+    "scope": "L2 pilot voor AI Risicoclassificatie — EU AI Act Art. 5-6 + Bijlage III classificatie vóór inzet AI-systeem.",
+    "bronSnapshot": "__BRON_SNAPSHOT_ID_OF_DATUM__",
+    "verklaring": "__JURIDISCHE_VERKLARING_BINNEN_SCOPE__",
+    "beperkingen": [
+      "__BEPERKING_1__",
+      "__BEPERKING_2__"
+    ]
+  },
+  "sourceSnapshotRefs": [
+    {
+      "name": "EU AI Act (Verordening (EU) 2024/1689)",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    },
+    {
+      "name": "Bijlage III — Hoog-risico toepassingsgebieden",
+      "url": "https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:32024R1689",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    }
+  ],
+  "scenarioAcceptance": [
+    {
+      "scenario": "ARC-SC-001: Systeem is een AI-systeem (Art. 3(1))",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "ARC-SC-002: Systeem is NIET verboden (Art. 5)",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "ARC-SC-003: Systeem is hoog-risico (Art. 6 + Bijlage III)",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "ARC-SC-004: FRIA verplicht bij hoog-risico",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "ARC-SC-005: Conformity assessment verplicht",
+      "accepted": "__TRUE_FALSE__"
+    }
+  ]
+}

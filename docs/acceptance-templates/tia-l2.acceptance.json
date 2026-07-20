@@ -1,0 +1,60 @@
+{
+  "ruleSetId": "tia",
+  "version": "2026.1",
+  "maturityTarget": "L2-pilot",
+  "reviewer": {
+    "geaccondeerdDoor": "__JURIST_NAAM__",
+    "rol": "__JURIST_ROL__",
+    "organisatie": "__ORGANISATIE__"
+  },
+  "review": {
+    "datum": "__REVIEW_DATUM_YYYY-MM-DD__",
+    "geldigTot": "__GELDIG_TOT_YYYY-MM-DD__",
+    "scope": "L2 pilot voor Transfer Impact Assessment (TIA) — Schrems II compliance bij doorgiften naar derde landen.",
+    "bronSnapshot": "__BRON_SNAPSHOT_ID_OF_DATUM__",
+    "verklaring": "__JURIDISCHE_VERKLARING_BINNEN_SCOPE__",
+    "beperkingen": [
+      "__BEPERKING_1__",
+      "__BEPERKING_2__"
+    ]
+  },
+  "sourceSnapshotRefs": [
+    {
+      "name": "EDPB Recommendations 01/2020 on transfer measures (Schrems II)",
+      "url": "https://edpb.europa.eu/our-work-tools/our-documents/recommendations/recommendations-012020-measures-supplement-transfer_en",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    },
+    {
+      "name": "EDPB Recommendations 02/2020 on European Essential Guarantees",
+      "url": "https://edpb.europa.eu/our-work-tools/our-documents/recommendations/recommendations-022020-european-essential_en",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    },
+    {
+      "name": "Standard Contractual Clauses 2021/914",
+      "url": "https://eur-lex.europa.eu/eli/dec_impl/2021/914/oj",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    }
+  ],
+  "scenarioAcceptance": [
+    {
+      "scenario": "TIA-SC-001: Adequaatheidsbesluit aanwezig",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "TIA-SC-002: SCC ondertekend met juiste module",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "TIA-SC-003: Landenbeoordeling — rule of law en toezicht",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "TIA-SC-004: Supplementerende maatregelen voldoende",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "TIA-SC-005: Doorgifte is verantwoordbaar",
+      "accepted": "__TRUE_FALSE__"
+    }
+  ]
+}

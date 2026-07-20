@@ -1,0 +1,59 @@
+{
+  "ruleSetId": "privacy-by-design",
+  "version": "2026.1",
+  "maturityTarget": "L2-pilot",
+  "reviewer": {
+    "geaccondeerdDoor": "__JURIST_NAAM__",
+    "rol": "__JURIST_ROL__",
+    "organisatie": "__ORGANISATIE__"
+  },
+  "review": {
+    "datum": "__REVIEW_DATUM_YYYY-MM-DD__",
+    "geldigTot": "__GELDIG_TOT_YYYY-MM-DD__",
+    "scope": "L2 pilot voor Privacy by Design & Default checklist — AVG Art. 25 implementatie met 7 fundamentele principes.",
+    "bronSnapshot": "__BRON_SNAPSHOT_ID_OF_DATUM__",
+    "verklaring": "__JURIDISCHE_VERKLARING_BINNEN_SCOPE__",
+    "beperkingen": [
+      "__BEPERKING_1__",
+      "__BEPERKING_2__"
+    ]
+  },
+  "sourceSnapshotRefs": [
+    {
+      "name": "EDPB Guidelines 4/2019 on Article 25 (Privacy by Design)",
+      "url": "https://edpb.europa.eu/our-work-tools/our-documents/guidelines/guidelines-42019-article-25-data-protection-design-and_en",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    },
+    {
+      "name": "AVG Art. 25 — Data protection by design and by default",
+      "url": "https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:32016R0679",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    }
+  ],
+  "scenarioAcceptance": [
+    {
+      "scenario": "PBD-SC-001: Proactief — privacy-risico's geïdentificeerd vóór ontwikkeling",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "PBD-SC-002: Default — privacy-vriendelijke standaardinstellingen",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "PBD-SC-003: Ingebouwd — privacy integraal in SDLC",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "PBD-SC-004: End-to-End — encryptie door gehele levenscyclus",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "PBD-SC-005: Transparant — betrokkenen geïnformeerd",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "PBD-SC-006: Respect — rechten betrokkenen geïmplementeerd",
+      "accepted": "__TRUE_FALSE__"
+    }
+  ]
+}
