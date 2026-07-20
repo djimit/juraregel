@@ -356,6 +356,32 @@ class ComplianceOrchestrator:
                 if resp.status_code == 200:
                     data = resp.json()
                     answer = data["choices"][0]["message"]["content"]
+
+                    # Try to parse JSON from answer
+                    import re
+
+                    json_match = re.search(r"```json\s*(.*?)\s*```", answer, re.DOTALL)
+                    if json_match:
+                        try:
+                            parsed = json.loads(json_match.group(1))
+                            return {
+                                "conclusion": parsed.get("conclusion", answer[:1000]),
+                                "arguments": parsed.get(
+                                    "arguments", {"source": "llm", "model": model}
+                                ),
+                                "confidence": parsed.get("confidence", 0.85),
+                                "actions": parsed.get(
+                                    "actions", self._extract_actions(answer)
+                                ),
+                                "deadlines": parsed.get(
+                                    "deadlines", self._extract_deadlines(answer)
+                                ),
+                                "human_review": parsed.get("human_review", False),
+                                "model": model,
+                            }
+                        except json.JSONDecodeError:
+                            pass
+
                     return {
                         "conclusion": answer[:1000],
                         "arguments": {"source": "llm", "model": model},
@@ -480,11 +506,16 @@ class ComplianceOrchestrator:
 
     def _extract_actions(self, text: str) -> list[str]:
         """Extract actions from LLM output."""
+        import re
+
         actions = []
         for line in text.split("\n"):
             line = line.strip()
-            if line.startswith(("•", "-", "*")) or line[0:1].isdigit():
-                actions.append(line.lstrip("•-*0123456789. "))
+            # Match bullet points, numbered lists, and lines with action keywords
+            if line.startswith(("•", "-", "*")) or re.match(r"^\d+[\.\)]", line):
+                cleaned = re.sub(r"^[•\-\*\d\.\)\s]+", "", line).strip()
+                if cleaned and len(cleaned) > 5:
+                    actions.append(cleaned)
         return actions[:10]
 
     def _extract_deadlines(self, text: str) -> list[dict]:
@@ -492,9 +523,15 @@ class ComplianceOrchestrator:
         import re
 
         deadlines = []
-        pattern = r"(\d{4}-\d{2}-\d{2})"
-        for match in re.finditer(pattern, text):
-            deadlines.append({"date": match.group(1), "source": "llm_output"})
+        # Match ISO dates
+        for match in re.finditer(r"(\d{4}-\d{2}-\d{2})", text):
+            # Get context around the date
+            start = max(0, match.start() - 50)
+            end = min(len(text), match.end() + 50)
+            context = text[start:end].strip()
+            deadlines.append(
+                {"date": match.group(1), "context": context, "source": "llm_output"}
+            )
         return deadlines
 
     def _log_to_audit(self, assessment_id: str, org_id: str, steps: list) -> dict:
