@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JuraRegel API Documentatie — Living Compliance Engine</title>
+<style>
+:root {
+  --primary: #1a365d;
+  --primary-light: #2b6cb0;
+  --accent: #38a169;
+  --bg: #f7fafc;
+  --card-bg: #ffffff;
+  --text: #2d3748;
+  --text-light: #718096;
+  --border: #e2e8f0;
+  --shadow: 0 1px 3px rgba(0,0,0,0.1);
+  --radius: 8px;
+  --code-bg: #1e1e1e;
+  --code-text: #d4d4d4;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+/* Layout */
+.layout { display: flex; min-height: 100vh; }
+.sidebar { width: 280px; background: var(--card-bg); border-right: 1px solid var(--border); padding: 24px; position: sticky; top: 0; height: 100vh; overflow-y: auto; }
+.sidebar h1 { font-size: 1.2rem; color: var(--primary); margin-bottom: 4px; }
+.sidebar .version { font-size: 0.8rem; color: var(--text-light); margin-bottom: 24px; }
+.nav-section { margin-bottom: 20px; }
+.nav-section h3 { font-size: 0.75rem; text-transform: uppercase; color: var(--text-light); letter-spacing: 0.5px; margin-bottom: 8px; }
+.nav-section a { display: block; padding: 6px 0; color: var(--text); text-decoration: none; font-size: 0.9rem; border-left: 2px solid transparent; padding-left: 12px; }
+.nav-section a:hover { color: var(--primary-light); border-left-color: var(--primary-light); }
+.nav-section a.active { color: var(--primary); border-left-color: var(--primary); font-weight: 600; }
+
+.content { flex: 1; padding: 40px; max-width: 900px; }
+.content h1 { font-size: 2rem; color: var(--primary); margin-bottom: 16px; }
+.content h2 { font-size: 1.5rem; color: var(--primary); margin: 40px 0 16px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+.content h3 { font-size: 1.2rem; color: var(--primary); margin: 24px 0 12px; }
+.content p { margin-bottom: 12px; }
+.content ul, .content ol { margin: 12px 0 12px 24px; }
+.content li { margin-bottom: 6px; }
+
+/* Code blocks */
+pre { background: var(--code-bg); color: var(--code-text); padding: 16px; border-radius: var(--radius); overflow-x: auto; font-size: 0.85rem; line-height: 1.5; margin: 12px 0; }
+code { font-family: 'Fira Code', 'Cascadia Code', monospace; font-size: 0.85rem; }
+:not(pre) > code { background: #f0f0f0; padding: 2px 6px; border-radius: 4px; }
+
+/* Endpoint cards */
+.endpoint { background: var(--card-bg); border-radius: var(--radius); padding: 20px; margin: 16px 0; box-shadow: var(--shadow); border-left: 4px solid var(--primary); }
+.endpoint.get { border-left-color: #38a169; }
+.endpoint.post { border-left-color: #3182ce; }
+.endpoint.put { border-left-color: #d69e2e; }
+.endpoint.delete { border-left-color: #e53e3e; }
+.endpoint-header { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+.method { font-weight: 700; font-size: 0.75rem; padding: 4px 10px; border-radius: 4px; color: white; }
+.method.get { background: #38a169; }
+.method.post { background: #3182ce; }
+.method.put { background: #d69e2e; }
+.method.delete { background: #e53e3e; }
+.path { font-family: monospace; font-size: 0.95rem; font-weight: 600; }
+.endpoint-desc { color: var(--text-light); font-size: 0.9rem; margin-top: 4px; }
+
+/* Tables */
+table { width: 100%; border-collapse: collapse; margin: 12px 0; background: var(--card-bg); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+th, td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+th { background: #f8f9fa; font-weight: 600; color: var(--primary); }
+tr:last-child td { border-bottom: none; }
+
+/* Tags */
+.tag { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 600; }
+.tag.required { background: #fed7d7; color: #c53030; }
+.tag.optional { background: #e2e8f0; color: #4a5568; }
+
+/* Alert boxes */
+.alert { padding: 14px 18px; border-radius: var(--radius); margin: 16px 0; font-size: 0.9rem; }
+.alert.info { background: #ebf8ff; border-left: 4px solid #3182ce; }
+.alert.warning { background: #fffff0; border-left: 4px solid #d69e2e; }
+.alert.success { background: #f0fff4; border-left: 4px solid #38a169; }
+
+/* Hero */
+.hero { background: linear-gradient(135deg, var(--primary), var(--primary-light)); color: white; padding: 40px; border-radius: var(--radius); margin-bottom: 32px; }
+.hero h1 { color: white; margin-bottom: 8px; }
+.hero p { opacity: 0.9; font-size: 1.05rem; }
+.hero-stats { display: flex; gap: 32px; margin-top: 24px; flex-wrap: wrap; }
+.hero-stat { text-align: center; }
+.hero-stat-value { font-size: 1.5rem; font-weight: 700; }
+.hero-stat-label { font-size: 0.8rem; opacity: 0.8; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .layout { flex-direction: column; }
+  .sidebar { width: 100%; height: auto; position: relative; }
+  .content { padding: 20px; }
+}
+</style>
+</head>
+<body>
+
+<div class="layout">
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <h1>🏛️ JuraRegel</h1>
+    <div class="version">API v4.0 — Living Compliance Engine</div>
+
+    <div class="nav-section">
+      <h3>Start</h3>
+      <a href="#intro">Introductie</a>
+      <a href="#quickstart">Snelstart</a>
+      <a href="#auth">Authenticatie</a>
+    </div>
+
+    <div class="nav-section">
+      <h3>Core</h3>
+      <a href="#templates">Templates</a>
+      <a href="#assessments">Assessments</a>
+      <a href="#processing">Verwerkingsactiviteiten</a>
+      <a href="#evidence">Evidence</a>
+    </div>
+
+    <div class="nav-section">
+      <h3>AI & Compliance</h3>
+      <a href="#agents">AI Agents</a>
+      <a href="#compliance">Compliance Scoring</a>
+      <a href="#policies">Policy-as-Code</a>
+    </div>
+
+    <div class="nav-section">
+      <h3>Gidsen</h3>
+      <a href="#architecture">Architectuur</a>
+      <a href="#integration">Integratie</a>
+      <a href="#juridisch">Juridische Referentie</a>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <main class="content">
+
+    <!-- Hero -->
+    <div class="hero">
+      <h1>API Documentatie</h1>
+      <p>Complete referentie voor de JuraRegel Living Compliance Engine REST API</p>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="hero-stat-value">40+</div><div class="hero-stat-label">Endpoints</div></div>
+        <div class="hero-stat"><div class="hero-stat-value">37</div><div class="hero-stat-label">Templates</div></div>
+        <div class="hero-stat"><div class="hero-stat-value">6</div><div class="hero-stat-label">AI Agents</div></div>
+        <div class="hero-stat"><div class="hero-stat-value">7</div><div class="hero-stat-label">Score Criteria</div></div>
+      </div>
+    </div>
+
+    <!-- Introductie -->
+    <section id="intro">
+      <h2>Introductie</h2>
+      <p>De JuraRegel API biedt programmatische toegang tot de volledige Living Compliance Engine. Genereer assessments, voer juridische analyses uit, en monitor compliance — alles via REST endpoints.</p>
+
+      <div class="alert info">
+        <strong>Base URL:</strong> <code>http://localhost:8080/api/v1/</code><br>
+        <strong>OpenAPI Spec:</strong> <code>http://localhost:8080/openapi.json</code><br>
+        <strong>Swagger UI:</strong> <code>http://localhost:8080/docs</code>
+      </div>
+
+      <h3>Kenmerken</h3>
+      <ul>
+        <li><strong>40+ REST endpoints</strong> — Templates, assessments, agents, scoring, policies</li>
+        <li><strong>AI-gestuurde analyse</strong> — DPIA Agent, FRIA Agent, Regulatory Monitor</li>
+        <li><strong>Real-time compliance scoring</strong> — 7-criteria gewogen model</li>
+        <li><strong>Policy-as-Code</strong> — Testbare compliance policies</li>
+        <li><strong>Multi-tenant</strong> — Row Level Security per organisatie</li>
+        <li><strong>Audit trail</strong> — Immutable logging van alle acties</li>
+      </ul>
+    </section>
+
+    <!-- Snelstart -->
+    <section id="quickstart">
+      <h2>Snelstart</h2>
+
+      <h3>1. API Starten</h3>
+      <pre><code># Met Docker Compose (aanbevolen)
+docker compose up -d
+
+# Of lokaal met Python
+pip install -r requirements.txt
+python3 api/run.py
+
+# API beschikbaar op http://localhost:8080</code></pre>
+
+      <h3>2. Health Check</h3>
+      <pre><code>curl http://localhost:8080/health
+
+# Response:
+{"service": "juraregel-api", "status": "healthy", "version": "4.0.0"}</code></pre>
+
+      <h3>3. Eerste Assessment Genereren</h3>
+      <pre><code>curl -X POST http://localhost:8080/api/v1/assessments/ \
+  -H "Content-Type: application/json" \
+  -d '{
+    "organisation_id": "org-1",
+    "assessment_type": "dpia",
+    "template_id": "dpia_pre_scan",
+    "parameters": {"verwerking": "WOZ-AI Waardering"}
+  }'</code></pre>
+
+      <h3>4. Compliance Score Berekenen</h3>
+      <pre><code>curl -X POST http://localhost:8080/api/v1/compliance/score \
+  -H "Content-Type: application/json" \
+  -d '{
+    "measures_implemented": 5,
+    "measures_total": 8,
+    "training_current": true
+  }'
+
+# Response:
+{"score": 72.5, "classification": "good", ...}</code></pre>
+    </section>
+
+    <!-- Authenticatie -->
+    <section id="auth">
+      <h2>Authenticatie</h2>
+      <p>De API ondersteunt meerdere authenticatie-methoden:</p>
+
+      <table>
+        <thead><tr><th>Methode</th><th>Header</th><th>Gebruik</th></tr></thead>
+        <tbody>
+          <tr><td>JWT Bearer</td><td><code>Authorization: Bearer &lt;token&gt;</code></td><td>Productie (Keycloak)</td></tr>
+          <tr><td>API Key</td><td><code>Authorization: ApiKey &lt;key&gt;</code></td><td>Service-to-service</td></tr>
+          <tr><td>Geen</td><td>—</td><td>Health checks, docs</td></tr>
+        </tbody>
+      </table>
+
+      <div class="alert warning">
+        <strong>Development mode:</strong> Zonder KEYCLOAK_URL worden tokens lokaal gevalideerd met JWT_SECRET.
+      </div>
+    </section>
+
+    <!-- Templates -->
+    <section id="templates">
+      <h2>Templates</h2>
+      <p>37 evidence-based compliance templates voor DPIA, FRIA, IAMA, LIA, TIA, en meer.</p>
+
+      <div class="endpoint get">
+        <div class="endpoint-header"><span class="method get">GET</span><span class="path">/api/v1/templates/</span></div>
+        <div class="endpoint-desc">Lijst alle beschikbare templates met metadata</div>
+        <details><summary>Response voorbeeld</summary>
+        <pre><code>[
+  {
+    "id": "dpia_pre_scan",
+    "document": "Pre-scan DPIA — Threshold Assessment",
+    "wettelijke_basis": "AVG Art. 35(1) + Handreiking Pre-scan DPIA v2.0",
+    "section_count": 3,
+    "has_checkboxes": true,
+    "has_scoring": true
+  }
+]</code></pre>
+        </details>
+      </div>
+
+      <div class="endpoint get">
+        <div class="endpoint-header"><span class="method get">GET</span><span class="path">/api/v1/templates/{template_id}</span></div>
+        <div class="endpoint-desc">Haal template metadata en structuur op</div>
+      </div>
+
+      <div class="endpoint post">
+        <div class="endpoint-header"><span class="method post">POST</span><span class="path">/api/v1/templates/{template_id}/generate</span></div>
+        <div class="endpoint-desc">Genereer een document vanuit een template</div>
+        <details><summary>Request body</summary>
+        <pre><code>{
+  "organisation": "Gemeente Voorbeeld",
+  "parameters": {"verwerking": "WOZ-AI Waardering"}
+}</code></pre>
+        </details>
+      </div>
+
+      <div class="endpoint post">
+        <div class="endpoint-header"><span class="method post">POST</span><span class="path">/api/v1/templates/{template_id}/render</span></div>
+        <div class="endpoint-desc">Render een document naar markdown, html, of json</div>
+      </div>
+
+      <div class="endpoint post">
+        <div class="endpoint-header"><span class="method post">POST</span><span class="path">/api/v1/templates/{template_id}/validate</span></div>
+        <div class="endpoint-desc">Valideer een document tegen het template schema</div>
+      </div>
+    </section>
+
+    <!-- Assessments -->
+    <section id="assessments">
+      <h2>Assessments</h2>
+      <p>CRUD + workflow voor compliance assessments (draft → review → approved → published → archived).</p>
+
+      <div class="endpoint post">
+        <div class="endpoint-header"><span class="method post">POST</span><span class="path">/api/v1/assessments/</span></div>
+        <div class="endpoint-desc">Maak een nieuw assessment aan</div>
+      </div>
+
+      <div class="endpoint get">
+        <div class="endpoint-header"><span class="method get">GET</span><span class="path">/api/v1/assessments/</span></div>
+        <div class="endpoint-desc">Lijst assessments (filterbaar op type, status)</div>
+      </div>
+
+      <div class="endpoint post">
+        <div class="endpoint-header"><span class="method post">POST</span><span class="path">/api/v1/assessments/{id}/submit</span></div>
+        <div class="endpoint-desc">Draag in voor review</div>
+      </div>
+
+      <div class="endpoint post">
+        <div class="endpoint-header"><span class="method post">POST</span><span class="path">/api/v1/assessments/{id}/approve</span></div>
+        <div class="endpoint-desc">Keur het assessment goed (vereist FG rol)</div>
+      </div>
+
+      <div class="endpoint post">
+        <div class="endpoint-header"><span class="method post">POST</span><span class="path">/api/v1/assessments/{id}/publish</span></div>
+        <div class="endpoint-desc">Publiceer het approved assessment</div>
+      </div>
+
+      <div class="endpoint post">
+        <div class="endpoint-header"><span class="method post">POST</span><span class="path">/api/v1/assessments/{id}/archive</span></div>
+        <div class="endpoint-desc">Archiveer het published assessment</div>
+      </div>
+
+      <div class="alert info">
+        <strong>Workflow:</strong> draft → in_review → approved → published → archived<br>
+        Elke transitie wordt gelogd in de audit trail met actor, timestamp, en reden.
+      </div>
+    </section>
+
+    <!-- AI Agents -->
+    <section id="agents">
+      <h2>AI Agents</h2>
+      <p>Autonome agents die compliance-taken end-to-end uitvoeren met traceerbare stappen.</p>
+
+      <div class="endpoint get">
+        <div class="endpoint-header"><span class="method get">GET</span><span class="path">/api/v1/agents/</span></div>
+        <div class="endpoint-desc">Lijst beschikbare agents</div>
+      </div>
+
+      <div class="endpoint post">
+        <div class="endpoint-header"><span class="method post">POST</span><span class="path">/api/v1/agents/dpia/run</span></div>
+        <div class="endpoint-desc">Voer de DPIA Agent uit — genereert volledige DPIA met risico-analyse en maatregelen</div>
+        <details><summary>Request + Response</summary>
+        <pre><code>// Request
+{
+  "organisation_id": "org-1",
+  "processing_activity": {
+    "name": "WOZ-AI",
+    "ai_systems": true,
+    "data_categories": ["Naam", "Adres", "WOZ-waarde"],
+    "data_subjects": ["Eigenaren"],
+    "data_subject_count": 50000
+  }
+}
+
+// Response
+{
+  "agent": "DPIA Agent",
+  "status": "success",
+  "confidence": 0.94,
+  "output": {
+    "document": {...},
+    "risks": [...],
+    "measures": [...]
+  },
+  "trace": [
+    {"step": "pre_scan", "status": "complete", "result": "GO"},
+    {"step": "generate", "status": "complete"},
+    {"step": "risk_analysis", "status": "complete", "risks_found": 3}
+  ]
+}</code></pre>
+        </details>
+      </div>
+
+      <div class="endpoint post">
+        <div class="endpoint-header"><span class="method post">POST</span><span class="path">/api/v1/agents/fria/run</span></div>
+        <div class="endpoint-desc">Voer de FRIA Agent uit — genereert volledige FRIA</div>
+      </div>
+
+      <div class="endpoint post">
+        <div class="endpoint-header"><span class="method post">POST</span><span class="path">/api/v1/agents/regulatory/scan</span></div>
+        <div class="endpoint-desc">Scan op wetswijzigingen met impact-analyse</div>
+      </div>
+
+      <div class="endpoint post">
+        <div class="endpoint-header"><span class="method post">POST</span><span class="path">/api/v1/agents/full-check</span></div>
+        <div class="endpoint-desc">Volledige compliance check — alle agents in één call</div>
+      </div>
+    </section>
+
+    <!-- Compliance Scoring -->
+    <section id="compliance">
+      <h2>Compliance Scoring</h2>
+      <p>Real-time compliance score berekening op basis van 7 gewogen criteria.</p>
+
+      <div class="endpoint post">
+        <div class="endpoint-header"><span class="method post">POST</span><span class="path">/api/v1/compliance/score</span></div>
+        <div class="endpoint-desc">Bereken compliance score</div>
+        <details><summary>Score Model</summary>
+        <table>
+          <thead><tr><th>Criterium</th><th>Weight</th><th>Meetmethode</th></tr></thead>
+          <tbody>
+            <tr><td>Documentatie Compleetheid</td><td>20%</td><td>% ingevulde secties</td></tr>
+            <tr><td>Evidence Actualiteit</td><td>15%</td><td>% bewijsstukken &lt; 1 jaar</td></tr>
+            <tr><td>Review-Termijnen</td><td>15%</td><td>% op tijd herzien</td></tr>
+            <tr><td>Maatregelen-Implementatie</td><td>20%</td><td>% geïmplementeerd</td></tr>
+            <tr><td>Incidenten-Afhandeling</td><td>10%</td><td>% binnen SLA</td></tr>
+            <tr><td>Training Actualiteit</td><td>10%</td><td>Actueel ja/nee</td></tr>
+            <tr><td>Stakeholder-Consultatie</td><td>10%</td><td>% geraadpleegd</td></tr>
+          </tbody>
+        </table>
+        </details>
+      </div>
+
+      <div class="endpoint get">
+        <div class="endpoint-header"><span class="method get">GET</span><span class="path">/api/v1/compliance/criteria</span></div>
+        <div class="endpoint-desc">Lijst scoring criteria en weights</div>
+      </div>
+
+      <div class="endpoint get">
+        <div class="endpoint-header"><span class="method get">GET</span><span class="path">/api/v1/compliance/classifications</span></div>
+        <div class="endpoint-desc">Lijst classificaties (excellent/good/sufficient/insufficient/critical)</div>
+      </div>
+    </section>
+
+    <!-- Policy-as-Code -->
+    <section id="policies">
+      <h2>Policy-as-Code</h2>
+      <p>Compliance-regels geëxcodeerd als testbare, automatische policies.</p>
+
+      <div class="endpoint get">
+        <div class="endpoint-header"><span class="method get">GET</span><span class="path">/api/v1/policies/</span></div>
+        <div class="endpoint-desc">Lijst beschikbare policies</div>
+      </div>
+
+      <div class="endpoint post">
+        <div class="endpoint-header"><span class="method post">POST</span><span class="path">/api/v1/policies/evaluate</span></div>
+        <div class="endpoint-desc">Evalueer alle policies tegen een context</div>
+        <details><summary>Voorbeeld</summary>
+        <pre><code>// Request
+{
+  "context": {
+    "purpose": "Recruitment AI",
+    "data_categories": ["Naam", "Geslacht", "Leeftijd"],
+    "security_measures": ["encryptie"],
+    "ai_systems": true,
+    "bias_examined": false
+  }
+}
+
+// Response
+{
+  "total_policies": 4,
+  "compliant": 1,
+  "non_compliant": 3,
+  "compliance_rate": 25.0,
+  "violations": [
+    {
+      "policy_id": "ai-act-art10-data-governance",
+      "article": "EU AI Act Art. 10(2)(f)",
+      "message": "Training data is niet onderzocht op biases",
+      "severity": "high",
+      "remediation": "Voer bias-auditing uit"
+    }
+  ]
+}</code></pre>
+        </details>
+      </div>
+
+      <div class="endpoint post">
+        <div class="endpoint-header"><span class="method post">POST</span><span class="path">/api/v1/policies/evaluate/{policy_id}</span></div>
+        <div class="endpoint-desc">Evalueer een specifieke policy</div>
+      </div>
+
+      <div class="alert success">
+        <strong>Geïmplementeerde policies:</strong>
+        <ul>
+          <li>AVG Art. 25 — Data Minimization</li>
+          <li>AVG Art. 32 — Security of Processing</li>
+          <li>EU AI Act Art. 10 — Data Governance</li>
+          <li>EU AI Act Art. 14 — Human Oversight</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Architectuur -->
+    <section id="architecture">
+      <h2>Architectuur</h2>
+
+      <h3>Tech Stack</h3>
+      <table>
+        <thead><tr><th>Component</th><th>Technologie</th><th>Doel</th></tr></thead>
+        <tbody>
+          <tr><td>API</td><td>FastAPI (Python)</td><td>REST endpoints, validatie</td></tr>
+          <tr><td>Database</td><td>PostgreSQL 16 + RLS</td><td>Multi-tenant data</td></tr>
+          <tr><td>Vector Store</td><td>Qdrant</td><td>RAG embeddings</td></tr>
+          <tr><td>Auth</td><td>Keycloak (OAuth2/OIDC)</td><td>Authenticatie</td></tr>
+          <tr><td>Cache</td><td>Redis</td><td>Sessions, rate limiting</td></tr>
+          <tr><td>LLM</td><td>Claude (via LiteLLM)</td><td>Juridische reasoning</td></tr>
+         </tbody>
+      </table>
+
+      <h3>Data Flow</h3>
+      <pre><code>Wetgeving → Ingestion → Chunking → Embedding → Qdrant
+                                    ↓
+Query → RAG Search → Context → LLM → Validatie → Response
+                                    ↓
+                              Audit Trail (immutable)</code></pre>
+    </section>
+
+    <!-- Integratie -->
+    <section id="integration">
+      <h2>Integratie Gids</h2>
+
+      <h3>Python Client</h3>
+      <pre><code>import httpx
+
+client = httpx.Client(base_url="http://localhost:8080")
+
+# Genereer DPIA
+resp = client.post("/api/v1/templates/dpia_pre_scan/generate", json={
+    "organisation": "Mijn Organisatie",
+    "parameters": {"verwerking": "Klantanalyse"}
+})
+dpia = resp.json()["document"]
+
+# Bereken compliance score
+resp = client.post("/api/v1/compliance/score", json={
+    "measures_implemented": 6,
+    "measures_total": 8,
+    "training_current": True
+})
+score = resp.json()["score"]</code></pre>
+
+      <h3>cURL</h3>
+      <pre><code># Health check
+curl http://localhost:8080/health
+
+# Run DPIA Agent
+curl -X POST http://localhost:8080/api/v1/agents/dpia/run \
+  -H "Content-Type: application/json" \
+  -d '{"organisation_id": "org-1", "processing_activity": {...}}'</code></pre>
+
+      <h3>JavaScript/TypeScript</h3>
+      <pre><code>const response = await fetch("http://localhost:8080/api/v1/compliance/score", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    measures_implemented: 5,
+    measures_total: 8,
+    training_current: true
+  })
+});
+const { score, classification } = await response.json();</code></pre>
+    </section>
+
+    <!-- Juridische Referentie -->
+    <section id="juridisch">
+      <h2>Juridische Referentie</h2>
+
+      <h3>AVG Artikelen</h3>
+      <table>
+        <thead><tr><th>Artikel</th><th>Onderwerp</th><th>Template</th></tr></thead>
+        <tbody>
+          <tr><td>Art. 5</td><td>Beginselen</td><td>dpia_rijksdienst</td></tr>
+          <tr><td>Art. 6</td><td>Rechtmatigheid</td><td>lia</td></tr>
+          <tr><td>Art. 25</td><td>Privacy by Design</td><td>privacy_by_design</td></tr>
+          <tr><td>Art. 32</td><td>Beveiliging</td><td>ib_beleid</td></tr>
+          <tr><td>Art. 35</td><td>DPIA</td><td>dpia_pre_scan, dpia_rijksdienst</td></tr>
+        </tbody>
+      </table>
+
+      <h3>EU AI Act Artikelen</h3>
+      <table>
+        <thead><tr><th>Artikel</th><th>Onderwerp</th><th>Template</th></tr></thead>
+        <tbody>
+          <tr><td>Art. 5</td><td>Verboden AI</td><td>ai_risicoclassificatie</td></tr>
+          <tr><td>Art. 6</td><td>Hoog-risico</td><td>ai_risicoclassificatie</td></tr>
+          <tr><td>Art. 9</td><td>Risicobeheer</td><td>risico_methodiek</td></tr>
+          <tr><td>Art. 10</td><td>Data Governance</td><td>bias_audit</td></tr>
+          <tr><td>Art. 14</td><td>Menselijke tussenkomst</td><td>human_oversight</td></tr>
+          <tr><td>Art. 27</td><td>FRIA</td><td>fria_eu</td></tr>
+        </tbody>
+      </table>
+
+      <div class="alert info">
+        <strong>Academische referenties:</strong>
+        <ul>
+          <li>Schwarcz et al. (2025) — RAG reduces hallucination to human-baseline</li>
+          <li>Barron et al. (2025) — RAG + Knowledge Graphs for legal reasoning</li>
+          <li>Harvard JOLT (2025) — RAG is prerequisite for legal AI</li>
+          <li>Yale LaborBench (2026) — Standardized legal RAG evaluation</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+// Smooth scroll for nav links
+document.querySelectorAll('.sidebar a[href^="#"]').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
