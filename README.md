@@ -1,14 +1,14 @@
-# JuraRegel — Legal RuleOps Platform
+# JuraRegel — Legal Engineering Platform
 
 [![JuraRegel CI](https://github.com/djimit/juraregel/actions/workflows/juraregel-ci.yml/badge.svg)](https://github.com/djimit/juraregel/actions/workflows/juraregel-ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Rule Sets](https://img.shields.io/badge/Rule%20Sets-34%20%288%20L1%2C%2026%20L0%29-blue)](https://github.com/djimit/juraregel)
-[![Tests](https://img.shields.io/badge/Tests-semantic%20gates-green)](https://github.com/djimit/juraregel)
-[![Regels](https://img.shields.io/badge/JREM%20Regels-750%20%28PoC%29-purple)](https://github.com/djimit/juraregel)
-[![Agentic](https://img.shields.io/badge/Agentic-Platform-orange)](https://github.com/djimit/juraregel)
-[![MCP](https://img.shields.io/badge/MCP-16%20tools%20%2B%203%20resources%20%2B%203%20prompts-teal)](https://github.com/djimit/juraregel)
-[![BDD](https://img.shields.io/badge/BDD-7%20scenarios-brightgreen)](https://github.com/djimit/juraregel)
-[![Schema](https://img.shields.io/badge/JREM-Schema%20v1.1.0-lightblue)](https://github.com/djimit/juraregel)
+[![Tests](https://img.shields.io/badge/Tests-27%20unit%20%2B%20e2e-green)](https://github.com/djimit/juraregel)
+[![Regels](https://img.shields.io/badge/JREM%20Regels-1137%2B-purple)](https://github.com/djimit/juraregel)
+[![Agentic](https://img.shields.io/badge/Compliance%20Agent-Level%204-orange)](https://github.com/djimit/juraregel)
+[![API](https://img.shields.io/badge/API-82%2B%20endpoints-teal)](https://github.com/djimit/juraregel)
+[![RAG](https://img.shields.io/badge/RAG-Cloud%20LLM%20%2B%20Qdrant-brightgreen)](https://github.com/djimit/juraregel)
+[![Evaluation](https://img.shields.io/badge/OpenMythos-Grade%20A-lightblue)](https://github.com/djimit/juraregel)
 
 <p align="center">
   <a href="docs/assets/juraregel-togaf-landscape.svg">
@@ -456,27 +456,52 @@ Open `dashboard/index.html` voor een visueel overzicht met live health checks.
 ```mermaid
 graph TB
     subgraph "Bronnen"
-        R[Rechtspraak.nl]
+        R[Rechtspraak.nl\nPseudonimiseringsrichtlijn]
         B[MinBZK GitHub — BIO2]
-        F[Forum Standaardisatie]
-        L[Logius / developer.overheid.nl]
-        N[noraonline.nl]
+        F[Forum Standaardisatie\nVerplichte Open Standaarden]
+        L[Logius / developer.overheid.nl\nAPI Design Rules]
+        N[noraonline.nl\nNORA Architectuur]
         EU[EUR-Lex — EU AI Act]
         AVG[wetten.overheid.nl — AVG]
         NED[NEDERUS Framework\nMulti-jurisdictionele mapping]
+        EDPB[EDPB — Richtlijnen]
+        AP[Autoriteit Persoonsgegevens]
     end
 
-    subgraph "JuraRegel Platform"
+    subgraph "Data & AI Laag"
+        RAG[RAG Engine\nQdrant + Embeddings]
+        LLM[LiteLLM Proxy\nGemini / GPT-5 / DeepSeek]
+        KG[Knowledge Graph\nConcept-relaties]
+        CORPUS[Legal Corpus\nAVG + AI Act + EDPB]
+    end
+
+    subgraph "JuraRegel Core Platform"
         RS[RegelSpraak CNL]
         JREM[JREM JSON Schema 2020-12]
         CI[CI/CD — 14 Gates]
-        API[Rule API — FastAPI :8490-8499]
+        API[Rule API — FastAPI :8096]
+        ORCH[Compliance Orchestrator\nAutonome 7-staps agent]
+    end
+
+    subgraph "Analysis & Reasoning"
+        REASON[Legal Reasoning Engine\nToulmin argumentatie]
+        PRED[Predictive Compliance\nRisico-voorspelling]
+        DRIFT[Drift Detection\nContinue monitoring]
+        JURIS[Multi-Jurisdiction\nNL + EU + INT]
+        SELF[Self-Learning\nFeedback + patronen]
+    end
+
+    subgraph "Output & Accountability"
+        REPORT[Report Generator\nDPIA / FRIA / IAMA]
+        TWIN[Compliance Digital Twin\nWhat-if scenario's]
+        AUDIT[Accountable AI\nAudit-trail + compliance-proof]
+        EVAL[Continuous Evaluation\nOpenMythos benchmarks]
     end
 
     subgraph "Consumers"
         SDK[TypeScript SDK — @juraregel/sdk]
         CLI[npx juraregel]
-        DASH[Dashboard]
+        DASH[Next.js Dashboard\n:3006]
         PLAY[Playground]
         DOCKER[docker compose up]
         GH[GitHub Actions]
@@ -489,9 +514,38 @@ graph TB
     N --> RS
     EU --> RS
     AVG --> RS
+    NED --> RS
+    EDPB --> CORPUS
+    AP --> CORPUS
+
+    CORPUS --> RAG
+    CORPUS --> KG
+    RAG --> LLM
+
     RS --> JREM
     JREM --> CI
     CI --> API
+    API --> ORCH
+
+    ORCH --> REASON
+    ORCH --> PRED
+    ORCH --> DRIFT
+    ORCH --> JURIS
+    ORCH --> SELF
+    ORCH --> RAG
+    ORCH --> KG
+
+    REASON --> REPORT
+    PRED --> REPORT
+    JURIS --> REPORT
+    DRIFT --> TWIN
+    SELF --> EVAL
+
+    REPORT --> DASH
+    TWIN --> DASH
+    AUDIT --> DASH
+    EVAL --> DASH
+
     API --> SDK
     API --> CLI
     API --> DASH
