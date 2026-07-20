@@ -33,6 +33,7 @@ from .routes import (
     jurisdiction,
     digital_twin,
     orchestrator,
+    reports,
 )
 from .middleware import RateLimitMiddleware, TenantMiddleware
 
@@ -135,6 +136,7 @@ app.include_router(
 app.include_router(
     orchestrator.router, prefix="/api/v1/orchestrator", tags=["Orchestrator"]
 )
+app.include_router(reports.router, prefix="/api/v1/reports", tags=["Reports"])
 
 
 @app.get("/", tags=["Root"])
