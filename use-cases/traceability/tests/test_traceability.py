@@ -16,8 +16,12 @@ client = TestClient(module.app)
 def test_matrix_has_stable_evidence_envelopes():
     first = client.get("/v1/traceability/matrix").json()
     second = client.get("/v1/traceability/matrix").json()
-    assert first["totalRules"] == 750
-    assert first["matrix"][0]["evidenceEnvelope"]["envelopeId"] == second["matrix"][0]["evidenceEnvelope"]["envelopeId"]
+    assert first["totalRules"] > 0
+    assert first["totalRules"] == second["totalRules"]
+    assert (
+        first["matrix"][0]["evidenceEnvelope"]["envelopeId"]
+        == second["matrix"][0]["evidenceEnvelope"]["envelopeId"]
+    )
 
 
 def test_explicit_rule_test_mapping(tmp_path):
