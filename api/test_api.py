@@ -197,3 +197,87 @@ class TestRoot:
         data = resp.json()
         assert data["service"] == "JuraRegel Compliance API"
         assert "endpoints" in data
+
+
+class TestAgents:
+    def test_list_agents(self):
+        resp = client.get("/api/v1/agents/")
+        assert resp.status_code == 200
+        data = resp.json()
+        assert len(data["agents"]) == 3
+
+    def test_run_dpia_agent(self):
+        resp = client.post(
+            "/api/v1/agents/dpia/run",
+            json={
+                "organisation_id": "org-1",
+                "processing_activity": {
+                    "name": "Test AI",
+                    "organisation": "Test Org",
+                    "ai_systems": True,
+                    "data_categories": ["Naam", "Geslacht"],
+                    "data_subjects": ["Kandidaten"],
+                    "data_subject_count": 10000,
+                },
+            },
+        )
+        assert resp.status_code == 200
+        data = resp.json()
+        assert data["agent"] == "DPIA Agent"
+        assert data["status"] in ("success", "complete")
+        assert "confidence" in data
+        assert "trace" in data
+
+    def test_run_fria_agent(self):
+        resp = client.post(
+            "/api/v1/agents/fria/run",
+            json={
+                "organisation_id": "org-1",
+                "ai_system": {
+                    "name": "CV-systeem",
+                    "organisation": "Test Org",
+                    "domain": "recruitment",
+                },
+            },
+        )
+        assert resp.status_code == 200
+        data = resp.json()
+        assert data["agent"] == "FRIA Agent"
+
+    def test_run_regulatory_scan(self):
+        resp = client.post("/api/v1/agents/regulatory/scan")
+        assert resp.status_code == 200
+        data = resp.json()
+        assert data["agent"] == "Regulatory Monitor"
+
+
+class TestCompliance:
+    def test_calculate_score(self):
+        resp = client.post(
+            "/api/v1/compliance/score",
+            json={
+                "content": {"inhoud": {"sectie_1": {"content": "ingevuld"}}},
+                "evidence_list": [{"expiry_date": "2027-01-01"}],
+                "measures_implemented": 5,
+                "measures_total": 8,
+                "training_current": True,
+            },
+        )
+        assert resp.status_code == 200
+        data = resp.json()
+        assert "score" in data
+        assert "classification" in data
+        assert "criteria" in data
+        assert 0 <= data["score"] <= 100
+
+    def test_list_criteria(self):
+        resp = client.get("/api/v1/compliance/criteria")
+        assert resp.status_code == 200
+        data = resp.json()
+        assert len(data["criteria"]) == 7
+
+    def test_list_classifications(self):
+        resp = client.get("/api/v1/compliance/classifications")
+        assert resp.status_code == 200
+        data = resp.json()
+        assert len(data["classifications"]) == 5
