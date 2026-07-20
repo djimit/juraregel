@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export default function PoliciesPage() {
   const [evaluating, setEvaluating] = useState(false);
-  const [result, setResult] = useState<Record<string, unknown> | null>(null);
+  const [result, setResult] = useState(null);
 
   const evaluate = async () => {
     setEvaluating(true);
@@ -27,16 +27,12 @@ export default function PoliciesPage() {
       if (resp.ok) setResult(await resp.json());
     } catch {
       setResult({
-        total_policies: 4,
-        compliant: 1,
-        non_compliant: 3,
-        compliance_rate: 25.0,
+        total_policies: 4, compliant: 1, non_compliant: 3, compliance_rate: 25.0,
         violations: [
           { policy_id: "ai-act-art10", article: "EU AI Act Art. 10(3)", message: "Training data niet onderzocht op biases", severity: "high", remediation: "Voer bias-auditing uit" },
           { policy_id: "avg-art25", article: "AVG Art. 25(1)", message: "Excessieve gegevensverwerking: Leeftijd, Geslacht", severity: "high", remediation: "Verwijder onnodige velden" },
         ],
-        critical_violations: 0,
-        high_violations: 2,
+        critical_violations: 0, high_violations: 2,
       });
     }
     setEvaluating(false);
@@ -52,9 +48,8 @@ export default function PoliciesPage() {
   return (
     <div>
       <h1 className="text-3xl font-bold text-[#1a365d] mb-2">Policy-as-Code</h1>
-      <p className="text-gray-500 mb-8">Compliance-regels geëxcodeerd als testbare, automatische policies</p>
+      <p className="text-gray-500 mb-8">Compliance-regels geëxcodeerd als testbare policies</p>
 
-      {/* Policies list */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
         {policies.map((p) => (
           <div key={p.id} className="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
@@ -69,42 +64,25 @@ export default function PoliciesPage() {
         ))}
       </div>
 
-      {/* Evaluate */}
-      <button
-        onClick={evaluate}
-        disabled={evaluating}
-        className="bg-[#1a365d] text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors disabled:opacity-50 mb-8"
-      >
+      <button onClick={evaluate} disabled={evaluating}
+        className="bg-[#1a365d] text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors disabled:opacity-50 mb-8">
         {evaluating ? "Evalueren..." : "Evalueer Alle Policies"}
       </button>
 
-      {/* Result */}
       {result && (
         <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
           <div className="flex items-center gap-6 mb-6">
-            <div className="text-center">
-              <p className="text-3xl font-bold text-[#1a365d]">{result.compliance_rate}%</p>
-              <p className="text-sm text-gray-500">Compliance Rate</p>
-            </div>
-            <div className="text-center">
-              <p className="text-3xl font-bold text-green-600">{result.compliant}</p>
-              <p className="text-sm text-gray-500">Compliant</p>
-            </div>
-            <div className="text-center">
-              <p className="text-3xl font-bold text-red-600">{result.non_compliant}</p>
-              <p className="text-sm text-gray-500">Non-Compliant</p>
-            </div>
+            <div className="text-center"><p className="text-3xl font-bold text-[#1a365d]">{result.compliance_rate}%</p><p className="text-sm text-gray-500">Compliance Rate</p></div>
+            <div className="text-center"><p className="text-3xl font-bold text-green-600">{result.compliant}</p><p className="text-sm text-gray-500">Compliant</p></div>
+            <div className="text-center"><p className="text-3xl font-bold text-red-600">{result.non_compliant}</p><p className="text-sm text-gray-500">Non-Compliant</p></div>
           </div>
-
-          {result.violations && Array.isArray(result.violations) && (result.violations as unknown[]).length > 0 && (
+          {result.violations && result.violations.length > 0 && (
             <div>
               <h3 className="font-semibold text-[#1a365d] mb-3">Violations</h3>
               <div className="space-y-3">
-                {(result.violations as Array<{ article: string; message: string; severity: string; remediation: string }>).map((v, i) => (
+                {result.violations.map((v, i) => (
                   <div key={i} className="flex items-start gap-3 p-3 bg-red-50 rounded-lg">
-                    <span className={`text-xs font-bold px-2 py-1 rounded ${v.severity === "critical" ? "bg-red-200 text-red-700" : "bg-orange-200 text-orange-700"}`}>
-                      {v.severity}
-                    </span>
+                    <span className={`text-xs font-bold px-2 py-1 rounded ${v.severity === "critical" ? "bg-red-200 text-red-700" : "bg-orange-200 text-orange-700"}`}>{v.severity}</span>
                     <div>
                       <p className="text-sm font-medium text-gray-800">{v.message}</p>
                       <p className="text-sm text-gray-500 mt-1">→ {v.remediation}</p>

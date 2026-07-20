@@ -19,33 +19,18 @@ export default function Sidebar() {
         <h1 className="text-xl font-bold">🏛️ JuraRegel</h1>
         <p className="text-sm text-blue-200 mt-1">Living Compliance Engine</p>
       </div>
-
       <nav className="space-y-1">
         {navItems.map((item) => {
           const active = pathname === item.href;
           return (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${
-                active
-                  ? "bg-blue-600 text-white"
-                  : "text-blue-100 hover:bg-blue-800"
-              }`}
-            >
+            <Link key={item.href} href={item.href}
+              className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${active ? "bg-blue-600 text-white" : "text-blue-100 hover:bg-blue-800"}`}>
               <span>{item.icon}</span>
               <span className="font-medium">{item.label}</span>
             </Link>
           );
         })}
       </nav>
-
-      <div className="absolute bottom-6 left-6 right-6">
-        <div className="bg-blue-800 rounded-lg p-4 text-sm">
-          <p className="font-semibold text-blue-100">Status</p>
-          <p className="text-blue-300 mt-1">● API Connected</p>
-        </div>
-      </div>
     </aside>
   );
 }

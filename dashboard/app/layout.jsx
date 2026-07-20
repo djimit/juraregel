@@ -1,13 +1,12 @@
-import type { Metadata } from "next";
 import "./globals.css";
 import Sidebar from "../components/Sidebar";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "JuraRegel Dashboard — Living Compliance Engine",
   description: "Real-time compliance monitoring, AI-gestuurde analyse, en policy evaluatie",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }) {
   return (
     <html lang="nl">
       <body className="bg-gray-50 min-h-screen">

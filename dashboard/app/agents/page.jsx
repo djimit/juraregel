@@ -1,11 +1,9 @@
 import { useState } from "react";
 
-type AgentType = "dpia" | "fria" | "regulatory";
-
 export default function AgentsPage() {
-  const [activeAgent, setActiveAgent] = useState<AgentType>("dpia");
+  const [activeAgent, setActiveAgent] = useState("dpia");
   const [running, setRunning] = useState(false);
-  const [result, setResult] = useState<Record<string, unknown> | null>(null);
+  const [result, setResult] = useState(null);
 
   const runAgent = async () => {
     setRunning(true);
@@ -34,7 +32,6 @@ export default function AgentsPage() {
         setResult(await resp.json());
       }
     } catch {
-      // Fallback: mock result
       setResult({
         agent: activeAgent === "dpia" ? "DPIA Agent" : activeAgent === "fria" ? "FRIA Agent" : "Regulatory Monitor",
         status: "success",
@@ -55,13 +52,12 @@ export default function AgentsPage() {
       <h1 className="text-3xl font-bold text-[#1a365d] mb-2">AI Agents</h1>
       <p className="text-gray-500 mb-8">Autonome compliance-agents die taken end-to-end uitvoeren</p>
 
-      {/* Agent selector */}
       <div className="flex gap-3 mb-8">
-        {([
+        {[
           { id: "dpia", label: "DPIA Agent", icon: "📋", desc: "DPIA generatie" },
           { id: "fria", label: "FRIA Agent", icon: "⚖️", desc: "FRIA generatie" },
           { id: "regulatory", label: "Regulatory Monitor", icon: "🔍", desc: "Wetswijzigingen" },
-        ] as const).map((agent) => (
+        ].map((agent) => (
           <button
             key={agent.id}
             onClick={() => { setActiveAgent(agent.id); setResult(null); }}
@@ -78,7 +74,6 @@ export default function AgentsPage() {
         ))}
       </div>
 
-      {/* Run button */}
       <button
         onClick={runAgent}
         disabled={running}
@@ -87,37 +82,35 @@ export default function AgentsPage() {
         {running ? "Uitvoeren..." : `Start ${activeAgent === "dpia" ? "DPIA" : activeAgent === "fria" ? "FRIA" : "Regulatory"} Agent`}
       </button>
 
-      {/* Result */}
       {result && (
         <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-lg font-bold text-[#1a365d]">Resultaat</h2>
             <span className="text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full font-medium">
-              {String(result.status || "success")}
+              {result.status || "success"}
             </span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
             <div className="bg-blue-50 rounded-lg p-4">
               <p className="text-sm text-blue-600 font-medium">Agent</p>
-              <p className="text-lg font-bold text-[#1a365d]">{String(result.agent)}</p>
+              <p className="text-lg font-bold text-[#1a365d]">{result.agent}</p>
             </div>
             <div className="bg-green-50 rounded-lg p-4">
               <p className="text-sm text-green-600 font-medium">Confidence</p>
-              <p className="text-lg font-bold text-[#1a365d]">{Math.round((result.confidence as number) * 100)}%</p>
+              <p className="text-lg font-bold text-[#1a365d]">{Math.round((result.confidence || 0) * 100)}%</p>
             </div>
             <div className="bg-purple-50 rounded-lg p-4">
               <p className="text-sm text-purple-600 font-medium">Execution Time</p>
-              <p className="text-lg font-bold text-[#1a365d]">{String(result.execution_time_ms || "<")}ms</p>
+              <p className="text-lg font-bold text-[#1a365d]">{result.execution_time_ms || "<"}ms</p>
             </div>
           </div>
 
-          {/* Trace */}
           {result.trace && Array.isArray(result.trace) && (
             <div>
               <h3 className="font-semibold text-[#1a365d] mb-3">Execution Trace</h3>
               <div className="space-y-2">
-                {(result.trace as Array<{ step: string; status: string }>).map((step, i) => (
+                {result.trace.map((step, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <span className="w-6 h-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center text-xs font-bold">{i + 1}</span>
                     <span className="font-mono text-sm text-gray-700">{step.step}</span>
@@ -128,12 +121,11 @@ export default function AgentsPage() {
             </div>
           )}
 
-          {/* Recommendations */}
-          {result.recommendations && Array.isArray(result.recommendations) && (result.recommendations as string[]).length > 0 && (
+          {result.recommendations && Array.isArray(result.recommendations) && result.recommendations.length > 0 && (
             <div className="mt-6">
               <h3 className="font-semibold text-[#1a365d] mb-3">Aanbevelingen</h3>
               <ul className="space-y-2">
-                {(result.recommendations as string[]).map((rec, i) => (
+                {result.recommendations.map((rec, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
                     <span className="text-blue-500 mt-0.5">→</span>
                     {rec}
