@@ -30,7 +30,7 @@ services:
       dockerfile: Dockerfile.api
     container_name: juraregel-api
     ports:
-      - "8090:8080"
+      - "8091:8080"
     environment:
       DATABASE_URL: postgresql+asyncpg://juraregel:juraregel@192.168.1.28:5432/juraregel
       QDRANT_URL: http://192.168.1.28:6333
@@ -48,7 +48,7 @@ services:
     ports:
       - "3005:3000"
     environment:
-      NEXT_PUBLIC_API_URL: http://192.168.1.28:8090
+      NEXT_PUBLIC_API_URL: http://192.168.1.28:8091
     depends_on:
       - api
     restart: unless-stopped
