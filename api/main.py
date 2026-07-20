@@ -32,6 +32,7 @@ from .routes import (
     accountability,
     jurisdiction,
     digital_twin,
+    orchestrator,
 )
 from .middleware import RateLimitMiddleware, TenantMiddleware
 
@@ -130,6 +131,9 @@ app.include_router(
 )
 app.include_router(
     digital_twin.router, prefix="/api/v1/digital-twin", tags=["Digital Twin"]
+)
+app.include_router(
+    orchestrator.router, prefix="/api/v1/orchestrator", tags=["Orchestrator"]
 )
 
 
