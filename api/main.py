@@ -30,6 +30,8 @@ from .routes import (
     predictive,
     learning,
     accountability,
+    jurisdiction,
+    digital_twin,
 )
 from .middleware import RateLimitMiddleware, TenantMiddleware
 
@@ -122,6 +124,12 @@ app.include_router(
 app.include_router(learning.router, prefix="/api/v1/learning", tags=["Self-Learning"])
 app.include_router(
     accountability.router, prefix="/api/v1/accountability", tags=["Accountable AI"]
+)
+app.include_router(
+    jurisdiction.router, prefix="/api/v1/jurisdiction", tags=["Multi-Jurisdiction"]
+)
+app.include_router(
+    digital_twin.router, prefix="/api/v1/digital-twin", tags=["Digital Twin"]
 )
 
 
