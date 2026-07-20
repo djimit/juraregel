@@ -22,6 +22,10 @@ from .routes import (
     policies,
     rag,
     drift,
+    regulatory,
+    knowledge_graph,
+    benchmarks,
+    ci,
 )
 from .middleware import RateLimitMiddleware, TenantMiddleware
 
@@ -97,6 +101,14 @@ app.include_router(compliance.router, prefix="/api/v1/compliance", tags=["Compli
 app.include_router(policies.router, prefix="/api/v1/policies", tags=["Policies"])
 app.include_router(rag.router, prefix="/api/v1/rag", tags=["RAG"])
 app.include_router(drift.router, prefix="/api/v1/drift", tags=["Drift Detection"])
+app.include_router(
+    regulatory.router, prefix="/api/v1/regulatory", tags=["Regulatory Monitor"]
+)
+app.include_router(
+    knowledge_graph.router, prefix="/api/v1/knowledge-graph", tags=["Knowledge Graph"]
+)
+app.include_router(benchmarks.router, prefix="/api/v1/benchmarks", tags=["Benchmarks"])
+app.include_router(ci.router, prefix="/api/v1/ci", tags=["CI Gates"])
 
 
 @app.get("/", tags=["Root"])
