@@ -1,6 +1,4 @@
-"use client";
 
-import { useState } from "react";
 
 const stats = [
   { label: "Templates", value: "37", icon: "📄", color: "bg-blue-50 text-blue-700" },
