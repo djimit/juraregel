@@ -256,8 +256,8 @@ class PredictiveComplianceEngine:
 
     def _analyze_trend(self, state: dict) -> TrendAnalysis:
         """Analyze compliance score trend."""
-        current_score = state.get("compliance_score", 50)
-        previous_score = state.get("previous_compliance_score", current_score)
+        current_score = state.get("compliance_score", 50) or 50
+        previous_score = state.get("previous_compliance_score") or current_score
 
         # Simple trend extrapolation
         delta = current_score - previous_score
