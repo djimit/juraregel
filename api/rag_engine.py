@@ -257,7 +257,11 @@ ANTWOORD (met bron-citaties tussen haakjes):"""
     def validate_response(self, response: str) -> tuple[list[Citation], list[dict]]:
         """Validate a response for citations and hallucinations."""
         citations = self.citation_verifier.extract_citations(response)
-        hallucination_flags = self.hallucination_detector.check(response, response)
+        # Hallucination detector expects text + citations list
+        citation_texts = [c.text for c in citations]
+        hallucination_flags = self.hallucination_detector.check(
+            response, citation_texts
+        )
 
         # Verify each citation
         for citation in citations:

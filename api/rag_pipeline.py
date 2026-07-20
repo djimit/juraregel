@@ -316,11 +316,21 @@ class HallucinationDetector:
             r"nooit",  # Absolute claim
         ]
 
-    def check(self, text: str, citations: list[dict]) -> list[dict]:
+    def check(self, text: str, citations: list) -> list[dict]:
         """Check for hallucination risks."""
         import re
 
         flags = []
+
+        # Normalize citations to strings
+        citation_texts = []
+        for c in citations:
+            if isinstance(c, dict):
+                citation_texts.append(c.get("text", ""))
+            elif isinstance(c, str):
+                citation_texts.append(c)
+            elif hasattr(c, "text"):
+                citation_texts.append(c.text)
 
         # Check for claims without citations
         sentences = re.split(r"[.!?]+", text)
@@ -330,7 +340,7 @@ class HallucinationDetector:
                 continue
 
             # Check if sentence has a citation
-            has_citation = any(c["text"] in sentence for c in citations)
+            has_citation = any(ct in sentence for ct in citation_texts if ct)
 
             if not has_citation and len(sentence) > 20:
                 # Check for risk patterns
