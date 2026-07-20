@@ -30,14 +30,16 @@ LITELLM_URL = os.getenv("LITELLM_URL", "http://192.168.1.28:4000/v1")
 LITELLM_API_KEY = os.getenv("LITELLM_API_KEY", "")
 
 # Cloud-only model priority list (via LiteLLM)
+# Ordered by speed/reliability — fastest first
 CLOUD_MODELS = [
-    "openai-gpt5",  # OpenAI GPT-5 (cloud)
+    "gemini-flash",  # Google Gemini 2.5 Flash (cloud) — FAST
+    "deepseek-v4-flash:cloud",  # DeepSeek V4 Flash cloud variant
+    "requesty-gemini-flash",  # Gemini via Requesty
+    "gemini-pro",  # Google Gemini Pro (cloud)
     "openai-gpt5-mini",  # OpenAI GPT-5 Mini (cloud)
     "openai-gpt4o",  # OpenAI GPT-4o (cloud)
-    "gemini-flash",  # Google Gemini 2.5 Flash (cloud)
-    "gemini-pro",  # Google Gemini Pro (cloud)
+    "openai-gpt5",  # OpenAI GPT-5 (cloud)
     "deepseek-v4-pro",  # DeepSeek V4 Pro (cloud)
-    "deepseek-v4-flash",  # DeepSeek V4 Flash (cloud)
     "ollama-cloud/gemini-3-flash-preview",  # Gemini via Ollama Cloud
     "ollama-cloud/deepseek-v4-pro",  # DeepSeek via Ollama Cloud
     "ollama-cloud/kimi-k2.6",  # Kimi via Ollama Cloud
@@ -254,7 +256,7 @@ ANTWOORD (met bron-citaties tussen haakjes):"""
                         "max_tokens": 2000,
                     },
                     headers=headers,
-                    timeout=60,
+                    timeout=120,
                 )
 
                 if resp.status_code == 200:
