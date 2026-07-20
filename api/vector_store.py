@@ -167,7 +167,14 @@ class QdrantVectorStore:
 def create_vector_store() -> InMemoryVectorStore | QdrantVectorStore:
     """Create a vector store based on configuration."""
     if USE_QDRANT:
-        return QdrantVectorStore(QDRANT_URL)
+        try:
+            import qdrant_client  # noqa: F401
+
+            return QdrantVectorStore(QDRANT_URL)
+        except ImportError:
+            import logging
+
+            logging.warning("qdrant_client not available, using in-memory store")
     return InMemoryVectorStore()
 
 
