@@ -26,6 +26,10 @@ from .routes import (
     knowledge_graph,
     benchmarks,
     ci,
+    reasoning,
+    predictive,
+    learning,
+    accountability,
 )
 from .middleware import RateLimitMiddleware, TenantMiddleware
 
@@ -109,6 +113,16 @@ app.include_router(
 )
 app.include_router(benchmarks.router, prefix="/api/v1/benchmarks", tags=["Benchmarks"])
 app.include_router(ci.router, prefix="/api/v1/ci", tags=["CI Gates"])
+app.include_router(
+    reasoning.router, prefix="/api/v1/reasoning", tags=["Legal Reasoning"]
+)
+app.include_router(
+    predictive.router, prefix="/api/v1/predictive", tags=["Predictive Compliance"]
+)
+app.include_router(learning.router, prefix="/api/v1/learning", tags=["Self-Learning"])
+app.include_router(
+    accountability.router, prefix="/api/v1/accountability", tags=["Accountable AI"]
+)
 
 
 @app.get("/", tags=["Root"])
