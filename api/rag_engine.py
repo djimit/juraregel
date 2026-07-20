@@ -24,10 +24,27 @@ from typing import Any
 logger = logging.getLogger(__name__)
 
 # ─── Configuration ──────────────────────────────────────────────
+# ONLY cloud models via LiteLLM — no local fallback
 
 LITELLM_URL = os.getenv("LITELLM_URL", "http://192.168.1.28:4000/v1")
-LLM_MODEL = os.getenv("LLM_MODEL", "claude-sonnet-4-20250514")
-USE_LLM = bool(os.getenv("USE_LLM", "true").lower() == "true")
+LITELLM_API_KEY = os.getenv("LITELLM_API_KEY", "")
+
+# Cloud-only model priority list (via LiteLLM)
+CLOUD_MODELS = [
+    "openai-gpt5",  # OpenAI GPT-5 (cloud)
+    "openai-gpt5-mini",  # OpenAI GPT-5 Mini (cloud)
+    "openai-gpt4o",  # OpenAI GPT-4o (cloud)
+    "gemini-flash",  # Google Gemini 2.5 Flash (cloud)
+    "gemini-pro",  # Google Gemini Pro (cloud)
+    "deepseek-v4-pro",  # DeepSeek V4 Pro (cloud)
+    "deepseek-v4-flash",  # DeepSeek V4 Flash (cloud)
+    "ollama-cloud/gemini-3-flash-preview",  # Gemini via Ollama Cloud
+    "ollama-cloud/deepseek-v4-pro",  # DeepSeek via Ollama Cloud
+    "ollama-cloud/kimi-k2.6",  # Kimi via Ollama Cloud
+]
+
+LLM_MODEL = os.getenv("LLM_MODEL", "")  # Empty = auto-select from cloud list
+USE_LLM = True  # Always use LLM — no fallback
 
 LEGAL_SYSTEM_PROMPT = """Je bent een senior privacy-jurist en AI-governance expert gespecialiseerd in:
 - AVG (GDPR) — alle artikelen, EDPB richtlijnen, Nederlandse uitspraken
@@ -203,56 +220,67 @@ VRAAG: {query}
 
 ANTWOORD (met bron-citaties tussen haakjes):"""
 
-        if USE_LLM:
-            return self._llm_generate(prompt)
+        return self._llm_generate(prompt)
 
-        # Fallback: template-based response
-        return self._fallback_generate(query, search_results)
+    def _get_models(self) -> list[str]:
+        """Get available cloud models, filtered to cloud-only."""
+        if LLM_MODEL:
+            return [LLM_MODEL]
+        return CLOUD_MODELS
 
     def _llm_generate(self, prompt: str) -> str:
-        """Generate via LiteLLM proxy."""
-        try:
-            import httpx
+        """Generate via LiteLLM proxy using cloud models only."""
+        import httpx
 
-            resp = httpx.post(
-                f"{LITELLM_URL}/chat/completions",
-                json={
-                    "model": LLM_MODEL,
-                    "messages": [
-                        {"role": "system", "content": LEGAL_SYSTEM_PROMPT},
-                        {"role": "user", "content": prompt},
-                    ],
-                    "temperature": 0.1,
-                    "max_tokens": 2000,
-                },
-                timeout=30,
-            )
+        headers = {}
+        if LITELLM_API_KEY:
+            headers["Authorization"] = f"Bearer {LITELLM_API_KEY}"
 
-            if resp.status_code == 200:
-                data = resp.json()
-                return data["choices"][0]["message"]["content"]
-            else:
-                logger.warning(f"LLM error: {resp.status_code}")
-                return self._fallback_generate(prompt, [])
+        # Try each cloud model in priority order
+        for model in self._get_models():
+            try:
+                resp = httpx.post(
+                    f"{LITELLM_URL}/chat/completions",
+                    json={
+                        "model": model,
+                        "messages": [
+                            {"role": "system", "content": LEGAL_SYSTEM_PROMPT},
+                            {"role": "user", "content": prompt},
+                        ],
+                        "temperature": 0.1,
+                        "max_tokens": 2000,
+                    },
+                    headers=headers,
+                    timeout=60,
+                )
 
-        except Exception as e:
-            logger.warning(f"LLM connection error: {e}")
-            return self._fallback_generate(prompt, [])
+                if resp.status_code == 200:
+                    data = resp.json()
+                    answer = data["choices"][0]["message"]["content"]
+                    logger.info(f"RAG generated with cloud model: {model}")
+                    return answer
+                else:
+                    logger.warning(f"Cloud model {model} failed: {resp.status_code}")
 
-    def _fallback_generate(self, query: str, search_results: list[dict]) -> str:
-        """Fallback response generation without LLM."""
-        if not search_results:
-            return "Geen relevante bronnen gevonden. Raadpleeg een juridisch expert."
+            except Exception as e:
+                logger.warning(f"Cloud model {model} error: {e}")
+                continue
 
-        summary_parts = []
-        for r in search_results[:3]:
-            summary_parts.append(f"• [{r['source']}] {r['text'][:150]}...")
-
-        return (
-            f"Op basis van de gevonden bronnen:\n\n"
-            + "\n".join(summary_parts)
-            + f"\n\n⚠️ HUMAN REVIEW REQUIRED — Dit antwoord is gegenereerd zonder LLM-validatie."
+        # All cloud models failed — return error message
+        raise RuntimeError(
+            "Alle cloud modellen zijn niet bereikbaar. "
+            "Controleer de LiteLLM proxy configuratie."
         )
+
+    def _format_search_results(self, search_results: list[dict]) -> str:
+        """Format search results for context assembly."""
+        if not search_results:
+            return "Geen relevante bronnen gevonden."
+
+        parts = []
+        for r in search_results[:5]:
+            parts.append(f"[{r['source']} — {r['title']}]\n{r['text']}")
+        return "\n\n".join(parts)
 
     def validate_response(self, response: str) -> tuple[list[Citation], list[dict]]:
         """Validate a response for citations and hallucinations."""
@@ -272,7 +300,7 @@ ANTWOORD (met bron-citaties tussen haakjes):"""
 
     @property
     def model(self) -> str:
-        return LLM_MODEL if USE_LLM else "fallback"
+        return LLM_MODEL or CLOUD_MODELS[0]
 
     def query(self, query: str, top_k: int = 5) -> RAGResponse:
         """Full RAG pipeline: search → generate → validate."""
