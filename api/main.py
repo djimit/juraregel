@@ -20,6 +20,8 @@ from .routes import (
     agents,
     compliance,
     policies,
+    rag,
+    drift,
 )
 from .middleware import RateLimitMiddleware, TenantMiddleware
 
@@ -93,6 +95,8 @@ app.include_router(evidence.router, prefix="/api/v1/evidence", tags=["Evidence"]
 app.include_router(agents.router, prefix="/api/v1/agents", tags=["AI Agents"])
 app.include_router(compliance.router, prefix="/api/v1/compliance", tags=["Compliance"])
 app.include_router(policies.router, prefix="/api/v1/policies", tags=["Policies"])
+app.include_router(rag.router, prefix="/api/v1/rag", tags=["RAG"])
+app.include_router(drift.router, prefix="/api/v1/drift", tags=["Drift Detection"])
 
 
 @app.get("/", tags=["Root"])
