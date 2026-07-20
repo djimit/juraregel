@@ -30,7 +30,7 @@ jobs:
       - name: Schema check
         run: python3 ci/check-schema.py
       - name: Compile all Python
-        run: python3 -m compileall -q shared sources tools mcp-server use-cases ci features
+        run: python3 -m compileall -q shared sources tools mcp-server use-cases ci features api
       - name: Rule semantics
         run: python3 ci/validate-rule-semantics.py
       - name: Source quality
@@ -38,7 +38,7 @@ jobs:
       - name: OpenAPI from applications
         run: python3 tools/generate_openapi.py
       - name: Run unit tests
-        run: python3 -m pytest use-cases/*/tests/ -q --no-header
+        run: python3 -m pytest use-cases/*/tests/ api/test_api.py -q --no-header
       - name: Run CI helper tests
         run: python3 -m pytest ci/test_*.py -q --no-header
       - name: Validate JREM exports
@@ -79,7 +79,7 @@ jobs:
       - name: Schema check
         run: python3 ci/check-schema.py
       - name: Compile all Python
-        run: python3 -m compileall -q shared sources tools mcp-server use-cases ci features
+        run: python3 -m compileall -q shared sources tools mcp-server use-cases ci features api
       - name: Rule semantics
         run: python3 ci/validate-rule-semantics.py
       - name: Source quality

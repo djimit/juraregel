@@ -7,8 +7,8 @@ import jsonschema
 from fastapi.testclient import TestClient
 
 
-ROOT = Path(__file__).resolve().parents[3]
 USE_CASE = Path(__file__).resolve().parents[1]
+ROOT = USE_CASE.parent.parent
 SOURCE = USE_CASE / "sources" / "adr-itgc-kader-v1-1.zip"
 JREM = USE_CASE / "jrem" / "exports" / "itgc-kader-2026.1.json"
 sys.path.insert(0, str(USE_CASE / "lib"))
@@ -36,8 +36,14 @@ def load_client() -> TestClient:
 def test_official_source_snapshot_and_generated_catalog_are_reproducible():
     committed = json.loads(JREM.read_text())
     assert build_jrem(SOURCE) == committed
-    assert SOURCE_ZIP_SHA256 == "9b50fc02cb03c6a505a0c9d939853afbcd3d71eaa330c62349e9152d61d0af17"
-    assert SOURCE_XLSX_SHA256 == "bff440bd16fd8f6a03892b0a96d0e5e4c9b4eb6ae86da177b1d9d1f006188a7e"
+    assert (
+        SOURCE_ZIP_SHA256
+        == "9b50fc02cb03c6a505a0c9d939853afbcd3d71eaa330c62349e9152d61d0af17"
+    )
+    assert (
+        SOURCE_XLSX_SHA256
+        == "bff440bd16fd8f6a03892b0a96d0e5e4c9b4eb6ae86da177b1d9d1f006188a7e"
+    )
 
 
 def test_catalog_has_exact_source_counts_and_validates_against_both_schemas():
@@ -51,7 +57,14 @@ def test_catalog_has_exact_source_counts_and_validates_against_both_schemas():
     assert len(criteria) == 147
     assert len({criterion["id"] for criterion in criteria}) == 147
     assert {rule["ruleId"].split("-")[1].split(".")[0] for rule in data["rules"]} == {
-        "R1", "R2", "A1", "G1", "W1", "I1", "C1", "S1"
+        "R1",
+        "R2",
+        "A1",
+        "G1",
+        "W1",
+        "I1",
+        "C1",
+        "S1",
     }
     for schema_name in ("jrem-core.json", "jrem-schema.json"):
         schema = json.loads((ROOT / "shared" / schema_name).read_text())
@@ -78,5 +91,7 @@ def test_objective_filter_preserves_exact_subtotals():
     client = load_client()
     expected = {"R1": 5, "R2": 5, "A1": 7, "G1": 5, "W1": 5, "I1": 5, "C1": 7, "S1": 9}
     for objective, count in expected.items():
-        result = client.get("/v1/itgc-kader/maatregelen", params={"doelstelling": objective}).json()
+        result = client.get(
+            "/v1/itgc-kader/maatregelen", params={"doelstelling": objective}
+        ).json()
         assert result["totaalMaatregelen"] == count

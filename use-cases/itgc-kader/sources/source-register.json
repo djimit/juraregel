@@ -1,0 +1,17 @@
+{
+  "source": "ADR ITGC-kader v1.1",
+  "publicationDate": "2026-05-12",
+  "retrievedOn": "2026-07-16",
+  "officialPage": "https://www.auditdienstrijk.nl/documenten/2026/maart/17/itgc-kader",
+  "zipUrl": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+  "pdfUrl": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.pdf",
+  "zipSha256": "9b50fc02cb03c6a505a0c9d939853afbcd3d71eaa330c62349e9152d61d0af17",
+  "xlsxSha256": "bff440bd16fd8f6a03892b0a96d0e5e4c9b4eb6ae86da177b1d9d1f006188a7e",
+  "pdfSha256": "d194f1213e2d8a3740396d8eac465965c9ad7bf2dbbf311a5eead6dcadcffd07",
+  "scope": "Geselecteerde IT-general-controls voor de jaarrekeningcontrole; geen volledige BIO2-dekking.",
+  "limitations": [
+    "Aan het kader kunnen volgens ADR geen rechten worden ontleend.",
+    "Leveranciersmanagement (L1) is verwijderd en was aangekondigd voor latere toevoeging in 2026.",
+    "De publicatiepagina noemt 54 PDF-pagina's; het gedownloade officiële bestand telt technisch 37 pagina's."
+  ]
+}

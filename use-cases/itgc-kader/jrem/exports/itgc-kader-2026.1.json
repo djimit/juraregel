@@ -1,0 +1,3291 @@
+{
+  "schemaVersion": "1.1.0",
+  "ruleSetId": "adr-itgc-kader",
+  "version": "2026.1",
+  "validFrom": "2026-05-12",
+  "validUntil": null,
+  "jurisdiction": "NL",
+  "governanceLevel": "rijk",
+  "domain": "itgc-kader",
+  "procedureType": "itgc-kader",
+  "conflictResolution": "first-match",
+  "maturityLevel": "L1-poc",
+  "approval": {
+    "type": "self",
+    "reviewer": "JuraRegel maintainer",
+    "role": "technische bronextractie",
+    "date": "2026-07-16",
+    "scope": "Bronintegriteit, structuur en cataloguscontract; geen auditor- of juridisch oordeel.",
+    "limitations": [
+      "Geen organisatiebewijs beoordeeld.",
+      "Geen onafhankelijke inhoudelijke review.",
+      "ADR vermeldt dat aan het kader geen rechten kunnen worden ontleend.",
+      "Leveranciersmanagement (L1) is in versie 1.1 niet opgenomen."
+    ]
+  },
+  "rules": [
+    {
+      "ruleId": "ITGC-R1.1",
+      "name": "Risicocriteria in de Risicobeoordelingsprocedure",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "R1.1",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_r1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "R1.1",
+          "title": "Risicocriteria in de Risicobeoordelingsprocedure",
+          "measure": "De organisatie moet een risicobeoordelingsprocedure voor informatiebeveiliging definiëren en toepassen die risicocriteria voor informatiebeveiliging vaststelt en onderhoudt, waaronder:\n1) de risicoacceptatiecriteria\n2) criteria voor het uitvoeren van risicobeoordelingen van informatiebeveiliging",
+          "elaboration": "Beheersmaatregelen R1.1 t/m R1.5 samen zijn onderdeel van de \"plan\" fase van het ISMS.\n\nEen opzet beheersmaatregel die de criteria/eisen aan de uitvoering van risicobeoordeling en de risicoacceptatie (RISK appetite) stelt.",
+          "worksheet": "R1. Risicobeoordeling IB",
+          "overview": {
+            "process": "Risicomanagement:\nR1. Risicobeoordeling IB",
+            "objective": "Risicobeoordelingen worden uitgevoerd om actuele risicoprofielen met betrekking tot bedrijfsdoelstellingen te bepalen. De waarschijnlijkheid en impact van alle geïdentificeerde risico's worden regelmatig beoordeeld, met behulp van kwalitatieve en kwantitatieve methoden. De waarschijnlijkheid en impact van inherente en restrisico's worden bepaald per categorie, op portefeuillebasis.",
+            "risk": "Inherente en restrisico's worden niet (tijdig) geïdentificeerd en beoordeeld. Kans en impact zijn niet vastgesteld, waardoor actieplannen, beperkende maatregelen of risico-initiatieven niet worden ingevoerd.",
+            "biv": [],
+            "audience": "Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "R1.1.1",
+              "text": "R1.1.1 De Risicoacceptatiecriteria staan opgenomen in de risicobeoordelingsprocedure (Informatiebeveiligingsbeleid).",
+              "type": "Opzet",
+              "references": [
+                "NBA VI 3.0 - RM.02",
+                "ISO 27001/2022 - 6.1.2a"
+              ]
+            },
+            {
+              "id": "R1.1.2",
+              "text": "R1.1.2 De criteria voor het uitvoeren van de risicobeoordelingen staan beschreven in de risicobeoordelingsprocedure (Informatiebeveiligingsbeleid).",
+              "type": "Opzet",
+              "references": [
+                "NBA VI 3.0 - RM.02",
+                "ISO 27001/2022 - 6.1.2a"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-R1.2",
+      "name": "Uniform uitvoeren en vastleggen risicobeoordelingen",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "R1.2",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_r1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "R1.2",
+          "title": "Uniform uitvoeren en vastleggen risicobeoordelingen",
+          "measure": "De organisatie moet een risicobeoordelingsprocedure voor informatiebeveiliging definiëren en toepassen die waarborgt dat herhaalde risicobeoordelingen van informatiebeveiliging consistente, valide en vergelijkbare resultaten opleveren.",
+          "elaboration": "Vervolg op R1.1.1 er wordt een criteria eis gesteld dat er gezorgd wordt dat de risicobeoordeling consistente resultaten opleveren.\n\nHiermee wordt bedoeld dat de resultaten van verschillende systemen te vergelijken zijn met elkaar en bij herhaaldelijk uitvoeren tot dezelfde conclusie komt.",
+          "worksheet": "R1. Risicobeoordeling IB",
+          "overview": {
+            "process": "Risicomanagement:\nR1. Risicobeoordeling IB",
+            "objective": "Risicobeoordelingen worden uitgevoerd om actuele risicoprofielen met betrekking tot bedrijfsdoelstellingen te bepalen. De waarschijnlijkheid en impact van alle geïdentificeerde risico's worden regelmatig beoordeeld, met behulp van kwalitatieve en kwantitatieve methoden. De waarschijnlijkheid en impact van inherente en restrisico's worden bepaald per categorie, op portefeuillebasis.",
+            "risk": "Inherente en restrisico's worden niet (tijdig) geïdentificeerd en beoordeeld. Kans en impact zijn niet vastgesteld, waardoor actieplannen, beperkende maatregelen of risico-initiatieven niet worden ingevoerd.",
+            "biv": [],
+            "audience": "Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "R1.2.1",
+              "text": "R1.2.1 De criteria gesteld aan de risicobeoordeling borgen dat er een uniforme werkwijze voor de uitvoer van de risicobeoordeling is.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "NBA VI 3.0 - RM.02",
+                "ISO 27001/2022 - 6.1.2b"
+              ]
+            },
+            {
+              "id": "R1.2.2",
+              "text": "R1.2.2 De criteria gesteld aan de risicobeoordeling borgen dat er een uniforme vastlegging is voor de uitkomsten van de beoordeling.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "NBA VI 3.0 - RM.02",
+                "ISO 27001/2022 - 6.1.2b"
+              ]
+            },
+            {
+              "id": "R1.2.3",
+              "text": "R1.2.3 Bij de uitgevoerde risicobeoordelingen is de uniforme werkwijze (R1.2.1) gevolgd en heeft de vastlegging (R1.2.2) conform procedure plaatsgevonden.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "NBA VI 3.0 - RM.02",
+                "ISO 27001/2022 - 6.1.2b"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-R1.3",
+      "name": "Identificeren van informatiebeveiligingsrisico’s",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "R1.3",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_r1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "R1.3",
+          "title": "Identificeren van informatiebeveiligingsrisico’s",
+          "measure": "De organisatie moet een risicobeoordelingsprocedure voor informatiebeveiliging definiëren en toepassen die de informatiebeveiligingsrisico’s identificeert:\n\n1) pas de risicobeoordelingsprocedure voor informatiebeveiliging toe om de risico’s in verband met het verlies van vertrouwelijkheid, integriteit en beschikbaarheid van informatie binnen het toepassingsgebied van het managementsysteem voor informatiebeveiliging te identificeren; en\n2) identificeer de risico-eigenaren",
+          "elaboration": "Deze beheersmaatregel heeft betrekking op het uitvoeren van de risicobeoordelingsprocedure, zoals deze is onderzocht bij R1.2.1 en R1.2.2.\n\nEr worden twee eisen gesteld:\nEis 1: De risico's moeten geïdentificeerd worden die te maken hebben met de beschikbaarheid, integriteit en vertrouwelijkheid van de informatie.\nEis 2: De Risico-eigenaren moeten worden geïdentificeerd per risico.",
+          "worksheet": "R1. Risicobeoordeling IB",
+          "overview": {
+            "process": "Risicomanagement:\nR1. Risicobeoordeling IB",
+            "objective": "Risicobeoordelingen worden uitgevoerd om actuele risicoprofielen met betrekking tot bedrijfsdoelstellingen te bepalen. De waarschijnlijkheid en impact van alle geïdentificeerde risico's worden regelmatig beoordeeld, met behulp van kwalitatieve en kwantitatieve methoden. De waarschijnlijkheid en impact van inherente en restrisico's worden bepaald per categorie, op portefeuillebasis.",
+            "risk": "Inherente en restrisico's worden niet (tijdig) geïdentificeerd en beoordeeld. Kans en impact zijn niet vastgesteld, waardoor actieplannen, beperkende maatregelen of risico-initiatieven niet worden ingevoerd.",
+            "biv": [],
+            "audience": "Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "R1.3.1",
+              "text": "R1.3.1 De risicobeoordelingsprocedure bevat in het proces voor de risicobeoordeling:\n- Het classificeren aan de BIV-factoren;\n- dat risico's worden gekoppeld aan een risico-eigenaar.",
+              "type": "Opzet",
+              "references": [
+                "NBA VI 3.0 - RM.02",
+                "ISO 27001/2022 - 6.1.2c"
+              ]
+            },
+            {
+              "id": "R1.3.2",
+              "text": "R1.3.2 De uitkomsten van de te risicobeoordelingen zijn te relateren aan de BIV-factoren.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "NBA VI 3.0 - RM.02",
+                "ISO 27001/2022 - 6.1.2c"
+              ]
+            },
+            {
+              "id": "R1.3.3",
+              "text": "R1.3.3 Stel vast dat de risico's die voortkomen uit de risicobeoordeling zijn gekoppeld aan een risico-eigenaar.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "NBA VI 3.0 - RM.02",
+                "ISO 27001/2022 - 6.1.2c"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-R1.4",
+      "name": "Classificeren van informatiebeveiligingsrisico’s",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "R1.4",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_r1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "R1.4",
+          "title": "Classificeren van informatiebeveiligingsrisico’s",
+          "measure": "De organisatie moet een risicobeoordelingsprocedure voor informatiebeveiliging definiëren en toepassen die de informatiebeveiligingsrisico’s analyseert:\n\n1) beoordeel de potentiële gevolgen indien de risico’s die in beheersmaatregel R1.3 zijn vastgesteld, zich zouden voordoen;\n2) beoordeel de realistische waarschijnlijkheid dat de risico’s die zijn vastgesteld in beheersmaatregel R1.3 zich voordoen;\n3) stel de risiconiveaus vast.",
+          "elaboration": "Deze beheersmaatregel heeft betrekking op de Kans x Impact = risiconiveau berekening.\nIn stap 1 wordt gevraagd dat de auditee de impact bepaald per risico.\n\nIn stap 2 wordt de auditee gevraagd om de kans te hebben bepaald per risico.\n\nEn stap 3 een risiconiveau te hebben bepaald per risico.",
+          "worksheet": "R1. Risicobeoordeling IB",
+          "overview": {
+            "process": "Risicomanagement:\nR1. Risicobeoordeling IB",
+            "objective": "Risicobeoordelingen worden uitgevoerd om actuele risicoprofielen met betrekking tot bedrijfsdoelstellingen te bepalen. De waarschijnlijkheid en impact van alle geïdentificeerde risico's worden regelmatig beoordeeld, met behulp van kwalitatieve en kwantitatieve methoden. De waarschijnlijkheid en impact van inherente en restrisico's worden bepaald per categorie, op portefeuillebasis.",
+            "risk": "Inherente en restrisico's worden niet (tijdig) geïdentificeerd en beoordeeld. Kans en impact zijn niet vastgesteld, waardoor actieplannen, beperkende maatregelen of risico-initiatieven niet worden ingevoerd.",
+            "biv": [],
+            "audience": "Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "R1.4.1",
+              "text": "R1.4.1 In de risicobeoordelingsprocedure zijn de volgende stappen onderdeel van het proces:\n- bepaling van de kans en impact;\n- en hoe het risiconiveau wordt bepaald.",
+              "type": "Opzet",
+              "references": [
+                "NBA VI 3.0 - RM.02",
+                "ISO 27001/2022 - 6.1.2d"
+              ]
+            },
+            {
+              "id": "R1.4.2",
+              "text": "R1.4.2 Voor de geconstateerde risico's bij R1.3 is de kans bepaald.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "NBA VI 3.0 - RM.02",
+                "ISO 27001/2022 - 6.1.2d"
+              ]
+            },
+            {
+              "id": "R1.4.3",
+              "text": "R1.4.3 Voor de geconstateerde risico's bij R1.3 is de impact is bepaald.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "NBA VI 3.0 - RM.02",
+                "ISO 27001/2022 - 6.1.2d"
+              ]
+            },
+            {
+              "id": "R1.4.4",
+              "text": "R1.4.4 Voor de geconstateerde risico's bij R1.3 is het risiconiveau bepaald.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "NBA VI 3.0 - RM.02",
+                "ISO 27001/2022 - 6.1.2d"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-R1.5",
+      "name": "Prioriteren van informatiebeveiligingsrisico’s",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "R1.5",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_r1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "R1.5",
+          "title": "Prioriteren van informatiebeveiligingsrisico’s",
+          "measure": "De organisatie moet een risicobeoordelingsprocedure voor informatiebeveiliging definiëren en toepassen die de informatiebeveiligingsrisico’s evalueert:\n\n1) vergelijk de resultaten van de risicoanalyse met de risicocriteria die zijn vastgesteld in beheersmaatregel R1.1;\n2) prioriteer de geanalyseerde risico’s voor risicobehandeling.",
+          "elaboration": "Deze beheersmaatregel heeft betrekking op het komen tot een prioriteitenlijst voor de risicobehandeling (R2).\n- Welk risico pakt de organisatie als eerste op?\n\nRisicocriteria interpreteren wij als de risicoacceptatiecriteria waar deze risico's tegen moeten worden vergeleken door de organisatie.",
+          "worksheet": "R1. Risicobeoordeling IB",
+          "overview": {
+            "process": "Risicomanagement:\nR1. Risicobeoordeling IB",
+            "objective": "Risicobeoordelingen worden uitgevoerd om actuele risicoprofielen met betrekking tot bedrijfsdoelstellingen te bepalen. De waarschijnlijkheid en impact van alle geïdentificeerde risico's worden regelmatig beoordeeld, met behulp van kwalitatieve en kwantitatieve methoden. De waarschijnlijkheid en impact van inherente en restrisico's worden bepaald per categorie, op portefeuillebasis.",
+            "risk": "Inherente en restrisico's worden niet (tijdig) geïdentificeerd en beoordeeld. Kans en impact zijn niet vastgesteld, waardoor actieplannen, beperkende maatregelen of risico-initiatieven niet worden ingevoerd.",
+            "biv": [],
+            "audience": "Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "R1.5.1",
+              "text": "R1.5.1 In de risicobeoordelingsprocedure zijn de volgende stappen onderdeel zijn van het proces:\n- vergelijken van de risico's met de risicoacceptatiecriteria;\n- een prioriteiten bepaling maken voor de risicobehandeling.",
+              "type": "Opzet",
+              "references": [
+                "NBA VI 3.0 - RM.02",
+                "ISO 27001/2022 - 6.1.2e"
+              ]
+            },
+            {
+              "id": "R1.5.2",
+              "text": "R1.5.2 De resultaten van de risicoanalyse worden vergeleken met de risicoacceptatiecriteria.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "NBA VI 3.0 - RM.02",
+                "ISO 27001/2022 - 6.1.2e"
+              ]
+            },
+            {
+              "id": "R1.5.3",
+              "text": "R1.5.3 De resultaten van de risicoanalyse zijn geprioriteerd voor de risicobehandeling.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "NBA VI 3.0 - RM.02",
+                "ISO 27001/2022 - 6.1.2e"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-R2.1",
+      "name": "Criteria voor het afhandelen van risico's",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "R2.1",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_r2",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "R2.1",
+          "title": "Criteria voor het afhandelen van risico's",
+          "measure": "De organisatie moet een procedure voor de behandeling van informatiebeveiligingsrisico’s definiëren en toepassen om passende opties voor de behandeling van informatiebeveiligingsrisico’s te selecteren, rekening houdend met de resultaten van de risicobeoordeling.",
+          "elaboration": "Beheersmaatregelen R2.1 t/m R2.5 samen zijn onderdeel van de \"do\" fase van het ISMS.\n\nEr moet een procedure zijn hoe risico's worden behandeld waarin geborgd wordt dat er gepaste opties worden geselecteerd. Onder opties verstaan wij het ontwijken, mitigeren, accepteren of verzekeren.\n\nDeze procedure borgt dat op basis van de resultaten van de risicobeoordeling inzichtelijk wordt welke opties worden geselecteerd. Doorgaans wordt voor deze keuze een risicomatrix gebruikt.",
+          "worksheet": "R2. Behandeling van IB-risico's",
+          "overview": {
+            "process": "Risicomanagement:\nR2. Behandeling van IB-risico's",
+            "objective": "Beheersactiviteiten worden op alle niveaus geprioriteerd en gepland om de benodigde mitigerende maatregelen te implementeren, inclusief het bepalen van kosten en baten en de verantwoordelijkheid voor de uitvoering. Goedkeuring wordt verkregen voor aanbevolen acties en acceptatie van restrisico's en er wordt voor gezorgd dat uitgevoerde acties onder verantwoordelijkheid van betrokken proceseigenaar(s) vallen. De uitvoering van plannen wordt bewaakt en eventuele afwijkingen worden gerapporteerd aan het senior management.",
+            "risk": "Risicobeperkende maatregelen worden niet geïdentificeerd en geïmplementeerd. Vereiste acties worden niet gecommuniceerd en uitgevoerd, wat leidt tot mogelijke manifestatie van risico's. Hoge kosten/lage baten gerelateerd aan matige of lage risico's. Het niet prioriteren van risico's kan leiden tot hogere kosten, lagere uitkeringen of reputatieschade.",
+            "biv": [],
+            "audience": "Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "R2.1.1",
+              "text": "R2.1.1 Er is een procesbeschrijving voor de afhandeling van geïdentificeerde risico's met daarin:\n- de mogelijke opties voor het behandelen van risico's;\n- de stappen om te komen tot een keuze van welke risico's worden gemitigeerd en welke risico's worden geaccepteerd (bijvoorbeeld met een risicomatrix);\n- de stappen om na te gaan of de geselecteerde beheersingsmaatregelen volledig zijn. Dit door een vergelijking te maken met de standaard beheersingsmaatregelen die in de ISO27002 staan beschreven.",
+              "type": "Opzet",
+              "references": [
+                "NBA VI 3.0 - RM.03",
+                "ISO 27001/2022 - 6.1.3a"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-R2.2",
+      "name": "Verifiëren en Selecteren van beheersmaatregelen",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "R2.2",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_r2",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "R2.2",
+          "title": "Verifiëren en Selecteren van beheersmaatregelen",
+          "measure": "De organisatie moet een procedure voor de behandeling van informatiebeveiligingsrisico’s definiëren en toepassen om alle beheersmaatregelen vast te stellen die nodig zijn om de gekozen optie(s) voor de behandeling van informatiebeveiligingsrisico’s te implementeren.\n\nDe organisatie moet een procedure voor de behandeling van informatiebeveiligingsrisico’s definiëren en toepassen om de in beheersmaatregel R2.1 vastgestelde beheersmaatregelen te vergelijken met de beheersmaatregelen uit de ISO27002 en te verifiëren of er geen noodzakelijke beheersmaatregelen zijn weggelaten.",
+          "elaboration": "Voor de risico's waarbij de optie mitigeren is geselecteerd moeten passende beheersingsmaatregelen worden geselecteerd.\n\nDe organisatie moet in zijn processen stappen hebben opgenomen waarmee het selecteren van gepaste beheersingsmaatregelen is geborgd en hoe deze maatregelen moeten worden geïmplementeerd.\n\nOrganisaties kunnen beheersmaatregelen naar behoefte ontwerpen of ze uit een bepaalde bron halen.\n\nAls tweede gaat deze beheersmaatregel over het toetsen van de volledigheid van de maatregelen die worden geselecteerd. Door deze te vergelijken met de beheersingsmaatregelen uit de ISO27002 wordt inzichtelijk of er nog beheersingsmaatregelen ontbreken. Voor de jaarrekeningcontrole zijn de maatregelen op integriteit onze focus.\n\nISO27002 bevat een lijst van mogelijke beheersmaatregelen voor informatiebeveiliging. Gebruikers van dit document worden op bijlage A in de 27001 gewezen om ervoor te zorgen dat er geen noodzakelijke beheersmaatregelen voor informatiebeveiliging over het hoofd worden gezien.",
+          "worksheet": "R2. Behandeling van IB-risico's",
+          "overview": {
+            "process": "Risicomanagement:\nR2. Behandeling van IB-risico's",
+            "objective": "Beheersactiviteiten worden op alle niveaus geprioriteerd en gepland om de benodigde mitigerende maatregelen te implementeren, inclusief het bepalen van kosten en baten en de verantwoordelijkheid voor de uitvoering. Goedkeuring wordt verkregen voor aanbevolen acties en acceptatie van restrisico's en er wordt voor gezorgd dat uitgevoerde acties onder verantwoordelijkheid van betrokken proceseigenaar(s) vallen. De uitvoering van plannen wordt bewaakt en eventuele afwijkingen worden gerapporteerd aan het senior management.",
+            "risk": "Risicobeperkende maatregelen worden niet geïdentificeerd en geïmplementeerd. Vereiste acties worden niet gecommuniceerd en uitgevoerd, wat leidt tot mogelijke manifestatie van risico's. Hoge kosten/lage baten gerelateerd aan matige of lage risico's. Het niet prioriteren van risico's kan leiden tot hogere kosten, lagere uitkeringen of reputatieschade.",
+            "biv": [],
+            "audience": "Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "R2.2.1",
+              "text": "R2.2.1 De procesbeschrijving die voorziet in het mitigeren van geïdentificeerde risico's bevat de volgende stappen:\n- het selecteren van geschikte beheersingsmaatregelen;\n- het implementeren van beheersingsmaatregelen.",
+              "type": "Opzet",
+              "references": [
+                "NBA VI 3.0 - RM.03",
+                "ISO 27001/2022 - 6.1.3b,c"
+              ]
+            },
+            {
+              "id": "R2.2.2",
+              "text": "R2.2.2 Voor de geïdentificeerde risico's zijn passende beheersmaatregelen geselecteerd.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "NBA VI 3.0 - RM.03",
+                "ISO 27001/2022 - 6.1.3b"
+              ]
+            },
+            {
+              "id": "R2.2.3",
+              "text": "R2.2.3 Stel vast dat de organisatie gepaste beheersingsmaatregelen heeft getroffen bij de geïdentificeerde risico's.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "NBA VI 3.0 - RM.03",
+                "ISO 27001/2022 - 6.1.3c"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-R2.3",
+      "name": "Verantwoorden gekozen beheersingsmaatregelen",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "R2.3",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_r2",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "R2.3",
+          "title": "Verantwoorden gekozen beheersingsmaatregelen",
+          "measure": "De organisatie moet een procedure voor de behandeling van informatiebeveiligingsrisico’s definiëren en toepassen om\neen verklaring van toepasselijkheid op te stellen die het volgende bevat:\n\n— de noodzakelijke beheersmaatregelen (zie R2.2);\n— een rechtvaardiging voor het opnemen ervan;\n— de informatie of de benodigde beheersmaatregelen zijn geïmplementeerd of niet;\n— de rechtvaardiging voor het uitsluiten van beheersmaatregelen uit de ISO27002.",
+          "elaboration": "Dit is het document waarin vastgelegd wordt welke maatregelen worden getroffen en waarom deze maatregelen noodzakelijk zijn. Dit hoeft niet perse een verklaring van toepasselijkheid te zijn voor onze jaarrekeningcontrole werkzaamheden, zolang de elementen maar zijn beschreven.\n\nDaarnaast legt de beheersmaatregel op dat er wordt beschreven welke beheersingsmaatregelen al zijn geïmplementeerd en welke nog geïmplementeerd moeten worden.\n\nTot slot dat er een toelichting vereist indien er afgeweken wordt van de beheersingsmaatregelen uit de ISO27002.",
+          "worksheet": "R2. Behandeling van IB-risico's",
+          "overview": {
+            "process": "Risicomanagement:\nR2. Behandeling van IB-risico's",
+            "objective": "Beheersactiviteiten worden op alle niveaus geprioriteerd en gepland om de benodigde mitigerende maatregelen te implementeren, inclusief het bepalen van kosten en baten en de verantwoordelijkheid voor de uitvoering. Goedkeuring wordt verkregen voor aanbevolen acties en acceptatie van restrisico's en er wordt voor gezorgd dat uitgevoerde acties onder verantwoordelijkheid van betrokken proceseigenaar(s) vallen. De uitvoering van plannen wordt bewaakt en eventuele afwijkingen worden gerapporteerd aan het senior management.",
+            "risk": "Risicobeperkende maatregelen worden niet geïdentificeerd en geïmplementeerd. Vereiste acties worden niet gecommuniceerd en uitgevoerd, wat leidt tot mogelijke manifestatie van risico's. Hoge kosten/lage baten gerelateerd aan matige of lage risico's. Het niet prioriteren van risico's kan leiden tot hogere kosten, lagere uitkeringen of reputatieschade.",
+            "biv": [],
+            "audience": "Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "R2.3.1",
+              "text": "R2.3.1 De procesbeschrijving die voorziet in het mitigeren van geïdentificeerde risico's bevat de stappen om een vastlegging te maken die de volgende elementen bevat:\n- de noodzakelijke beheersingsmaatregelen;\n- rechtvaardiging voor het opnemen van de beheersingsmaatregelen;\n- informatie of de beheersingsmaatregelen zijn geïmplementeerd;\n- een toelichting wanneer afgeweken wordt van de beheersingsmaatregelen uit de ISO27002.",
+              "type": "Opzet",
+              "references": [
+                "NBA VI 3.0 - RM.03",
+                "ISO 27001/2022 - 6.1.3d"
+              ]
+            },
+            {
+              "id": "R2.3.2",
+              "text": "R2.3.2 Stel vast dat er vastlegging is die volgende elementen bevat:\n- de noodzakelijke beheersingsmaatregelen;\n- rechtvaardiging voor het opnemen van de beheersingsmaatregelen;\n- informatie of de beheersingsmaatregelen zijn geïmplementeerd;\n- een toelichting wanneer afgeweken wordt van de beheersingsmaatregelen uit de ISO27002.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "NBA VI 3.0 - RM.03",
+                "ISO 27001/2022 - 6.1.3d"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-R2.4",
+      "name": "Implementeren beheersmaatregelen en restrisico's accepteren",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "R2.4",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_r2",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "R2.4",
+          "title": "Implementeren beheersmaatregelen en restrisico's accepteren",
+          "measure": "De organisatie moet een procedure voor de behandeling van informatiebeveiligingsrisico’s definiëren en toepassen om:\n- een plan voor de behandeling van informatiebeveiligingsrisico’s te formuleren;\n- de goedkeuring van risico-eigenaren voor het plan voor de behandeling van informatiebeveiligingsrisico’s en hun acceptatie van de resterende informatiebeveiligingsrisico’s te verkrijgen;\n- Dat de geaccepteerde risico's voorzien zijn van een einddatum.",
+          "elaboration": "Betreft een plan die de organisatie moet opstellen om de beheersingsmaatregelen te implementeren zodat de geïdentificeerde risico's gemitigeerd gaan worden.\n\nDit plan van aanpak moet worden goedgekeurd door de risico eigenaar en de risico-eigenaar moet de restrisico's accepteren.",
+          "worksheet": "R2. Behandeling van IB-risico's",
+          "overview": {
+            "process": "Risicomanagement:\nR2. Behandeling van IB-risico's",
+            "objective": "Beheersactiviteiten worden op alle niveaus geprioriteerd en gepland om de benodigde mitigerende maatregelen te implementeren, inclusief het bepalen van kosten en baten en de verantwoordelijkheid voor de uitvoering. Goedkeuring wordt verkregen voor aanbevolen acties en acceptatie van restrisico's en er wordt voor gezorgd dat uitgevoerde acties onder verantwoordelijkheid van betrokken proceseigenaar(s) vallen. De uitvoering van plannen wordt bewaakt en eventuele afwijkingen worden gerapporteerd aan het senior management.",
+            "risk": "Risicobeperkende maatregelen worden niet geïdentificeerd en geïmplementeerd. Vereiste acties worden niet gecommuniceerd en uitgevoerd, wat leidt tot mogelijke manifestatie van risico's. Hoge kosten/lage baten gerelateerd aan matige of lage risico's. Het niet prioriteren van risico's kan leiden tot hogere kosten, lagere uitkeringen of reputatieschade.",
+            "biv": [
+              "B",
+              "I",
+              "V"
+            ],
+            "audience": "Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "R2.4.1",
+              "text": "R2.4.1 De procesbeschrijving die voorziet in het mitigeren van geïdentificeerde risico's bevat het opstellen van een plan om beheersmaatregelen te implementeren en het uitvoeren van een risicoacceptatie.",
+              "type": "Opzet",
+              "references": [
+                "NBA VI 3.0 - RM.03",
+                "ISO 27001/2022 - 6.1.3e,f"
+              ]
+            },
+            {
+              "id": "R2.4.2",
+              "text": "R2.4.2 De organisatie heeft een door de risico-eigenaar goedgekeurd plan opgesteld om de beheersmaatregelen te implementeren.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "NBA VI 3.0 - RM.03",
+                "ISO 27001/2022 - 6.1.3e,f"
+              ]
+            },
+            {
+              "id": "R2.4.3",
+              "text": "R2.4.3 De beheersmaatregelen uit het plan van R2.3.2 zijn geïmplementeerd.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "NBA VI 3.0 - RM.03",
+                "ISO 27001/2022 - 6.1.3e,f"
+              ]
+            },
+            {
+              "id": "R2.4.4",
+              "text": "R2.4.4 De risico-eigenaar heeft de restrisico's geaccepteerd en voorzien van een einddatum.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "NBA VI 3.0 - RM.03",
+                "ISO 27001/2022 - 6.1.3e,f"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-R2.5",
+      "name": "Monitoren doeltreffendheid van beheersmaatregelen",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "R2.5",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_r2",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "R2.5",
+          "title": "Monitoren doeltreffendheid van beheersmaatregelen",
+          "measure": "De organisatie monitort, analyseert en evalueert de processen & maatregelen die voortkomen uit de behandeling van informatiebeveiligingsrisico’s en geaccepteerde rest risico's. (R2.4)",
+          "elaboration": "Bij deze beheersmaatregel ligt de focus op de processen die bij R1 en R2 zijn onderzocht en de beheersingsmaatregelen die de organisatie heeft gedefinieerd om de risico's te mitigeren.",
+          "worksheet": "R2. Behandeling van IB-risico's",
+          "overview": {
+            "process": "Risicomanagement:\nR2. Behandeling van IB-risico's",
+            "objective": "Beheersactiviteiten worden op alle niveaus geprioriteerd en gepland om de benodigde mitigerende maatregelen te implementeren, inclusief het bepalen van kosten en baten en de verantwoordelijkheid voor de uitvoering. Goedkeuring wordt verkregen voor aanbevolen acties en acceptatie van restrisico's en er wordt voor gezorgd dat uitgevoerde acties onder verantwoordelijkheid van betrokken proceseigenaar(s) vallen. De uitvoering van plannen wordt bewaakt en eventuele afwijkingen worden gerapporteerd aan het senior management.",
+            "risk": "Risicobeperkende maatregelen worden niet geïdentificeerd en geïmplementeerd. Vereiste acties worden niet gecommuniceerd en uitgevoerd, wat leidt tot mogelijke manifestatie van risico's. Hoge kosten/lage baten gerelateerd aan matige of lage risico's. Het niet prioriteren van risico's kan leiden tot hogere kosten, lagere uitkeringen of reputatieschade.",
+            "biv": [],
+            "audience": "Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "R2.5.1",
+              "text": "R2.5.1: Er is een beschrijving voor het monitoren van de geïmplementeerde beheersmaatregelen, deze bevat de volgende onderdelen:\n- wat moet worden gemonitord en gemeten;\n- de methoden voor het, monitoren, meten, analyseren en evalueren om valide resultaten te bewerkstelligen;\n- wanneer moet worden gemonitord en gemeten;\n- wie moet monitoren en meten;\n- wanneer de resultaten van het monitoren en meten moeten worden geanalyseerd en geëvalueerd;\n- wie deze resultaten moet analyseren en evalueren.",
+              "type": "Opzet",
+              "references": [
+                "NBA VI 3.0 - RM.03",
+                "ISO 27001/2022 - 9.1"
+              ]
+            },
+            {
+              "id": "R2.5.2",
+              "text": "R2.5.2: De activiteiten voor monitoren, meten, analyseren en evalueren zijn uitgevoerd. Stel vast;\n- of de monitoring en analyse conform de procedure en periodiciteit (R5.2.1) zijn uitgevoerd;\n- of analyse en evaluatie is uitgevoerd op de doeltreffendheid van de beheersmaatregelen;\n- of opvolging is gegeven indien beheersmaatregelen niet als doeltreffendheid zijn geëvalueerd;\n- of de risico acceptaties nog tijdig zijn.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "NBA VI 3.0 - RM.03",
+                "ISO 27001/2022 - 9.1"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-A1.1",
+      "name": "Monitoren van authenticatie",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "A1.1",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_a1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "A1.1",
+          "title": "Monitoren van authenticatie",
+          "measure": "De organisatie houdt zelf toezicht op de naleving van de eisen voor authenticatie. Daarvoor voert het periodieke controles uit zoals het evalueren van ingestelde wachtwoordeisen, beoordelen van uitgevoerde risicoafwegingen en op basis hiervan gemaakte inrichtingskeuzes. De uitkomsten van de evaluaties en de opvolging daarvan worden vastgelegd.",
+          "elaboration": "Deze beheersmaatregel is een deel van het ISMS in werking, maar dan specifiek ingezoomd op de onderwerpen van de beheersmaatregelen van A1.2 t/m A1.7.\n\nControle dient uitgevoerd te worden op applicatie, database en OS niveau.\n\nDeze beheersmaatregel is gebaseerd op de onderliggende beheersmaatregelen van Authenticatiebeheer en focust zich op de controle vanuit de tweedelijn. Derhalve zijn de referenties bij deze beheersmaatregelen ook van toepassing op A1.1.\n\nDe risicoafweging wordt bij R1 en R2 beoordeeld en kan gebruikt worden voor de invulling van de testcriteria.",
+          "worksheet": "A1. Authenticatiebeheer",
+          "overview": {
+            "process": "A1. Authenticatiebeheer",
+            "objective": "De beheersmaatregelen waarborgen met redelijke mate van zekerheid dat systemen voor authenticatiebeheer interactief behoren te zijn en dat wachtwoorden van geschikte kwaliteit worden gekozen.",
+            "risk": "Als authenticatiebeheer niet effectief is, dan kan een account worden misbruikt om handelingen te kunnen verrichten waar de betreffende persoon niet voor bevoegd is, waardoor application controls worden omzeild, aangepast of verwijderd of de integriteit van de data wordt aangetast.",
+            "biv": [
+              "B",
+              "I",
+              "V"
+            ],
+            "audience": "JRC & Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "A1.1.1",
+              "text": "A1.1.1 Er is een procedure waarin de uit te voeren periodieke controles op de inrichting van de authenticatie zijn vastgelegd. Deze is gebaseerd op een risicoafweging en bevat minimaal:\n- de uit te voeren controlewerkzaamheden\n- de interval periodes (minimaal jaarlijks)\n- wijze van vastlegging\n- wijze van rapportering\n- de verantwoordelijkheden voor omgang met de bevindingen\n- escalatiepaden bij niet oplossen van bevindingen",
+              "type": "Opzet",
+              "references": []
+            },
+            {
+              "id": "A1.1.2",
+              "text": "A1.1.2 Minimaal de volgende aspecten zijn beoordeeld:\n- Uitvoer en actualisatie van risicoanalyses op basis waarvan authenticatie wordt ingericht\n- MFA voor Inloggen accounts met beheerrechten\n- Voldoen van wachtwoordinstellingen aan de eisen die komen uit de risico-analyse\n- toegang en beheer met accounts die zijn uitgezonderd van het wachtwoordbeleid.",
+              "type": "Bestaan/ Werking",
+              "references": []
+            },
+            {
+              "id": "A1.1.3",
+              "text": "A1.1.3 Er wordt opvolging gegeven aan de evaluatie en de uitkomsten zijn vastgelegd.",
+              "type": "Bestaan/ Werking",
+              "references": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-A1.2",
+      "name": "Multi-factor authenticatie (MFA)",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "A1.2",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_a1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "A1.2",
+          "title": "Multi-factor authenticatie (MFA)",
+          "measure": "Pas multi-factor authenticatie (MFA) toe ten minste voor het primaire aanloggen op de digitale werkomgeving, bij accounts voor via het internet bereikbare voorzieningen en accounts die beheerrechten hebben en in andere situaties waar uit de risicoanalyse blijkt dat dit een passende oplossing is.\n\nIndien MFA niet mogelijk is voor deze accounts, zijn mitigerende maatregelen getroffen in afstemming met de CISO en met goedkeuring door de proceseigenaar.",
+          "elaboration": "De risicoafweging wordt bij R1 en R2 beoordeeld en kan gebruikt worden voor de invulling van de testcriteria.",
+          "worksheet": "A1. Authenticatiebeheer",
+          "overview": {
+            "process": "A1. Authenticatiebeheer",
+            "objective": "De beheersmaatregelen waarborgen met redelijke mate van zekerheid dat systemen voor authenticatiebeheer interactief behoren te zijn en dat wachtwoorden van geschikte kwaliteit worden gekozen.",
+            "risk": "Als authenticatiebeheer niet effectief is, dan kan een account worden misbruikt om handelingen te kunnen verrichten waar de betreffende persoon niet voor bevoegd is, waardoor application controls worden omzeild, aangepast of verwijderd of de integriteit van de data wordt aangetast.",
+            "biv": [
+              "B",
+              "I",
+              "V"
+            ],
+            "audience": "JRC & Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "A1.2.1",
+              "text": "A1.2.1 Er is beleid dat voorziet in toepassing voor multi-factor authenticatie (MFA) voor ten minste het primaire aanloggen op de digitale werkomgeving, bij accounts voor via het internet bereikbare voorzieningen en accounts die beheerrechten hebben en in andere situaties waar uit de risicoanalyse blijkt dat dit een passende oplossing is.",
+              "type": "Opzet",
+              "references": [
+                "BIO2 - 5.17.01"
+              ]
+            },
+            {
+              "id": "A1.2.2",
+              "text": "A1.2.2 Er is een risico-analyse uitgevoerd waarmee bepaald is of twee-factor authenticatie een passende oplossing is voor de applicatie. Zo ja dan wordt twee-factor authenticatie ook afgedwongen.\n\nZo niet, stel vast dat mitigerende maatregelen zijn getroffen die zijn afgestemd met de CISO/ systeemeigenaar.",
+              "type": "Opzet",
+              "references": [
+                "BIO2 - 5.17.01"
+              ]
+            },
+            {
+              "id": "A1.2.3",
+              "text": "A1.2.3 Indien het systeem via internet bereikbaar is, wordt twee-factor authenticatie toegepast",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 5.17.01"
+              ]
+            },
+            {
+              "id": "A1.2.4",
+              "text": "A1.2.4 Accounts met beheerrechten loggen in met twee-factor authenticatie.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 5.17.01"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-A1.3",
+      "name": "Vergrendeling bij inactiviteit",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "A1.3",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_a1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "A1.3",
+          "title": "Vergrendeling bij inactiviteit",
+          "measure": "Informatie wordt automatisch ontoegankelijk gemaakt met bijvoorbeeld een screensaver na een passende periode.",
+          "elaboration": "De risicoafweging wordt bij R1 en R2 beoordeeld en kan gebruikt worden voor de invulling van de testcriteria.",
+          "worksheet": "A1. Authenticatiebeheer",
+          "overview": {
+            "process": "A1. Authenticatiebeheer",
+            "objective": "De beheersmaatregelen waarborgen met redelijke mate van zekerheid dat systemen voor authenticatiebeheer interactief behoren te zijn en dat wachtwoorden van geschikte kwaliteit worden gekozen.",
+            "risk": "Als authenticatiebeheer niet effectief is, dan kan een account worden misbruikt om handelingen te kunnen verrichten waar de betreffende persoon niet voor bevoegd is, waardoor application controls worden omzeild, aangepast of verwijderd of de integriteit van de data wordt aangetast.",
+            "biv": [
+              "I",
+              "V"
+            ],
+            "audience": "JRC & Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "A1.3.1",
+              "text": "A1.3.1 De periode totdat de toegang tot de applicatie wordt vergrendelt is gebaseerd op een risicoafweging en is gedocumenteerd.",
+              "type": "Opzet",
+              "references": [
+                "BIO2 - 7.07"
+              ]
+            },
+            {
+              "id": "A1.3.2",
+              "text": "A1.3.2 De ingestelde periode voor vergrendeling is conform de risicoafweging.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 7.07"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-A1.4",
+      "name": "Wijzigen wachtwoorden systeem-/beheeraccounts",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "A1.4",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_a1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "A1.4",
+          "title": "Wijzigen wachtwoorden systeem-/beheeraccounts",
+          "measure": "Alle wachtwoorden van systeem-/beheeraccounts die uitgezonderd zijn van het algemene wachtwoordbeleid dienen periodiek te worden gewijzigd wanneer dat nodig is, bijv. na een beveiligingsincident. Voor initiële wachtwoorden (bijvoorbeeld bij een nieuw account voor een eindgebruiker) dient deze wijziging al direct bij het eerste gebruik afgedwongen te worden. Daarnaast moet worden voorkomen dat wachtwoorden hergebruikt kunnen worden.\n\nBij toegang vanuit een vertrouwde zone mag op basis van een risicoafweging voor A1.1.1 afgeweken worden.",
+          "elaboration": "Voor testcriteria A1.4.3. denk ook aan de standaard wachtwoorden van de gebruikers die meegeleverd zijn door de fabrikant. Deze initiële wachtwoorden dienen ook veranderd te zijn.\n\nG2.5.4 De mogelijkheid bestaat dat dit proces overeenkomt met het proces dat bij A.1.4.2 is getoetst. Bij G2.5.4 ligt de focus op er geen misbruikt is gemaakt met de verhoogde rechten account. Bij A.1.4.2 ligt de focus op of er terecht toegang is verkregen tot het account.\n\nDe risicoafweging wordt bij R1 en R2 beoordeeld en kan gebruikt worden voor de invulling van de testcriteria.",
+          "worksheet": "A1. Authenticatiebeheer",
+          "overview": {
+            "process": "A1. Authenticatiebeheer",
+            "objective": "De beheersmaatregelen waarborgen met redelijke mate van zekerheid dat systemen voor authenticatiebeheer interactief behoren te zijn en dat wachtwoorden van geschikte kwaliteit worden gekozen.",
+            "risk": "Als authenticatiebeheer niet effectief is, dan kan een account worden misbruikt om handelingen te kunnen verrichten waar de betreffende persoon niet voor bevoegd is, waardoor application controls worden omzeild, aangepast of verwijderd of de integriteit van de data wordt aangetast.",
+            "biv": [
+              "I",
+              "V"
+            ],
+            "audience": "JRC & Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "A1.4.1",
+              "text": "A1.4.1 De eisen voor het wijzigen van wachtwoorden voor systeem-/beheeraccounts zijn gebaseerd op een risicoafweging en zijn gedocumenteerd.",
+              "type": "Opzet",
+              "references": [
+                "ISO 27002/2022 - 5.17"
+              ]
+            },
+            {
+              "id": "A1.4.2",
+              "text": "A1.4.2 Indien wachtwoorden voor systeem-/beheeraccounts zijn uitgezonderd van het algemene wachtwoordbeleid zijn er aanvullende procedures aanwezig (bijvoorbeeld enveloppe procedure of logging) en worden deze nageleefd.",
+              "type": "Opzet",
+              "references": [
+                "ISO 27002/2022 - 5.17"
+              ]
+            },
+            {
+              "id": "A1.4.3",
+              "text": "A1.4.3 Initiële wachtwoorden dienen direct bij het eerste gebruik gewijzigd te worden.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "ISO 27002/2022 - 5.17"
+              ]
+            },
+            {
+              "id": "A1.4.4",
+              "text": "A1.4.4 Het hergebruik van wachtwoorden dient voorkomen te worden.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "ISO 27002/2022 - 5.17",
+                "BIO2 - 5.17.03"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-A1.5",
+      "name": "Wachtwoorden zijn van adequate sterkte",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "A1.5",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_a1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "A1.5",
+          "title": "Wachtwoorden zijn van adequate sterkte",
+          "measure": "Een wachtwoord moet een minimumlengte hebben en van voldoende complexiteit zijn in overeenstemming met de eisen die de organisatie heeft bepaald.",
+          "elaboration": "Bekijk hier de best practices of de adviezen vanuit de leverancier.\n\nDe risicoafweging wordt bij R1 en R2 beoordeeld en kan gebruikt worden voor de invulling van de testcriteria.",
+          "worksheet": "A1. Authenticatiebeheer",
+          "overview": {
+            "process": "A1. Authenticatiebeheer",
+            "objective": "De beheersmaatregelen waarborgen met redelijke mate van zekerheid dat systemen voor authenticatiebeheer interactief behoren te zijn en dat wachtwoorden van geschikte kwaliteit worden gekozen.",
+            "risk": "Als authenticatiebeheer niet effectief is, dan kan een account worden misbruikt om handelingen te kunnen verrichten waar de betreffende persoon niet voor bevoegd is, waardoor application controls worden omzeild, aangepast of verwijderd of de integriteit van de data wordt aangetast.",
+            "biv": [
+              "B",
+              "I",
+              "V"
+            ],
+            "audience": "JRC & Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "A1.5.1",
+              "text": "A1.5.1 De eisen voor de sterkte van wachtwoorden zijn gebaseerd op een risicoafweging en zijn gedocumenteerd.",
+              "type": "Opzet",
+              "references": [
+                "ISO 27002/2022 - 5.17",
+                "BIO2 - 5.17.03"
+              ]
+            },
+            {
+              "id": "A1.5.2",
+              "text": "A1.5.2 De ingestelde minimale wachtwoordlengte en de complexiteitseisen zijn conform de risicoafweging.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "ISO 27002/2022 - 5.17",
+                "BIO2 - 5.17.03"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-A1.6",
+      "name": "Versleuteld opslaan van wachtwoorden",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "A1.6",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_a1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "A1.6",
+          "title": "Versleuteld opslaan van wachtwoorden",
+          "measure": "Wachtwoorden mogen niet in originele vorm (plaintext) worden opgeslagen, maar dienen in plaats daarvan versleuteld te worden.",
+          "elaboration": "De risicoafweging wordt bij R1 en R2 beoordeeld en kan gebruikt worden voor de invulling van de testcriteria.",
+          "worksheet": "A1. Authenticatiebeheer",
+          "overview": {
+            "process": "A1. Authenticatiebeheer",
+            "objective": "De beheersmaatregelen waarborgen met redelijke mate van zekerheid dat systemen voor authenticatiebeheer interactief behoren te zijn en dat wachtwoorden van geschikte kwaliteit worden gekozen.",
+            "risk": "Als authenticatiebeheer niet effectief is, dan kan een account worden misbruikt om handelingen te kunnen verrichten waar de betreffende persoon niet voor bevoegd is, waardoor application controls worden omzeild, aangepast of verwijderd of de integriteit van de data wordt aangetast.",
+            "biv": [
+              "I",
+              "V"
+            ],
+            "audience": "JRC & Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "A1.6.1",
+              "text": "A1.6.1 De eisen voor het versleuteld/gehashed opslaan van wachtwoorden en de toegang tot bestanden met wachtwoorden zijn gebaseerd op een risicoafweging en zijn gedocumenteerd.",
+              "type": "Opzet",
+              "references": [
+                "ISO 27002/2022 - 5.17",
+                "BIO2 - 8.24.04"
+              ]
+            },
+            {
+              "id": "A1.6.2",
+              "text": "A1.6.2 De versleuteling/ hashing van wachtwoorden is conform de risicoafweging en is gebaseerd op de actuele adviezen van het NCSC en de Unit Weerbaarheid van de AIVD.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "ISO 27002/2022 - 5.17",
+                "BIO2 - 8.24.04"
+              ]
+            },
+            {
+              "id": "A1.6.3",
+              "text": "A1.6.3 Toegang tot het bestand met wachtwoorden is beveiligd conform de risicoafweging en passend bij de data waartoe toegang verkregen kan worden.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "ISO 27002/2022 - 5.17"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-A1.7",
+      "name": "Blokkeren account na foutieve inlogpogingen",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "A1.7",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_a1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "A1.7",
+          "title": "Blokkeren account na foutieve inlogpogingen",
+          "measure": "Het aantal inlogpogingen en de tijdsduur dat een account wordt geblokkeerd na overschrijding van het aantal keer foutief inloggen is bepaald middels een risico overweging en is vastgelegd.",
+          "elaboration": "Captcha (Completely Automated Public Turing test to tell Computers and Humans Apart) is een soort veiligheidsmaatregel die bekend staat als challenge-response-authenticatie. Captcha helpt bij de bescherming tegen spam en ontsleuteling van wachtwoorden doordat u een eenvoudige test moet uitvoeren waarmee u aantoont dat u een mens bent en geen computer die probeert in te breken in een met een wachtwoord beschermd account.\n\nDe risicoafweging wordt bij R1 en R2 beoordeeld en kan gebruikt worden voor de invulling van de testcriteria.",
+          "worksheet": "A1. Authenticatiebeheer",
+          "overview": {
+            "process": "A1. Authenticatiebeheer",
+            "objective": "De beheersmaatregelen waarborgen met redelijke mate van zekerheid dat systemen voor authenticatiebeheer interactief behoren te zijn en dat wachtwoorden van geschikte kwaliteit worden gekozen.",
+            "risk": "Als authenticatiebeheer niet effectief is, dan kan een account worden misbruikt om handelingen te kunnen verrichten waar de betreffende persoon niet voor bevoegd is, waardoor application controls worden omzeild, aangepast of verwijderd of de integriteit van de data wordt aangetast.",
+            "biv": [
+              "I",
+              "V"
+            ],
+            "audience": "JRC & Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "A1.7.1",
+              "text": "A1.7.1 De eisen voor het blokkeren en vrijgeven van accounts zijn gebaseerd op een risicoafweging en zijn gedocumenteerd.",
+              "type": "Opzet",
+              "references": [
+                "ISO 27002/2022 - 8.5"
+              ]
+            },
+            {
+              "id": "A1.7.2",
+              "text": "A1.7.2 Het blokkeren van accounts vindt plaats conform de risicoafweging.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "ISO 27002/2022 - 8.5"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-G1.1",
+      "name": "Monitoren van gebruikersbeheer",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "G1.1",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_g1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "G1.1",
+          "title": "Monitoren van gebruikersbeheer",
+          "measure": "De organisatie houdt zelf toezicht op het gebruikersbeheer. Daarvoor voert het periodieke controles uit zoals het minimaal jaarlijks evalueren van toegangsrechten van gebruikers en beheerders op onderliggende componenten. Het interval is beschreven in het toegangsbeleid en is bepaald op basis van het risiconiveau. De uitkomsten van de evaluatie en de opvolging daarvan worden vastgelegd.",
+          "elaboration": "Deze beheersmaatregel is een deel van het ISMS in werking, maar dan specifiek ingezoomd op de onderwerpen van de beheersmaatregelen van G1.2 t/m G1.5.\n\nLet op dat de uitgegeven rechten de selectiebron zijn voor de controle.\n\nDeze beheersmaatregel is gebaseerd op de onderliggende beheersmaatregelen van Gebruikersbeheer en focust zich op de controle vanuit de tweedelijn. Derhalve zijn de referenties bij deze beheersmaatregelen ook van toepassing op G1.1.\n\nDe risicoafweging wordt bij R1 en R2 beoordeeld en kan gebruikt worden voor de invulling van de testcriteria.",
+          "worksheet": "G1. Gebruikersbeheer",
+          "overview": {
+            "process": "G1. Gebruikersbeheer",
+            "objective": "De beheersingsmaatregelen waarborgen dat de logische toegang tot informatiesystemen is beperkt tot daartoe bevoegde personen. Aan gebruikers en beheerders toegewezen rechten zijn overeenkomstig de te vervullen functie en zijn geautoriseerd door daartoe bevoegde personen.",
+            "risk": "Als gebruikersbeheer niet effectief is kunnen gebruikersaccounts in omloop zijn die te ruime of verkeerde bevoegdheden hebben waardoor functiescheiding wordt doorbroken, application controls worden omzeild, aangepast of verwijderd of de integriteit van de data wordt aangetast.",
+            "biv": [
+              "I",
+              "V"
+            ],
+            "audience": "JRC & Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "G1.1.1",
+              "text": "G1.1.1 Er is een procedure waarin de uit te voeren periodieke controles op toegangsrechten en gebruikersaccounts zijn vastgelegd. Deze is gebaseerd op een risicoafweging en bevat minimaal:\n- de uit te voeren controlewerkzaamheden\n- de interval periodes (minimaal jaarlijks)\n- wijze van vastlegging\n- wijze van rapportering\n- de verantwoordelijkheden voor omgang met de bevindingen\n- escalatiepaden bij niet oplossen van bevindingen",
+              "type": "Opzet",
+              "references": [
+                "BIO2 - 5.18.02"
+              ]
+            },
+            {
+              "id": "G1.1.2",
+              "text": "G1.1.2 Minimaal de volgende aspecten zijn beoordeeld:\n- Accounts (zijn medewerkers nog in dienst/werkzaam in hun functie?)\n- Toegangsrechten (passen de toegangsrechten nog bij de taken van de medewerker?)\n- Functiescheiding (wordt functiescheiding doorbroken?)\n- Niet persoonsgebonden accounts (zijn deze accounts beperkt en verklaard?)\n- Naleving procedures (functiescheiding tussen gebruiker en goedkeurder, functiescheiding tussen goedkeuren, doorvoeren en controleur, toekenning conform autorisatiematrix)\n- Monitoring vindt plaats op het gebruik van accounts met hoge rechten en het toekennen van hoge rechten",
+              "type": "Bestaan/ Werking",
+              "references": []
+            },
+            {
+              "id": "G1.1.3",
+              "text": "G1.1.3 Er wordt opvolging gegeven aan de evaluatie en de uitkomsten zijn vastgelegd.",
+              "type": "Bestaan/ Werking",
+              "references": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-G1.2",
+      "name": "Gebruikers en beheerders hebben alleen de toegangsrechten die voor hun functie noodzakelijk zijn",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "G1.2",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_g1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "G1.2",
+          "title": "Gebruikers en beheerders hebben alleen de toegangsrechten die voor hun functie noodzakelijk zijn",
+          "measure": "Gebruikers en beheerders krijgen slechts toegang tot functionaliteit (rol) die zij uit hoofde van hun functie nodig hebben waarbij functievermenging wordt uitgesloten (need to know, need to use). Daartoe is een beschrijving beschikbaar welke rollen en rechten per applicatie bij een functie horen. Hierbij is het van belang dat ongewenste functievermenging (conflicterende rechten) zowel binnen een applicatie als over applicaties heen wordt voorkomen.",
+          "elaboration": "Bij G1.2.3 controleer je of gebruikers de juiste rollen hebben conform autorisatiematrix en functiescheidingsmatrix. Gezien de complexiteit van gebruikersbeheer bij grote ERP systemen, is het gebruik van monitoringstool randvoorwaardelijk (denk hierbij aan GRC tooling).\n\nBij G1.2.4 is het niet mogelijk om voor alle rollen inhoudelijk vast te stellen dat deze enkel over de autorisaties beschikken zoals deze in opzet zijn beschreven. Selecteer daarom in afstemming met de accountant enkele kritische rollen en ga voor deze rollen na of deze uitsluitend beschikken over de autorisaties zoals deze in opzet zijn beschreven. Maak hiervoor indien beschikbaar gebruik van door de organisatie zelf uitgevoerde test.\n\nOm een goed autorisatiebeheer te kunnen inrichten is een actuele autorisatiematrix en functiescheidingsmatrix een noodzaak. In de ISO en de BIO worden deze matrices niet specifiek benoemd. Een vervangend middel is ook mogelijk.",
+          "worksheet": "G1. Gebruikersbeheer",
+          "overview": {
+            "process": "G1. Gebruikersbeheer",
+            "objective": "De beheersingsmaatregelen waarborgen dat de logische toegang tot informatiesystemen is beperkt tot daartoe bevoegde personen. Aan gebruikers en beheerders toegewezen rechten zijn overeenkomstig de te vervullen functie en zijn geautoriseerd door daartoe bevoegde personen.",
+            "risk": "Als gebruikersbeheer niet effectief is kunnen gebruikersaccounts in omloop zijn die te ruime of verkeerde bevoegdheden hebben waardoor functiescheiding wordt doorbroken, application controls worden omzeild, aangepast of verwijderd of de integriteit van de data wordt aangetast.",
+            "biv": [
+              "B",
+              "I",
+              "V"
+            ],
+            "audience": "JRC & Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "G1.2.1",
+              "text": "G1.2.1 Er is een autorisatiematrix aansluitend op het autorisatieconcept van het systeem waarin is vastgelegd welke toegangsrechten horen bij elke functie. Hierin zijn alle functies en toegangsrechten/ autorisaties opgenomen. Denk hierbij aan eindgebruikers en functioneel applicatiebeheerders.",
+              "type": "Opzet",
+              "references": [
+                "BIO2 - 5.15",
+                "ISO 27002/2022 - 5.18"
+              ]
+            },
+            {
+              "id": "G1.2.2",
+              "text": "G1.2.2 Er is een functiescheidingsmatrix aanwezig waarin is vastgelegd welke functievermenging (conflicterende rechten/rollen) ongewenst is.",
+              "type": "Opzet",
+              "references": [
+                "BIO2 - 5.03",
+                "ISO 27002/2022 - 5.18"
+              ]
+            },
+            {
+              "id": "G1.2.3",
+              "text": "G1.2.3 Gebruikers hebben slechts toegang tot de functionaliteit (autorisaties) die zij uit hoofde van hun functie nodig hebben, daarbij wordt functiescheiding niet doorbroken (conform autorisatie- en functiescheidingsmatrix).",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 5.18",
+                "BIO2 - 8.03",
+                "BIO2 - 8.03.02",
+                "ISO 27002/2022 - 5.3"
+              ]
+            },
+            {
+              "id": "G1.2.4",
+              "text": "G1.2.4 De autorisatierollen beschikken over de autorisaties die in opzet zijn beschreven.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 8.03.02"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-G1.3",
+      "name": "Goedkeuring en functiescheiding bij toekennen autorisaties",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "G1.3",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_g1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "G1.3",
+          "title": "Goedkeuring en functiescheiding bij toekennen autorisaties",
+          "measure": "Het verlenen en muteren van gebruikersaccounts en toegangsrechten vindt plaats na goedkeuring door een bevoegde functionaris. Er is een actueel mandaatregister aanwezig waaruit blijkt welke personen beslissende bevoegdheden hebben voor het verlenen van een bepaald type (niveau) toegangsrechten dan wel functieprofielen. Daarnaast bestaat er functiescheiding tussen het autoriseren en doorvoeren van wijzigingen in gebruikersaccounts en toegangsrechten.",
+          "elaboration": "",
+          "worksheet": "G1. Gebruikersbeheer",
+          "overview": {
+            "process": "G1. Gebruikersbeheer",
+            "objective": "De beheersingsmaatregelen waarborgen dat de logische toegang tot informatiesystemen is beperkt tot daartoe bevoegde personen. Aan gebruikers en beheerders toegewezen rechten zijn overeenkomstig de te vervullen functie en zijn geautoriseerd door daartoe bevoegde personen.",
+            "risk": "Als gebruikersbeheer niet effectief is kunnen gebruikersaccounts in omloop zijn die te ruime of verkeerde bevoegdheden hebben waardoor functiescheiding wordt doorbroken, application controls worden omzeild, aangepast of verwijderd of de integriteit van de data wordt aangetast.",
+            "biv": [
+              "I",
+              "V"
+            ],
+            "audience": "JRC & Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "G1.3.1",
+              "text": "G1.3.1 Er is een actuele procedure voor het toekennen van autorisaties. Deze voorziet in functiescheiding en maatregelen om het toekennen conform het need to know principe te borgen.",
+              "type": "Opzet",
+              "references": [
+                "BIO2 - 5.16.01"
+              ]
+            },
+            {
+              "id": "G1.3.2",
+              "text": "G1.3.2 Er is een actueel overzicht waarin staat wie bevoegd is om toegangsrechten te verlenen.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 5.16.01",
+                "ISO 27002/2022 - 5.18a"
+              ]
+            },
+            {
+              "id": "G1.3.3",
+              "text": "G1.3.3 Een bevoegde functionaris heeft goedkeuring gegeven voor het verlenen en muteren van gebruikersaccounts en toegangsrechten.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 5.16.01",
+                "BIO2 - 5.18",
+                "ISO 27002/2022 - 5.18a"
+              ]
+            },
+            {
+              "id": "G1.3.4",
+              "text": "G1.3.4 Het aanmaken van een account / toekennen van de toegangsrechten is pas gebeurd nadat de aanvraag is goedgekeurd.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "ISO 27002/2022 - 5.18g"
+              ]
+            },
+            {
+              "id": "G1.3.5",
+              "text": "G1.3.5 De autorisaties voor het account zijn conform de aanvraag toegevoegd.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 5.18",
+                "ISO 27002/2022 - 5.18a"
+              ]
+            },
+            {
+              "id": "G1.3.6",
+              "text": "G1.3.6 Er is functiescheiding tussen het autoriseren en doorvoeren van wijzigingen in gebruikersaccounts en toegangsrechten.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 5.03",
+                "ISO 27002/2022 - 5.18c"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-G1.4",
+      "name": "Tijdig verwerken functiewijzigingen en uitdiensttredingen",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "G1.4",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_g1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "G1.4",
+          "title": "Tijdig verwerken functiewijzigingen en uitdiensttredingen",
+          "measure": "Functiewijzigingen en uitdiensttredingen worden bewaakt voor aanpassen van de toegangsrechten en voor intrekken van de identiteits- en authenticatiemiddelen.",
+          "elaboration": "G1.4.2 Aanvullend is het voor deze beheersmaatregel ook aan te bevelen om een analyse te maken of actieve accounts die 90 dagen niet meer gebruikt zijn worden verwijderd of worden gedeactiveerd.",
+          "worksheet": "G1. Gebruikersbeheer",
+          "overview": {
+            "process": "G1. Gebruikersbeheer",
+            "objective": "De beheersingsmaatregelen waarborgen dat de logische toegang tot informatiesystemen is beperkt tot daartoe bevoegde personen. Aan gebruikers en beheerders toegewezen rechten zijn overeenkomstig de te vervullen functie en zijn geautoriseerd door daartoe bevoegde personen.",
+            "risk": "Als gebruikersbeheer niet effectief is kunnen gebruikersaccounts in omloop zijn die te ruime of verkeerde bevoegdheden hebben waardoor functiescheiding wordt doorbroken, application controls worden omzeild, aangepast of verwijderd of de integriteit van de data wordt aangetast.",
+            "biv": [
+              "B",
+              "I",
+              "V"
+            ],
+            "audience": "JRC & Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "G1.4.1",
+              "text": "G1.4.1 Er is een procedure die voorziet in beheersmaatregelen om tijdig intrekken van rechten bij functiewijziging of uitdiensttreding te borgen.",
+              "type": "Opzet",
+              "references": [
+                "BIO2 - 5.16.01",
+                "ISO 27002/2022 - 5.18d"
+              ]
+            },
+            {
+              "id": "G1.4.2",
+              "text": "G1.4.2 Toegangsrechten (en eventueel gebruikersaccount) van de medewerker zijn tijdig ingetrokken.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 5.16.01",
+                "ISO 27002/2022 - 5.18d"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-G1.5",
+      "name": "Generieke accounts en accounts met verhoogde rechten zijn zo veel mogelijk beperkt en verklaard",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "G1.5",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_g1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "G1.5",
+          "title": "Generieke accounts en accounts met verhoogde rechten zijn zo veel mogelijk beperkt en verklaard",
+          "measure": "Het aantal (generieke) accounts met verhoogde rechten is beperkt en verklaard, en staat in logische verhouding tot de beheerders en of ICT afdeling. Procedures voorzien erin dat handelingen altijd te herleiden zijn naar één verantwoordelijke.",
+          "elaboration": "Het gaat hier zowel om persoonsgebonden (beheer)accounts met verhoogde rechten als systeemaccounts waaraan verhoogde rechten zijn toegekend. Controle dient plaats te vinden op zowel de accounts waaraan verhoogde rechten zijn toegekend als het gebruik van deze accounts.\n\nG1.5.4 De mogelijkheid bestaat dat dit proces overeenkomt met het proces dat bij A.1.1.3 is getoetst. Bij G1.5.4 ligt de focus op dat er geen misbruik is gemaakt met het verhoogde rechten account. Bij A.1.1.3 ligt de focus op of er terecht toegang is verkregen tot het account.\n\nDe risicoafweging wordt bij R1 en R2 beoordeeld en kan gebruikt worden voor de invulling van de testcriteria.",
+          "worksheet": "G1. Gebruikersbeheer",
+          "overview": {
+            "process": "G1. Gebruikersbeheer",
+            "objective": "De beheersingsmaatregelen waarborgen dat de logische toegang tot informatiesystemen is beperkt tot daartoe bevoegde personen. Aan gebruikers en beheerders toegewezen rechten zijn overeenkomstig de te vervullen functie en zijn geautoriseerd door daartoe bevoegde personen.",
+            "risk": "Als gebruikersbeheer niet effectief is kunnen gebruikersaccounts in omloop zijn die te ruime of verkeerde bevoegdheden hebben waardoor functiescheiding wordt doorbroken, application controls worden omzeild, aangepast of verwijderd of de integriteit van de data wordt aangetast.",
+            "biv": [
+              "B",
+              "I",
+              "V"
+            ],
+            "audience": "JRC & Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "G1.5.1",
+              "text": "G1.5.1 Er is beleid voor omgang met speciale toegangsrechten. Dit voorziet in maatregelen om verhoogde rechten beperkt en beheerst uit te geven.",
+              "type": "Opzet",
+              "references": [
+                "BIO2 - 8.02"
+              ]
+            },
+            {
+              "id": "G1.5.2",
+              "text": "G1.5.2 Er zijn procedures aanwezig voor het gebruik van generieke accounts (zoals systeem-, service, interface accounts) waardoor handelingen te herleiden zijn en risico's geminimaliseerd en beheerst worden. Deze procedures worden nageleefd.",
+              "type": "Opzet",
+              "references": [
+                "BIO2 - 5.16.02"
+              ]
+            },
+            {
+              "id": "G1.5.3",
+              "text": "G1.5.3 Het aantal (generieke) accounts met verhoogde rechten is beperkt en verklaard.\nLet bijvoorbeeld op accounts met de mogelijkheid tot het muteren van gebruikersrechten en controleer of dit aantal in verhouding staat tot het aantal beheerders.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 8.02"
+              ]
+            },
+            {
+              "id": "G1.5.4",
+              "text": "G1.5.4 Beoordeling vindt minimaal ieder kwartaal plaats van:\n- actieve accounts met verhoogde rechten\n- toewijzen en intrekken van verhoogde rechten\n\nIndien wijzigingen ongeautoriseerd zijn, is dit een informatiebeveiligingsincident en wordt dit als zodanig vastgelegd en afgehandeld.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 8.02.01",
+                "BIO2 - 5.18.01"
+              ]
+            },
+            {
+              "id": "G1.5.5",
+              "text": "G1.5.5 Toegang van externe leveranciers vind uitsluitend plaats onder voorwaarden, die op basis van een risicoafweging zijn opgesteld.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 8.05.01"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-W1.1",
+      "name": "Monitoren van wijzigingsbeheer",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "W1.1",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_w1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "W1.1",
+          "title": "Monitoren van wijzigingsbeheer",
+          "measure": "De organisatie houdt zelf toezicht dat wijzigingen, inclusief datafixes juist, tijdig en volledig worden doorgevoerd. Daarvoor voert het periodieke controles naar bijvoorbeeld wijzigingen die buiten het reguliere proces om zijn doorgevoerd of wijzigingen die ongeautoriseerd zijn doorgevoerd naar de productie omgeving. Het interval is beschreven in het beleid en is bepaald op basis van het risiconiveau. De uitkomsten van de evaluatie en de opvolging daarvan worden vastgelegd.",
+          "elaboration": "Deze beheersmaatregel is een deel van het ISMS in werking, maar dan specifiek ingezoomd op de onderwerpen van de beheersmaatregelen van W1.2 t/m W1.5.\n\nLet op dat de organisatie bij de controle op wijzigingen een juiste en volledige populatiebron heeft gebruikt.\n\nAls er bij het trekken van de populatie niet gebruik kan worden gemaakt van logging, maar alleen van het registratie systeem, dan loop je het risico dat je niet alle changes in scope hebt. Dus kijk dan bij W1.5 of de organisatie hiervoor beheersmaatregelingen voor heeft, voordat je verdere werkzaamheden uitvoert. Indien niet, stem dan aanpak wijzigingsbeheer verder af met accountant.\n\nDeze beheersmaatregel is gebaseerd op de onderliggende beheersmaatregelen van wijzigingsbeheer en focust zich op de controle vanuit de tweedelijn. Derhalve zijn de referenties bij deze beheersmaatregelen ook van toepassing op W1.1.",
+          "worksheet": "W1. Wijzigingsbeheer",
+          "overview": {
+            "process": "W1. Wijzigingsbeheer",
+            "objective": "De beheersingsmaatregelen waarborgen dat wijzigingen (inclusief datafixes) in de informatiesystemen op een gecontroleerde wijze worden uitgevoerd om het risico op ongeautoriseerde wijzigingen in de informatiesystemen te voorkomen.",
+            "risk": "Als wijzigingsbeheer niet effectief is, kan een wijziging kwetsbaarheden, fouten of ongewenste functionaliteiten aanbrengen in de productie omgeving die de werking van de application controls of de integriteit van de data aantast.",
+            "biv": [
+              "B",
+              "I",
+              "V"
+            ],
+            "audience": "JRC & Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "W1.1.1",
+              "text": "W1.1.1 De organisatie heeft in opzet beschreven hoe controles op het wijzigingsbeheer uitgevoerd worden en wat de periodiciteit is van deze controles.",
+              "type": "Opzet",
+              "references": []
+            },
+            {
+              "id": "W1.1.2",
+              "text": "W1.1.2 Periodiek wordt door de organisatie beoordeeld of\n- wijzigingen/datafixes conform het proces zijn verlopen (functiescheiding, mandaat autoriseerder en goedkeurder, vastlegging (logging) en uitvoer tests)\n- er wijzigingen/datafixes zijn die buiten het proces om zijn doorgevoerd en derhalve niet geregistreerd zijn, bijvoorbeeld door logreview.\n- stel vast dat de gebruikte populatie voor deze controles volledig en juist is.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "ISO 27002/2022 - 6.8"
+              ]
+            },
+            {
+              "id": "W1.1.3",
+              "text": "W1.1.3 Correctieve acties zijn door de organisatie ondernomen indien er naar aanleiding van de periodieke controle oneigenlijke wijzigingen zijn gesignaleerd.",
+              "type": "Bestaan/ Werking",
+              "references": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-W1.2",
+      "name": "Testen wijzigingen",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "W1.2",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_w1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "W1.2",
+          "title": "Testen wijzigingen",
+          "measure": "Wijzigingen worden getest in een andere omgeving dan de productieomgeving. Bij het testen is aandacht voor de belangrijkste bedrijfskritische functionaliteiten (denk hierbij aan een testscript of testplan).",
+          "elaboration": "Neem voor het wijzigingsbeheer ook datafixes mee in de beoordeling indien dit van toepassing is bij de organisatie.\n\nIndien de organisatie niet zelf de datafixes uitvoert, heeft de organisatie dan afspraken gemaakt met de service-organisatie over:\n- de onderlinge rolverdeling\n- de administratie van datafixes\n- de risico-afweging\n- testen\n- goedkeuring van datafixes en vastlegging daarvan\n- logging van datafixes\n- termijn en controle van de logging.\n\nBij Agile systeemontwikkeling kan het testen van een wijziging ook vastgelegd zijn in bijv. Jira wanneer het om de ontwikkeling van een user story gaat. Daarnaast kunnen de testresultaten blijken uit de logging van de geautomatiseerde (test)tooling. Bij geautomatiseerd testen is het dan wel van belang dat je ziet welke scope wordt gehanteerd.\n\nW1.2.3 De BIO is geschreven vanuit IB perspectief. Voor de jaarrekening zijn de functionele aspecten ook belangrijk. Let op dat bij grote releases / patches met functionele wijzigingen testen worden uitgevoerd om vast te stellen dat de functionaliteiten (application controls) niet zijn gewijzigd.",
+          "worksheet": "W1. Wijzigingsbeheer",
+          "overview": {
+            "process": "W1. Wijzigingsbeheer",
+            "objective": "De beheersingsmaatregelen waarborgen dat wijzigingen (inclusief datafixes) in de informatiesystemen op een gecontroleerde wijze worden uitgevoerd om het risico op ongeautoriseerde wijzigingen in de informatiesystemen te voorkomen.",
+            "risk": "Als wijzigingsbeheer niet effectief is, kan een wijziging kwetsbaarheden, fouten of ongewenste functionaliteiten aanbrengen in de productie omgeving die de werking van de application controls of de integriteit van de data aantast.",
+            "biv": [
+              "B",
+              "I",
+              "V"
+            ],
+            "audience": "JRC & Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "W1.2.1",
+              "text": "W1.2.1 De organisatie heeft in opzet beschreven op welke wijze wijzigingen worden getest door de organisatie.",
+              "type": "Opzet",
+              "references": [
+                "BIO2 - 8.32.02",
+                "BIO2 - 8.29.01"
+              ]
+            },
+            {
+              "id": "W1.2.2",
+              "text": "W1.2.2 Wijziging worden in een andere omgeving dan de productieomgeving getest.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 8.31.01",
+                "BIO2 - 8.32"
+              ]
+            },
+            {
+              "id": "W1.2.3",
+              "text": "W1.2.3 Voor wijzigingen is een testscript en/of testplan aanwezig waarin de belangrijkste functionaliteiten zijn beschreven. Indien gebruik wordt gemaakt van een script, wordt dit script door een andere functionaris gereviewd.\nLet op dat hierbij ook aandacht is voor de functionele aspecten.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 8.32.02",
+                "BIO2 - 8.29.01",
+                "BIO2 - 8.31.02"
+              ]
+            },
+            {
+              "id": "W1.2.4",
+              "text": "W1.2.4 Wijzigingen zijn conform het testscript en/of testplan getest en het bijbehorende testresultaat is gedocumenteerd. Alleen met voorafgaande goedkeuring door de proceseigenaar kan hiervan worden afgeweken. Fouten en andere afwijkingen die zich tijdens het testproces voordoen, worden vastgelegd, opgelost dan wel verklaard.\nBij agile blijken de testresultaten uit de logging van de geautomatiseerde (test)tooling.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 8.29.01",
+                "BIO2 - 8.31.02"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-W1.3",
+      "name": "Goedkeuren wijzigingen met inachtneming van testresultaten",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "W1.3",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_w1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "W1.3",
+          "title": "Goedkeuren wijzigingen met inachtneming van testresultaten",
+          "measure": "Wijzigingen worden door een bevoegde functionaris goedgekeurd op basis van gedocumenteerde testresultaten en pas daarna doorgevoerd in de productieomgeving. Kijk bij Agile systeemontwikkeling, indien beschikbaar, ook naar de definition of done.",
+          "elaboration": "Bij Agile systeemontwikkeling kan goedkeuring ook het aanklikken van een vinkje zijn door de product owner in de geautomatiseerde tooling. Indien dit het geval is dan moet rekening gehouden worden met de volgende punten:\n- Zijn goedkeuringsstappen ingebouwd in de pipeline, denk hierbij aan merge requests (MR), pull requests (PR)",
+          "worksheet": "W1. Wijzigingsbeheer",
+          "overview": {
+            "process": "W1. Wijzigingsbeheer",
+            "objective": "De beheersingsmaatregelen waarborgen dat wijzigingen (inclusief datafixes) in de informatiesystemen op een gecontroleerde wijze worden uitgevoerd om het risico op ongeautoriseerde wijzigingen in de informatiesystemen te voorkomen.",
+            "risk": "Als wijzigingsbeheer niet effectief is, kan een wijziging kwetsbaarheden, fouten of ongewenste functionaliteiten aanbrengen in de productie omgeving die de werking van de application controls of de integriteit van de data aantast.",
+            "biv": [
+              "B",
+              "I",
+              "V"
+            ],
+            "audience": "JRC & Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "W1.3.1",
+              "text": "W1.3.1 De organisatie heeft in opzet beschreven welke medewerkers (of functies) goedkeuring mogen geven op wijzigingen.",
+              "type": "Opzet",
+              "references": [
+                "BIO2 - 8.32.01"
+              ]
+            },
+            {
+              "id": "W1.3.2",
+              "text": "W1.3.2 Een bevoegde functionaris keurt op basis van gedocumenteerde testresultaten de wijziging goed.\nBij Agile systeemontwikkeling kan goedkeuring ook het aanklikken van een vinkje zijn door de product owner in de geautomatiseerde tooling.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 8.32.01"
+              ]
+            },
+            {
+              "id": "W1.3.3",
+              "text": "W1.3.3 De wijziging is pas na goedkeuring door een bevoegde functionaris in de productieomgeving doorgevoerd.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 8.32.01"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-W1.4",
+      "name": "Functiescheiding tussen goedkeuren en doorvoeren van wijzigingen",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "W1.4",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_w1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "W1.4",
+          "title": "Functiescheiding tussen goedkeuren en doorvoeren van wijzigingen",
+          "measure": "Er dient functiescheiding te zijn ingericht tussen het goedkeuren en doorvoeren van wijzigingen om onbevoegde en onbedoelde wijzigingen te beperken. Niemand in een organisatie of proces mag op uitvoerend niveau rechten hebben om een gehele cyclus van handelingen in een kritisch informatiesysteem te beheersen.\n\nW1.4.4 is alleen van toepassing indien het om een zelfontwikkelde systemen gaat.",
+          "elaboration": "Bij Agile systeemontwikkeling is deze functiescheiding onder andere terug te zien door de prioritering op de product backlog (autorisatie), goedkeuring na testresultaten door de product owner (of bijv. een CAB) en de doorvoering door het team.\n\nBij een Agile of DevOps omgeving kan hier ook gedacht worden aan goed autorisatiebeheer, logging en monitoring binnen de geautomatiseerde Continuous Delivery pipeline en afgedwongen procesgang naar productie.\n\nHet kan voorkomen dat een organisatie middels een Agile methode werkt en daarbij gebruik maakt van een CI/CD pipeline. Indien dit het geval is dan moet rekening gehouden worden met de volgende punten:\n-Audit trail voor versiebeheer. Worden alle code- en configuratiewijzigingen bijgehouden in bijvoorbeeld Github?\n- Worden Changelogs of release notes automatisch gegenereerd waarin de wijzigingen zijn gedocumenteerd?\n\nVoor de jaarrekeningcontrole is het belangrijkste dat er scheiding is ingericht tussen goedkeuring en doorvoeren (4-ogen principe).",
+          "worksheet": "W1. Wijzigingsbeheer",
+          "overview": {
+            "process": "W1. Wijzigingsbeheer",
+            "objective": "De beheersingsmaatregelen waarborgen dat wijzigingen (inclusief datafixes) in de informatiesystemen op een gecontroleerde wijze worden uitgevoerd om het risico op ongeautoriseerde wijzigingen in de informatiesystemen te voorkomen.",
+            "risk": "Als wijzigingsbeheer niet effectief is, kan een wijziging kwetsbaarheden, fouten of ongewenste functionaliteiten aanbrengen in de productie omgeving die de werking van de application controls of de integriteit van de data aantast.",
+            "biv": [
+              "B",
+              "I",
+              "V"
+            ],
+            "audience": "JRC & Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "W1.4.1",
+              "text": "W1.4.1 De organisatie heeft in opzet beschreven hoe het wijzigingsbeheer verloopt en op welke wijze functiescheiding wordt gewaarborgd.",
+              "type": "Opzet",
+              "references": [
+                "BIO2 - 5.03",
+                "BIO2 - 8.18.01"
+              ]
+            },
+            {
+              "id": "W1.4.2",
+              "text": "W1.4.2 Er zijn regels vastgesteld m.b.t. het veilig ontwikkelen van software en systemen.",
+              "type": "Opzet",
+              "references": [
+                "BIO2 - 8.25"
+              ]
+            },
+            {
+              "id": "W1.4.3",
+              "text": "W1.4.3 Er is functiescheiding ingericht tussen het goedkeuren en doorvoeren van wijzigingen.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 5.03",
+                "BIO2 - 8.18.01"
+              ]
+            },
+            {
+              "id": "W1.4.4",
+              "text": "W1.4.4 De lees- en schrijftoegang voor de ontwikkelomgeving worden op passende wijze beheerd.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 8.04"
+              ]
+            },
+            {
+              "id": "W1.4.5",
+              "text": "W1.4.5 Er worden regels toegepast m.b.t. het veilig ontwikkelen van software en systemen.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 8.25"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-W1.5",
+      "name": "Borging voorkomen en signaleren wijzigingen buiten regulier proces om",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "W1.5",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_w1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "W1.5",
+          "title": "Borging voorkomen en signaleren wijzigingen buiten regulier proces om",
+          "measure": "Er zijn beheersmaatregelen getroffen om te borgen dat wijzigingen buiten het reguliere change proces om naar productie kunnen worden gebracht. Tevens vindt er periodiek controle plaats om wijzigingen buiten het proces om te signaleren.",
+          "elaboration": "Bij Agile systeemontwikkeling is deze functiescheiding onder andere terug te zien door de prioritering op de product backlog (autorisatie), goedkeuring na testresultaten door de product owner (of bijv. een CAB) en de doorvoering door het team.\n\nBij een Agile of DevOps omgeving kan hier ook gedacht worden aan goed autorisatiebeheer, logging en monitoring binnen de geautomatiseerde Continuous Delivery pipeline en afgedwongen procesgang naar productie.\n\nHet kan voorkomen dat een organisatie middels een Agile methode werkt en daarbij gebruik maakt van een CI/CD pipeline. Indien dit het geval is dan moet rekening gehouden worden met de volgende punten:\n-Audit trail voor versiebeheer. Worden alle code- en configuratiewijzigingen bijgehouden in bijvoorbeeld Github?\n- Worden Changelogs of release notes automatisch gegenereerd waarin de wijzigingen zijn gedocumenteerd?",
+          "worksheet": "W1. Wijzigingsbeheer",
+          "overview": {
+            "process": "W1. Wijzigingsbeheer",
+            "objective": "De beheersingsmaatregelen waarborgen dat wijzigingen (inclusief datafixes) in de informatiesystemen op een gecontroleerde wijze worden uitgevoerd om het risico op ongeautoriseerde wijzigingen in de informatiesystemen te voorkomen.",
+            "risk": "Als wijzigingsbeheer niet effectief is, kan een wijziging kwetsbaarheden, fouten of ongewenste functionaliteiten aanbrengen in de productie omgeving die de werking van de application controls of de integriteit van de data aantast.",
+            "biv": [],
+            "audience": "JRC & Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "W1.5.1",
+              "text": "W1.5.1 De organisatie heeft beheersmaatregelen beschreven die de mogelijkheden beperken om wijzigingen buiten het proces om door te voeren.\nDenk aan het tijdelijk toekennen van rechten voor het doorvoeren van wijzigingen.",
+              "type": "Opzet",
+              "references": [
+                "BIO2 - 8.32.02",
+                "BIO2 - 8.18"
+              ]
+            },
+            {
+              "id": "W1.5.2",
+              "text": "W1.5.2 De organisatie heeft beheersmaatregelen  geïmplementeerd die de mogelijkheden beperken om wijzigingen buiten het proces om door te voeren.\nDenk aan het tijdelijk toekennen van rechten voor het doorvoeren van wijzigingen.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 8.32.02",
+                "BIO2 - 8.18"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-I1.1",
+      "name": "Monitoren van incidentbeheer",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "I1.1",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_i1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "I1.1",
+          "title": "Monitoren van incidentbeheer",
+          "measure": "De organisatie houdt zelf toezicht op de juistheid, volledigheid, tijdigheid van de incidentenregistratie en afwikkeling.",
+          "elaboration": "Deze beheersmaatregel is een deel van het ISMS in werking, maar dan specifiek ingezoomd op de onderwerpen van de beheersmaatregelen van I1.2 t/m I1.5.\n\nDeze beheersmaatregel is gebaseerd op de onderliggende beheersmaatregelen van Incidentenmanagement en focust zich op de controle vanuit de tweedelijn. Derhalve zijn de referenties bij deze beheersmaatregelen ook van toepassing op I1.1.",
+          "worksheet": "I1. Incidentbeheer IB",
+          "overview": {
+            "process": "I1. Incidentbeheer IB",
+            "objective": "Er is aandacht voor IB incidenten als onderdeel van beveiligingsincidenten teneinde een snelle, doeltreffende, consistente en geordende reactie op informatiebeveiligingsincidenten, met inbegrip van communicatie over informatiebeveiligingsgebeurtenissen, te bewerkstelligen.",
+            "risk": "Indien een organisatie geen plannen heeft, en zich niet heeft voorbereid op het beheren van informatiebeveiligingsincidenten, is een organisatie bij informatiebeveiligingsincidenten niet in staat om tijdig te reageren, te communiceren en te leren van deze incidenten.",
+            "biv": [],
+            "audience": "Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "I1.1.1",
+              "text": "I1.1.1 De organisatie heeft in opzet beschreven hoe monitoring op het incidentenbeheer uitgevoerd wordt.",
+              "type": "Opzet",
+              "references": []
+            },
+            {
+              "id": "I1.1.2",
+              "text": "I1.1.2 Monitoring vindt plaats op\n- Juiste, tijdige en volledige registratie van meldingen\n- tijdige afhandeling en melding",
+              "type": "Bestaan/ Werking",
+              "references": []
+            },
+            {
+              "id": "I1.1.3",
+              "text": "I1.1.3 Correctieve acties en/of verbeteringen zijn door de organisatie ondernomen n.a.v. de monitoring.",
+              "type": "Bestaan/ Werking",
+              "references": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-I1.2",
+      "name": "Plannen en voorbereiden van het beheer van informatiebeveiligingsincidenten",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "I1.2",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_i1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "I1.2",
+          "title": "Plannen en voorbereiden van het beheer van informatiebeveiligingsincidenten",
+          "measure": "De organisatie behoort plannen op te stellen voor, en zich voor te bereiden op, het beheren van informatiebeveiligingsincidenten door processen, rollen en verantwoordelijkheden voor het beheer van informatiebeveiligingsincidenten te definiëren, vast te stellen en te communiceren.",
+          "elaboration": "Voor Defensie en J&V gelden andere regels voor de meldingsplicht.",
+          "worksheet": "I1. Incidentbeheer IB",
+          "overview": {
+            "process": "I1. Incidentbeheer IB",
+            "objective": "Er is aandacht voor IB incidenten als onderdeel van beveiligingsincidenten teneinde een snelle, doeltreffende, consistente en geordende reactie op informatiebeveiligingsincidenten, met inbegrip van communicatie over informatiebeveiligingsgebeurtenissen, te bewerkstelligen.",
+            "risk": "Indien een organisatie geen plannen heeft, en zich niet heeft voorbereid op het beheren van informatiebeveiligingsincidenten, is een organisatie bij informatiebeveiligingsincidenten niet in staat om tijdig te reageren, te communiceren en te leren van deze incidenten.",
+            "biv": [],
+            "audience": "Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "I1.2.1",
+              "text": "I1.2.1 Er zijn procedures voor het melden en afhandelen van beveiligingsincidenten, waarbij er specifieke aandacht is voor IB incidenten. In de procedure zijn opgenomen:\n- de taken en verantwoordelijkheden van het meldloket\n- kennisdeling meldprocedure incidenten\n- de taken, verantwoordelijken en mandaat voor het oplossen van beveiligingsincidenten.\n- een koppeling met crisisbeheersing (extern) en calamiteitenbeheersing (intern)\n- de rapportering over de opvolging van IB incidenten\n- het proces om incidenten tijdig te melden bij het nationale CSIRT",
+              "type": "Opzet",
+              "references": [
+                "BIO2 - 5.24.01",
+                "BIO2 - 5.24.02",
+                "BIO2 - 5.24.03",
+                "BIO2 - 5.24.04",
+                "BIO2 - 5.24.05",
+                "BIO2 - 5.24.06",
+                "BIO2 - 5.24.07"
+              ]
+            },
+            {
+              "id": "I1.2.2",
+              "text": "I1.2.2 Alle medewerkers (intern en extern) hebben aantoonbaar kennisgenomen van de meldingsprocedure van incidenten.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 6.08",
+                "BIO2 - 6.08.01"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-I1.3",
+      "name": "Beoordelen van en besluiten over informatiebeveiligingsgebeurtenissen",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "I1.3",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_i1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "I1.3",
+          "title": "Beoordelen van en besluiten over informatiebeveiligingsgebeurtenissen",
+          "measure": "De organisatie behoort informatiebeveiligingsgebeurtenissen te beoordelen en te beslissen of ze moeten worden gecategoriseerd als informatiebeveiligingsincidenten.",
+          "elaboration": "",
+          "worksheet": "I1. Incidentbeheer IB",
+          "overview": {
+            "process": "I1. Incidentbeheer IB",
+            "objective": "Er is aandacht voor IB incidenten als onderdeel van beveiligingsincidenten teneinde een snelle, doeltreffende, consistente en geordende reactie op informatiebeveiligingsincidenten, met inbegrip van communicatie over informatiebeveiligingsgebeurtenissen, te bewerkstelligen.",
+            "risk": "Indien een organisatie geen plannen heeft, en zich niet heeft voorbereid op het beheren van informatiebeveiligingsincidenten, is een organisatie bij informatiebeveiligingsincidenten niet in staat om tijdig te reageren, te communiceren en te leren van deze incidenten.",
+            "biv": [],
+            "audience": "Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "I1.3.1",
+              "text": "I1.3.1 Het incidentbeheerproces bevat criteria voor het beoordelen, categoriseren en besluiten over informatiebeveiligingsgebeurtenissen.",
+              "type": "Opzet",
+              "references": [
+                "BIO2 - 5.25"
+              ]
+            },
+            {
+              "id": "I1.3.2",
+              "text": "I1.3.2 Informatiebeveiligingsgebeurtenissen worden afgedaan en gecategoriseerd via het incidentbeheerproces. Ze worden indien relevant gemeld bij toezichthouders conform de bepalingen uit de betrokken wet- en regelgeving zoals de CBW en de AVG.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 5.25.01",
+                "BIO2 - 8.16.01",
+                "BIO2 - 8.16.03"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-I1.4",
+      "name": "Reageren op informatiebeveiligingsincidenten",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "I1.4",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_i1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "I1.4",
+          "title": "Reageren op informatiebeveiligingsincidenten",
+          "measure": "Op informatiebeveiligingsincidenten behoort te worden gereageerd in overeenstemming met de gedocumenteerde procedures. Over de opvolging wordt gerapporteerd.",
+          "elaboration": "Er kunnen zich ook incidenten hebben voorgedaan waardoor beheersmaatregelen in de processen waarop de accountant steunt voor de jaarrekening mogelijk (tijdelijk) niet of niet goed hebben gefunctioneerd. Verkrijg inzicht of zich zulke incidenten hebben voorgedaan en wat de (mogelijke) invloed is geweest op de jaarrekening.",
+          "worksheet": "I1. Incidentbeheer IB",
+          "overview": {
+            "process": "I1. Incidentbeheer IB",
+            "objective": "Er is aandacht voor IB incidenten als onderdeel van beveiligingsincidenten teneinde een snelle, doeltreffende, consistente en geordende reactie op informatiebeveiligingsincidenten, met inbegrip van communicatie over informatiebeveiligingsgebeurtenissen, te bewerkstelligen.",
+            "risk": "Indien een organisatie geen plannen heeft, en zich niet heeft voorbereid op het beheren van informatiebeveiligingsincidenten, is een organisatie bij informatiebeveiligingsincidenten niet in staat om tijdig te reageren, te communiceren en te leren van deze incidenten.",
+            "biv": [
+              "B",
+              "I",
+              "V"
+            ],
+            "audience": "Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "I1.4.1",
+              "text": "I1.4.1 Het incidentbeheerproces bevat criteria voor het identificeren, verzamelen, verkrijgen en bewaren van bewijs met betrekking tot informatiebeveiligingsgebeurtenissen.",
+              "type": "Opzet",
+              "references": [
+                "BIO2 - 5.28"
+              ]
+            },
+            {
+              "id": "I1.4.2",
+              "text": "I1.4.2 Op informatiebeveiligingsincidenten is gereageerd in overeenstemming met de procedures , hierbij zijn de volgende handelingen verricht:\n- inperken van de getroffen systemen\n- zo snel mogelijk na het incident bewijs verzamelen\n- escalatie met inbegrip van crisisbeheersingsactiviteiten en inroepen continuiteïtsplannen\n- vastleggen responsactiviteiten voor latere analyse\n- communiceren van het IB incident (of relevante details) volgens het need-to-know principe aan belanghebbenden\n- postincidentanalyse uitvoeren om de oorzaak te identificeren",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 5.26"
+              ]
+            },
+            {
+              "id": "I1.4.3",
+              "text": "I1.4.3 De opvolging van incidenten wordt maandelijks gerapporteerd aan de verantwoordelijke.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 5.24.04"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-I1.5",
+      "name": "Leren van informatiebeveiligingsincidenten",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "I1.5",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_i1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "I1.5",
+          "title": "Leren van informatiebeveiligingsincidenten",
+          "measure": "Kennis die is opgedaan met informatiebeveiligingsincidenten behoort te worden gebruikt om de beheersmaatregelen voor informatiebeveiliging te versterken en te verbeteren.",
+          "elaboration": "De organisatie heeft zelf criteria uitgewerkt waaraan de uitvoering van de oorzakenanalyse moet voldoen.\n\nDe organisatie brengt zelf de relevante partners in kaart voor het delen van de analyses van beveiligingsincidenten.",
+          "worksheet": "I1. Incidentbeheer IB",
+          "overview": {
+            "process": "I1. Incidentbeheer IB",
+            "objective": "Er is aandacht voor IB incidenten als onderdeel van beveiligingsincidenten teneinde een snelle, doeltreffende, consistente en geordende reactie op informatiebeveiligingsincidenten, met inbegrip van communicatie over informatiebeveiligingsgebeurtenissen, te bewerkstelligen.",
+            "risk": "Indien een organisatie geen plannen heeft, en zich niet heeft voorbereid op het beheren van informatiebeveiligingsincidenten, is een organisatie bij informatiebeveiligingsincidenten niet in staat om tijdig te reageren, te communiceren en te leren van deze incidenten.",
+            "biv": [],
+            "audience": "Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "I1.5.1",
+              "text": "I1.5.1 Het incidentbeheerproces bevat criteria voor het analyseren en leren van beveiligingsincidenten. Het uitvoeren van een oorzakenanalyse en het delen van de analyses met relevante partners is onderdeel van de criteria.",
+              "type": "Opzet",
+              "references": [
+                "BIO2 - 5.27.01"
+              ]
+            },
+            {
+              "id": "I1.5.2",
+              "text": "I1.5.2 Beveiligingsincidenten zijn geanalyseerd met als doel te leren en toekomstige beveiligingsincidenten te voorkomen. Onderdeel van de analyse is een oorzakenanalyse.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 5.27.01"
+              ]
+            },
+            {
+              "id": "I1.5.3",
+              "text": "I1.5.3 De analyses van de beveiligingsincidenten zijn gedeeld met de relevante partners om herhaling en toekomstige incidenten te voorkomen.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 5.27.02"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-C1.1",
+      "name": "Monitoren van continuïteitsbeheer",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "C1.1",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_c1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "C1.1",
+          "title": "Monitoren van continuïteitsbeheer",
+          "measure": "De organisatie houdt zelf toezicht op de kwaliteit van het continuïteitsbeheer. Daarvoor voert het periodieke controles uit. Het interval hiervoor is bepaald op basis van het risiconiveau. De uitkomsten van de evaluatie en de opvolging daarvan worden vastgelegd.",
+          "elaboration": "Deze beheersmaatregel is een deel van het ISMS in werking, maar dan specifiek ingezoomd op de onderwerpen van de beheersmaatregelen van C1.2 t/m C1.7.\n\nDeze beheersmaatregel is gebaseerd op de onderliggende beheersmaatregelen van Continuïteitsbeheer en focust zich op de controle vanuit de tweedelijn. Derhalve zijn de referenties bij deze beheersmaatregelen ook van toepassing op C1.1.",
+          "worksheet": "C1. Continuïteitsbeheer",
+          "overview": {
+            "process": "C1. Continuïteitsbeheer",
+            "objective": "De beheersingsmaatregelen waarborgen de continuïteit van de bedrijfsprocessen, verminderen het effect van onderbrekingen en maken volledig herstel mogelijk na een calamiteit.",
+            "risk": "Als de periodiciteit en de gegevens op de back-up niet aansluiten bij het belang, de back-ups niet voldoende beveiligd worden of het terugzetten niet (goed) getest wordt, dan bestaat de mogelijkheid dat de RTO en/of RPO niet behaald wordt, en kan de downtime en/of verloren data bij een calamiteit groter zijn dan wat acceptabel is voor de organisatie. Ook kan bij een calamiteit niet de juiste back-up gegevens beschikbaar zijn om terug te keren naar een werkbare situatie. Na het terugkeren tot een werkbare situatie is het mogelijk dat niet de juiste gegevens beschikbaar zijn om de bedrijfsprocessen weer volledig te hervatten.",
+            "biv": [],
+            "audience": "Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "C1.1.1",
+              "text": "C1.1.1 De organisatie heeft in opzet beschreven hoe controles op het continuïteitsbeheer uitgevoerd worden en wat de periodiciteit is van deze controles.",
+              "type": "Opzet",
+              "references": []
+            },
+            {
+              "id": "C1.1.2",
+              "text": "C1.1.2 Er is een 2e lijns controle uitgevoerd die voorziet in controlewerkzaamheden voor ten minste het:\n- uitvoeren en tijdig actualiseren van risicoafwegingen ten aanzien van dataverlies, hersteltijd & back-up strategie\n- Vaststellen of de periodiciteit van de back-up aansluit bij de eisen van de berijfsvoering.\n- Vaststellen dat de back-up beveiligd is tegen onbevoegde wijzigingen\n- Vaststellen dat de back-up opgeslagen wordt op een locatie waarbij een incident op de ene locatie niet kan leiden tot schade op de andere.\n- Vaststellen of de getroffen maatregelen voor redundantie  aansluiten bij de eisen die vanuit de bedrijfsvoering zijn gesteld.\n- Periodiek testen van terugzetten van back-ups\n- Periodiek testen van uitwijk",
+              "type": "Bestaan/ Werking",
+              "references": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-C1.2",
+      "name": "Uitvoeren risicoafweging voor toegestane dataverlies en hersteltijd",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "C1.2",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_c1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "C1.2",
+          "title": "Uitvoeren risicoafweging voor toegestane dataverlies en hersteltijd",
+          "measure": "Op basis van een expliciete risicoafweging is bepaald wat het maximaal toegestane dataverlies is en wat de maximale hersteltijd is na een incident.",
+          "elaboration": "De risicoafweging wordt bij R1 en R2 beoordeeld en kan gebruikt worden voor de invulling van de testcriteria.\n\nEr zijn twee referenties opgenomen waarbij 8.13.02 geld voor alle systemen. De referentie bij 5.30.02 is een aanscherping specifiek voor kritieke systemen waarbij het risico overzicht minimaal eens per 3 jaar is geactualiseerd.",
+          "worksheet": "C1. Continuïteitsbeheer",
+          "overview": {
+            "process": "C1. Continuïteitsbeheer",
+            "objective": "De beheersingsmaatregelen waarborgen de continuïteit van de bedrijfsprocessen, verminderen het effect van onderbrekingen en maken volledig herstel mogelijk na een calamiteit.",
+            "risk": "Als de periodiciteit en de gegevens op de back-up niet aansluiten bij het belang, de back-ups niet voldoende beveiligd worden of het terugzetten niet (goed) getest wordt, dan bestaat de mogelijkheid dat de RTO en/of RPO niet behaald wordt, en kan de downtime en/of verloren data bij een calamiteit groter zijn dan wat acceptabel is voor de organisatie. Ook kan bij een calamiteit niet de juiste back-up gegevens beschikbaar zijn om terug te keren naar een werkbare situatie. Na het terugkeren tot een werkbare situatie is het mogelijk dat niet de juiste gegevens beschikbaar zijn om de bedrijfsprocessen weer volledig te hervatten.",
+            "biv": [
+              "B"
+            ],
+            "audience": "Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "C1.2.1",
+              "text": "C1.2.1 Er is een actuele risicoafweging aanwezig die ten grondslag ligt aan de gemaakte afspraken over continuïteit. De afspraken zijn passend bij de risico-inschatting.\nDe gemaakte afspraken omvatten minimaal:\n- Maximale toegestane dataverlies\n- Maximale hersteltijd na een incident",
+              "type": "Opzet",
+              "references": [
+                "BIO2 - 5.30.02",
+                "BIO2 - 8.13.02"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-C1.3",
+      "name": "De periodiciteit van, en het type gegevens op, de back-up sluiten aan bij het belang van de systemen",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "C1.3",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_c1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "C1.3",
+          "title": "De periodiciteit van, en het type gegevens op, de back-up sluiten aan bij het belang van de systemen",
+          "measure": "De periodiciteit van de back-up dient aan te sluiten bij de maximaal toegestane periode waarover gegevens verloren mogen raken. Stel vast dat de back-up de juiste systemen en data bestanden omvat die relevant zijn voor de jaarrekening.",
+          "elaboration": "In C1.3.3. wordt met relevante applicaties en databases bedoeldt wat noodzakelijk is om de bedrijfsprocessen weer volledig te hervatten. Daarmee kan het bijvoorbeeld zijn dat een applicatie niet noodzakelijk is om te back-upen als deze na een nieuwe installatie direct bruikbaar is (Denk bijvoorbeeld aan een e-mail client/office applicaties).",
+          "worksheet": "C1. Continuïteitsbeheer",
+          "overview": {
+            "process": "C1. Continuïteitsbeheer",
+            "objective": "De beheersingsmaatregelen waarborgen de continuïteit van de bedrijfsprocessen, verminderen het effect van onderbrekingen en maken volledig herstel mogelijk na een calamiteit.",
+            "risk": "Als de periodiciteit en de gegevens op de back-up niet aansluiten bij het belang, de back-ups niet voldoende beveiligd worden of het terugzetten niet (goed) getest wordt, dan bestaat de mogelijkheid dat de RTO en/of RPO niet behaald wordt, en kan de downtime en/of verloren data bij een calamiteit groter zijn dan wat acceptabel is voor de organisatie. Ook kan bij een calamiteit niet de juiste back-up gegevens beschikbaar zijn om terug te keren naar een werkbare situatie. Na het terugkeren tot een werkbare situatie is het mogelijk dat niet de juiste gegevens beschikbaar zijn om de bedrijfsprocessen weer volledig te hervatten.",
+            "biv": [
+              "B"
+            ],
+            "audience": "Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "C1.3.1",
+              "text": "C1.3.1 Er zijn afspraken vastgelegd met de klant omtrent de periodiciteit, het type gegevens, de soort (OS/DB) en retentietijd van back-ups (bijvoorbeeld SLA, DAP, etc.). RPO en RTO moeten voor de keten zijn bepaald.",
+              "type": "Opzet",
+              "references": [
+                "BIO2 - 8.13.01"
+              ]
+            },
+            {
+              "id": "C1.3.2",
+              "text": "C1.3.2 De ingestelde periodiciteit van de back-up, het type gegevens, soort back-up en retentietijd van back-ups (back-upschema) sluit aan bij de eisen vanuit de bedrijfsvoering en de keten.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 8.13.01"
+              ]
+            },
+            {
+              "id": "C1.3.3",
+              "text": "C1.3.3 De instellingen van C1.2.1 en C1.3.2 gelden voor alle relevante applicatie en database servers in de productieomgeving.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 8.13.01"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-C1.4",
+      "name": "De back-up gegevens worden op een veilige locatie bewaard waarbij de integriteit van de back-up geborgd blijft",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "C1.4",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_c1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "C1.4",
+          "title": "De back-up gegevens worden op een veilige locatie bewaard waarbij de integriteit van de back-up geborgd blijft",
+          "measure": "Stel vast, nadat in C1.3 is bepaald dat de back-up tijdig en volledig tot stand is gekomen, op welke wijze de back-up wordt opgeslagen. Stel vast dat de opgeslagen back-up beveiligd is tegen onbevoegde wijzigingen en op dusdanige afstand van de bron is opgeslagen dat een mogelijke calamiteit bij de bron geen effect heeft op de back-up.",
+          "elaboration": "",
+          "worksheet": "C1. Continuïteitsbeheer",
+          "overview": {
+            "process": "C1. Continuïteitsbeheer",
+            "objective": "De beheersingsmaatregelen waarborgen de continuïteit van de bedrijfsprocessen, verminderen het effect van onderbrekingen en maken volledig herstel mogelijk na een calamiteit.",
+            "risk": "Als de periodiciteit en de gegevens op de back-up niet aansluiten bij het belang, de back-ups niet voldoende beveiligd worden of het terugzetten niet (goed) getest wordt, dan bestaat de mogelijkheid dat de RTO en/of RPO niet behaald wordt, en kan de downtime en/of verloren data bij een calamiteit groter zijn dan wat acceptabel is voor de organisatie. Ook kan bij een calamiteit niet de juiste back-up gegevens beschikbaar zijn om terug te keren naar een werkbare situatie. Na het terugkeren tot een werkbare situatie is het mogelijk dat niet de juiste gegevens beschikbaar zijn om de bedrijfsprocessen weer volledig te hervatten.",
+            "biv": [
+              "B",
+              "I"
+            ],
+            "audience": "Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "C1.4.1",
+              "text": "C1.4.1 Er is een back-up strategie waarin is opgenomen op welke wijze back-ups worden opgeslagen, beveiligd zijn tegen onbevoegde wijzigingen en effecten op back-ups door calamiteiten worden beheerst.",
+              "type": "Opzet",
+              "references": [
+                "BIO2 - 8.13.01"
+              ]
+            },
+            {
+              "id": "C1.4.2",
+              "text": "C1.4.2 Opgeslagen back-ups zijn beveiligd tegen onbevoegde wijzigingen waaronder ransomware-aanvallen.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 8.13.01"
+              ]
+            },
+            {
+              "id": "C1.4.3",
+              "text": "C1.4.3 Back-ups worden opgeslagen op een locatie waarbij een incident op de ene locatie niet kan leiden tot schade op de andere.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 8.13.03"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-C1.5",
+      "name": "Periodiek testen van het terugzetten van de back-ups",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "C1.5",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_c1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "C1.5",
+          "title": "Periodiek testen van het terugzetten van de back-ups",
+          "measure": "Om te bepalen of back-ups ook correct kunnen worden teruggezet is het van belang te bepalen of deze procedure betrouwbaar heeft gefunctioneerd. Dit dient minimaal jaarlijks te worden getest.",
+          "elaboration": "",
+          "worksheet": "C1. Continuïteitsbeheer",
+          "overview": {
+            "process": "C1. Continuïteitsbeheer",
+            "objective": "De beheersingsmaatregelen waarborgen de continuïteit van de bedrijfsprocessen, verminderen het effect van onderbrekingen en maken volledig herstel mogelijk na een calamiteit.",
+            "risk": "Als de periodiciteit en de gegevens op de back-up niet aansluiten bij het belang, de back-ups niet voldoende beveiligd worden of het terugzetten niet (goed) getest wordt, dan bestaat de mogelijkheid dat de RTO en/of RPO niet behaald wordt, en kan de downtime en/of verloren data bij een calamiteit groter zijn dan wat acceptabel is voor de organisatie. Ook kan bij een calamiteit niet de juiste back-up gegevens beschikbaar zijn om terug te keren naar een werkbare situatie. Na het terugkeren tot een werkbare situatie is het mogelijk dat niet de juiste gegevens beschikbaar zijn om de bedrijfsprocessen weer volledig te hervatten.",
+            "biv": [
+              "B"
+            ],
+            "audience": "Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "C1.5.1",
+              "text": "C1.5.1 Er is een procedure waarin is uitgewerkt hoe getest moet worden dat back-ups terug gezet kunnen worden. De procedure voorziet in beheersmaatregelen waarmee de integriteit van de gegevens na restore van de back-up wordt gevalideerd.",
+              "type": "Opzet",
+              "references": [
+                "BIO2 - 8.13.04"
+              ]
+            },
+            {
+              "id": "C1.5.2",
+              "text": "C1.5.2 Stel vast dat uitgevoerde tests conform de procedure zijn uitgevoerd, over de resultaten is gerapporteerd en vervolgacties zijn genomen bij eventuele bevindingen.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 5.30"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-C1.6",
+      "name": "Beheersmaatregelen voorzien in voldoende redundantie",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "C1.6",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_c1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "C1.6",
+          "title": "Beheersmaatregelen voorzien in voldoende redundantie",
+          "measure": "Beheersmaatregelen voorzien in voldoende redundantie om aan de beschikbaarheidseisen te voldoen.",
+          "elaboration": "",
+          "worksheet": "C1. Continuïteitsbeheer",
+          "overview": {
+            "process": "C1. Continuïteitsbeheer",
+            "objective": "De beheersingsmaatregelen waarborgen de continuïteit van de bedrijfsprocessen, verminderen het effect van onderbrekingen en maken volledig herstel mogelijk na een calamiteit.",
+            "risk": "Als de periodiciteit en de gegevens op de back-up niet aansluiten bij het belang, de back-ups niet voldoende beveiligd worden of het terugzetten niet (goed) getest wordt, dan bestaat de mogelijkheid dat de RTO en/of RPO niet behaald wordt, en kan de downtime en/of verloren data bij een calamiteit groter zijn dan wat acceptabel is voor de organisatie. Ook kan bij een calamiteit niet de juiste back-up gegevens beschikbaar zijn om terug te keren naar een werkbare situatie. Na het terugkeren tot een werkbare situatie is het mogelijk dat niet de juiste gegevens beschikbaar zijn om de bedrijfsprocessen weer volledig te hervatten.",
+            "biv": [
+              "B"
+            ],
+            "audience": "Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "C1.6.1",
+              "text": "C1.6.1 Getroffen maatregelen voor redundantie sluiten aan bij de eisen die vanuit de bedrijfsvoering zijn gesteld.",
+              "type": "Opzet",
+              "references": [
+                "BIO2 - 8.14"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-C1.7",
+      "name": "Periodiek testen van uitwijk voorzieningen",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "C1.7",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_c1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "C1.7",
+          "title": "Periodiek testen van uitwijk voorzieningen",
+          "measure": "Er zijn business continuiteïtsplannen (BCP’s) en disaster recovery plannen (DRP's) en deze worden minimaal jaarlijks getest of na een grote wijziging om de goede werking te waarborgen als deze in noodgevallen uitgevoerd moet worden.",
+          "elaboration": "",
+          "worksheet": "C1. Continuïteitsbeheer",
+          "overview": {
+            "process": "C1. Continuïteitsbeheer",
+            "objective": "De beheersingsmaatregelen waarborgen de continuïteit van de bedrijfsprocessen, verminderen het effect van onderbrekingen en maken volledig herstel mogelijk na een calamiteit.",
+            "risk": "Als de periodiciteit en de gegevens op de back-up niet aansluiten bij het belang, de back-ups niet voldoende beveiligd worden of het terugzetten niet (goed) getest wordt, dan bestaat de mogelijkheid dat de RTO en/of RPO niet behaald wordt, en kan de downtime en/of verloren data bij een calamiteit groter zijn dan wat acceptabel is voor de organisatie. Ook kan bij een calamiteit niet de juiste back-up gegevens beschikbaar zijn om terug te keren naar een werkbare situatie. Na het terugkeren tot een werkbare situatie is het mogelijk dat niet de juiste gegevens beschikbaar zijn om de bedrijfsprocessen weer volledig te hervatten.",
+            "biv": [
+              "B"
+            ],
+            "audience": "Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "C1.7.1",
+              "text": "C1.7.1 Er zijn business continuïteit plannen (BCP’s) en/of Disaster Recovery Plannen (DRP's) die voorzien in procedures om de uitwijk- en fallbackvoorziening in gebruik te nemen bij ernstige verstoringen of calamiteiten. De maatregelen, testfrequentie en scope sluiten aan bij de  eisen die vanuit de bedrijfsvoering zijn gesteld.",
+              "type": "Opzet",
+              "references": [
+                "BIO2 - 5.30.01"
+              ]
+            },
+            {
+              "id": "C1.7.2",
+              "text": "C1.7.2 Jaarlijks wordt de uitwijkvoorziening getest en de bruikbaarheid vastgesteld.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 5.30",
+                "BIO2 - 5.30.01"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-S1.1",
+      "name": "Monitoren van security management",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "S1.1",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_s1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "S1.1",
+          "title": "Monitoren van security management",
+          "measure": "De aanpak van de organisatie ten aanzien van het beheer van informatiebeveiliging en de implementatie ervan, met inbegrip van mensen, processen en technologieën, behoren onafhankelijk en met geplande tussenpozen of zodra zich belangrijke veranderingen voordoen, te worden beoordeeld.",
+          "elaboration": "Deze beheersmaatregel is een deel van het ISMS in werking, maar dan specifiek ingezoomd op de onderwerpen van de beheersmaatregelen van S1.2 t/m S1.8.\n\nBij testcriteria S1.1.2 staan alle onderwerpen benoemd van beheersingsmaatregelen S1.2 t/m S1.8. Niet al deze onderwerpen hoeven relevant te zijn voor jouw audit scope, derhalve het testcriteria aanpassen op basis van de behoefte.\n\nDeze beheersmaatregel is gebaseerd op de onderliggende beheersmaatregelen van Security Management en focust zich op de controle vanuit de tweedelijn. Derhalve zijn de referenties bij deze beheersmaatregelen ook van toepassing op S1.1.\n\nDe risicoafweging wordt bij R1 en R2 beoordeeld en kan gebruikt worden voor de invulling van de testcriteria.",
+          "worksheet": "S1. Security management",
+          "overview": {
+            "process": "S1. Security management",
+            "objective": "De beheersmaatregelen waarborgen dat de systemen en de onderliggende componenten zijn beveiligd om het risico op ongeautoriseerde toegang, wijziging, beschadiging en/of dataverlies te voorkomen.",
+            "risk": "Als de beheersing van de infrastructuur niet effectief is, kunnen kwaadwillenden toegang krijgen tot systemen door misbruik te maken van aanwezige kwetsbaarheden waardoor application controls worden omzeild, aangepast of verwijderd of de integriteit van de data wordt aangepast.",
+            "biv": [],
+            "audience": "Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "S1.1.1",
+              "text": "S1.1.1 Er is een beschrijving waarin de uit te voeren periodieke controles op security management zijn vastgelegd. Deze controles zijn gebaseerd op een risicoafweging en bevatten minimaal:\n- de uit te voeren controlewerkzaamheden\n- de interval periodes (minimaal jaarlijks)\n- wijze van vastlegging\n- wijze van rapportering\n- de verantwoordelijkheden voor omgang met de bevindingen\n- escalatiepaden bij niet oplossen van bevindingen",
+              "type": "Opzet",
+              "references": [
+                "BIO2 - 5.35",
+                "BIO2 - 5.35.01",
+                "BIO2 - 5.35.02",
+                "BIO2 - 5.36"
+              ]
+            },
+            {
+              "id": "S1.1.2",
+              "text": "S1.1.2 Minimaal de volgende aspecten zijn uitgewerkt in een auditplan en beoordeeld:\n- Het proces omtrent het analyseren van dreigingen (Zijn de dreigingen verzameld uit de juiste bronnen en geanalyseerd om vast te stellen welke betekenis deze hebben voor de organisatie)\n- Het proces omtrent de bescherming tegen malware (Is de malware scan software bijgewerkt en worden de scans uitgevoerd)\n- Het proces omtrent het beheer van technische kwetsbaarheden (Worden de kwetsbaarheden scans periodiek uitgevoerd, op de juiste systemen en wordt er tijdig opvolging gegeven aan de opvolging van geconstateerde technische kwetsbaarheden).\n- Het proces voor het beveiligen van het netwerk (Zijn de uitgangspunten voor het logisch scheiden van het netwerk gerapporteerd).\n- De notables en opvolging uit het monitoringsproces zijn gerapporteerd aan het betrokken management\n- Het proces voor configuratiebeheer (Is de configuratie conform de baseline ingesteld).",
+              "type": "Opzet",
+              "references": [
+                "BIO2 - 5.35.01",
+                "BIO2 - 5.35.02"
+              ]
+            },
+            {
+              "id": "S1.1.3",
+              "text": "S1.1.3 Er wordt opvolging gegeven aan de evaluatie uit S1.1.2 en de uitkomsten zijn vastgelegd",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 5.35.01"
+              ]
+            },
+            {
+              "id": "S1.1.4",
+              "text": "S1.1.4 De evaluatie van de uitkomsten zijn meegenomen in de jaarlijkse afgegeven in controle verklaring (ICV).",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 5.36.01"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-S1.2",
+      "name": "Analyses over dreigingen",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "S1.2",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_s1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "S1.2",
+          "title": "Analyses over dreigingen",
+          "measure": "Informatie met betrekking tot informatiebeveiligingsdreigingen behoort te worden verzameld en geanalyseerd om informatie over dreigingen te produceren.",
+          "elaboration": "De organisatie heeft een monitoring geïmplementeerd waarmee informatie wordt verzameld en geanalyseerd om mogelijke dreigingen in kaart te brengen.",
+          "worksheet": "S1. Security management",
+          "overview": {
+            "process": "S1. Security management",
+            "objective": "De beheersmaatregelen waarborgen dat de systemen en de onderliggende componenten zijn beveiligd om het risico op ongeautoriseerde toegang, wijziging, beschadiging en/of dataverlies te voorkomen.",
+            "risk": "Als de beheersing van de infrastructuur niet effectief is, kunnen kwaadwillenden toegang krijgen tot systemen door misbruik te maken van aanwezige kwetsbaarheden waardoor application controls worden omzeild, aangepast of verwijderd of de integriteit van de data wordt aangepast.",
+            "biv": [],
+            "audience": "Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "S1.2.1",
+              "text": "S1.2.1: De organisatie heeft een formeel proces ingericht voor het analyseren van dreigingen. Deze bevat de periodiciteit van uitvoer (op basis van risico-inschatting), welke bronnen worden geraadpleegd en een analyse stap waarin de betekenis voor de organisatie wordt bepaald.",
+              "type": "Opzet",
+              "references": [
+                "BIO2 - 5.07",
+                "ISO 27002/2022 - 5.7"
+              ]
+            },
+            {
+              "id": "S1.2.2",
+              "text": "S1.2.2 De beheerteams hebben een actueel inzicht in de IT-componenten t.b.v. de analyses op de dreigingen.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 5.09.01"
+              ]
+            },
+            {
+              "id": "S1.2.3",
+              "text": "S1.2.3: Activiteiten op het gebied van informatie en analyses over dreigingen zijn geïmplementeerd. Deze activiteiten bevatten:\n\n- het identificeren, doorlichten en selecteren van interne en externe informatiebronnen die nodig en geschikt zijn om te voorzien in informatie die vereist is om de gewenste informatie en analyses over dreigingen te produceren;\n- het verzamelen van informatie uit geselecteerde interne en externe bronnen.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 5.07",
+                "ISO 27002/2022 - 5.7"
+              ]
+            },
+            {
+              "id": "S1.2.4",
+              "text": "S1.2.4: Activiteiten op het gebied van informatie en analyses over dreigingen zijn geïmplementeerd. Informatie wordt geanalyseerd om inzicht te krijgen hoe deze verband houdt met de organisatie en de betekenis ervan voor de organisatie.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "ISO 27002/2022 - 5.7"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-S1.3",
+      "name": "Bescherming tegen malware",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "S1.3",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_s1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "S1.3",
+          "title": "Bescherming tegen malware",
+          "measure": "Bescherming tegen malware behoort te worden geïmplementeerd en ondersteund door een passend gebruikersbewustzijn.",
+          "elaboration": "Deze beheersmaatregel is minimaal van toepassing voor alle Windows servers en systemen waartoe eindgebruikers toegang hebben. Voor de overige servers moet een expliciete afweging gemaakt worden.\n\nTC 1.3.1 is alleen opzet, overige TC's zijn ook bestaan en werking.\n\nVoor de opvolging van malware constateringen die uit een scan worden gerapporteerd is hier geen opvolging testcriteria opgenomen, wij gaan er vanuit dat dit als een incident wordt behandeld en daardoor bij beheersingsmaatregel I1.2 aan bod komt. Mocht dit toch onderdeel zijn van het malware proces van jouw auditee dan moet het testcriteria worden aangevuld in lijn met het proces van de auditee.",
+          "worksheet": "S1. Security management",
+          "overview": {
+            "process": "S1. Security management",
+            "objective": "De beheersmaatregelen waarborgen dat de systemen en de onderliggende componenten zijn beveiligd om het risico op ongeautoriseerde toegang, wijziging, beschadiging en/of dataverlies te voorkomen.",
+            "risk": "Als de beheersing van de infrastructuur niet effectief is, kunnen kwaadwillenden toegang krijgen tot systemen door misbruik te maken van aanwezige kwetsbaarheden waardoor application controls worden omzeild, aangepast of verwijderd of de integriteit van de data wordt aangepast.",
+            "biv": [
+              "B",
+              "I",
+              "V"
+            ],
+            "audience": "Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "S1.3.1",
+              "text": "S1.3.1: Het proces hoe de organisatie omgaat met malware detectie is beschreven en bevat informatie over:\n- Welke scansoftware wordt gebruikt;\n- Hoe vaak de software wordt bijgewerkt;\n- Lijst met toegestane software per systeem;\n- Lijsten die voor detectie/preventie worden gebruikt.",
+              "type": "Opzet",
+              "references": [
+                "BIO2 - 8.07",
+                "ISO 27002/2022 - 8.7"
+              ]
+            },
+            {
+              "id": "S1.3.2",
+              "text": "S1.3.2 De beheerteams hebben een actueel inzicht in de IT-componenten t.b.v. de bescherming tegen malware.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 5.09.01"
+              ]
+            },
+            {
+              "id": "S1.3.3",
+              "text": "S1.3.3 Het downloaden van bestanden wordt beheerst en beperkt op basis van risico en need-of-use. De antimalware software beoordeeld alle downloads [bijv. een lijst maken van toegestane toepassingen (‘allowlisting’).",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 8.07.01",
+                "ISO 27002/2022 - 8.7"
+              ]
+            },
+            {
+              "id": "S1.3.4",
+              "text": "S1.3.4 De gebruikte antimalwaresoftware en bijbehorende herstelsoftware is actueel en wordt ondersteund door periodieke updates.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 8.07.03"
+              ]
+            },
+            {
+              "id": "S1.3.5",
+              "text": "S1.3.5 De malwarescan wordt uitgevoerd op:\n- alle omgevingen, bijvoorbeeld op (mail)servers, (desktop)computers en bij de toegangsverlening tot het netwerk van de organisatie;\n- alle gedownloade content voorafgaand aan executie of opslag;\n- alle bestanden die via netwerken of via elke vorm van opslagmedium zijn ontvangen, voor gebruik of opslag in de eigen omgeving.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 8.07.04"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-S1.4",
+      "name": "Beheer van technische kwetsbaarheden",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "S1.4",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_s1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "S1.4",
+          "title": "Beheer van technische kwetsbaarheden",
+          "measure": "Er behoort informatie te worden verkregen over technische kwetsbaarheden van in gebruik zijnde informatiesystemen, de blootstelling van de organisatie aan dergelijke kwetsbaarheden behoort te worden geëvalueerd en er behorende passende maatregelen te worden getroffen.",
+          "elaboration": "De organisatie moet een proces hebben ingericht waarmee technische kwetsbaarheden worden geïdentificeerd en gemitigeerd. Aandachtspunt is hierbij de prioritering van kwetsbaarheden en de bijhorende oplostermijnen.\n\nEen mogelijke oplossing kan zijn het patchen van je systeem of het aanpassen van instellingen.\n\nDe risicoafweging wordt bij R1 en R2 beoordeeld en kan gebruikt worden voor de invulling van de testcriteria.",
+          "worksheet": "S1. Security management",
+          "overview": {
+            "process": "S1. Security management",
+            "objective": "De beheersmaatregelen waarborgen dat de systemen en de onderliggende componenten zijn beveiligd om het risico op ongeautoriseerde toegang, wijziging, beschadiging en/of dataverlies te voorkomen.",
+            "risk": "Als de beheersing van de infrastructuur niet effectief is, kunnen kwaadwillenden toegang krijgen tot systemen door misbruik te maken van aanwezige kwetsbaarheden waardoor application controls worden omzeild, aangepast of verwijderd of de integriteit van de data wordt aangepast.",
+            "biv": [
+              "B",
+              "I",
+              "V"
+            ],
+            "audience": "Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "S1.4.1",
+              "text": "S1.4.1 Het proces voor identificeren en mitigeren van technische kwetsbaarheden op systemen is beschreven, hierin is opgenomen:\n\n- het ontvangen van meldingen van kwetsbaarheden van leveranciers & andere bronnen die geanalyseerd, beoordeeld en/of geïmplementeerd worden;\n- welke instrumenten gebruikt worden om kwetsbaarheden te identificeren en op te volgen;\n- de periodiciteit wanneer pentesten / vulnerability scans periodiek worden uitgevoerd;\n- hoe bevindingen worden opgevolgd, met daarbij aandacht voor een aanpak om bevindingen te prioriteren op basis van een risicoafweging.",
+              "type": "Opzet",
+              "references": [
+                "BIO2 - 8.08",
+                "ISO 27002/2022 - 8.8"
+              ]
+            },
+            {
+              "id": "S1.4.2",
+              "text": "S1.4.2 De beheerteams hebben een actueel inzicht in de IT-componenten t.b.v. het beheer van technische kwetsbaarheden.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 5.09.01"
+              ]
+            },
+            {
+              "id": "S1.4.3",
+              "text": "S1.4.3 Meldingen worden ontvangen van leveranciers & andere externe bronnen van kwetsbaarheden die relevant zijn voor de systemen van de auditscope.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "ISO 27002/2022 - 8.8"
+              ]
+            },
+            {
+              "id": "S1.4.4",
+              "text": "S1.4.4 Geïdentificeerde kwetsbaarheden worden beoordeeld en geprioriteerd (bijvoorbeeld met een CVSS score). Mitigerende maatregelen worden op basis van een expliciete risicoanalyse getroffen.\nBij een hoge kans op misbruik of verwachte schade worden passende mitigerende maatregelen zo snel mogelijk, maar uiterlijk binnen een week getroffen.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 8.08.01",
+                "BIO2 - 8.08.02",
+                "BIO2 - 8.08.03",
+                "ISO 27002/2022 - 8.8"
+              ]
+            },
+            {
+              "id": "S1.4.5",
+              "text": "S1.4.5 Periodiek worden kwetsbaarheden scans / pentesten uitgevoerd. Internetfacing informatiesystemen worden continue getest op zwakheden en kwetsbaarheden, pentesten worden uitgevoerd bij elke nieuwe release of major update.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 8.08.04",
+                "BIO2 - 8.08.05"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-S1.5",
+      "name": "Beveiliging van netwerkcomponenten",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "S1.5",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_s1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "S1.5",
+          "title": "Beveiliging van netwerkcomponenten",
+          "measure": "Netwerken en netwerkapparaten behoren te worden beveiligd, beheerd en beheerst om informatie in systemen en toepassingen te beschermen.",
+          "elaboration": "De risicoafweging wordt bij R1 en R2 beoordeeld en kan gebruikt worden voor de invulling van de testcriteria.",
+          "worksheet": "S1. Security management",
+          "overview": {
+            "process": "S1. Security management",
+            "objective": "De beheersmaatregelen waarborgen dat de systemen en de onderliggende componenten zijn beveiligd om het risico op ongeautoriseerde toegang, wijziging, beschadiging en/of dataverlies te voorkomen.",
+            "risk": "Als de beheersing van de infrastructuur niet effectief is, kunnen kwaadwillenden toegang krijgen tot systemen door misbruik te maken van aanwezige kwetsbaarheden waardoor application controls worden omzeild, aangepast of verwijderd of de integriteit van de data wordt aangepast.",
+            "biv": [
+              "B",
+              "I",
+              "V"
+            ],
+            "audience": "Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "S1.5.1",
+              "text": "S1.5.1 Er is een operationeel beleidsdocument waarin de uitgangspunten voor het minimale vertrouwelijkheidsniveau van het netwerk en hoe de beheerders toegang gescheiden wordt van het gebruikersnetwerk staat beschreven.",
+              "type": "Opzet",
+              "references": [
+                "BIO2 - 8.20.01",
+                "BIO2 - 8.20.02"
+              ]
+            },
+            {
+              "id": "S1.5.2",
+              "text": "S1.5.2 Netwerkcomponenten moeten minimaal voldoen aan het vertrouwelijkheidsniveau van het netwerk waarvan ze onderdeel zijn.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 8.20.01"
+              ]
+            },
+            {
+              "id": "S1.5.3",
+              "text": "S1.5.3 Toegang tot beheerinterfaces van netwerkcomponenten is gescheiden van het gebruikersnetwerk.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 8.20.02"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-S1.6",
+      "name": "Netwerksegmentatie",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "S1.6",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_s1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "S1.6",
+          "title": "Netwerksegmentatie",
+          "measure": "Groepen informatiediensten, gebruikers en informatiesystemen behoren in de netwerken van de organisatie te worden gesegmenteerd.",
+          "elaboration": "Voor S1.6.3 geldt dat als de continuïteit van de dienstverlening belangrijk is dat je deze testcriteria meeneemt in het onderzoek.",
+          "worksheet": "S1. Security management",
+          "overview": {
+            "process": "S1. Security management",
+            "objective": "De beheersmaatregelen waarborgen dat de systemen en de onderliggende componenten zijn beveiligd om het risico op ongeautoriseerde toegang, wijziging, beschadiging en/of dataverlies te voorkomen.",
+            "risk": "Als de beheersing van de infrastructuur niet effectief is, kunnen kwaadwillenden toegang krijgen tot systemen door misbruik te maken van aanwezige kwetsbaarheden waardoor application controls worden omzeild, aangepast of verwijderd of de integriteit van de data wordt aangepast.",
+            "biv": [
+              "B",
+              "I",
+              "V"
+            ],
+            "audience": "Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "S1.6.1",
+              "text": "S1.6.1 Er is een operationeel beleidsdocument waarin de uitgangspunten van zonering zijn opgenomen. De criteria voor het segmenteren van netwerken in domeinen, en de toegang die via de gateways wordt toegestaan, zijn\ngebaseerd op een beoordeling van de beveiligingseisen voor elk domein en is in overeenstemming het toegangsbeveiligingsbeleid.",
+              "type": "Opzet",
+              "references": [
+                "BIO2 - 8.22.01",
+                "ISO 27002/2022 - 8.22",
+                "ISO 27002/2022 - 8.7"
+              ]
+            },
+            {
+              "id": "S1.6.2",
+              "text": "S1.6.2 Zonering is ingericht binnen de technische infrastructuur conform de uitgangspunten uit het operationeel beleid. Hierbij is er scheiding tussen vertrouwde en onvertrouwde netwerken.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 8.22"
+              ]
+            },
+            {
+              "id": "S1.6.3",
+              "text": "S1.6.3 In koppelpunten met externe of onvertrouwde zones zijn maatregelen getroffen om mogelijke aanvallen die de beschikbaarheid van de informatievoorziening negatief beïnvloeden (bijvoorbeeld DDoS-aanvallen, Distributed Denial of Service attacks) te signaleren en te mitigeren.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 8.21.01"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-S1.7",
+      "name": "Monitoren van activiteiten",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "S1.7",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_s1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "S1.7",
+          "title": "Monitoren van activiteiten",
+          "measure": "Netwerken, systemen en toepassingen behoren te worden gemonitord op afwijkend gedrag en er\nbehoren passende maatregelen te worden getroffen om potentiële informatiebeveiligingsincidenten te\nevalueren.",
+          "elaboration": "Monitoren is alleen relevant als er voor het onderzoek relevante risico's worden gemitigeerd met detectieve maatregelen. Dit zou uit R1 Risicobeoordeling en R2 behandeling van IB-risico's moeten blijken welke type maatregels zijn getroffen voor het mitigeren van de risico's.",
+          "worksheet": "S1. Security management",
+          "overview": {
+            "process": "S1. Security management",
+            "objective": "De beheersmaatregelen waarborgen dat de systemen en de onderliggende componenten zijn beveiligd om het risico op ongeautoriseerde toegang, wijziging, beschadiging en/of dataverlies te voorkomen.",
+            "risk": "Als de beheersing van de infrastructuur niet effectief is, kunnen kwaadwillenden toegang krijgen tot systemen door misbruik te maken van aanwezige kwetsbaarheden waardoor application controls worden omzeild, aangepast of verwijderd of de integriteit van de data wordt aangepast.",
+            "biv": [
+              "B",
+              "I",
+              "V"
+            ],
+            "audience": "Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "S1.7.1",
+              "text": "S1.7.1: Beschreven is hoe de organisatie omgaat met het monitoren van zijn omgeving. Dit bevat minstens de volgende onderdelen;\n- uitgaand en inkomend netwerk-, systeem- en toepassingsverkeer;\n- toegang tot systemen, servers, netwerkapparatuur, monitoringsysteem, essentiële toepassingen\nenz.;\n- logbestanden van beveiligingsinstrumenten [bijv. antivirus, IDS, inbraakpreventiesysteem (IPS),\nwebfilters, firewalls, voorkoming van gegevenslekken;\n-  logbestanden van gebeurtenissen met betrekking tot systeem- en netwerkactiviteit;\n- eenduidige regels over wanneer een incident moet worden gerapporteerd aan het verantwoordelijk management.",
+              "type": "Opzet",
+              "references": [
+                "ISO 27002/2022 - 8.16",
+                "BIO2 - 8.16.02"
+              ]
+            },
+            {
+              "id": "S1.7.2",
+              "text": "S1.7.2 De beheerteams hebben een actueel inzicht in de IT-componenten t.b.v. van het monitoren van activiteiten.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 5.09.01"
+              ]
+            },
+            {
+              "id": "S1.7.3",
+              "text": "S1.7.3: De volgende bronnen zijn aangesloten op de monitoringsapplicatie:\n- uitgaand en inkomend netwerk-, systeem- en toepassingsverkeer;\n- toegang tot systemen, servers, netwerkapparatuur, monitoringsysteem, essentiële toepassingen\nenz.;\n- logbestanden van beveiligingsinstrumenten [bijv. antivirus, IDS, inbraakpreventiesysteem (IPS),\nwebfilters, firewalls, voorkoming van gegevenslekken];\n- logbestanden van gebeurtenissen met betrekking tot systeem- en netwerkactiviteit.\nDeze bronnen zijn voorzien van een actuele kloksynchronisatie.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 8.16.04",
+                "ISO 27002/2022 - 8.16",
+                "SO 27002/2022 - 8.17"
+              ]
+            },
+            {
+              "id": "S1.7.4",
+              "text": "S1.7.4: Relevante logregels bevatten minimaal de volgende informatie:\n- actie: De gebeurtenis of handeling die heeft plaatsgevonden;\n- object: waarop de gebeurtenis of handeling effect had (bijv. welk bestand, proces of systeem);\n-  resultaat: het resultaat van de gebeurtenis of handeling, d) oorsprong: het apparaat of de netwerklocatie van waaruit de gebeurtenis of handeling in gang is gezet;\n- actor: identificatie van de persoon die of het proces dat de gebeurtenis in gang heeft gezet;\n- tijdstempel: datum en tijdstip waarop de gebeurtenis of handling plaatsvond.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 8.15.01"
+              ]
+            },
+            {
+              "id": "S1.7.5",
+              "text": "S1.7.5 De organisatie monitort op basis van risico-inschatting. Minimaal de volgende activiteiten worden gemonitord:\n- geslaagde en mislukte pogingen om toegang te krijgen tot beschermde bronnen (bijv. (DNS-)servers,\nwebportals en bestandssystemen);\n- ongebruikelijk gebruikers- en systeemgedrag in vergelijking met het verwachte gedrag.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "ISO 27002/2022 - 8.16"
+              ]
+            },
+            {
+              "id": "S1.7.6",
+              "text": "S1.7.6: De organisatie geeft adequaat en tijdig opvolging aan de activiteiten die in beheersmaatregel S1.7.4 zijn gedetecteerd.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 8.16.03"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-S1.8",
+      "name": "Configuratiebeheer",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "S1.8",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_s1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "S1.8",
+          "title": "Configuratiebeheer",
+          "measure": "Configuraties, met inbegrip van beveiligingsconfiguraties, van hardware, software, diensten en netwerken behoren te worden vastgesteld, gedocumenteerd, geïmplementeerd, gemonitord en beoordeeld.",
+          "elaboration": "De organisatie moet in kaart hebben hoe hardware, software diensten en netwerken geconfigureerd dienen te worden. Hierbij inachtneming van leveranciers guidelines (hardening), industry best practices. Hierbij dient ook rekening te worden gehouden met het beveiligingsniveau van de desbetreffende dienst of applicatie.\n\nWijzigingen aan configuraties behoren het wijzigingsbeheerproces te volgen (zie W1).",
+          "worksheet": "S1. Security management",
+          "overview": {
+            "process": "S1. Security management",
+            "objective": "De beheersmaatregelen waarborgen dat de systemen en de onderliggende componenten zijn beveiligd om het risico op ongeautoriseerde toegang, wijziging, beschadiging en/of dataverlies te voorkomen.",
+            "risk": "Als de beheersing van de infrastructuur niet effectief is, kunnen kwaadwillenden toegang krijgen tot systemen door misbruik te maken van aanwezige kwetsbaarheden waardoor application controls worden omzeild, aangepast of verwijderd of de integriteit van de data wordt aangepast.",
+            "biv": [
+              "B",
+              "I",
+              "V"
+            ],
+            "audience": "Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "S1.8.1",
+              "text": "S1.8.1: De organisatie heeft standaard sjablonen beschreven waarin de beveiligde configuraties van hardware, software, (Cloud) diensten en netwerken zijn gedefinieerd. Deze zijn opgesteld:\n- met behulp van openbaar beschikbare richtlijnen (bijv. vooraf gedefinieerde sjablonen van verkopers en van onafhankelijke beveiligingsorganisaties);\n- met inachtneming van het beveiligingsniveau dat nodig is om een afdoende beveiligingsniveau vast te stellen;\n- met ondersteuning van het informatiebeveiligingsbeleid van de organisatie, onderwerpspecifieke beleidsregels en normen en andere beveiligingseisen van de organisatie;\n- rekening houdend met de haalbaarheid en toepasselijkheid van beveiligingsconfiguraties in de context van de organisatie;\n- met inachtneming dat standaard authenticatie-informatie van de leverancier en andere belangrijke standaardparameters (zoals standaardwachtwoorden) onmiddellijk na de installatie worden gewijzigd.",
+              "type": "Opzet",
+              "references": [
+                "ISO 27002/2022 - 8.9"
+              ]
+            },
+            {
+              "id": "S1.8.2",
+              "text": "S1.8.2 De beheerteams hebben een actueel inzicht in de IT-componenten t.b.v. van het configuratiebeheer.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 5.09.01"
+              ]
+            },
+            {
+              "id": "S1.8.3",
+              "text": "S1.8.3: De configuraties van hardware, software, (Cloud)diensten en netwerken is geregistreerd en geïmplementeerd conform de sjablonen. De organisatie houdt een logbestand bij van alle configuratiewijzigingen.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "ISO 27002/2022 - 8.9"
+              ]
+            },
+            {
+              "id": "S1.8.4",
+              "text": "S1.8.4: Configuraties worden gemonitord met een uitgebreide verzameling instrumenten voor systeembeheer (bijvoorbeeld onderhoudssysteemhulpmiddelen, ondersteuning op afstand, instrumenten voor bedrijfsbeheer en back-up- en herstelsoftware) en worden regelmatig beoordeeld om de configuratie-instellingen te verifiëren, de sterkte van wachtwoorden te evalueren en de uitgevoerde activiteiten te beoordelen. Eventuele afwijkingen worden beoordeeld en aangepakt.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "ISO 27002/2022 - 8.9"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ruleId": "ITGC-S1.9",
+      "name": "Actueel inzicht in de applicaties en onderliggende componenten.",
+      "priority": 100,
+      "legalStatus": "conventie",
+      "sourceRefs": [
+        {
+          "type": "standaard",
+          "title": "ADR ITGC-kader v1.1",
+          "section": "S1.9",
+          "url": "https://www.auditdienstrijk.nl/site/binaries/site-content/collections/documents/2026/maart/17/itgc-kader/adr-itgc-kader-v1-1.zip",
+          "bronVersie": "2026-05-12",
+          "bronDatum": "2026-05-12"
+        }
+      ],
+      "conditions": {},
+      "outcome": {
+        "category": "itgc_s1",
+        "confidence": "deterministic",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Catalogusrecord; organisatiebewijs en auditoroordeel ontbreken.",
+        "assessmentStatus": "insufficient_evidence",
+        "itgc": {
+          "id": "S1.9",
+          "title": "Actueel inzicht in de applicaties en onderliggende componenten.",
+          "measure": "Er is een inventaris van bedrijfsmiddelen die van belang zijn voor informatieverwerking met inbegrip van operationele technologie. De inventaris omvat alle eigenschappen die nodig zijn voor het beheer en onderhoud. In de inventaris zijn ook opgenomen: bedrijfsmiddelen op afstand, Cloud-omgevingen en bedrijfsmiddelen die regelmatig zijn verbonden met de netwerkinfrastructuur maar niet onder controle van de organisatie staan. De volledigheid en actualiteit van de inventaris wordt periodiek gecontroleerd met tussenpozen die passend zijn voor de frequentie waarmee wijzigingen optreden.",
+          "elaboration": "Deze beheersmaatregel is ook opgenomen als onderdeel van de andere security management beheersmaatregelen, omdat het hebben van een CMDB vaak randvoorwaardelijk is voor het goed uitoefenen van deze beheersmaatregelen. Wij hebben hem ook nog apart opgevoerd voor de auditees waarbij het CMDB nog nadere aandacht behoeft, omdat bijvoorbeeld uit eerdere audits blijkt het CMDB niet op orde is.\n\nEen randvoorwaarde om te beoordelen of de IT-infrastructuur voldoende is beveiligd is een accuraat inzicht in de beoogde opzet van de IT-infrastructuur (de architectuur) en een actueel inzicht in de werkelijk geconfigureerde hard- en software.",
+          "worksheet": "S1. Security management",
+          "overview": {
+            "process": "S1. Security management",
+            "objective": "De beheersmaatregelen waarborgen dat de systemen en de onderliggende componenten zijn beveiligd om het risico op ongeautoriseerde toegang, wijziging, beschadiging en/of dataverlies te voorkomen.",
+            "risk": "Als de beheersing van de infrastructuur niet effectief is, kunnen kwaadwillenden toegang krijgen tot systemen door misbruik te maken van aanwezige kwetsbaarheden waardoor application controls worden omzeild, aangepast of verwijderd of de integriteit van de data wordt aangepast.",
+            "biv": [
+              "B",
+              "I",
+              "V"
+            ],
+            "audience": "Beheer"
+          },
+          "testCriteria": [
+            {
+              "id": "S1.9.1",
+              "text": "S1.9.1 De beheerteams hebben een actueel inzicht in de IT-componenten t.b.v. patchmanagement, hardening, scanning, monitoring en configuratiemanagement.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 5.09.01"
+              ]
+            },
+            {
+              "id": "S1.9.2",
+              "text": "S1.9.2 De volledigheid en actualiteit wordt periodiek gecontroleerd met tussenpozen die passend zijn voor de frequentie waarmee wijzigingen optreden.",
+              "type": "Bestaan/ Werking",
+              "references": [
+                "BIO2 - 5.09.01"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

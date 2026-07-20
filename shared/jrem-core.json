@@ -136,6 +136,18 @@
         },
         "examples": {
           "type": "array"
+        },
+        "article": {
+          "type": "string",
+          "description": "EU AI Act artikel verwijzing"
+        },
+        "category": {
+          "type": "string",
+          "description": "Rule categorie (risk-management, data-governance, etc.)"
+        },
+        "detection": {
+          "type": "string",
+          "description": "Detectie methode: auto, manual, hybrid"
         }
       }
     },
