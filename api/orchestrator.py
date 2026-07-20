@@ -311,9 +311,17 @@ class ComplianceOrchestrator:
             "rag_results": rag.get("results", []),
         }
 
-        # Try LLM synthesis first
+        # Try LLM synthesis first (with short timeout)
         try:
-            return self._llm_synthesize(context)
+            result = self._llm_synthesize(context)
+            # Verify result has actions/deadlines
+            if result.get("actions") or result.get("deadlines"):
+                return result
+            # LLM gave output but no structured data — supplement with template
+            template_result = self._template_synthesize(context)
+            result["actions"] = template_result.get("actions", [])
+            result["deadlines"] = template_result.get("deadlines", [])
+            return result
         except Exception as e:
             logger.warning(f"LLM synthesis failed: {e}, using template")
             return self._template_synthesize(context)
