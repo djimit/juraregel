@@ -2,23 +2,14 @@ FROM python:3.12-slim
 
 WORKDIR /app
 
-# Install system dependencies
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
-    libpq-dev \
-    curl \
-    && rm -rf /var/lib/apt/lists/*
-
-# Install Python dependencies
-COPY requirements.txt .
-RUN pip install --no-cache-dir fastapi uvicorn pydantic httpx jsonschema PyYAML
+# Install dependencies
+COPY requirements-api.txt* ./
+RUN pip install --no-cache-dir fastapi uvicorn pydantic httpx jsonschema PyYAML 2>/dev/null || \
+    pip install --no-cache-dir -r requirements-api.txt 2>/dev/null || \
+    pip install --no-cache-dir fastapi uvicorn pydantic httpx jsonschema PyYAML
 
 # Copy application
 COPY . .
-
-# Create non-root user
-RUN useradd --create-home appuser && chown -R appuser:appuser /app
-USER appuser
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=10s --retries=3 \
@@ -26,4 +17,4 @@ HEALTHCHECK --interval=30s --timeout=10s --retries=3 \
 
 # Run
 EXPOSE 8080
-CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8080", "--workers", "4"]
+CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8080", "--workers", "2"]
