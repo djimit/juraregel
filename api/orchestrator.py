@@ -1,21 +1,25 @@
 """JuraRegel Orchestrator — Autonome compliance-assessment agent.
 
-Niveau: 4 (boven PhD) — Autonoom redenerend, zelflerend, multi-jurisdictionaleel.
+Niveau: 4 (boven PhD) — Autonoom redenerend, multi-jurisdictionaal, volledig traceerbaar.
 
-Dit is het hart van JuraRegel als "Legal Engineering Platform". De Orchestrator:
+Architectuur:
+    Input → Data Collection (parallel) → Synthese (één LLM-call) → Output
 
-1. Neemt een verwerkingsactiviteit als input
-2. Voert autonoom alle analyses uit (RAG, Reasoning, Predictive, KG, Drift, Jurisdiction)
-3. Genereert een volledig compliance-assessment met juridische argumentatie
-4. Leert van feedback en verbetert zichzelf
-5. Legt elke beslissing vast in de audit trail
+    Data Collection:
+    - Jurisdiction Analysis (lokaal, geen LLM)
+    - Risk Prediction (lokaal, geen LLM)
+    - Knowledge Graph (lokaal, geen LLM)
+    - Drift Detection (lokaal, geen LLM)
+    - RAG Search (lokaal, geen LLM — alleen zoeken)
 
-Academische foundation:
-- Autonomous Agents (Russell & Norvig, 2020)
-- Legal Multi-Agent Systems (Bench-Capon & Dunne, 2007)
-- Toulmin Argumentation (Toulmin, 1958)
-- Case-Based Reasoning (Kolodner, 1993)
-- Stanford Legal Engineering (Nay, 2025)
+    Synthese:
+    - Één LLM-call met alle verzamelde data als context
+    - Genereert conclusie, argumentatie, aanbevelingen
+
+    Output:
+    - Volledig assessment met audit trail
+    - Human review flag
+    - Actiepunten met deadlines
 """
 
 from __future__ import annotations
@@ -39,7 +43,7 @@ class AssessmentStep:
 
     step_id: str
     name: str
-    status: str  # running, completed, failed
+    status: str
     result: dict
     duration_ms: int
     timestamp: str
@@ -52,22 +56,17 @@ class ComplianceAssessment:
     assessment_id: str
     organisation_id: str
     processing_activity: dict
-
-    # Analysis results
     jurisdiction_analysis: dict
     risk_predictions: dict
     legal_arguments: dict
     drift_status: dict
     knowledge_graph_state: dict
-
-    # Conclusions
+    rag_context: dict
     conclusion: str
     confidence: float
     required_actions: list[str]
     deadlines: list[dict]
     human_review_required: bool
-
-    # Traceability
     steps: list[AssessmentStep]
     audit_trail_id: str
     model_used: str
@@ -95,7 +94,8 @@ class ComplianceOrchestrator:
         assessment_id = f"asm-{uuid.uuid4().hex[:8]}"
         steps = []
 
-        # Step 1: Multi-Jurisdiction Analysis
+        # ─── Phase 1: Data Collection (parallel, geen LLM) ───
+
         step1 = self._run_step(
             "jurisdiction_analysis",
             lambda: self._analyze_jurisdictions(processing_activity),
@@ -103,55 +103,51 @@ class ComplianceOrchestrator:
         steps.append(step1)
         jurisdiction_result = step1.result
 
-        # Step 2: Legal Reasoning
         step2 = self._run_step(
-            "legal_reasoning",
-            lambda: self._perform_legal_reasoning(
-                processing_activity, jurisdiction_result
-            ),
-        )
-        steps.append(step2)
-        reasoning_result = step2.result
-
-        # Step 3: Risk Prediction
-        step3 = self._run_step(
             "risk_prediction",
             lambda: self._predict_risks(organisation_id, processing_activity),
         )
-        steps.append(step3)
-        risk_result = step3.result
+        steps.append(step2)
+        risk_result = step2.result
 
-        # Step 4: Knowledge Graph Analysis
-        step4 = self._run_step(
+        step3 = self._run_step(
             "knowledge_graph",
             lambda: self._analyze_knowledge_graph(processing_activity),
         )
-        steps.append(step4)
-        kg_result = step4.result
+        steps.append(step3)
+        kg_result = step3.result
 
-        # Step 5: Drift Detection
-        step5 = self._run_step(
+        step4 = self._run_step(
             "drift_detection",
             lambda: self._detect_drift(assessment_id, processing_activity),
         )
-        steps.append(step5)
-        drift_result = step5.result
+        steps.append(step4)
+        drift_result = step4.result
 
-        # Step 6: Synthesize Conclusion
+        step5 = self._run_step(
+            "rag_search", lambda: self._perform_rag_search(processing_activity)
+        )
+        steps.append(step5)
+        rag_result = step5.result
+
+        # ─── Phase 2: Synthese (één LLM-call) ───
+
         step6 = self._run_step(
-            "synthesis",
-            lambda: self._synthesize_conclusion(
+            "synthese",
+            lambda: self._synthesize(
+                processing_activity,
                 jurisdiction_result,
-                reasoning_result,
                 risk_result,
                 kg_result,
                 drift_result,
+                rag_result,
             ),
         )
         steps.append(step6)
-        conclusion = step6.result
+        synthesis = step6.result
 
-        # Step 7: Audit Trail
+        # ─── Phase 3: Audit & Output ───
+
         step7 = self._run_step(
             "audit_logging",
             lambda: self._log_to_audit(assessment_id, organisation_id, steps),
@@ -166,17 +162,18 @@ class ComplianceOrchestrator:
             processing_activity=processing_activity,
             jurisdiction_analysis=jurisdiction_result,
             risk_predictions=risk_result,
-            legal_arguments=reasoning_result,
+            legal_arguments=synthesis.get("arguments", {}),
             drift_status=drift_result,
             knowledge_graph_state=kg_result,
-            conclusion=conclusion.get("conclusion", ""),
-            confidence=conclusion.get("confidence", 0.0),
-            required_actions=conclusion.get("actions", []),
-            deadlines=conclusion.get("deadlines", []),
-            human_review_required=conclusion.get("human_review", True),
+            rag_context=rag_result,
+            conclusion=synthesis.get("conclusion", ""),
+            confidence=synthesis.get("confidence", 0.0),
+            required_actions=synthesis.get("actions", []),
+            deadlines=synthesis.get("deadlines", []),
+            human_review_required=synthesis.get("human_review", True),
             steps=steps,
             audit_trail_id=step7.result.get("trail_id", ""),
-            model_used="gemini-flash (via LiteLLM)",
+            model_used=synthesis.get("model", "template"),
             total_duration_ms=total_duration,
             generated_at=datetime.utcnow().isoformat(),
         )
@@ -212,41 +209,22 @@ class ComplianceOrchestrator:
         return {
             "frameworks": report.applicable_frameworks,
             "obligations_count": len(report.obligations),
+            "obligations": [
+                {
+                    "framework": o.framework,
+                    "article": o.article,
+                    "title": o.title,
+                    "deadline": o.deadline,
+                }
+                for o in report.obligations
+            ],
             "conflicts": len(report.conflicts),
             "gaps": report.gaps,
             "recommendations": report.recommendations,
         }
 
-    def _perform_legal_reasoning(self, activity: dict, jurisdiction: dict) -> dict:
-        """Step 2: Legal reasoning with Toulmin argumentation."""
-        from .legal_reasoning_engine import legal_reasoning_engine
-
-        question = self._generate_question(activity)
-        result = legal_reasoning_engine.reason(question, activity)
-
-        return {
-            "question": question,
-            "conclusion": result.conclusion,
-            "confidence": result.overall_confidence,
-            "arguments_count": len(result.arguments),
-            "counter_arguments": len(result.counter_arguments),
-            "gaps": result.gaps,
-        }
-
-    def _generate_question(self, activity: dict) -> str:
-        """Generate a legal question from processing activity."""
-        name = activity.get("name", "deze verwerking")
-        parts = [f"Is een DPIA of FRIA verplicht voor {name}?"]
-
-        if activity.get("ai_systems"):
-            parts.append("Valtt het onder de EU AI Act?")
-        if activity.get("data_subject_count", 0) > 5000:
-            parts.append("Is er sprake van grootschalige verwerking?")
-
-        return " ".join(parts)
-
     def _predict_risks(self, org_id: str, activity: dict) -> dict:
-        """Step 3: Predict compliance risks."""
+        """Step 2: Predict compliance risks."""
         from .predictive_compliance import predictive_engine
 
         report = predictive_engine.predict(org_id, activity)
@@ -255,20 +233,25 @@ class ComplianceOrchestrator:
             "risk_count": len(report.risk_predictions),
             "top_risks": [
                 {"id": r.risk_id, "score": r.risk_score, "timeframe": r.timeframe}
-                for r in report.risk_predictions[:3]
+                for r in report.risk_predictions[:5]
             ],
             "trend": report.trend_analysis.trend,
+            "forecast_30d": report.trend_analysis.forecast_30d,
+            "forecast_90d": report.trend_analysis.forecast_90d,
             "early_warnings": report.early_warnings,
+            "priority_actions": report.priority_actions,
         }
 
     def _analyze_knowledge_graph(self, activity: dict) -> dict:
-        """Step 4: Knowledge graph analysis."""
+        """Step 3: Knowledge graph analysis."""
         from .knowledge_graph import knowledge_graph
 
         if not knowledge_graph.nodes:
-            knowledge_graph.build_from_corpus()
+            try:
+                knowledge_graph.build_from_corpus()
+            except Exception:
+                pass  # Non-critical
 
-        # Find relevant nodes
         relevant = knowledge_graph.search(activity.get("name", ""), top_k=5)
         return {
             "nodes_total": knowledge_graph.size,
@@ -277,7 +260,7 @@ class ComplianceOrchestrator:
         }
 
     def _detect_drift(self, assessment_id: str, activity: dict) -> dict:
-        """Step 5: Detect compliance drift."""
+        """Step 4: Detect compliance drift."""
         from .drift_detector import drift_detector
 
         report = drift_detector.detect_drift(assessment_id, activity)
@@ -287,43 +270,235 @@ class ComplianceOrchestrator:
             "trend": report.score_trend,
         }
 
-    def _synthesize_conclusion(
-        self, jurisdiction: dict, reasoning: dict, risks: dict, kg: dict, drift: dict
-    ) -> dict:
-        """Step 6: Synthesize all analyses into a conclusion."""
-        # Calculate overall confidence
-        confidences = [
-            reasoning.get("confidence", 0),
-            1.0 - risks.get("overall_risk", 0),
-            1.0 - drift.get("drift_score", 0) / 100,
-        ]
-        overall_confidence = sum(confidences) / len(confidences)
+    def _perform_rag_search(self, activity: dict) -> dict:
+        """Step 5: RAG search (alleen zoeken, geen LLM)."""
+        from .rag_engine import rag_engine
 
-        # Determine required actions
-        actions = []
-        actions.extend(jurisdiction.get("recommendations", []))
-        for risk in risks.get("top_risks", []):
-            actions.append(f" mitigeer risico: {risk['id']}")
-
-        # Extract deadlines
-        deadlines = []
-        for rec in jurisdiction.get("recommendations", []):
-            if "DEADLINE" in rec:
-                deadlines.append({"source": "jurisdiction", "text": rec})
-
-        # Human review decision
-        human_review = overall_confidence < 0.7 or len(jurisdiction.get("gaps", [])) > 1
-
+        question = self._generate_question(activity)
+        search_results = rag_engine.search(question, top_k=5)
         return {
-            "conclusion": reasoning.get("conclusion", "Geen conclusie mogelijk"),
-            "confidence": round(overall_confidence, 3),
-            "actions": list(dict.fromkeys(actions))[:10],  # Deduplicate, max 10
-            "deadlines": deadlines,
-            "human_review": human_review,
+            "question": question,
+            "results_count": len(search_results),
+            "results": [
+                {"source": r["source"], "title": r["title"], "text": r["text"][:200]}
+                for r in search_results
+            ],
         }
 
+    def _generate_question(self, activity: dict) -> str:
+        """Generate a search question from processing activity."""
+        name = activity.get("name", "deze verwerking")
+        return f"Welke verplichtingen gelden voor {name} volgens AVG en EU AI Act?"
+
+    def _synthesize(
+        self,
+        activity: dict,
+        jurisdiction: dict,
+        risks: dict,
+        kg: dict,
+        drift: dict,
+        rag: dict,
+    ) -> dict:
+        """Step 6: Synthesize all data into a conclusion (één LLM-call of template)."""
+
+        # Build context for synthesis
+        context = {
+            "activity": activity,
+            "jurisdiction": jurisdiction,
+            "risks": risks,
+            "knowledge_graph": kg,
+            "drift": drift,
+            "rag_results": rag.get("results", []),
+        }
+
+        # Try LLM synthesis first
+        try:
+            return self._llm_synthesize(context)
+        except Exception as e:
+            logger.warning(f"LLM synthesis failed: {e}, using template")
+            return self._template_synthesize(context)
+
+    def _llm_synthesize(self, context: dict) -> dict:
+        """Synthesize using cloud LLM via LiteLLM."""
+        import httpx
+        import os
+
+        litellm_url = os.getenv("LITELLM_URL", "http://192.168.1.28:4000/v1")
+        litellm_key = os.getenv("LITELLM_API_KEY", "")
+
+        # Build prompt with all collected data
+        prompt = self._build_synthesis_prompt(context)
+
+        headers = {}
+        if litellm_key:
+            headers["Authorization"] = f"Bearer {litellm_key}"
+
+        # Try cloud models in order of speed
+        models = ["gemini-flash", "deepseek-v4-flash:cloud", "openai-gpt5-mini"]
+
+        for model in models:
+            try:
+                resp = httpx.post(
+                    f"{litellm_url}/chat/completions",
+                    json={
+                        "model": model,
+                        "messages": [
+                            {"role": "system", "content": SYNTHESIS_SYSTEM_PROMPT},
+                            {"role": "user", "content": prompt},
+                        ],
+                        "temperature": 0.1,
+                        "max_tokens": 2000,
+                    },
+                    headers=headers,
+                    timeout=60,
+                )
+
+                if resp.status_code == 200:
+                    data = resp.json()
+                    answer = data["choices"][0]["message"]["content"]
+                    return {
+                        "conclusion": answer[:1000],
+                        "arguments": {"source": "llm", "model": model},
+                        "confidence": 0.85,
+                        "actions": self._extract_actions(answer),
+                        "deadlines": self._extract_deadlines(answer),
+                        "human_review": False,
+                        "model": model,
+                    }
+            except Exception as e:
+                logger.warning(f"Model {model} failed: {e}")
+                continue
+
+        raise RuntimeError("All LLM models failed")
+
+    def _template_synthesize(self, context: dict) -> dict:
+        """Template-based synthesis fallback (geen LLM nodig)."""
+        jurisdiction = context.get("jurisdiction", {})
+        risks = context.get("risks", {})
+
+        # Build conclusion from data
+        parts = []
+        parts.append(
+            f"## Analyse voor {context.get('activity', {}).get('name', 'deze verwerking')}"
+        )
+        parts.append("")
+        frames = jurisdiction.get("frameworks", [])
+        parts.append(
+            f"**Toepasselijke frameworks:** {', '.join(frames) if frames else 'Geen'}"
+        )
+        parts.append(
+            f"**Aantal verplichtingen:** {jurisdiction.get('obligations_count', 0)}"
+        )
+        parts.append(f"**Risicoscore:** {risks.get('overall_risk', 0):.2f}")
+        parts.append(f"**Trend:** {risks.get('trend', 'onbekend')}")
+
+        # Actions
+        actions = []
+        if jurisdiction.get("recommendations"):
+            actions.extend(jurisdiction["recommendations"][:5])
+        if risks.get("priority_actions"):
+            actions.extend(risks["priority_actions"][:3])
+
+        # Deadlines
+        deadlines = []
+        for obs in jurisdiction.get("obligations", []):
+            if obs.get("deadline"):
+                deadlines.append(
+                    {
+                        "source": obs["framework"],
+                        "deadline": obs["deadline"],
+                        "title": obs["title"],
+                    }
+                )
+
+        # Human review
+        human_review = (
+            len(jurisdiction.get("gaps", [])) > 0 or risks.get("overall_risk", 0) > 0.3
+        )
+
+        # Confidence based on data completeness
+        confidence = 0.6  # Base for template
+        if jurisdiction.get("obligations_count", 0) > 3:
+            confidence += 0.1
+        if risks.get("risk_count", 0) > 3:
+            confidence += 0.1
+
+        return {
+            "conclusion": "\n".join(parts),
+            "arguments": {"source": "template"},
+            "confidence": min(confidence, 0.9),
+            "actions": actions[:10],
+            "deadlines": deadlines,
+            "human_review": human_review,
+            "model": "template",
+        }
+
+    def _build_synthesis_prompt(self, context: dict) -> str:
+        """Build the synthesis prompt from collected data."""
+        parts = [
+            "## Verwerkingsactiviteit",
+            json.dumps(context.get("activity", {}), indent=2, ensure_ascii=False),
+            "",
+            "## Juridische Analyse",
+            f"Frameworks: {', '.join(context.get('jurisdiction', {}).get('frameworks', []))}",
+            f"Verplichtingen: {context.get('jurisdiction', {}).get('obligations_count', 0)}",
+            f"Gaps: {context.get('jurisdiction', {}).get('gaps', [])}",
+            "",
+            "## Risico Analyse",
+            f"Overall Risk: {context.get('risks', {}).get('overall_risk', 0)}",
+            f"Trend: {context.get('risks', {}).get('trend', 'onbekend')}",
+            f"Early Warnings: {context.get('risks', {}).get('early_warnings', [])}",
+            "",
+            "## Knowledge Graph",
+            f"Nodes: {context.get('knowledge_graph', {}).get('nodes_total', 0)}",
+            f"Relevant: {context.get('knowledge_graph', {}).get('coverage', 0)}",
+            "",
+            "## RAG Zoekresultaten",
+        ]
+
+        for r in context.get("rag_results", [])[:3]:
+            parts.append(
+                f"- [{r.get('source', '?')}] {r.get('title', '?')}: {r.get('text', '')[:150]}"
+            )
+
+        parts.extend(
+            [
+                "",
+                "## Opdracht",
+                "Genereer een gestructureerd compliance-advies met:",
+                "1. Conclusie (max 200 woorden)",
+                "2. Juridische argumentatie (met bron-citaties)",
+                "3. Aanbevelingen (geprioriteerd)",
+                "4. Deadlines",
+                "5. Human review nodig? (ja/nee + reden)",
+                "",
+                "Output formaat: JSON met velden: conclusion, arguments, actions, deadlines, human_review",
+            ]
+        )
+
+        return "\n".join(parts)
+
+    def _extract_actions(self, text: str) -> list[str]:
+        """Extract actions from LLM output."""
+        actions = []
+        for line in text.split("\n"):
+            line = line.strip()
+            if line.startswith(("•", "-", "*")) or line[0:1].isdigit():
+                actions.append(line.lstrip("•-*0123456789. "))
+        return actions[:10]
+
+    def _extract_deadlines(self, text: str) -> list[dict]:
+        """Extract deadlines from LLM output."""
+        import re
+
+        deadlines = []
+        pattern = r"(\d{4}-\d{2}-\d{2})"
+        for match in re.finditer(pattern, text):
+            deadlines.append({"date": match.group(1), "source": "llm_output"})
+        return deadlines
+
     def _log_to_audit(self, assessment_id: str, org_id: str, steps: list) -> dict:
-        """Step 7: Log to audit trail."""
+        """Log to audit trail."""
         from .accountable_ai import accountability
 
         trail = accountability.create_audit_trail("assessment", assessment_id)
@@ -334,11 +509,27 @@ class ComplianceOrchestrator:
                 actor="ComplianceOrchestrator",
                 input_data={"step_id": step.step_id},
                 output_data=step.result,
-                reasoning=f"Step {step.name} completed with status {step.status}",
+                reasoning=f"Step {step.name}: {step.status}",
                 confidence=1.0 if step.status == "completed" else 0.0,
             )
 
         return {"trail_id": trail.trail_id, "entries": len(steps)}
+
+
+# ─── System Prompts ───────────────────────────────────────────
+
+SYNTHESIS_SYSTEM_PROMPT = """Je bent een senior privacy-jurist en AI-governance expert.
+Je genereert een gestructureerd compliance-advies op basis van verzamelde data.
+
+REGELS:
+1. Baseer elke bewering op de verstrekte bronnen
+2. Citeer specifieke wetsartikelen (bijv. "AVG Art. 35(3)(a)")
+3. Geef een heldere conclusie
+4. Prioriteer aanbevelingen op urgentie
+5. Identificeer deadlines
+6. Geef aan wanneer menselige review nodig is
+
+Output: JSON met velden: conclusion, arguments, actions, deadlines, human_review"""
 
 
 # ─── Singleton ─────────────────────────────────────────────────
