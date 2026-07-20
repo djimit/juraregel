@@ -235,6 +235,9 @@ ANTWOORD (met bron-citaties tussen haakjes):"""
         headers = {}
         if LITELLM_API_KEY:
             headers["Authorization"] = f"Bearer {LITELLM_API_KEY}"
+        else:
+            # Fallback: try without auth (development)
+            logger.warning("LITELLM_API_KEY not set — trying without auth")
 
         # Try each cloud model in priority order
         for model in self._get_models():

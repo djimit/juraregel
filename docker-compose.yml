@@ -35,7 +35,7 @@ services:
       DATABASE_URL: postgresql+asyncpg://juraregel:juraregel@192.168.1.28:5432/juraregel
       QDRANT_URL: http://192.168.1.28:6333
       LITELLM_URL: http://host.docker.internal:4000/v1
-      LITELLM_API_KEY: ${LITELLM_API_KEY:-}
+      LITELLM_API_KEY: ${LITELLM_API_KEY}
       USE_LLM: "true"
       JURAREGEL_CI_MODE: production
     extra_hosts:
