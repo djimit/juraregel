@@ -32,6 +32,9 @@ jobs:
           if [ -d playground ]; then
             cp -r playground _site/playground
           fi
+          if [ -d docs ]; then
+            cp -r docs _site/docs
+          fi
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
