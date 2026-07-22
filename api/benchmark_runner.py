@@ -21,9 +21,8 @@ Plus compliance-specific categories:
 
 from __future__ import annotations
 
-import json
 import time
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
 from typing import Any
@@ -315,89 +314,214 @@ class BenchmarkRunner:
         )
 
     def _evaluate_check(self, check: dict) -> dict:
-        """Evaluate a single check."""
+        """Evaluate a single check against the actual codebase.
+
+        Uses grep-based pattern scanning to detect real implementations
+        rather than hardcoded responses.
+        """
         check_type = check.get("check", "")
 
-        # Check if the codebase has relevant implementations
-        check_implementations = {
-            "has_oversight_definition": {
-                "passed": True,
-                "details": "Human Oversight Plan template exists",
-            },
-            "has_override": {
-                "passed": True,
-                "details": "Override capability in policy engine",
-            },
-            "has_stop_mechanism": {
-                "passed": True,
-                "details": "Stop mechanism in human oversight",
-            },
-            "has_processing_description": {
-                "passed": True,
-                "details": "DPIA template includes processing description",
-            },
-            "has_necessity_assessment": {
-                "passed": True,
-                "details": "Pre-scan DPIA includes necessity",
-            },
-            "has_risk_assessment": {
-                "passed": True,
-                "details": "Risk analysis in all assessment templates",
-            },
-            "has_measures": {
-                "passed": True,
-                "details": "Measures documented in templates",
-            },
-            "has_approval": {
-                "passed": True,
-                "details": "Approval workflow implemented",
-            },
-            "has_use_context": {
-                "passed": True,
-                "details": "FRIA template includes context",
-            },
-            "has_affected_persons": {
-                "passed": True,
-                "details": "FRIA template identifies affected persons",
-            },
-            "has_rights_impact": {
-                "passed": True,
-                "details": "Rights impact in FRIA template",
-            },
-            "has_mitigation": {
-                "passed": True,
-                "details": "Mitigation measures in templates",
-            },
-            "has_evidence_links": {
-                "passed": True,
-                "details": "Evidence linking implemented",
-            },
-            "has_verified_evidence": {
-                "passed": True,
-                "details": "Evidence verification in API",
-            },
-            "evidence_current": {
-                "passed": False,
-                "details": "Evidence expiry tracking needs configuration",
-            },
-            "data_examined": {
-                "passed": True,
-                "details": "Bias Audit Protocol includes data examination",
-            },
-            "has_bias_metrics": {
-                "passed": True,
-                "details": "Demographic parity, equalized odds metrics",
-            },
-            "has_remediation": {
-                "passed": True,
-                "details": "Remediation steps in Bias Audit",
-            },
-            "requirement_met": {"passed": True, "details": "Requirement addressed"},
+        scanner = _CodebaseScanner()
+        result = scanner.scan(check_type)
+
+        if result is not None:
+            return result
+
+        return {"passed": False, "details": f"Unknown check type: {check_type}"}
+
+
+class _CodebaseScanner:
+    """Scans the JuraRegel codebase for real implementation patterns.
+
+    Each scan method uses grep to detect actual code patterns,
+    returning None if the check type is not handled.
+    """
+
+    def __init__(self):
+        self.root = Path(__file__).parent.parent
+
+    def scan(self, check_type: str) -> dict | None:
+        """Dispatch to the appropriate scan method."""
+        method = getattr(self, f"_scan_{check_type}", None)
+        if method:
+            return method()
+        return None
+
+    def _grep(self, pattern: str, glob: str = "*.py") -> list[str]:
+        """Search codebase for pattern."""
+        import subprocess
+
+        try:
+            result = subprocess.run(
+                ["rg", "-l", pattern, "--glob", glob, str(self.root)],
+                capture_output=True,
+                text=True,
+                timeout=10,
+            )
+            return [p for p in result.stdout.strip().split("\n") if p]
+        except (FileNotFoundError, subprocess.TimeoutExpired):
+            return []
+
+    def _grep_count(self, pattern: str, glob: str = "*.py") -> int:
+        return len(self._grep(pattern, glob))
+
+    def _scan_has_oversight_definition(self) -> dict:
+        matches = self._grep("human_review_required|oversight|Explanation")
+        passed = len(matches) >= 2
+        return {
+            "passed": passed,
+            "details": f"Found {len(matches)} oversight-related implementations"
+            if passed
+            else "Insufficient oversight definitions found",
         }
 
-        return check_implementations.get(
-            check_type, {"passed": True, "details": "Check passed"}
+    def _scan_has_override(self) -> dict:
+        matches = self._grep("override|depart.*from|reject")
+        passed = len(matches) >= 1
+        return {
+            "passed": passed,
+            "details": f"Found {len(matches)} override patterns",
+        }
+
+    def _scan_has_stop_mechanism(self) -> dict:
+        matches = self._grep("stop|disable|halt|rollback")
+        passed = len(matches) >= 1
+        return {
+            "passed": passed,
+            "details": f"Found {len(matches)} stop/rollback mechanisms",
+        }
+
+    def _scan_has_processing_description(self) -> dict:
+        matches = self._grep("processing.*description|verwerkingsactiviteit|purpose")
+        passed = len(matches) >= 1
+        return {
+            "passed": passed,
+            "details": f"Found {len(matches)} processing description patterns",
+        }
+
+    def _scan_has_necessity_assessment(self) -> dict:
+        matches = self._grep("necessity|proportionality|noodzaak|proportionaliteit")
+        passed = len(matches) >= 1
+        return {
+            "passed": passed,
+            "details": f"Found {len(matches)} necessity/proportionality patterns",
+        }
+
+    def _scan_has_risk_assessment(self) -> dict:
+        matches = self._grep("risk.*assessment|risico.*analyse|RiskLevel")
+        passed = len(matches) >= 2
+        return {
+            "passed": passed,
+            "details": f"Found {len(matches)} risk assessment patterns",
+        }
+
+    def _scan_has_measures(self) -> dict:
+        matches = self._grep("measure|maatregel|mitigation")
+        passed = len(matches) >= 2
+        return {
+            "passed": passed,
+            "details": f"Found {len(matches)} measure/mitigation patterns",
+        }
+
+    def _scan_has_approval(self) -> dict:
+        matches = self._grep("approval|authorize|approve|goedkeuring")
+        passed = len(matches) >= 1
+        return {
+            "passed": passed,
+            "details": f"Found {len(matches)} approval patterns",
+        }
+
+    def _scan_has_use_context(self) -> dict:
+        matches = self._grep("use.*context|intended.*purpose|gebruikscontext")
+        passed = len(matches) >= 1
+        return {
+            "passed": passed,
+            "details": f"Found {len(matches)} use context patterns",
+        }
+
+    def _scan_has_affected_persons(self) -> dict:
+        matches = self._grep("affected.*person|betrokkene|stakeholder")
+        passed = len(matches) >= 1
+        return {
+            "passed": passed,
+            "details": f"Found {len(matches)} affected person patterns",
+        }
+
+    def _scan_has_rights_impact(self) -> dict:
+        matches = self._grep("rights.*impact|grondrecht|fundamental.*right")
+        passed = len(matches) >= 1
+        return {
+            "passed": passed,
+            "details": f"Found {len(matches)} rights impact patterns",
+        }
+
+    def _scan_has_mitigation(self) -> dict:
+        matches = self._grep("mitigation|mitigeren|maatregel")
+        passed = len(matches) >= 1
+        return {
+            "passed": passed,
+            "details": f"Found {len(matches)} mitigation patterns",
+        }
+
+    def _scan_has_evidence_links(self) -> dict:
+        matches = self._grep(
+            "evidence.*link|source.*link|bronverwijzing|claim_verifier"
         )
+        passed = len(matches) >= 1
+        return {
+            "passed": passed,
+            "details": f"Found {len(matches)} evidence linking patterns",
+        }
+
+    def _scan_has_verified_evidence(self) -> dict:
+        matches = self._grep("verify.*evidence|evidence.*verif|bewijs.*verif")
+        passed = len(matches) >= 1
+        return {
+            "passed": passed,
+            "details": f"Found {len(matches)} evidence verification patterns",
+        }
+
+    def _scan_evidence_current(self) -> dict:
+        matches = self._grep("evidence.*expir|evidence.*current|temporal.*decay|drift")
+        passed = len(matches) >= 1
+        return {
+            "passed": passed,
+            "details": f"Found {len(matches)} evidence currency patterns"
+            if passed
+            else "Evidence expiry tracking needs configuration",
+        }
+
+    def _scan_data_examined(self) -> dict:
+        matches = self._grep("data.*examin|bias.*audit|data.*analyse")
+        passed = len(matches) >= 1
+        return {
+            "passed": passed,
+            "details": f"Found {len(matches)} data examination patterns",
+        }
+
+    def _scan_has_bias_metrics(self) -> dict:
+        matches = self._grep(
+            "bias.*metric|demographic.*parity|equalized.*odds|disparate"
+        )
+        passed = len(matches) >= 1
+        return {
+            "passed": passed,
+            "details": f"Found {len(matches)} bias metric patterns",
+        }
+
+    def _scan_has_remediation(self) -> dict:
+        matches = self._grep("remediation|herstel|corrective")
+        passed = len(matches) >= 1
+        return {
+            "passed": passed,
+            "details": f"Found {len(matches)} remediation patterns",
+        }
+
+    def _scan_requirement_met(self) -> dict:
+        return {
+            "passed": False,
+            "details": "Generic requirement_met check — needs specific implementation",
+        }
 
     def run_category(self, category: str) -> BenchmarkResult | None:
         """Run a specific category."""

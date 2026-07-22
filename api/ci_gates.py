@@ -14,11 +14,9 @@ from __future__ import annotations
 
 import json
 import logging
-import os
 import sys
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from datetime import datetime
-from typing import Any
 
 logger = logging.getLogger(__name__)
 
@@ -61,6 +59,9 @@ class CIGates:
             self._gate_evidence_check,
             self._gate_benchmark_score,
             self._gate_template_validation,
+            self._gate_regression,
+            self._gate_challenge,
+            self._gate_performance_drift,
         ]
 
     def run_all(self, context: dict | None = None) -> CIGateReport:
@@ -69,7 +70,6 @@ class CIGates:
 
         ctx = context or {}
         results = []
-        start = time.time()
 
         for gate_fn in self.gates:
             gate_start = time.time()
@@ -243,6 +243,89 @@ class CIGates:
                 findings=[{"template": template_id, "error": str(e)}],
                 duration_ms=0,
             )
+
+    def _gate_regression(self, ctx: dict) -> GateResult:
+        """Run regression test set."""
+        from .assurance.regression_set import regression_set
+
+        result = regression_set.run()
+        return GateResult(
+            gate="regression",
+            passed=result.passed_all,
+            score=result.score,
+            findings=[
+                {
+                    "total": result.total_cases,
+                    "passed": result.passed,
+                    "failed": result.failed,
+                }
+            ]
+            + result.failures,
+            duration_ms=result.execution_time_ms,
+        )
+
+    def _gate_challenge(self, ctx: dict) -> GateResult:
+        """Run challenge test set."""
+        from .assurance.challenge_set import challenge_set
+
+        result = challenge_set.run()
+        findings = [
+            {
+                "total": result.total_cases,
+                "passed": result.passed,
+                "failed": result.failed,
+            }
+        ]
+        if result.canary_triggered:
+            findings.append(
+                {"warning": "Canary triggered — possible benchmark leakage"}
+            )
+        findings.extend(result.failures)
+
+        return GateResult(
+            gate="challenge",
+            passed=result.passed_all,
+            score=result.score,
+            findings=findings,
+            duration_ms=result.execution_time_ms,
+        )
+
+    def _gate_performance_drift(self, ctx: dict) -> GateResult:
+        """Check for performance drift."""
+        from .assurance.drift_monitor import drift_monitor
+        from .assurance.regression_set import regression_set
+        from .assurance.challenge_set import challenge_set
+
+        reg_result = regression_set.run()
+        chal_result = challenge_set.run()
+
+        current_metrics = {
+            "regression_score": reg_result.score,
+            "challenge_score": chal_result.score,
+        }
+
+        report = drift_monitor.check(current_metrics)
+
+        findings = []
+        if report.has_drift:
+            for alert in report.alerts:
+                findings.append(
+                    {
+                        "metric": alert.metric,
+                        "delta": alert.delta,
+                        "severity": alert.severity,
+                    }
+                )
+        else:
+            findings.append({"info": "No drift detected"})
+
+        return GateResult(
+            gate="performance_drift",
+            passed=not report.has_drift,
+            score=1.0 if not report.has_drift else 0.5,
+            findings=findings,
+            duration_ms=0,
+        )
 
 
 # ─── CLI Entry Point ──────────────────────────────────────────

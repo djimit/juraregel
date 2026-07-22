@@ -18,16 +18,12 @@ Academische foundation:
 
 from __future__ import annotations
 
-import json
 import logging
-import os
 import time
-from dataclasses import dataclass, field
-from datetime import datetime
+from dataclasses import dataclass
 from enum import Enum
-from typing import Any
 
-from .rag_engine import rag_engine, LEGAL_SYSTEM_PROMPT
+from .rag_engine import rag_engine
 
 logger = logging.getLogger(__name__)
 
@@ -54,6 +50,8 @@ class LegalClaim:
     rebuttal: list[str]  # Tegenargumenten
     confidence: float  # 0.0-1.0
     articles: list[str]  # Relevante wetsartikelen
+    error_type: str | None = None
+    severity: str | None = None
 
 
 @dataclass
@@ -307,7 +305,6 @@ class LegalReasoningEngine:
         counter_arguments = self._generate_counter_arguments(arguments)
 
         # 4. Calculate overall confidence
-        all_args = arguments + counter_arguments
         overall_confidence = sum(a.confidence for a in arguments) / max(
             len(arguments), 1
         )

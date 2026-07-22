@@ -20,7 +20,6 @@ from __future__ import annotations
 import hashlib
 import json
 import logging
-import time
 from dataclasses import dataclass, field
 from datetime import datetime
 from typing import Any
@@ -42,6 +41,28 @@ class Explanation:
     human_review_required: bool
     alternative_interpretations: list[str] = field(default_factory=list)
     counter_arguments: list[str] = field(default_factory=list)
+    error_type: str | None = None
+    severity: str | None = None
+
+    def to_legal_error(
+        self, claim: str = "", expected: str = "", actual: str = ""
+    ) -> Any:
+        """Convert to a LegalError for use with severity_scorer."""
+        from api.assurance.error_taxonomy import LegalError, LegalErrorType, Severity
+
+        et = LegalErrorType(self.error_type) if self.error_type else None
+        sev = Severity(self.severity) if self.severity else None
+
+        return LegalError(
+            error_type=et or LegalErrorType.FACTUAL,
+            severity=sev or Severity.S3_MATERIEEL,
+            description=self.summary,
+            source_claim=claim,
+            expected_answer=expected,
+            actual_answer=actual,
+            recoverable=not self.human_review_required,
+            detectable=True,
+        )
 
 
 @dataclass
