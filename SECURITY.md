@@ -2,46 +2,39 @@
 
 ## Supported Versions
 
-JuraRegel is een project in ontwikkeling. Alleen de laatste main branch wordt ondersteund.
+| Version | Supported |
+|---------|-----------|
+| 1.x     | ✅        |
 
 ## Reporting a Vulnerability
 
-Security issues kunnen worden gemeld via GitHub Issues met het label `security`.
+If you discover a security vulnerability in JuraRegel, please report it by:
 
-## Security Model
+1. **Email**: security@djimit.nl (preferred for sensitive issues)
+2. **GitHub**: Create a private security advisory at https://github.com/djimit/juraregel/security/advisories
 
-### MCP Server
+Please include:
+- Description of the vulnerability
+- Steps to reproduce
+- Potential impact
+- Suggested fix (if any)
 
-- **Protocol:** stdio (stdin/stdout)
-- **Authenticatie:** API key via `AUTH_API_KEY` environment variable
-- **Autorisatie:** geen (single-tenant)
-- **Audit logging:** geen (gepland voor v3.0)
+We aim to respond within 48 hours and will keep you informed of our progress.
 
-### API Servers (use cases)
+## Security Measures
 
-- **Auth:** Bearer token validation
-- **CORS:** restricted to configured origins
-- **Rate limiting:** in-memory per IP
-- **TLS:** via reverse proxy (nginx/traefik)
+JuraRegel implements the following security measures:
 
-## Known Limitations
+- **PII Redaction**: Automatic detection and redaction of personal data in AI output
+- **Dependency Scanning**: Weekly automated dependency updates via Dependabot
+- **Audit Trail**: Immutable evidence lineage for all AI-generated output
+- **Approval Gates**: Multi-party approval for high-risk (L4/L5) AI outputs
+- **Input Validation**: All API inputs validated against JSON Schema
+- **Rate Limiting**: API rate limiting to prevent abuse
 
-- Geen OAuth2/OIDC integratie
-- Geen audit logging in productie
-- Geen rate limiting achter load balancer
-- In-memory storage (geen persistentie)
+## Known Vulnerabilities
 
-## Dependencies
-
-- Python 3.12+
-- FastAPI
-- Qdrant client
-- pytest-bdd
-
-## Recommendations for Production
-
-1. Implementeer echte OAuth2/OIDC via JWKS
-2. Voeg audit logging toe (append-only storage)
-3. Gebruik Redis voor rate limiting
-4. Implementeer tenant isolation
-5. Voeg SBOM generation toe
+We track and remediate security vulnerabilities through:
+- GitHub Dependabot alerts
+- JLAIF Security Audit Framework
+- Regular dependency updates
