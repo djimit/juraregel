@@ -1,0 +1,125 @@
+{
+  "audit_demo": "agent_jlaif",
+  "timestamp": "2026-07-23T00:37:38.063927",
+  "test_cases": 3,
+  "total_findings": 5,
+  "by_type": {
+    "omissiefout": 3,
+    "bronfout": 1,
+    "fout": 1
+  },
+  "by_severity": {
+    "S3": 3,
+    "S4": 1,
+    "S2": 1
+  },
+  "reports": [
+    {
+      "audit_id": "agent-audit-1784759858",
+      "timestamp": "2026-07-23T00:37:38.063927",
+      "agent_name": "DPIA Agent",
+      "findings_count": 0,
+      "findings": [],
+      "severity_distribution": {
+        "counts": {
+          "S1": 0,
+          "S2": 0,
+          "S3": 0,
+          "S4": 0,
+          "S5": 0
+        },
+        "weighted_score": 0.0,
+        "has_blocking_errors": false,
+        "total_errors": 0,
+        "non_blocking_ratio": 1.0
+      },
+      "release_decision": "GO",
+      "human_review_required": false,
+      "steps_completed": 4,
+      "steps_expected": 4,
+      "confidence": 0.92
+    },
+    {
+      "audit_id": "agent-audit-1784759858",
+      "timestamp": "2026-07-23T00:37:38.063977",
+      "agent_name": "FRIA Agent",
+      "findings_count": 4,
+      "findings": [
+        {
+          "type": "omissiefout",
+          "severity": "S3",
+          "description": "Incomplete execution: 2/4 stappen",
+          "step": "completeness"
+        },
+        {
+          "type": "bronfout",
+          "severity": "S3",
+          "description": "Geen bronverwijzingen in succesvolle output",
+          "step": "citations"
+        },
+        {
+          "type": "fout",
+          "severity": "S4",
+          "description": "1 hallucinatie-flag(s) gedetecteerd",
+          "step": "hallucination_check"
+        },
+        {
+          "type": "omissiefout",
+          "severity": "S2",
+          "description": "Geen aanbevelingen gegenereerd",
+          "step": "bias_check"
+        }
+      ],
+      "severity_distribution": {
+        "counts": {
+          "S1": 0,
+          "S2": 1,
+          "S3": 2,
+          "S4": 1,
+          "S5": 0
+        },
+        "weighted_score": 18.0,
+        "has_blocking_errors": true,
+        "total_errors": 4,
+        "non_blocking_ratio": 0.5555555555555556
+      },
+      "release_decision": "NO-GO",
+      "human_review_required": true,
+      "steps_completed": 2,
+      "steps_expected": 4,
+      "confidence": 0.97
+    },
+    {
+      "audit_id": "agent-audit-1784759858",
+      "timestamp": "2026-07-23T00:37:38.064003",
+      "agent_name": "Incident Agent",
+      "findings_count": 1,
+      "findings": [
+        {
+          "type": "omissiefout",
+          "severity": "S3",
+          "description": "Incomplete execution: 1/4 stappen",
+          "step": "completeness"
+        }
+      ],
+      "severity_distribution": {
+        "counts": {
+          "S1": 0,
+          "S2": 0,
+          "S3": 1,
+          "S4": 0,
+          "S5": 0
+        },
+        "weighted_score": 4.0,
+        "has_blocking_errors": false,
+        "total_errors": 1,
+        "non_blocking_ratio": 1.0
+      },
+      "release_decision": "NO-GO",
+      "human_review_required": true,
+      "steps_completed": 1,
+      "steps_expected": 4,
+      "confidence": 0.45
+    }
+  ]
+}

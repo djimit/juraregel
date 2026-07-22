@@ -1,0 +1,115 @@
+{
+  "audit_demo": "regulatory_monitor_jlaif",
+  "timestamp": "2026-07-23T00:37:44.062873",
+  "test_cases": 3,
+  "total_findings": 4,
+  "by_type": {
+    "interpretatiefout": 1,
+    "procedurefout": 1,
+    "omissiefout": 1,
+    "temporaliteitsfout": 1
+  },
+  "by_severity": {
+    "S2": 4
+  },
+  "reports": [
+    {
+      "audit_id": "reg-audit-1784759864",
+      "timestamp": "2026-07-23T00:37:44.062873",
+      "findings_count": 1,
+      "findings": [
+        {
+          "type": "interpretatiefout",
+          "severity": "S2",
+          "description": "Impact score 0.8 inconsistent met level 'low'",
+          "category": "impact_assessment"
+        }
+      ],
+      "severity_distribution": {
+        "counts": {
+          "S1": 0,
+          "S2": 1,
+          "S3": 0,
+          "S4": 0,
+          "S5": 0
+        },
+        "weighted_score": 2.0,
+        "has_blocking_errors": false,
+        "total_errors": 1,
+        "non_blocking_ratio": 1.0
+      },
+      "release_decision": "NO-GO",
+      "human_review_required": true,
+      "changes_detected": 3,
+      "errors_count": 0,
+      "sources_scanned": 4
+    },
+    {
+      "audit_id": "reg-audit-1784759864",
+      "timestamp": "2026-07-23T00:37:44.062922",
+      "findings_count": 3,
+      "findings": [
+        {
+          "type": "procedurefout",
+          "severity": "S2",
+          "description": "2 scan-fouten gedetecteerd",
+          "category": "scan_errors"
+        },
+        {
+          "type": "omissiefout",
+          "severity": "S2",
+          "description": "Change zonder impact assessment: Verouderde wijziging",
+          "category": "change_quality"
+        },
+        {
+          "type": "temporaliteitsfout",
+          "severity": "S2",
+          "description": "Mogelijk verouderde change: Verouderde wijziging",
+          "category": "temporal_validity"
+        }
+      ],
+      "severity_distribution": {
+        "counts": {
+          "S1": 0,
+          "S2": 3,
+          "S3": 0,
+          "S4": 0,
+          "S5": 0
+        },
+        "weighted_score": 6.0,
+        "has_blocking_errors": false,
+        "total_errors": 3,
+        "non_blocking_ratio": 1.0
+      },
+      "release_decision": "NO-GO",
+      "human_review_required": true,
+      "changes_detected": 1,
+      "errors_count": 2,
+      "sources_scanned": 2
+    },
+    {
+      "audit_id": "reg-audit-1784759864",
+      "timestamp": "2026-07-23T00:37:44.062941",
+      "findings_count": 0,
+      "findings": [],
+      "severity_distribution": {
+        "counts": {
+          "S1": 0,
+          "S2": 0,
+          "S3": 0,
+          "S4": 0,
+          "S5": 0
+        },
+        "weighted_score": 0.0,
+        "has_blocking_errors": false,
+        "total_errors": 0,
+        "non_blocking_ratio": 1.0
+      },
+      "release_decision": "GO",
+      "human_review_required": false,
+      "changes_detected": 0,
+      "errors_count": 0,
+      "sources_scanned": 4
+    }
+  ]
+}
