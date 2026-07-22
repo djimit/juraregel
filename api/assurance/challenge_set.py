@@ -32,7 +32,7 @@ class ChallengeCase:
     description: str
     patterns: list[str]
     min_matches: int
-    is_canary: bool = False  # Canary cases detect benchmark leakage
+    is_canary: bool = False
 
 
 @dataclass
@@ -61,9 +61,13 @@ class ChallengeSet:
     Canary cases are designed to detect if challenge data has leaked
     into training. If a canary case passes unexpectedly, it suggests
     the model has seen the test data.
+
+    Canary tokens are stored externally in .benchmark-canary to avoid
+    false positives from scanning the challenge_set.py file itself.
     """
 
     VERSION = "2026.1"
+    CANARY_FILE = ".benchmark-canary"
 
     def __init__(self):
         self.cases: list[ChallengeCase] = []
@@ -137,18 +141,58 @@ class ChallengeSet:
                 min_matches=15,
             ),
             ChallengeCase(
+                case_id="CHAL-007",
+                version=self.VERSION,
+                category="regression_coverage",
+                description="Regression set has at least 10 cases",
+                patterns=["RegressionCase"],
+                min_matches=10,
+            ),
+            ChallengeCase(
+                case_id="CHAL-008",
+                version=self.VERSION,
+                category="error_taxonomy_severity_mapping",
+                description="Each error type has a default severity mapping",
+                patterns=["LegalErrorType.FACTUAL", "LegalErrorType.BIAS"],
+                min_matches=2,
+            ),
+            ChallengeCase(
+                case_id="CHAL-009",
+                version=self.VERSION,
+                category="djimitflo_integration",
+                description="Djimitflo bridge creates tasks for S3+ errors",
+                patterns=["ComplianceTask", "create_task_from_error"],
+                min_matches=2,
+            ),
+            ChallengeCase(
+                case_id="CHAL-010",
+                version=self.VERSION,
+                category="temporal_decay",
+                description="Temporal decay tracks result freshness",
+                patterns=["is_expired", "freshness", "max_age_days"],
+                min_matches=3,
+            ),
+            ChallengeCase(
                 case_id="CHAL-CANARY-001",
                 version=self.VERSION,
                 category="canary",
                 description="Canary: detects if challenge data leaked to training",
-                patterns=["CHALLENGE_SET_CANARY_TOKEN_2026"],
+                patterns=[self._get_canary_token()],
                 min_matches=1,
                 is_canary=True,
             ),
         ]
 
+    def _get_canary_token(self) -> str:
+        """Get canary token from external file or return placeholder."""
+        canary_path = Path(__file__).parent.parent.parent / self.CANARY_FILE
+        if canary_path.exists():
+            return canary_path.read_text().strip().split("\n")[0]
+        return "CHALLENGE_SET_CANARY_PLACEHOLDER"
+
     def run(self) -> ChallengeResult:
         """Run all challenge cases."""
+
         start = time.time()
         failures = []
         passed = 0
@@ -190,7 +234,7 @@ class ChallengeSet:
         """Run a single challenge case."""
         import subprocess
 
-        root = Path(__file__).parent.parent
+        root = Path(__file__).parent.parent.parent
 
         for pattern in case.patterns:
             try:

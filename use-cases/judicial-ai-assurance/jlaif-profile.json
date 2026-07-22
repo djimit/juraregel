@@ -1,0 +1,82 @@
+{
+  "profile_id": "jlaif-2026.1",
+  "name": "Legal AI Assurance Framework",
+  "version": "1.0.0",
+  "description": "Stanford-niveau assurance framework voor juridische AI — vijf lagen van use-case kwalificatie tot continue evaluatie",
+  "status": "active",
+  "frameworks": [
+    "Stanford PNAS 'No Free Benchmark' (2025)",
+    "CEPEJ Guidelines for Generative AI in Courts (2025)",
+    "EU AI Act (2024/1689)",
+    "NIST AI RMF 1.0",
+    "NEDERUS v1.0"
+  ],
+  "layers": [
+    {
+      "level": 1,
+      "name": "Use-case kwalificatie",
+      "module": "djimitflo_bridge.py",
+      "description": "L1-L5 risicoclassificatie × rechtsgebied × autonomie"
+    },
+    {
+      "level": 2,
+      "name": "Multi-dimensionale benchmark",
+      "module": "regression_set.py",
+      "description": "12+ regression cases + codebase pattern scanning"
+    },
+    {
+      "level": 3,
+      "name": "Severity-weighted scoring",
+      "module": "severity_scorer.py",
+      "description": "Stanford formule met exponentiële weging (1-2-4-8-16)"
+    },
+    {
+      "level": 4,
+      "name": "Evidence lineage",
+      "module": "lineage.py",
+      "description": "CEPEJ JAI-06 traceability: model → prompt → retrieval → bron → output → review"
+    },
+    {
+      "level": 5,
+      "name": "Continue evaluatie",
+      "module": "ci_gates.py",
+      "description": "Regression + challenge + drift gates in CI/CD"
+    }
+  ],
+  "severity_model": {
+    "levels": ["S1", "S2", "S3", "S4", "S5"],
+    "weights": [1, 2, 4, 8, 16],
+    "blocking": ["S4", "S5"]
+  },
+  "error_types": [
+    "feitelijke_fout",
+    "bronfout",
+    "interpretatiefout",
+    "jurisdictiefout",
+    "temporaliteitsfout",
+    "procedurefout",
+    "omissiefout",
+    "bias_ongelijke_behandeling",
+    "vertrouwelijkheidsincident"
+  ],
+  "controls": [
+    "NED-01",
+    "NED-02",
+    "NED-03",
+    "NED-04",
+    "NED-05"
+  ],
+  "gates": [
+    "regression",
+    "challenge",
+    "drift",
+    "canary",
+    "release"
+  ],
+  "metrics": {
+    "test_count": 38,
+    "regression_cases": 12,
+    "challenge_cases": 10,
+    "canary_tokens": 3
+  }
+}

@@ -1,0 +1,106 @@
+name: JLAIF Assurance Gates
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  assurance:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install ripgrep
+        run: |
+          curl -LO https://github.com/BurntSushi/ripgrep/releases/download/14.1.1/rgrep_14.1.1-1_amd64.deb
+          sudo dpkg -i rgrep_14.1.1-1_amd64.deb || sudo apt-get install -y ripgrep
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install ruff pytest
+
+      - name: Lint (ruff)
+        run: |
+          ruff check api/assurance/ shared/gate/ api/ci_gates.py api/benchmark_runner.py api/accountable_ai.py api/legal_reasoning_engine.py tests/test_assurance.py
+
+      - name: Unit tests
+        run: |
+          python -m pytest tests/test_assurance.py -v --tb=short
+
+      - name: JLAIF Regression Gate
+        run: |
+          python -c "
+          from api.assurance.regression_set import regression_set
+          result = regression_set.run()
+          print(f'Regression: {result.passed}/{result.total_cases} (score: {result.score})')
+          assert result.passed_all, f'Regression failed: {result.failures}'
+          "
+
+      - name: JLAIF Challenge Gate
+        run: |
+          python -c "
+          from api.assurance.challenge_set import challenge_set
+          result = challenge_set.run()
+          print(f'Challenge: {result.passed}/{result.total_cases} (score: {result.score})')
+          assert not result.canary_triggered, 'Canary triggered — benchmark leakage detected'
+          assert result.score >= 0.50, f'Challenge score too low: {result.score}'
+          "
+
+      - name: JLAIF Drift Gate
+        run: |
+          python -c "
+          from api.assurance.drift_monitor import drift_monitor
+          from api.assurance.regression_set import regression_set
+          from api.assurance.challenge_set import challenge_set
+          reg = regression_set.run()
+          chal = challenge_set.run()
+          report = drift_monitor.check({'regression': reg.score, 'challenge': chal.score})
+          print(f'Drift: {\"DRIFT\" if report.has_drift else \"stable\"}')
+          for alert in report.alerts:
+              print(f'  {alert.severity}: {alert.metric} delta={alert.delta:.3f}')
+          "
+
+      - name: JLAIF Canary Check
+        run: |
+          python -c "
+          from api.assurance.benchmark_capture_prevention import benchmark_capture_prevention
+          report = benchmark_capture_prevention.check_leakage({})
+          print(f'Canaries: {report.triggered}/{report.total_canaries} triggered')
+          assert report.safe, 'Benchmark leakage detected'
+          "
+
+      - name: JLAIF Release Gate (L2)
+        run: |
+          python -c "
+          from api.assurance.release_gate import evaluate_release
+          from api.assurance.severity_scorer import UseCaseProfile
+          uc = UseCaseProfile('ci-test', 2, 'civiel', 'advocaat')
+          decision = evaluate_release([], uc)
+          print(f'Release Gate L2: {decision.verdict}')
+          assert decision.verdict == 'GO', f'Expected GO, got {decision.verdict}'
+          "
+
+      - name: JLAIF Release Gate (L4 with S5 → NO-GO)
+        run: |
+          python -c "
+          from api.assurance.release_gate import evaluate_release
+          from api.assurance.severity_scorer import UseCaseProfile
+          from api.assurance.error_taxonomy import LegalError, LegalErrorType, Severity
+          uc = UseCaseProfile('ci-test-l4', 4, 'strafrecht', 'rechter')
+          errors = [LegalError(LegalErrorType.BIAS, Severity.S5_SYSTEEMISCH, 'Discriminatie')]
+          decision = evaluate_release(errors, uc)
+          print(f'Release Gate L4+S5: {decision.verdict}')
+          assert decision.verdict == 'NO-GO', f'Expected NO-GO, got {decision.verdict}'
+          "
