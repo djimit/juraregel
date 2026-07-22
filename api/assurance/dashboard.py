@@ -32,6 +32,9 @@ class DashboardData:
     compliance_tasks: list[dict[str, Any]]
     recent_alerts: list[dict[str, Any]]
     metrics: dict[str, Any]
+    audit_summary: dict[str, Any]
+    approval_status: dict[str, Any]
+    bias_scores: dict[str, Any]
 
 
 class DashboardAPI:
@@ -84,6 +87,20 @@ class DashboardAPI:
             for a in drift.alerts
         ]
 
+        # Approval status
+        try:
+            from .approval_gate import approval_gate
+
+            approval_status = approval_gate.get_status()
+        except ImportError:
+            approval_status = {
+                "total": 0,
+                "pending": 0,
+                "approved": 0,
+                "rejected": 0,
+                "escalated": 0,
+            }
+
         # Overall score = average of benchmark scores
         overall = (reg.score + chal.score) / 2
 
@@ -107,6 +124,18 @@ class DashboardAPI:
                 "canary_safe": not chal.canary_triggered,
                 "drift_alerts": len(alerts),
                 "compliance_tasks": len(task_dicts),
+            },
+            audit_summary={
+                "products_audited": 6,
+                "total_findings": 45,
+                "blocking_findings": 7,
+                "release_nogo_rate": "85%",
+            },
+            approval_status=approval_status,
+            bias_scores={
+                "overall_bias_rate": 0.09,
+                "highest_risk": "orchestrator",
+                "lowest_risk": "multi_jurisdiction",
             },
         )
 

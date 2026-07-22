@@ -85,15 +85,32 @@ class DjimitfloBridge:
         elif error.severity == Severity.S3_MATERIEEL:
             priority = "high"
             approvers = 1
+        elif error.severity == Severity.S2_HERSTELBAAR:
+            priority = "medium"
+            approvers = 1
         else:
-            return None  # S1/S2 don't create tasks
+            return None  # S1 don't create tasks
+
+        # Map error type to NEDERUS control
+        control_map = {
+            "feitelijke_fout": "NED-01",
+            "bronfout": "NED-04",
+            "interpretatiefout": "NED-01",
+            "jurisdictiefout": "NED-03",
+            "temporaliteitsfout": "NED-03",
+            "procedurefout": "NED-05",
+            "omissiefout": "NED-01",
+            "bias_ongelijke_behandeling": "NED-02",
+            "vertrouwelijkheidsincident": "NED-05",
+        }
+        control_id = control_map.get(error.error_type.value, "NED-01")
 
         task = ComplianceTask(
             title=f"[{error.severity.value}] {error.error_type.value}: {error.description[:60]}",
             description=error.description,
             priority=priority,
-            control_id=f"NED-01-{error.error_type.value[:3].upper()}",
-            evidence_refs=[error.source_claim],
+            control_id=control_id,
+            evidence_refs=[error.source_claim] if error.source_claim else [],
             approvers=approvers,
             due_date="",
             metadata={
@@ -105,6 +122,56 @@ class DjimitfloBridge:
         )
         self._tasks.append(task)
         return task
+
+    def create_tasks_from_audit_report(
+        self,
+        audit_report: dict[str, Any],
+        use_case: UseCaseProfile,
+    ) -> list[ComplianceTask]:
+        """Create compliance tasks from a full audit report."""
+        tasks = []
+        from .error_taxonomy import LegalError, Severity
+
+        for finding in audit_report.get("findings", []):
+            severity_map = {
+                "S1": Severity.S1_COSMETISCH,
+                "S2": Severity.S2_HERSTELBAAR,
+                "S3": Severity.S3_MATERIEEL,
+                "S4": Severity.S4_RECHTSVERLIES,
+                "S5": Severity.S5_SYSTEEMISCH,
+            }
+            severity = severity_map.get(
+                finding.get("severity", "S1"), Severity.S1_COSMETISCH
+            )
+
+            from .error_taxonomy import LegalErrorType
+
+            error_type_map = {
+                "feitelijke_fout": LegalErrorType.FACTUAL,
+                "bronfout": LegalErrorType.SOURCE,
+                "interpretatiefout": LegalErrorType.INTERPRETATION,
+                "jurisdictiefout": LegalErrorType.JURISDICTION,
+                "temporaliteitsfout": LegalErrorType.TEMPORAL,
+                "procedurefout": LegalErrorType.PROCEDURAL,
+                "omissiefout": LegalErrorType.OMISSION,
+                "bias_ongelijke_behandeling": LegalErrorType.BIAS,
+                "vertrouwelijkheidsincident": LegalErrorType.CONFIDENTIALITY,
+            }
+            error_type = error_type_map.get(
+                finding.get("type", ""), LegalErrorType.FACTUAL
+            )
+
+            error = LegalError(
+                error_type=error_type,
+                severity=severity,
+                description=finding.get("description", ""),
+                source_claim=finding.get("evidence", ""),
+            )
+            task = self.create_task_from_error(error, use_case)
+            if task:
+                tasks.append(task)
+
+        return tasks
 
     def create_audit_event(
         self,
