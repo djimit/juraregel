@@ -10,4 +10,4 @@ sqlalchemy[asyncio]==2.0.42
 asyncpg==0.30.0
 alembic==1.13.3
 sentence-transformers==3.2.0
-numpy==2.4.6
+numpy==2.5.1
