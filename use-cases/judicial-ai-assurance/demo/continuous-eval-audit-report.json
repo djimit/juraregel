@@ -1,0 +1,133 @@
+{
+  "audit_demo": "continuous_evaluation_jlaif",
+  "timestamp": "2026-07-22T22:58:13.341460",
+  "test_cases": 3,
+  "total_findings": 6,
+  "by_type": {
+    "bias_ongelijke_behandeling": 1,
+    "procedurefout": 1,
+    "interpretatiefout": 2,
+    "omissiefout": 2
+  },
+  "by_severity": {
+    "S4": 1,
+    "S3": 1,
+    "S2": 4
+  },
+  "reports": [
+    {
+      "audit_id": "eval-audit-1784753893",
+      "timestamp": "2026-07-22T22:58:13.341460",
+      "report_id": "eval-001",
+      "findings_count": 3,
+      "findings": [
+        {
+          "type": "bias_ongelijke_behandeling",
+          "severity": "S4",
+          "description": "Alle 6 modules slagen — mogelijke self-reference bias",
+          "category": "self_reference"
+        },
+        {
+          "type": "procedurefout",
+          "severity": "S3",
+          "description": "Geen ene module gefaald — onafhankelijke validatie ontbreekt",
+          "category": "independence"
+        },
+        {
+          "type": "interpretatiefout",
+          "severity": "S2",
+          "description": "Alle scores zijn afgerond — mogelijke false confidence",
+          "category": "false_confidence"
+        }
+      ],
+      "severity_distribution": {
+        "counts": {
+          "S1": 0,
+          "S2": 1,
+          "S3": 1,
+          "S4": 1,
+          "S5": 0
+        },
+        "weighted_score": 14.0,
+        "has_blocking_errors": true,
+        "total_errors": 3,
+        "non_blocking_ratio": 0.42857142857142855
+      },
+      "release_decision": "NO-GO",
+      "human_review_required": true,
+      "modules_evaluated": 6,
+      "overall_grade": "A",
+      "overall_score": 1.0
+    },
+    {
+      "audit_id": "eval-audit-1784753893",
+      "timestamp": "2026-07-22T22:58:13.341506",
+      "report_id": "eval-002",
+      "findings_count": 2,
+      "findings": [
+        {
+          "type": "omissiefout",
+          "severity": "S2",
+          "description": "Onvolledige dekking: 4/6 modules geëvalueerd",
+          "category": "coverage"
+        },
+        {
+          "type": "interpretatiefout",
+          "severity": "S2",
+          "description": "Alle scores zijn afgerond — mogelijke false confidence",
+          "category": "false_confidence"
+        }
+      ],
+      "severity_distribution": {
+        "counts": {
+          "S1": 0,
+          "S2": 2,
+          "S3": 0,
+          "S4": 0,
+          "S5": 0
+        },
+        "weighted_score": 4.0,
+        "has_blocking_errors": false,
+        "total_errors": 2,
+        "non_blocking_ratio": 1.0
+      },
+      "release_decision": "NO-GO",
+      "human_review_required": true,
+      "modules_evaluated": 4,
+      "overall_grade": "C",
+      "overall_score": 0.75
+    },
+    {
+      "audit_id": "eval-audit-1784753893",
+      "timestamp": "2026-07-22T22:58:13.341529",
+      "report_id": "eval-003",
+      "findings_count": 1,
+      "findings": [
+        {
+          "type": "omissiefout",
+          "severity": "S2",
+          "description": "Onvolledige dekking: 0/6 modules geëvalueerd",
+          "category": "coverage"
+        }
+      ],
+      "severity_distribution": {
+        "counts": {
+          "S1": 0,
+          "S2": 1,
+          "S3": 0,
+          "S4": 0,
+          "S5": 0
+        },
+        "weighted_score": 2.0,
+        "has_blocking_errors": false,
+        "total_errors": 1,
+        "non_blocking_ratio": 1.0
+      },
+      "release_decision": "NO-GO",
+      "human_review_required": true,
+      "modules_evaluated": 0,
+      "overall_grade": "F",
+      "overall_score": 0.0
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "audit_demo": "multi_jurisdiction_jlaif",
+  "timestamp": "2026-07-22T22:58:21.071640",
+  "test_cases": 3,
+  "total_findings": 3,
+  "by_type": {
+    "jurisdictiefout": 1,
+    "fout": 1,
+    "omissiefout": 1
+  },
+  "by_severity": {
+    "S4": 1,
+    "S3": 2
+  },
+  "reports": [
+    {
+      "audit_id": "jur-audit-1784753901",
+      "timestamp": "2026-07-22T22:58:21.071640",
+      "findings_count": 0,
+      "findings": [],
+      "severity_distribution": {
+        "counts": {
+          "S1": 0,
+          "S2": 0,
+          "S3": 0,
+          "S4": 0,
+          "S5": 0
+        },
+        "weighted_score": 0.0,
+        "has_blocking_errors": false,
+        "total_errors": 0,
+        "non_blocking_ratio": 1.0
+      },
+      "release_decision": "GO",
+      "human_review_required": false,
+      "obligation_count": 3,
+      "conflict_count": 1,
+      "gap_count": 0,
+      "frameworks": [
+        "AVG",
+        "EU AI Act",
+        "NIS2"
+      ]
+    },
+    {
+      "audit_id": "jur-audit-1784753901",
+      "timestamp": "2026-07-22T22:58:21.071688",
+      "findings_count": 3,
+      "findings": [
+        {
+          "type": "jurisdictiefout",
+          "severity": "S4",
+          "description": "AVG toegewezen aan internationale jurisdictie in plaats van NL/EU",
+          "category": "jurisdiction_consistency"
+        },
+        {
+          "type": "fout",
+          "severity": "S3",
+          "description": "Ongeldige boete: Boete tot EUR 25.000.000 — AVG max is EUR 20M",
+          "category": "penalty_accuracy"
+        },
+        {
+          "type": "omissiefout",
+          "severity": "S3",
+          "description": "Frameworks zonder obligaties: {'EU AI Act'}",
+          "category": "framework_coverage"
+        }
+      ],
+      "severity_distribution": {
+        "counts": {
+          "S1": 0,
+          "S2": 0,
+          "S3": 2,
+          "S4": 1,
+          "S5": 0
+        },
+        "weighted_score": 16.0,
+        "has_blocking_errors": true,
+        "total_errors": 3,
+        "non_blocking_ratio": 0.5
+      },
+      "release_decision": "NO-GO",
+      "human_review_required": true,
+      "obligation_count": 1,
+      "conflict_count": 0,
+      "gap_count": 1,
+      "frameworks": [
+        "AVG",
+        "EU AI Act"
+      ]
+    },
+    {
+      "audit_id": "jur-audit-1784753901",
+      "timestamp": "2026-07-22T22:58:21.071709",
+      "findings_count": 0,
+      "findings": [],
+      "severity_distribution": {
+        "counts": {
+          "S1": 0,
+          "S2": 0,
+          "S3": 0,
+          "S4": 0,
+          "S5": 0
+        },
+        "weighted_score": 0.0,
+        "has_blocking_errors": false,
+        "total_errors": 0,
+        "non_blocking_ratio": 1.0
+      },
+      "release_decision": "GO",
+      "human_review_required": false,
+      "obligation_count": 1,
+      "conflict_count": 0,
+      "gap_count": 0,
+      "frameworks": [
+        "AVG"
+      ]
+    }
+  ]
+}

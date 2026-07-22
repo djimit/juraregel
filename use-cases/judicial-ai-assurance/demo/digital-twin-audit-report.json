@@ -1,0 +1,154 @@
+{
+  "audit_demo": "digital_twin_jlaif",
+  "timestamp": "2026-07-22T22:58:06.932216",
+  "test_cases": 3,
+  "total_findings": 9,
+  "by_type": {
+    "bias_ongelijke_behandeling": 1,
+    "interpretatiefout": 4,
+    "omissiefout": 3,
+    "fout": 1
+  },
+  "by_severity": {
+    "S3": 3,
+    "S2": 5,
+    "S4": 1
+  },
+  "reports": [
+    {
+      "audit_id": "twin-audit-1784753886",
+      "timestamp": "2026-07-22T22:58:06.932216",
+      "organisation_id": "org-001",
+      "findings_count": 4,
+      "findings": [
+        {
+          "type": "bias_ongelijke_behandeling",
+          "severity": "S3",
+          "description": "Alle scenarios voorspellen positieve impact — mogelijke optimism bias",
+          "category": "scenario_realism"
+        },
+        {
+          "type": "interpretatiefout",
+          "severity": "S2",
+          "description": "False precision in prediction: AVG +15 (waarschijnlijk afgerond)",
+          "category": "false_precision"
+        },
+        {
+          "type": "interpretatiefout",
+          "severity": "S2",
+          "description": "False precision in prediction: NIS2 +20 (waarschijnlijk afgerond)",
+          "category": "false_precision"
+        },
+        {
+          "type": "interpretatiefout",
+          "severity": "S2",
+          "description": "False precision in prediction: AVG +20 (waarschijnlijk afgerond)",
+          "category": "false_precision"
+        }
+      ],
+      "severity_distribution": {
+        "counts": {
+          "S1": 0,
+          "S2": 3,
+          "S3": 1,
+          "S4": 0,
+          "S5": 0
+        },
+        "weighted_score": 10.0,
+        "has_blocking_errors": false,
+        "total_errors": 4,
+        "non_blocking_ratio": 1.0
+      },
+      "release_decision": "NO-GO",
+      "human_review_required": true,
+      "node_count": 4,
+      "scenario_count": 2,
+      "alert_count": 2,
+      "overall_score": 72
+    },
+    {
+      "audit_id": "twin-audit-1784753886",
+      "timestamp": "2026-07-22T22:58:06.932257",
+      "organisation_id": "org-002",
+      "findings_count": 3,
+      "findings": [
+        {
+          "type": "omissiefout",
+          "severity": "S3",
+          "description": "Ontbrekende node types in digital twin: {'risk', 'processing'}",
+          "category": "node_coverage"
+        },
+        {
+          "type": "omissiefout",
+          "severity": "S4",
+          "description": "Geen verwerkingsactiviteit nodes in digital twin",
+          "category": "node_coverage"
+        },
+        {
+          "type": "omissiefout",
+          "severity": "S3",
+          "description": "Geen 'what-if' scenarios gegenereerd",
+          "category": "scenario_realism"
+        }
+      ],
+      "severity_distribution": {
+        "counts": {
+          "S1": 0,
+          "S2": 0,
+          "S3": 2,
+          "S4": 1,
+          "S5": 0
+        },
+        "weighted_score": 16.0,
+        "has_blocking_errors": true,
+        "total_errors": 3,
+        "non_blocking_ratio": 0.5
+      },
+      "release_decision": "NO-GO",
+      "human_review_required": true,
+      "node_count": 1,
+      "scenario_count": 0,
+      "alert_count": 0,
+      "overall_score": 90
+    },
+    {
+      "audit_id": "twin-audit-1784753886",
+      "timestamp": "2026-07-22T22:58:06.932289",
+      "organisation_id": "org-003",
+      "findings_count": 2,
+      "findings": [
+        {
+          "type": "fout",
+          "severity": "S2",
+          "description": "Ongerealistiche impact voorspelling: AI Act +35 punten",
+          "category": "scenario_realism"
+        },
+        {
+          "type": "interpretatiefout",
+          "severity": "S2",
+          "description": "False precision in prediction: AI Act +35 (waarschijnlijk afgerond)",
+          "category": "false_precision"
+        }
+      ],
+      "severity_distribution": {
+        "counts": {
+          "S1": 0,
+          "S2": 2,
+          "S3": 0,
+          "S4": 0,
+          "S5": 0
+        },
+        "weighted_score": 4.0,
+        "has_blocking_errors": false,
+        "total_errors": 2,
+        "non_blocking_ratio": 1.0
+      },
+      "release_decision": "NO-GO",
+      "human_review_required": true,
+      "node_count": 3,
+      "scenario_count": 1,
+      "alert_count": 1,
+      "overall_score": 35
+    }
+  ]
+}
