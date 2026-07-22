@@ -9,6 +9,7 @@
 [![API](https://img.shields.io/badge/API-82%2B%20endpoints-teal)](https://github.com/djimit/juraregel)
 [![RAG](https://img.shields.io/badge/RAG-Cloud%20LLM%20%2B%20Qdrant-brightgreen)](https://github.com/djimit/juraregel)
 [![Evaluation](https://img.shields.io/badge/OpenMythos-Grade%20A-lightblue)](https://github.com/djimit/juraregel)
+[![JLAIF](https://img.shields.io/badge/JLAIF-Stanford%20Assurance-green)](https://github.com/djimit/juraregel)
 
 <p align="center">
   <a href="docs/assets/juraregel-togaf-landscape.svg">
@@ -61,6 +62,33 @@ evidence rapporteren zij geen compliance-oordeel.
 - **BWB Harvester** — automatische wetwijziging-detectie via BWB API
 - **CI/CD Gates** — 18+ gates: per-use-case (14), JKB (5), extraction (3), schema versioning, BDD, harvester health
 - **RegelSpraak** — Controlled Natural Language specificaties, leesbaar door juristen
+- **Legal AI Assurance Framework (JLAIF)** — Stanford-niveau assurance voor juridische AI: fouttype-taxonomie (9 types), S1-S5 severity scoring, evidence lineage (CEPEJ JAI-06), continue evaluatie (regression/challenge/drift), Djimitflo integratie
+
+## Legal AI Assurance Framework (JLAIF)
+
+Gebaseerd op Stanford's "There is no free benchmark" (PNAS 2025/2026) en de CEPEJ Guidelines for Generative AI in Courts (2025).
+
+### Vijf lagen
+
+| Laag | Module | Beschrijving |
+|------|--------|--------------|
+| 1. Use-case kwalificatie | `djimitflo_bridge.py` | L1-L5 risicoclassificatie × rechtsgebied × autonomie |
+| 2. Multi-dimensionale benchmark | `regression_set.py`, `scanner.py` | 12 regression cases + codebase pattern scanning |
+| 3. Severity-weighted scoring | `severity_scorer.py`, `release_gate.py` | Stanford formule: (waarde × detecteerbaarheid × herstelbaarheid) > (foutkans × ernst × schaal) |
+| 4. Evidence lineage | `lineage.py` | CEPEJ JAI-06 traceability: model → prompt → retrieval → bron → output → review |
+| 5. Continue evaluatie | `ci_gates.py`, `drift_monitor.py`, `challenge_set.py` | Regression + challenge + drift gates in CI/CD |
+
+### Fouttype-taxonomie
+
+9 fouttypes: feitelijk, bron, interpretatie, jurisdictie, temporaliteit, procedure, omissie, bias, vertrouwelijkheid.
+
+### Severity model
+
+5 niveaus met exponentiële weging (1-2-4-8-16): S1 cosmetisch → S5 systeemisch. Eén S5-fout weegt zwaarder dan vele S1-fouten.
+
+### Benchmark capture prevention
+
+Canary tokens detecteren of testdata in training is gebruikt. Temporal decay (90 dagen) invalideert verouderde resultaten.
 
 ## Pseudonimiseringsrichtlijn Engine
 
