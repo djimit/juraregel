@@ -1,0 +1,145 @@
+{
+  "audit_demo": "predictive_compliance_jlaif",
+  "timestamp": "2026-07-22T22:39:42.086968",
+  "test_cases": 3,
+  "total_findings": 9,
+  "by_type": {
+    "fout": 3,
+    "omissiefout": 4,
+    "bias_ongelijke_behandeling": 2
+  },
+  "by_severity": {
+    "S2": 8,
+    "S3": 1
+  },
+  "reports": [
+    {
+      "audit_id": "pred-audit-1784752782",
+      "timestamp": "2026-07-22T22:39:42.086968",
+      "organisation_id": "org-001",
+      "findings_count": 0,
+      "findings": [],
+      "severity_distribution": {
+        "counts": {
+          "S1": 0,
+          "S2": 0,
+          "S3": 0,
+          "S4": 0,
+          "S5": 0
+        },
+        "weighted_score": 0.0,
+        "has_blocking_errors": false,
+        "total_errors": 0,
+        "non_blocking_ratio": 1.0
+      },
+      "release_decision": "GO",
+      "human_review_required": false,
+      "risk_count": 3,
+      "warning_count": 2
+    },
+    {
+      "audit_id": "pred-audit-1784752782",
+      "timestamp": "2026-07-22T22:39:42.087025",
+      "organisation_id": "org-002",
+      "findings_count": 6,
+      "findings": [
+        {
+          "type": "fout",
+          "severity": "S2",
+          "description": "Risico-score komt niet overeen: 0.3 vs verwacht 0.25",
+          "category": "risk_predictions"
+        },
+        {
+          "type": "fout",
+          "severity": "S2",
+          "description": "Risico-score komt niet overeen: 0.3 vs verwacht 0.25",
+          "category": "risk_predictions"
+        },
+        {
+          "type": "fout",
+          "severity": "S2",
+          "description": "Risico-score komt niet overeen: 0.3 vs verwacht 0.25",
+          "category": "risk_predictions"
+        },
+        {
+          "type": "omissiefout",
+          "severity": "S2",
+          "description": "Geen regelgevingsvoorspellingen",
+          "category": "regulatory_forecast"
+        },
+        {
+          "type": "bias_ongelijke_behandeling",
+          "severity": "S2",
+          "description": "Alle risico's hebben dezelfde timeframe (90d) — mogelijke bias",
+          "category": "bias"
+        },
+        {
+          "type": "bias_ongelijke_behandeling",
+          "severity": "S2",
+          "description": "Waarschijnlijkheden zonder differentiatie — mogelijke bias",
+          "category": "bias"
+        }
+      ],
+      "severity_distribution": {
+        "counts": {
+          "S1": 0,
+          "S2": 6,
+          "S3": 0,
+          "S4": 0,
+          "S5": 0
+        },
+        "weighted_score": 12.0,
+        "has_blocking_errors": false,
+        "total_errors": 6,
+        "non_blocking_ratio": 1.0
+      },
+      "release_decision": "NO-GO",
+      "human_review_required": true,
+      "risk_count": 3,
+      "warning_count": 0
+    },
+    {
+      "audit_id": "pred-audit-1784752782",
+      "timestamp": "2026-07-22T22:39:42.087052",
+      "organisation_id": "org-003",
+      "findings_count": 3,
+      "findings": [
+        {
+          "type": "omissiefout",
+          "severity": "S3",
+          "description": "Geen risico-voorspellingen gegenereerd",
+          "category": "risk_predictions"
+        },
+        {
+          "type": "omissiefout",
+          "severity": "S2",
+          "description": "Geen trend-analyse aanwezig",
+          "category": "trend_analysis"
+        },
+        {
+          "type": "omissiefout",
+          "severity": "S2",
+          "description": "Geen regelgevingsvoorspellingen",
+          "category": "regulatory_forecast"
+        }
+      ],
+      "severity_distribution": {
+        "counts": {
+          "S1": 0,
+          "S2": 2,
+          "S3": 1,
+          "S4": 0,
+          "S5": 0
+        },
+        "weighted_score": 8.0,
+        "has_blocking_errors": false,
+        "total_errors": 3,
+        "non_blocking_ratio": 1.0
+      },
+      "release_decision": "NO-GO",
+      "human_review_required": true,
+      "risk_count": 0,
+      "warning_count": 0
+    }
+  ]
+}

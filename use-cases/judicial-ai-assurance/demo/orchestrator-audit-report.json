@@ -1,0 +1,143 @@
+{
+  "audit_demo": "orchestrator_jlaif",
+  "timestamp": "2026-07-22T22:39:35.768529",
+  "test_cases": 3,
+  "total_findings": 8,
+  "by_type": {
+    "bias_ongelijke_behandeling": 1,
+    "omissiefout": 3,
+    "bronfout": 1,
+    "jurisdictiefout": 1,
+    "procedurefout": 2
+  },
+  "by_severity": {
+    "S2": 1,
+    "S3": 5,
+    "S4": 2
+  },
+  "reports": [
+    {
+      "audit_id": "orch-audit-1784752775",
+      "timestamp": "2026-07-22T22:39:35.768529",
+      "assessment_id": "asm-001",
+      "findings_count": 1,
+      "findings": [
+        {
+          "type": "bias_ongelijke_behandeling",
+          "severity": "S2",
+          "description": "Risico-scores zonder differentiatie — mogelijke bias",
+          "step": "bias_check"
+        }
+      ],
+      "severity_distribution": {
+        "counts": {
+          "S1": 0,
+          "S2": 1,
+          "S3": 0,
+          "S4": 0,
+          "S5": 0
+        },
+        "weighted_score": 2.0,
+        "has_blocking_errors": false,
+        "total_errors": 1,
+        "non_blocking_ratio": 1.0
+      },
+      "release_decision": "NO-GO",
+      "human_review_required": true,
+      "steps_completed": 7,
+      "steps_expected": 7
+    },
+    {
+      "audit_id": "orch-audit-1784752775",
+      "timestamp": "2026-07-22T22:39:35.768588",
+      "assessment_id": "asm-002",
+      "findings_count": 5,
+      "findings": [
+        {
+          "type": "omissiefout",
+          "severity": "S3",
+          "description": "Ontbrekende assessment stap: drift_detection",
+          "step": "completeness_check"
+        },
+        {
+          "type": "omissiefout",
+          "severity": "S3",
+          "description": "Ontbrekende assessment stap: audit_logging",
+          "step": "completeness_check"
+        },
+        {
+          "type": "bronfout",
+          "severity": "S3",
+          "description": "Conclusie heeft onvoldoende bronverwijzingen: 0/1",
+          "step": "conclusion_check"
+        },
+        {
+          "type": "jurisdictiefout",
+          "severity": "S3",
+          "description": "Conclusie gebruikt EU-term 'EU AI Act' zonder NL-context",
+          "step": "jurisdiction_check"
+        },
+        {
+          "type": "procedurefout",
+          "severity": "S4",
+          "description": "Confidence 0.78 < 0.85 maar human_review_required=False",
+          "step": "procedure_check"
+        }
+      ],
+      "severity_distribution": {
+        "counts": {
+          "S1": 0,
+          "S2": 0,
+          "S3": 4,
+          "S4": 1,
+          "S5": 0
+        },
+        "weighted_score": 24.0,
+        "has_blocking_errors": true,
+        "total_errors": 5,
+        "non_blocking_ratio": 0.6666666666666666
+      },
+      "release_decision": "NO-GO",
+      "human_review_required": true,
+      "steps_completed": 5,
+      "steps_expected": 7
+    },
+    {
+      "audit_id": "orch-audit-1784752775",
+      "timestamp": "2026-07-22T22:39:35.768616",
+      "assessment_id": "asm-003",
+      "findings_count": 2,
+      "findings": [
+        {
+          "type": "omissiefout",
+          "severity": "S4",
+          "description": "Geen conclusie gegenereerd",
+          "step": "conclusion_check"
+        },
+        {
+          "type": "procedurefout",
+          "severity": "S3",
+          "description": "human_review_required veld ontbreekt",
+          "step": "procedure_check"
+        }
+      ],
+      "severity_distribution": {
+        "counts": {
+          "S1": 0,
+          "S2": 0,
+          "S3": 1,
+          "S4": 1,
+          "S5": 0
+        },
+        "weighted_score": 12.0,
+        "has_blocking_errors": true,
+        "total_errors": 2,
+        "non_blocking_ratio": 0.3333333333333333
+      },
+      "release_decision": "NO-GO",
+      "human_review_required": true,
+      "steps_completed": 7,
+      "steps_expected": 7
+    }
+  ]
+}
