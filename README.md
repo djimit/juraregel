@@ -3,13 +3,16 @@
 [![JuraRegel CI](https://github.com/djimit/juraregel/actions/workflows/juraregel-ci.yml/badge.svg)](https://github.com/djimit/juraregel/actions/workflows/juraregel-ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Rule Sets](https://img.shields.io/badge/Rule%20Sets-34%20%288%20L1%2C%2026%20L0%29-blue)](https://github.com/djimit/juraregel)
-[![Tests](https://img.shields.io/badge/Tests-27%20unit%20%2B%20e2e-green)](https://github.com/djimit/juraregel)
+[![Tests](https://img.shields.io/badge/Tests-74%20unit%2C%207%20auditors-green)](https://github.com/djimit/juraregel)
+[![Security](https://img.shields.io/badge/Security-Dependabot%20enabled-brightgreen)](https://github.com/djimit/juraregel/security/dependabot)
 [![Regels](https://img.shields.io/badge/JREM%20Regels-1137%2B-purple)](https://github.com/djimit/juraregel)
 [![Agentic](https://img.shields.io/badge/Compliance%20Agent-Level%204-orange)](https://github.com/djimit/juraregel)
 [![API](https://img.shields.io/badge/API-82%2B%20endpoints-teal)](https://github.com/djimit/juraregel)
 [![RAG](https://img.shields.io/badge/RAG-Cloud%20LLM%20%2B%20Qdrant-brightgreen)](https://github.com/djimit/juraregel)
 [![Evaluation](https://img.shields.io/badge/OpenMythos-Grade%20A-lightblue)](https://github.com/djimit/juraregel)
 [![JLAIF](https://img.shields.io/badge/JLAIF-Stanford%20Assurance-green)](https://github.com/djimit/juraregel)
+[![Auditors](https://img.shields.io/badge/Auditors-8%20AI%20products-blue)](https://github.com/djimit/juraregel)
+[![OpenMythos](https://img.shields.io/badge/OpenMythos-0.90%20(A--grade)-lightblue)](https://github.com/djimit/juraregel)
 
 <p align="center">
   <a href="docs/assets/juraregel-togaf-landscape.svg">
@@ -68,6 +71,8 @@ evidence rapporteren zij geen compliance-oordeel.
 
 Gebaseerd op Stanford's "There is no free benchmark" (PNAS 2025/2026) en de CEPEJ Guidelines for Generative AI in Courts (2025).
 
+**Status**: 28 modules, 8 AI-producten geauditeerd, 54 bevindingen, OpenMythos 0.54 → 0.90.
+
 ### Vijf lagen
 
 | Laag | Module | Beschrijving |
@@ -85,6 +90,91 @@ Gebaseerd op Stanford's "There is no free benchmark" (PNAS 2025/2026) en de CEPE
 ### Severity model
 
 5 niveaus met exponentiële weging (1-2-4-8-16): S1 cosmetisch → S5 systeemisch. Eén S5-fout weegt zwaarder dan vele S1-fouten.
+
+### Assurance modules (28)
+
+| Module | Functie | Fase |
+|--------|---------|------|
+| `error_taxonomy.py` | 9 fouttypes + S1-S5 severity | Core |
+| `severity_scorer.py` | Stanford acceptability formula | Core |
+| `release_gate.py` | GO/NO-GO/CONDITIONAL beslissing | Core |
+| `regression_set.py` | 12 regression cases | Core |
+| `challenge_set.py` | 10 challenge cases + canary | Core |
+| `drift_monitor.py` | Performance drift detection | Core |
+| `pii_redaction.py` | PII detectie + redactie (BSN, email, IBAN) | Fase 1 |
+| `jurisdiction.py` | NL/EU/INT classificatie + conflicten | Fase 1 |
+| `independent_validation.py` | Canary testcases tegen self-reference | Fase 1 |
+| `citation_verification.py` | Bron-citatie validatie | Fase 2 |
+| `temporal_validity.py` | Verouderde wetgeving detectie | Fase 2 |
+| `bias_score.py` | Cross-product bias vergelijking | Fase 2 |
+| `approval_gate.py` | L4/L5 approval workflow | Fase 3 |
+| `djimitflo_bridge.py` | Automatische compliance tasks | Fase 3 |
+| `dashboard.py` | Assurance metrics API | Fase 3 |
+| `rag_auditor.py` | RAG Engine audit | Auditor |
+| `orchestrator_auditor.py` | Orchestrator audit | Auditor |
+| `predictive_compliance_auditor.py` | Predictive Compliance audit | Auditor |
+| `digital_twin_auditor.py` | Digital Twin audit | Auditor |
+| `continuous_evaluation_auditor.py` | Continuous Evaluatie audit | Auditor |
+| `multi_jurisdiction_auditor.py` | Multi-Juridictie audit | Auditor |
+| `agent_auditor.py` | Agentic AI Workflows audit | Auditor |
+| `regulatory_monitor_auditor.py` | Regulatory Monitor audit | Auditor |
+
+### AI-producten geauditeerd (8)
+
+| Product | Type | Bevindingen | NO-GO | Max Severity |
+|---------|------|-------------|-------|--------------|
+| RAG Engine | L2 Informatief | 10 | 5/5 | S5 |
+| Orchestrator | L4 Autonoom | 8 | 3/3 | S4 |
+| Predictive Compliance | L3 Adviserend | 9 | 2/3 | S2 |
+| Digital Twin | L3 Simulatie | 9 | 3/3 | S4 |
+| Continuous Evaluation | L4 Zelf-evaluatie | 6 | 3/3 | S4 |
+| Multi-Jurisdiction | L3 Multi-rechtsgebied | 3 | 1/3 | S4 |
+| Agentic AI Workflows | L4 Autonoom | 5 | 2/3 | S4 |
+| Regulatory Monitor | L3 Informatief | 4 | 2/3 | S2 |
+
+### Quick start
+
+```bash
+# JLAIF audit draaien op een AI-product
+python3 -c "
+from api.assurance.rag_auditor import rag_engine_auditor
+from api.assurance.severity_scorer import UseCaseProfile
+
+uc = UseCaseProfile('mijn-product', 2, 'civiel', 'advocaat')
+report = rag_engine_auditor.audit(
+    question='Wat zijn de AVG-verplichtingen?',
+    answer='Conform Art. 33 AVG moet u binnen 72 uur melden.',
+    expected_jurisdiction='nederland',
+    use_case=uc,
+)
+print(f'Release: {report.release_decision}')
+print(f'Bevindingen: {len(report.findings)}')
+"
+
+# PII-redactie testen
+python3 -c "
+from api.assurance.pii_redaction import pii_redaction
+result = pii_redaction.redact('BSN: 123456789, email: test@email.com')
+print(result.redacted_text)
+"
+
+# Jurisdictie classificeren
+python3 -c "
+from api.assurance.jurisdiction import jurisdiction_classifier
+result = jurisdiction_classifier.classify('De EU AI Act vereist risicobeheer.')
+print(f'Jurisdictie: {result.primary} (confidence: {result.confidence:.2f})')
+"
+```
+
+### Djiftflo integratie
+
+Elke S3+ bevinding genereert automatisch een Djiftflo compliance task:
+
+| Severity | Priority | Approvers | Control |
+|----------|----------|-----------|---------|
+| S3 | High | 1 | NED-01 t/m NED-05 |
+| S4 | Critical | 2 | NED-01, NED-02 |
+| S5 | Critical | 2 + auto-block | NED-05 |
 
 ### Benchmark capture prevention
 
