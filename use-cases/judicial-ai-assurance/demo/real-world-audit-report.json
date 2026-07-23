@@ -1,0 +1,92 @@
+{
+  "audit_type": "real_world_jlaif",
+  "timestamp": "Bestuursrecht — Wob-verzoek",
+  "total_cases": 8,
+  "total_findings": 12,
+  "total_pii": 5,
+  "jurisdiction_issues": 8,
+  "temporal_issues": 2,
+  "nogo_rate": 0.875,
+  "results": [
+    {
+      "case_id": "RW-001",
+      "source": "Bestuursrecht — Wob-verzoek",
+      "release_decision": "NO-GO",
+      "findings_count": 3,
+      "pii_count": 2,
+      "jurisdiction": "unknown",
+      "citation_rate": 1.0,
+      "temporal_issues": 0
+    },
+    {
+      "case_id": "RW-002",
+      "source": "Civiel recht — Overeenkomst",
+      "release_decision": "NO-GO",
+      "findings_count": 1,
+      "pii_count": 1,
+      "jurisdiction": "EU",
+      "citation_rate": 1.0,
+      "temporal_issues": 0
+    },
+    {
+      "case_id": "RW-003",
+      "source": "Privacy recht — AVG meldplicht",
+      "release_decision": "NO-GO",
+      "findings_count": 3,
+      "pii_count": 0,
+      "jurisdiction": "NL",
+      "citation_rate": 0.3333333333333333,
+      "temporal_issues": 1
+    },
+    {
+      "case_id": "RW-004",
+      "source": "AI Act — Compliance",
+      "release_decision": "GO",
+      "findings_count": 0,
+      "pii_count": 0,
+      "jurisdiction": "EU",
+      "citation_rate": 0.5,
+      "temporal_issues": 0
+    },
+    {
+      "case_id": "RW-005",
+      "source": "Strafrecht — Voorwaardelijke straf",
+      "release_decision": "NO-GO",
+      "findings_count": 1,
+      "pii_count": 1,
+      "jurisdiction": "EU",
+      "citation_rate": 0.0,
+      "temporal_issues": 0
+    },
+    {
+      "case_id": "RW-006",
+      "source": "Internationaal recht — EVRM",
+      "release_decision": "NO-GO",
+      "findings_count": 1,
+      "pii_count": 0,
+      "jurisdiction": "EU",
+      "citation_rate": 0.5,
+      "temporal_issues": 1
+    },
+    {
+      "case_id": "RW-007",
+      "source": "Bestuursrecht — AWB beslistermijn",
+      "release_decision": "NO-GO",
+      "findings_count": 2,
+      "pii_count": 0,
+      "jurisdiction": "NL",
+      "citation_rate": 0.0,
+      "temporal_issues": 0
+    },
+    {
+      "case_id": "RW-008",
+      "source": "Fiscaal recht — Belastingaangifte",
+      "release_decision": "NO-GO",
+      "findings_count": 1,
+      "pii_count": 1,
+      "jurisdiction": "EU",
+      "citation_rate": 0.0,
+      "temporal_issues": 0
+    }
+  ]
+}
