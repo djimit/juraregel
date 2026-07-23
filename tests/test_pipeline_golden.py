@@ -15,7 +15,7 @@ from api.assurance.pipeline_modules import (
     SeverityScoringModule,
     ReleaseGateModule,
 )
-from api.assurance.golden_standard import GoldenStandardDataset, Annotation
+from api.assurance.golden_standard import GoldenStandardDataset
 
 
 # ─── Pipeline Tests ───────────────────────────────────────────
@@ -130,15 +130,15 @@ class TestGoldenStandard:
 
     def test_add_annotation(self):
         gs = GoldenStandardDataset()
-        ann = Annotation(
-            annotator_id="jurist-1",
-            text_id="GS-001",
-            error_type="bronfout",
-            present=True,
-            severity="S3",
-            evidence="Geen artikelverwijzing",
-            confidence=0.9,
-        )
+        ann = {
+            "annotator_id": "jurist-1",
+            "text_id": "GS-001",
+            "error_type": "bronfout",
+            "present": True,
+            "severity": "S3",
+            "evidence": "Geen artikelverwijzing",
+            "confidence": 0.9,
+        }
         assert gs.add_annotation("GS-001", ann)
 
     def test_consensus_findings(self):
@@ -147,15 +147,15 @@ class TestGoldenStandard:
         for annotator in ["jurist-1", "jurist-2"]:
             gs.add_annotation(
                 "GS-001",
-                Annotation(
-                    annotator_id=annotator,
-                    text_id="GS-001",
-                    error_type="bronfout",
-                    present=True,
-                    severity="S3",
-                    evidence="Geen bron",
-                    confidence=0.8,
-                ),
+                {
+                    "annotator_id": annotator,
+                    "text_id": "GS-001",
+                    "error_type": "bronfout",
+                    "present": True,
+                    "severity": "S3",
+                    "evidence": "Geen bron",
+                    "confidence": 0.8,
+                },
             )
         text = gs.get_text("GS-001")
         consensus = text.consensus_findings
@@ -168,15 +168,15 @@ class TestGoldenStandard:
         for annotator in ["jurist-1", "jurist-2"]:
             gs.add_annotation(
                 "GS-001",
-                Annotation(
-                    annotator_id=annotator,
-                    text_id="GS-001",
-                    error_type="bronfout",
-                    present=True,
-                    severity="S3",
-                    evidence="Geen bron",
-                    confidence=0.8,
-                ),
+                {
+                    "annotator_id": annotator,
+                    "text_id": "GS-001",
+                    "error_type": "bronfout",
+                    "present": True,
+                    "severity": "S3",
+                    "evidence": "Geen bron",
+                    "confidence": 0.8,
+                },
             )
         result = gs.compute_cohens_kappa("GS-001", "jurist-1", "jurist-2")
         assert result.agreement_rate == 1.0
