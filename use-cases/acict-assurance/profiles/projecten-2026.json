@@ -1,0 +1,28 @@
+{
+  "profileId": "acict-projecten",
+  "version": "2026",
+  "title": "AcICT Toetskader projecten 2026 - JuraRegel pilotprofiel",
+  "source": {
+    "title": "Toetskader projecten",
+    "publisher": "Adviescollege ICT-toetsing",
+    "date": "2026-07-10",
+    "url": "https://www.adviescollegeicttoetsing.nl/site/binaries/site-content/collections/documents/2026/07/10/acict-toetskader-projecten-2026/acict-toetskader-projecten-2026.pdf"
+  },
+  "disclaimer": "Richtinggevende principes; dit profiel levert geen AcICT-oordeel of compliance-score.",
+  "aspects": [
+    {"aspectId": "projecten-2026.1.7", "section": "1. Businesscase, baten en financiering", "principle": "In de businesscase is aantoonbaar rekening gehouden met geldende wet- en regelgeving."},
+    {"aspectId": "projecten-2026.4.3", "section": "4. Samenhang werkprocessen en ICT-oplossingen", "principle": "De werkprocessen worden ontworpen vanuit het perspectief van de burger."},
+    {"aspectId": "projecten-2026.4.4", "section": "4. Samenhang werkprocessen en ICT-oplossingen", "principle": "In het ontwerp is rekening gehouden met navolgbaarheid voor burgers en bedrijven."},
+    {"aspectId": "projecten-2026.4.5", "section": "4. Samenhang werkprocessen en ICT-oplossingen", "principle": "De ICT-oplossing faciliteert ingrijpen bij automatische besluitvorming en maatwerk."},
+    {"aspectId": "projecten-2026.6.1", "section": "6. Architectuur, functionele haalbaarheid en technische maakbaarheid", "principle": "De kwaliteit van de belangrijkste functionele en niet-functionele eisen is getoetst."},
+    {"aspectId": "projecten-2026.6.2", "section": "6. Architectuur, functionele haalbaarheid en technische maakbaarheid", "principle": "Eisen zijn traceerbaar naar relevante afgeleide ontwikkelproducten."},
+    {"aspectId": "projecten-2026.6.3", "section": "6. Architectuur, functionele haalbaarheid en technische maakbaarheid", "principle": "Er is structureel aandacht voor privacy, informatiebeveiliging en veiligheid."},
+    {"aspectId": "projecten-2026.7.4", "section": "7. Realisatie en planning", "principle": "Voor alle deelproducten zijn de kwaliteitseisen bekend."},
+    {"aspectId": "projecten-2026.7.5", "section": "7. Realisatie en planning", "principle": "Testen worden uitgevoerd op basis van een risicoanalyse."},
+    {"aspectId": "projecten-2026.9.1", "section": "9. Acceptatie, implementatie en beheer", "principle": "Het project voorziet in implementatie bij de lijn- en beheerorganisatie."},
+    {"aspectId": "projecten-2026.9.2", "section": "9. Acceptatie, implementatie en beheer", "principle": "Er is afgesproken wie de ICT-oplossing in beheer neemt."},
+    {"aspectId": "projecten-2026.9.3", "section": "9. Acceptatie, implementatie en beheer", "principle": "Acceptatiecriteria en het acceptatieproces zijn functioneel, niet-functioneel en procesmatig gedefinieerd."},
+    {"aspectId": "projecten-2026.9.4", "section": "9. Acceptatie, implementatie en beheer", "principle": "Het project voorziet in een nazorgfase."},
+    {"aspectId": "projecten-2026.9.5", "section": "9. Acceptatie, implementatie en beheer", "principle": "Dechargevoorwaarden voor afsluiting van het project zijn gedefinieerd."}
+  ]
+}

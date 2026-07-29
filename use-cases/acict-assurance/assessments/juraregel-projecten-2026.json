@@ -1,0 +1,86 @@
+{
+  "assessmentId": "juraregel-projecten-self-assessment-2026-07",
+  "profileId": "acict-projecten",
+  "profileVersion": "2026",
+  "subject": "JuraRegel",
+  "assessmentType": "self-assessment",
+  "findings": [
+    {
+      "aspectId": "projecten-2026.1.7",
+      "status": "satisfied",
+      "evidenceRefs": ["ci/source_quality.py", "ci/l2_promotion_preflight.py"],
+      "owner": "repository-maintainers",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "risk": "De gates bewijzen bronkwaliteit en maturity, niet de volledigheid van een bestuurlijke businesscase.",
+      "measure": "Laat de toepasselijke wet- en regelgeving onafhankelijk beoordelen.",
+      "residualRisk": "Onvolledige bestuurlijke dekking."
+    },
+    {
+      "aspectId": "projecten-2026.4.4",
+      "status": "satisfied",
+      "evidenceRefs": ["use-cases/traceability/lib/traceability_engine.py", "docs/traceability-use-case.md"],
+      "owner": "repository-maintainers",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "risk": "Technische traceerbaarheid is nog niet onafhankelijk op begrijpelijkheid voor burgers getoetst.",
+      "measure": "Voer een gebruikerstest uit.",
+      "residualRisk": "Navolgbaarheid kan technisch correct maar praktisch onvoldoende zijn."
+    },
+    {
+      "aspectId": "projecten-2026.4.5",
+      "status": "satisfied",
+      "evidenceRefs": ["docs/maturity-model.md", "use-cases/judicial-ai-assurance/demo/admission_gate.py"],
+      "owner": "repository-maintainers",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "risk": "Het menselijke beslismodel is een PoC en geen productieproces.",
+      "measure": "Beleg en test de operationele interventieprocedure.",
+      "residualRisk": "Menselijke interventie is organisatorisch niet bewezen."
+    },
+    {
+      "aspectId": "projecten-2026.6.2",
+      "status": "satisfied",
+      "evidenceRefs": ["use-cases/traceability/lib/traceability_engine.py", "use-cases/traceability/tests/test_traceability.py"],
+      "owner": "repository-maintainers",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "risk": "Niet ieder domein heeft expliciete regel-naar-testkoppelingen.",
+      "measure": "Maak ontbrekende koppelingen zichtbaar in de traceability matrix.",
+      "residualRisk": "Gedeeltelijke bewijsdekking."
+    },
+    {
+      "aspectId": "projecten-2026.6.3",
+      "status": "satisfied",
+      "evidenceRefs": ["shared/test_api_security.py", "ci/run-all-gates.sh"],
+      "owner": "repository-maintainers",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "risk": "Aanwezige tests vervangen geen onafhankelijke security- en privacybeoordeling.",
+      "measure": "Voer onafhankelijke threat-model-, security- en privacyreview uit.",
+      "residualRisk": "Onbekende productie- en organisatierisico's."
+    },
+    {
+      "aspectId": "projecten-2026.7.4",
+      "status": "satisfied",
+      "evidenceRefs": ["ci/run-all-gates.sh", "shared/jrem-schema-v1.1.0.json"],
+      "owner": "repository-maintainers",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "risk": "De repositorygates dekken niet alle niet-functionele producteisen.",
+      "measure": "Leg de ontbrekende operationele eisen vast.",
+      "residualRisk": "Onvolledige kwaliteitseisendekking."
+    },
+    {
+      "aspectId": "projecten-2026.7.5",
+      "status": "insufficient_evidence",
+      "evidenceRefs": ["ci/run-all-gates.sh"],
+      "owner": "repository-maintainers",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "risk": "Tests bestaan, maar een expliciete risicoanalyse voor de testaanpak ontbreekt.",
+      "measure": "Koppel testsoorten aan vastgestelde risico's.",
+      "residualRisk": "Kritieke risico's kunnen ongetest blijven."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "profileId": "acict-beheer-onderhoud",
+  "version": "2025-09",
+  "title": "AcICT Toetskader beheer en onderhoud 2025 - JuraRegel pilotprofiel",
+  "source": {
+    "title": "Toetskader beheer en onderhoud",
+    "publisher": "Adviescollege ICT-toetsing",
+    "date": "2025-09-29",
+    "url": "https://www.adviescollegeicttoetsing.nl/site/binaries/site-content/collections/documents/2025/09/29/toetskader-beheer-en-onderhoud/acict-toetskader-beheer-en-onderhoud-versie-september-2025.pdf"
+  },
+  "disclaimer": "Richtinggevende principes; dit profiel levert geen AcICT-oordeel of compliance-score.",
+  "aspects": [
+    {"aspectId": "beheer-2025.1.1", "section": "1. Architectuur", "principle": "Er is inzicht in de gebruikte ICT-componenten en hun samenhang."},
+    {"aspectId": "beheer-2025.1.2", "section": "1. Architectuur", "principle": "Het is duidelijk in hoeverre het informatiesysteem aan de gestelde eisen voldoet."},
+    {"aspectId": "beheer-2025.1.3", "section": "1. Architectuur", "principle": "De kwaliteit, technische schuld, functionele gebreken en omvang zijn bij benadering bekend."},
+    {"aspectId": "beheer-2025.1.4", "section": "1. Architectuur", "principle": "Architectuurkeuzes zijn gemotiveerd, gedocumenteerd en traceerbaar naar eisen."},
+    {"aspectId": "beheer-2025.1.6", "section": "1. Architectuur", "principle": "Koppelvlakken worden actief beheerd."},
+    {"aspectId": "beheer-2025.1.9", "section": "1. Architectuur", "principle": "Technische componenten worden planmatig actueel gehouden, vervangen en vernieuwd."},
+    {"aspectId": "beheer-2025.2.2", "section": "2. Processen - tactisch", "principle": "Uitval, uitwijk, informatiebeveiliging, capaciteit, dienstverlening en onderhoudsplanning worden beheerst."},
+    {"aspectId": "beheer-2025.2.3", "section": "2. Processen - operationeel", "principle": "Monitoring, incidentbeheer en gecontroleerde wijzigingen zijn operationeel ingericht."},
+    {"aspectId": "beheer-2025.2.4", "section": "2. Processen - voortbrenging", "principle": "Wijzigingen doorlopen passende, kortcyclische en geautomatiseerde voortbrengingsprocessen."},
+    {"aspectId": "beheer-2025.3.1", "section": "3. Risicobeheersing", "principle": "Risicobeheersing is structureel verankerd."},
+    {"aspectId": "beheer-2025.3.2", "section": "3. Risicobeheersing", "principle": "De effectiviteit van getroffen maatregelen wordt structureel bewaakt."},
+    {"aspectId": "beheer-2025.3.4", "section": "3. Risicobeheersing", "principle": "Informatiebeveiliging en strategische digitale veiligheid krijgen voldoende aandacht."},
+    {"aspectId": "beheer-2025.3.5", "section": "3. Risicobeheersing", "principle": "Risico's door afhankelijkheden van ketenpartners worden beheerst."},
+    {"aspectId": "beheer-2025.3.6", "section": "3. Risicobeheersing", "principle": "Continuiteits- en concentratierisico's van leveranciers krijgen voldoende aandacht."},
+    {"aspectId": "beheer-2025.6.1", "section": "6. Eigenaar en ICT-organisatie", "principle": "De eigenaar is verantwoordelijk voor continuiteit en beheer."},
+    {"aspectId": "beheer-2025.6.3", "section": "6. Eigenaar en ICT-organisatie", "principle": "De eigenaar kent de werkprocessen, het systeem, de risico's en de kwaliteit."},
+    {"aspectId": "beheer-2025.6.4", "section": "6. Eigenaar en ICT-organisatie", "principle": "Rollen, taken, verantwoordelijkheden, bevoegdheden en mandaten zijn duidelijk."},
+    {"aspectId": "beheer-2025.6.7", "section": "6. Eigenaar en ICT-organisatie", "principle": "Er is aantoonbaar en structureel ruimte voor tegenspraak en een kritische blik."}
+  ]
+}
