@@ -18,7 +18,7 @@ jobs:
     env:
       JURAREGEL_CI_MODE: poc
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-python@v5
         with:
           python-version: 3.12
@@ -57,7 +57,7 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Required files
         run: |
           test -f LICENSE && test -f README.md && test -f CHANGELOG.md
@@ -70,7 +70,7 @@ jobs:
     env:
       JURAREGEL_CI_MODE: pilot
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-python@v5
         with:
           python-version: 3.12
