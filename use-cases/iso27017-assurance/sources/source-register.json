@@ -1,0 +1,59 @@
+{
+  "profileId": "iso27017-assurance",
+  "retrievedOn": "2026-07-30",
+  "licensedTextAvailable": false,
+  "sources": [
+    {
+      "sourceId": "iso-27017-2026-catalogue",
+      "class": "authoritative-metadata",
+      "title": "ISO/IEC 27017:2026",
+      "publisher": "ISO",
+      "edition": "2",
+      "publicationDate": "2026-07-27",
+      "url": "https://www.iso.org/standard/27017",
+      "usage": "Publication metadata, scope and public control titles only"
+    },
+    {
+      "sourceId": "iso-27002-2022-catalogue",
+      "class": "authoritative-metadata",
+      "title": "ISO/IEC 27002:2022",
+      "publisher": "ISO",
+      "edition": "3",
+      "publicationDate": "2022-02",
+      "url": "https://www.iso.org/standard/75652",
+      "usage": "Base-standard identity only"
+    },
+    {
+      "sourceId": "nist-csf-2",
+      "class": "authoritative-public",
+      "title": "NIST Cybersecurity Framework 2.0",
+      "publisher": "NIST",
+      "publicationDate": "2024-02-26",
+      "url": "https://www.nist.gov/cyberframework",
+      "usage": "Draft crosswalk context"
+    },
+    {
+      "sourceId": "dora-2022-2554",
+      "class": "authoritative-law",
+      "title": "Regulation (EU) 2022/2554",
+      "publisher": "European Union",
+      "publicationDate": "2022-12-27",
+      "url": "https://eur-lex.europa.eu/eli/reg/2022/2554/oj",
+      "usage": "Draft crosswalk context; financial-sector applicability only"
+    },
+    {
+      "sourceId": "eu-ai-act-2024-1689",
+      "class": "authoritative-law",
+      "title": "Regulation (EU) 2024/1689",
+      "publisher": "European Union",
+      "publicationDate": "2024-07-12",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+      "usage": "Draft crosswalk context; AI-system role and lifecycle requirements only"
+    }
+  ],
+  "limitations": [
+    "No licensed ISO/NEN normative text is stored in this repository.",
+    "Control evidence criteria are local interpretations and not ISO guidance.",
+    "Crosswalks do not establish legal applicability, equivalence or certification."
+  ]
+}

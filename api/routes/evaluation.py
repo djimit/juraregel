@@ -1,4 +1,4 @@
-"""Continuous Evaluation API — OpenMythos-integratie op platform-niveau."""
+"""Local evidence questionnaire API; no OpenMythos-grade is inferred."""
 
 from fastapi import APIRouter
 
@@ -11,11 +11,12 @@ router = APIRouter()
 async def evaluation_status():
     """Get evaluation engine status."""
     return {
-        "status": "active",
+        "status": "evidence-incomplete",
         "modules_evaluated": len(continuous_evaluation.CRITERIA),
         "criteria_total": sum(
             len(c["checks"]) for c in continuous_evaluation.CRITERIA.values()
         ),
+        "disclaimer": "Local self-check criteria; no external OpenMythos or compliance conclusion.",
     }
 
 
@@ -29,6 +30,8 @@ async def run_evaluation():
         "timestamp": report.timestamp,
         "overall_score": report.overall_score,
         "overall_grade": report.overall_grade,
+        "evidence_status": "evidence-incomplete",
+        "disclaimer": "Scores reflect missing/present local evidence only; no external benchmark grade.",
         "results": [
             {
                 "module": r.module,

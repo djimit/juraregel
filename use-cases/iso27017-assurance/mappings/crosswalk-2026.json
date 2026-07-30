@@ -1,0 +1,64 @@
+{
+  "profileId": "iso27017-assurance",
+  "version": "2026",
+  "reviewStatus": "draft",
+  "allowedRelationTypes": ["supports", "overlaps", "evidence_reusable", "no_equivalence", "applicability_requires_review"],
+  "mappings": [
+    {
+      "mappingId": "map-5.38-iso27002-5.2",
+      "sourceControl": "iso27017-2026.5.38",
+      "target": "ISO/IEC 27002:2022 5.2",
+      "relationType": "supports",
+      "rationale": "Both concern explicit information-security roles; cloud allocation adds provider/customer context.",
+      "sourceRef": "iso-27002-2022-catalogue"
+    },
+    {
+      "mappingId": "map-5.38-nist-gv.rr",
+      "sourceControl": "iso27017-2026.5.38",
+      "target": "NIST CSF 2.0 GV.RR",
+      "relationType": "overlaps",
+      "rationale": "NIST governance outcomes address roles, responsibilities and authorities without proving ISO conformity.",
+      "sourceRef": "nist-csf-2"
+    },
+    {
+      "mappingId": "map-5.39-dora-28-30",
+      "sourceControl": "iso27017-2026.5.39",
+      "target": "DORA Articles 28 and 30",
+      "relationType": "applicability_requires_review",
+      "rationale": "DORA allocates ICT third-party responsibilities and contract terms only for entities within its scope.",
+      "sourceRef": "dora-2022-2554"
+    },
+    {
+      "mappingId": "map-5.39-bio2-5.19-5.23",
+      "sourceControl": "iso27017-2026.5.39",
+      "target": "BIO2 5.19-5.23",
+      "relationType": "evidence_reusable",
+      "rationale": "Supplier and cloud-service governance artifacts can be reusable after scope and version review.",
+      "sourceRef": "local:use-cases/bio2/jrem/exports/bio2-maatregelen-2025.1.json"
+    },
+    {
+      "mappingId": "map-8.35-iso27002-8.22-8.31",
+      "sourceControl": "iso27017-2026.8.35",
+      "target": "ISO/IEC 27002:2022 8.22 and 8.31",
+      "relationType": "overlaps",
+      "rationale": "Network and lifecycle-environment segregation support but do not exhaust virtual-computing isolation.",
+      "sourceRef": "iso-27002-2022-catalogue"
+    },
+    {
+      "mappingId": "map-8.36-nist-id.am",
+      "sourceControl": "iso27017-2026.8.36",
+      "target": "NIST CSF 2.0 ID.AM",
+      "relationType": "supports",
+      "rationale": "Asset and service inventory outcomes support discovery and authorization governance.",
+      "sourceRef": "nist-csf-2"
+    },
+    {
+      "mappingId": "map-8.36-eu-ai-act",
+      "sourceControl": "iso27017-2026.8.36",
+      "target": "EU AI Act provider and deployer obligations",
+      "relationType": "no_equivalence",
+      "rationale": "Cloud-use discovery can support AI inventory evidence but does not satisfy AI Act obligations.",
+      "sourceRef": "eu-ai-act-2024-1689"
+    }
+  ]
+}

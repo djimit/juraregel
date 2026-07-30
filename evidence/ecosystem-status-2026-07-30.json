@@ -1,0 +1,42 @@
+{
+  "observedAt": "2026-07-30T00:00:00+02:00",
+  "method": "read-only local checkout and SQLite inspection",
+  "openmythos": {
+    "repository": "/Users/dlandman/OpenMythos/openmythos-benchmark",
+    "commit": "a3ed65a9dd24bb1a275d1213e65f625a6385e75c",
+    "corpusPath": "cases/corpus.jsonl",
+    "corpusSha256": "71ca62e742f71c2830f198c01dbcacdcf75487b9ef96e661d3e297d6608d41b9",
+    "corpusCases": 351,
+    "validationPassed": 351,
+    "categories": [
+      "calibration",
+      "canary",
+      "contradiction",
+      "cross-lingual",
+      "hallucination",
+      "hierarchy",
+      "injection",
+      "overthinking",
+      "temporal-reasoning",
+      "tool-scope",
+      "value-alignment"
+    ],
+    "skillLifecycleDrafts": 18,
+    "skillLifecycleStages": 6,
+    "promotionStatus": "not-promoted"
+  },
+  "djimitflo": {
+    "repository": "/Users/dlandman/djimitflo",
+    "commit": "cb9944fffe47e07e648a302d1d520406125fe880",
+    "checkoutDirty": true,
+    "databasePath": "/Users/dlandman/djimitflo/.data/djimitflo.sqlite",
+    "openmythosEvalRuns": 0,
+    "openmythosCaseResults": 0,
+    "externalNederusControlsObserved": false
+  },
+  "juraregel": {
+    "bridgeTransport": "in-memory-only",
+    "staticMappingIsExternalIntegrationEvidence": false
+  },
+  "conclusion": "evidence-incomplete"
+}

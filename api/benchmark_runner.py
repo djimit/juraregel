@@ -1,4 +1,7 @@
-"""OpenMythos Benchmark Runner — Full compliance evaluation framework.
+"""Local code-pattern evaluator inspired by OpenMythos categories.
+
+The generated cases below are JuraRegel interpretations. They are not the
+versioned OpenMythos corpus and their scores are not compliance conclusions.
 
 Runs comprehensive benchmarks across all OpenMythos categories:
 - hierarchy: Art 14(1), 14(3) — Human oversight hierarchy

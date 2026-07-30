@@ -20,8 +20,8 @@ async def readiness_check():
     """Readiness probe — checks all dependencies."""
     checks = {
         "templates": _check_templates(),
-        "database": _check_database(),
-        "vector_store": _check_vector_store(),
+        "database": await _check_database(),
+        "vector_store": await _check_vector_store(),
     }
     all_ready = all(c["status"] == "ok" for c in checks.values())
     return {
@@ -40,11 +40,37 @@ def _check_templates() -> dict:
         return {"status": "error", "message": str(e)}
 
 
-def _check_database() -> dict:
-    # Placeholder — will check PostgreSQL connection
-    return {"status": "ok", "message": "Not configured (file mode)"}
+async def _check_database() -> dict:
+    from ..database import IS_POSTGRES, USE_DATABASE, engine
+
+    if not USE_DATABASE:
+        return {"status": "unavailable", "message": "DATABASE_URL not configured"}
+    if not IS_POSTGRES:
+        return {"status": "degraded", "message": "Non-PostgreSQL development backend"}
+    if engine is None:
+        return {"status": "error", "message": "PostgreSQL engine unavailable"}
+    try:
+        import sqlalchemy
+
+        async with engine.connect() as connection:
+            await connection.execute(sqlalchemy.text("SELECT 1"))
+        return {"status": "ok", "message": "PostgreSQL reachable"}
+    except Exception as exc:
+        return {"status": "error", "message": type(exc).__name__}
 
 
-def _check_vector_store() -> dict:
-    # Placeholder — will check Qdrant connection
-    return {"status": "ok", "message": "Not configured (file mode)"}
+async def _check_vector_store() -> dict:
+    import os
+
+    qdrant_url = os.getenv("QDRANT_URL", "")
+    if not qdrant_url:
+        return {"status": "unavailable", "message": "QDRANT_URL not configured"}
+    try:
+        import httpx
+
+        async with httpx.AsyncClient(timeout=2) as client:
+            response = await client.get(f"{qdrant_url.rstrip('/')}/collections")
+            response.raise_for_status()
+        return {"status": "ok", "message": "Qdrant reachable"}
+    except Exception as exc:
+        return {"status": "error", "message": type(exc).__name__}

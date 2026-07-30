@@ -58,10 +58,9 @@ before coding.
 
 ### Phase 0a - Parallel work check
 
-If this project has the OpenCode-generated
-[`parallel-work-check` skill](../generated/parallel-work-check/SKILL.md), follow
-its full protocol. Otherwise, before starting implementation on an existing
-branch:
+If this project has an OpenCode-generated `parallel-work-check` skill, follow
+its full protocol. This repository does not install that optional skill, so
+before starting implementation on an existing branch:
 
 1. Fetch remote state and compare with local (`git fetch` plus HEAD hashes).
 2. If parallel swarm work is detected on the target branch, read the new commits,

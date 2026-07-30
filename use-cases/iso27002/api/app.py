@@ -52,7 +52,7 @@ def bio2_mapping():
         "total_iso_controls_mapped": len(
             set(c for controls in BIO2_TO_ISO27002.values() for c in controls)
         ),
-        "note": "Elke BIO2-maatregel kan worden herleid tot ISO 27002-compliantie",
+        "note": "Dit is een geselecteerde crosswalk; BIO2-bewijs impliceert geen ISO 27002-conformiteit.",
     }
 
 
@@ -60,6 +60,7 @@ def bio2_mapping():
 def controls_by_category():
     """Geef controls gegroepeerd per categorie."""
     return {
+        "coverage": "reference-set-summary; het lokale JREM-profiel bevat 34 geselecteerde records",
         "organizational": {
             "theme": "A.5",
             "count": 36,
@@ -86,28 +87,17 @@ def controls_by_category():
 
 @app.get("/v1/iso27002/compliance-gap/{org_id}")
 def compliance_gap(org_id: str):
-    """Analyseer gaten tussen BIO2 en ISO 27002."""
+    """Return the evidence needed for an assessment; do not infer compliance."""
     return {
         "org_id": org_id,
-        "analysis": "BIO2-compliance impliceert ~85% ISO 27002-compliantie",
-        "gaps": [
-            {
-                "control": "A.5.7",
-                "description": "Threat intelligence",
-                "bio2_coverage": "partial",
-            },
-            {
-                "control": "A.8.8",
-                "description": "Vulnerability management",
-                "bio2_coverage": "partial",
-            },
-            {
-                "control": "A.8.28",
-                "description": "Secure coding",
-                "bio2_coverage": "minimal",
-            },
+        "status": "insufficient_evidence",
+        "required_evidence": [
+            "organization scope and applicable control set",
+            "versioned BIO2 and ISO 27002 mapping",
+            "control implementation evidence",
+            "independent reviewer and review date",
         ],
-        "recommendation": "BIO2-certificatie als basis, ISO 27002 als uitbreiding voor technische controls",
+        "note": "Framework overlap and mapped artifacts do not establish a compliance percentage.",
     }
 
 

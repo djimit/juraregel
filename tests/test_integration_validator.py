@@ -12,6 +12,13 @@ class TestIntegrationValidator:
         report = integration_validator.validate_all()
         assert report.total_checks > 0
         assert report.pass_rate > 0.8
+        assert report.evidence_status == "evidence-incomplete"
+        assert report.observed == {
+            "openmythosCases": 351,
+            "openmythosCategories": 11,
+            "djimitfloEvalRuns": 0,
+            "bridgeTransport": "in-memory-only",
+        }
 
     def test_openmythos_coverage(self):
         report = integration_validator.validate_all()
@@ -41,6 +48,8 @@ class TestIntegrationValidator:
             "security",
             "transparency",
             "accountability",
+            "canary",
+            "overthinking",
         }
         mapped = set(OPENMYTHOS_TO_JLAIF.keys())
         assert expected_categories.issubset(mapped)
@@ -96,3 +105,14 @@ class TestIntegrationValidator:
     def test_overall_coverage_above_90(self):
         report = integration_validator.validate_all()
         assert report.coverage["overall"] >= 0.90
+
+    def test_static_mapping_does_not_claim_live_integration(self):
+        report = integration_validator.validate_all()
+
+        assert report.coverage["openmythos"] == 1.0
+        assert report.evidence_status == "evidence-incomplete"
+        assert any(
+            check.check_id == "observed-djimitflo-openmythos-runs"
+            and not check.passed
+            for check in report.checks
+        )

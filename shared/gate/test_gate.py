@@ -1,7 +1,5 @@
 """Tests for Gate module — covenant, receipt, engine."""
 
-import os
-import tempfile
 import pytest
 from pathlib import Path
 

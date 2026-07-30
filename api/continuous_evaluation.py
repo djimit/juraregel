@@ -1,6 +1,4 @@
-"""Continuous Compliance Evaluation — OpenMythos-integratie op platform-niveau.
-
-Niveau: 4+ (boven PhD) — Zichzelf evaluerend en verbeterend platform.
+"""Local evaluation questionnaire; not an OpenMythos or compliance attestation.
 
 Dit module integreert OpenMythos als continuous evaluation framework:
 1. Benchmark alle modules tegen OpenMythos criteria
@@ -302,76 +300,11 @@ class ContinuousEvaluationEngine:
         )
 
     def _run_check(self, module_id: str, check_id: str) -> tuple[bool, str]:
-        """Run a single check."""
-        # Module-specific checks
-        checks = {
-            # RAG Engine
-            ("rag_engine", "rag-1"): lambda: (True, "Zoekresultaten actief"),
-            ("rag_engine", "rag-2"): lambda: (
-                True,
-                "Citation verificatie geïmplementeerd",
-            ),
-            ("rag_engine", "rag-3"): lambda: (True, "Hallucination detector actief"),
-            ("rag_engine", "rag-4"): lambda: self._check_llm_configured(),
-            # Legal Reasoning
-            ("legal_reasoning", "lr-1"): lambda: (
-                True,
-                "Toulmin model geïmplementeerd",
-            ),
-            ("legal_reasoning", "lr-2"): lambda: (
-                True,
-                "Counter-argument generation actief",
-            ),
-            ("legal_reasoning", "lr-3"): lambda: (True, "Confidence scoring per claim"),
-            ("legal_reasoning", "lr-4"): lambda: (True, "Gap detection actief"),
-            # Predictive
-            ("predictive_compliance", "pc-1"): lambda: (
-                True,
-                "6 risico-factors gedefinieerd",
-            ),
-            ("predictive_compliance", "pc-2"): lambda: (
-                True,
-                "Trend analyse geïmplementeerd",
-            ),
-            ("predictive_compliance", "pc-3"): lambda: (True, "30/90/180d forecasts"),
-            ("predictive_compliance", "pc-4"): lambda: (True, "Early warnings actief"),
-            # Report Generator
-            ("report_generator", "rg-1"): lambda: (True, "DPIA template volledig"),
-            ("report_generator", "rg-2"): lambda: (True, "FRIA template volledig"),
-            ("report_generator", "rg-3"): lambda: (True, "Bron-citaties aanwezig"),
-            ("report_generator", "rg-4"): lambda: (
-                True,
-                "Professionele Markdown output",
-            ),
-            # Accountability
-            ("accountability", "aa-1"): lambda: (True, "Immutable audit trail"),
-            ("accountability", "aa-2"): lambda: (
-                True,
-                "Integrity verificatie mogelijk",
-            ),
-            ("accountability", "aa-3"): lambda: (True, "Compliance proof genereerbaar"),
-            ("accountability", "aa-4"): lambda: (True, "Explanation generation actief"),
-            # Orchestrator
-            ("orchestrator", "or-1"): lambda: (True, "Alle modules geïntegreerd"),
-            ("orchestrator", "or-2"): lambda: (True, "Template fallback actief"),
-            ("orchestrator", "or-3"): lambda: (True, "Audit logging geïmplementeerd"),
-            ("orchestrator", "or-4"): lambda: (True, "LLM-synthese actief"),
-        }
-
-        check_fn = checks.get((module_id, check_id))
-        if check_fn:
-            return check_fn()
-
-        return False, "Check niet geïmplementeerd"
-
-    def _check_llm_configured(self) -> tuple[bool, str]:
-        """Check if LLM is configured."""
-        import os
-
-        litellm_url = os.getenv("LITELLM_URL", "")
-        if litellm_url:
-            return True, f"LiteLLM geconfigureerd: {litellm_url}"
-        return False, "LITELLM_URL niet geconfigureerd"
+        """Fail closed until a check receives observed, reviewable evidence."""
+        return (
+            False,
+            f"Geen onafhankelijk runtimebewijs voor {module_id}/{check_id}",
+        )
 
 
 # ─── Singleton ─────────────────────────────────────────────────

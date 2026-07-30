@@ -5,9 +5,7 @@ Precedence: forbid > require_approval > permit > default_deny.
 
 import hashlib
 import json
-import re
-from pathlib import Path
-from typing import Any, Optional
+from typing import Optional
 
 import yaml
 

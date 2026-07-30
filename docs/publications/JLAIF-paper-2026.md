@@ -7,6 +7,12 @@
 **Versie**: 1.0.0
 **Licentie**: CC-BY 4.0
 
+> **Reproduceerbaarheidsstatus (2026-07-30): conceptpublicatie.** De genoemde
+> productaantallen, bevindingen en OpenMythos-scores zijn historische
+> onderzoeksclaims en geen onafhankelijk gereproduceerde benchmarkresultaten.
+> Gebruik voor de actuele technische status de
+> [ecosysteemnulmeting](../../evidence/ecosystem-status-2026-07-30.json).
+
 ---
 
 ## Samenvatting

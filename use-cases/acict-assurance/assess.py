@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Evaluate AcICT evidence completeness without producing a compliance score."""
+"""Evaluate assurance evidence completeness without producing a compliance score."""
 
 from __future__ import annotations
 
@@ -48,15 +48,22 @@ def evaluate(profile: dict, assessment: dict) -> dict:
             if status not in STATUSES:
                 raise ValueError(f"{aspect['aspectId']} has invalid status: {status}")
 
-        if status == "not_applicable":
+        if status == "insufficient_evidence":
+            reasons.append("bewijs is onvoldoende")
+        elif status == "not_applicable":
             if not finding.get("rationale"):
                 reasons.append("rationale ontbreekt")
         else:
             if status in {"satisfied", "not_satisfied"} and not finding.get("evidenceRefs"):
                 reasons.append("evidenceRefs ontbreekt")
-            for field in ("owner", "reviewedBy", "reviewedAt"):
-                if not finding.get(field):
-                    reasons.append(f"{field} ontbreekt")
+
+        for field in ("owner", "reviewedBy", "reviewedAt"):
+            if not finding.get(field):
+                reasons.append(f"{field} ontbreekt")
+
+        for field in ("risk", "measure", "residualRisk"):
+            if status != "not_applicable" and not finding.get(field):
+                reasons.append(f"{field} ontbreekt")
 
         results.append({
             "aspectId": aspect["aspectId"],

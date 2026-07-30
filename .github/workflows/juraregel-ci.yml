@@ -12,6 +12,11 @@ on:
         type: string
         default: all
 
+permissions:
+  contents: read
+  id-token: write
+  attestations: write
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -29,6 +34,8 @@ jobs:
         run: pip install -r requirements.txt
       - name: Schema check
         run: python3 ci/check-schema.py
+      - name: Markdown links
+        run: python3 ci/check_markdown_links.py
       - name: Compile all Python
         run: python3 -m compileall -q shared sources tools mcp-server use-cases ci features api
       - name: Rule semantics
@@ -38,9 +45,11 @@ jobs:
       - name: OpenAPI from applications
         run: python3 tools/generate_openapi.py
       - name: Run unit tests
-        run: python3 -m pytest use-cases/*/tests/ api/test_api.py -q --no-header
+        run: python3 -m pytest use-cases/*/tests/ api/test_*.py tests/test_*.py -q --no-header
       - name: Run CI helper tests
         run: python3 -m pytest ci/test_*.py -q --no-header
+      - name: Enterprise readiness contract
+        run: python3 ci/enterprise_readiness.py
       - name: Validate JREM exports
         run: python3 ci/validate-jrem.py
       - name: Legal review gate (warn only for PoC)
@@ -64,6 +73,41 @@ jobs:
           test -f CONTRIBUTING.md && test -f CODE_OF_CONDUCT.md
           test -f docker-compose.yml && test -f Dockerfile
           echo All required files present
+
+  supply-chain:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build API image
+        run: |
+          docker build -f Dockerfile.api -t juraregel-api:ci .
+          docker save juraregel-api:ci -o juraregel-api.tar
+      - name: Generate SBOM
+        uses: anchore/sbom-action@v0
+        with:
+          image: juraregel-api:ci
+          format: cyclonedx-json
+          output-file: juraregel-api.sbom.cdx.json
+      - name: Scan image
+        uses: aquasecurity/trivy-action@0.33.1
+        with:
+          image-ref: juraregel-api:ci
+          format: sarif
+          output: juraregel-api.trivy.sarif
+          severity: CRITICAL,HIGH
+          exit-code: 1
+      - name: Attest build provenance
+        if: github.event_name == 'push'
+        uses: actions/attest-build-provenance@v2
+        with:
+          subject-path: juraregel-api.tar
+      - name: Preserve supply-chain evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: juraregel-api-supply-chain
+          path: |
+            juraregel-api.sbom.cdx.json
+            juraregel-api.trivy.sarif
 
   pilot:
     runs-on: ubuntu-latest

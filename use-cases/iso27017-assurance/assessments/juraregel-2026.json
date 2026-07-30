@@ -1,0 +1,58 @@
+{
+  "assessmentId": "juraregel-iso27017-self-assessment-2026-07",
+  "profileId": "iso27017-assurance",
+  "profileVersion": "2026",
+  "subject": "JuraRegel repository and documented development process",
+  "scopeLimitations": [
+    "No IVO Rechtspraak, Azure, OpenShift, SaaS or production tenant was inspected.",
+    "Repository evidence cannot prove operating effectiveness in a cloud environment.",
+    "No independent ISO 27017 reviewer has approved the local interpretations."
+  ],
+  "assessmentType": "self-assessment",
+  "findings": [
+    {
+      "aspectId": "iso27017-2026.5.38",
+      "status": "insufficient_evidence",
+      "evidenceRefs": ["docs/team-topology-guide.md", "use-cases/acict-assurance/assessments/juraregel-projecten-2026.json"],
+      "owner": "repository-maintainers",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "risk": "No scoped cloud responsibility matrix or technical allocation test exists.",
+      "measure": "Create and independently validate a service-specific responsibility matrix.",
+      "residualRisk": "Cloud security activities can remain unassigned or conflict with effective permissions."
+    },
+    {
+      "aspectId": "iso27017-2026.5.39",
+      "status": "insufficient_evidence",
+      "evidenceRefs": [],
+      "owner": "repository-maintainers",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "risk": "No cloud partner agreement, SLA, audit right or exit evidence is in repository scope.",
+      "measure": "Review each material cloud agreement against the approved responsibility matrix.",
+      "residualRisk": "Contractual gaps can prevent assurance, incident cooperation or exit."
+    },
+    {
+      "aspectId": "iso27017-2026.8.35",
+      "status": "insufficient_evidence",
+      "evidenceRefs": ["docs/production-deployment.md", "shared/test_api_security.py"],
+      "owner": "repository-maintainers",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "risk": "Repository tests do not test tenant or workload isolation in a target platform.",
+      "measure": "Define trust boundaries and execute negative isolation tests in an approved environment.",
+      "residualRisk": "Cross-tenant, cross-workload or lifecycle-environment access is untested."
+    },
+    {
+      "aspectId": "iso27017-2026.8.36",
+      "status": "insufficient_evidence",
+      "evidenceRefs": [],
+      "owner": "repository-maintainers",
+      "reviewedBy": null,
+      "reviewedAt": null,
+      "risk": "No authorized cloud/SaaS inventory or discovery coverage statement is available.",
+      "measure": "Define inventory ownership and compare it with approved read-only discovery sources.",
+      "residualRisk": "Shadow cloud, AI, MCP and API use can remain invisible."
+    }
+  ]
+}

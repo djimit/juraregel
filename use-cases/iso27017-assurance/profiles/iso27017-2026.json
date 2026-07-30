@@ -1,0 +1,71 @@
+{
+  "profileId": "iso27017-assurance",
+  "version": "2026",
+  "title": "ISO/IEC 27017:2026 cloud-control evidence pilot",
+  "source": {
+    "sourceId": "iso-27017-2026-catalogue",
+    "title": "ISO/IEC 27017:2026",
+    "publisher": "ISO",
+    "date": "2026-07-27",
+    "url": "https://www.iso.org/standard/27017"
+  },
+  "disclaimer": "Non-scoring local evidence profile; no ISO conformity, certification or legal-compliance conclusion.",
+  "aspects": [
+    {
+      "aspectId": "iso27017-2026.5.38",
+      "section": "5.38",
+      "principle": "Shared roles and responsibilities within a cloud computing environment",
+      "interpretationStatus": "local-non-normative",
+      "subject": "Allocation and operating effectiveness of cloud security responsibilities",
+      "scope": "Each material cloud service, lifecycle stage and security activity in the approved assessment boundary",
+      "applicableCloudRoles": ["cloud-service-customer", "cloud-service-provider", "cloud-service-partner"],
+      "artifactMetadataRequired": ["artifactId", "serviceId", "owner", "version", "observedAt", "contentHash", "reviewedBy", "reviewedAt"],
+      "mappingRefs": ["map-5.38-iso27002-5.2", "map-5.38-nist-gv.rr"],
+      "evidenceRequired": ["responsibility-matrix", "role-authority-record", "technical-validation-sample", "exception-register"],
+      "falsifiedBy": ["unassigned-material-activity", "conflicting-responsibility-records", "technical-access-contradicts-allocation"],
+      "prohibitedInference": "A responsibility matrix alone proves operating effectiveness."
+    },
+    {
+      "aspectId": "iso27017-2026.5.39",
+      "section": "5.39",
+      "principle": "Agreement on the roles and responsibilities of the cloud service partner",
+      "interpretationStatus": "local-non-normative",
+      "subject": "Contractual agreement and lifecycle governance with cloud service partners",
+      "scope": "Each material provider, broker, integrator and subprocessor in the approved assessment boundary",
+      "applicableCloudRoles": ["cloud-service-customer", "cloud-service-provider", "cloud-service-partner", "procurement-owner"],
+      "artifactMetadataRequired": ["artifactId", "serviceId", "counterparty", "effectiveFrom", "version", "contentHash", "reviewedBy", "reviewedAt"],
+      "mappingRefs": ["map-5.39-dora-28-30", "map-5.39-bio2-5.19-5.23"],
+      "evidenceRequired": ["signed-agreement", "service-level-agreement", "audit-and-incident-terms", "subprocessor-record", "exit-and-data-return-terms"],
+      "falsifiedBy": ["missing-partner-agreement", "agreement-conflicts-with-responsibility-matrix", "no-executable-audit-or-exit-right"],
+      "prohibitedInference": "A provider certification transfers accountability to the provider."
+    },
+    {
+      "aspectId": "iso27017-2026.8.35",
+      "section": "8.35",
+      "principle": "Segregation in virtual computing environments",
+      "interpretationStatus": "local-non-normative",
+      "subject": "Effective isolation of tenants, trust zones, workloads and lifecycle environments",
+      "scope": "Virtual compute, identity, network, secrets and key boundaries in each approved target environment",
+      "applicableCloudRoles": ["platform-owner", "cloud-service-customer", "cloud-service-provider", "workload-owner"],
+      "artifactMetadataRequired": ["artifactId", "environmentId", "boundaryId", "observedAt", "testResult", "contentHash", "reviewedBy", "reviewedAt"],
+      "mappingRefs": ["map-8.35-iso27002-8.22-8.31"],
+      "evidenceRequired": ["trust-boundary-model", "identity-separation-policy", "network-and-workload-isolation-policy", "negative-isolation-test", "exception-register"],
+      "falsifiedBy": ["unauthorized-cross-boundary-access", "untested-material-boundary", "shared-privilege-without-reviewed-control"],
+      "prohibitedInference": "Presence of namespaces, VNETs or accounts proves effective isolation."
+    },
+    {
+      "aspectId": "iso27017-2026.8.36",
+      "section": "8.36",
+      "principle": "Detection and prevention of unauthorized use of cloud services",
+      "interpretationStatus": "local-non-normative",
+      "subject": "Discovery, authorization and response coverage for cloud, SaaS and cloud-hosted AI use",
+      "scope": "Identity, network, endpoint, expense and procurement telemetry explicitly approved for the assessment",
+      "applicableCloudRoles": ["cloud-governance-owner", "security-operations", "procurement-owner", "service-owner"],
+      "artifactMetadataRequired": ["artifactId", "coverageSource", "coveragePeriod", "observedAt", "contentHash", "owner", "reviewedBy", "reviewedAt"],
+      "mappingRefs": ["map-8.36-nist-id.am", "map-8.36-eu-ai-act"],
+      "evidenceRequired": ["cloud-and-saas-inventory", "authorization-policy", "multi-source-discovery-evidence", "triage-and-exception-workflow", "coverage-review"],
+      "falsifiedBy": ["material-service-absent-from-inventory", "unknown-service-owner", "no-response-path", "detection-blind-spot-presented-as-full-coverage"],
+      "prohibitedInference": "No detection alert proves that unauthorized cloud use is absent."
+    }
+  ]
+}

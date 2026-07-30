@@ -5,6 +5,7 @@ Provides endpoints for templates, assessments, processing activities,
 evidence linking, regulatory monitoring, and compliance scoring.
 """
 
+import os
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
@@ -36,17 +37,48 @@ from .routes import (
     reports,
     evaluation,
 )
-from .middleware import RateLimitMiddleware, TenantMiddleware
+from .middleware import AuthMiddleware, RateLimitMiddleware, TenantMiddleware
+
+
+ENVIRONMENT = os.getenv("JURAREGEL_ENV", "development").lower()
+PRODUCTION = ENVIRONMENT == "production"
+RATE_LIMIT_MODE = os.getenv(
+    "JURAREGEL_RATE_LIMIT_MODE", "ingress" if PRODUCTION else "in_memory"
+).lower()
+
+
+def validate_runtime_config() -> None:
+    """Reject production startup when required security boundaries are absent."""
+    if not PRODUCTION:
+        return
+    required = {
+        "DATABASE_URL": os.getenv("DATABASE_URL", ""),
+        "KEYCLOAK_URL": os.getenv("KEYCLOAK_URL", ""),
+        "QDRANT_URL": os.getenv("QDRANT_URL", ""),
+        "JURAREGEL_CORS_ORIGINS": os.getenv("JURAREGEL_CORS_ORIGINS", ""),
+        "JURAREGEL_RATE_LIMIT_MODE": os.getenv("JURAREGEL_RATE_LIMIT_MODE", ""),
+    }
+    missing = [name for name, value in required.items() if not value]
+    if missing:
+        raise RuntimeError(
+            "production configuration missing: " + ", ".join(sorted(missing))
+        )
+    if not required["DATABASE_URL"].startswith("postgresql"):
+        raise RuntimeError("production DATABASE_URL must use PostgreSQL")
+    if "*" in required["JURAREGEL_CORS_ORIGINS"].split(","):
+        raise RuntimeError("production CORS origins cannot contain '*'")
+    if required["JURAREGEL_RATE_LIMIT_MODE"] != "ingress":
+        raise RuntimeError("production rate limiting must use an approved ingress")
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Application lifespan — startup + shutdown."""
-    # Startup
-    # await init_database()  # Uncomment when PostgreSQL is available
+    validate_runtime_config()
+    if not PRODUCTION:
+        await init_database()
     yield
-    # Shutdown
-    # await close_database()
+    await close_database()
 
 
 app = FastAPI(
@@ -62,7 +94,8 @@ app = FastAPI(
 
     ### Multi-tenancy
     Elke request bevat een `X-Tenant-ID` header met de organisatie-ID.
-    Data-isolation wordt afgedwongen op database-niveau (RLS).
+    De tenantcontext wordt aan de request gekoppeld. Autorisatie en
+    data-isolatie moeten per persistent endpoint en deployment worden bewezen.
 
     ### AI Agents
     `/api/v1/agents/` biedt toegang tot autonome compliance-agents:
@@ -83,28 +116,40 @@ app = FastAPI(
 )
 
 # Middleware
+cors_origins = [
+    origin.strip()
+    for origin in os.getenv("JURAREGEL_CORS_ORIGINS", "*").split(",")
+    if origin.strip()
+]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
+    allow_origins=cors_origins,
+    allow_credentials=cors_origins != ["*"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
-app.add_middleware(RateLimitMiddleware, requests_per_minute=100)
+if RATE_LIMIT_MODE == "in_memory":
+    app.add_middleware(RateLimitMiddleware, requests_per_minute=100)
 app.add_middleware(TenantMiddleware)
+if PRODUCTION or os.getenv("JURAREGEL_AUTH_ENABLED", "").lower() == "true":
+    app.add_middleware(AuthMiddleware)
 
 # Routes
 app.include_router(health.router, tags=["System"])
 app.include_router(templates.router, prefix="/api/v1/templates", tags=["Templates"])
-app.include_router(
-    assessments.router, prefix="/api/v1/assessments", tags=["Assessments"]
-)
-app.include_router(
-    processing.router,
-    prefix="/api/v1/processing-activities",
-    tags=["Processing Activities"],
-)
-app.include_router(evidence.router, prefix="/api/v1/evidence", tags=["Evidence"])
+# Prototype stores are process-local and must never become a production system
+# of record. Re-enable these routes in production only after the PostgreSQL/RLS
+# contract in docs/enterprise-grade-level3-plan.md is implemented and tested.
+if not PRODUCTION:
+    app.include_router(
+        assessments.router, prefix="/api/v1/assessments", tags=["Assessments"]
+    )
+    app.include_router(
+        processing.router,
+        prefix="/api/v1/processing-activities",
+        tags=["Processing Activities"],
+    )
+    app.include_router(evidence.router, prefix="/api/v1/evidence", tags=["Evidence"])
 app.include_router(agents.router, prefix="/api/v1/agents", tags=["AI Agents"])
 app.include_router(compliance.router, prefix="/api/v1/compliance", tags=["Compliance"])
 app.include_router(policies.router, prefix="/api/v1/policies", tags=["Policies"])

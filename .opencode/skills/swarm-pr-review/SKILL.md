@@ -308,7 +308,7 @@ For each new commit on the remote:
    - Does the remote commit introduce a new branch-state fact the handoff should
      mention?
 3. **Default stance: prefer the remote state as the next baseline.** Run
-   the [`parallel-work-check`](../generated/parallel-work-check/SKILL.md)
+   the optional `parallel-work-check`
    protocol for the formal decision template and record the outcome in the
    handoff artifact.
 

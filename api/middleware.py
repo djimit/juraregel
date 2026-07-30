@@ -1,6 +1,8 @@
 """API Middleware — Rate limiting, tenant isolation, auth."""
 
-from fastapi import Request, HTTPException
+from dataclasses import asdict
+
+from fastapi import Request
 from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.responses import JSONResponse
 import time
@@ -52,7 +54,7 @@ class TenantMiddleware(BaseHTTPMiddleware):
 
 
 class AuthMiddleware(BaseHTTPMiddleware):
-    """OAuth2 Bearer token validation (placeholder for Keycloak integration)."""
+    """Validate configured OIDC/JWT or service API credentials."""
 
     def __init__(self, app, exclude_paths: set[str] | None = None):
         super().__init__(app)
@@ -69,18 +71,15 @@ class AuthMiddleware(BaseHTTPMiddleware):
         if request.url.path in self.exclude_paths:
             return await call_next(request)
 
-        auth = request.headers.get("Authorization")
-        if not auth or not auth.startswith("Bearer "):
-            raise HTTPException(
-                status_code=401, detail="Missing or invalid authorization header"
+        from .auth import authenticate
+
+        user = await authenticate(request.headers.get("Authorization"))
+        if user is None:
+            return JSONResponse(
+                status_code=401,
+                content={"detail": "Missing or invalid authorization credentials"},
             )
 
-        token = auth.replace("Bearer ", "")
-        # Placeholder — validate against Keycloak
-        # For now, accept any non-empty token
-        if not token:
-            raise HTTPException(status_code=401, detail="Invalid token")
-
-        request.state.user = {"token": token, "roles": ["compliance_officer"]}
+        request.state.user = asdict(user)
         response = await call_next(request)
         return response

@@ -13,8 +13,10 @@ fi
 
 echo "JuraRegel repository gates"
 
-"$PYTHON" -m compileall -q shared sources tools mcp-server use-cases ci features
+"$PYTHON" -m compileall -q shared sources tools mcp-server use-cases ci features api tests
 "$PYTHON" ci/check-schema.py
+"$PYTHON" ci/check_markdown_links.py
+"$PYTHON" ci/enterprise_readiness.py >/dev/null
 "$PYTHON" ci/validate-rule-semantics.py
 "$PYTHON" ci/source_quality.py
 "$PYTHON" ci/validate-jrem.py
@@ -23,6 +25,7 @@ echo "JuraRegel repository gates"
   use-cases/*/tests/ ci/test_*.py mcp-server/test_*.py features/ \
   sources/test_*.py shared/test_*.py tools/test_*.py \
   tools/rule-extraction/test_*.py governance/test_*.py \
+  api/test_*.py tests/test_*.py \
   -q --no-header
 bash ci/jkb-gates.sh
 bash ci/legal-review-gate.sh

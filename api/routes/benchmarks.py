@@ -1,4 +1,4 @@
-"""OpenMythos Benchmark API — Compliance evaluation framework."""
+"""Local code-pattern benchmark API; not an OpenMythos benchmark result."""
 
 from fastapi import APIRouter
 
@@ -11,8 +11,10 @@ router = APIRouter()
 async def benchmark_status():
     """Get benchmark status."""
     return {
-        "status": "active",
+        "status": "local-static-analysis",
         "total_cases": len(benchmark_runner._cases),
+        "evidence_status": "evidence-incomplete",
+        "disclaimer": "Locally defined checks; no external OpenMythos or legal-compliance conclusion.",
     }
 
 
@@ -41,6 +43,8 @@ async def run_benchmarks(category: str | None = None):
     report = benchmark_runner.run_all()
     return {
         "run_id": report.run_id,
+        "evidence_status": "evidence-incomplete",
+        "disclaimer": "Locally defined code-pattern checks; no external OpenMythos grade.",
         "overall_score": report.overall_score,
         "overall_verdict": report.overall_verdict,
         "summary": report.summary,

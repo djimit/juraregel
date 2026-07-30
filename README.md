@@ -2,17 +2,15 @@
 
 [![JuraRegel CI](https://github.com/djimit/juraregel/actions/workflows/juraregel-ci.yml/badge.svg)](https://github.com/djimit/juraregel/actions/workflows/juraregel-ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Rule Sets](https://img.shields.io/badge/Rule%20Sets-34%20%288%20L1%2C%2026%20L0%29-blue)](https://github.com/djimit/juraregel)
-[![Tests](https://img.shields.io/badge/Tests-74%20unit%2C%207%20auditors-green)](https://github.com/djimit/juraregel)
+[![Rule Sets](https://img.shields.io/badge/Rule%20Sets-versioned%20JREM-blue)](https://github.com/djimit/juraregel)
+[![Tests](https://img.shields.io/badge/Tests-canonical%20gate-green)](https://github.com/djimit/juraregel/actions/workflows/juraregel-ci.yml)
 [![Security](https://img.shields.io/badge/Security-Dependabot%20enabled-brightgreen)](https://github.com/djimit/juraregel/security/dependabot)
-[![Regels](https://img.shields.io/badge/JREM%20Regels-1137%2B-purple)](https://github.com/djimit/juraregel)
-[![Agentic](https://img.shields.io/badge/Compliance%20Agent-Level%204-orange)](https://github.com/djimit/juraregel)
-[![API](https://img.shields.io/badge/API-82%2B%20endpoints-teal)](https://github.com/djimit/juraregel)
+[![Regels](https://img.shields.io/badge/JREM%20Regels-gate--derived-purple)](https://github.com/djimit/juraregel)
+[![Agentic](https://img.shields.io/badge/Assurance-PoC-orange)](https://github.com/djimit/juraregel)
+[![API](https://img.shields.io/badge/API-OpenAPI%20validated-teal)](https://github.com/djimit/juraregel)
 [![RAG](https://img.shields.io/badge/RAG-Cloud%20LLM%20%2B%20Qdrant-brightgreen)](https://github.com/djimit/juraregel)
-[![Evaluation](https://img.shields.io/badge/OpenMythos-Grade%20A-lightblue)](https://github.com/djimit/juraregel)
-[![JLAIF](https://img.shields.io/badge/JLAIF-Stanford%20Assurance-green)](https://github.com/djimit/juraregel)
-[![Auditors](https://img.shields.io/badge/Auditors-8%20AI%20products-blue)](https://github.com/djimit/juraregel)
-[![OpenMythos](https://img.shields.io/badge/OpenMythos-0.90%20(A--grade)-lightblue)](https://github.com/djimit/juraregel)
+[![Evaluation](https://img.shields.io/badge/OpenMythos-evidence--incomplete-lightblue)](evidence/ecosystem-status-2026-07-30.json)
+[![JLAIF](https://img.shields.io/badge/JLAIF-research%20prototype-green)](docs/legal-ai-assurance-framework.md)
 
 <p align="center">
   <a href="docs/assets/juraregel-togaf-landscape.svg">
@@ -60,18 +58,24 @@ evidence rapporteren zij geen compliance-oordeel.
 - **JREM** — Judicial Rule Exchange Model, versioned JSON Schema standaard (v1.0.0 → v1.1.0) voor juridische regels
 - **Rule APIs** — vijf uitvoerbare domeinen; overige domeinen zijn expliciet catalog-only
 - **MCP Server** — 12 tools + 3 resources + 3 prompts voor LLM-agents (Claude, GPT, lokale LLMs)
-- **Knowledge Base** — 750 regels doorzoekbaar met SQLite FTS5; vector search is optioneel en evaluatie-pending
+- **Knowledge Base** — een gate-afgeleid aantal regels; SQLite FTS5 en vectorindexen zijn optionele lokale afgeleide stores
 - **BDD Tests** — Gherkin scenarios voor legal team acceptatie (pytest-bdd)
 - **BWB Harvester** — automatische wetwijziging-detectie via BWB API
 - **CI/CD Gates** — 18+ gates: per-use-case (14), JKB (5), extraction (3), schema versioning, BDD, harvester health
 - **RegelSpraak** — Controlled Natural Language specificaties, leesbaar door juristen
-- **Legal AI Assurance Framework (JLAIF)** — Stanford-niveau assurance voor juridische AI: fouttype-taxonomie (9 types), S1-S5 severity scoring, evidence lineage (CEPEJ JAI-06), continue evaluatie (regression/challenge/drift), Djimitflo integratie
+- **Legal AI Assurance Framework (JLAIF)** — onderzoeksprototype voor juridische AI: fouttype-taxonomie (9 types), S1-S5 severity scoring, evidence lineage en experimentele evaluatie; externe werking blijft evidence-incomplete
 
 ## Legal AI Assurance Framework (JLAIF)
 
 Gebaseerd op Stanford's "There is no free benchmark" (PNAS 2025/2026) en de CEPEJ Guidelines for Generative AI in Courts (2025).
 
-**Status**: 28 modules, 8 AI-producten geauditeerd, 54 bevindingen, OpenMythos 0.54 → 0.90.
+**Status**: structurele modules en tests zijn aanwezig, maar de eerder
+gepubliceerde product-, bevindingen- en scoretotalen zijn niet als
+onafhankelijke empirische validatie gereproduceerd. De actuele lokale
+[ecosysteemnulmeting](evidence/ecosystem-status-2026-07-30.json) ziet 351 valide
+OpenMythos-cases in 11 categorieën, nul persistente Djimitflo-evaluatieruns en
+een uitsluitend in-memory bridge. De integratiestatus is daarom
+`evidence-incomplete`.
 
 ### Vijf lagen
 
@@ -390,6 +394,11 @@ JuraRegel per geselecteerd project- en beheeraspect bewijs, eigenaarschap en
 onafhankelijke review kan tonen. Het is een fail-closed self-assessment zonder
 JREM-regelset, API of automatisch AcICT-oordeel.
 
+Dezelfde evidencegrens wordt toegepast in het
+[ISO 27017:2026 cloud-controlprofiel](use-cases/iso27017-assurance/README.md):
+vier cloudspecifieke controls, lokale falsificatiecriteria en draft-crosswalks,
+zonder gelicentieerde normtekst, score of conformiteitsclaim.
+
 ## Use Case: AVG/GDPR — Privacy Compliance
 
 **Als** privacy officer of FG **wil ik** automatisch valideren of mijn organisatie voldoet aan de AVG **zodat** ik niet handmatig 10 artikelen hoef te checken.
@@ -488,8 +497,13 @@ curl http://127.0.0.1:8500/v1/ncsc/rapport/gemeente-amsterdam
 
 ### Docker Compose
 ```bash
-docker compose up  # Start griffierecht en publicatie
+cp .env.example .env
+docker compose up --build  # Production-candidate API + dashboard
 ```
+
+Dit is een fail-closed deploymentcontract, geen productieverklaring. Zie
+[production deployment](docs/production-deployment.md) en het
+[enterprise-grade level-3 plan](docs/enterprise-grade-level3-plan.md).
 
 ### CLI: Nieuwe Use Case Scaffolden
 ```bash
@@ -570,7 +584,8 @@ node bin/juraregel.mjs validate use-cases/griffierecht/jrem/exports/griffierecht
 
 ### Docker
 ```bash
-docker compose up  # Start griffierecht :8490 en publicatie :8493
+cp .env.example .env
+docker compose up --build  # API :8096 en dashboard :3006, alleen op loopback
 ```
 
 ### Dashboard

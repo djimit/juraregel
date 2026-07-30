@@ -5,6 +5,11 @@
 **Gepubliceerd**: 2026-07-22
 **Leestijd**: 8 minuten
 
+> **Status (2026-07-30): concept, niet als empirisch resultaat citeren.** De
+> genoemde aantallen en scoreverbetering zijn niet onafhankelijk
+> gereproduceerd. Zie de
+> [ecosysteemnulmeting](../../evidence/ecosystem-status-2026-07-30.json).
+
 ---
 
 ## Het probleem

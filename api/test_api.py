@@ -17,8 +17,9 @@ class TestHealth:
         resp = client.get("/ready")
         assert resp.status_code == 200
         data = resp.json()
-        assert data["ready"] is True
+        assert data["ready"] is False
         assert data["checks"]["templates"]["status"] == "ok"
+        assert data["checks"]["database"]["status"] == "unavailable"
 
 
 class TestTemplates:

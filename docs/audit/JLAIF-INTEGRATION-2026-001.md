@@ -5,6 +5,11 @@
 **Versie**: 1.0.0
 **Classificatie**: Intern — Architectuuradvies
 
+> **Statusherziening (2026-07-30): historische analyse.** Dit document bevat
+> statische mappings en gesimuleerde/afgeleide scores, geen bewijs van live
+> OpenMythos- of Djimitflo-integratie. Zie de actuele
+> [ecosysteemnulmeting](../../evidence/ecosystem-status-2026-07-30.json).
+
 ---
 
 ## 1. Executive Conclusie

@@ -3,18 +3,18 @@ FROM python:3.12-slim
 WORKDIR /app
 
 # Install dependencies
-COPY requirements-api.txt* ./
-RUN pip install --no-cache-dir fastapi uvicorn pydantic httpx jsonschema PyYAML 2>/dev/null || \
-    pip install --no-cache-dir -r requirements-api.txt 2>/dev/null || \
-    pip install --no-cache-dir fastapi uvicorn pydantic httpx jsonschema PyYAML
+COPY requirements-api.txt ./
+RUN pip install --no-cache-dir -r requirements-api.txt \
+    && useradd --create-home --uid 10001 juraregel
 
 # Copy application
-COPY . .
+COPY --chown=juraregel:juraregel . .
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=10s --retries=3 \
-    CMD curl -f http://localhost:8080/health || exit 1
+    CMD python -c "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/health', timeout=5)"
 
 # Run
+USER juraregel
 EXPOSE 8080
 CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8080", "--workers", "2"]

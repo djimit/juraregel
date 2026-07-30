@@ -184,7 +184,7 @@ tree:
 - If `head_ref` is a remote branch that is not checked out locally, fetch it
   (`git fetch origin <head_ref>`).
 - **Check for parallel work first.** Before checkout, run the
-  [`parallel-work-check`](../generated/parallel-work-check/SKILL.md) protocol to
+  optional `parallel-work-check` protocol to
   detect concurrent pushes from other agents (e.g., `hermes-pr-review` bot
   following up, maintainer pushing fixes, parallel swarm work). If remote has new
   commits: read `git log local..remote`, evaluate whether the parallel work

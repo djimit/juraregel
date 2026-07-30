@@ -23,10 +23,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.01",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -62,10 +63,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.01",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -101,10 +103,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.02",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -140,10 +143,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.02",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -179,10 +183,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.03",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -218,10 +223,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.04",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -257,10 +263,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.05",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -296,10 +303,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.06",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -335,10 +343,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.07",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -374,10 +383,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.08",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -413,10 +423,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.09",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -452,10 +463,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.10",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -491,10 +503,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.10",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -530,10 +543,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.10",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -569,10 +583,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.11",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -608,10 +623,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.12",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -647,10 +663,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.13",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -686,10 +703,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.14",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -725,10 +743,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.14",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -764,10 +783,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.14",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -803,10 +823,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.14",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -842,10 +863,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.14",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -881,10 +903,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.15",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -920,10 +943,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.16",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -959,10 +983,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.16",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -998,10 +1023,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.17",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -1037,10 +1063,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.17",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -1076,10 +1103,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.17",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -1115,10 +1143,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.18",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -1154,10 +1183,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.18",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -1193,10 +1223,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.19",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -1232,10 +1263,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.20",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -1271,10 +1303,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.20",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -1310,10 +1343,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.20",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -1349,10 +1383,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.20",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -1388,10 +1423,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.20",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -1427,10 +1463,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.20",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -1466,10 +1503,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.21",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -1505,10 +1543,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.21",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -1544,10 +1583,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.21",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -1583,10 +1623,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.21",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -1622,10 +1663,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.21",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -1661,10 +1703,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.22",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -1700,10 +1743,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.22",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -1739,10 +1783,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.23",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -1778,10 +1823,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.24",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -1817,10 +1863,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.24",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -1856,10 +1903,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.24",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -1895,10 +1943,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.24",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -1934,10 +1983,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.24",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -1973,10 +2023,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.24",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -2012,10 +2063,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.24",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -2051,10 +2103,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.26",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -2090,10 +2143,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.27",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -2129,10 +2183,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.27",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -2168,10 +2223,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.28",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -2207,10 +2263,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.29",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -2246,10 +2303,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.30",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -2285,10 +2343,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.30",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -2324,10 +2383,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.31",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -2363,10 +2423,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.32",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -2402,10 +2463,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.33",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -2441,10 +2503,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.34",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -2480,10 +2543,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.35",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -2519,10 +2583,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.35",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -2558,10 +2623,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.36",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -2597,10 +2663,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 5.37",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -2636,10 +2703,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 6.01",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -2675,10 +2743,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 6.02",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -2714,10 +2783,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 6.03",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -2753,10 +2823,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 6.03",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -2792,10 +2863,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 6.03",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -2831,10 +2903,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 6.03",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -2870,10 +2943,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 6.03",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -2909,10 +2983,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 6.04",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -2948,10 +3023,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 6.05",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -2987,10 +3063,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 6.06",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -3026,10 +3103,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 6.07",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -3065,10 +3143,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 6.08",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -3104,10 +3183,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 7.01",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -3143,10 +3223,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 7.01",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -3182,10 +3263,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 7.02",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -3221,10 +3303,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 7.03",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -3260,10 +3343,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 7.04",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -3299,10 +3383,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 7.05",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -3338,10 +3423,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 7.06",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -3377,10 +3463,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 7.07",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -3416,10 +3503,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 7.08",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -3455,10 +3543,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 7.09",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -3494,10 +3583,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 7.10",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -3533,10 +3623,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 7.10",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -3572,10 +3663,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 7.10",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -3611,10 +3703,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 7.11",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -3650,10 +3743,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 7.12",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -3689,10 +3783,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 7.13",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -3728,10 +3823,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 7.14",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -3767,10 +3863,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.01",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -3806,10 +3903,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.01",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -3845,10 +3943,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.02",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -3884,10 +3983,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.03",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -3923,10 +4023,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.03",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -3962,10 +4063,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.04",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -4001,10 +4103,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.05",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -4040,10 +4143,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.06",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -4079,10 +4183,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.07",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -4118,10 +4223,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.07",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -4157,10 +4263,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.07",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -4196,10 +4303,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.07",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -4235,10 +4343,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.08",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -4274,10 +4383,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.08",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -4313,10 +4423,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.08",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -4352,10 +4463,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.08",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -4391,10 +4503,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.08",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -4430,10 +4543,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.08",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -4469,10 +4583,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.09",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -4508,10 +4623,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.10",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -4547,10 +4663,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.11",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -4586,10 +4703,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.12",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -4625,10 +4743,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.13",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -4664,10 +4783,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.13",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -4703,10 +4823,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.13",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -4742,10 +4863,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.13",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -4781,10 +4903,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.14",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -4820,10 +4943,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.15",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -4859,10 +4983,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.15",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -4898,10 +5023,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.15",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -4937,10 +5063,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.15",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -4976,10 +5103,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.15",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -5015,10 +5143,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.15",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -5054,10 +5183,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.16",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -5093,10 +5223,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.16",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -5132,10 +5263,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.16",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -5171,10 +5303,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.16",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -5210,10 +5343,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.17",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -5249,10 +5383,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.18",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -5288,10 +5423,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.18",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -5327,10 +5463,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.19",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -5366,10 +5503,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.20",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -5405,10 +5543,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.20",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -5444,10 +5583,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.21",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -5483,10 +5623,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.21",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -5522,10 +5663,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.21",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -5561,10 +5703,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.21",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -5600,10 +5743,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.22",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -5639,10 +5783,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.23",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -5678,10 +5823,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.24",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -5717,10 +5863,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.24",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -5756,10 +5903,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.24",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -5795,10 +5943,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.24",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -5834,10 +5983,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.24",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -5873,10 +6023,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.25",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -5912,10 +6063,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.26",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -5951,10 +6103,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.27",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -5990,10 +6143,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.28",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -6029,10 +6183,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.29",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -6068,10 +6223,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.30",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -6107,10 +6263,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.31",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -6146,10 +6303,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.31",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -6185,10 +6343,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.32",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -6224,10 +6383,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.32",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -6263,10 +6423,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.33",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},
@@ -6302,10 +6463,11 @@
           "bronVersie": "2026-03-05"
         },
         {
-          "type": "wetsartikel",
+          "type": "standaard",
           "title": "NEN-EN-ISO/IEC 27002",
           "section": "ISO 27002 8.34",
-          "url": "https://www.iso.org/standard/27001"
+          "url": "https://www.iso.org/standard/75652",
+          "bronVersie": "2022-02"
         }
       ],
       "conditions": {},

@@ -6,6 +6,11 @@
 **Classificatie**: Intern — Strategisch advies
 **Niveau**: PhD / Architecture Review Board
 
+> **Statusherziening (2026-07-30): strategisch onderzoeksplan.** Uitspraken
+> over aantallen, scores en dekking zijn geen actuele operationele
+> attestaties. Zie de
+> [ecosysteemnulmeting](../../evidence/ecosystem-status-2026-07-30.json).
+
 ---
 
 ## 1. Executive Summary

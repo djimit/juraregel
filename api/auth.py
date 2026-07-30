@@ -10,11 +10,10 @@ Auto-selects backend based on KEYCLOAK_URL environment variable.
 
 from __future__ import annotations
 
+import json
 import os
 import time
 from dataclasses import dataclass
-from typing import Any
-
 # ─── Configuration ──────────────────────────────────────────────
 
 KEYCLOAK_URL = os.getenv("KEYCLOAK_URL", "")
@@ -22,8 +21,8 @@ KEYCLOAK_REALM = os.getenv("KEYCLOAK_REALM", "juraregel")
 KEYCLOAK_CLIENT_ID = os.getenv("KEYCLOAK_CLIENT_ID", "juraregel-api")
 USE_KEYCLOAK = bool(KEYCLOAK_URL)
 
-# Local JWT secret (development only — use Keycloak in production)
-JWT_SECRET = os.getenv("JWT_SECRET", "dev-secret-change-in-production")
+# Local JWT is development-only and requires an explicit secret.
+JWT_SECRET = os.getenv("JWT_SECRET", "")
 JWT_ALGORITHM = "HS256"
 JWT_EXPIRY_HOURS = 24
 
@@ -51,18 +50,10 @@ def create_token(
     """Create a local JWT token."""
     try:
         import jwt
-    except ImportError:
-        # Fallback: simple base64-encoded token
-        import base64
-
-        payload = {
-            "sub": user_id,
-            "username": username,
-            "roles": roles,
-            "tenant_id": tenant_id,
-            "exp": int(time.time()) + JWT_EXPIRY_HOURS * 3600,
-        }
-        return base64.b64encode(str(payload).encode()).decode()
+    except ImportError as exc:
+        raise RuntimeError("PyJWT is required to create signed tokens") from exc
+    if not JWT_SECRET:
+        raise RuntimeError("JWT_SECRET is required for local JWT")
 
     payload = {
         "sub": user_id,
@@ -77,6 +68,8 @@ def create_token(
 
 def verify_token(token: str) -> User | None:
     """Verify a JWT token and return the user."""
+    if not JWT_SECRET:
+        return None
     try:
         import jwt
 
@@ -88,22 +81,6 @@ def verify_token(token: str) -> User | None:
             roles=payload.get("roles", []),
             tenant_id=payload.get("tenant_id"),
         )
-    except ImportError:
-        # Fallback: decode base64
-        try:
-            import base64
-            import ast
-
-            payload = ast.literal_eval(base64.b64decode(token).decode())
-            return User(
-                id=payload.get("sub", ""),
-                username=payload.get("username", ""),
-                email="",
-                roles=payload.get("roles", []),
-                tenant_id=payload.get("tenant_id"),
-            )
-        except Exception:
-            return None
     except Exception:
         return None
 
@@ -163,18 +140,20 @@ class KeycloakAuth:
 
 # ─── API Key Auth (Service-to-Service) ───────────────────────
 
-API_KEYS: dict[str, dict] = {
-    "test-key-123": {
-        "name": "Test Integration",
-        "roles": ["admin"],
-        "tenant_id": "00000000-0000-0000-0000-000000000001",
-    }
-}
+def configured_api_keys() -> dict[str, dict]:
+    """Load service credentials from an explicit JSON environment value."""
+    raw = os.getenv("JURAREGEL_API_KEYS_JSON", "")
+    if not raw:
+        return {}
+    value = json.loads(raw)
+    if not isinstance(value, dict):
+        raise ValueError("JURAREGEL_API_KEYS_JSON must contain an object")
+    return value
 
 
 def verify_api_key(api_key: str) -> User | None:
     """Verify an API key."""
-    key_data = API_KEYS.get(api_key)
+    key_data = configured_api_keys().get(api_key)
     if key_data:
         return User(
             id=f"service-{key_data['name']}",

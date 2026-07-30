@@ -77,18 +77,23 @@ Features:
 
 ### Continuous Evaluation
 
-**Als** architect **wil ik** continu meten of het platform voldoet aan OpenMythos criteria **zodat** ik regressies direct zie.
+**Als** architect **wil ik** lokale evaluatiecriteria uitvoeren en deze
+afzonderlijk vergelijken met versiegebonden OpenMythos-evidence **zodat**
+statische self-checks niet als externe benchmarkresultaten worden gepresenteerd.
 
 | Module | Checks | Score |
 |--------|--------|-------|
-| RAG Engine | 4 | 100% |
-| Legal Reasoning | 4 | 100% |
-| Predictive Compliance | 4 | 100% |
-| Report Generator | 4 | 100% |
-| Accountable AI | 4 | 100% |
-| Orchestrator | 4 | 100% |
+| RAG Engine | 4 | Evidence-incomplete |
+| Legal Reasoning | 4 | Evidence-incomplete |
+| Predictive Compliance | 4 | Evidence-incomplete |
+| Report Generator | 4 | Evidence-incomplete |
+| Accountable AI | 4 | Evidence-incomplete |
+| Orchestrator | 4 | Evidence-incomplete |
 
-**Overall: Grade A (100%)**
+Deze tabel beschrijft deterministische lokale self-checks. Zij bewijst geen
+OpenMythos-grade of productiegedrag. De actuele externe integratiestatus is
+`evidence-incomplete`; zie de
+[ecosysteemnulmeting](../evidence/ecosystem-status-2026-07-30.json).
 
 ### Digital Twin
 
@@ -120,6 +125,7 @@ Scenario's:
 | Use Case | Kader | Status | API |
 |----------|-------|--------|-----|
 | [AcICT Assurance](../use-cases/acict-assurance/README.md) | Projecten 2026 en beheer en onderhoud 2025 | **Evidence-incomplete, non-scoring** | Geen |
+| [ISO 27017 Assurance](../use-cases/iso27017-assurance/README.md) | ISO/IEC 27017:2026 cloud-controls | **Evidence-incomplete, non-scoring** | Geen |
 
 ## Architectuur Relaties
 

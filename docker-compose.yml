@@ -30,13 +30,19 @@ services:
       dockerfile: Dockerfile.api
     container_name: juraregel-api
     ports:
-      - "8096:8080"
+      - "127.0.0.1:${JURAREGEL_API_PORT:-8096}:8080"
     environment:
-      DATABASE_URL: postgresql+asyncpg://juraregel:juraregel@192.168.1.28:5432/juraregel
-      QDRANT_URL: http://192.168.1.28:6333
-      LITELLM_URL: http://host.docker.internal:4000/v1
-      LITELLM_API_KEY: ${LITELLM_API_KEY}
-      USE_LLM: "true"
+      JURAREGEL_ENV: production
+      DATABASE_URL: ${DATABASE_URL:?DATABASE_URL is required}
+      QDRANT_URL: ${QDRANT_URL:?QDRANT_URL is required}
+      KEYCLOAK_URL: ${KEYCLOAK_URL:?KEYCLOAK_URL is required}
+      KEYCLOAK_REALM: ${KEYCLOAK_REALM:-juraregel}
+      KEYCLOAK_CLIENT_ID: ${KEYCLOAK_CLIENT_ID:-juraregel-api}
+      JURAREGEL_CORS_ORIGINS: ${JURAREGEL_CORS_ORIGINS:?JURAREGEL_CORS_ORIGINS is required}
+      JURAREGEL_RATE_LIMIT_MODE: ${JURAREGEL_RATE_LIMIT_MODE:?JURAREGEL_RATE_LIMIT_MODE must be ingress}
+      LITELLM_URL: ${LITELLM_URL:-}
+      LITELLM_API_KEY: ${LITELLM_API_KEY:-}
+      USE_LLM: ${USE_LLM:-false}
       JURAREGEL_CI_MODE: production
     extra_hosts:
       - "host.docker.internal:host-gateway"
@@ -51,20 +57,14 @@ services:
       dockerfile: Dockerfile
     container_name: juraregel-dashboard
     ports:
-      - "3006:3000"
+      - "127.0.0.1:${JURAREGEL_DASHBOARD_PORT:-3006}:3000"
     environment:
-      NEXT_PUBLIC_API_URL: http://192.168.1.28:8096
+      NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:?NEXT_PUBLIC_API_URL is required}
     depends_on:
       - api
     restart: unless-stopped
     networks:
       - juraregel-net
-
-volumes:
-  juraregel-pgdata:
-    driver: local
-  juraregel-qdrant:
-    driver: local
 
 networks:
   juraregel-net:

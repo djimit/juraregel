@@ -1,6 +1,8 @@
-"""JuraRegel Orchestrator — Autonome compliance-assessment agent.
+"""JuraRegel Orchestrator research prototype.
 
-Niveau: 4 (boven PhD) — Autonoom redenerend, multi-jurisdictionaal, volledig traceerbaar.
+This module assembles local analyses and optional LLM synthesis. Its output is
+not an autonomous compliance decision and is not fully traceable without
+external runtime evidence and human review.
 
 Architectuur:
     Input → Data Collection (parallel) → Synthese (één LLM-call) → Output
