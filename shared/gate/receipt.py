@@ -5,10 +5,7 @@ Each receipt has two cryptographic phases:
 2. Seal: binds the execution result to the authorization
 """
 
-import hashlib
-import hmac
 import json
-import os
 import uuid
 from datetime import datetime, timezone
 from pathlib import Path
