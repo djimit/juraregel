@@ -1,10 +1,13 @@
 """Template Service API — CRUD + generate + validate + render."""
 
+import logging
+
 from fastapi import APIRouter, HTTPException, Query
 from pydantic import BaseModel, Field
 from typing import Any
 
 router = APIRouter()
+logger = logging.getLogger(__name__)
 
 
 # ─── Request/Response Models ──────────────────────────────────
@@ -116,7 +119,7 @@ async def get_template(template_id: str):
             "capabilities": capabilities,
             "structure": list(enriched.get("inhoud", {}).keys()),
         }
-    except Exception as e:
+    except Exception:
         raise HTTPException(status_code=500, detail=str(e))
 
 
@@ -183,9 +186,10 @@ async def validate_document_endpoint(template_id: str, request: GenerateRequest)
             "has_checkboxes": info["has_checkboxes"],
             "has_scoring": info["has_scoring"],
         }
-    except Exception as e:
+    except Exception:
+        logger.exception("Template validation failed for %s", template_id)
         return {
             "valid": False,
             "template_id": template_id,
-            "error": str(e),
+            "error": "Document validation failed",
         }

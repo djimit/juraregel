@@ -1,8 +1,11 @@
 """Health check endpoints."""
 
+import logging
+
 from fastapi import APIRouter
 
 router = APIRouter()
+logger = logging.getLogger(__name__)
 
 
 @router.get("/health")
@@ -36,8 +39,9 @@ def _check_templates() -> dict:
 
         count = len(list_documents())
         return {"status": "ok", "template_count": count}
-    except Exception as e:
-        return {"status": "error", "message": str(e)}
+    except Exception:
+        logger.exception("Template readiness check failed")
+        return {"status": "error", "message": "Template check failed"}
 
 
 def _check_database() -> dict:

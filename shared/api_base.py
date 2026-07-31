@@ -392,8 +392,9 @@ def create_app(
         try:
             versions = list_versions(jrem_dir)
             latest = load_jrem(jrem_dir, versions[-1]["version"]) if versions else {}
-        except Exception as e:
-            return {"status": "degraded", "error": str(e), "domain": domain}
+        except Exception:
+            logger.exception("Health check failed for domain %s", domain)
+            return {"status": "degraded", "error": "Ruleset check failed", "domain": domain}
         maturity = latest.get("maturityLevel", "L0-demo")
         approval = (latest.get("approval") or {}).get("type", "missing")
         limitations = ["PoC, not production-ready", "Self-approved rules", "Results indicative, not legally binding"]
