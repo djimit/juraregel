@@ -45,10 +45,17 @@ PRODUCTION = ENVIRONMENT == "production"
 RATE_LIMIT_MODE = os.getenv(
     "JURAREGEL_RATE_LIMIT_MODE", "ingress" if PRODUCTION else "in_memory"
 ).lower()
+API_PROFILE = os.getenv(
+    "JURAREGEL_API_PROFILE", "core" if PRODUCTION else "prototype"
+).lower()
 
 
 def validate_runtime_config() -> None:
     """Reject production startup when required security boundaries are absent."""
+    if API_PROFILE not in {"core", "prototype"}:
+        raise RuntimeError("JURAREGEL_API_PROFILE must be 'core' or 'prototype'")
+    if PRODUCTION and API_PROFILE != "core":
+        raise RuntimeError("production JURAREGEL_API_PROFILE must be 'core'")
     if not PRODUCTION:
         return
     required = {
@@ -137,10 +144,9 @@ if PRODUCTION or os.getenv("JURAREGEL_AUTH_ENABLED", "").lower() == "true":
 # Routes
 app.include_router(health.router, tags=["System"])
 app.include_router(templates.router, prefix="/api/v1/templates", tags=["Templates"])
-# Prototype stores are process-local and must never become a production system
-# of record. Re-enable these routes in production only after the PostgreSQL/RLS
-# contract in docs/enterprise-grade-level3-plan.md is implemented and tested.
-if not PRODUCTION:
+# Experimental capabilities and process-local stores are available only in the
+# development prototype. Production exposes the evidence-backed core surface.
+if API_PROFILE == "prototype" and not PRODUCTION:
     app.include_router(
         assessments.router, prefix="/api/v1/assessments", tags=["Assessments"]
     )
@@ -150,54 +156,69 @@ if not PRODUCTION:
         tags=["Processing Activities"],
     )
     app.include_router(evidence.router, prefix="/api/v1/evidence", tags=["Evidence"])
-app.include_router(agents.router, prefix="/api/v1/agents", tags=["AI Agents"])
-app.include_router(compliance.router, prefix="/api/v1/compliance", tags=["Compliance"])
-app.include_router(policies.router, prefix="/api/v1/policies", tags=["Policies"])
-app.include_router(rag.router, prefix="/api/v1/rag", tags=["RAG"])
-app.include_router(drift.router, prefix="/api/v1/drift", tags=["Drift Detection"])
-app.include_router(
-    regulatory.router, prefix="/api/v1/regulatory", tags=["Regulatory Monitor"]
-)
-app.include_router(
-    knowledge_graph.router, prefix="/api/v1/knowledge-graph", tags=["Knowledge Graph"]
-)
-app.include_router(benchmarks.router, prefix="/api/v1/benchmarks", tags=["Benchmarks"])
-app.include_router(ci.router, prefix="/api/v1/ci", tags=["CI Gates"])
-app.include_router(
-    reasoning.router, prefix="/api/v1/reasoning", tags=["Legal Reasoning"]
-)
-app.include_router(
-    predictive.router, prefix="/api/v1/predictive", tags=["Predictive Compliance"]
-)
-app.include_router(learning.router, prefix="/api/v1/learning", tags=["Self-Learning"])
-app.include_router(
-    accountability.router, prefix="/api/v1/accountability", tags=["Accountable AI"]
-)
-app.include_router(
-    jurisdiction.router, prefix="/api/v1/jurisdiction", tags=["Multi-Jurisdiction"]
-)
-app.include_router(
-    digital_twin.router, prefix="/api/v1/digital-twin", tags=["Digital Twin"]
-)
-app.include_router(
-    orchestrator.router, prefix="/api/v1/orchestrator", tags=["Orchestrator"]
-)
-app.include_router(reports.router, prefix="/api/v1/reports", tags=["Reports"])
-app.include_router(evaluation.router, prefix="/api/v1/evaluation", tags=["Evaluation"])
+    app.include_router(agents.router, prefix="/api/v1/agents", tags=["AI Agents"])
+    app.include_router(compliance.router, prefix="/api/v1/compliance", tags=["Compliance"])
+    app.include_router(policies.router, prefix="/api/v1/policies", tags=["Policies"])
+    app.include_router(rag.router, prefix="/api/v1/rag", tags=["RAG"])
+    app.include_router(drift.router, prefix="/api/v1/drift", tags=["Drift Detection"])
+    app.include_router(
+        regulatory.router, prefix="/api/v1/regulatory", tags=["Regulatory Monitor"]
+    )
+    app.include_router(
+        knowledge_graph.router,
+        prefix="/api/v1/knowledge-graph",
+        tags=["Knowledge Graph"],
+    )
+    app.include_router(
+        benchmarks.router, prefix="/api/v1/benchmarks", tags=["Benchmarks"]
+    )
+    app.include_router(ci.router, prefix="/api/v1/ci", tags=["CI Gates"])
+    app.include_router(
+        reasoning.router, prefix="/api/v1/reasoning", tags=["Legal Reasoning"]
+    )
+    app.include_router(
+        predictive.router, prefix="/api/v1/predictive", tags=["Predictive Compliance"]
+    )
+    app.include_router(learning.router, prefix="/api/v1/learning", tags=["Self-Learning"])
+    app.include_router(
+        accountability.router,
+        prefix="/api/v1/accountability",
+        tags=["Accountable AI"],
+    )
+    app.include_router(
+        jurisdiction.router,
+        prefix="/api/v1/jurisdiction",
+        tags=["Multi-Jurisdiction"],
+    )
+    app.include_router(
+        digital_twin.router, prefix="/api/v1/digital-twin", tags=["Digital Twin"]
+    )
+    app.include_router(
+        orchestrator.router, prefix="/api/v1/orchestrator", tags=["Orchestrator"]
+    )
+    app.include_router(reports.router, prefix="/api/v1/reports", tags=["Reports"])
+    app.include_router(
+        evaluation.router, prefix="/api/v1/evaluation", tags=["Evaluation"]
+    )
 
 
 @app.get("/", tags=["Root"])
 async def root():
     """API root — returns service info."""
+    endpoints = {"templates": "/api/v1/templates"}
+    if API_PROFILE == "prototype" and not PRODUCTION:
+        endpoints.update(
+            {
+                "assessments": "/api/v1/assessments",
+                "processing_activities": "/api/v1/processing-activities",
+                "evidence": "/api/v1/evidence",
+            }
+        )
     return {
         "service": "JuraRegel Compliance API",
         "version": "1.0.0",
+        "profile": API_PROFILE,
         "docs": "/docs",
         "openapi": "/openapi.json",
-        "endpoints": {
-            "templates": "/api/v1/templates",
-            "assessments": "/api/v1/assessments",
-            "processing_activities": "/api/v1/processing-activities",
-            "evidence": "/api/v1/evidence",
-        },
+        "endpoints": endpoints,
     }

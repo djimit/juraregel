@@ -28,6 +28,10 @@ JuraRegel is een open-source platform voor het beheren, valideren, versioneren e
 
 > **Disclaimer:** JuraRegel is een proof-of-concept en architectuurprototype. Het is niet geschikt voor productiegebruik als juridisch besluitvormingsplatform zonder onafhankelijke juridische validatie.
 
+De centrale FastAPI-app gebruikt in productie uitsluitend het `core`-profiel.
+De experimentele RAG-, predictive-, self-learning-, digital-twin- en
+orchestratorroutes zijn alleen beschikbaar in het lokale `prototype`-profiel.
+
 
 
 ## Maturity Model

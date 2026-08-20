@@ -102,7 +102,7 @@ def evaluate(root: Path = ROOT) -> dict:
         name for name, content in route_sources.items() if "In-memory store" in content
     ]
     prototypes_excluded = (
-        "if not PRODUCTION:\n    app.include_router(\n        assessments.router"
+        'if API_PROFILE == "prototype" and not PRODUCTION:\n    app.include_router(\n        assessments.router'
         in main_source
     )
     controls.append(

@@ -1,5 +1,7 @@
 import asyncio
-from pathlib import Path
+import os
+import subprocess
+import sys
 
 import pytest
 from fastapi import FastAPI
@@ -11,6 +13,7 @@ from api.middleware import AuthMiddleware
 
 def production_environment(monkeypatch):
     monkeypatch.setattr(main, "PRODUCTION", True)
+    monkeypatch.setattr(main, "API_PROFILE", "core")
     monkeypatch.setenv(
         "DATABASE_URL", "postgresql+asyncpg://service:secret@db.invalid/juraregel"
     )
@@ -22,6 +25,7 @@ def production_environment(monkeypatch):
 
 def test_production_configuration_fails_closed(monkeypatch):
     monkeypatch.setattr(main, "PRODUCTION", True)
+    monkeypatch.setattr(main, "API_PROFILE", "core")
     for name in (
         "DATABASE_URL",
         "KEYCLOAK_URL",
@@ -80,5 +84,34 @@ def test_production_rejects_process_local_rate_limiting(monkeypatch):
 
 
 def test_process_local_record_routes_are_not_in_production_surface():
-    source = Path(main.__file__).read_text()
-    assert "if not PRODUCTION:\n    app.include_router(\n        assessments.router" in source
+    env = {
+        **os.environ,
+        "JURAREGEL_ENV": "production",
+        "JURAREGEL_API_PROFILE": "core",
+    }
+    result = subprocess.run(
+        [
+            sys.executable,
+            "-c",
+            "from api.main import app; print(chr(10).join(app.openapi()['paths']))",
+        ],
+        capture_output=True,
+        check=True,
+        cwd=os.getcwd(),
+        env=env,
+        text=True,
+    )
+
+    assert "/health" in result.stdout
+    assert "/api/v1/templates/" in result.stdout
+    assert "/api/v1/assessments/" not in result.stdout
+    assert "/api/v1/predictive/analyze" not in result.stdout
+    assert "/api/v1/digital-twin/create" not in result.stdout
+
+
+def test_production_rejects_prototype_profile(monkeypatch):
+    production_environment(monkeypatch)
+    monkeypatch.setattr(main, "API_PROFILE", "prototype")
+
+    with pytest.raises(RuntimeError, match="production JURAREGEL_API_PROFILE"):
+        main.validate_runtime_config()
