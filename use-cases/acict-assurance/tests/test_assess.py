@@ -44,8 +44,28 @@ def test_profiles_are_non_scoring_and_self_assessment_fails_closed():
             "evidenceRefs": ["evidence://independently-reviewed"],
             "owner": "system-owner",
             "reviewedBy": "independent-reviewer",
-            "reviewedAt": "2026-07-29"
+            "reviewedAt": "2026-07-29",
+            "risk": "reviewed risk",
+            "measure": "reviewed measure",
+            "residualRisk": "accepted residual risk",
         }
         for aspect in project["aspects"]
     ]
     assert module.evaluate(project, completed)["status"] == "review-ready"
+
+
+def test_insufficient_evidence_never_becomes_review_ready_from_metadata_alone():
+    project = load("profiles/projecten-2026.json")
+    assessment = load("assessments/juraregel-projecten-2026.json")
+    for finding in assessment["findings"]:
+        finding["reviewedBy"] = "independent-reviewer"
+        finding["reviewedAt"] = "2026-07-30"
+
+    result = module.evaluate(project, assessment)
+
+    assert result["status"] == "evidence-incomplete"
+    assert all(
+        "bewijs is onvoldoende" in finding["reasons"]
+        for finding in result["findings"]
+        if finding["status"] == "insufficient_evidence"
+    )
