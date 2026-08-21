@@ -13,7 +13,7 @@ from __future__ import annotations
 
 import uuid
 from dataclasses import dataclass, field
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from typing import Any
 
 
@@ -51,7 +51,7 @@ class DPIAAgent:
         template_id: str = "dpia_rijksdienst",
     ) -> AgentResult:
         """Generate a complete DPIA for a processing activity."""
-        start = datetime.utcnow()
+        start = datetime.now(timezone.utc).replace(tzinfo=None)
         trace = []
 
         # Step 1: Pre-scan
@@ -118,7 +118,7 @@ class DPIAAgent:
                 "risks": risks,
                 "measures": measures,
                 "next_review_date": (
-                    datetime.utcnow() + timedelta(days=365)
+                    datetime.now(timezone.utc).replace(tzinfo=None) + timedelta(days=365)
                 ).isoformat(),
             },
             citations=[
@@ -231,7 +231,7 @@ class DPIAAgent:
         return recs
 
     def _elapsed_ms(self, start: datetime) -> int:
-        return int((datetime.utcnow() - start).total_seconds() * 1000)
+        return int((datetime.now(timezone.utc).replace(tzinfo=None) - start).total_seconds() * 1000)
 
 
 # ─── FRIA Agent ────────────────────────────────────────────────
@@ -246,7 +246,7 @@ class FRIAAgent:
 
     async def execute(self, ai_system: dict) -> AgentResult:
         """Generate a complete FRIA for an AI system."""
-        start = datetime.utcnow()
+        start = datetime.now(timezone.utc).replace(tzinfo=None)
         trace = []
 
         # Step 1: Risk classification
@@ -338,7 +338,7 @@ class FRIAAgent:
         ]
 
     def _elapsed_ms(self, start: datetime) -> int:
-        return int((datetime.utcnow() - start).total_seconds() * 1000)
+        return int((datetime.now(timezone.utc).replace(tzinfo=None) - start).total_seconds() * 1000)
 
 
 # ─── Regulatory Monitor Agent ──────────────────────────────────
@@ -354,7 +354,7 @@ class RegulatoryMonitorAgent:
 
     async def scan(self) -> AgentResult:
         """Scan for regulatory changes."""
-        start = datetime.utcnow()
+        start = datetime.now(timezone.utc).replace(tzinfo=None)
 
         # In production: scrape sources, detect changes, analyze impact
         changes = [
@@ -377,7 +377,7 @@ class RegulatoryMonitorAgent:
         )
 
     def _elapsed_ms(self, start: datetime) -> int:
-        return int((datetime.utcnow() - start).total_seconds() * 1000)
+        return int((datetime.now(timezone.utc).replace(tzinfo=None) - start).total_seconds() * 1000)
 
 
 # ─── Agent Orchestrator ────────────────────────────────────────
@@ -429,6 +429,6 @@ class AgentOrchestrator:
 
         return {
             "organisation_id": organisation_id,
-            "timestamp": datetime.utcnow().isoformat(),
+            "timestamp": datetime.now(timezone.utc).replace(tzinfo=None).isoformat(),
             "results": results,
         }
