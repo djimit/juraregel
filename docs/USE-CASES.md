@@ -115,6 +115,12 @@ Scenario's:
 | eIDAS 2.0 | 32 | PoC | 8523 |
 | ... | ... | ... | ... |
 
+## Evidence-self-assessments
+
+| Use Case | Kader | Status | API |
+|----------|-------|--------|-----|
+| [AcICT Assurance](../use-cases/acict-assurance/README.md) | Projecten 2026 en beheer en onderhoud 2025 | **Evidence-incomplete, non-scoring** | Geen |
+
 ## Architectuur Relaties
 
 ```

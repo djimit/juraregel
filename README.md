@@ -387,6 +387,13 @@ compliancescore: ontbrekende of gefaalde hard-stop-evidence blokkeert, en zonder
 een versiegebonden menselijke eindbeslissing blijft de uitkomst
 `review-required`. Zie het [integratie- en verificatiecontract](docs/judicial-ai-admission-demo.md).
 
+## Use Case: AcICT Assurance - evidence zonder compliance-score
+
+De [AcICT Assurance use case](use-cases/acict-assurance/README.md) toetst of
+JuraRegel per geselecteerd project- en beheeraspect bewijs, eigenaarschap en
+onafhankelijke review kan tonen. Het is een fail-closed self-assessment zonder
+JREM-regelset, API of automatisch AcICT-oordeel.
+
 ## Use Case: AVG/GDPR — Privacy Compliance
 
 **Als** privacy officer of FG **wil ik** automatisch valideren of mijn organisatie voldoet aan de AVG **zodat** ik niet handmatig 10 artikelen hoef te checken.
