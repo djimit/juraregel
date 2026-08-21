@@ -53,10 +53,10 @@ async def list_evidence(assessment_id: str):
 async def add_evidence(assessment_id: str, request: EvidenceInput):
     """Add evidence to an assessment section."""
     import uuid
-    from datetime import datetime
+    from datetime import datetime, timezone
 
     evidence_id = str(uuid.uuid4())
-    now = datetime.utcnow().isoformat()
+    now = datetime.now(timezone.utc).replace(tzinfo=None).isoformat()
 
     record = {
         "id": evidence_id,

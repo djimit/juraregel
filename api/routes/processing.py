@@ -69,18 +69,19 @@ async def create_processing_activity(
 ):
     """Register a new processing activity."""
     import uuid
-    from datetime import datetime
+    from datetime import datetime, timezone
 
     pa_id = str(uuid.uuid4())
-    now = datetime.utcnow().isoformat()
+    now = datetime.now(timezone.utc).replace(tzinfo=None).isoformat()
 
     # Auto-determine if DPIA is required based on 9 EDPB criteria
-    dpia_required = _check_dpia_required(request.dict())
+    request_data = request.model_dump()
+    dpia_required = _check_dpia_required(request_data)
 
     activity = {
         "id": pa_id,
         "organisation_id": organisation_id,
-        **request.dict(),
+        **request_data,
         "dpia_required": dpia_required,
         "fria_required": False,  # Would need AI classification
         "status": "active",
@@ -113,7 +114,7 @@ async def update_processing_activity(
         activity[key] = value
 
     activity["dpia_required"] = _check_dpia_required(request.dict())
-    activity["updated_at"] = __import__("datetime").datetime.utcnow().isoformat()
+    activity["updated_at"] = datetime.now(timezone.utc).replace(tzinfo=None).isoformat()
     return activity
 
 

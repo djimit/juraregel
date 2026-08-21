@@ -3,7 +3,7 @@
 from fastapi import APIRouter, HTTPException, Query
 from pydantic import BaseModel, Field
 from typing import Any
-from datetime import date
+from datetime import date, datetime, timezone
 
 router = APIRouter()
 
@@ -78,7 +78,6 @@ async def list_assessments(
 async def create_assessment(request: CreateAssessmentRequest):
     """Create a new assessment from a template."""
     import uuid
-    from datetime import datetime
     from docs.templates import generate_document, enrich_document, validate_document
 
     # Generate document from template
@@ -91,7 +90,7 @@ async def create_assessment(request: CreateAssessmentRequest):
     enriched = enrich_document(doc)
 
     assessment_id = str(uuid.uuid4())
-    now = datetime.utcnow().isoformat()
+    now = datetime.now(timezone.utc).replace(tzinfo=None).isoformat()
 
     assessment = {
         "id": assessment_id,
@@ -141,7 +140,7 @@ async def update_assessment(assessment_id: str, request: CreateAssessmentRequest
 
     assessment["content"] = enriched
     assessment["template_id"] = request.template_id
-    assessment["updated_at"] = __import__("datetime").datetime.utcnow().isoformat()
+    assessment["updated_at"] = datetime.now(timezone.utc).replace(tzinfo=None).isoformat()
 
     return assessment
 
@@ -159,7 +158,7 @@ async def submit_for_review(assessment_id: str):
         )
 
     assessment["status"] = "in_review"
-    assessment["updated_at"] = __import__("datetime").datetime.utcnow().isoformat()
+    assessment["updated_at"] = datetime.now(timezone.utc).replace(tzinfo=None).isoformat()
     return assessment
 
 
@@ -176,17 +175,16 @@ async def approve_assessment(assessment_id: str, request: ApprovalRequest):
             detail=f"Cannot approve assessment in status: {assessment['status']}",
         )
 
-    from datetime import datetime
 
     approval = {
         "approver": request.approver,
         "role": request.role,
         "comments": request.comments,
-        "date": datetime.utcnow().isoformat(),
+        "date": datetime.now(timezone.utc).replace(tzinfo=None).isoformat(),
     }
     assessment["approvals"].append(approval)
     assessment["status"] = "approved"
-    assessment["updated_at"] = datetime.utcnow().isoformat()
+    assessment["updated_at"] = datetime.now(timezone.utc).replace(tzinfo=None).isoformat()
     return assessment
 
 
@@ -203,7 +201,7 @@ async def publish_assessment(assessment_id: str):
         )
 
     assessment["status"] = "published"
-    assessment["updated_at"] = __import__("datetime").datetime.utcnow().isoformat()
+    assessment["updated_at"] = datetime.now(timezone.utc).replace(tzinfo=None).isoformat()
     return assessment
 
 
@@ -220,7 +218,7 @@ async def archive_assessment(assessment_id: str):
         )
 
     assessment["status"] = "archived"
-    assessment["updated_at"] = __import__("datetime").datetime.utcnow().isoformat()
+    assessment["updated_at"] = datetime.now(timezone.utc).replace(tzinfo=None).isoformat()
     return assessment
 
 

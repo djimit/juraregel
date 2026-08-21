@@ -11,7 +11,7 @@ Where:
 from __future__ import annotations
 
 from dataclasses import dataclass
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 
 # ─── Criteria Weights ──────────────────────────────────────────
@@ -95,7 +95,7 @@ def calculate_evidence_actuality(evidence_list: list[dict]) -> float:
     if not evidence_list:
         return 0.0
 
-    now = datetime.utcnow()
+    now = datetime.now(timezone.utc).replace(tzinfo=None)
     valid_count = 0
 
     for evidence in evidence_list:
@@ -117,7 +117,7 @@ def calculate_review_timeliness(next_review_date: datetime | None) -> float:
     if not next_review_date:
         return 0.0
 
-    now = datetime.utcnow().date()
+    now = datetime.now(timezone.utc).replace(tzinfo=None).date()
     if isinstance(next_review_date, str):
         next_review_date = datetime.fromisoformat(next_review_date).date()
 
@@ -280,7 +280,7 @@ def calculate_compliance_score(
         classification=classification,
         criteria=criteria_scores,
         recommendations=recommendations,
-        calculated_at=datetime.utcnow().isoformat(),
+        calculated_at=datetime.now(timezone.utc).replace(tzinfo=None).isoformat(),
     )
 
 

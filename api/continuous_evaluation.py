@@ -21,7 +21,7 @@ import json
 import logging
 import time
 from dataclasses import dataclass, field
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Any
 
 logger = logging.getLogger(__name__)
@@ -262,7 +262,7 @@ class ContinuousEvaluationEngine:
 
         return EvaluationReport(
             report_id=f"eval-{int(start)}",
-            timestamp=datetime.utcnow().isoformat(),
+            timestamp=datetime.now(timezone.utc).replace(tzinfo=None).isoformat(),
             results=results,
             overall_score=round(overall_score, 3),
             overall_grade=grade,
