@@ -34,10 +34,15 @@ def test_resource_read_summary():
     result = call_mcp("resources/read", {"uri": "laws://summary"})
     assert "result" in result
     data = json.loads(result["result"]["contents"][0]["text"])
-    assert data["total_rules"] == data["total_versioned_rules"] == 750
+    exports = list((REPO_ROOT / "use-cases").glob("*/jrem/exports/*.json"))
+    documents = [json.loads(path.read_text()) for path in exports]
+    expected_rules = sum(len(document.get("rules", [])) for document in documents)
+    expected_domains = {path.parents[2].name for path in exports}
+
+    assert data["total_rules"] == data["total_versioned_rules"] == expected_rules
     assert data["total_current_rules"] <= data["total_versioned_rules"]
-    assert data["total_rule_sets"] == 35
-    assert data["total_repository_domains"] == 34
+    assert data["total_rule_sets"] == len(exports)
+    assert data["total_repository_domains"] == len(expected_domains)
     print("  resources/read(laws://summary): OK")
 
 def test_resource_read_spec():
