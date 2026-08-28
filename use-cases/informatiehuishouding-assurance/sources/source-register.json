@@ -67,11 +67,38 @@
       "sha256": "5cf3402156724aa98c8a0eed5a911d1c036ea11e1126f12301109c6be193710a",
       "bytes": 10531443,
       "usage": "Context voor portfolio-, besluitvormings- en financieringsevidence; niet specifiek of normatief voor informatiehuishouding."
+    },
+    {
+      "sourceId": "nationaal-archief-duto-2024",
+      "class": "authoritative-implementation-framework",
+      "status": "current-living-guidance",
+      "title": "DUTO-raamwerk",
+      "publisher": "Nationaal Archief",
+      "version": "NA 2024",
+      "publicationDate": "2024-01-01",
+      "url": "https://www.nationaalarchief.nl/archiveren/kennisbank/duto-raamwerk",
+      "sha256": "ba129415207a4fb1d7a52f241f907169f8bed34615bac542a7103daca0f51025",
+      "bytes": 54160,
+      "usage": "Normerende modeleisen en randvoorwaarden voor duurzame toegankelijkheid; vertaling naar de organisatiecontext en vakinhoudelijke afweging blijven vereist."
+    },
+    {
+      "sourceId": "nationaal-archief-mdto",
+      "class": "authoritative-metadata-standard",
+      "status": "current-living-guidance",
+      "title": "Metagegevens voor duurzaam toegankelijke overheidsinformatie (MDTO)",
+      "publisher": "Nationaal Archief",
+      "version": "current at retrieval",
+      "publicationDate": null,
+      "url": "https://www.nationaalarchief.nl/archiveren/mdto",
+      "sha256": "bbb15ee36331249bb10ade23223b83b0e84929ef6c6d54179a80bc5654539563",
+      "bytes": 40530,
+      "usage": "Norm voor eenduidige metadata en uitwisseling ten behoeve van duurzame toegankelijkheid; geen zelfstandig assurance-oordeel."
     }
   ],
   "limitations": [
     "Publieke beschikbaarheid is geen vastgestelde hergebruiklicentie; de PDF-binaries zijn daarom niet opgenomen.",
     "De Open Overheid attachment-endpoints moeten met GET worden gecontroleerd; HEAD retourneerde bij verificatie 404.",
+    "DUTO en MDTO zijn levende webbronnen; de hash bewijst alleen de op 2026-08-28 opgehaalde representatie en vereist periodieke herverificatie.",
     "Beleid, zelfevaluaties en auditbevindingen leveren zonder organisatiebewijs geen assurance-oordeel op."
   ]
 }

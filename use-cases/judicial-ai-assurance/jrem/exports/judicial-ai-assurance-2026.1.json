@@ -104,6 +104,14 @@
           "url": "https://rm.coe.int/1680afae3c",
           "bronVersie": "2024-09-05",
           "bronDatum": "2024-09-05"
+        },
+        {
+          "type": "standaard",
+          "title": "CCJE Opinion No. 26: Moving forward - the use of assistive technology in the judiciary",
+          "section": "Section VI, principles (ii)-(iv): judicial independence, autonomy and oversight",
+          "url": "https://rm.coe.int/opinion-no-26-2023-final/1680adade7",
+          "bronVersie": "2023-12-01",
+          "bronDatum": "2023-12-01"
         }
       ],
       "conditions": {},
@@ -133,6 +141,14 @@
           "url": "https://rm.coe.int/cepej-2025-18final-en-draft-guidelines-on-the-use-of-generative-ai-for/48802a4ad1",
           "bronVersie": "2025-12-19",
           "bronDatum": "2025-12-19"
+        },
+        {
+          "type": "standaard",
+          "title": "European Ethical Charter on the use of AI in judicial systems and their environment",
+          "section": "Principles 1, 4 and 5, pages 8 and 11-12: fundamental rights, transparency and user control",
+          "url": "https://rm.coe.int/ethical-charter-en-for-publication-4-december-2018/16808f699c",
+          "bronVersie": "2018-12-04",
+          "bronDatum": "2018-12-04"
         }
       ],
       "conditions": {},
@@ -252,6 +268,14 @@
           "url": "https://rm.coe.int/huderia-methodology-and-model-adopted-provisional-version-2026/48802ac001",
           "bronVersie": "2026-02-25",
           "bronDatum": "2026-02-25"
+        },
+        {
+          "type": "standaard",
+          "title": "Impact Assessment Mensenrechten en Algoritmes",
+          "section": "Geactualiseerde methode 2026, gekoppeld aan AI Act Article 27; dialoog en besluitvorming, niet als checklist",
+          "url": "https://www.digitaleoverheid.nl/nieuws/iama-aangepast-aan-praktijk-en-regelgeving/",
+          "bronVersie": "2026-02-17",
+          "bronDatum": "2026-02-17"
         }
       ],
       "conditions": {},
@@ -289,6 +313,22 @@
           "url": "https://rm.coe.int/cepej-2025-18final-en-draft-guidelines-on-the-use-of-generative-ai-for/48802a4ad1",
           "bronVersie": "2025-12-19",
           "bronDatum": "2025-12-19"
+        },
+        {
+          "type": "standaard",
+          "title": "Convention 108+",
+          "section": "Articles 5, 10 and 11: proportionality, additional safeguards and transparency of processing",
+          "url": "https://rm.coe.int/convention-108-convention-for-the-protection-of-individuals-with-regar/16808b36f1",
+          "bronVersie": "2018-05-18",
+          "bronDatum": "2018-05-18"
+        },
+        {
+          "type": "beleid",
+          "title": "Verantwoord en innovatief: AI voor een rechtvaardige Rechtspraak",
+          "section": "Ten-point strategy, points 1, 2, 8 and 10: assessment, oversight, responsible data sharing and monitoring",
+          "url": "https://www.rechtspraak.nl/organisatie-en-contact/innovatie-binnen-de-rechtspraak/ai-strategie",
+          "bronVersie": "2026-07-16",
+          "bronDatum": "2026-07-16"
         }
       ],
       "conditions": {},
@@ -299,7 +339,7 @@
         "assurance": {
           "controlClass": "hard-stop",
           "decision": "block-until-evidence",
-          "sourceAuthority": ["binding-law", "authoritative-soft-law"],
+          "sourceAuthority": ["binding-law", "treaty-framework", "authoritative-soft-law"],
           "evidenceRequired": ["data-residency", "key-control", "no-training-clause", "subprocessor-control", "audit-right", "exit-and-portability", "retention-and-deletion"],
           "reusesDomains": ["avg-gdpr", "gegevensdelingsbeleid", "dpia-model", "bio2", "ncsc"]
         }
@@ -326,6 +366,14 @@
           "url": "https://rm.coe.int/cepej-2023-16rev-operationalisation-ai-ethical-charter-en/1680b65218",
           "bronVersie": "2025-06-05",
           "bronDatum": "2025-06-05"
+        },
+        {
+          "type": "standaard",
+          "title": "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile",
+          "section": "Sections 2.2, 2.7-2.9 and action tables: confabulation, human-AI configuration, information integrity and security",
+          "url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+          "bronVersie": "2024-07-26",
+          "bronDatum": "2024-07-26"
         }
       ],
       "conditions": {},
@@ -336,7 +384,7 @@
         "assurance": {
           "controlClass": "hard-stop",
           "decision": "block-until-evidence",
-          "sourceAuthority": ["authoritative-soft-law"],
+          "sourceAuthority": ["authoritative-soft-law", "implementation-method"],
           "evidenceRequired": ["independent-evaluation", "task-specific-gold-set", "subgroup-and-bias-analysis", "drift-monitoring", "incident-plan", "stop-criteria", "rollback-test"],
           "reusesDomains": ["traceability", "compliance-debt"]
         }
@@ -355,6 +403,30 @@
           "url": "https://rm.coe.int/cepej-2025-18final-en-draft-guidelines-on-the-use-of-generative-ai-for/48802a4ad1",
           "bronVersie": "2025-12-19",
           "bronDatum": "2025-12-19"
+        },
+        {
+          "type": "standaard",
+          "title": "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile",
+          "section": "Section 2.9 and MS-2.7-004: direct and indirect prompt injection, data poisoning and adversarial testing",
+          "url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence",
+          "bronVersie": "2024-07-26",
+          "bronDatum": "2024-07-26"
+        },
+        {
+          "type": "standaard",
+          "title": "Multilayer Framework for Good Cybersecurity Practices for AI",
+          "section": "Section 2.2, AI threats, security controls and security testing",
+          "url": "https://www.enisa.europa.eu/publications/multilayer-framework-for-good-cybersecurity-practices-for-ai",
+          "bronVersie": "2023-06-07",
+          "bronDatum": "2023-06-07"
+        },
+        {
+          "type": "standaard",
+          "title": "OWASP Top 10 for Large Language Model Applications",
+          "section": "LLM01 Prompt Injection and LLM03 Supply Chain",
+          "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/",
+          "bronVersie": "2026-07-16",
+          "bronDatum": "2026-07-16"
         }
       ],
       "conditions": {},
@@ -365,7 +437,7 @@
         "assurance": {
           "controlClass": "required-evidence",
           "decision": "review-required",
-          "sourceAuthority": ["authoritative-soft-law"],
+          "sourceAuthority": ["authoritative-soft-law", "implementation-method"],
           "evidenceRequired": ["content-isolation", "indirect-prompt-injection-tests", "least-privilege-tools", "default-deny-egress", "retrieval-poisoning-tests", "security-incident-response"],
           "reusesDomains": ["bio2", "ncsc", "traceability"]
         }
@@ -384,6 +456,22 @@
           "url": "https://rm.coe.int/cepej-2025-18final-en-draft-guidelines-on-the-use-of-generative-ai-for/48802a4ad1",
           "bronVersie": "2025-12-19",
           "bronDatum": "2025-12-19"
+        },
+        {
+          "type": "standaard",
+          "title": "CCJE Opinion No. 26: Moving forward - the use of assistive technology in the judiciary",
+          "section": "Section VI, principles (v), (vii), (x) and (xi): alternatives, piloting, training and review",
+          "url": "https://rm.coe.int/opinion-no-26-2023-final/1680adade7",
+          "bronVersie": "2023-12-01",
+          "bronDatum": "2023-12-01"
+        },
+        {
+          "type": "beleid",
+          "title": "Verantwoord en innovatief: AI voor een rechtvaardige Rechtspraak",
+          "section": "Ten-point strategy, points 4, 6, 9 and 10: training, experimentation, low-risk focus and monitoring",
+          "url": "https://www.rechtspraak.nl/organisatie-en-contact/innovatie-binnen-de-rechtspraak/ai-strategie",
+          "bronVersie": "2026-07-16",
+          "bronDatum": "2026-07-16"
         }
       ],
       "conditions": {},

@@ -1,0 +1,48 @@
+{
+  "profileId": "eu-ai-act-gpai-implementation",
+  "version": "2026.1",
+  "interpretationStatus": "non-binding-evidence-profile",
+  "disclaimer": "Niet-scorend implementatieprofiel. Het bepaalt geen toepasselijkheid en levert geen conformity assessment of juridisch oordeel.",
+  "aspects": [
+    {
+      "aspectId": "GPAI-01",
+      "subject": "Classificatie van actor, model en verplichtingen",
+      "sourceRefs": [
+        {"sourceId": "EU-AI-ACT", "section": "Articles 3, 51-56"},
+        {"sourceId": "EU-GPAI-GUIDELINES", "section": "Scope, provider status, significant modifications and open-source exemptions"}
+      ],
+      "evidenceRequired": ["model-scope-analysis", "actor-role-analysis", "compute-and-capability-record", "modification-history"],
+      "prohibitedInference": "Een modelnaam, licentie of FLOP-schatting bewijst op zichzelf geen GPAI-classificatie of vrijstelling."
+    },
+    {
+      "aspectId": "GPAI-02",
+      "subject": "Transparantie en auteursrecht",
+      "sourceRefs": [
+        {"sourceId": "EU-AI-ACT", "section": "Articles 53 and 56"},
+        {"sourceId": "EU-GPAI-CODE", "section": "Transparency and Copyright chapters"}
+      ],
+      "evidenceRequired": ["model-documentation", "training-content-summary", "copyright-policy", "rights-reservation-process"],
+      "prohibitedInference": "Een ingevuld modeldocument of ondertekende code bewijst niet dat de beschreven processen effectief werken."
+    },
+    {
+      "aspectId": "GPAI-03",
+      "subject": "Systemische risico's, veiligheid en incidenten",
+      "sourceRefs": [
+        {"sourceId": "EU-AI-ACT", "section": "Articles 51, 55 and 56"},
+        {"sourceId": "EU-GPAI-CODE", "section": "Safety and Security chapter"}
+      ],
+      "evidenceRequired": ["systemic-risk-assessment", "safety-and-security-framework", "adversarial-testing", "incident-reporting-process"],
+      "prohibitedInference": "Het ontbreken van een bekend incident bewijst niet dat systemische risico's zijn beheerst."
+    },
+    {
+      "aspectId": "GPAI-04",
+      "subject": "Markering en herkenbaarheid van synthetische inhoud",
+      "sourceRefs": [
+        {"sourceId": "EU-AI-ACT", "section": "Article 50"},
+        {"sourceId": "EU-AI-CONTENT-LABELLING-CODE", "section": "Practical marking and labelling measures"}
+      ],
+      "evidenceRequired": ["content-marking-design", "machine-readable-detection-evidence", "user-disclosure-test", "exception-analysis"],
+      "prohibitedInference": "Een zichtbaar label bewijst niet dat alle relevante synthetische inhoud machineleesbaar en betrouwbaar herkenbaar is."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "profileVersion": "2026.2",
+  "verifiedOn": "2026-08-28",
+  "sources": [
+    {
+      "id": "EU-AI-ACT",
+      "class": "binding-law",
+      "title": "Regulation (EU) 2024/1689 (AI Act)",
+      "version": "2024-06-13",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1689"
+    },
+    {
+      "id": "EU-GPAI-GUIDELINES",
+      "class": "authoritative-interpretive-guidance",
+      "title": "Guidelines for providers of general-purpose AI models",
+      "version": "2026-04-20",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/guidelines-gpai-providers"
+    },
+    {
+      "id": "EU-GPAI-CODE",
+      "class": "voluntary-compliance-method",
+      "title": "General-Purpose AI Code of Practice",
+      "version": "2025-07-10",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai"
+    },
+    {
+      "id": "EU-AI-CONTENT-LABELLING-CODE",
+      "class": "voluntary-compliance-method",
+      "title": "Code of Practice on marking and labelling AI-generated content",
+      "version": "2026-06-26",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-code-practice-marking-and-labelling-ai-generated-content"
+    }
+  ],
+  "limitations": [
+    "De AI Act blijft de bindende grondslag; richtsnoeren geven de Commissie-interpretatie en codes zijn vrijwillige nalevingsmethoden.",
+    "Ondertekening of toepassing van een code bewijst niet zonder onderliggende evidence dat aan de AI Act is voldaan.",
+    "Toepasselijkheid als aanbieder, deployer of actor in de GPAI-waardeketen vereist afzonderlijke juridische classificatie."
+  ]
+}

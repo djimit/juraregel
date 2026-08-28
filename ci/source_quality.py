@@ -2,11 +2,13 @@
 """Measure source debt and block L2/L3 rules without reproducible anchors."""
 
 import json
+import re
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
 LEGISLATIVE_TYPES = {"wet", "wetsartikel", "besluit"}
+BWB_URL = re.compile(r"https://wetten\.overheid\.nl/BWBR\d+", re.IGNORECASE)
 
 
 def issues_for_rule(rule: dict, ruleset: dict) -> list[str]:
@@ -21,7 +23,12 @@ def issues_for_rule(rule: dict, ruleset: dict) -> list[str]:
         if ref.get("section") in (None, "", rule_id):
             issues.append(f"{prefix}: section is not an exact legal anchor")
         if ref.get("type") in LEGISLATIVE_TYPES and not (
-            ref.get("bwbId") or ruleset.get("bwbId") or ruleset.get("celexId") or ruleset.get("eli")
+            ref.get("bwbId")
+            or ruleset.get("bwbId")
+            or ruleset.get("celexId")
+            or ruleset.get("eli")
+            or "/eli/" in ref.get("url", "")
+            or BWB_URL.match(ref.get("url", ""))
         ):
             issues.append(f"{prefix}: missing BWB/CELEX/ELI identifier")
     return issues

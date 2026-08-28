@@ -1,0 +1,29 @@
+{
+  "profileId": "international-comparative-methods",
+  "version": "2026.1",
+  "interpretationStatus": "pilot-only",
+  "disclaimer": "Geen van deze bronnen is een Nederlandse of Europese rechtsgrond. Gebruik is beperkt tot vergelijkende methodiek en interoperabiliteit.",
+  "pilots": [
+    {
+      "pilotId": "PILOT-RISK-ASSESSMENT",
+      "sourceIds": ["CANADA-AUTOMATED-DECISION-DIRECTIVE", "CANADA-ALGORITHMIC-IMPACT-ASSESSMENT"],
+      "purpose": "Vergelijk risicovragen, impactniveaus en proportionele bewijsvereisten met bestaande JuraRegel-profielen.",
+      "promotionEvidence": ["gap-analysis", "false-positive-review", "juridische-scope-review"],
+      "prohibitedUse": "Canadese impactscore of verplichting als Nederlandse conformiteitsuitkomst presenteren."
+    },
+    {
+      "pilotId": "PILOT-TRANSPARENCY-RECORD",
+      "sourceIds": ["UK-ATRS"],
+      "purpose": "Vergelijk publieke transparantievelden en begrijpelijkheid met bestaande AI-evidencerecords.",
+      "promotionEvidence": ["field-mapping", "publicatie-risicotoets", "gebruikersbegrip-test"],
+      "prohibitedUse": "Een ATRS-record als bewijs van rechtmatigheid, juistheid of veiligheid behandelen."
+    },
+    {
+      "pilotId": "PILOT-LEGAL-INTERCHANGE",
+      "sourceIds": ["OASIS-LEGALRULEML-1.0", "OASIS-AKOMA-NTOSO-1.0"],
+      "purpose": "Test verliesarme import en export van regels, documenten, metadata en bronverwijzingen.",
+      "promotionEvidence": ["round-trip-fixtures", "semantic-diff", "beheer-en-verwijderplan"],
+      "prohibitedUse": "Technische serialisatie als bewijs van juridische juistheid behandelen."
+    }
+  ]
+}

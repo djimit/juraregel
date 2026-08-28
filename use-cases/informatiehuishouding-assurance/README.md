@@ -2,8 +2,8 @@
 
 Niet-scorend evidenceprofiel voor de sturing en beheersing van de
 informatiehuishouding binnen de Rijksoverheid. Het profiel combineert het
-Meerjarenplan 2026-2030 met recente ADR-bevindingen en gebruikt het
-Meerjarenplan 2024-2025 uitsluitend als historische baseline.
+Meerjarenplan 2026-2030 met recente ADR-bevindingen, DUTO en MDTO en gebruikt
+het Meerjarenplan 2024-2025 uitsluitend als historische baseline.
 
 De bronnen zijn beleid, onderzoeksbevindingen en handelingsperspectieven. Ze
 zijn geen rechtsregels, certificering of bewijs dat een organisatie haar
@@ -11,7 +11,7 @@ informatiehuishouding beheerst.
 
 ## Inhoud
 
-- `sources/source-register.json`: vijf officiële documenten met versie, rol,
+- `sources/source-register.json`: zeven officiële bronnen met versie, rol,
   retrievaldatum en SHA-256.
 - `profiles/rijk-ihh-2026.json`: tien lokale evidence-aspecten met exacte
   bronankers, vereiste bewijsstukken en falsificatiecriteria.
