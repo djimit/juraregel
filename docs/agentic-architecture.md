@@ -4,7 +4,8 @@
 
 Het JuraRegel Agentic Platform breidt het Legal RuleOps Platform uit met:
 
-- **Knowledge Base** (702 regels, semantisch + keyword doorzoekbaar)
+- **Knowledge Base** (1.258 regels volledig geïndexeerd; keyword- en
+  semantische stores zijn optioneel)
 - **MCP Server** (12 tools + 3 resources + 3 prompts voor LLM-agents)
 - **Source Connectors** (BWB, EUR-Lex, PLOOI, Rechtspraak)
 - **Rule Extraction Pipeline** (LLM-assisted, met review queue)
@@ -25,7 +26,7 @@ JuraRegel MCP Server v2.1.0 (12 tools + 3 resources + 3 prompts)
   +--> Knowledge Base
   |      +-- Qdrant (vector search, 768-dim, nomic-embed-text)
   |      +-- SQLite FTS5 (keyword search)
-  |      +-- JKB Index Builder (702 regels, 3 representaties)
+  |      +-- JKB Index Builder (1.258 regels, 3 representaties)
   |
   +--> Source Connectors
   |      +-- BWB (wetten.overheid.nl) + Harvester

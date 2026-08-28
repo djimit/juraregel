@@ -2,10 +2,10 @@
 
 [![JuraRegel CI](https://github.com/djimit/juraregel/actions/workflows/juraregel-ci.yml/badge.svg)](https://github.com/djimit/juraregel/actions/workflows/juraregel-ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Rule Sets](https://img.shields.io/badge/Rule%20Sets-34%20%288%20L1%2C%2026%20L0%29-blue)](https://github.com/djimit/juraregel)
-[![Tests](https://img.shields.io/badge/Tests-74%20unit%2C%207%20auditors-green)](https://github.com/djimit/juraregel)
+[![Rule Sets](https://img.shields.io/badge/Rule%20Sets-58%20%288%20L1%2C%2050%20L0%29-blue)](https://github.com/djimit/juraregel)
+[![Tests](https://img.shields.io/badge/Tests-561%20passed-green)](https://github.com/djimit/juraregel)
 [![Security](https://img.shields.io/badge/Security-Dependabot%20enabled-brightgreen)](https://github.com/djimit/juraregel/security/dependabot)
-[![Regels](https://img.shields.io/badge/JREM%20Regels-1137%2B-purple)](https://github.com/djimit/juraregel)
+[![Regels](https://img.shields.io/badge/JREM%20Regels-1258-purple)](https://github.com/djimit/juraregel)
 [![Agentic](https://img.shields.io/badge/Compliance%20Agent-Level%204-orange)](https://github.com/djimit/juraregel)
 [![API](https://img.shields.io/badge/API-82%2B%20endpoints-teal)](https://github.com/djimit/juraregel)
 [![RAG](https://img.shields.io/badge/RAG-Cloud%20LLM%20%2B%20Qdrant-brightgreen)](https://github.com/djimit/juraregel)
@@ -47,7 +47,24 @@ JuraRegel gebruikt vier maturity-niveaus per use case:
 | L2 | Pilot | Onafhankelijke juridische review, evidence model, auditlog | CI faalt bij self-approval |
 | L3 | Production | Legal sign-off, required checks, threat model, SBOM, OAuth2 | Volledige assurance pipeline |
 
-Huidige status: 26 exports zijn L0 en 8 exports L1. Geen regelset is L2 of L3.
+Huidige status (2026-08-28): 50 exports zijn effectief L0 en 8 exports L1.
+Daarvan missen 22 oudere exports nog een expliciet `maturityLevel`; de gates
+behandelen die fail-safe als L0. Geen regelset is L2 of L3.
+
+### Actuele trust-status
+
+- De JKB-check indexeert alle 1.258 regels uit 58 JREM-exports zonder ontbrekende
+  of extra regels.
+- De source-quality gate rapporteert 282 bekende schulditems in 17 L0-bestanden,
+  met 0 blokkades en 0 regressies. Deze schuld is geen bewijs van bronkwaliteit.
+- `procesreglement` is in quarantaine en levert uitsluitend
+  `insufficient_evidence` met verplichte handmatige controle.
+- `classificatie` is teruggebracht tot drie smalle catalogusregels rond artikel
+  93 onder a Rv; ook deze set is niet uitvoerbaar of productie-klaar.
+- Geen van de zeven gecontroleerde L2-kandidaten is promotieklaar.
+
+Zie [het actuele trust-report](docs/trust-report.md) voor bewijs, beperkingen en
+de resterende menselijke gates.
 
 ### Uitvoerbaarheidscontract
 
@@ -64,7 +81,7 @@ evidence rapporteren zij geen compliance-oordeel.
 - **JREM** — Judicial Rule Exchange Model, versioned JSON Schema standaard (v1.0.0 → v1.1.0) voor juridische regels
 - **Rule APIs** — vijf uitvoerbare domeinen; overige domeinen zijn expliciet catalog-only
 - **MCP Server** — 12 tools + 3 resources + 3 prompts voor LLM-agents (Claude, GPT, lokale LLMs)
-- **Knowledge Base** — 750 regels doorzoekbaar met SQLite FTS5; vector search is optioneel en evaluatie-pending
+- **Knowledge Base** — 1.258 regels volledig geïndexeerd; een SQLite FTS5-store kan lokaal worden opgebouwd, vector search is optioneel en evaluatie-pending
 - **BDD Tests** — Gherkin scenarios voor legal team acceptatie (pytest-bdd)
 - **BWB Harvester** — automatische wetwijziging-detectie via BWB API
 - **CI/CD Gates** — 18+ gates: per-use-case (14), JKB (5), extraction (3), schema versioning, BDD, harvester health
@@ -358,14 +375,18 @@ NORA is de **overkoepelende architectuurlaag** die alle use cases verbindt. 15 p
 
 ## Use Case: EU AI Act — AI-systeem Compliance
 
-**Als** AI-developer **wil ik** automatisch valideren of mijn AI-systeem voldoet aan de EU AI Act **zodat** ik niet handmatig 12 artikelen hoef te checken.
+**Als** AI-developer **wil ik** relevante EU AI Act-verplichtingen doorzoeken
+**zodat** ik de juridische beoordeling met herleidbare bronverwijzingen kan
+voorbereiden.
 
 | Rol | Probleem | Oplossing |
 |---|---|---|
-| AI developer | Onbekend welke verplichtingen van toepassing zijn | Rule API classificeert: verboden/hoog/beperkt/minimaal |
-| Compliance officer | Conformity assessment onduidelijk | Check art. 9-12 + 43 |
+| AI developer | Onbekend welke verplichtingen mogelijk relevant zijn | Catalogus voor risicoklassen en verplichtingen |
+| Compliance officer | Conformity assessment onduidelijk | Bronmapping voor onder meer art. 9-15 en 43 |
 
-12 regels (classificatie, conformity, transparantie, rechten). Rule API op `localhost:8498`. Bron: EUR-Lex.
+39 regels in twee L0-exports. De API op `localhost:8498` is catalog-only; de
+promotion preflight blokkeert inhoudelijke promotie totdat de deterministische
+regels semantisch uitvoerbaar zijn. Bron: EUR-Lex.
 
 ## Use Case: Judicial AI Assurance — Rechtspraak onder menselijke regie
 
@@ -401,7 +422,9 @@ automatische beleidsconclusie.
 
 ## Use Case: AVG/GDPR — Privacy Compliance
 
-**Als** privacy officer of FG **wil ik** automatisch valideren of mijn organisatie voldoet aan de AVG **zodat** ik niet handmatig 10 artikelen hoef te checken.
+**Als** privacy officer of FG **wil ik** relevante AVG-verplichtingen doorzoeken
+**zodat** ik de handmatige compliancebeoordeling met bronverwijzingen kan
+voorbereiden.
 
 | Rol | Probleem | Oplossing |
 |---|---|---|
@@ -409,7 +432,9 @@ automatische beleidsconclusie.
 | FG | Bewaartermijnen niet systematisch | Check art. 5 lid 1e |
 | Web developer | Rechten van betrokkenen onbekend | Check art. 12-22 |
 
-10 regels (DPIA, bewaartermijn, rechten, minimisation). Rule API op `localhost:8499`. Bron: wetten.overheid.nl (UAVG).
+25 L0-catalogusregels (DPIA, bewaartermijn, rechten, minimisation). De API op
+`localhost:8499` is niet toegelaten tot het uitvoerbare `calculate`-pad. Bron:
+AVG/UAVG.
 
 ## Use Case: NEDERUS — Multi-Jurisdictional AI Compliance Mapping
 
@@ -420,9 +445,11 @@ automatische beleidsconclusie.
 | Compliance officer | 4 frameworks × eigen risicoanalyse, eigen rapportage | NEDERUS unified controls: één assessment, vier dekkingen |
 | CISO | BIO2 + NIS2 overlappen maar gebruiken andere terminologie | NEDERUS mapping toont exact welke maatregelen overlappen |
 | Enterprise architect | NORA principes niet direct gekoppeld aan EU AI Act vereisten | NEDERUS koppelt NORA grondslagen aan EU AI Act artikelen |
-| AI developer | Onbekend of AI-systeem aan alle kaders voldoet | NED-01 t/m NED-05 als startpunt voor compliance review |
+| AI developer | Onbekend of AI-systeem aan alle kaders voldoet | NED-01 t/m NED-08 als startpunt voor compliance review |
 
-NEDERUS (Nederlandse Unified AI Standards) is een open framework dat 5 unified controls definieert die **alle vijf** dekken: NIST AI RMF (functioneel), EU AI Act (wettelijk), BIO2 (beveiliging), NIS2 (cybersecurity), NORA (architectuur).
+NEDERUS (Nederlandse Unified AI Standards) is een open framework met 8 unified
+controls. NED-01 t/m NED-05 vormen de oorspronkelijke kern; NED-06 t/m NED-08
+voegen CRA, DSA en AI-aansprakelijkheid toe.
 
 ### NEDERUS Controls in JuraRegel
 
@@ -690,48 +717,15 @@ graph TB
 
 ### Use Case Maturity
 
-| Use case | Regels | Status | Poort |
-|---|---|---|---|
-| Griffierecht | 36 | **PoC** | 8490 |
-| BIO2 | 162 | **PoC** | 8494 |
-| Forum Standaardisatie | 22 | **PoC** | 8495 |
-| Overheidsstandaarden | 24 | **PoC** | 8496 |
-| NORA | 15 | **PoC** | 8497 |
-| EU AI Act | 12 | PoC | 8498 |
-| Judicial AI Assurance | 12 | **PoC, catalog-only** | 8521 |
-| ADR ITGC-kader v1.1 | 48 | **L1-PoC, catalog-only** | 8522 |
-| AVG/GDPR | 10 | PoC | 8499 |
-| NCSC | 32 | PoC | 8500 |
-| **eIDAS 2.0** | **32** | **PoC** | **8523** |
-| **BIA-BIV-DPIA** | **32** | **PoC** | **8524** |
-| **DPIA Generator** | **51** | **PoC** | **8525** |
-| **ISO 27001 ISMS** | **28** | **PoC** | **8526** |
-| **Wet Digitale Overheid** | **16** | **PoC** | **8528** |
-| **ISO 25010** | **35** | **PoC** | **8529** |
-| **ISO 27002** | **34** | **PoC** | **8530** |
-| **ISO 27701** | **24** | **PoC** | **8531** |
-| **ISO 22301** | **24** | **PoC** | **8532** |
-| **ISO 31000** | **21** | **PoC** | **8533** |
-| **ISO 9001** | **27** | **PoC** | **8534** |
-| **NEN 7510** | **15** | **PoC** | **8535** |
-| **NIST CSF 2.0** | **24** | **PoC** | **8536** |
-| **ISO 20000** | **16** | **PoC** | **8537** |
-| **PCI-DSS v4.0** | **12** | **PoC** | **8538** |
-| **COBIT 2019** | **12** | **PoC** | **8539** |
-| **SOC 2** | **16** | **PoC** | **8540** |
-| **NIS2 Volledig** | **24** | **PoC** | **8541** |
-| **ISO 14001** | **16** | **PoC** | **8542** |
-| **ISO 45001** | **17** | **PoC** | **8543** |
-| **BDI** | **14** | **PoC** | **8544** |
-| **Algoritmeregister + FRIA** | **20** | **PoC** | **8545** |
-| **NEDERUS** | **8 unified controls** | **v2.0 (external repo)** | **—** |
-| Procesreglement | 4 | PoC | 8491 |
-| Classificatie | 3 | PoC | 8492 |
-| Publicatie/PII | 3 | **PoC** (engine V4.2) | 8493 |
+De machineleesbare exports zijn leidend: 50 L0 en 8 L1. Alleen vijf domeinen
+hebben een bewezen `calculate`-pad; alle overige domeinen zijn catalog-only.
+De volledige actuele uitsplitsing en promotiebeperkingen staan in het
+[trust-report](docs/trust-report.md).
 
+```text
 ├── griffierecht/         Eerste use case (bewezen PoC)
-├── procesreglement/      UC-02: Digitale indiening
-├── classificatie/        UC-03: Zaakclassificatie
+├── procesreglement/      UC-02: quarantaine, catalog-only
+├── classificatie/        UC-03: artikel-93-catalogus, L0
 └── publicatie/           UC-06: Pseudonimiseringsrichtlijn engine
 shared/
 ├── api_base.py           Factory pattern: create_app(domain, jrem_path, port)
@@ -790,10 +784,10 @@ Zie `jrem-open-source/` voor het standalone JREM schema, validator en examples.
 
 | Metriek | Waarde |
 |---|---|
-| Use cases | 35 use cases + NEDERUS v2.0 multi-jurisdictionele mapping |
+| Use cases | 56 use-case directories met 58 JREM-exports |
 | Tests | Semantische scenario-, bron-, API-, BDD-, MCP-gates + 52 eIDAS tests |
 | CI gates | 14 per use case |
-| JREM regels | 1137+ (incl. alle ISO, NIST, PCI, COBIT, SOC, NEN, BDI, NIS2-normen) |
+| JREM regels | 1.258; JKB check volledig en consistent |
 | Pseudonimisering engine | V4.2 — hoog op 25.127 uitspraken |
 | Open standaarden | 9 compliant (+ eIDAS 2.0, NEDERUS CC-BY) |
 | NEDERUS controls | 8 unified controls (NED-01 t/m NED-08), 8 frameworks gemapped |
