@@ -10,7 +10,7 @@
   "review": {
     "datum": "__REVIEW_DATUM_YYYY-MM-DD__",
     "geldigTot": "__GELDIG_TOT_YYYY-MM-DD__",
-    "scope": "L2 pilot voor procesreglement civiel dagvaarding - digitale indiening, griffierechten en bijlijsten.",
+    "scope": "GEPAUZEERD: eerst afzonderlijke bronextracties voor januari-juni 2026 en vanaf 1 juli 2026 valideren.",
     "bronSnapshot": "__BRON_SNAPSHOT_ID_OF_DATUM__",
     "verklaring": "__JURIDISCHE_VERKLARING_BINNEN_SCOPE__",
     "beperkingen": [
@@ -20,8 +20,18 @@
   },
   "sourceSnapshotRefs": [
     {
-      "name": "Wetboek van Burgerlijke Rechtsvordering (Rv)",
-      "url": "https://wetten.overheid.nl/BWBR0001827",
+      "name": "Landelijk procesreglement civiele dagvaardingszaken rechtbanken handel en kanton, juli 2025-juni 2026",
+      "url": "https://www.rechtspraak.nl/binaries/_rts_1768314977460/content/assets/uit/lov/pr/lov-pr-landelijk-procesreglement-civiele-zaken-handel-kanton-1-juli-2025.pdf",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    },
+    {
+      "name": "Landelijk procesreglement civiele dagvaardingszaken rechtbanken handel en kanton, tweede versie vanaf 1 juli 2026",
+      "url": "https://www.rechtspraak.nl/binaries/_rts_1784541585221/content/assets/uit/lov/pr/lov-pr-civiele-dagvaardingszaken-rechtbanken-kanton-en-handel-2e-versie-1-juli-2026.pdf",
+      "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
+    },
+    {
+      "name": "Reglement inzake toegang tot en gebruik van systeem DT Rechtspraak",
+      "url": "https://www.rechtspraak.nl/binaries/_rts_1768910544022/content/assets/ivo/wi/ivo-wi-technisch-reglement-dt.pdf",
       "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
     },
     {
@@ -32,7 +42,7 @@
   ],
   "scenarioAcceptance": [
     {
-      "scenario": "PR-SC-001: Dagvaarding handel - digitaal verplicht",
+      "scenario": "Nog te reconstrueren: vrijwillig, verplicht en uitgesloten digitaal procederen per bronversie",
       "accepted": "__TRUE_FALSE__"
     }
   ]

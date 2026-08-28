@@ -1,3 +1,4 @@
+import json
 import sys
 from pathlib import Path
 
@@ -12,6 +13,7 @@ _spec = importlib.util.spec_from_file_location("basisregistraties_app", _app_pat
 _app_module = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(_app_module)
 app = _app_module.app
+JREM_DIR = Path(__file__).parent.parent / "jrem" / "exports"
 
 from fastapi.testclient import TestClient
 
@@ -100,3 +102,8 @@ def test_explain():
 def test_versions():
     r = client.get("/v1/basisregistraties/versions")
     assert r.status_code == 200
+
+
+def test_unreachable_koppelvlak_placeholders_are_not_exposed():
+    rules = json.loads((JREM_DIR / "basisregistraties-toegang-2025.1.json").read_text())["rules"]
+    assert {rule["ruleId"] for rule in rules}.isdisjoint({"KV-001", "KV-002"})

@@ -221,47 +221,6 @@
       "priority": 100
     },
     {
-      "ruleId": "KV-001",
-      "name": "Koppelvlak BRP — StUF-BG of Haal Centraal API",
-      "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "Logius StUF-BG / Haal Centraal BRP"
-        }
-      ],
-      "conditions": {
-        "registratie": "BRP",
-        "koppelvlakType": "overheid_naar_overheid"
-      },
-      "outcome": {
-        "koppelvlak": "StUF-BG_of_Haal_Centraal",
-        "standaard": "Logius",
-        "confidence": "deterministic",
-        "manualReviewRequired": false
-      },
-      "priority": 50
-    },
-    {
-      "ruleId": "KV-002",
-      "name": "Koppelvlak BAG — OGC API Features of REST",
-      "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "Kadaster BAG API / PDOK"
-        }
-      ],
-      "conditions": {
-        "registratie": "BAG"
-      },
-      "outcome": {
-        "koppelvlak": "PDOK_OGC_API",
-        "vorm": "REST",
-        "confidence": "deterministic",
-        "manualReviewRequired": false
-      },
-      "priority": 50
-    },
-    {
       "ruleId": "DB-001",
       "name": "Doelbinding — elke opvraag vereist geregistreerd doel",
       "sourceRefs": [

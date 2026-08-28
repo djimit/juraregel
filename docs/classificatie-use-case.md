@@ -1,17 +1,17 @@
 # Classificatie Use Case — Zaaksregistratie
 
-**Als** griffier **wil ik** bij intake automatisch de juiste zaakstroom bepalen **zodat** de zaak bij de juiste rechter belandt.
+**Als** griffier **wil ik** bij intake een controleerbaar classificatievoorstel krijgen **zodat** uitzonderingen niet automatisch naar de verkeerde zaakstroom gaan.
 
 | Rol | Probleem | Oplossing |
 |---|---|---|
-| Griffier | Handmatige classificatie foutgevoelig | Rule API classificeert op basis van vorderingwaarde |
-| Burger | Zaak belandt bij verkeerde rechter | Deterministische classificatie met uitleg |
+| Griffier | Handmatige classificatie foutgevoelig | Catalogusregel voor de exacte grens van artikel 93 onder a |
+| Burger | Zaak belandt bij verkeerde rechter | Fail-closed voorstel; uitzonderingen blijven handmatig |
 
-3 regels (PoC). Rule API op port 8492. 16 tests. PoC status.
+3 regels, 3 inhoudelijke tests. Catalog-only op port 8492. L0-demo; geen productieclaim.
 
 ## Functiehuis Rijksoverheid Rollen
 
 | Rol | Probleem | Oplossing |
 |---|---|---|
-| Griffier | Handmatige zaakclassificatie | Rule API classificeert kanton vs handel |
-| Intake medewerker | Foute classificatie → vertraging | Deterministische classificatie met redeneerstappen |
+| Griffier | Handmatige zaakclassificatie | Smalle artikel-93-bronmapping voor geldvorderingen |
+| Intake medewerker | Foute classificatie → vertraging | Handmatige controle boven de grens en bij bijzondere categorieën |

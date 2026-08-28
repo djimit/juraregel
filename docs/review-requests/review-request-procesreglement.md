@@ -6,7 +6,7 @@
 
 **JREM versie:** 2026.1
 **Aantal regels:** 20
-**Aantal tests:** 16
+**Aantal tests:** 1 quarantaine-invariant
 **API poort:** 8491
 
 ---
@@ -15,8 +15,9 @@
 
 Deze use case vertaalt de volgende bronnen naar testbare, auditeerbare regels in het JuraRegel JREM formaat:
 
-- Wet Rv
-- Landelijk procesreglement civiele dagvaardingszaken
+- Landelijk procesreglement civiele dagvaardingszaken, juli 2025-juni 2026
+- Landelijk procesreglement civiele dagvaardingszaken, tweede versie vanaf 1 juli 2026
+- Reglement inzake toegang tot en gebruik van systeem DT Rechtspraak
 
 ## Review criteria
 
@@ -44,8 +45,8 @@ Per regel kan de jurist aangeven:
 
 ## Status
 
-- **Huidige accordering:** Self-approved door D. Landman (niet onafhankelijk)
-- **Doel:** Onafhankelijke jurist-review voordat deze use case in productie wordt genomen
+- **Huidige status:** Quarantaine; alle uitkomsten zijn fail-closed en vereisen handmatige controle
+- **Doel:** Eerst reconstructie per bronversie, daarna pas onafhankelijke review en eventuele pilot
 - **Na review:** Resultaten worden vastgelegd in `docs/review-results/procesreglement.md`
 
 ---
