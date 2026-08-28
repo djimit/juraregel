@@ -1,77 +1,109 @@
 # JuraRegel Trust Report
 
-**Datum:** 2026-07-16
+**Datum:** 2026-08-28
+
 **Repo:** `djimit/juraregel`
-**Change:** `judicial-ai-assurance` 2026.1
-**Status:** technisch PoC-ready; niet productie-ready zonder eindgates.
+
+**Snapshot:** merge `4e3de85`
+**Status:** technisch PoC-ready; niet productie-ready zonder onafhankelijke
+juridische validatie en geldige acceptatie-evidence.
 
 ## Executive Readiness
 
-JuraRegel heeft 702 JKB-regels over 31 logische domeinen. De huidige JREM exports hebben 26 `L0-demo` en 8 `L1-poc` rulesets. Er zijn geen `L2-pilot` of `L3-production` claims.
+De huidige repository bevat 58 JREM-exports met samen 1.258 regels. De gates
+behandelen 50 exports als `L0-demo` en 8 als `L1-poc`; 22 van de L0-exports
+missen nog een expliciet `maturityLevel`. Er zijn geen `L2-pilot`- of
+`L3-production`-claims.
 
-De nieuwe live bronlaag is read-only en gebruikt alleen openbare metadata/search-pagina's. De bronlaag ondersteunt preflight-signalen, geen finale juridische besluiten.
+Vijf domeinen hebben een bewezen `calculate`-pad: `griffierecht`, `toeslagen`,
+`omgevingswet`, `basisregistraties` en `participatiewet`. Alle andere exports
+zijn catalogi en mogen geen geautomatiseerd juridisch oordeel geven.
 
-## CI Evidence
+## Repository Evidence
 
 | Check | Status | Evidence |
 |---|---:|---|
-| Laatste GitHub Actions run | pass | run `28829466813`, commit `cfa1753`, conclusion `success` |
-| Huidige lokale repositorygate | pass | `bash ci/run-all-gates.sh`: 286 tests, 29 OpenAPI-schema's en SDK-typecheck groen |
-| JKB coverage | generated | `python3 tools/jkb-builder.py`: 702 regels, 31 JREM-domeinnamen |
-| Source health | pass/deprecated | BWB, EUR-Lex, Rechtspraak, UPL, TOOI/ROO, CVDR/SRU, Woo-index/DiWoo en STTR/IMTR+RTR `ok`; PLOOI bewust `deprecated` |
-| Live harvester smoke | pass | CVDR 3 resultaten; Woo-index 5 organisaties; STTR ondersteund `3.0`, `2.0`, `1.5` |
-| Jurist gate policy | pass as policy | L2/L3 faalt zonder uitgebreide juristAccordering; L3 vereist indicator-disclaimer en `indicator-only` boundary |
-| L2 promotion preflight | pass as guard | 3 target packages checked; 0 ready, 0 blocking; placeholders houden L2-promotie tegen |
+| Volledige lokale gate | pass | `bash ci/run-all-gates.sh`: 561 tests en alle overige gates groen |
+| JKB-consistentie | pass | `python3 tools/jkb-builder.py --check-only`: 1.258 bronregels en 1.258 indexregels; geen ontbrekende, extra of incomplete entries |
+| Source quality | debt/pass | `python3 ci/source_quality.py`: 282 bekende schulditems, 0 blocking en 0 regressions |
+| L2-promotion preflight | guard/pass | 7 kandidaten gecontroleerd; 0 ready en 0 blocking omdat geen export L2/L3 claimt |
 
-## Live Harvester Status
+Dit is repository- en gate-evidence. Het bewijst geen actuele werking van
+optionele vectorstores, externe bronendpoints of onafhankelijke juridische
+juistheid.
 
-| Bron | Live pad | Status | Grenzen |
-|---|---|---:|---|
-| CVDR/SRU | `https://lokaleregelgeving.overheid.nl/ZoekResultaat` met `locatie`, `tekst`, `count` | ok | Normaliseert zoekresultaten en sourceRefs; haalt geen volledige regelingsteksten in bulk op |
-| Woo-index/DiWoo | `https://organisaties.overheid.nl/woo/zoeken` en organisatiepagina's | ok | Leest publicatielocaties/categorieen; haalt geen documentbody's of private inhoud op |
-| STTR/IMTR+RTR | `https://iplo.nl/digitaal-stelsel/aansluiten/standaarden/sttr-imtr/` | ok | Leest ondersteunde versies en lokale package-metadata; geen DSO/RTR submission-client |
+### Niet-blokkerende gatesignalen
 
-## Maturity And Acceptance
+- JREM-validatie: 112 waarschuwingen en 0 fouten, vooral ontbrekende
+  approval-objecten en identifiers in oudere exports.
+- Legal-review gate: 35 self-approvalwaarschuwingen en 0 blokkades.
+- Pytest: 15 deprecation-waarschuwingen uit `Starlette`/`pytest-bdd`-
+  afhankelijkheden.
+- JKB vector- en keywordcoverage zijn overgeslagen omdat de optionele lokale
+  stores niet aanwezig waren; de JSON-indexconsistentie is wel bewezen.
 
-| Domein | Maturity | Acceptance | Readiness |
-|---|---:|---:|---|
-| `decentrale-regelcheck` | L1-poc | draft/self | Live CVDR metadata-preflight; productiepromotie geblokkeerd tot juristacceptatie |
-| `woo-publicatieplicht-preflight` | L1-poc | draft/self | Live Woo publicatielocatie-preflight; metadata-only, geen documentinhoud |
-| `sttr-preflight` | L1-poc | draft/self | Live STTR versie-discovery en package metadata checks; geen formele DSO-validatie |
-| `judicial-ai-assurance` | L1-poc | draft/self | Catalog-only; 12 controls en 9 niet-compenseerbare hard stops; juridische en governance-review open |
-| Overige JREM exports | L0-demo/L1-poc | self of draft/full metadata | Geen L2/L3 readiness claim |
+## Source-quality Debt
 
-## L2 Acceptance Package Status
+Alle 282 bekende items zitten in 17 L0-exports en zijn daardoor niet
+blokkerend. De baseline voorkomt groei; zij maakt bestaande schuld niet
+acceptabel.
 
-| Domein | Package status | Reviewer metadata | Source snapshot | Scenario acceptance | Claim |
-|---|---:|---:|---:|---:|---|
-| `decentrale-regelcheck` | template-ready | placeholder | placeholder dates | placeholder decisions | Geen L2 claim; blijft `L1-poc` |
-| `woo-publicatieplicht-preflight` | template-ready | placeholder | placeholder dates | placeholder decisions | Geen L2 claim; blijft `L1-poc` |
-| `sttr-preflight` | template-ready | placeholder | placeholder dates | placeholder decisions | Geen L2 claim; blijft `L1-poc` |
+| Type | Aantal |
+|---|---:|
+| `section` is geen exacte juridische vindplaats | 277 |
+| URL ontbreekt | 2 |
+| Bronversie of brondatum ontbreekt | 2 |
+| BWB-, CELEX- of ELI-identificatie ontbreekt | 1 |
 
-De acceptance templates staan in `docs/acceptance-templates/`. Ze zijn machineleesbaar en human-fillable, maar niet juridisch geaccepteerd zolang placeholders aanwezig zijn. `ci/l2_promotion_preflight.py` rapporteert daarom `ready=false` voor alle drie domeinen en blokkeert alleen als een JREM export al naar `L2-*` of `L3-*` is gezet zonder geldige metadata.
+Voor L2/L3 zijn exacte, reproduceerbare bronankers verplicht. Nieuwe schuld of
+schuld in een L2/L3-export laat de gate falen.
 
-## L2/L3 Gate Contract
+## Rechtspraak Trust Reset
 
-Voor `L2-*` en `L3-*` vereist de gate:
+| Domein | Huidige status | Grens |
+|---|---|---|
+| `classificatie` | 3 L0-catalogusregels met 3 scenario's | Smalle mapping van artikel 93 onder a Rv; geen uitvoerbaar classificatiebesluit |
+| `procesreglement` | 20 historische placeholders plus 1 quarantaine-invariant | Alle uitkomsten zijn `insufficient_evidence` en vereisen handmatige controle; geldig tot en met 2026-06-30 |
+| `basisregistraties` | 2 onbewezen kennisvereisten verwijderd | Geen resterende source-quality schuld in deze export |
 
-- `approval.type` is niet `self`.
-- `metadata.acceptatieType` is `full` of `update`.
-- `metadata.juristAccordering` bevat `geaccondeerdDoor`, `rol`, `organisatie`, `datum`, `geldigTot`, `versie`, `scope`, `bronSnapshot`, `verklaring` en niet-lege `beperkingen`.
-- `juristAccordering.versie` is gelijk aan JREM `version`.
-- `geldigTot` is niet verlopen.
-- `L3-*` bevat `metadata.indicatorDisclaimer` en `metadata.manualReviewBoundary=indicator-only`.
+Voor `procesreglement` moet de bronextractie per geldigheidsperiode opnieuw
+worden opgebouwd uit de officiële reglementen 2025/2026 en de opvolgende
+bronnen vanaf juli 2026. Zie
+[`procesreglement-use-case.md`](procesreglement-use-case.md) en
+[`classificatie-use-case.md`](classificatie-use-case.md).
+
+## L2 Acceptance Status
+
+De promotion preflight controleert zeven kandidaten. Geen is gereed:
+
+- `decentrale-regelcheck`, `woo-publicatieplicht-preflight` en `sttr-preflight`
+  missen ingevulde, geaccepteerde reviewtemplates;
+- `procesreglement` heeft daarnaast 20 bronkwaliteitsissues;
+- `classificatie` mist onafhankelijke scenarioacceptatie;
+- `eu-ai-act` en `avg-gdpr` bevatten elk 25 deterministische regels zonder
+  uitvoerbare voorwaarden, betekenisvolle uitkomst of handmatige controle.
+
+Voor `L2-*` en `L3-*` vereist de gate onafhankelijke approval, volledige en
+geldige juristaccordering, een passende bron-snapshot, geaccepteerde scenario's
+en semantisch uitvoerbare regels. `L3-*` vereist daarnaast de
+indicator-disclaimer en `manualReviewBoundary=indicator-only`.
 
 ## Human Gates Remaining
 
-1. Laat de broninterpretatie en hard-stopformuleringen onafhankelijk juridisch beoordelen.
-2. Laat de rechterlijke-governancegrens voor autonomie, menselijke toegang en equality of arms beoordelen.
-3. Keur een eventuele evidence-integratie met OpenMythos en Djimitflo afzonderlijk goed.
-4. Lever jurist-acceptatie metadata per domein dat naar L2/L3 moet en keur die maturity-wijziging expliciet goed.
+1. Los de 282 bronkwaliteitsitems op met exacte, versieerbare vindplaatsen.
+2. Herbouw en beoordeel het procesreglement per geldigheidsperiode.
+3. Laat scenario's en juridische interpretaties onafhankelijk accepteren voor
+   ieder domein dat naar L2 moet.
+4. Herstel de semantische uitvoerbaarheid van `eu-ai-act` en `avg-gdpr` voordat
+   promotie wordt overwogen.
+5. Beoordeel integratie-evidence uit OpenMythos en Djimitflo afzonderlijk; die
+   systemen vervangen de JuraRegel-promotiegates niet.
 
 ## Residual Risk
 
-- CVDR en Woo zijn HTML-search gebaseerde publieke contracten; bij markupwijziging degraderen de live-smokes in plaats van stil verkeerde data te leveren.
-- Woo `tooiCode` en `publishedAt` zijn niet altijd beschikbaar op de publieke Woo-index detailpagina; ontbrekende metadata blijft manual review.
-- STTR package checks zijn metadata-preflights; volledige XSD/verificatiematrix/DSO-submission blijft buiten scope.
-- Er is nog geen onafhankelijke juridische acceptatie voor de drie L1-preflightdomeinen of het nieuwe `judicial-ai-assurance`-profiel.
+- L0/L1 betekent geen productiegeschiktheid of juridisch advies.
+- Catalogusdekking bewijst niet dat een regel uitvoerbaar, actueel of volledig
+  juridisch gevalideerd is.
+- De optionele semantische zoeklaag en externe harvesters vereisen afzonderlijke
+  live verificatie; de lokale JKB-check bewijst alleen indexconsistentie.
+- De source-quality baseline is een regressiegrens, geen kwaliteitskeurmerk.
