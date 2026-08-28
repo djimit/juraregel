@@ -14,13 +14,10 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 21",
-          "bwbId": "BWBR0015703"
-        },
-        {
-          "type": "besluit",
-          "title": "Besluit bijstandsnormen 2025",
-          "section": "art. 2"
+          "section": "Article 21",
+          "url": "https://wetten.overheid.nl/BWBR0015703/2025-07-01",
+          "bwbId": "BWBR0015703",
+          "bronVersie": "2025-07-01"
         }
       ],
       "conditions": {
@@ -35,8 +32,8 @@
           "currency": "EUR",
           "periode": "maandelijks"
         },
-        "confidence": "deterministic",
-        "manualReviewRequired": false
+        "confidence": "insufficient_evidence",
+        "manualReviewRequired": true
       },
       "priority": 100
     },
@@ -47,13 +44,10 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 21",
-          "bwbId": "BWBR0015703"
-        },
-        {
-          "type": "besluit",
-          "title": "Besluit bijstandsnormen 2025",
-          "section": "art. 2"
+          "section": "Article 21",
+          "url": "https://wetten.overheid.nl/BWBR0015703/2025-07-01",
+          "bwbId": "BWBR0015703",
+          "bronVersie": "2025-07-01"
         }
       ],
       "conditions": {
@@ -68,8 +62,8 @@
           "currency": "EUR",
           "periode": "maandelijks"
         },
-        "confidence": "deterministic",
-        "manualReviewRequired": false
+        "confidence": "insufficient_evidence",
+        "manualReviewRequired": true
       },
       "priority": 100
     },
@@ -80,13 +74,10 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 21",
-          "bwbId": "BWBR0015703"
-        },
-        {
-          "type": "besluit",
-          "title": "Besluit bijstandsnormen 2025",
-          "section": "art. 2"
+          "section": "Article 21",
+          "url": "https://wetten.overheid.nl/BWBR0015703/2025-07-01",
+          "bwbId": "BWBR0015703",
+          "bronVersie": "2025-07-01"
         }
       ],
       "conditions": {
@@ -101,8 +92,8 @@
           "currency": "EUR",
           "periode": "maandelijks"
         },
-        "confidence": "deterministic",
-        "manualReviewRequired": false
+        "confidence": "insufficient_evidence",
+        "manualReviewRequired": true
       },
       "priority": 100
     },
@@ -113,13 +104,10 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 23",
-          "bwbId": "BWBR0015703"
-        },
-        {
-          "type": "besluit",
-          "title": "Besluit vermogensgrenzen 2025",
-          "section": "art. 2"
+          "section": "Article 34",
+          "url": "https://wetten.overheid.nl/BWBR0015703/2025-07-01",
+          "bwbId": "BWBR0015703",
+          "bronVersie": "2025-07-01"
         }
       ],
       "conditions": {
@@ -130,8 +118,8 @@
       },
       "outcome": {
         "vermogenAkkoord": true,
-        "confidence": "deterministic",
-        "manualReviewRequired": false
+        "confidence": "insufficient_evidence",
+        "manualReviewRequired": true
       },
       "priority": 260
     },
@@ -142,8 +130,10 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 23",
-          "bwbId": "BWBR0015703"
+          "section": "Article 34",
+          "url": "https://wetten.overheid.nl/BWBR0015703/2025-07-01",
+          "bwbId": "BWBR0015703",
+          "bronVersie": "2025-07-01"
         }
       ],
       "conditions": {
@@ -155,7 +145,7 @@
       "outcome": {
         "vermogenAkkoord": false,
         "reden": "Vermogen boven grens — geen recht op bijstand",
-        "confidence": "deterministic",
+        "confidence": "insufficient_evidence",
         "manualReviewRequired": true
       },
       "priority": 270
@@ -167,13 +157,10 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 23",
-          "bwbId": "BWBR0015703"
-        },
-        {
-          "type": "besluit",
-          "title": "Besluit vermogensgrenzen 2025",
-          "section": "art. 2"
+          "section": "Article 34",
+          "url": "https://wetten.overheid.nl/BWBR0015703/2025-07-01",
+          "bwbId": "BWBR0015703",
+          "bronVersie": "2025-07-01"
         }
       ],
       "conditions": {
@@ -184,8 +171,8 @@
       },
       "outcome": {
         "vermogenAkkoord": true,
-        "confidence": "deterministic",
-        "manualReviewRequired": false
+        "confidence": "insufficient_evidence",
+        "manualReviewRequired": true
       },
       "priority": 260
     },
@@ -196,8 +183,10 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 23",
-          "bwbId": "BWBR0015703"
+          "section": "Article 34",
+          "url": "https://wetten.overheid.nl/BWBR0015703/2025-07-01",
+          "bwbId": "BWBR0015703",
+          "bronVersie": "2025-07-01"
         }
       ],
       "conditions": {
@@ -209,7 +198,7 @@
       "outcome": {
         "vermogenAkkoord": false,
         "reden": "Vermogen boven grens — geen recht op bijstand",
-        "confidence": "deterministic",
+        "confidence": "insufficient_evidence",
         "manualReviewRequired": true
       },
       "priority": 270
@@ -221,13 +210,10 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 22",
-          "bwbId": "BWBR0015703"
-        },
-        {
-          "type": "besluit",
-          "title": "Besluit kostendelersnorm 2025",
-          "section": "art. 2"
+          "section": "Article 22a",
+          "url": "https://wetten.overheid.nl/BWBR0015703/2025-07-01",
+          "bwbId": "BWBR0015703",
+          "bronVersie": "2025-07-01"
         }
       ],
       "conditions": {
@@ -240,7 +226,7 @@
       "outcome": {
         "kostendelersnorm": true,
         "verlagingVanNorm": true,
-        "confidence": "deterministic",
+        "confidence": "insufficient_evidence",
         "manualReviewRequired": true
       },
       "priority": 250
@@ -252,8 +238,10 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 22",
-          "bwbId": "BWBR0015703"
+          "section": "Article 22a",
+          "url": "https://wetten.overheid.nl/BWBR0015703/2025-07-01",
+          "bwbId": "BWBR0015703",
+          "bronVersie": "2025-07-01"
         }
       ],
       "conditions": {
@@ -262,8 +250,8 @@
       },
       "outcome": {
         "kostendelersnorm": false,
-        "confidence": "deterministic",
-        "manualReviewRequired": false
+        "confidence": "insufficient_evidence",
+        "manualReviewRequired": true
       },
       "priority": 250
     },
@@ -274,13 +262,10 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 31",
-          "bwbId": "BWBR0015703"
-        },
-        {
-          "type": "besluit",
-          "title": "Besluit vrijlating inkomsten 2025",
-          "section": "art. 3"
+          "section": "Article 31(2)",
+          "url": "https://wetten.overheid.nl/BWBR0015703/2025-07-01",
+          "bwbId": "BWBR0015703",
+          "bronVersie": "2025-07-01"
         }
       ],
       "conditions": {
@@ -291,8 +276,8 @@
       },
       "outcome": {
         "vrijlatingPercentage": 100,
-        "confidence": "deterministic",
-        "manualReviewRequired": false
+        "confidence": "insufficient_evidence",
+        "manualReviewRequired": true
       },
       "priority": 240
     },
@@ -303,13 +288,10 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 31",
-          "bwbId": "BWBR0015703"
-        },
-        {
-          "type": "besluit",
-          "title": "Besluit vrijlating inkomsten 2025",
-          "section": "art. 3"
+          "section": "Article 31(2)",
+          "url": "https://wetten.overheid.nl/BWBR0015703/2025-07-01",
+          "bwbId": "BWBR0015703",
+          "bronVersie": "2025-07-01"
         }
       ],
       "conditions": {
@@ -323,8 +305,8 @@
         "vrijlatingPercentage": "afnemend_schaal",
         "minVrijlating": 50,
         "maxVrijlating": 100,
-        "confidence": "deterministic",
-        "manualReviewRequired": false
+        "confidence": "insufficient_evidence",
+        "manualReviewRequired": true
       },
       "priority": 240
     },
@@ -335,8 +317,10 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 31",
-          "bwbId": "BWBR0015703"
+          "section": "Article 31(2)",
+          "url": "https://wetten.overheid.nl/BWBR0015703/2025-07-01",
+          "bwbId": "BWBR0015703",
+          "bronVersie": "2025-07-01"
         }
       ],
       "conditions": {
@@ -347,8 +331,8 @@
       },
       "outcome": {
         "vrijlatingPercentage": "minimumloon_regeling",
-        "confidence": "deterministic",
-        "manualReviewRequired": false
+        "confidence": "insufficient_evidence",
+        "manualReviewRequired": true
       },
       "priority": 240
     },
@@ -359,8 +343,10 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 36",
-          "bwbId": "BWBR0015703"
+          "section": "Article 36",
+          "url": "https://wetten.overheid.nl/BWBR0015703/2025-07-01",
+          "bwbId": "BWBR0015703",
+          "bronVersie": "2025-07-01"
         }
       ],
       "conditions": {
@@ -373,8 +359,8 @@
       },
       "outcome": {
         "individueleInkomenstoeslag": true,
-        "confidence": "deterministic",
-        "manualReviewRequired": false
+        "confidence": "insufficient_evidence",
+        "manualReviewRequired": true
       },
       "priority": 240
     },
@@ -385,8 +371,10 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 21",
-          "bwbId": "BWBR0015703"
+          "section": "Articles 12-16",
+          "url": "https://wetten.overheid.nl/BWBR0015703/2025-07-01",
+          "bwbId": "BWBR0015703",
+          "bronVersie": "2025-07-01"
         }
       ],
       "conditions": {
@@ -397,7 +385,7 @@
       "outcome": {
         "bijstand": false,
         "reden": "Onder 21 — verwijzing naar Jeugdwet of ouderlijk onderhoud",
-        "confidence": "deterministic",
+        "confidence": "insufficient_evidence",
         "manualReviewRequired": true
       },
       "priority": 300
@@ -409,13 +397,10 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 20",
-          "bwbId": "BWBR0015703"
-        },
-        {
-          "type": "wet",
-          "title": "Ioaw",
-          "bwbId": "BWBR0004044"
+          "section": "Article 13(1)(a)",
+          "url": "https://wetten.overheid.nl/BWBR0015703/2025-07-01",
+          "bwbId": "BWBR0015703",
+          "bronVersie": "2025-07-01"
         }
       ],
       "conditions": {
@@ -429,7 +414,7 @@
       "outcome": {
         "bijstand": false,
         "regeling": "IOAW",
-        "confidence": "deterministic",
+        "confidence": "insufficient_evidence",
         "manualReviewRequired": true
       },
       "priority": 290
@@ -441,8 +426,10 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 18",
-          "bwbId": "BWBR0015703"
+          "section": "Article 18",
+          "url": "https://wetten.overheid.nl/BWBR0015703/2025-07-01",
+          "bwbId": "BWBR0015703",
+          "bronVersie": "2025-07-01"
         }
       ],
       "conditions": {
@@ -452,7 +439,7 @@
         "sanctie": true,
         "maatregel": "verlaging_uitkering",
         "duur": "1_tot_3_maanden",
-        "confidence": "deterministic",
+        "confidence": "insufficient_evidence",
         "manualReviewRequired": true
       },
       "priority": 280
@@ -464,8 +451,10 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 9",
-          "bwbId": "BWBR0015703"
+          "section": "Article 9(1)(a)",
+          "url": "https://wetten.overheid.nl/BWBR0015703/2025-07-01",
+          "bwbId": "BWBR0015703",
+          "bronVersie": "2025-07-01"
         }
       ],
       "conditions": {
@@ -475,8 +464,8 @@
       "outcome": {
         "sollicitatieplicht": true,
         "minSollicitatiesPerMaand": 4,
-        "confidence": "deterministic",
-        "manualReviewRequired": false
+        "confidence": "insufficient_evidence",
+        "manualReviewRequired": true
       },
       "priority": 240
     },
@@ -487,8 +476,10 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 9 lid 2",
-          "bwbId": "BWBR0015703"
+          "section": "Article 9(1)(b)",
+          "url": "https://wetten.overheid.nl/BWBR0015703/2025-07-01",
+          "bwbId": "BWBR0015703",
+          "bronVersie": "2025-07-01"
         }
       ],
       "conditions": {
@@ -498,8 +489,8 @@
       },
       "outcome": {
         "tegenwerkingsplicht": true,
-        "confidence": "deterministic",
-        "manualReviewRequired": false
+        "confidence": "insufficient_evidence",
+        "manualReviewRequired": true
       },
       "priority": 240
     },
@@ -510,8 +501,10 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 10",
-          "bwbId": "BWBR0015703"
+          "section": "Article 10d",
+          "url": "https://wetten.overheid.nl/BWBR0015703/2025-07-01",
+          "bwbId": "BWBR0015703",
+          "bronVersie": "2025-07-01"
         }
       ],
       "conditions": {
@@ -521,8 +514,8 @@
       "outcome": {
         "loonkostensubsidie": true,
         "banenafspraak": true,
-        "confidence": "deterministic",
-        "manualReviewRequired": false
+        "confidence": "insufficient_evidence",
+        "manualReviewRequired": true
       },
       "priority": 240
     },
@@ -533,8 +526,10 @@
         {
           "type": "wet",
           "title": "Participatiewet",
-          "section": "art. 17",
-          "bwbId": "BWBR0015703"
+          "section": "Articles 11, 19 and 31",
+          "url": "https://wetten.overheid.nl/BWBR0015703/2025-07-01",
+          "bwbId": "BWBR0015703",
+          "bronVersie": "2025-07-01"
         }
       ],
       "conditions": {
@@ -545,7 +540,7 @@
       "outcome": {
         "beëindiging": true,
         "reden": "Inkomen gelijk aan of boven bijstandsnorm",
-        "confidence": "deterministic",
+        "confidence": "insufficient_evidence",
         "manualReviewRequired": true
       },
       "priority": 200
@@ -565,5 +560,5 @@
       "Niet geschikt voor productie zonder externe validatie"
     ]
   },
-  "maturityLevel": "L1-poc"
+  "maturityLevel": "L0-demo"
 }

@@ -15,12 +15,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU NIS2 richtlijn",
-          "section": "NIS2-001",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "EU NIS2 richtlijn", "section": "NIS2-001", "url": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj", "eli": "http://data.europa.eu/eli/dir/2022/2555/oj", "bronDatum": "2022-12-14"}
       ],
       "conditions": {},
       "outcome": {
@@ -46,12 +41,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU NIS2 richtlijn",
-          "section": "NIS2-002",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "EU NIS2 richtlijn", "section": "NIS2-002", "url": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj", "eli": "http://data.europa.eu/eli/dir/2022/2555/oj", "bronDatum": "2022-12-14"}
       ],
       "conditions": {},
       "outcome": {
@@ -77,12 +67,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU NIS2 richtlijn",
-          "section": "NIS2-003",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "EU NIS2 richtlijn", "section": "NIS2-003", "url": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj", "eli": "http://data.europa.eu/eli/dir/2022/2555/oj", "bronDatum": "2022-12-14"}
       ],
       "conditions": {},
       "outcome": {
@@ -108,12 +93,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU NIS2 richtlijn",
-          "section": "NIS2-004",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "EU NIS2 richtlijn", "section": "NIS2-004", "url": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj", "eli": "http://data.europa.eu/eli/dir/2022/2555/oj", "bronDatum": "2022-12-14"}
       ],
       "conditions": {},
       "outcome": {
@@ -139,12 +119,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU NIS2 richtlijn",
-          "section": "NIS2-005",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "EU NIS2 richtlijn", "section": "NIS2-005", "url": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj", "eli": "http://data.europa.eu/eli/dir/2022/2555/oj", "bronDatum": "2022-12-14"}
       ],
       "conditions": {},
       "outcome": {
@@ -170,12 +145,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU NIS2 richtlijn",
-          "section": "NIS2-006",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "EU NIS2 richtlijn", "section": "NIS2-006", "url": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj", "eli": "http://data.europa.eu/eli/dir/2022/2555/oj", "bronDatum": "2022-12-14"}
       ],
       "conditions": {},
       "outcome": {
@@ -201,12 +171,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU NIS2 richtlijn",
-          "section": "NIS2-007",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "EU NIS2 richtlijn", "section": "NIS2-007", "url": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj", "eli": "http://data.europa.eu/eli/dir/2022/2555/oj", "bronDatum": "2022-12-14"}
       ],
       "conditions": {},
       "outcome": {
@@ -232,12 +197,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU NIS2 richtlijn",
-          "section": "NIS2-008",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "EU NIS2 richtlijn", "section": "NIS2-008", "url": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj", "eli": "http://data.europa.eu/eli/dir/2022/2555/oj", "bronDatum": "2022-12-14"}
       ],
       "conditions": {},
       "outcome": {
@@ -263,12 +223,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU NIS2 richtlijn",
-          "section": "NIS2-009",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "EU NIS2 richtlijn", "section": "NIS2-009", "url": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj", "eli": "http://data.europa.eu/eli/dir/2022/2555/oj", "bronDatum": "2022-12-14"}
       ],
       "conditions": {},
       "outcome": {
@@ -294,12 +249,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU NIS2 richtlijn",
-          "section": "NIS2-010",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "EU NIS2 richtlijn", "section": "NIS2-010", "url": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj", "eli": "http://data.europa.eu/eli/dir/2022/2555/oj", "bronDatum": "2022-12-14"}
       ],
       "conditions": {},
       "outcome": {
@@ -325,12 +275,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU NIS2 richtlijn",
-          "section": "NIS2-011",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "EU NIS2 richtlijn", "section": "NIS2-011", "url": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj", "eli": "http://data.europa.eu/eli/dir/2022/2555/oj", "bronDatum": "2022-12-14"}
       ],
       "conditions": {},
       "outcome": {
@@ -356,12 +301,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU NIS2 richtlijn",
-          "section": "NIS2-012",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "EU NIS2 richtlijn", "section": "NIS2-012", "url": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj", "eli": "http://data.europa.eu/eli/dir/2022/2555/oj", "bronDatum": "2022-12-14"}
       ],
       "conditions": {},
       "outcome": {
@@ -387,12 +327,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU NIS2 richtlijn",
-          "section": "NIS2-013",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "EU NIS2 richtlijn", "section": "NIS2-013", "url": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj", "eli": "http://data.europa.eu/eli/dir/2022/2555/oj", "bronDatum": "2022-12-14"}
       ],
       "conditions": {},
       "outcome": {
@@ -418,12 +353,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU NIS2 richtlijn",
-          "section": "NIS2-014",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "EU NIS2 richtlijn", "section": "NIS2-014", "url": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj", "eli": "http://data.europa.eu/eli/dir/2022/2555/oj", "bronDatum": "2022-12-14"}
       ],
       "conditions": {},
       "outcome": {
@@ -449,12 +379,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU NIS2 richtlijn",
-          "section": "NIS2-015",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "EU NIS2 richtlijn", "section": "NIS2-015", "url": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj", "eli": "http://data.europa.eu/eli/dir/2022/2555/oj", "bronDatum": "2022-12-14"}
       ],
       "conditions": {},
       "outcome": {

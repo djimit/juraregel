@@ -15,12 +15,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "AVG",
-          "section": "AVG-001",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2016/679 (AVG)", "section": "Article 35(3)", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_35/oj", "eli": "http://data.europa.eu/eli/reg/2016/679/oj", "bronDatum": "2016-04-27"}
       ],
       "conditions": {},
       "outcome": {
@@ -46,12 +41,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "AVG",
-          "section": "AVG-002",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2016/679 (AVG)", "section": "Article 35(3)", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_35/oj", "eli": "http://data.europa.eu/eli/reg/2016/679/oj", "bronDatum": "2016-04-27"}
       ],
       "conditions": {},
       "outcome": {
@@ -77,12 +67,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "AVG",
-          "section": "AVG-003",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2016/679 (AVG)", "section": "Article 5(1)(e)", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_5/oj", "eli": "http://data.europa.eu/eli/reg/2016/679/oj", "bronDatum": "2016-04-27"}
       ],
       "conditions": {},
       "outcome": {
@@ -108,12 +93,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "AVG",
-          "section": "AVG-004",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2016/679 (AVG)", "section": "Article 15", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_15/oj", "eli": "http://data.europa.eu/eli/reg/2016/679/oj", "bronDatum": "2016-04-27"}
       ],
       "conditions": {},
       "outcome": {
@@ -139,12 +119,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "AVG",
-          "section": "AVG-005",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2016/679 (AVG)", "section": "Article 16", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_16/oj", "eli": "http://data.europa.eu/eli/reg/2016/679/oj", "bronDatum": "2016-04-27"}
       ],
       "conditions": {},
       "outcome": {
@@ -170,12 +145,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "AVG",
-          "section": "AVG-006",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2016/679 (AVG)", "section": "Article 17", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_17/oj", "eli": "http://data.europa.eu/eli/reg/2016/679/oj", "bronDatum": "2016-04-27"}
       ],
       "conditions": {},
       "outcome": {
@@ -201,12 +171,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "AVG",
-          "section": "AVG-007",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2016/679 (AVG)", "section": "Article 20", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_20/oj", "eli": "http://data.europa.eu/eli/reg/2016/679/oj", "bronDatum": "2016-04-27"}
       ],
       "conditions": {},
       "outcome": {
@@ -232,12 +197,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "AVG",
-          "section": "AVG-008",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2016/679 (AVG)", "section": "Article 5(1)(c)", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_5/oj", "eli": "http://data.europa.eu/eli/reg/2016/679/oj", "bronDatum": "2016-04-27"}
       ],
       "conditions": {},
       "outcome": {
@@ -263,12 +223,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "AVG",
-          "section": "AVG-009",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2016/679 (AVG)", "section": "Article 30", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_30/oj", "eli": "http://data.europa.eu/eli/reg/2016/679/oj", "bronDatum": "2016-04-27"}
       ],
       "conditions": {},
       "outcome": {
@@ -294,12 +249,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "AVG",
-          "section": "AVG-010",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2016/679 (AVG)", "section": "Article 37", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_37/oj", "eli": "http://data.europa.eu/eli/reg/2016/679/oj", "bronDatum": "2016-04-27"}
       ],
       "conditions": {},
       "outcome": {
@@ -325,12 +275,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "AVG",
-          "section": "AVG-011",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2016/679 (AVG)", "section": "Article 6(1)(a)", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_6/oj", "eli": "http://data.europa.eu/eli/reg/2016/679/oj", "bronDatum": "2016-04-27"}
       ],
       "conditions": {},
       "outcome": {
@@ -356,12 +301,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "AVG",
-          "section": "AVG-012",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2016/679 (AVG)", "section": "Article 6(1)(b)", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_6/oj", "eli": "http://data.europa.eu/eli/reg/2016/679/oj", "bronDatum": "2016-04-27"}
       ],
       "conditions": {},
       "outcome": {
@@ -387,12 +327,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "AVG",
-          "section": "AVG-013",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2016/679 (AVG)", "section": "Article 6(1)(c)", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_6/oj", "eli": "http://data.europa.eu/eli/reg/2016/679/oj", "bronDatum": "2016-04-27"}
       ],
       "conditions": {},
       "outcome": {
@@ -418,12 +353,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "AVG",
-          "section": "AVG-014",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2016/679 (AVG)", "section": "Article 9", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_9/oj", "eli": "http://data.europa.eu/eli/reg/2016/679/oj", "bronDatum": "2016-04-27"}
       ],
       "conditions": {},
       "outcome": {
@@ -449,12 +379,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "AVG",
-          "section": "AVG-015",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2016/679 (AVG)", "section": "Article 13", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_13/oj", "eli": "http://data.europa.eu/eli/reg/2016/679/oj", "bronDatum": "2016-04-27"}
       ],
       "conditions": {},
       "outcome": {
@@ -480,12 +405,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "AVG",
-          "section": "AVG-016",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2016/679 (AVG)", "section": "Article 14", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_14/oj", "eli": "http://data.europa.eu/eli/reg/2016/679/oj", "bronDatum": "2016-04-27"}
       ],
       "conditions": {},
       "outcome": {
@@ -511,12 +431,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "AVG",
-          "section": "AVG-017",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2016/679 (AVG)", "section": "Article 25(1)", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_25/oj", "eli": "http://data.europa.eu/eli/reg/2016/679/oj", "bronDatum": "2016-04-27"}
       ],
       "conditions": {},
       "outcome": {
@@ -542,12 +457,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "AVG",
-          "section": "AVG-018",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2016/679 (AVG)", "section": "Article 32", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_32/oj", "eli": "http://data.europa.eu/eli/reg/2016/679/oj", "bronDatum": "2016-04-27"}
       ],
       "conditions": {},
       "outcome": {
@@ -573,12 +483,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "AVG",
-          "section": "AVG-019",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2016/679 (AVG)", "section": "Article 33", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_33/oj", "eli": "http://data.europa.eu/eli/reg/2016/679/oj", "bronDatum": "2016-04-27"}
       ],
       "conditions": {},
       "outcome": {
@@ -604,12 +509,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "AVG",
-          "section": "AVG-020",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2016/679 (AVG)", "section": "Article 34", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_34/oj", "eli": "http://data.europa.eu/eli/reg/2016/679/oj", "bronDatum": "2016-04-27"}
       ],
       "conditions": {},
       "outcome": {
@@ -635,12 +535,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "AVG",
-          "section": "AVG-021",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2016/679 (AVG)", "section": "Article 44-49", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_44-49/oj", "eli": "http://data.europa.eu/eli/reg/2016/679/oj", "bronDatum": "2016-04-27"}
       ],
       "conditions": {},
       "outcome": {
@@ -666,12 +561,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "AVG",
-          "section": "AVG-022",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2016/679 (AVG)", "section": "Article 8", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_8/oj", "eli": "http://data.europa.eu/eli/reg/2016/679/oj", "bronDatum": "2016-04-27"}
       ],
       "conditions": {},
       "outcome": {
@@ -697,12 +587,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "AVG",
-          "section": "AVG-023",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2016/679 (AVG)", "section": "Article 22", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_22/oj", "eli": "http://data.europa.eu/eli/reg/2016/679/oj", "bronDatum": "2016-04-27"}
       ],
       "conditions": {},
       "outcome": {
@@ -728,12 +613,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "AVG",
-          "section": "AVG-024",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2016/679 (AVG)", "section": "Article 35(1)-(3)", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_35/oj", "eli": "http://data.europa.eu/eli/reg/2016/679/oj", "bronDatum": "2016-04-27"}
       ],
       "conditions": {},
       "outcome": {
@@ -759,12 +639,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "AVG",
-          "section": "AVG-025",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2016/679 (AVG)", "section": "Article 25(2)", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/art_25/oj", "eli": "http://data.europa.eu/eli/reg/2016/679/oj", "bronDatum": "2016-04-27"}
       ],
       "conditions": {},
       "outcome": {

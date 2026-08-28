@@ -14,12 +14,7 @@
       "name": "functional_completeness",
       "priority": 300,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 25010:2023 4.1.1",
-          "section": "Functional completeness",
-          "url": "https://www.iso.org/standard/78176"
-        }
+        {"type": "standaard", "title": "ISO/IEC 25010:2023 4.1.1", "section": "Functional completeness", "url": "https://www.iso.org/standard/78176", "bronVersie": "ISO/IEC 25010:2023"}
       ],
       "conditions": {},
       "outcome": {
@@ -34,12 +29,7 @@
       "name": "functional_correctness",
       "priority": 400,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 25010:2023 4.1.2",
-          "section": "Functional correctness",
-          "url": "https://www.iso.org/standard/78176"
-        }
+        {"type": "standaard", "title": "ISO/IEC 25010:2023 4.1.2", "section": "Functional correctness", "url": "https://www.iso.org/standard/78176", "bronVersie": "ISO/IEC 25010:2023"}
       ],
       "conditions": {},
       "outcome": {
@@ -54,12 +44,7 @@
       "name": "functional_appropriateness",
       "priority": 300,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 25010:2023 4.1.3",
-          "section": "Functional appropriateness",
-          "url": "https://www.iso.org/standard/78176"
-        }
+        {"type": "standaard", "title": "ISO/IEC 25010:2023 4.1.3", "section": "Functional appropriateness", "url": "https://www.iso.org/standard/78176", "bronVersie": "ISO/IEC 25010:2023"}
       ],
       "conditions": {},
       "outcome": {
@@ -74,12 +59,7 @@
       "name": "time_behaviour",
       "priority": 400,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 25010:2023 4.2.1",
-          "section": "Time behaviour",
-          "url": "https://www.iso.org/standard/78176"
-        }
+        {"type": "standaard", "title": "ISO/IEC 25010:2023 4.2.1", "section": "Time behaviour", "url": "https://www.iso.org/standard/78176", "bronVersie": "ISO/IEC 25010:2023"}
       ],
       "conditions": {},
       "outcome": {
@@ -94,12 +74,7 @@
       "name": "resource_utilization",
       "priority": 300,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 25010:2023 4.2.2",
-          "section": "Resource utilization",
-          "url": "https://www.iso.org/standard/78176"
-        }
+        {"type": "standaard", "title": "ISO/IEC 25010:2023 4.2.2", "section": "Resource utilization", "url": "https://www.iso.org/standard/78176", "bronVersie": "ISO/IEC 25010:2023"}
       ],
       "conditions": {},
       "outcome": {
@@ -114,12 +89,7 @@
       "name": "capacity",
       "priority": 300,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 25010:2023 4.2.3",
-          "section": "Capacity",
-          "url": "https://www.iso.org/standard/78176"
-        }
+        {"type": "standaard", "title": "ISO/IEC 25010:2023 4.2.3", "section": "Capacity", "url": "https://www.iso.org/standard/78176", "bronVersie": "ISO/IEC 25010:2023"}
       ],
       "conditions": {},
       "outcome": {
@@ -134,12 +104,7 @@
       "name": "co_existence",
       "priority": 200,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 25010:2023 4.3.1",
-          "section": "Co-existence",
-          "url": "https://www.iso.org/standard/78176"
-        }
+        {"type": "standaard", "title": "ISO/IEC 25010:2023 4.3.1", "section": "Co-existence", "url": "https://www.iso.org/standard/78176", "bronVersie": "ISO/IEC 25010:2023"}
       ],
       "conditions": {},
       "outcome": {
@@ -154,12 +119,7 @@
       "name": "interoperability",
       "priority": 300,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 25010:2023 4.3.2",
-          "section": "Interoperability",
-          "url": "https://www.iso.org/standard/78176"
-        }
+        {"type": "standaard", "title": "ISO/IEC 25010:2023 4.3.2", "section": "Interoperability", "url": "https://www.iso.org/standard/78176", "bronVersie": "ISO/IEC 25010:2023"}
       ],
       "conditions": {},
       "outcome": {
@@ -174,12 +134,7 @@
       "name": "appropriateness_recognizability",
       "priority": 200,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 25010:2023 4.4.1",
-          "section": "Appropriateness recognizability",
-          "url": "https://www.iso.org/standard/78176"
-        }
+        {"type": "standaard", "title": "ISO/IEC 25010:2023 4.4.1", "section": "Appropriateness recognizability", "url": "https://www.iso.org/standard/78176", "bronVersie": "ISO/IEC 25010:2023"}
       ],
       "conditions": {},
       "outcome": {
@@ -194,12 +149,7 @@
       "name": "learnability",
       "priority": 300,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 25010:2023 4.4.2",
-          "section": "Learnability",
-          "url": "https://www.iso.org/standard/78176"
-        }
+        {"type": "standaard", "title": "ISO/IEC 25010:2023 4.4.2", "section": "Learnability", "url": "https://www.iso.org/standard/78176", "bronVersie": "ISO/IEC 25010:2023"}
       ],
       "conditions": {},
       "outcome": {
@@ -214,12 +164,7 @@
       "name": "operability",
       "priority": 300,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 25010:2023 4.4.3",
-          "section": "Operability",
-          "url": "https://www.iso.org/standard/78176"
-        }
+        {"type": "standaard", "title": "ISO/IEC 25010:2023 4.4.3", "section": "Operability", "url": "https://www.iso.org/standard/78176", "bronVersie": "ISO/IEC 25010:2023"}
       ],
       "conditions": {},
       "outcome": {
@@ -234,12 +179,7 @@
       "name": "user_error_protection",
       "priority": 400,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 25010:2023 4.4.4",
-          "section": "User error protection",
-          "url": "https://www.iso.org/standard/78176"
-        }
+        {"type": "standaard", "title": "ISO/IEC 25010:2023 4.4.4", "section": "User error protection", "url": "https://www.iso.org/standard/78176", "bronVersie": "ISO/IEC 25010:2023"}
       ],
       "conditions": {},
       "outcome": {
@@ -254,12 +194,7 @@
       "name": "user_engagement",
       "priority": 200,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 25010:2023 4.4.5",
-          "section": "User engagement",
-          "url": "https://www.iso.org/standard/78176"
-        }
+        {"type": "standaard", "title": "ISO/IEC 25010:2023 4.4.5", "section": "User engagement", "url": "https://www.iso.org/standard/78176", "bronVersie": "ISO/IEC 25010:2023"}
       ],
       "conditions": {},
       "outcome": {
@@ -274,12 +209,7 @@
       "name": "inclusivity",
       "priority": 300,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 25010:2023 4.4.6",
-          "section": "Inclusivity",
-          "url": "https://www.iso.org/standard/78176"
-        }
+        {"type": "standaard", "title": "ISO/IEC 25010:2023 4.4.6", "section": "Inclusivity", "url": "https://www.iso.org/standard/78176", "bronVersie": "ISO/IEC 25010:2023"}
       ],
       "conditions": {},
       "outcome": {
@@ -297,12 +227,7 @@
       "name": "user_assistance",
       "priority": 200,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 25010:2023 4.4.7",
-          "section": "User assistance",
-          "url": "https://www.iso.org/standard/78176"
-        }
+        {"type": "standaard", "title": "ISO/IEC 25010:2023 4.4.7", "section": "User assistance", "url": "https://www.iso.org/standard/78176", "bronVersie": "ISO/IEC 25010:2023"}
       ],
       "conditions": {},
       "outcome": {
@@ -317,12 +242,7 @@
       "name": "self_descriptiveness",
       "priority": 200,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 25010:2023 4.4.8",
-          "section": "Self-descriptiveness",
-          "url": "https://www.iso.org/standard/78176"
-        }
+        {"type": "standaard", "title": "ISO/IEC 25010:2023 4.4.8", "section": "Self-descriptiveness", "url": "https://www.iso.org/standard/78176", "bronVersie": "ISO/IEC 25010:2023"}
       ],
       "conditions": {},
       "outcome": {
@@ -337,12 +257,7 @@
       "name": "maturity",
       "priority": 300,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 25010:2023 4.5.1",
-          "section": "Maturity",
-          "url": "https://www.iso.org/standard/78176"
-        }
+        {"type": "standaard", "title": "ISO/IEC 25010:2023 4.5.1", "section": "Maturity", "url": "https://www.iso.org/standard/78176", "bronVersie": "ISO/IEC 25010:2023"}
       ],
       "conditions": {},
       "outcome": {
@@ -357,12 +272,7 @@
       "name": "availability",
       "priority": 400,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 25010:2023 4.5.2",
-          "section": "Availability",
-          "url": "https://www.iso.org/standard/78176"
-        }
+        {"type": "standaard", "title": "ISO/IEC 25010:2023 4.5.2", "section": "Availability", "url": "https://www.iso.org/standard/78176", "bronVersie": "ISO/IEC 25010:2023"}
       ],
       "conditions": {},
       "outcome": {
@@ -377,12 +287,7 @@
       "name": "fault_tolerance",
       "priority": 300,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 25010:2023 4.5.3",
-          "section": "Fault tolerance",
-          "url": "https://www.iso.org/standard/78176"
-        }
+        {"type": "standaard", "title": "ISO/IEC 25010:2023 4.5.3", "section": "Fault tolerance", "url": "https://www.iso.org/standard/78176", "bronVersie": "ISO/IEC 25010:2023"}
       ],
       "conditions": {},
       "outcome": {
@@ -397,12 +302,7 @@
       "name": "recoverability",
       "priority": 400,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 25010:2023 4.5.4",
-          "section": "Recoverability",
-          "url": "https://www.iso.org/standard/78176"
-        }
+        {"type": "standaard", "title": "ISO/IEC 25010:2023 4.5.4", "section": "Recoverability", "url": "https://www.iso.org/standard/78176", "bronVersie": "ISO/IEC 25010:2023"}
       ],
       "conditions": {},
       "outcome": {
@@ -420,12 +320,7 @@
       "name": "confidentiality",
       "priority": 500,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 25010:2023 4.6.1",
-          "section": "Confidentiality",
-          "url": "https://www.iso.org/standard/78176"
-        }
+        {"type": "standaard", "title": "ISO/IEC 25010:2023 4.6.1", "section": "Confidentiality", "url": "https://www.iso.org/standard/78176", "bronVersie": "ISO/IEC 25010:2023"}
       ],
       "conditions": {},
       "outcome": {
@@ -443,12 +338,7 @@
       "name": "integrity",
       "priority": 500,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 25010:2023 4.6.2",
-          "section": "Integrity",
-          "url": "https://www.iso.org/standard/78176"
-        }
+        {"type": "standaard", "title": "ISO/IEC 25010:2023 4.6.2", "section": "Integrity", "url": "https://www.iso.org/standard/78176", "bronVersie": "ISO/IEC 25010:2023"}
       ],
       "conditions": {},
       "outcome": {
@@ -466,12 +356,7 @@
       "name": "non_repudiation",
       "priority": 300,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 25010:2023 4.6.3",
-          "section": "Non-repudiation",
-          "url": "https://www.iso.org/standard/78176"
-        }
+        {"type": "standaard", "title": "ISO/IEC 25010:2023 4.6.3", "section": "Non-repudiation", "url": "https://www.iso.org/standard/78176", "bronVersie": "ISO/IEC 25010:2023"}
       ],
       "conditions": {},
       "outcome": {
@@ -486,12 +371,7 @@
       "name": "accountability",
       "priority": 300,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 25010:2023 4.6.4",
-          "section": "Accountability",
-          "url": "https://www.iso.org/standard/78176"
-        }
+        {"type": "standaard", "title": "ISO/IEC 25010:2023 4.6.4", "section": "Accountability", "url": "https://www.iso.org/standard/78176", "bronVersie": "ISO/IEC 25010:2023"}
       ],
       "conditions": {},
       "outcome": {
@@ -506,12 +386,7 @@
       "name": "authenticity",
       "priority": 400,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 25010:2023 4.6.5",
-          "section": "Authenticity",
-          "url": "https://www.iso.org/standard/78176"
-        }
+        {"type": "standaard", "title": "ISO/IEC 25010:2023 4.6.5", "section": "Authenticity", "url": "https://www.iso.org/standard/78176", "bronVersie": "ISO/IEC 25010:2023"}
       ],
       "conditions": {},
       "outcome": {
@@ -526,12 +401,7 @@
       "name": "modularity",
       "priority": 200,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 25010:2023 4.7.1",
-          "section": "Modularity",
-          "url": "https://www.iso.org/standard/78176"
-        }
+        {"type": "standaard", "title": "ISO/IEC 25010:2023 4.7.1", "section": "Modularity", "url": "https://www.iso.org/standard/78176", "bronVersie": "ISO/IEC 25010:2023"}
       ],
       "conditions": {},
       "outcome": {
@@ -546,12 +416,7 @@
       "name": "reusability",
       "priority": 200,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 25010:2023 4.7.2",
-          "section": "Reusability",
-          "url": "https://www.iso.org/standard/78176"
-        }
+        {"type": "standaard", "title": "ISO/IEC 25010:2023 4.7.2", "section": "Reusability", "url": "https://www.iso.org/standard/78176", "bronVersie": "ISO/IEC 25010:2023"}
       ],
       "conditions": {},
       "outcome": {
@@ -566,12 +431,7 @@
       "name": "analysability",
       "priority": 300,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 25010:2023 4.7.3",
-          "section": "Analysability",
-          "url": "https://www.iso.org/standard/78176"
-        }
+        {"type": "standaard", "title": "ISO/IEC 25010:2023 4.7.3", "section": "Analysability", "url": "https://www.iso.org/standard/78176", "bronVersie": "ISO/IEC 25010:2023"}
       ],
       "conditions": {},
       "outcome": {
@@ -586,12 +446,7 @@
       "name": "modifiability",
       "priority": 300,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 25010:2023 4.7.4",
-          "section": "Modifiability",
-          "url": "https://www.iso.org/standard/78176"
-        }
+        {"type": "standaard", "title": "ISO/IEC 25010:2023 4.7.4", "section": "Modifiability", "url": "https://www.iso.org/standard/78176", "bronVersie": "ISO/IEC 25010:2023"}
       ],
       "conditions": {},
       "outcome": {
@@ -606,12 +461,7 @@
       "name": "testability",
       "priority": 300,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 25010:2023 4.7.5",
-          "section": "Testability",
-          "url": "https://www.iso.org/standard/78176"
-        }
+        {"type": "standaard", "title": "ISO/IEC 25010:2023 4.7.5", "section": "Testability", "url": "https://www.iso.org/standard/78176", "bronVersie": "ISO/IEC 25010:2023"}
       ],
       "conditions": {},
       "outcome": {
@@ -626,12 +476,7 @@
       "name": "adaptability",
       "priority": 300,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 25010:2023 4.8.1",
-          "section": "Adaptability",
-          "url": "https://www.iso.org/standard/78176"
-        }
+        {"type": "standaard", "title": "ISO/IEC 25010:2023 4.8.1", "section": "Adaptability", "url": "https://www.iso.org/standard/78176", "bronVersie": "ISO/IEC 25010:2023"}
       ],
       "conditions": {},
       "outcome": {
@@ -646,12 +491,7 @@
       "name": "installability",
       "priority": 200,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 25010:2023 4.8.2",
-          "section": "Installability",
-          "url": "https://www.iso.org/standard/78176"
-        }
+        {"type": "standaard", "title": "ISO/IEC 25010:2023 4.8.2", "section": "Installability", "url": "https://www.iso.org/standard/78176", "bronVersie": "ISO/IEC 25010:2023"}
       ],
       "conditions": {},
       "outcome": {
@@ -666,12 +506,7 @@
       "name": "replaceability",
       "priority": 300,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 25010:2023 4.8.3",
-          "section": "Replaceability",
-          "url": "https://www.iso.org/standard/78176"
-        }
+        {"type": "standaard", "title": "ISO/IEC 25010:2023 4.8.3", "section": "Replaceability", "url": "https://www.iso.org/standard/78176", "bronVersie": "ISO/IEC 25010:2023"}
       ],
       "conditions": {},
       "outcome": {
@@ -686,12 +521,7 @@
       "name": "health_safety",
       "priority": 400,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 25010:2023 4.9.1",
-          "section": "Health and safety",
-          "url": "https://www.iso.org/standard/78176"
-        }
+        {"type": "standaard", "title": "ISO/IEC 25010:2023 4.9.1", "section": "Health and safety", "url": "https://www.iso.org/standard/78176", "bronVersie": "ISO/IEC 25010:2023"}
       ],
       "conditions": {},
       "outcome": {
@@ -706,12 +536,7 @@
       "name": "environmental_protection",
       "priority": 300,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 25010:2023 4.9.2",
-          "section": "Environmental protection",
-          "url": "https://www.iso.org/standard/78176"
-        }
+        {"type": "standaard", "title": "ISO/IEC 25010:2023 4.9.2", "section": "Environmental protection", "url": "https://www.iso.org/standard/78176", "bronVersie": "ISO/IEC 25010:2023"}
       ],
       "conditions": {},
       "outcome": {

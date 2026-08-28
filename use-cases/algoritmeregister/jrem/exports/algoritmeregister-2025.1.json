@@ -15,12 +15,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "algoritmes.overheid.nl",
-          "section": "ALG-001",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "algoritmes.overheid.nl", "section": "ALG-001", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -46,12 +41,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "algoritmeregister verplichte velden",
-          "section": "ALG-002",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "algoritmeregister verplichte velden", "section": "ALG-002", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -77,12 +67,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "algoritmeregister verplichte velden",
-          "section": "ALG-003",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "algoritmeregister verplichte velden", "section": "ALG-003", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -108,12 +93,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "algoritmeregister verplichte velden",
-          "section": "ALG-004",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "algoritmeregister verplichte velden", "section": "ALG-004", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -139,12 +119,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "EU AI Act",
-          "section": "ALG-005",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "EU AI Act", "section": "ALG-005", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -170,12 +145,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "EU AI Act art. 6",
-          "section": "ALG-006",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "EU AI Act art. 6", "section": "ALG-006", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -201,12 +171,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "EU AI Act art. 5",
-          "section": "ALG-007",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "EU AI Act art. 5", "section": "ALG-007", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -232,12 +197,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "EU AI Act art. 9-15",
-          "section": "ALG-008",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "EU AI Act art. 9-15", "section": "ALG-008", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -263,12 +223,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "EU AI Act art. 50",
-          "section": "ALG-009",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "EU AI Act art. 50", "section": "ALG-009", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -294,12 +249,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "EU AI Act art. 50 lid 1",
-          "section": "ALG-010",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "EU AI Act art. 50 lid 1", "section": "ALG-010", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -325,12 +275,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "EU AI Act art. 50 lid 4",
-          "section": "ALG-011",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "EU AI Act art. 50 lid 4", "section": "ALG-011", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -356,12 +301,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "EU AI Act art. 14",
-          "section": "ALG-012",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "EU AI Act art. 14", "section": "ALG-012", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -387,12 +327,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "AVG art. 35",
-          "section": "ALG-013",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "AVG art. 35", "section": "ALG-013", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -418,12 +353,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "BIO2 / NCSC",
-          "section": "ALG-014",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "BIO2 / NCSC", "section": "ALG-014", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -449,12 +379,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "AVG art. 25",
-          "section": "ALG-015",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "AVG art. 25", "section": "ALG-015", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -480,12 +405,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "EU AI Act art. 10",
-          "section": "ALG-016",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "EU AI Act art. 10", "section": "ALG-016", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -511,12 +431,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "EU AI Act art. 11",
-          "section": "ALG-017",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "EU AI Act art. 11", "section": "ALG-017", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -542,12 +457,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "EU AI Act art. 12",
-          "section": "ALG-018",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "EU AI Act art. 12", "section": "ALG-018", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -573,12 +483,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "EU AI Act art. 10 + art. 15",
-          "section": "ALG-019",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "EU AI Act art. 10 + art. 15", "section": "ALG-019", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -604,12 +509,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "EU AI Act art. 27",
-          "section": "ALG-020",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "EU AI Act art. 27", "section": "ALG-020", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {

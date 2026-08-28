@@ -15,12 +15,7 @@
       "priority": 200,
       "legalStatus": "conventie",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JuraRegel",
-          "section": "TRACE-001",
-          "url": "https://github.com/djimit/juraregel"
-        }
+        {"type": "regeling", "title": "JuraRegel", "section": "TRACE-001", "url": "https://github.com/djimit/juraregel", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -46,12 +41,7 @@
       "priority": 200,
       "legalStatus": "conventie",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JuraRegel",
-          "section": "TRACE-002",
-          "url": "https://github.com/djimit/juraregel"
-        }
+        {"type": "regeling", "title": "JuraRegel", "section": "TRACE-002", "url": "https://github.com/djimit/juraregel", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -77,12 +67,7 @@
       "priority": 200,
       "legalStatus": "conventie",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JuraRegel",
-          "section": "TRACE-003",
-          "url": "https://github.com/djimit/juraregel"
-        }
+        {"type": "regeling", "title": "JuraRegel", "section": "TRACE-003", "url": "https://github.com/djimit/juraregel", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -108,12 +93,7 @@
       "priority": 200,
       "legalStatus": "conventie",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JuraRegel",
-          "section": "TRACE-004",
-          "url": "https://github.com/djimit/juraregel"
-        }
+        {"type": "regeling", "title": "JuraRegel", "section": "TRACE-004", "url": "https://github.com/djimit/juraregel", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -139,12 +119,7 @@
       "priority": 200,
       "legalStatus": "conventie",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JuraRegel",
-          "section": "TRACE-005",
-          "url": "https://github.com/djimit/juraregel"
-        }
+        {"type": "regeling", "title": "JuraRegel", "section": "TRACE-005", "url": "https://github.com/djimit/juraregel", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -170,12 +145,7 @@
       "priority": 200,
       "legalStatus": "conventie",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JuraRegel",
-          "section": "TRACE-006",
-          "url": "https://github.com/djimit/juraregel"
-        }
+        {"type": "regeling", "title": "JuraRegel", "section": "TRACE-006", "url": "https://github.com/djimit/juraregel", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -201,12 +171,7 @@
       "priority": 200,
       "legalStatus": "conventie",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JuraRegel",
-          "section": "TRACE-007",
-          "url": "https://github.com/djimit/juraregel"
-        }
+        {"type": "regeling", "title": "JuraRegel", "section": "TRACE-007", "url": "https://github.com/djimit/juraregel", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -232,12 +197,7 @@
       "priority": 200,
       "legalStatus": "conventie",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JuraRegel",
-          "section": "TRACE-008",
-          "url": "https://github.com/djimit/juraregel"
-        }
+        {"type": "regeling", "title": "JuraRegel", "section": "TRACE-008", "url": "https://github.com/djimit/juraregel", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -263,12 +223,7 @@
       "priority": 200,
       "legalStatus": "conventie",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JuraRegel",
-          "section": "TRACE-009",
-          "url": "https://github.com/djimit/juraregel"
-        }
+        {"type": "regeling", "title": "JuraRegel", "section": "TRACE-009", "url": "https://github.com/djimit/juraregel", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -294,12 +249,7 @@
       "priority": 200,
       "legalStatus": "conventie",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JuraRegel",
-          "section": "TRACE-010",
-          "url": "https://github.com/djimit/juraregel"
-        }
+        {"type": "regeling", "title": "JuraRegel", "section": "TRACE-010", "url": "https://github.com/djimit/juraregel", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -325,12 +275,7 @@
       "priority": 200,
       "legalStatus": "conventie",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JuraRegel",
-          "section": "TRACE-011",
-          "url": "https://github.com/djimit/juraregel"
-        }
+        {"type": "regeling", "title": "JuraRegel", "section": "TRACE-011", "url": "https://github.com/djimit/juraregel", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -356,12 +301,7 @@
       "priority": 200,
       "legalStatus": "conventie",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JuraRegel",
-          "section": "TRACE-012",
-          "url": "https://github.com/djimit/juraregel"
-        }
+        {"type": "regeling", "title": "JuraRegel", "section": "TRACE-012", "url": "https://github.com/djimit/juraregel", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -387,12 +327,7 @@
       "priority": 200,
       "legalStatus": "conventie",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JuraRegel",
-          "section": "TRACE-013",
-          "url": "https://github.com/djimit/juraregel"
-        }
+        {"type": "regeling", "title": "JuraRegel", "section": "TRACE-013", "url": "https://github.com/djimit/juraregel", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -418,12 +353,7 @@
       "priority": 200,
       "legalStatus": "conventie",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JuraRegel",
-          "section": "TRACE-014",
-          "url": "https://github.com/djimit/juraregel"
-        }
+        {"type": "regeling", "title": "JuraRegel", "section": "TRACE-014", "url": "https://github.com/djimit/juraregel", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -449,12 +379,7 @@
       "priority": 200,
       "legalStatus": "conventie",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JuraRegel",
-          "section": "TRACE-015",
-          "url": "https://github.com/djimit/juraregel"
-        }
+        {"type": "regeling", "title": "JuraRegel", "section": "TRACE-015", "url": "https://github.com/djimit/juraregel", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {

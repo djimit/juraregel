@@ -15,12 +15,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DCAT-AP-NL",
-          "section": "DCAT-001",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "DCAT-AP-NL", "section": "DCAT-001", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -46,12 +41,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DCAT-AP-NL",
-          "section": "DCAT-002",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "DCAT-AP-NL", "section": "DCAT-002", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -77,12 +67,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DCAT-AP-NL",
-          "section": "DCAT-003",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "DCAT-AP-NL", "section": "DCAT-003", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -108,12 +93,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DCAT-AP-NL / open data beleid",
-          "section": "DCAT-004",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "DCAT-AP-NL / open data beleid", "section": "DCAT-004", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -139,12 +119,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DCAT-AP-NL",
-          "section": "DCAT-005",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "DCAT-AP-NL", "section": "DCAT-005", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -170,12 +145,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DCAT-AP-NL",
-          "section": "DCAT-006",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "DCAT-AP-NL", "section": "DCAT-006", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -201,12 +171,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DCAT-AP-NL",
-          "section": "DCAT-007",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "DCAT-AP-NL", "section": "DCAT-007", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -232,12 +197,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DCAT-AP-NL",
-          "section": "DCAT-008",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "DCAT-AP-NL", "section": "DCAT-008", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -263,12 +223,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DCAT-AP-NL",
-          "section": "DCAT-009",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "DCAT-AP-NL", "section": "DCAT-009", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -294,12 +249,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DCAT-AP-NL",
-          "section": "DCAT-010",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "DCAT-AP-NL", "section": "DCAT-010", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -325,12 +275,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DCAT-AP-NL",
-          "section": "DCAT-011",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "DCAT-AP-NL", "section": "DCAT-011", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -356,12 +301,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DCAT-AP-NL",
-          "section": "DCAT-012",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "DCAT-AP-NL", "section": "DCAT-012", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -387,12 +327,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DCAT-AP-NL",
-          "section": "DCAT-013",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "DCAT-AP-NL", "section": "DCAT-013", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -418,12 +353,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "developer.overheid.nl",
-          "section": "DCAT-014",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "developer.overheid.nl", "section": "DCAT-014", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -449,12 +379,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DCAT-AP-NL",
-          "section": "DCAT-015",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "DCAT-AP-NL", "section": "DCAT-015", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {

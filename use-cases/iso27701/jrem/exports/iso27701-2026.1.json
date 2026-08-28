@@ -14,12 +14,7 @@
       "name": "pims_scope",
       "priority": 300,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 27701:2019 Clause 5.2",
-          "section": "Scope of the PIMS",
-          "url": "https://www.iso.org/standard/71670"
-        }
+        {"type": "standaard", "title": "ISO/IEC 27701:2019 Clause 5.2", "section": "Scope of the PIMS", "url": "https://www.iso.org/standard/71670", "bronVersie": "ISO/IEC 27701:2019"}
       ],
       "outcome": {
         "compliant": "conditional",
@@ -35,12 +30,7 @@
       "name": "pims_context",
       "priority": 300,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 27701:2019 Clause 5.1",
-          "section": "Understanding the organization and its context",
-          "url": "https://www.iso.org/standard/71670"
-        }
+        {"type": "standaard", "title": "ISO/IEC 27701:2019 Clause 5.1", "section": "Understanding the organization and its context", "url": "https://www.iso.org/standard/71670", "bronVersie": "ISO/IEC 27701:2019"}
       ],
       "outcome": {
         "compliant": "conditional",
@@ -56,12 +46,7 @@
       "name": "pims_leadership",
       "priority": 300,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 27701:2019 Clause 5.3",
-          "section": "Leadership and commitment",
-          "url": "https://www.iso.org/standard/71670"
-        }
+        {"type": "standaard", "title": "ISO/IEC 27701:2019 Clause 5.3", "section": "Leadership and commitment", "url": "https://www.iso.org/standard/71670", "bronVersie": "ISO/IEC 27701:2019"}
       ],
       "outcome": {
         "compliant": "conditional",
@@ -77,12 +62,7 @@
       "name": "pii_controller_obligations",
       "priority": 500,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 27701:2019 Clause 7.2",
-          "section": "Conditions for PII controllers",
-          "url": "https://www.iso.org/standard/71670"
-        }
+        {"type": "standaard", "title": "ISO/IEC 27701:2019 Clause 7.2", "section": "Conditions for PII controllers", "url": "https://www.iso.org/standard/71670", "bronVersie": "ISO/IEC 27701:2019"}
       ],
       "outcome": {
         "compliant": "conditional",
@@ -100,12 +80,7 @@
       "name": "pii_processor_obligations",
       "priority": 500,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 27701:2019 Clause 7.3",
-          "section": "Conditions for PII processors",
-          "url": "https://www.iso.org/standard/71670"
-        }
+        {"type": "standaard", "title": "ISO/IEC 27701:2019 Clause 7.3", "section": "Conditions for PII processors", "url": "https://www.iso.org/standard/71670", "bronVersie": "ISO/IEC 27701:2019"}
       ],
       "outcome": {
         "compliant": "conditional",
@@ -122,12 +97,7 @@
       "name": "privacy_policy",
       "priority": 400,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 27701:2019 7.2.2",
-          "section": "Privacy policy for PII processing",
-          "url": "https://www.iso.org/standard/71670"
-        }
+        {"type": "standaard", "title": "ISO/IEC 27701:2019 7.2.2", "section": "Privacy policy for PII processing", "url": "https://www.iso.org/standard/71670", "bronVersie": "ISO/IEC 27701:2019"}
       ],
       "outcome": {
         "compliant": "conditional",
@@ -143,12 +113,7 @@
       "name": "privacy_by_design_default",
       "priority": 500,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 27701:2019 7.2.3",
-          "section": "Privacy by design and privacy by default",
-          "url": "https://www.iso.org/standard/71670"
-        }
+        {"type": "standaard", "title": "ISO/IEC 27701:2019 7.2.3", "section": "Privacy by design and privacy by default", "url": "https://www.iso.org/standard/71670", "bronVersie": "ISO/IEC 27701:2019"}
       ],
       "outcome": {
         "compliant": "conditional",
@@ -165,12 +130,7 @@
       "name": "data_minimisation_privacy",
       "priority": 400,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 27701:2019 7.2.4",
-          "section": "Data minimisation",
-          "url": "https://www.iso.org/standard/71670"
-        }
+        {"type": "standaard", "title": "ISO/IEC 27701:2019 7.2.4", "section": "Data minimisation", "url": "https://www.iso.org/standard/71670", "bronVersie": "ISO/IEC 27701:2019"}
       ],
       "outcome": {
         "compliant": "conditional",
@@ -186,12 +146,7 @@
       "name": "consent_management",
       "priority": 500,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 27701:2019 7.2.5",
-          "section": "Consent and choice",
-          "url": "https://www.iso.org/standard/71670"
-        }
+        {"type": "standaard", "title": "ISO/IEC 27701:2019 7.2.5", "section": "Consent and choice", "url": "https://www.iso.org/standard/71670", "bronVersie": "ISO/IEC 27701:2019"}
       ],
       "outcome": {
         "compliant": "conditional",
@@ -207,12 +162,7 @@
       "name": "data_subject_rights",
       "priority": 500,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 27701:2019 7.2.6",
-          "section": "PII data subject rights",
-          "url": "https://www.iso.org/standard/71670"
-        }
+        {"type": "standaard", "title": "ISO/IEC 27701:2019 7.2.6", "section": "PII data subject rights", "url": "https://www.iso.org/standard/71670", "bronVersie": "ISO/IEC 27701:2019"}
       ],
       "outcome": {
         "compliant": "conditional",
@@ -228,12 +178,7 @@
       "name": "privacy_impact_assessment",
       "priority": 500,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 27701:2019 7.2.7",
-          "section": "Privacy impact assessment",
-          "url": "https://www.iso.org/standard/71670"
-        }
+        {"type": "standaard", "title": "ISO/IEC 27701:2019 7.2.7", "section": "Privacy impact assessment", "url": "https://www.iso.org/standard/71670", "bronVersie": "ISO/IEC 27701:2019"}
       ],
       "outcome": {
         "compliant": "conditional",
@@ -250,12 +195,7 @@
       "name": "dpia_mandatory_high_risk",
       "priority": 500,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 27701:2019 7.2.8",
-          "section": "DPIA for high-risk processing",
-          "url": "https://www.iso.org/standard/71670"
-        }
+        {"type": "standaard", "title": "ISO/IEC 27701:2019 7.2.8", "section": "DPIA for high-risk processing", "url": "https://www.iso.org/standard/71670", "bronVersie": "ISO/IEC 27701:2019"}
       ],
       "outcome": {
         "compliant": false,
@@ -274,12 +214,7 @@
       "name": "pii_sharing_transfer",
       "priority": 400,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 27701:2019 7.2.9",
-          "section": "PII sharing, transfer, and disclosure",
-          "url": "https://www.iso.org/standard/71670"
-        }
+        {"type": "standaard", "title": "ISO/IEC 27701:2019 7.2.9", "section": "PII sharing, transfer, and disclosure", "url": "https://www.iso.org/standard/71670", "bronVersie": "ISO/IEC 27701:2019"}
       ],
       "outcome": {
         "compliant": "conditional",
@@ -295,12 +230,7 @@
       "name": "privacy_breach_notification",
       "priority": 500,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 27701:2019 7.2.10",
-          "section": "Personal data breach notification",
-          "url": "https://www.iso.org/standard/71670"
-        }
+        {"type": "standaard", "title": "ISO/IEC 27701:2019 7.2.10", "section": "Personal data breach notification", "url": "https://www.iso.org/standard/71670", "bronVersie": "ISO/IEC 27701:2019"}
       ],
       "outcome": {
         "compliant": "conditional",
@@ -317,12 +247,7 @@
       "name": "data_retention_deletion",
       "priority": 400,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 27701:2019 7.2.11",
-          "section": "Retention and deletion of PII",
-          "url": "https://www.iso.org/standard/71670"
-        }
+        {"type": "standaard", "title": "ISO/IEC 27701:2019 7.2.11", "section": "Retention and deletion of PII", "url": "https://www.iso.org/standard/71670", "bronVersie": "ISO/IEC 27701:2019"}
       ],
       "outcome": {
         "compliant": "conditional",
@@ -338,12 +263,7 @@
       "name": "data_accuracy",
       "priority": 300,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 27701:2019 7.2.12",
-          "section": "Accuracy and quality of PII",
-          "url": "https://www.iso.org/standard/71670"
-        }
+        {"type": "standaard", "title": "ISO/IEC 27701:2019 7.2.12", "section": "Accuracy and quality of PII", "url": "https://www.iso.org/standard/71670", "bronVersie": "ISO/IEC 27701:2019"}
       ],
       "outcome": {
         "compliant": "conditional",
@@ -359,12 +279,7 @@
       "name": "transparency_information",
       "priority": 400,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 27701:2019 7.2.13",
-          "section": "Transparency and information",
-          "url": "https://www.iso.org/standard/71670"
-        }
+        {"type": "standaard", "title": "ISO/IEC 27701:2019 7.2.13", "section": "Transparency and information", "url": "https://www.iso.org/standard/71670", "bronVersie": "ISO/IEC 27701:2019"}
       ],
       "outcome": {
         "compliant": "conditional",
@@ -380,12 +295,7 @@
       "name": "processor_dpa",
       "priority": 400,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 27701:2019 7.3.2",
-          "section": "Data processing agreements",
-          "url": "https://www.iso.org/standard/71670"
-        }
+        {"type": "standaard", "title": "ISO/IEC 27701:2019 7.3.2", "section": "Data processing agreements", "url": "https://www.iso.org/standard/71670", "bronVersie": "ISO/IEC 27701:2019"}
       ],
       "outcome": {
         "compliant": "conditional",
@@ -402,12 +312,7 @@
       "name": "processor_sub_processing",
       "priority": 300,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 27701:2019 7.3.3",
-          "section": "Sub-processing management",
-          "url": "https://www.iso.org/standard/71670"
-        }
+        {"type": "standaard", "title": "ISO/IEC 27701:2019 7.3.3", "section": "Sub-processing management", "url": "https://www.iso.org/standard/71670", "bronVersie": "ISO/IEC 27701:2019"}
       ],
       "outcome": {
         "compliant": "conditional",
@@ -424,12 +329,7 @@
       "name": "processor_security_measures",
       "priority": 500,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 27701:2019 7.3.4",
-          "section": "Security measures for PII processing",
-          "url": "https://www.iso.org/standard/71670"
-        }
+        {"type": "standaard", "title": "ISO/IEC 27701:2019 7.3.4", "section": "Security measures for PII processing", "url": "https://www.iso.org/standard/71670", "bronVersie": "ISO/IEC 27701:2019"}
       ],
       "outcome": {
         "compliant": "conditional",
@@ -447,12 +347,7 @@
       "name": "pims_documentation",
       "priority": 300,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 27701:2019 Clause 7.4",
-          "section": "PIMS documentation",
-          "url": "https://www.iso.org/standard/71670"
-        }
+        {"type": "standaard", "title": "ISO/IEC 27701:2019 Clause 7.4", "section": "PIMS documentation", "url": "https://www.iso.org/standard/71670", "bronVersie": "ISO/IEC 27701:2019"}
       ],
       "outcome": {
         "compliant": "conditional",
@@ -468,12 +363,7 @@
       "name": "pims_internal_audit",
       "priority": 300,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 27701:2019 Clause 7.5",
-          "section": "Internal audit of PIMS",
-          "url": "https://www.iso.org/standard/71670"
-        }
+        {"type": "standaard", "title": "ISO/IEC 27701:2019 Clause 7.5", "section": "Internal audit of PIMS", "url": "https://www.iso.org/standard/71670", "bronVersie": "ISO/IEC 27701:2019"}
       ],
       "outcome": {
         "compliant": "conditional",
@@ -489,12 +379,7 @@
       "name": "pims_management_review",
       "priority": 300,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 27701:2019 Clause 7.6",
-          "section": "Management review of PIMS",
-          "url": "https://www.iso.org/standard/71670"
-        }
+        {"type": "standaard", "title": "ISO/IEC 27701:2019 Clause 7.6", "section": "Management review of PIMS", "url": "https://www.iso.org/standard/71670", "bronVersie": "ISO/IEC 27701:2019"}
       ],
       "outcome": {
         "compliant": "conditional",
@@ -510,12 +395,7 @@
       "name": "pims_continual_improvement",
       "priority": 300,
       "sourceRefs": [
-        {
-          "type": "standaard",
-          "title": "ISO/IEC 27701:2019 Clause 7.7",
-          "section": "Continual improvement of PIMS",
-          "url": "https://www.iso.org/standard/71670"
-        }
+        {"type": "standaard", "title": "ISO/IEC 27701:2019 Clause 7.7", "section": "Continual improvement of PIMS", "url": "https://www.iso.org/standard/71670", "bronVersie": "ISO/IEC 27701:2019"}
       ],
       "outcome": {
         "compliant": "conditional",

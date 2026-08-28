@@ -192,11 +192,22 @@
                 "bwbId": {
                   "type": "string"
                 },
+                "celexId": {
+                  "type": "string"
+                },
+                "eli": {
+                  "type": "string",
+                  "format": "uri"
+                },
                 "bronVersie": {
+                  "type": "string",
+                  "description": "Identifier of datum van de exact gebruikte bronversie"
+                },
+                "bronDatum": {
                   "type": "string",
                   "format": "date"
                 },
-                "bronDatum": {
+                "retrievedOn": {
                   "type": "string",
                   "format": "date"
                 }

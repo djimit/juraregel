@@ -1,3 +1,4 @@
+import json
 import sys
 from pathlib import Path
 
@@ -112,3 +113,14 @@ def test_explain():
 def test_versions():
     r = client.get("/v1/participatiewet/versions")
     assert r.status_code == 200
+
+
+def test_unreviewed_2025_rules_are_fail_closed_and_use_primary_sources():
+    path = Path(__file__).parent.parent / "jrem" / "exports" / "participatiewet-2025.1.json"
+    data = json.loads(path.read_text())
+
+    assert data["maturityLevel"] == "L0-demo"
+    for rule in data["rules"]:
+        assert rule["outcome"]["confidence"] == "insufficient_evidence"
+        assert rule["outcome"]["manualReviewRequired"] is True
+        assert rule["sourceRefs"][0]["bwbId"] == "BWBR0015703"

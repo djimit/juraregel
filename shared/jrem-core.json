@@ -182,13 +182,26 @@
           "type": "string",
           "pattern": "^BWBR[0-9]{7}$"
         },
+        "celexId": {
+          "type": "string"
+        },
+        "eli": {
+          "type": "string",
+          "format": "uri"
+        },
         "bronVersie": {
           "type": "string",
-          "format": "date"
+          "description": "Identifier of datum van de exact gebruikte bronversie"
         },
         "bronDatum": {
           "type": "string",
-          "format": "date"
+          "format": "date",
+          "description": "Officiele publicatie- of vaststellingsdatum van de bron"
+        },
+        "retrievedOn": {
+          "type": "string",
+          "format": "date",
+          "description": "Raadpleegdatum voor een levende, niet-wettelijke bron"
         }
       }
     }

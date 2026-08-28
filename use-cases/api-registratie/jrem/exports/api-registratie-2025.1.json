@@ -15,12 +15,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "developer.overheid.nl",
-          "section": "APIR-001",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "developer.overheid.nl", "section": "APIR-001", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -46,12 +41,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "Logius API Design Rules",
-          "section": "APIR-002",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "Logius API Design Rules", "section": "APIR-002", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -77,12 +67,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "Logius API-03",
-          "section": "APIR-003",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "Logius API-03", "section": "APIR-003", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -108,12 +93,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "Logius API-09",
-          "section": "APIR-004",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "Logius API-09", "section": "APIR-004", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -139,12 +119,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "Logius API-16",
-          "section": "APIR-005",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "Logius API-16", "section": "APIR-005", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -170,12 +145,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "Logius API-17",
-          "section": "APIR-006",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "Logius API-17", "section": "APIR-006", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -201,12 +171,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "Logius API-18",
-          "section": "APIR-007",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "Logius API-18", "section": "APIR-007", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -232,12 +197,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "Logius API-51",
-          "section": "APIR-008",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "Logius API-51", "section": "APIR-008", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -263,12 +223,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "Forum Standaardisatie",
-          "section": "APIR-009",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "Forum Standaardisatie", "section": "APIR-009", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -294,12 +249,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "developer.overheid.nl OSS",
-          "section": "APIR-010",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "developer.overheid.nl OSS", "section": "APIR-010", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -325,12 +275,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "OSS beleid",
-          "section": "APIR-011",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "OSS beleid", "section": "APIR-011", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -356,12 +301,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "OSS beleid",
-          "section": "APIR-012",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "OSS beleid", "section": "APIR-012", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -387,12 +327,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "OSS beleid",
-          "section": "APIR-013",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "OSS beleid", "section": "APIR-013", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -418,12 +353,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "NORA / DevSecOps",
-          "section": "APIR-014",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "NORA / DevSecOps", "section": "APIR-014", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -449,12 +379,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "NCSC / BIO2",
-          "section": "APIR-015",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "NCSC / BIO2", "section": "APIR-015", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -480,12 +405,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "WCAG 2.2",
-          "section": "APIR-016",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "WCAG 2.2", "section": "APIR-016", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -511,12 +431,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "NCSC-WEB-010",
-          "section": "APIR-017",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "NCSC-WEB-010", "section": "APIR-017", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -542,12 +457,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "NCSC-BAS-008",
-          "section": "APIR-018",
-          "url": "https://www.overheid.nl/"
-        }
+        {"type": "regeling", "title": "NCSC-BAS-008", "section": "APIR-018", "url": "https://www.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {

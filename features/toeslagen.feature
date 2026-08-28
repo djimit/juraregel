@@ -12,7 +12,7 @@ Feature: Zorgtoeslag calculation
     When I calculate the healthcare benefit
     Then the entitlement is "true"
     And the amount is 123 euros per month
-    And the source contains "Toeslagenwet"
+    And the source contains "Wet op de zorgtoeslag"
 
   Scenario: Single person with income above threshold is not entitled
     Given a single person of 45 years old

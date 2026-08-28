@@ -15,12 +15,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DPIA Model Rijksdienst — AVG art. 35",
-          "section": "DPIA-001",
-          "url": "https://modellen.jenvgegevens.nl/dpia"
-        }
+        {"type": "regeling", "title": "DPIA Model Rijksdienst — AVG art. 35", "section": "DPIA-001", "url": "https://modellen.jenvgegevens.nl/dpia", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -46,12 +41,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DPIA Model Rijksdienst — AVG art. 35 lid 1c",
-          "section": "DPIA-002",
-          "url": "https://modellen.jenvgegevens.nl/dpia"
-        }
+        {"type": "regeling", "title": "DPIA Model Rijksdienst — AVG art. 35 lid 1c", "section": "DPIA-002", "url": "https://modellen.jenvgegevens.nl/dpia", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -77,12 +67,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DPIA Model Rijksdienst — AVG art. 35 lid 1a",
-          "section": "DPIA-003",
-          "url": "https://modellen.jenvgegevens.nl/dpia"
-        }
+        {"type": "regeling", "title": "DPIA Model Rijksdienst — AVG art. 35 lid 1a", "section": "DPIA-003", "url": "https://modellen.jenvgegevens.nl/dpia", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -108,12 +93,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DPIA Model Rijksdienst — AVG art. 35 lid 1b",
-          "section": "DPIA-004",
-          "url": "https://modellen.jenvgegevens.nl/dpia"
-        }
+        {"type": "regeling", "title": "DPIA Model Rijksdienst — AVG art. 35 lid 1b", "section": "DPIA-004", "url": "https://modellen.jenvgegevens.nl/dpia", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -139,12 +119,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DPIA Model Rijksdienst — Cloudbeleid Rijk",
-          "section": "DPIA-005",
-          "url": "https://modellen.jenvgegevens.nl/dpia"
-        }
+        {"type": "regeling", "title": "DPIA Model Rijksdienst — Cloudbeleid Rijk", "section": "DPIA-005", "url": "https://modellen.jenvgegevens.nl/dpia", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -170,12 +145,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DPIA Model Rijksdienst — Model DPIA Rijksdienst",
-          "section": "DPIA-006",
-          "url": "https://modellen.jenvgegevens.nl/dpia"
-        }
+        {"type": "regeling", "title": "DPIA Model Rijksdienst — Model DPIA Rijksdienst", "section": "DPIA-006", "url": "https://modellen.jenvgegevens.nl/dpia", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -201,12 +171,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DPIA Model Rijksdienst — EDPB",
-          "section": "DPIA-007",
-          "url": "https://modellen.jenvgegevens.nl/dpia"
-        }
+        {"type": "regeling", "title": "DPIA Model Rijksdienst — EDPB", "section": "DPIA-007", "url": "https://modellen.jenvgegevens.nl/dpia", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -232,12 +197,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DPIA Model Rijksdienst — EDPB",
-          "section": "DPIA-008",
-          "url": "https://modellen.jenvgegevens.nl/dpia"
-        }
+        {"type": "regeling", "title": "DPIA Model Rijksdienst — EDPB", "section": "DPIA-008", "url": "https://modellen.jenvgegevens.nl/dpia", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -263,12 +223,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DPIA Model Rijksdienst — AVG art. 6 lid 1a",
-          "section": "DPIA-009",
-          "url": "https://modellen.jenvgegevens.nl/dpia"
-        }
+        {"type": "regeling", "title": "DPIA Model Rijksdienst — AVG art. 6 lid 1a", "section": "DPIA-009", "url": "https://modellen.jenvgegevens.nl/dpia", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -294,12 +249,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DPIA Model Rijksdienst — AVG art. 6 lid 1b",
-          "section": "DPIA-010",
-          "url": "https://modellen.jenvgegevens.nl/dpia"
-        }
+        {"type": "regeling", "title": "DPIA Model Rijksdienst — AVG art. 6 lid 1b", "section": "DPIA-010", "url": "https://modellen.jenvgegevens.nl/dpia", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -325,12 +275,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DPIA Model Rijksdienst — AVG art. 6 lid 1c",
-          "section": "DPIA-011",
-          "url": "https://modellen.jenvgegevens.nl/dpia"
-        }
+        {"type": "regeling", "title": "DPIA Model Rijksdienst — AVG art. 6 lid 1c", "section": "DPIA-011", "url": "https://modellen.jenvgegevens.nl/dpia", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -356,12 +301,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DPIA Model Rijksdienst — AVG art. 6 lid 1d",
-          "section": "DPIA-012",
-          "url": "https://modellen.jenvgegevens.nl/dpia"
-        }
+        {"type": "regeling", "title": "DPIA Model Rijksdienst — AVG art. 6 lid 1d", "section": "DPIA-012", "url": "https://modellen.jenvgegevens.nl/dpia", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -387,12 +327,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DPIA Model Rijksdienst — AVG art. 6 lid 1e",
-          "section": "DPIA-013",
-          "url": "https://modellen.jenvgegevens.nl/dpia"
-        }
+        {"type": "regeling", "title": "DPIA Model Rijksdienst — AVG art. 6 lid 1e", "section": "DPIA-013", "url": "https://modellen.jenvgegevens.nl/dpia", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -418,12 +353,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DPIA Model Rijksdienst — AVG art. 6 lid 1f",
-          "section": "DPIA-014",
-          "url": "https://modellen.jenvgegevens.nl/dpia"
-        }
+        {"type": "regeling", "title": "DPIA Model Rijksdienst — AVG art. 6 lid 1f", "section": "DPIA-014", "url": "https://modellen.jenvgegevens.nl/dpia", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -449,12 +379,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DPIA Model Rijksdienst — Rapportagemodel DPIA",
-          "section": "DPIA-015",
-          "url": "https://modellen.jenvgegevens.nl/dpia"
-        }
+        {"type": "regeling", "title": "DPIA Model Rijksdienst — Rapportagemodel DPIA", "section": "DPIA-015", "url": "https://modellen.jenvgegevens.nl/dpia", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -480,12 +405,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DPIA Model Rijksdienst — AVG / Model DPIA Rijksdienst",
-          "section": "DPIA-016",
-          "url": "https://modellen.jenvgegevens.nl/dpia"
-        }
+        {"type": "regeling", "title": "DPIA Model Rijksdienst — AVG / Model DPIA Rijksdienst", "section": "DPIA-016", "url": "https://modellen.jenvgegevens.nl/dpia", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -511,12 +431,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DPIA Model Rijksdienst — AVG art. 35 lid 7",
-          "section": "DPIA-017",
-          "url": "https://modellen.jenvgegevens.nl/dpia"
-        }
+        {"type": "regeling", "title": "DPIA Model Rijksdienst — AVG art. 35 lid 7", "section": "DPIA-017", "url": "https://modellen.jenvgegevens.nl/dpia", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -542,12 +457,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DPIA Model Rijksdienst — AVG art. 35 lid 7d",
-          "section": "DPIA-018",
-          "url": "https://modellen.jenvgegevens.nl/dpia"
-        }
+        {"type": "regeling", "title": "DPIA Model Rijksdienst — AVG art. 35 lid 7d", "section": "DPIA-018", "url": "https://modellen.jenvgegevens.nl/dpia", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -573,12 +483,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DPIA Model Rijksdienst — AVG art. 5 lid 1e",
-          "section": "DPIA-019",
-          "url": "https://modellen.jenvgegevens.nl/dpia"
-        }
+        {"type": "regeling", "title": "DPIA Model Rijksdienst — AVG art. 5 lid 1e", "section": "DPIA-019", "url": "https://modellen.jenvgegevens.nl/dpia", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -604,12 +509,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DPIA Model Rijksdienst — AVG art. 44-50",
-          "section": "DPIA-020",
-          "url": "https://modellen.jenvgegevens.nl/dpia"
-        }
+        {"type": "regeling", "title": "DPIA Model Rijksdienst — AVG art. 44-50", "section": "DPIA-020", "url": "https://modellen.jenvgegevens.nl/dpia", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -635,12 +535,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DPIA Model Rijksdienst — Model DPIA Rijksdienst",
-          "section": "DPIA-021",
-          "url": "https://modellen.jenvgegevens.nl/dpia"
-        }
+        {"type": "regeling", "title": "DPIA Model Rijksdienst — Model DPIA Rijksdienst", "section": "DPIA-021", "url": "https://modellen.jenvgegevens.nl/dpia", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -666,12 +561,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DPIA Model Rijksdienst — Model DPIA Rijksdienst",
-          "section": "DPIA-022",
-          "url": "https://modellen.jenvgegevens.nl/dpia"
-        }
+        {"type": "regeling", "title": "DPIA Model Rijksdienst — Model DPIA Rijksdienst", "section": "DPIA-022", "url": "https://modellen.jenvgegevens.nl/dpia", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -697,12 +587,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DPIA Model Rijksdienst — Model DPIA Rijksdienst",
-          "section": "DPIA-023",
-          "url": "https://modellen.jenvgegevens.nl/dpia"
-        }
+        {"type": "regeling", "title": "DPIA Model Rijksdienst — Model DPIA Rijksdienst", "section": "DPIA-023", "url": "https://modellen.jenvgegevens.nl/dpia", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -728,12 +613,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DPIA Model Rijksdienst — AVG art. 4 lid 4",
-          "section": "DPIA-024",
-          "url": "https://modellen.jenvgegevens.nl/dpia"
-        }
+        {"type": "regeling", "title": "DPIA Model Rijksdienst — AVG art. 4 lid 4", "section": "DPIA-024", "url": "https://modellen.jenvgegevens.nl/dpia", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -759,12 +639,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DPIA Model Rijksdienst — AVG art. 22",
-          "section": "DPIA-025",
-          "url": "https://modellen.jenvgegevens.nl/dpia"
-        }
+        {"type": "regeling", "title": "DPIA Model Rijksdienst — AVG art. 22", "section": "DPIA-025", "url": "https://modellen.jenvgegevens.nl/dpia", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -790,12 +665,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DPIA Model Rijksdienst — Rapportagemodel DPIA",
-          "section": "DPIA-026",
-          "url": "https://modellen.jenvgegevens.nl/dpia"
-        }
+        {"type": "regeling", "title": "DPIA Model Rijksdienst — Rapportagemodel DPIA", "section": "DPIA-026", "url": "https://modellen.jenvgegevens.nl/dpia", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -821,12 +691,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DPIA Model Rijksdienst — Model DPIA Rijksdienst",
-          "section": "DPIA-027",
-          "url": "https://modellen.jenvgegevens.nl/dpia"
-        }
+        {"type": "regeling", "title": "DPIA Model Rijksdienst — Model DPIA Rijksdienst", "section": "DPIA-027", "url": "https://modellen.jenvgegevens.nl/dpia", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -852,12 +717,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DPIA Model Rijksdienst — Model DPIA Rijksdienst",
-          "section": "DPIA-028",
-          "url": "https://modellen.jenvgegevens.nl/dpia"
-        }
+        {"type": "regeling", "title": "DPIA Model Rijksdienst — Model DPIA Rijksdienst", "section": "DPIA-028", "url": "https://modellen.jenvgegevens.nl/dpia", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -883,12 +743,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DPIA Model Rijksdienst — Model DPIA Rijksdienst",
-          "section": "DPIA-029",
-          "url": "https://modellen.jenvgegevens.nl/dpia"
-        }
+        {"type": "regeling", "title": "DPIA Model Rijksdienst — Model DPIA Rijksdienst", "section": "DPIA-029", "url": "https://modellen.jenvgegevens.nl/dpia", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -914,12 +769,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "DPIA Model Rijksdienst — AVG art. 87",
-          "section": "DPIA-030",
-          "url": "https://modellen.jenvgegevens.nl/dpia"
-        }
+        {"type": "regeling", "title": "DPIA Model Rijksdienst — AVG art. 87", "section": "DPIA-030", "url": "https://modellen.jenvgegevens.nl/dpia", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {

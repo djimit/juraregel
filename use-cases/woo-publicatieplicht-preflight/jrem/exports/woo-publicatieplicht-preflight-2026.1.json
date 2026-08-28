@@ -19,7 +19,8 @@
           "type": "regeling",
           "title": "Woo-index",
           "section": "Alle Woo-informatie op een rij",
-          "url": "https://organisaties.overheid.nl/woo"
+          "url": "https://organisaties.overheid.nl/woo",
+          "retrievedOn": "2026-08-28"
         }
       ],
       "conditions": {
@@ -40,7 +41,8 @@
           "type": "regeling",
           "title": "Woo-index",
           "section": "Locaties van verplicht te publiceren documenten",
-          "url": "https://organisaties.overheid.nl/woo"
+          "url": "https://organisaties.overheid.nl/woo",
+          "retrievedOn": "2026-08-28"
         }
       ],
       "conditions": {
@@ -61,7 +63,8 @@
           "type": "regeling",
           "title": "Woo-index",
           "section": "Onderdeel van Register van Overheidsorganisaties",
-          "url": "https://organisaties.overheid.nl/woo"
+          "url": "https://organisaties.overheid.nl/woo",
+          "retrievedOn": "2026-08-28"
         }
       ],
       "conditions": {
@@ -82,7 +85,8 @@
           "type": "regeling",
           "title": "Woo-index",
           "section": "Woo-documenten en -informatie",
-          "url": "https://organisaties.overheid.nl/woo"
+          "url": "https://organisaties.overheid.nl/woo",
+          "retrievedOn": "2026-08-28"
         }
       ],
       "conditions": {
@@ -103,7 +107,8 @@
           "type": "regeling",
           "title": "Woo-index",
           "section": "Verplicht publiceren",
-          "url": "https://organisaties.overheid.nl/woo"
+          "url": "https://organisaties.overheid.nl/woo",
+          "retrievedOn": "2026-08-28"
         }
       ],
       "conditions": {
@@ -124,7 +129,8 @@
           "type": "regeling",
           "title": "Woo-index",
           "section": "Documentlocaties per organisatie",
-          "url": "https://organisaties.overheid.nl/woo"
+          "url": "https://organisaties.overheid.nl/woo",
+          "retrievedOn": "2026-08-28"
         }
       ],
       "conditions": {
@@ -145,7 +151,8 @@
           "type": "regeling",
           "title": "Woo-index",
           "section": "Woo-documenten",
-          "url": "https://organisaties.overheid.nl/woo"
+          "url": "https://organisaties.overheid.nl/woo",
+          "retrievedOn": "2026-08-28"
         }
       ],
       "conditions": {
@@ -169,7 +176,8 @@
           "type": "regeling",
           "title": "Woo-index",
           "section": "Zoek Woo",
-          "url": "https://organisaties.overheid.nl/woo"
+          "url": "https://organisaties.overheid.nl/woo",
+          "retrievedOn": "2026-08-28"
         }
       ],
       "conditions": {
