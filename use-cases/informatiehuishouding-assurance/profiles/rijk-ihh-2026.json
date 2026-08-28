@@ -1,0 +1,120 @@
+{
+  "profileId": "rijk-informatiehuishouding-assurance",
+  "version": "2026.1",
+  "title": "Rijksoverheid informatiehuishouding - lokaal evidenceprofiel",
+  "scope": "Sturing, beheersing en duurzame borging van informatiehuishouding binnen de expliciet vastgestelde organisatiegrens.",
+  "interpretationStatus": "local-non-normative",
+  "disclaimer": "Niet-scorend evidenceprofiel; geen juridisch oordeel, ADR-oordeel, volwassenheidsscore, BIO2-conformiteit of certificering.",
+  "aspects": [
+    {
+      "aspectId": "rijk-ihh-2026.01",
+      "subject": "Continuïteit en overdracht na afloop van tijdelijke programma's",
+      "sourceRefs": [
+        {"sourceId": "adr-proo-sturing-2026", "section": "4.1 Continuïteit borgen en medewerkers ontzorgen", "pages": "12-13", "relationType": "derived-evidence-question"},
+        {"sourceId": "rijk-mjp-2026-2030", "section": "5 Bijlage Randvoorwaarden", "pages": "27-31", "relationType": "policy-context"}
+      ],
+      "evidenceRequired": ["goedgekeurd-transitieplan", "overdrachtsregister-met-eigenaren", "continuiteitsbesluit-na-programma"],
+      "falsifiedBy": ["kritieke-activiteit-zonder-eigenaar", "kennis-of-proces-alleen-bij-tijdelijk-programma", "geen-besluit-over-borgingsfinanciering"],
+      "prohibitedInference": "Een beschreven toekomstbeeld bewijst dat continuïteit organisatorisch en financieel is geborgd."
+    },
+    {
+      "aspectId": "rijk-ihh-2026.02",
+      "subject": "Meetbare mijlpalen en aantoonbare bijsturing",
+      "sourceRefs": [
+        {"sourceId": "adr-proo-sturing-2026", "section": "1 Samenvatting en 4.1", "pages": "4-6, 12-13", "relationType": "derived-evidence-question"},
+        {"sourceId": "rijk-mjp-2026-2030", "section": "6 Bijlage Mijlpalenplanning", "pages": "32-36", "relationType": "policy-context"}
+      ],
+      "evidenceRequired": ["versiebeheerde-mijlpalenplanning", "kwartaalrapportages", "besluiten-over-afwijkingen-en-bijsturing"],
+      "falsifiedBy": ["alleen-einddatum-zonder-tussenmetingen", "afwijking-zonder-eigenaar-of-besluit", "rapportage-niet-gebruikt-in-sturing"],
+      "prohibitedInference": "Publicatie van een planning bewijst voortgang of effectieve bijsturing."
+    },
+    {
+      "aspectId": "rijk-ihh-2026.03",
+      "subject": "Eenduidige en valide volwassenheidsmeting",
+      "sourceRefs": [
+        {"sourceId": "adr-ihh-volwassenheid-2026", "section": "2.9 en 3.1", "pages": "16-19", "relationType": "derived-evidence-question"},
+        {"sourceId": "adr-proo-sturing-2026", "section": "4.2 Volwassenheidsmeting verduidelijken en consistent gebruiken", "pages": "12", "relationType": "corroborates"}
+      ],
+      "evidenceRequired": ["versiebeheerde-meetinstructie", "vaste-beoordelingscriteria", "interbeoordelaarscontrole", "onderbouwde-score-per-organisatiecontext"],
+      "falsifiedBy": ["meerdere-interpretaties-van-hetzelfde-criterium", "score-zonder-onderliggend-bewijs", "gewijzigde-methode-zonder-versie-of-impactanalyse"],
+      "prohibitedInference": "Een ingevulde zelfevaluatie of gemiddeld volwassenheidscijfer is zelfstandig een accuraat en vergelijkbaar beeld."
+    },
+    {
+      "aspectId": "rijk-ihh-2026.04",
+      "subject": "Onafhankelijke validatie en triangulatie van zelfevaluaties",
+      "sourceRefs": [
+        {"sourceId": "adr-ihh-volwassenheid-2026", "section": "3.7 Overweeg om uitkomsten van zelfevaluaties te valideren", "pages": "20", "relationType": "derived-evidence-question"},
+        {"sourceId": "rijk-mjp-2026-2030", "section": "4.5 Kwaliteit en toetsing", "pages": "24", "relationType": "policy-context"}
+      ],
+      "evidenceRequired": ["validatieprotocol", "onafhankelijke-steekproef", "verschilanalyse-zelfevaluatie-en-observaties", "vastgelegde-opvolging"],
+      "falsifiedBy": ["zelfevaluatie-als-enige-bron", "validator-niet-onafhankelijk", "materiele-afwijking-zonder-opvolging"],
+      "prohibitedInference": "Een complete vragenlijst bewijst bestaan of werking van beheersmaatregelen."
+    },
+    {
+      "aspectId": "rijk-ihh-2026.05",
+      "subject": "Structurele deskundige capaciteit en kennisborging",
+      "sourceRefs": [
+        {"sourceId": "adr-ihh-volwassenheid-2026", "section": "2.3 Actielijn Professionals", "pages": "11-12", "relationType": "derived-evidence-question"},
+        {"sourceId": "adr-proo-sturing-2026", "section": "4.3 Personeel aantrekken en binden", "pages": "13", "relationType": "corroborates"}
+      ],
+      "evidenceRequired": ["capaciteitsplan-per-kritieke-rol", "competentiematrix", "overdrachts-en-opvolgingsdossiers", "structurele-financiering"],
+      "falsifiedBy": ["kritieke-rol-structureel-onbezet", "ihh-alleen-als-neventaak-zonder-capaciteit", "kennisafhankelijkheid-van-een-persoon-of-inhuurcontract"],
+      "prohibitedInference": "Een formatieplaats of opleidingsplan bewijst beschikbare deskundigheid en continuïteit."
+    },
+    {
+      "aspectId": "rijk-ihh-2026.06",
+      "subject": "Mandaat, verantwoordelijkheden en werkende communicatielijnen",
+      "sourceRefs": [
+        {"sourceId": "adr-proo-sturing-2026", "section": "4.4 en 4.5", "pages": "13", "relationType": "derived-evidence-question"},
+        {"sourceId": "rijk-mjp-2026-2030", "section": "4.4 Stelselversterking", "pages": "24", "relationType": "policy-context"}
+      ],
+      "evidenceRequired": ["vastgesteld-mandaat", "rollen-en-bevoegdhedenmatrix", "besluit-en-escalatielog", "bewijs-van-opvolging"],
+      "falsifiedBy": ["verantwoordelijkheid-zonder-bevoegdheid", "besluitvorming-buiten-afgesproken-lijnen", "structurele-niet-opvolging-zonder-escalatie"],
+      "prohibitedInference": "Een formeel mandaat bewijst dat doorzettingsmacht feitelijk en consistent wordt gebruikt."
+    },
+    {
+      "aspectId": "rijk-ihh-2026.07",
+      "subject": "Budget gekoppeld aan behoeften, realisatieplannen en resultaten",
+      "sourceRefs": [
+        {"sourceId": "adr-proo-sturing-2026", "section": "4.6 Behoefte eerst vaststellen voor budgetverstrekking, monitoring en sturing", "pages": "13-14", "relationType": "derived-evidence-question"},
+        {"sourceId": "adr-ihh-volwassenheid-2026", "section": "2.8 en 3.6", "pages": "15-16, 20", "relationType": "corroborates"}
+      ],
+      "evidenceRequired": ["onderbouwde-behoefteanalyse", "goedgekeurd-realisatieplan", "budget-resultaat-trace", "periodieke-financiele-en-inhoudelijke-review"],
+      "falsifiedBy": ["budgetverdeling-zonder-plan", "middelen-niet-herleidbaar-tot-resultaat", "structurele-onderuitputting-zonder-bijsturing"],
+      "prohibitedInference": "Budgetuitputting bewijst doelbereiking of doelmatigheid."
+    },
+    {
+      "aspectId": "rijk-ihh-2026.08",
+      "subject": "Integraal portfolio en fasegebonden go-no-go-besluiten",
+      "sourceRefs": [
+        {"sourceId": "adr-financiering-bedrijfsvoering-2026", "section": "5.2 Twee-sporen-aanpak besluitvormingsproces", "pages": "18-20", "relationType": "contextual-evidence-question"},
+        {"sourceId": "adr-financiering-bedrijfsvoering-2026", "section": "5.3 en 5.4", "pages": "20-27", "relationType": "contextual-evidence-question"}
+      ],
+      "evidenceRequired": ["actueel-integraal-portfolio", "kosten-baten-en-risico-overzicht", "fasebesluiten-met-go-no-go", "aansluiting-op-begrotingscyclus"],
+      "falsifiedBy": ["activiteit-buiten-portfolio", "doorstart-zonder-fasebesluit", "structurele-kosten-zonder-financieringsbesluit"],
+      "prohibitedInference": "Opname in een portfolio of begroting bewijst nut, haalbaarheid of doelmatigheid van een activiteit."
+    },
+    {
+      "aspectId": "rijk-ihh-2026.09",
+      "subject": "Samenhangend kwaliteitssysteem en operationele monitoring",
+      "sourceRefs": [
+        {"sourceId": "rijk-mjp-2026-2030", "section": "4.5 Kwaliteit en toetsing", "pages": "24", "relationType": "policy-context"},
+        {"sourceId": "rijk-mjp-2024-2025", "section": "3 Prioriteiten en bijlage 2 Roadmap", "pages": "18-22, 28-33", "relationType": "historical-baseline"}
+      ],
+      "evidenceRequired": ["vastgesteld-kwaliteitssysteem", "operationele-indicatoren", "herleidbare-monitoringdata", "verbeterbesluiten-en-opvolging"],
+      "falsifiedBy": ["dashboard-zonder-brontrace", "indicator-zonder-norm-of-eigenaar", "bekende-kwaliteitsafwijking-zonder-maatregel"],
+      "prohibitedInference": "Aanwezigheid van tooling of een dashboard bewijst kwaliteit van informatiehuishouding."
+    },
+    {
+      "aspectId": "rijk-ihh-2026.10",
+      "subject": "Duurzame toegankelijkheid en beheer over de informatielifecycle",
+      "sourceRefs": [
+        {"sourceId": "rijk-mjp-2026-2030", "section": "4.3 Generieke voorzieningen en 4.6 Archiefwet", "pages": "22-25", "relationType": "policy-context"},
+        {"sourceId": "rijk-mjp-2024-2025", "section": "1 Langetermijnperspectief", "pages": "6-11", "relationType": "historical-baseline"}
+      ],
+      "evidenceRequired": ["informatieclassificatie-en-bewaarbesluit", "vernietigings-en-overdrachtslog", "toegankelijkheidscontrole", "geteste-keten-voor-vinden-lakken-publiceren-en-archiveren"],
+      "falsifiedBy": ["informatie-niet-vindbaar-of-uitleesbaar", "bewaartermijn-zonder-uitvoering", "vernietiging-of-overdracht-niet-herleidbaar", "ketenstap-alleen-handmatig-en-ongecontroleerd"],
+      "prohibitedInference": "Een DMS, laktool of archiefvoorziening bewijst duurzame toegankelijkheid of rechtmatige lifecycle-uitvoering."
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "profileId": "rijk-informatiehuishouding-assurance",
+  "retrievedOn": "2026-08-28",
+  "retrievalMethod": "GET",
+  "sources": [
+    {
+      "sourceId": "rijk-mjp-2024-2025",
+      "class": "historical-policy",
+      "status": "superseded",
+      "title": "Meerjarenplan Openbaarheid en Informatiehuishouding Rijksoverheid 2024-2025",
+      "publisher": "Rijksoverheid",
+      "version": "2024-2025",
+      "publicationDate": null,
+      "url": "https://open.overheid.nl/overheid/openbaarmakingen/api/v0/attachment/4d2a2d10-4443-4521-971b-4fcfcbfbb792",
+      "sha256": "109cfec0902a30532673e6c565ac32538764cf553dfc3c85da564466f0dea077",
+      "bytes": 1188596,
+      "usage": "Historische baseline en wijzigingscontext; niet gebruiken als actuele beleidsnorm."
+    },
+    {
+      "sourceId": "adr-proo-sturing-2026",
+      "class": "authoritative-audit-report",
+      "status": "current-observation",
+      "title": "Sturing en beheersing Programma Open Overheid - Spoor Informatiehuishouding",
+      "publisher": "Auditdienst Rijk",
+      "version": "definitief",
+      "publicationDate": "2026-03-25",
+      "url": "https://open.overheid.nl/overheid/openbaarmakingen/api/v0/attachment/68bbc760-5983-48a5-9a7d-b026603579a1",
+      "sha256": "2a5abf2fdee111624badcd9d042003969122d6b1c9a9d910903051728b633092",
+      "bytes": 3360152,
+      "usage": "Onderzoeksbevindingen en handelingsperspectief voor governance-evidence; niet generaliseren buiten de onderzoeksafbakening."
+    },
+    {
+      "sourceId": "adr-ihh-volwassenheid-2026",
+      "class": "authoritative-audit-report",
+      "status": "current-observation",
+      "title": "Onderzoek volwassenheid Informatiehuishouding - Oorzakenanalyse achterblijvers",
+      "publisher": "Auditdienst Rijk",
+      "version": "definitief",
+      "publicationDate": "2026-03-25",
+      "url": "https://open.overheid.nl/overheid/openbaarmakingen/api/v0/attachment/90a0e8f2-b69d-490a-a3c5-1d40e4c9ecb4",
+      "sha256": "94b5d619651f7de903792aab718bdfdc9d22ade326803428c38c2368440c6ca1",
+      "bytes": 6678890,
+      "usage": "Onderzoeksbevindingen over volwassenheidsmeting, capaciteit, voorzieningen en financiering; geen objectieve organisatiescore."
+    },
+    {
+      "sourceId": "rijk-mjp-2026-2030",
+      "class": "authoritative-policy",
+      "status": "current",
+      "title": "Meerjarenplan Openbaarheid en Informatiehuishouding Rijksoverheid 2026-2030",
+      "publisher": "Rijksoverheid",
+      "version": "2026-2030",
+      "publicationDate": null,
+      "url": "https://open.overheid.nl/overheid/openbaarmakingen/api/v0/attachment/a7cd0887-9f98-4271-aade-c71a2b1e2ce5",
+      "sha256": "b7d8ea8b94cdebb8dc50e359f335513931f7d52dbca92879f90649fd6acc3674",
+      "bytes": 1447968,
+      "usage": "Actuele beleidsrichting, mijlpalen, indicatoren en kwaliteitscontext; geen wet of certificeringskader."
+    },
+    {
+      "sourceId": "adr-financiering-bedrijfsvoering-2026",
+      "class": "authoritative-audit-report",
+      "status": "context",
+      "title": "Financiering bedrijfsvoering Rijk",
+      "publisher": "Auditdienst Rijk",
+      "version": "definitief",
+      "publicationDate": "2026-05-28",
+      "url": "https://open.overheid.nl/overheid/openbaarmakingen/api/v0/attachment/580e4020-7469-4ca2-be7b-dcf2c2c78242",
+      "sha256": "5cf3402156724aa98c8a0eed5a911d1c036ea11e1126f12301109c6be193710a",
+      "bytes": 10531443,
+      "usage": "Context voor portfolio-, besluitvormings- en financieringsevidence; niet specifiek of normatief voor informatiehuishouding."
+    }
+  ],
+  "limitations": [
+    "Publieke beschikbaarheid is geen vastgestelde hergebruiklicentie; de PDF-binaries zijn daarom niet opgenomen.",
+    "De Open Overheid attachment-endpoints moeten met GET worden gecontroleerd; HEAD retourneerde bij verificatie 404.",
+    "Beleid, zelfevaluaties en auditbevindingen leveren zonder organisatiebewijs geen assurance-oordeel op."
+  ]
+}
