@@ -120,6 +120,7 @@ Scenario's:
 | Use Case | Kader | Status | API |
 |----------|-------|--------|-----|
 | [AcICT Assurance](../use-cases/acict-assurance/README.md) | Projecten 2026 en beheer en onderhoud 2025 | **Evidence-incomplete, non-scoring** | Geen |
+| [Informatiehuishouding Assurance](../use-cases/informatiehuishouding-assurance/README.md) | MJP 2026-2030 en ADR-onderzoeken 2026 | **Evidence-incomplete, non-scoring** | Geen |
 
 ## Architectuur Relaties
 

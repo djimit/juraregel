@@ -394,6 +394,11 @@ JuraRegel per geselecteerd project- en beheeraspect bewijs, eigenaarschap en
 onafhankelijke review kan tonen. Het is een fail-closed self-assessment zonder
 JREM-regelset, API of automatisch AcICT-oordeel.
 
+Het [Informatiehuishouding Assurance-profiel](use-cases/informatiehuishouding-assurance/README.md)
+past dezelfde grens toe op het Meerjarenplan 2026-2030 en recente ADR-onderzoeken:
+tien evidence-aspecten zonder volwassenheidsscore, juridisch oordeel of
+automatische beleidsconclusie.
+
 ## Use Case: AVG/GDPR — Privacy Compliance
 
 **Als** privacy officer of FG **wil ik** automatisch valideren of mijn organisatie voldoet aan de AVG **zodat** ik niet handmatig 10 artikelen hoef te checken.
