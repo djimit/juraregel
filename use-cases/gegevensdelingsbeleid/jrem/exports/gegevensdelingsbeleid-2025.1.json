@@ -15,12 +15,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JENV Gegevensdelingsbeleid — art. 2 lid 7, EU richtlijn 2019/1024",
-          "section": "GDB-001",
-          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
-        }
+        {"type": "regeling", "title": "JENV Gegevensdelingsbeleid — art. 2 lid 7, EU richtlijn 2019/1024", "section": "GDB-001", "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -46,12 +41,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JENV Gegevensdelingsbeleid — ISO 27000",
-          "section": "GDB-002",
-          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
-        }
+        {"type": "regeling", "title": "JENV Gegevensdelingsbeleid — ISO 27000", "section": "GDB-002", "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -77,12 +67,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JENV Gegevensdelingsbeleid — art. 9 AVG",
-          "section": "GDB-003",
-          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
-        }
+        {"type": "regeling", "title": "JENV Gegevensdelingsbeleid — art. 9 AVG", "section": "GDB-003", "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -108,12 +93,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JENV Gegevensdelingsbeleid — JENV gegevensdelingsbeleid v1.0",
-          "section": "GDB-004",
-          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
-        }
+        {"type": "regeling", "title": "JENV Gegevensdelingsbeleid — JENV gegevensdelingsbeleid v1.0", "section": "GDB-004", "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -139,12 +119,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JENV Gegevensdelingsbeleid — Model GLP v1.0",
-          "section": "GDB-005",
-          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
-        }
+        {"type": "regeling", "title": "JENV Gegevensdelingsbeleid — Model GLP v1.0", "section": "GDB-005", "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -170,12 +145,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JENV Gegevensdelingsbeleid — Model GLP v1.0",
-          "section": "GDB-006",
-          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
-        }
+        {"type": "regeling", "title": "JENV Gegevensdelingsbeleid — Model GLP v1.0", "section": "GDB-006", "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -201,12 +171,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JENV Gegevensdelingsbeleid — Model GLP v1.0",
-          "section": "GDB-007",
-          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
-        }
+        {"type": "regeling", "title": "JENV Gegevensdelingsbeleid — Model GLP v1.0", "section": "GDB-007", "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -232,12 +197,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JENV Gegevensdelingsbeleid — Model GLS v1.0",
-          "section": "GDB-008",
-          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
-        }
+        {"type": "regeling", "title": "JENV Gegevensdelingsbeleid — Model GLS v1.0", "section": "GDB-008", "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -263,12 +223,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JENV Gegevensdelingsbeleid — Model GLS v1.0",
-          "section": "GDB-009",
-          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
-        }
+        {"type": "regeling", "title": "JENV Gegevensdelingsbeleid — Model GLS v1.0", "section": "GDB-009", "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -294,12 +249,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JENV Gegevensdelingsbeleid — JENV implementatiehandreiding v1.0",
-          "section": "GDB-010",
-          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
-        }
+        {"type": "regeling", "title": "JENV Gegevensdelingsbeleid — JENV implementatiehandreiding v1.0", "section": "GDB-010", "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -325,12 +275,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JENV Gegevensdelingsbeleid — JENV gegevensdelingsbeleid v1.0",
-          "section": "GDB-011",
-          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
-        }
+        {"type": "regeling", "title": "JENV Gegevensdelingsbeleid — JENV gegevensdelingsbeleid v1.0", "section": "GDB-011", "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -356,12 +301,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JENV Gegevensdelingsbeleid — JENV gegevensdelingsbeleid v1.0",
-          "section": "GDB-012",
-          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
-        }
+        {"type": "regeling", "title": "JENV Gegevensdelingsbeleid — JENV gegevensdelingsbeleid v1.0", "section": "GDB-012", "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -387,12 +327,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JENV Gegevensdelingsbeleid — JENV gegevensdelingsbeleid v1.0",
-          "section": "GDB-013",
-          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
-        }
+        {"type": "regeling", "title": "JENV Gegevensdelingsbeleid — JENV gegevensdelingsbeleid v1.0", "section": "GDB-013", "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -418,12 +353,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JENV Gegevensdelingsbeleid — JENV gegevensdelingsbeleid v1.0",
-          "section": "GDB-014",
-          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
-        }
+        {"type": "regeling", "title": "JENV Gegevensdelingsbeleid — JENV gegevensdelingsbeleid v1.0", "section": "GDB-014", "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -449,12 +379,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JENV Gegevensdelingsbeleid — AVG art. 5 lid 1e",
-          "section": "GDB-015",
-          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
-        }
+        {"type": "regeling", "title": "JENV Gegevensdelingsbeleid — AVG art. 5 lid 1e", "section": "GDB-015", "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -480,12 +405,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JENV Gegevensdelingsbeleid — AVG art. 28",
-          "section": "GDB-016",
-          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
-        }
+        {"type": "regeling", "title": "JENV Gegevensdelingsbeleid — AVG art. 28", "section": "GDB-016", "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -511,12 +431,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JENV Gegevensdelingsbeleid — NORA / Digikoppeling",
-          "section": "GDB-017",
-          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
-        }
+        {"type": "regeling", "title": "JENV Gegevensdelingsbeleid — NORA / Digikoppeling", "section": "GDB-017", "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -542,12 +457,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JENV Gegevensdelingsbeleid — AVG art. 30",
-          "section": "GDB-018",
-          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
-        }
+        {"type": "regeling", "title": "JENV Gegevensdelingsbeleid — AVG art. 30", "section": "GDB-018", "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -573,12 +483,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JENV Gegevensdelingsbeleid — BIO2 / ISO 27001",
-          "section": "GDB-019",
-          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
-        }
+        {"type": "regeling", "title": "JENV Gegevensdelingsbeleid — BIO2 / ISO 27001", "section": "GDB-019", "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -604,12 +509,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JENV Gegevensdelingsbeleid — AVG art. 25",
-          "section": "GDB-020",
-          "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid"
-        }
+        {"type": "regeling", "title": "JENV Gegevensdelingsbeleid — AVG art. 25", "section": "GDB-020", "url": "https://modellen.jenvgegevens.nl/gegevensdelingsbeleid", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {

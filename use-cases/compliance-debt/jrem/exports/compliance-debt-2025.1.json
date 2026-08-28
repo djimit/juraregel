@@ -15,12 +15,7 @@
       "priority": 200,
       "legalStatus": "conventie",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JuraRegel",
-          "section": "DEBT-001",
-          "url": "https://github.com/djimit/juraregel"
-        }
+        {"type": "regeling", "title": "JuraRegel", "section": "DEBT-001", "url": "https://github.com/djimit/juraregel", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -46,12 +41,7 @@
       "priority": 200,
       "legalStatus": "conventie",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JuraRegel",
-          "section": "DEBT-002",
-          "url": "https://github.com/djimit/juraregel"
-        }
+        {"type": "regeling", "title": "JuraRegel", "section": "DEBT-002", "url": "https://github.com/djimit/juraregel", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -77,12 +67,7 @@
       "priority": 200,
       "legalStatus": "conventie",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JuraRegel",
-          "section": "DEBT-003",
-          "url": "https://github.com/djimit/juraregel"
-        }
+        {"type": "regeling", "title": "JuraRegel", "section": "DEBT-003", "url": "https://github.com/djimit/juraregel", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -108,12 +93,7 @@
       "priority": 200,
       "legalStatus": "conventie",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JuraRegel",
-          "section": "DEBT-004",
-          "url": "https://github.com/djimit/juraregel"
-        }
+        {"type": "regeling", "title": "JuraRegel", "section": "DEBT-004", "url": "https://github.com/djimit/juraregel", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -139,12 +119,7 @@
       "priority": 200,
       "legalStatus": "conventie",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JuraRegel",
-          "section": "DEBT-005",
-          "url": "https://github.com/djimit/juraregel"
-        }
+        {"type": "regeling", "title": "JuraRegel", "section": "DEBT-005", "url": "https://github.com/djimit/juraregel", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -170,12 +145,7 @@
       "priority": 200,
       "legalStatus": "conventie",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JuraRegel",
-          "section": "DEBT-006",
-          "url": "https://github.com/djimit/juraregel"
-        }
+        {"type": "regeling", "title": "JuraRegel", "section": "DEBT-006", "url": "https://github.com/djimit/juraregel", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -201,12 +171,7 @@
       "priority": 200,
       "legalStatus": "conventie",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JuraRegel",
-          "section": "DEBT-007",
-          "url": "https://github.com/djimit/juraregel"
-        }
+        {"type": "regeling", "title": "JuraRegel", "section": "DEBT-007", "url": "https://github.com/djimit/juraregel", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -232,12 +197,7 @@
       "priority": 200,
       "legalStatus": "conventie",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "JuraRegel",
-          "section": "DEBT-008",
-          "url": "https://github.com/djimit/juraregel"
-        }
+        {"type": "regeling", "title": "JuraRegel", "section": "DEBT-008", "url": "https://github.com/djimit/juraregel", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {

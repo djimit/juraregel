@@ -15,12 +15,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "Forum Standaardisatie — Verplichte standaarden",
-          "section": "OAuth 2.0",
-          "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht"
-        }
+        {"type": "regeling", "title": "Forum Standaardisatie — Verplichte standaarden", "section": "OAuth 2.0", "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -46,12 +41,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "Forum Standaardisatie — Verplichte standaarden",
-          "section": "SAML 2.0",
-          "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht"
-        }
+        {"type": "regeling", "title": "Forum Standaardisatie — Verplichte standaarden", "section": "SAML 2.0", "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -77,12 +67,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "Forum Standaardisatie — Verplichte standaarden",
-          "section": "OData 4.0",
-          "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht"
-        }
+        {"type": "regeling", "title": "Forum Standaardisatie — Verplichte standaarden", "section": "OData 4.0", "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -108,12 +93,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "Forum Standaardisatie — Verplichte standaarden",
-          "section": "StUF 3.0",
-          "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht"
-        }
+        {"type": "regeling", "title": "Forum Standaardisatie — Verplichte standaarden", "section": "StUF 3.0", "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -139,12 +119,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "Forum Standaardisatie — Verplichte standaarden",
-          "section": "ebMS 3.0",
-          "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht"
-        }
+        {"type": "regeling", "title": "Forum Standaardisatie — Verplichte standaarden", "section": "ebMS 3.0", "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -170,12 +145,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "Forum Standaardisatie — Verplichte standaarden",
-          "section": "DKIM",
-          "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht"
-        }
+        {"type": "regeling", "title": "Forum Standaardisatie — Verplichte standaarden", "section": "DKIM", "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -201,12 +171,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "Forum Standaardisatie — Verplichte standaarden",
-          "section": "DMARC",
-          "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht"
-        }
+        {"type": "regeling", "title": "Forum Standaardisatie — Verplichte standaarden", "section": "DMARC", "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -232,12 +197,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "Forum Standaardisatie — Verplichte standaarden",
-          "section": "SPF",
-          "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht"
-        }
+        {"type": "regeling", "title": "Forum Standaardisatie — Verplichte standaarden", "section": "SPF", "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -263,12 +223,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "Forum Standaardisatie — Verplichte standaarden",
-          "section": "HTTPS/TLS 1.2+",
-          "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht"
-        }
+        {"type": "regeling", "title": "Forum Standaardisatie — Verplichte standaarden", "section": "HTTPS/TLS 1.2+", "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -294,12 +249,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "Forum Standaardisatie — Verplichte standaarden",
-          "section": "DNSSEC",
-          "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht"
-        }
+        {"type": "regeling", "title": "Forum Standaardisatie — Verplichte standaarden", "section": "DNSSEC", "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -325,12 +275,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "Forum Standaardisatie — Verplichte standaarden",
-          "section": "PDF 1.7 (ISO 32000-1)",
-          "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht"
-        }
+        {"type": "regeling", "title": "Forum Standaardisatie — Verplichte standaarden", "section": "PDF 1.7 (ISO 32000-1)", "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -356,12 +301,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "Forum Standaardisatie — Verplichte standaarden",
-          "section": "OOXML (ISO 26700)",
-          "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht"
-        }
+        {"type": "regeling", "title": "Forum Standaardisatie — Verplichte standaarden", "section": "OOXML (ISO 26700)", "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -387,12 +327,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "Forum Standaardisatie — Verplichte standaarden",
-          "section": "ODF 1.2 (ISO 26300)",
-          "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht"
-        }
+        {"type": "regeling", "title": "Forum Standaardisatie — Verplichte standaarden", "section": "ODF 1.2 (ISO 26300)", "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -418,12 +353,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "Forum Standaardisatie — Verplichte standaarden",
-          "section": "eFactuur 2.0",
-          "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht"
-        }
+        {"type": "regeling", "title": "Forum Standaardisatie — Verplichte standaarden", "section": "eFactuur 2.0", "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -449,12 +379,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "Forum Standaardisatie — Verplichte standaarden",
-          "section": "eIDAS SAML",
-          "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht"
-        }
+        {"type": "regeling", "title": "Forum Standaardisatie — Verplichte standaarden", "section": "eIDAS SAML", "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -480,12 +405,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "Forum Standaardisatie — Verplichte standaarden",
-          "section": "iGOV",
-          "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht"
-        }
+        {"type": "regeling", "title": "Forum Standaardisatie — Verplichte standaarden", "section": "iGOV", "url": "https://www.forumstandaardisatie.nl/open-standaarden/verplicht", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -511,12 +431,7 @@
       "priority": 100,
       "legalStatus": "conventie",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "Forum Standaardisatie — Verplichte standaarden",
-          "section": "ISO 27001",
-          "url": "https://www.forumstandaardisatie.nl/onderwerpen/veilig-internet/streefbeeldafspraken"
-        }
+        {"type": "regeling", "title": "Forum Standaardisatie — Verplichte standaarden", "section": "ISO 27001", "url": "https://www.forumstandaardisatie.nl/onderwerpen/veilig-internet/streefbeeldafspraken", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -542,12 +457,7 @@
       "priority": 100,
       "legalStatus": "conventie",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "Forum Standaardisatie — Verplichte standaarden",
-          "section": "BIO2",
-          "url": "https://www.forumstandaardisatie.nl/onderwerpen/veilig-internet/streefbeeldafspraken"
-        }
+        {"type": "regeling", "title": "Forum Standaardisatie — Verplichte standaarden", "section": "BIO2", "url": "https://www.forumstandaardisatie.nl/onderwerpen/veilig-internet/streefbeeldafspraken", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -573,12 +483,7 @@
       "priority": 100,
       "legalStatus": "conventie",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "Forum Standaardisatie — Verplichte standaarden",
-          "section": "NCSC ICT-beveiligingsrichtlijnen",
-          "url": "https://www.forumstandaardisatie.nl/onderwerpen/veilig-internet/streefbeeldafspraken"
-        }
+        {"type": "regeling", "title": "Forum Standaardisatie — Verplichte standaarden", "section": "NCSC ICT-beveiligingsrichtlijnen", "url": "https://www.forumstandaardisatie.nl/onderwerpen/veilig-internet/streefbeeldafspraken", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -604,12 +509,7 @@
       "priority": 100,
       "legalStatus": "conventie",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "Forum Standaardisatie — Verplichte standaarden",
-          "section": "Common Ground",
-          "url": "https://www.forumstandaardisatie.nl/onderwerpen/veilig-internet/streefbeeldafspraken"
-        }
+        {"type": "regeling", "title": "Forum Standaardisatie — Verplichte standaarden", "section": "Common Ground", "url": "https://www.forumstandaardisatie.nl/onderwerpen/veilig-internet/streefbeeldafspraken", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -635,12 +535,7 @@
       "priority": 100,
       "legalStatus": "conventie",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "Forum Standaardisatie — Verplichte standaarden",
-          "section": "NORA",
-          "url": "https://www.forumstandaardisatie.nl/onderwerpen/veilig-internet/streefbeeldafspraken"
-        }
+        {"type": "regeling", "title": "Forum Standaardisatie — Verplichte standaarden", "section": "NORA", "url": "https://www.forumstandaardisatie.nl/onderwerpen/veilig-internet/streefbeeldafspraken", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -666,12 +561,7 @@
       "priority": 100,
       "legalStatus": "conventie",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "Forum Standaardisatie — Verplichte standaarden",
-          "section": "HBA (Huidige Bouwstenen Architectuur)",
-          "url": "https://www.forumstandaardisatie.nl/onderwerpen/veilig-internet/streefbeeldafspraken"
-        }
+        {"type": "regeling", "title": "Forum Standaardisatie — Verplichte standaarden", "section": "HBA (Huidige Bouwstenen Architectuur)", "url": "https://www.forumstandaardisatie.nl/onderwerpen/veilig-internet/streefbeeldafspraken", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {

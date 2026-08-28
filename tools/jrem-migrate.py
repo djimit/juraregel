@@ -32,14 +32,6 @@ def migrate_v1_0_to_v1_1(data: dict, add_interpretation: bool = False) -> dict:
             if "interpretatieOpmerking" not in rule:
                 rule["interpretatieOpmerking"] = "Geen opmerking"
 
-    # Add source version info if missing
-    for rule in data.get("rules", []):
-        for ref in rule.get("sourceRefs", []):
-            if "bronVersie" not in ref:
-                ref["bronVersie"] = data.get("validFrom", "unknown")
-            if "bronDatum" not in ref:
-                ref["bronDatum"] = data.get("validFrom", "unknown")
-
     return data
 
 
@@ -48,15 +40,15 @@ def validate_migration(data: dict) -> list[str]:
     issues = []
 
     if data.get("schemaVersion") != "1.1.0":
-        issues.append(f"schemaVersion should be 1.1.0, got {data.get(schemaVersion)}")
+        issues.append(f"schemaVersion should be 1.1.0, got {data.get('schemaVersion')}")
 
     for rule in data.get("rules", []):
         # Check sourceRefs have required fields
         for ref in rule.get("sourceRefs", []):
             if ref.get("type") == "wet" and not ref.get("bwbId"):
-                issues.append(f"Rule {rule[ruleId]}: wet-type sourceRef missing bwbId")
-            if not ref.get("bronVersie"):
-                issues.append(f"Rule {rule[ruleId]}: sourceRef missing bronVersie")
+                issues.append(f"Rule {rule['ruleId']}: wet-type sourceRef missing bwbId")
+            if not (ref.get("bronVersie") or ref.get("bronDatum") or ref.get("retrievedOn")):
+                issues.append(f"Rule {rule['ruleId']}: sourceRef missing provenance date")
 
     return issues
 

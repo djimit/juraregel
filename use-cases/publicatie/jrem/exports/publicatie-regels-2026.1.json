@@ -15,12 +15,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "Wet RO",
-          "section": "Openbaarmaking rechterlijke uitspraken",
-          "url": "https://wetten.overheid.nl/BWBR0004701/"
-        }
+        {"type": "wetsartikel", "title": "Wet RO", "section": "Openbaarmaking rechterlijke uitspraken", "url": "https://wetten.overheid.nl/BWBR0004701/2026-01-01", "bwbId": "BWBR0004701", "bronVersie": "2026-01-01"}
       ],
       "conditions": {},
       "outcome": {

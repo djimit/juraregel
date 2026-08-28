@@ -15,18 +15,8 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "Wet griffierechten burgerlijke zaken (Wgbz)",
-          "section": "Artikel 2, eerste lid, onder a — griffierecht kantonzaken",
-          "url": "https://wetten.overheid.nl/BWBR0035817/"
-        },
-        {
-          "type": "rechtspraak-tarieftabel",
-          "title": "Griffierecht civiele rechter 2026",
-          "section": "Kantonzaken — eiser/verzoeker natuurlijk persoon",
-          "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2026.pdf"
-        }
+        {"type": "wetsartikel", "title": "Wet griffierechten burgerlijke zaken (Wgbz)", "section": "Artikel 2, eerste lid, onder a — griffierecht kantonzaken", "url": "https://wetten.overheid.nl/BWBR0035817/2026-01-01", "bwbId": "BWBR0035817", "bronVersie": "2026-01-01"},
+        {"type": "rechtspraak-tarieftabel", "title": "Griffierecht civiele rechter 2026", "section": "Kantonzaken — eiser/verzoeker natuurlijk persoon", "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2026.pdf", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {
         "zaakstroom": [
@@ -69,18 +59,8 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "Wet griffierechten burgerlijke zaken (Wgbz)",
-          "section": "Artikel 2, eerste lid, onder a — griffierecht kantonzaken",
-          "url": "https://wetten.overheid.nl/BWBR0035817/"
-        },
-        {
-          "type": "rechtspraak-tarieftabel",
-          "title": "Griffierecht civiele rechter 2026",
-          "section": "Kantonzaken — eiser/verzoeker niet-natuurlijk persoon, vordering ≤ €25.000",
-          "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2026.pdf"
-        }
+        {"type": "wetsartikel", "title": "Wet griffierechten burgerlijke zaken (Wgbz)", "section": "Artikel 2, eerste lid, onder a — griffierecht kantonzaken", "url": "https://wetten.overheid.nl/BWBR0035817/2026-01-01", "bwbId": "BWBR0035817", "bronVersie": "2026-01-01"},
+        {"type": "rechtspraak-tarieftabel", "title": "Griffierecht civiele rechter 2026", "section": "Kantonzaken — eiser/verzoeker niet-natuurlijk persoon, vordering ≤ €25.000", "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2026.pdf", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {
         "zaakstroom": [
@@ -120,18 +100,8 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "Wet griffierechten burgerlijke zaken (Wgbz)",
-          "section": "Artikel 2, eerste lid, onder a — griffierecht kantonzaken, niet-natuurlijk persoon boven €25.000",
-          "url": "https://wetten.overheid.nl/BWBR0035817/"
-        },
-        {
-          "type": "rechtspraak-tarieftabel",
-          "title": "Griffierecht civiele rechter 2026",
-          "section": "Kantonzaken — eiser/verzoeker niet-natuurlijk persoon, vordering > €25.000",
-          "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2026.pdf"
-        }
+        {"type": "wetsartikel", "title": "Wet griffierechten burgerlijke zaken (Wgbz)", "section": "Artikel 2, eerste lid, onder a — griffierecht kantonzaken, niet-natuurlijk persoon boven €25.000", "url": "https://wetten.overheid.nl/BWBR0035817/2026-01-01", "bwbId": "BWBR0035817", "bronVersie": "2026-01-01"},
+        {"type": "rechtspraak-tarieftabel", "title": "Griffierecht civiele rechter 2026", "section": "Kantonzaken — eiser/verzoeker niet-natuurlijk persoon, vordering > €25.000", "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2026.pdf", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {
         "zaakstroom": [
@@ -171,12 +141,7 @@
       "priority": 250,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "Wet griffierechten burgerlijke zaken (Wgbz)",
-          "section": "Artikel 2, eerste lid — bij kantonzaken is alleen eiser/verzoeker griffierecht verschuldigd",
-          "url": "https://wetten.overheid.nl/BWBR0035817/"
-        }
+        {"type": "wetsartikel", "title": "Wet griffierechten burgerlijke zaken (Wgbz)", "section": "Artikel 2, eerste lid — bij kantonzaken is alleen eiser/verzoeker griffierecht verschuldigd", "url": "https://wetten.overheid.nl/BWBR0035817/2026-01-01", "bwbId": "BWBR0035817", "bronVersie": "2026-01-01"}
       ],
       "conditions": {
         "zaakstroom": [
@@ -210,18 +175,8 @@
       "priority": 100,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "Wet griffierechten burgerlijke zaken (Wgbz)",
-          "section": "Artikel 2, tweede lid — griffierecht onbepaalde waarde",
-          "url": "https://wetten.overheid.nl/BWBR0035817/"
-        },
-        {
-          "type": "rechtspraak-tarieftabel",
-          "title": "Griffierecht civiele rechter 2026",
-          "section": "Zaken met een onbepaalde waarde — natuurlijk persoon / onvermogend",
-          "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2026.pdf"
-        }
+        {"type": "wetsartikel", "title": "Wet griffierechten burgerlijke zaken (Wgbz)", "section": "Artikel 2, tweede lid — griffierecht onbepaalde waarde", "url": "https://wetten.overheid.nl/BWBR0035817/2026-01-01", "bwbId": "BWBR0035817", "bronVersie": "2026-01-01"},
+        {"type": "rechtspraak-tarieftabel", "title": "Griffierecht civiele rechter 2026", "section": "Zaken met een onbepaalde waarde — natuurlijk persoon / onvermogend", "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2026.pdf", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {
         "zaakstroom": [
@@ -260,18 +215,8 @@
       "priority": 100,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "Wet griffierechten burgerlijke zaken (Wgbz)",
-          "section": "Artikel 2, tweede lid — griffierecht onbepaalde waarde, niet-natuurlijk persoon",
-          "url": "https://wetten.overheid.nl/BWBR0035817/"
-        },
-        {
-          "type": "rechtspraak-tarieftabel",
-          "title": "Griffierecht civiele rechter 2026",
-          "section": "Zaken met een onbepaalde waarde — niet-natuurlijk persoon",
-          "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2026.pdf"
-        }
+        {"type": "wetsartikel", "title": "Wet griffierechten burgerlijke zaken (Wgbz)", "section": "Artikel 2, tweede lid — griffierecht onbepaalde waarde, niet-natuurlijk persoon", "url": "https://wetten.overheid.nl/BWBR0035817/2026-01-01", "bwbId": "BWBR0035817", "bronVersie": "2026-01-01"},
+        {"type": "rechtspraak-tarieftabel", "title": "Griffierecht civiele rechter 2026", "section": "Zaken met een onbepaalde waarde — niet-natuurlijk persoon", "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2026.pdf", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {
         "zaakstroom": [
@@ -309,18 +254,8 @@
       "priority": 100,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "Wet griffierechten burgerlijke zaken (Wgbz)",
-          "section": "Artikel 2, tweede lid — griffierecht vordering ≤ €100.000",
-          "url": "https://wetten.overheid.nl/BWBR0035817/"
-        },
-        {
-          "type": "rechtspraak-tarieftabel",
-          "title": "Griffierecht civiele rechter 2026",
-          "section": "Zaken met een vordering of verzoek tot en met €100.000 — natuurlijk persoon / onvermogend",
-          "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2026.pdf"
-        }
+        {"type": "wetsartikel", "title": "Wet griffierechten burgerlijke zaken (Wgbz)", "section": "Artikel 2, tweede lid — griffierecht vordering ≤ €100.000", "url": "https://wetten.overheid.nl/BWBR0035817/2026-01-01", "bwbId": "BWBR0035817", "bronVersie": "2026-01-01"},
+        {"type": "rechtspraak-tarieftabel", "title": "Griffierecht civiele rechter 2026", "section": "Zaken met een vordering of verzoek tot en met €100.000 — natuurlijk persoon / onvermogend", "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2026.pdf", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {
         "zaakstroom": [
@@ -367,18 +302,8 @@
       "priority": 100,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "Wet griffierechten burgerlijke zaken (Wgbz)",
-          "section": "Artikel 2, tweede lid — griffierecht vordering ≤ €100.000, niet-natuurlijk persoon",
-          "url": "https://wetten.overheid.nl/BWBR0035817/"
-        },
-        {
-          "type": "rechtspraak-tarieftabel",
-          "title": "Griffierecht civiele rechter 2026",
-          "section": "Zaken met een vordering of verzoek tot en met €100.000 — niet-natuurlijk persoon",
-          "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2026.pdf"
-        }
+        {"type": "wetsartikel", "title": "Wet griffierechten burgerlijke zaken (Wgbz)", "section": "Artikel 2, tweede lid — griffierecht vordering ≤ €100.000, niet-natuurlijk persoon", "url": "https://wetten.overheid.nl/BWBR0035817/2026-01-01", "bwbId": "BWBR0035817", "bronVersie": "2026-01-01"},
+        {"type": "rechtspraak-tarieftabel", "title": "Griffierecht civiele rechter 2026", "section": "Zaken met een vordering of verzoek tot en met €100.000 — niet-natuurlijk persoon", "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2026.pdf", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {
         "zaakstroom": [
@@ -419,18 +344,8 @@
       "priority": 100,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "Wet griffierechten burgerlijke zaken (Wgbz)",
-          "section": "Artikel 2, tweede lid — griffierecht vordering > €100.000 en ≤ €1.000.000",
-          "url": "https://wetten.overheid.nl/BWBR0035817/"
-        },
-        {
-          "type": "rechtspraak-tarieftabel",
-          "title": "Griffierecht civiele rechter 2026",
-          "section": "Zaken met een vordering of verzoek meer dan €100.000 tot en met €1.000.000 — natuurlijk persoon / onvermogend",
-          "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2026.pdf"
-        }
+        {"type": "wetsartikel", "title": "Wet griffierechten burgerlijke zaken (Wgbz)", "section": "Artikel 2, tweede lid — griffierecht vordering > €100.000 en ≤ €1.000.000", "url": "https://wetten.overheid.nl/BWBR0035817/2026-01-01", "bwbId": "BWBR0035817", "bronVersie": "2026-01-01"},
+        {"type": "rechtspraak-tarieftabel", "title": "Griffierecht civiele rechter 2026", "section": "Zaken met een vordering of verzoek meer dan €100.000 tot en met €1.000.000 — natuurlijk persoon / onvermogend", "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2026.pdf", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {
         "zaakstroom": [
@@ -482,18 +397,8 @@
       "priority": 100,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "Wet griffierechten burgerlijke zaken (Wgbz)",
-          "section": "Artikel 2, tweede lid — griffierecht vordering > €100.000 en ≤ €1.000.000, niet-natuurlijk persoon",
-          "url": "https://wetten.overheid.nl/BWBR0035817/"
-        },
-        {
-          "type": "rechtspraak-tarieftabel",
-          "title": "Griffierecht civiele rechter 2026",
-          "section": "Zaken met een vordering of verzoek meer dan €100.000 tot en met €1.000.000 — niet-natuurlijk persoon",
-          "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2026.pdf"
-        }
+        {"type": "wetsartikel", "title": "Wet griffierechten burgerlijke zaken (Wgbz)", "section": "Artikel 2, tweede lid — griffierecht vordering > €100.000 en ≤ €1.000.000, niet-natuurlijk persoon", "url": "https://wetten.overheid.nl/BWBR0035817/2026-01-01", "bwbId": "BWBR0035817", "bronVersie": "2026-01-01"},
+        {"type": "rechtspraak-tarieftabel", "title": "Griffierecht civiele rechter 2026", "section": "Zaken met een vordering of verzoek meer dan €100.000 tot en met €1.000.000 — niet-natuurlijk persoon", "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2026.pdf", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {
         "zaakstroom": [
@@ -534,18 +439,8 @@
       "priority": 100,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "Wet griffierechten burgerlijke zaken (Wgbz)",
-          "section": "Artikel 2, tweede lid — griffierecht vordering > €1.000.000",
-          "url": "https://wetten.overheid.nl/BWBR0035817/"
-        },
-        {
-          "type": "rechtspraak-tarieftabel",
-          "title": "Griffierecht civiele rechter 2026",
-          "section": "Zaken met een vordering of verzoek meer dan €1.000.000 — natuurlijk persoon / onvermogend",
-          "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2026.pdf"
-        }
+        {"type": "wetsartikel", "title": "Wet griffierechten burgerlijke zaken (Wgbz)", "section": "Artikel 2, tweede lid — griffierecht vordering > €1.000.000", "url": "https://wetten.overheid.nl/BWBR0035817/2026-01-01", "bwbId": "BWBR0035817", "bronVersie": "2026-01-01"},
+        {"type": "rechtspraak-tarieftabel", "title": "Griffierecht civiele rechter 2026", "section": "Zaken met een vordering of verzoek meer dan €1.000.000 — natuurlijk persoon / onvermogend", "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2026.pdf", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {
         "zaakstroom": [
@@ -586,18 +481,8 @@
       "priority": 100,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "Wet griffierechten burgerlijke zaken (Wgbz)",
-          "section": "Artikel 2, tweede lid — griffierecht vordering > €1.000.000, niet-natuurlijk persoon",
-          "url": "https://wetten.overheid.nl/BWBR0035817/"
-        },
-        {
-          "type": "rechtspraak-tarieftabel",
-          "title": "Griffierecht civiele rechter 2026",
-          "section": "Zaken met een vordering of verzoek meer dan €1.000.000 — niet-natuurlijk persoon",
-          "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2026.pdf"
-        }
+        {"type": "wetsartikel", "title": "Wet griffierechten burgerlijke zaken (Wgbz)", "section": "Artikel 2, tweede lid — griffierecht vordering > €1.000.000, niet-natuurlijk persoon", "url": "https://wetten.overheid.nl/BWBR0035817/2026-01-01", "bwbId": "BWBR0035817", "bronVersie": "2026-01-01"},
+        {"type": "rechtspraak-tarieftabel", "title": "Griffierecht civiele rechter 2026", "section": "Zaken met een vordering of verzoek meer dan €1.000.000 — niet-natuurlijk persoon", "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2026.pdf", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {
         "zaakstroom": [
@@ -637,18 +522,8 @@
       "priority": 100,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "Wet griffierechten burgerlijke zaken (Wgbz)",
-          "section": "Artikel 2, derde lid — gedaagde bij verweer, onbepaalde waarde",
-          "url": "https://wetten.overheid.nl/BWBR0035817/"
-        },
-        {
-          "type": "rechtspraak-tarieftabel",
-          "title": "Griffierecht civiele rechter 2026",
-          "section": "Gedaagde bij verweer — onbepaalde waarde, natuurlijk persoon",
-          "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2026.pdf"
-        }
+        {"type": "wetsartikel", "title": "Wet griffierechten burgerlijke zaken (Wgbz)", "section": "Artikel 2, derde lid — gedaagde bij verweer, onbepaalde waarde", "url": "https://wetten.overheid.nl/BWBR0035817/2026-01-01", "bwbId": "BWBR0035817", "bronVersie": "2026-01-01"},
+        {"type": "rechtspraak-tarieftabel", "title": "Griffierecht civiele rechter 2026", "section": "Gedaagde bij verweer — onbepaalde waarde, natuurlijk persoon", "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2026.pdf", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {
         "zaakstroom": [
@@ -690,18 +565,8 @@
       "priority": 100,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "Wet griffierechten burgerlijke zaken (Wgbz)",
-          "section": "Artikel 2, derde lid — gedaagde bij verweer, vordering ≤ €100.000",
-          "url": "https://wetten.overheid.nl/BWBR0035817/"
-        },
-        {
-          "type": "rechtspraak-tarieftabel",
-          "title": "Griffierecht civiele rechter 2026",
-          "section": "Gedaagde bij verweer — vordering ≤ €100.000, natuurlijk persoon",
-          "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2026.pdf"
-        }
+        {"type": "wetsartikel", "title": "Wet griffierechten burgerlijke zaken (Wgbz)", "section": "Artikel 2, derde lid — gedaagde bij verweer, vordering ≤ €100.000", "url": "https://wetten.overheid.nl/BWBR0035817/2026-01-01", "bwbId": "BWBR0035817", "bronVersie": "2026-01-01"},
+        {"type": "rechtspraak-tarieftabel", "title": "Griffierecht civiele rechter 2026", "section": "Gedaagde bij verweer — vordering ≤ €100.000, natuurlijk persoon", "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2026.pdf", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {
         "zaakstroom": [
@@ -746,18 +611,8 @@
       "priority": 100,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "Wet griffierechten burgerlijke zaken (Wgbz)",
-          "section": "Artikel 2, derde lid — gedaagde bij verweer, vordering > €100.000 en ≤ €1.000.000",
-          "url": "https://wetten.overheid.nl/BWBR0035817/"
-        },
-        {
-          "type": "rechtspraak-tarieftabel",
-          "title": "Griffierecht civiele rechter 2026",
-          "section": "Gedaagde bij verweer — vordering > €100.000 en ≤ €1.000.000, natuurlijk persoon",
-          "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2026.pdf"
-        }
+        {"type": "wetsartikel", "title": "Wet griffierechten burgerlijke zaken (Wgbz)", "section": "Artikel 2, derde lid — gedaagde bij verweer, vordering > €100.000 en ≤ €1.000.000", "url": "https://wetten.overheid.nl/BWBR0035817/2026-01-01", "bwbId": "BWBR0035817", "bronVersie": "2026-01-01"},
+        {"type": "rechtspraak-tarieftabel", "title": "Griffierecht civiele rechter 2026", "section": "Gedaagde bij verweer — vordering > €100.000 en ≤ €1.000.000, natuurlijk persoon", "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2026.pdf", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {
         "zaakstroom": [
@@ -802,18 +657,8 @@
       "priority": 100,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "Wet griffierechten burgerlijke zaken (Wgbz)",
-          "section": "Artikel 2, derde lid — gedaagde bij verweer, vordering > €1.000.000",
-          "url": "https://wetten.overheid.nl/BWBR0035817/"
-        },
-        {
-          "type": "rechtspraak-tarieftabel",
-          "title": "Griffierecht civiele rechter 2026",
-          "section": "Gedaagde bij verweer — vordering > €1.000.000, natuurlijk persoon",
-          "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2026.pdf"
-        }
+        {"type": "wetsartikel", "title": "Wet griffierechten burgerlijke zaken (Wgbz)", "section": "Artikel 2, derde lid — gedaagde bij verweer, vordering > €1.000.000", "url": "https://wetten.overheid.nl/BWBR0035817/2026-01-01", "bwbId": "BWBR0035817", "bronVersie": "2026-01-01"},
+        {"type": "rechtspraak-tarieftabel", "title": "Griffierecht civiele rechter 2026", "section": "Gedaagde bij verweer — vordering > €1.000.000, natuurlijk persoon", "url": "https://www.rechtspraak.nl/SiteCollectionDocuments/griffierecht-civiele-rechter-2026.pdf", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {
         "zaakstroom": [
@@ -857,12 +702,7 @@
       "priority": 150,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "Wet griffierechten burgerlijke zaken (Wgbz)",
-          "section": "Artikel 2, derde lid — gedaagde is alleen griffierecht verschuldigd bij schriftelijk verweer",
-          "url": "https://wetten.overheid.nl/BWBR0035817/"
-        }
+        {"type": "wetsartikel", "title": "Wet griffierechten burgerlijke zaken (Wgbz)", "section": "Artikel 2, derde lid — gedaagde is alleen griffierecht verschuldigd bij schriftelijk verweer", "url": "https://wetten.overheid.nl/BWBR0035817/2026-01-01", "bwbId": "BWBR0035817", "bronVersie": "2026-01-01"}
       ],
       "conditions": {
         "zaakstroom": [
@@ -898,12 +738,7 @@
       "priority": 150,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "Wet griffierechten burgerlijke zaken (Wgbz)",
-          "section": "Artikel 2, derde lid — gedaagde is alleen griffierecht verschuldigd bij schriftelijk verweer",
-          "url": "https://wetten.overheid.nl/BWBR0035817/"
-        }
+        {"type": "wetsartikel", "title": "Wet griffierechten burgerlijke zaken (Wgbz)", "section": "Artikel 2, derde lid — gedaagde is alleen griffierecht verschuldigd bij schriftelijk verweer", "url": "https://wetten.overheid.nl/BWBR0035817/2026-01-01", "bwbId": "BWBR0035817", "bronVersie": "2026-01-01"}
       ],
       "conditions": {
         "zaakstroom": [

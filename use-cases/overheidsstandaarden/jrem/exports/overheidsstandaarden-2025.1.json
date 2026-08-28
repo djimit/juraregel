@@ -15,12 +15,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "logius — API-03: Alleen STUF of JSON-CRUD of RESTful",
-          "section": "OS-API-001",
-          "url": "https://logius-standaarden.github.io/API-Design-Rules/"
-        }
+        {"type": "regeling", "title": "logius — API-03: Alleen STUF of JSON-CRUD of RESTful", "section": "OS-API-001", "url": "https://logius-standaarden.github.io/API-Design-Rules/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -47,12 +42,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "logius — API-09: HAL of JSON-LD",
-          "section": "OS-API-002",
-          "url": "https://logius-standaarden.github.io/API-Design-Rules/"
-        }
+        {"type": "regeling", "title": "logius — API-09: HAL of JSON-LD", "section": "OS-API-002", "url": "https://logius-standaarden.github.io/API-Design-Rules/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -79,12 +69,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "logius — API-10: Geldige JSON",
-          "section": "OS-API-003",
-          "url": "https://logius-standaarden.github.io/API-Design-Rules/"
-        }
+        {"type": "regeling", "title": "logius — API-10: Geldige JSON", "section": "OS-API-003", "url": "https://logius-standaarden.github.io/API-Design-Rules/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -111,12 +96,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "logius — API-11: Hoofdlettergebruik camelCase",
-          "section": "OS-API-004",
-          "url": "https://logius-standaarden.github.io/API-Design-Rules/"
-        }
+        {"type": "regeling", "title": "logius — API-11: Hoofdlettergebruik camelCase", "section": "OS-API-004", "url": "https://logius-standaarden.github.io/API-Design-Rules/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -143,12 +123,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "logius — API-12: Self link verplicht",
-          "section": "OS-API-005",
-          "url": "https://logius-standaarden.github.io/API-Design-Rules/"
-        }
+        {"type": "regeling", "title": "logius — API-12: Self link verplicht", "section": "OS-API-005", "url": "https://logius-standaarden.github.io/API-Design-Rules/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -175,12 +150,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "logius — API-13: Content-Type header",
-          "section": "OS-API-006",
-          "url": "https://logius-standaarden.github.io/API-Design-Rules/"
-        }
+        {"type": "regeling", "title": "logius — API-13: Content-Type header", "section": "OS-API-006", "url": "https://logius-standaarden.github.io/API-Design-Rules/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -207,12 +177,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "logius — API-16: HTTP status codes",
-          "section": "OS-API-007",
-          "url": "https://logius-standaarden.github.io/API-Design-Rules/"
-        }
+        {"type": "regeling", "title": "logius — API-16: HTTP status codes", "section": "OS-API-007", "url": "https://logius-standaarden.github.io/API-Design-Rules/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -239,12 +204,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "logius — API-17: Error response formaat",
-          "section": "OS-API-008",
-          "url": "https://logius-standaarden.github.io/API-Design-Rules/"
-        }
+        {"type": "regeling", "title": "logius — API-17: Error response formaat", "section": "OS-API-008", "url": "https://logius-standaarden.github.io/API-Design-Rules/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -271,12 +231,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "logius — API-18: Versioning via URI",
-          "section": "OS-API-009",
-          "url": "https://logius-standaarden.github.io/API-Design-Rules/"
-        }
+        {"type": "regeling", "title": "logius — API-18: Versioning via URI", "section": "OS-API-009", "url": "https://logius-standaarden.github.io/API-Design-Rules/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -303,12 +258,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "logius — API-19: Pagination",
-          "section": "OS-API-010",
-          "url": "https://logius-standaarden.github.io/API-Design-Rules/"
-        }
+        {"type": "regeling", "title": "logius — API-19: Pagination", "section": "OS-API-010", "url": "https://logius-standaarden.github.io/API-Design-Rules/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -335,12 +285,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "logius — API-20: CORS headers",
-          "section": "OS-API-011",
-          "url": "https://logius-standaarden.github.io/API-Design-Rules/"
-        }
+        {"type": "regeling", "title": "logius — API-20: CORS headers", "section": "OS-API-011", "url": "https://logius-standaarden.github.io/API-Design-Rules/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -367,12 +312,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "logius — API-51: HTTPS verplicht",
-          "section": "OS-API-012",
-          "url": "https://logius-standaarden.github.io/API-Design-Rules/"
-        }
+        {"type": "regeling", "title": "logius — API-51: HTTPS verplicht", "section": "OS-API-012", "url": "https://logius-standaarden.github.io/API-Design-Rules/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -399,12 +339,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "forumstandaardisatie — NL GOV Assurance Profile OAuth 2.0",
-          "section": "OS-AUTH-001",
-          "url": "https://www.forumstandaardisatie.nl/open-standaarden/nl-gov-assurance-profile-oauth-20"
-        }
+        {"type": "regeling", "title": "forumstandaardisatie — NL GOV Assurance Profile OAuth 2.0", "section": "OS-AUTH-001", "url": "https://www.forumstandaardisatie.nl/open-standaarden/nl-gov-assurance-profile-oauth-20", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -431,12 +366,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "forumstandaardisatie — eIDAS SAML 2.0",
-          "section": "OS-AUTH-002",
-          "url": "https://www.forumstandaardisatie.nl/open-standaarden/authenticatie-standaarden"
-        }
+        {"type": "regeling", "title": "forumstandaardisatie — eIDAS SAML 2.0", "section": "OS-AUTH-002", "url": "https://www.forumstandaardisatie.nl/open-standaarden/authenticatie-standaarden", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -463,12 +393,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "forumstandaardisatie — OpenID Connect (OIDC)",
-          "section": "OS-AUTH-003",
-          "url": "https://www.forumstandaardisatie.nl/open-standaarden/authenticatie-standaarden"
-        }
+        {"type": "regeling", "title": "forumstandaardisatie — OpenID Connect (OIDC)", "section": "OS-AUTH-003", "url": "https://www.forumstandaardisatie.nl/open-standaarden/authenticatie-standaarden", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -495,12 +420,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "logius — JWT signed tokens",
-          "section": "OS-AUTH-004",
-          "url": "https://logius-standaarden.github.io/API-Design-Rules/"
-        }
+        {"type": "regeling", "title": "logius — JWT signed tokens", "section": "OS-AUTH-004", "url": "https://logius-standaarden.github.io/API-Design-Rules/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -527,12 +447,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "logius — NL GOV Profile for CloudEvents",
-          "section": "OS-EVT-001",
-          "url": "https://logius-standaarden.github.io/NL-GOV-profile-for-CloudEvents/"
-        }
+        {"type": "regeling", "title": "logius — NL GOV Profile for CloudEvents", "section": "OS-EVT-001", "url": "https://logius-standaarden.github.io/NL-GOV-profile-for-CloudEvents/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -559,12 +474,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "logius — CloudEvents structured mode",
-          "section": "OS-EVT-002",
-          "url": "https://logius-standaarden.github.io/NL-GOV-profile-for-CloudEvents/"
-        }
+        {"type": "regeling", "title": "logius — CloudEvents structured mode", "section": "OS-EVT-002", "url": "https://logius-standaarden.github.io/NL-GOV-profile-for-CloudEvents/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -591,12 +501,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "logius — CloudEvents extensies",
-          "section": "OS-EVT-003",
-          "url": "https://logius-standaarden.github.io/NL-GOV-profile-for-CloudEvents/"
-        }
+        {"type": "regeling", "title": "logius — CloudEvents extensies", "section": "OS-EVT-003", "url": "https://logius-standaarden.github.io/NL-GOV-profile-for-CloudEvents/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -623,12 +528,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "logius — Digikoppeling WUS 3.0",
-          "section": "OS-DK-001",
-          "url": "https://logius-standaarden.github.io/Digikoppeling-Architectuur/"
-        }
+        {"type": "regeling", "title": "logius — Digikoppeling WUS 3.0", "section": "OS-DK-001", "url": "https://logius-standaarden.github.io/Digikoppeling-Architectuur/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -655,12 +555,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "logius — Digikoppeling ebMS 3.0",
-          "section": "OS-DK-002",
-          "url": "https://logius-standaarden.github.io/Digikoppeling-Architectuur/"
-        }
+        {"type": "regeling", "title": "logius — Digikoppeling ebMS 3.0", "section": "OS-DK-002", "url": "https://logius-standaarden.github.io/Digikoppeling-Architectuur/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -687,12 +582,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "logius — Digikoppeling certificaten",
-          "section": "OS-DK-003",
-          "url": "https://logius-standaarden.github.io/Digikoppeling-Architectuur/"
-        }
+        {"type": "regeling", "title": "logius — Digikoppeling certificaten", "section": "OS-DK-003", "url": "https://logius-standaarden.github.io/Digikoppeling-Architectuur/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -719,12 +609,7 @@
       "priority": 200,
       "legalStatus": "conventie",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "developer-overheid — API registratie op developer.overheid.nl",
-          "section": "OS-DEV-001",
-          "url": "https://developer.overheid.nl/"
-        }
+        {"type": "regeling", "title": "developer-overheid — API registratie op developer.overheid.nl", "section": "OS-DEV-001", "url": "https://developer.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {
@@ -751,12 +636,7 @@
       "priority": 200,
       "legalStatus": "conventie",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "developer-overheid — OpenAPI 3.0 specificatie",
-          "section": "OS-DEV-002",
-          "url": "https://developer.overheid.nl/"
-        }
+        {"type": "regeling", "title": "developer-overheid — OpenAPI 3.0 specificatie", "section": "OS-DEV-002", "url": "https://developer.overheid.nl/", "retrievedOn": "2026-08-28"}
       ],
       "conditions": {},
       "outcome": {

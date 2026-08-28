@@ -11,12 +11,7 @@
       "ruleId": "BRP-001",
       "name": "BRP opvraag door overheidsorgaan met wettaak — toegestaan",
       "sourceRefs": [
-        {
-          "type": "wet",
-          "title": "Wet basisregistratie personen",
-          "section": "art. 3.1",
-          "bwbId": "BWBR0033715"
-        }
+        {"type": "wet", "title": "Wet basisregistratie personen", "section": "art. 3.1", "bwbId": "BWBR0033715", "url": "https://wetten.overheid.nl/BWBR0033715/2025-01-01", "bronVersie": "2025-01-01"}
       ],
       "conditions": {
         "registratie": "BRP",
@@ -36,17 +31,8 @@
       "ruleId": "BRP-002",
       "name": "BRP opvraag zonder wettelijke grondslag — geweigerd",
       "sourceRefs": [
-        {
-          "type": "wet",
-          "title": "Wet basisregistratie personen",
-          "section": "art. 3.1",
-          "bwbId": "BWBR0033715"
-        },
-        {
-          "type": "wet",
-          "title": "AVG",
-          "section": "art. 6 lid 1c"
-        }
+        {"type": "wet", "title": "Wet basisregistratie personen", "section": "art. 3.1", "bwbId": "BWBR0033715", "url": "https://wetten.overheid.nl/BWBR0033715/2025-01-01", "bronVersie": "2025-01-01"},
+        {"type": "wet", "title": "AVG", "section": "art. 6 lid 1c", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj", "eli": "http://data.europa.eu/eli/reg/2016/679/oj", "bronDatum": "2016-04-27"}
       ],
       "conditions": {
         "registratie": "BRP",
@@ -64,12 +50,7 @@
       "ruleId": "BRP-003",
       "name": "BRP opvraag door derde zonder wettelijke taak — geweigerd",
       "sourceRefs": [
-        {
-          "type": "wet",
-          "title": "Wet basisregistratie personen",
-          "section": "art. 3.1",
-          "bwbId": "BWBR0033715"
-        }
+        {"type": "wet", "title": "Wet basisregistratie personen", "section": "art. 3.1", "bwbId": "BWBR0033715", "url": "https://wetten.overheid.nl/BWBR0033715/2025-01-01", "bronVersie": "2025-01-01"}
       ],
       "conditions": {
         "registratie": "BRP",
@@ -88,17 +69,8 @@
       "ruleId": "BRP-004",
       "name": "BRP beperkt verstrekken — alleen noodzakelijke gegevens",
       "sourceRefs": [
-        {
-          "type": "wet",
-          "title": "Wet basisregistratie personen",
-          "section": "art. 3.2",
-          "bwbId": "BWBR0033715"
-        },
-        {
-          "type": "wet",
-          "title": "AVG",
-          "section": "art. 5 lid 1c — minimalisatie"
-        }
+        {"type": "wet", "title": "Wet basisregistratie personen", "section": "art. 3.2", "bwbId": "BWBR0033715", "url": "https://wetten.overheid.nl/BWBR0033715/2025-01-01", "bronVersie": "2025-01-01"},
+        {"type": "wet", "title": "AVG", "section": "art. 5 lid 1c — minimalisatie", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj", "eli": "http://data.europa.eu/eli/reg/2016/679/oj", "bronDatum": "2016-04-27"}
       ],
       "conditions": {
         "registratie": "BRP",
@@ -118,12 +90,7 @@
       "ruleId": "BAG-001",
       "name": "BAG is open data — vrij toegankelijk voor iedereen",
       "sourceRefs": [
-        {
-          "type": "wet",
-          "title": "Wet basisregistratie adressen en gebouwen",
-          "section": "art. 6.1",
-          "bwbId": "BWBR0023466"
-        }
+        {"type": "wet", "title": "Wet basisregistratie adressen en gebouwen", "section": "art. 6.1", "bwbId": "BWBR0023466", "url": "https://wetten.overheid.nl/BWBR0023466/2025-01-01", "bronVersie": "2025-01-01"}
       ],
       "conditions": {
         "registratie": "BAG"
@@ -141,12 +108,7 @@
       "ruleId": "NHR-001",
       "name": "NHR handelsregister openbaar — publiek toegankelijk",
       "sourceRefs": [
-        {
-          "type": "wet",
-          "title": "Handelsregisterwet 2007",
-          "section": "art. 2.1",
-          "bwbId": "BWBR0021777"
-        }
+        {"type": "wet", "title": "Handelsregisterwet 2007", "section": "art. 2.1", "bwbId": "BWBR0021777", "url": "https://wetten.overheid.nl/BWBR0021777/2025-01-01", "bronVersie": "2025-01-01"}
       ],
       "conditions": {
         "registratie": "NHR",
@@ -165,12 +127,7 @@
       "ruleId": "NHR-002",
       "name": "NHR commercieel gebruik — leges verschuldigd",
       "sourceRefs": [
-        {
-          "type": "wet",
-          "title": "Handelsregisterwet 2007",
-          "section": "art. 2.3",
-          "bwbId": "BWBR0021777"
-        }
+        {"type": "wet", "title": "Handelsregisterwet 2007", "section": "art. 2.3", "bwbId": "BWBR0021777", "url": "https://wetten.overheid.nl/BWBR0021777/2025-01-01", "bronVersie": "2025-01-01"}
       ],
       "conditions": {
         "registratie": "NHR",
@@ -190,12 +147,7 @@
       "ruleId": "BRT-001",
       "name": "BRT topografische data — open data vrij toegankelijk",
       "sourceRefs": [
-        {
-          "type": "wet",
-          "title": "Wet basisregistratie grootschalige topografie",
-          "section": "art. 3",
-          "bwbId": "BWBR0034026"
-        }
+        {"type": "wet", "title": "Wet basisregistratie grootschalige topografie", "section": "art. 3", "bwbId": "BWBR0034026", "url": "https://wetten.overheid.nl/BWBR0034026/2025-01-01", "bronVersie": "2025-01-01"}
       ],
       "conditions": {
         "registratie": "BRT"
@@ -213,12 +165,7 @@
       "ruleId": "WOZ-001",
       "name": "WOZ-waarde opvraag door belastingorgaan — toegestaan",
       "sourceRefs": [
-        {
-          "type": "wet",
-          "title": "Wet waardering onroerende zaken",
-          "section": "art. 22",
-          "bwbId": "BWBR0007119"
-        }
+        {"type": "wet", "title": "Wet waardering onroerende zaken", "section": "art. 22", "bwbId": "BWBR0007119", "url": "https://wetten.overheid.nl/BWBR0007119/2025-01-01", "bronVersie": "2025-01-01"}
       ],
       "conditions": {
         "registratie": "WOZ",
@@ -237,12 +184,7 @@
       "ruleId": "WOZ-002",
       "name": "WOZ-waarde opvraag door burger voor eigen woning — toegestaan",
       "sourceRefs": [
-        {
-          "type": "wet",
-          "title": "Wet waardering onroerende zaken",
-          "section": "art. 23",
-          "bwbId": "BWBR0007119"
-        }
+        {"type": "wet", "title": "Wet waardering onroerende zaken", "section": "art. 23", "bwbId": "BWBR0007119", "url": "https://wetten.overheid.nl/BWBR0007119/2025-01-01", "bronVersie": "2025-01-01"}
       ],
       "conditions": {
         "registratie": "WOZ",
@@ -262,12 +204,7 @@
       "ruleId": "WOZ-003",
       "name": "WOZ-waarde opvraag door derde — geweigerd tenzij wettelijke grondslag",
       "sourceRefs": [
-        {
-          "type": "wet",
-          "title": "Wet waardering onroerende zaken",
-          "section": "art. 22",
-          "bwbId": "BWBR0007119"
-        }
+        {"type": "wet", "title": "Wet waardering onroerende zaken", "section": "art. 22", "bwbId": "BWBR0007119", "url": "https://wetten.overheid.nl/BWBR0007119/2025-01-01", "bronVersie": "2025-01-01"}
       ],
       "conditions": {
         "registratie": "WOZ",
@@ -328,11 +265,7 @@
       "ruleId": "DB-001",
       "name": "Doelbinding — elke opvraag vereist geregistreerd doel",
       "sourceRefs": [
-        {
-          "type": "wet",
-          "title": "AVG",
-          "section": "art. 5 lid 1b"
-        }
+        {"type": "wet", "title": "AVG", "section": "art. 5 lid 1b", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj", "eli": "http://data.europa.eu/eli/reg/2016/679/oj", "bronDatum": "2016-04-27"}
       ],
       "conditions": {
         "registratie": "BRP",
@@ -350,11 +283,7 @@
       "ruleId": "DB-002",
       "name": "Verwerkingsregistratie verplicht voor BRP-gegevens",
       "sourceRefs": [
-        {
-          "type": "wet",
-          "title": "AVG",
-          "section": "art. 30"
-        }
+        {"type": "wet", "title": "AVG", "section": "art. 30", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj", "eli": "http://data.europa.eu/eli/reg/2016/679/oj", "bronDatum": "2016-04-27"}
       ],
       "conditions": {
         "registratie": "BRP",
@@ -372,11 +301,7 @@
       "ruleId": "DB-003",
       "name": "AVG art. 22 — geen geautomatiseerde besluitvorming zonder menselijke controle",
       "sourceRefs": [
-        {
-          "type": "wet",
-          "title": "AVG",
-          "section": "art. 22"
-        }
+        {"type": "wet", "title": "AVG", "section": "art. 22", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj", "eli": "http://data.europa.eu/eli/reg/2016/679/oj", "bronDatum": "2016-04-27"}
       ],
       "conditions": {
         "registratie": "BRP",

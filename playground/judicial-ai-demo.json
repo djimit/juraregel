@@ -6,7 +6,7 @@
     "status": "L1-poc",
     "ruleCount": 12,
     "hardStopCount": 9,
-    "sourceHash": "sha256:593a577ed630631aef176a8ae3539bcdd6dcd50ed0a8e4f42eb3547ed8c0b869"
+    "sourceHash": "sha256:c8433f13abc597f0839143a481c6e513bd739794680c76c725de8084de73244a"
   },
   "disclaimer": "Dit profiel inventariseert assurance-eisen. Het berekent geen juridische goedkeuring en vervangt geen beoordeling door een bevoegde jurist of rechterlijke governancefunctie.",
   "scenarios": [
@@ -888,5 +888,5 @@
       ]
     }
   ],
-  "bundleHash": "sha256:3fa752ec6637dbc90be02af5db2689b04b2446fb8ef399e622f19f47bdd6184f"
+  "bundleHash": "sha256:45a69be10541cb026c0e249e4f480c3610f6c2b1f597aa89ab40bbb93fce4ea9"
 }

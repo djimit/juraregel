@@ -44,14 +44,7 @@
       "priority": 115,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "Regulation (EU) 2024/1689 (AI Act)",
-          "section": "Annex III, point 8(a), administration of justice",
-          "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
-          "bronVersie": "2024-06-13",
-          "bronDatum": "2024-06-13"
-        },
+        {"type": "regeling", "title": "Regulation (EU) 2024/1689 (AI Act)", "section": "Annex III, point 8(a), administration of justice", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng", "bronVersie": "2024-06-13", "bronDatum": "2024-06-13", "eli": "http://data.europa.eu/eli/reg/2024/1689/oj"},
         {
           "type": "standaard",
           "title": "CEPEJ Guidelines on the use of generative AI for courts",
@@ -245,14 +238,7 @@
       "priority": 90,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "Regulation (EU) 2024/1689 (AI Act)",
-          "section": "Article 27, fundamental rights impact assessment for high-risk AI systems",
-          "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
-          "bronVersie": "2024-06-13",
-          "bronDatum": "2024-06-13"
-        },
+        {"type": "regeling", "title": "Regulation (EU) 2024/1689 (AI Act)", "section": "Article 27, fundamental rights impact assessment for high-risk AI systems", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng", "bronVersie": "2024-06-13", "bronDatum": "2024-06-13", "eli": "http://data.europa.eu/eli/reg/2024/1689/oj"},
         {
           "type": "standaard",
           "title": "Council of Europe Framework Convention on AI (CETS 225)",
@@ -298,14 +284,7 @@
       "priority": 85,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "regeling",
-          "title": "Regulation (EU) 2016/679 (GDPR)",
-          "section": "Articles 5, 25 and 32, data principles, data protection by design and security",
-          "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng",
-          "bronVersie": "2016-04-27",
-          "bronDatum": "2016-04-27"
-        },
+        {"type": "regeling", "title": "Regulation (EU) 2016/679 (GDPR)", "section": "Articles 5, 25 and 32, data principles, data protection by design and security", "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng", "bronVersie": "2016-04-27", "bronDatum": "2016-04-27", "eli": "http://data.europa.eu/eli/reg/2016/679/oj"},
         {
           "type": "standaard",
           "title": "CEPEJ Guidelines on the use of generative AI for courts",

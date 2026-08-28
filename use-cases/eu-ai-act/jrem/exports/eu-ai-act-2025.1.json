@@ -15,12 +15,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU AI Act",
-          "section": "AIA-001",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2024/1689 (AI-verordening)", "section": "Article 5", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj", "eli": "http://data.europa.eu/eli/reg/2024/1689/oj", "bronDatum": "2024-06-13"}
       ],
       "conditions": {},
       "outcome": {
@@ -46,12 +41,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU AI Act",
-          "section": "AIA-002",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2024/1689 (AI-verordening)", "section": "Article 6; Annex III point 2", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj", "eli": "http://data.europa.eu/eli/reg/2024/1689/oj", "bronDatum": "2024-06-13"}
       ],
       "conditions": {},
       "outcome": {
@@ -77,12 +67,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU AI Act",
-          "section": "AIA-003",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2024/1689 (AI-verordening)", "section": "Article 6; Annex III point 6", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj", "eli": "http://data.europa.eu/eli/reg/2024/1689/oj", "bronDatum": "2024-06-13"}
       ],
       "conditions": {},
       "outcome": {
@@ -108,12 +93,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU AI Act",
-          "section": "AIA-004",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2024/1689 (AI-verordening)", "section": "Article 6; Annex III point 3", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj", "eli": "http://data.europa.eu/eli/reg/2024/1689/oj", "bronDatum": "2024-06-13"}
       ],
       "conditions": {},
       "outcome": {
@@ -139,12 +119,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU AI Act",
-          "section": "AIA-005",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2024/1689 (AI-verordening)", "section": "Article 6; Annex III point 5", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj", "eli": "http://data.europa.eu/eli/reg/2024/1689/oj", "bronDatum": "2024-06-13"}
       ],
       "conditions": {},
       "outcome": {
@@ -170,12 +145,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU AI Act",
-          "section": "AIA-006",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2024/1689 (AI-verordening)", "section": "Article 6; Annex III point 4", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj", "eli": "http://data.europa.eu/eli/reg/2024/1689/oj", "bronDatum": "2024-06-13"}
       ],
       "conditions": {},
       "outcome": {
@@ -201,12 +171,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU AI Act",
-          "section": "AIA-007",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2024/1689 (AI-verordening)", "section": "Article 50(1)", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj", "eli": "http://data.europa.eu/eli/reg/2024/1689/oj", "bronDatum": "2024-06-13"}
       ],
       "conditions": {},
       "outcome": {
@@ -232,12 +197,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU AI Act",
-          "section": "AIA-008",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2024/1689 (AI-verordening)", "section": "Article 50(4)", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj", "eli": "http://data.europa.eu/eli/reg/2024/1689/oj", "bronDatum": "2024-06-13"}
       ],
       "conditions": {},
       "outcome": {
@@ -263,12 +223,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU AI Act",
-          "section": "AIA-009",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2024/1689 (AI-verordening)", "section": "Article 6; Annex III", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj", "eli": "http://data.europa.eu/eli/reg/2024/1689/oj", "bronDatum": "2024-06-13"}
       ],
       "conditions": {},
       "outcome": {
@@ -294,12 +249,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU AI Act",
-          "section": "AIA-010",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2024/1689 (AI-verordening)", "section": "Article 9", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj", "eli": "http://data.europa.eu/eli/reg/2024/1689/oj", "bronDatum": "2024-06-13"}
       ],
       "conditions": {},
       "outcome": {
@@ -325,12 +275,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU AI Act",
-          "section": "AIA-011",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2024/1689 (AI-verordening)", "section": "Article 10", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj", "eli": "http://data.europa.eu/eli/reg/2024/1689/oj", "bronDatum": "2024-06-13"}
       ],
       "conditions": {},
       "outcome": {
@@ -356,12 +301,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU AI Act",
-          "section": "AIA-012",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2024/1689 (AI-verordening)", "section": "Article 11", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj", "eli": "http://data.europa.eu/eli/reg/2024/1689/oj", "bronDatum": "2024-06-13"}
       ],
       "conditions": {},
       "outcome": {
@@ -387,12 +327,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU AI Act",
-          "section": "AIA-013",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2024/1689 (AI-verordening)", "section": "Article 12", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj", "eli": "http://data.europa.eu/eli/reg/2024/1689/oj", "bronDatum": "2024-06-13"}
       ],
       "conditions": {},
       "outcome": {
@@ -418,12 +353,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU AI Act",
-          "section": "AIA-014",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2024/1689 (AI-verordening)", "section": "Article 13", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj", "eli": "http://data.europa.eu/eli/reg/2024/1689/oj", "bronDatum": "2024-06-13"}
       ],
       "conditions": {},
       "outcome": {
@@ -449,12 +379,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU AI Act",
-          "section": "AIA-015",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2024/1689 (AI-verordening)", "section": "Article 50(4)", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj", "eli": "http://data.europa.eu/eli/reg/2024/1689/oj", "bronDatum": "2024-06-13"}
       ],
       "conditions": {},
       "outcome": {
@@ -480,12 +405,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU AI Act",
-          "section": "AIA-016",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2024/1689 (AI-verordening)", "section": "Article 27", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj", "eli": "http://data.europa.eu/eli/reg/2024/1689/oj", "bronDatum": "2024-06-13"}
       ],
       "conditions": {},
       "outcome": {
@@ -511,12 +431,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU AI Act",
-          "section": "AIA-017",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2024/1689 (AI-verordening)", "section": "Article 43", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj", "eli": "http://data.europa.eu/eli/reg/2024/1689/oj", "bronDatum": "2024-06-13"}
       ],
       "conditions": {},
       "outcome": {
@@ -542,12 +457,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU AI Act",
-          "section": "AIA-018",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2024/1689 (AI-verordening)", "section": "Article 13", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj", "eli": "http://data.europa.eu/eli/reg/2024/1689/oj", "bronDatum": "2024-06-13"}
       ],
       "conditions": {},
       "outcome": {
@@ -573,12 +483,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU AI Act",
-          "section": "AIA-019",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2024/1689 (AI-verordening)", "section": "Article 14", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj", "eli": "http://data.europa.eu/eli/reg/2024/1689/oj", "bronDatum": "2024-06-13"}
       ],
       "conditions": {},
       "outcome": {
@@ -604,12 +509,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU AI Act",
-          "section": "AIA-020",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2024/1689 (AI-verordening)", "section": "Article 15", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj", "eli": "http://data.europa.eu/eli/reg/2024/1689/oj", "bronDatum": "2024-06-13"}
       ],
       "conditions": {},
       "outcome": {
@@ -635,12 +535,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU AI Act",
-          "section": "AIA-021",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2024/1689 (AI-verordening)", "section": "Article 15", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj", "eli": "http://data.europa.eu/eli/reg/2024/1689/oj", "bronDatum": "2024-06-13"}
       ],
       "conditions": {},
       "outcome": {
@@ -666,12 +561,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU AI Act",
-          "section": "AIA-022",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2024/1689 (AI-verordening)", "section": "Article 26", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj", "eli": "http://data.europa.eu/eli/reg/2024/1689/oj", "bronDatum": "2024-06-13"}
       ],
       "conditions": {},
       "outcome": {
@@ -697,12 +587,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU AI Act",
-          "section": "AIA-023",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2024/1689 (AI-verordening)", "section": "Article 53", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj", "eli": "http://data.europa.eu/eli/reg/2024/1689/oj", "bronDatum": "2024-06-13"}
       ],
       "conditions": {},
       "outcome": {
@@ -728,12 +613,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU AI Act",
-          "section": "AIA-024",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2024/1689 (AI-verordening)", "section": "Articles 50 and 53", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj", "eli": "http://data.europa.eu/eli/reg/2024/1689/oj", "bronDatum": "2024-06-13"}
       ],
       "conditions": {},
       "outcome": {
@@ -759,12 +639,7 @@
       "priority": 200,
       "legalStatus": "wettelijk",
       "sourceRefs": [
-        {
-          "type": "wetsartikel",
-          "title": "EU AI Act",
-          "section": "AIA-025",
-          "url": "https://wetten.overheid.nl/"
-        }
+        {"type": "wetsartikel", "title": "Verordening (EU) 2024/1689 (AI-verordening)", "section": "Article 49", "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj", "eli": "http://data.europa.eu/eli/reg/2024/1689/oj", "bronDatum": "2024-06-13"}
       ],
       "conditions": {},
       "outcome": {

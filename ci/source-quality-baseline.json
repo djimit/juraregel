@@ -1,0 +1,21 @@
+{
+  "use-cases/algoritmeregister/jrem/exports/algoritmeregister-2025.1.json": 20,
+  "use-cases/api-registratie/jrem/exports/api-registratie-2025.1.json": 18,
+  "use-cases/basisregistraties/jrem/exports/basisregistraties-toegang-2025.1.json": 6,
+  "use-cases/btw-tarieven/jrem/exports/btw-tarieven-2025.1.json": 10,
+  "use-cases/classificatie/jrem/exports/classificatie-zaak-intake-2026.1.json": 15,
+  "use-cases/compliance-debt/jrem/exports/compliance-debt-2025.1.json": 8,
+  "use-cases/data-overheid-dcat/jrem/exports/data-overheid-dcat-2025.1.json": 15,
+  "use-cases/dpia-model/jrem/exports/dpia-model-2025.1.json": 30,
+  "use-cases/gegevensdelingsbeleid/jrem/exports/gegevensdelingsbeleid-2025.1.json": 20,
+  "use-cases/ind-verblijfsregels/jrem/exports/ind-verblijfsregels-2025.1.json": 15,
+  "use-cases/ncsc/jrem/exports/ncsc-richtlijnen-2025.1.json": 32,
+  "use-cases/nis2/jrem/exports/nis2-2025.1.json": 15,
+  "use-cases/overheidsstandaarden/jrem/exports/overheidsstandaarden-2025.1.json": 24,
+  "use-cases/procesreglement/jrem/exports/procesreglement-civiel-2026.1.json": 20,
+  "use-cases/publicatie/jrem/exports/publicatie-regels-2026.1.json": 5,
+  "use-cases/regulatory-impact/jrem/exports/regulatory-impact-2025.1.json": 10,
+  "use-cases/traceability/jrem/exports/traceability-2025.1.json": 15,
+  "use-cases/wmo/jrem/exports/wmo-2025.1.json": 10,
+  "use-cases/ww-uitkering/jrem/exports/ww-uitkering-2025.1.json": 15
+}
