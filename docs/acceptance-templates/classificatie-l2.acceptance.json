@@ -10,7 +10,7 @@
   "review": {
     "datum": "__REVIEW_DATUM_YYYY-MM-DD__",
     "geldigTot": "__GELDIG_TOT_YYYY-MM-DD__",
-    "scope": "L2 pilot voor classificatie zaak intake - kanton/handel bevoegdheid, proceduretype en specialisatie.",
+    "scope": "L2 pilot voor de smalle classificatie van geldvorderingen volgens artikel 93 onder a en b Rv; bijzondere bevoegdheden blijven buiten scope.",
     "bronSnapshot": "__BRON_SNAPSHOT_ID_OF_DATUM__",
     "verklaring": "__JURIDISCHE_VERKLARING_BINNEN_SCOPE__",
     "beperkingen": [
@@ -20,8 +20,8 @@
   },
   "sourceSnapshotRefs": [
     {
-      "name": "Wet Rv (Wet op de Rechterlijke Vorming)",
-      "url": "https://wetten.overheid.nl/BWBR0002534",
+      "name": "Wetboek van Burgerlijke Rechtsvordering, artikel 93",
+      "url": "https://wetten.overheid.nl/BWBR0001827/2026-01-01/#BoekEerste_TiteldeelTweede_AfdelingTweede_Artikel93",
       "checkedAt": "__SOURCE_CHECKED_AT_YYYY-MM-DD__"
     },
     {
@@ -32,11 +32,15 @@
   ],
   "scenarioAcceptance": [
     {
-      "scenario": "CL-SC-001: Vordering euro5.000 -> kanton",
+      "scenario": "CL-SC-001: Geldvordering van exact euro25.000 -> kanton",
       "accepted": "__TRUE_FALSE__"
     },
     {
-      "scenario": "CL-SC-002: Vordering euro50.000 -> handel",
+      "scenario": "CL-SC-002: Geldvordering boven euro25.000 -> handmatige controle",
+      "accepted": "__TRUE_FALSE__"
+    },
+    {
+      "scenario": "CL-SC-003: Onbepaalde waarde -> handmatige kwalificatie",
       "accepted": "__TRUE_FALSE__"
     }
   ]

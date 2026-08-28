@@ -1,19 +1,21 @@
 # Procesreglement Use Case — Digitale indiening
 
-**Als** griffier **wil ik** weten welke stukken digitaal ingediend kunnen worden **zodat** zaakintake efficiënter verloopt.
+> **Status: quarantaine.** De eerdere regels vermengden bronversies en maakten
+> ongefundeerde claims over verplicht digitaal procederen. Alle uitkomsten zijn
+> fail-closed totdat de bronextractie per geldigheidsperiode is herbouwd.
 
 | Rol | Probleem | Oplossing |
 |---|---|---|
-| Griffier | Onbekend welke stukken digitaal mogen | Rule API checkt per documenttype |
-| Burger | Wil digitaal indienen maar weet niet of het kan | API retourneert "digitaal verplicht ja/nee" |
-| Ontwikkelaar portaal | Wil digitale indiening implementeren | API endpoint met duidelijke response |
+| Griffier | Onbekend welke stukken digitaal mogen | Raadpleeg het toepasselijke officiële reglement |
+| Burger | Wil digitaal indienen maar weet niet of het kan | Geen automatische uitkomst; handmatige controle vereist |
+| Ontwikkelaar portaal | Wil digitale indiening implementeren | Gebruik deze catalogus niet als uitvoerbare beslisbron |
 
-4 regels (PoC). Rule API op port 8491. 16 tests. PoC status.
+20 historische placeholderregels, 1 quarantaine-invariant. Catalog-only op port 8491.
 
 ## Functiehuis Rijksoverheid Rollen
 
 | Rol | Probleem | Oplossing |
 |---|---|---|
-| Griffier | Procesreglement regels handmatig | Rule API checkt per documenttype |
-| Portaal ontwikkelaar | Wil digitale indiening bouwen | API met duidelijke compliant/niet-compliant |
-| Burger | Wil weten of digitaal indienen kan | API response met uitleg |
+| Griffier | Procesreglementregels handmatig | Bronreconstructie per halfjaar vereist |
+| Portaal ontwikkelaar | Wil digitale indiening bouwen | Geen geautomatiseerde beslissing uit deze L0-set |
+| Burger | Wil weten of digitaal indienen kan | Verwijzing naar Rechtspraak en menselijke beoordeling |

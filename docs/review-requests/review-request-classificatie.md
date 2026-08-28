@@ -5,8 +5,8 @@
 **Domein:** Classificatie van zaken bij intake — bepaling zaakstroom en proceduretype
 
 **JREM versie:** 2026.1
-**Aantal regels:** 15
-**Aantal tests:** 16
+**Aantal regels:** 3
+**Aantal tests:** 3
 **API poort:** 8492
 
 ---
@@ -15,7 +15,7 @@
 
 Deze use case vertaalt de volgende bronnen naar testbare, auditeerbare regels in het JuraRegel JREM formaat:
 
-- Wet Rv
+- Wetboek van Burgerlijke Rechtsvordering, artikel 93 onder a en b
 
 ## Review criteria
 
@@ -44,7 +44,7 @@ Per regel kan de jurist aangeven:
 ## Status
 
 - **Huidige accordering:** Self-approved door D. Landman (niet onafhankelijk)
-- **Doel:** Onafhankelijke jurist-review voordat deze use case in productie wordt genomen
+- **Doel:** Onafhankelijke review van de smalle artikel-93-pilot; bijzondere kantonbevoegdheden blijven buiten scope
 - **Na review:** Resultaten worden vastgelegd in `docs/review-results/classificatie.md`
 
 ---

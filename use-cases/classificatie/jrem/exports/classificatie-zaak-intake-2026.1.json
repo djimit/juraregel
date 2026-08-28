@@ -6,456 +6,113 @@
   "validUntil": "2026-12-31",
   "jurisdiction": "NL",
   "domain": "civiel-rechtbank",
-  "procedureType": "dagvaarding",
+  "procedureType": "classificatie",
   "conflictResolution": "first-match",
   "rules": [
     {
       "ruleId": "CL-2026-001",
-      "name": "Kanton bij vordering tot €25.000",
+      "name": "Geldvordering tot en met 25.000 euro — kanton",
       "priority": 200,
       "legalStatus": "wettelijk",
-      "sourceRefs": [
-        {"type": "wetsartikel", "title": "Wet Rv", "section": "CL-2026-001", "url": "https://wetten.overheid.nl/BWBR0001827/2026-01-01", "bwbId": "BWBR0001827", "bronVersie": "2026-01-01"}
-      ],
-      "conditions": {},
+      "sourceRefs": [{
+        "type": "wetsartikel",
+        "title": "Wetboek van Burgerlijke Rechtsvordering",
+        "section": "Boek 1, Titel 2, Afdeling 2, Artikel 93, onder a",
+        "url": "https://wetten.overheid.nl/BWBR0001827/2026-01-01/#BoekEerste_TiteldeelTweede_AfdelingTweede_Artikel93",
+        "bwbId": "BWBR0001827",
+        "bronVersie": "2026-01-01"
+      }],
+      "conditions": {
+        "vorderingType": "geldvordering",
+        "vorderingWaarde": {"lte": 25000},
+        "bijzondereCategorie": "geen"
+      },
       "outcome": {
-        "griffierecht": {
-          "amount": null,
-          "currency": "EUR"
-        },
-        "category": "uc_classificatie",
+        "zaakstroom": "kanton",
+        "category": "kanton_article_93a",
         "confidence": "deterministic",
         "manualReviewRequired": false
-      },
-      "examples": [
-        {
-          "input": {
-            "regelId": "CL-2026-001"
-          }
-        }
-      ]
+      }
     },
     {
       "ruleId": "CL-2026-002",
-      "name": "Handel bij vordering boven €25.000",
-      "priority": 200,
+      "name": "Vordering van onbepaalde waarde — handmatige kwalificatie",
+      "priority": 300,
       "legalStatus": "wettelijk",
-      "sourceRefs": [
-        {"type": "wetsartikel", "title": "Wet Rv", "section": "CL-2026-002", "url": "https://wetten.overheid.nl/BWBR0001827/2026-01-01", "bwbId": "BWBR0001827", "bronVersie": "2026-01-01"}
-      ],
-      "conditions": {},
+      "sourceRefs": [{
+        "type": "wetsartikel",
+        "title": "Wetboek van Burgerlijke Rechtsvordering",
+        "section": "Boek 1, Titel 2, Afdeling 2, Artikel 93, onder b",
+        "url": "https://wetten.overheid.nl/BWBR0001827/2026-01-01/#BoekEerste_TiteldeelTweede_AfdelingTweede_Artikel93",
+        "bwbId": "BWBR0001827",
+        "bronVersie": "2026-01-01"
+      }],
+      "conditions": {"vorderingType": "onbepaalde_waarde"},
       "outcome": {
-        "griffierecht": {
-          "amount": null,
-          "currency": "EUR"
-        },
-        "category": "uc_classificatie",
-        "confidence": "deterministic",
-        "manualReviewRequired": false
-      },
-      "examples": [
-        {
-          "input": {
-            "regelId": "CL-2026-002"
-          }
-        }
-      ]
+        "zaakstroom": "onbepaald",
+        "category": "manual_value_assessment",
+        "confidence": "insufficient_evidence",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Artikel 93 onder b vereist beoordeling of duidelijke aanwijzingen bestaan dat de vordering meer dan 25.000 euro beloopt."
+      }
     },
     {
       "ruleId": "CL-2026-003",
-      "name": "Onbepaalde vordering — handmatige controle",
-      "priority": 200,
-      "legalStatus": "wettelijk",
-      "sourceRefs": [
-        {"type": "wetsartikel", "title": "Wet Rv", "section": "CL-2026-003", "url": "https://wetten.overheid.nl/BWBR0001827/2026-01-01", "bwbId": "BWBR0001827", "bronVersie": "2026-01-01"}
-      ],
-      "conditions": {},
-      "outcome": {
-        "griffierecht": {
-          "amount": null,
-          "currency": "EUR"
-        },
-        "category": "uc_classificatie",
-        "confidence": "deterministic",
-        "manualReviewRequired": false
+      "name": "Geldvordering boven 25.000 euro — buiten smalle pilot",
+      "priority": 100,
+      "legalStatus": "interpretatie",
+      "sourceRefs": [{
+        "type": "wetsartikel",
+        "title": "Wetboek van Burgerlijke Rechtsvordering",
+        "section": "Boek 1, Titel 2, Afdeling 2, Artikel 93, onder a tot en met d",
+        "url": "https://wetten.overheid.nl/BWBR0001827/2026-01-01/#BoekEerste_TiteldeelTweede_AfdelingTweede_Artikel93",
+        "bwbId": "BWBR0001827",
+        "bronVersie": "2026-01-01"
+      }],
+      "conditions": {
+        "vorderingType": "geldvordering",
+        "vorderingWaarde": {"gt": 25000},
+        "bijzondereCategorie": "geen"
       },
-      "examples": [
-        {
-          "input": {
-            "regelId": "CL-2026-003"
-          }
-        }
-      ]
-    },
-    {
-      "ruleId": "CL-2026-004",
-      "name": "Dagvaarding — standaard proceduretype",
-      "priority": 200,
-      "legalStatus": "wettelijk",
-      "sourceRefs": [
-        {"type": "wetsartikel", "title": "Wet Rv", "section": "CL-2026-004", "url": "https://wetten.overheid.nl/BWBR0001827/2026-01-01", "bwbId": "BWBR0001827", "bronVersie": "2026-01-01"}
-      ],
-      "conditions": {},
       "outcome": {
-        "griffierecht": {
-          "amount": null,
-          "currency": "EUR"
-        },
-        "category": "uc_classificatie",
-        "confidence": "deterministic",
-        "manualReviewRequired": false
-      },
-      "examples": [
-        {
-          "input": {
-            "regelId": "CL-2026-004"
-          }
-        }
-      ]
-    },
-    {
-      "ruleId": "CL-2026-005",
-      "name": "Verzoek — standaard proceduretype",
-      "priority": 200,
-      "legalStatus": "wettelijk",
-      "sourceRefs": [
-        {"type": "wetsartikel", "title": "Wet Rv", "section": "CL-2026-005", "url": "https://wetten.overheid.nl/BWBR0001827/2026-01-01", "bwbId": "BWBR0001827", "bronVersie": "2026-01-01"}
-      ],
-      "conditions": {},
-      "outcome": {
-        "griffierecht": {
-          "amount": null,
-          "currency": "EUR"
-        },
-        "category": "uc_classificatie",
-        "confidence": "deterministic",
-        "manualReviewRequired": false
-      },
-      "examples": [
-        {
-          "input": {
-            "regelId": "CL-2026-005"
-          }
-        }
-      ]
-    },
-    {
-      "ruleId": "CL-2026-006",
-      "name": "Familie — specialisatie handel",
-      "priority": 200,
-      "legalStatus": "wettelijk",
-      "sourceRefs": [
-        {"type": "wetsartikel", "title": "Wet Rv", "section": "CL-2026-006", "url": "https://wetten.overheid.nl/BWBR0001827/2026-01-01", "bwbId": "BWBR0001827", "bronVersie": "2026-01-01"}
-      ],
-      "conditions": {},
-      "outcome": {
-        "griffierecht": {
-          "amount": null,
-          "currency": "EUR"
-        },
-        "category": "uc_classificatie",
-        "confidence": "deterministic",
-        "manualReviewRequired": false
-      },
-      "examples": [
-        {
-          "input": {
-            "regelId": "CL-2026-006"
-          }
-        }
-      ]
-    },
-    {
-      "ruleId": "CL-2026-007",
-      "name": "Insolventie — specialisatie handel",
-      "priority": 200,
-      "legalStatus": "wettelijk",
-      "sourceRefs": [
-        {"type": "wetsartikel", "title": "Wet Rv", "section": "CL-2026-007", "url": "https://wetten.overheid.nl/BWBR0001827/2026-01-01", "bwbId": "BWBR0001827", "bronVersie": "2026-01-01"}
-      ],
-      "conditions": {},
-      "outcome": {
-        "griffierecht": {
-          "amount": null,
-          "currency": "EUR"
-        },
-        "category": "uc_classificatie",
-        "confidence": "deterministic",
-        "manualReviewRequired": false
-      },
-      "examples": [
-        {
-          "input": {
-            "regelId": "CL-2026-007"
-          }
-        }
-      ]
-    },
-    {
-      "ruleId": "CL-2026-008",
-      "name": "Algemeen boven €25.000 — handel",
-      "priority": 200,
-      "legalStatus": "wettelijk",
-      "sourceRefs": [
-        {"type": "wetsartikel", "title": "Wet Rv", "section": "CL-2026-008", "url": "https://wetten.overheid.nl/BWBR0001827/2026-01-01", "bwbId": "BWBR0001827", "bronVersie": "2026-01-01"}
-      ],
-      "conditions": {},
-      "outcome": {
-        "griffierecht": {
-          "amount": null,
-          "currency": "EUR"
-        },
-        "category": "uc_classificatie",
-        "confidence": "deterministic",
-        "manualReviewRequired": false
-      },
-      "examples": [
-        {
-          "input": {
-            "regelId": "CL-2026-008"
-          }
-        }
-      ]
-    },
-    {
-      "ruleId": "CL-2026-009",
-      "name": "Bestuursrecht — aparte instantie",
-      "priority": 200,
-      "legalStatus": "wettelijk",
-      "sourceRefs": [
-        {"type": "wetsartikel", "title": "Wet Rv", "section": "CL-2026-009", "url": "https://wetten.overheid.nl/BWBR0001827/2026-01-01", "bwbId": "BWBR0001827", "bronVersie": "2026-01-01"}
-      ],
-      "conditions": {},
-      "outcome": {
-        "griffierecht": {
-          "amount": null,
-          "currency": "EUR"
-        },
-        "category": "uc_classificatie",
-        "confidence": "deterministic",
-        "manualReviewRequired": false
-      },
-      "examples": [
-        {
-          "input": {
-            "regelId": "CL-2026-009"
-          }
-        }
-      ]
-    },
-    {
-      "ruleId": "CL-2026-010",
-      "name": "Strafrecht — aparte instantie",
-      "priority": 200,
-      "legalStatus": "wettelijk",
-      "sourceRefs": [
-        {"type": "wetsartikel", "title": "Wet Rv", "section": "CL-2026-010", "url": "https://wetten.overheid.nl/BWBR0001827/2026-01-01", "bwbId": "BWBR0001827", "bronVersie": "2026-01-01"}
-      ],
-      "conditions": {},
-      "outcome": {
-        "griffierecht": {
-          "amount": null,
-          "currency": "EUR"
-        },
-        "category": "uc_classificatie",
-        "confidence": "deterministic",
-        "manualReviewRequired": false
-      },
-      "examples": [
-        {
-          "input": {
-            "regelId": "CL-2026-010"
-          }
-        }
-      ]
-    },
-    {
-      "ruleId": "CL-2026-011",
-      "name": "Hoger beroep — gerechtshof",
-      "priority": 200,
-      "legalStatus": "wettelijk",
-      "sourceRefs": [
-        {"type": "wetsartikel", "title": "Wet Rv", "section": "CL-2026-011", "url": "https://wetten.overheid.nl/BWBR0001827/2026-01-01", "bwbId": "BWBR0001827", "bronVersie": "2026-01-01"}
-      ],
-      "conditions": {},
-      "outcome": {
-        "griffierecht": {
-          "amount": null,
-          "currency": "EUR"
-        },
-        "category": "uc_classificatie",
-        "confidence": "deterministic",
-        "manualReviewRequired": false
-      },
-      "examples": [
-        {
-          "input": {
-            "regelId": "CL-2026-011"
-          }
-        }
-      ]
-    },
-    {
-      "ruleId": "CL-2026-012",
-      "name": "Cassatie — Hoge Raad",
-      "priority": 200,
-      "legalStatus": "wettelijk",
-      "sourceRefs": [
-        {"type": "wetsartikel", "title": "Wet Rv", "section": "CL-2026-012", "url": "https://wetten.overheid.nl/BWBR0001827/2026-01-01", "bwbId": "BWBR0001827", "bronVersie": "2026-01-01"}
-      ],
-      "conditions": {},
-      "outcome": {
-        "griffierecht": {
-          "amount": null,
-          "currency": "EUR"
-        },
-        "category": "uc_classificatie",
-        "confidence": "deterministic",
-        "manualReviewRequired": false
-      },
-      "examples": [
-        {
-          "input": {
-            "regelId": "CL-2026-012"
-          }
-        }
-      ]
-    },
-    {
-      "ruleId": "CL-2026-013",
-      "name": "Kort geding — voorzieningenrechter",
-      "priority": 200,
-      "legalStatus": "wettelijk",
-      "sourceRefs": [
-        {"type": "wetsartikel", "title": "Wet Rv", "section": "CL-2026-013", "url": "https://wetten.overheid.nl/BWBR0001827/2026-01-01", "bwbId": "BWBR0001827", "bronVersie": "2026-01-01"}
-      ],
-      "conditions": {},
-      "outcome": {
-        "griffierecht": {
-          "amount": null,
-          "currency": "EUR"
-        },
-        "category": "uc_classificatie",
-        "confidence": "deterministic",
-        "manualReviewRequired": false
-      },
-      "examples": [
-        {
-          "input": {
-            "regelId": "CL-2026-013"
-          }
-        }
-      ]
-    },
-    {
-      "ruleId": "CL-2026-014",
-      "name": "Kanton — gedaagde betaalt geen griffierecht",
-      "priority": 200,
-      "legalStatus": "wettelijk",
-      "sourceRefs": [
-        {"type": "wetsartikel", "title": "Wet Rv", "section": "CL-2026-014", "url": "https://wetten.overheid.nl/BWBR0001827/2026-01-01", "bwbId": "BWBR0001827", "bronVersie": "2026-01-01"}
-      ],
-      "conditions": {},
-      "outcome": {
-        "griffierecht": {
-          "amount": null,
-          "currency": "EUR"
-        },
-        "category": "uc_classificatie",
-        "confidence": "deterministic",
-        "manualReviewRequired": false
-      },
-      "examples": [
-        {
-          "input": {
-            "regelId": "CL-2026-014"
-          }
-        }
-      ]
-    },
-    {
-      "ruleId": "CL-2026-015",
-      "name": "Handel — gedaagde bij verweer griffierecht",
-      "priority": 200,
-      "legalStatus": "wettelijk",
-      "sourceRefs": [
-        {"type": "wetsartikel", "title": "Wet Rv", "section": "CL-2026-015", "url": "https://wetten.overheid.nl/BWBR0001827/2026-01-01", "bwbId": "BWBR0001827", "bronVersie": "2026-01-01"}
-      ],
-      "conditions": {},
-      "outcome": {
-        "griffierecht": {
-          "amount": null,
-          "currency": "EUR"
-        },
-        "category": "uc_classificatie",
-        "confidence": "deterministic",
-        "manualReviewRequired": false
-      },
-      "examples": [
-        {
-          "input": {
-            "regelId": "CL-2026-015"
-          }
-        }
-      ]
+        "zaakstroom": "onbepaald",
+        "category": "outside_narrow_pilot",
+        "confidence": "insufficient_evidence",
+        "manualReviewRequired": true,
+        "manualReviewReason": "Een bedrag boven 25.000 euro sluit bijzondere kantonbevoegdheden van artikel 93 onder c en d niet uit."
+      }
     }
   ],
   "scenarios": [
     {
       "id": "CL-SC-001",
-      "description": "Vordering €5.000 → kanton",
-      "input": {
-        "rechtsgebied": "civiel",
-        "zaakstroom": "handel",
-        "procedureType": "dagvaarding",
-        "vorderingWaarde": 5000,
-        "bijzondereCategorie": "geen",
-        "rol": "eiser",
-        "partijType": "natuurlijk_persoon",
-        "onvermogend": false,
-        "verweerStatus": "n.v.t."
-      },
-      "expected": {
-        "griffierecht": 0,
-        "category": "kanton_tot_25000",
-        "appliedRules": [
-          "CL-2026-001"
-        ]
-      }
+      "description": "Geldvordering van precies 25.000 euro valt binnen de smalle kantonpilot",
+      "input": {"vorderingType": "geldvordering", "vorderingWaarde": 25000, "bijzondereCategorie": "geen"},
+      "expected": {"category": "kanton_article_93a", "appliedRules": ["CL-2026-001"]}
     },
     {
       "id": "CL-SC-002",
-      "description": "Vordering €50.000 → handel",
-      "input": {
-        "rechtsgebied": "civiel",
-        "zaakstroom": "handel",
-        "procedureType": "dagvaarding",
-        "vorderingWaarde": 50000,
-        "bijzondereCategorie": "geen",
-        "rol": "eiser",
-        "partijType": "natuurlijk_persoon",
-        "onvermogend": false,
-        "verweerStatus": "n.v.t."
-      },
-      "expected": {
-        "griffierecht": 0,
-        "category": "handel_boven_25000",
-        "appliedRules": [
-          "CL-2026-002"
-        ]
-      }
+      "description": "Geldvordering boven 25.000 euro vereist controle op bijzondere kantonbevoegdheid",
+      "input": {"vorderingType": "geldvordering", "vorderingWaarde": 25000.01, "bijzondereCategorie": "geen"},
+      "expected": {"category": "outside_narrow_pilot", "appliedRules": ["CL-2026-003"]}
+    },
+    {
+      "id": "CL-SC-003",
+      "description": "Vordering van onbepaalde waarde vereist handmatige kwalificatie",
+      "input": {"vorderingType": "onbepaalde_waarde"},
+      "expected": {"category": "manual_value_assessment", "appliedRules": ["CL-2026-002"]}
     }
   ],
   "transitionRules": [],
   "metadata": {
     "juridischeContext": {
-      "wet": "Wet Rv",
-      "wetBwbrId": "BWBR0002534",
-      "wetVersieLaatstGecheckt": "2026-06-15",
-      "tariefVersie": "2026.1"
+      "wet": "Wetboek van Burgerlijke Rechtsvordering",
+      "wetBwbrId": "BWBR0001827",
+      "wetVersieLaatstGecheckt": "2026-08-28",
+      "scope": "Alleen artikel 93 onder a en b; overige bevoegdheidsgronden zijn uitgesloten."
     },
-    "bronverificatieDatum": "2026-06-15",
-    "acceptatieType": "full"
+    "bronverificatieDatum": "2026-08-28",
+    "acceptatieType": "draft"
   },
   "governanceLevel": "rijk",
   "approval": {
@@ -463,10 +120,10 @@
     "reviewer": "D. Landman (agent-executed human gate)",
     "role": "maker",
     "date": "2026-07-04",
-    "scope": "volledige regelset",
+    "scope": "smalle artikel 93-pilot",
     "limitations": [
       "Geen onafhankelijke juridische review",
-      "Zelf-geaccordeerd als PoC",
+      "Artikel 93 onder c en d zijn niet geautomatiseerd",
       "Niet geschikt voor productie zonder externe validatie"
     ]
   },

@@ -16,7 +16,15 @@ def valid_jrem(maturity="L1-poc", metadata=None, approval=None):
         "maturityLevel": maturity,
         "metadata": metadata or {"acceptatieType": "draft"},
         "approval": approval or {"type": "self"},
-        "rules": [],
+        "rules": [{
+            "ruleId": "R-1",
+            "conditions": {"type": "voorbeeld"},
+            "outcome": {"category": "voorbeeld", "confidence": "deterministic"},
+            "sourceRefs": [{
+                "type": "standaard", "title": "Bron", "section": "paragraaf 1",
+                "url": "https://example.test/source", "bronVersie": "2026.1",
+            }],
+        }],
     }
 
 
@@ -141,3 +149,36 @@ def test_template_version_mismatch_is_not_ready(tmp_path):
 
     assert result["ready"] is False
     assert any("komt niet overeen" in reason for reason in result["reasons"])
+
+
+def test_deterministic_rule_without_conditions_or_review_is_not_ready(tmp_path):
+    jrem = valid_jrem()
+    jrem["rules"][0]["conditions"] = {}
+    target = write_target(tmp_path, jrem, valid_template())
+
+    result = preflight.evaluate_target(tmp_path, target)
+
+    assert result["ready"] is False
+    assert result["blocking"] is False
+    assert any("deterministic rule(s) zonder uitvoerbare voorwaarden" in reason for reason in result["reasons"])
+
+
+def test_generic_null_outcome_is_not_ready_even_with_conditions(tmp_path):
+    jrem = valid_jrem()
+    jrem["rules"][0]["outcome"]["griffierecht"] = {"amount": None, "currency": "EUR"}
+    target = write_target(tmp_path, jrem, valid_template())
+
+    assert preflight.evaluate_target(tmp_path, target)["ready"] is False
+
+
+def test_unsafe_semantics_block_an_existing_l2_ruleset(tmp_path):
+    template = valid_template()
+    metadata = {
+        "acceptatieType": "full",
+        "juristAccordering": preflight.template_accordering(template),
+    }
+    jrem = valid_jrem(maturity="L2-pilot", metadata=metadata, approval={"type": "jurist"})
+    jrem["rules"][0]["conditions"] = {}
+    target = write_target(tmp_path, jrem, template)
+
+    assert preflight.evaluate_target(tmp_path, target)["blocking"] is True

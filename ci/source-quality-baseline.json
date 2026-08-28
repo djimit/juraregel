@@ -1,9 +1,7 @@
 {
   "use-cases/algoritmeregister/jrem/exports/algoritmeregister-2025.1.json": 20,
   "use-cases/api-registratie/jrem/exports/api-registratie-2025.1.json": 18,
-  "use-cases/basisregistraties/jrem/exports/basisregistraties-toegang-2025.1.json": 6,
   "use-cases/btw-tarieven/jrem/exports/btw-tarieven-2025.1.json": 10,
-  "use-cases/classificatie/jrem/exports/classificatie-zaak-intake-2026.1.json": 15,
   "use-cases/compliance-debt/jrem/exports/compliance-debt-2025.1.json": 8,
   "use-cases/data-overheid-dcat/jrem/exports/data-overheid-dcat-2025.1.json": 15,
   "use-cases/dpia-model/jrem/exports/dpia-model-2025.1.json": 30,

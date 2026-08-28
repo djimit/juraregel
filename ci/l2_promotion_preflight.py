@@ -162,6 +162,25 @@ def template_acceptance_status(template: dict, jrem: dict) -> tuple[str, str]:
     return validate_acceptance(data, require_extended=True)
 
 
+def semantic_readiness_reasons(jrem: dict) -> list[str]:
+    unsafe = [
+        rule.get("ruleId", "?")
+        for rule in jrem.get("rules", [])
+        if rule.get("outcome", {}).get("confidence") == "deterministic"
+        and not rule.get("outcome", {}).get("manualReviewRequired")
+        and (
+            not rule.get("conditions")
+            or (
+                "griffierecht" in rule.get("outcome", {})
+                and rule["outcome"]["griffierecht"].get("amount") is None
+            )
+        )
+    ]
+    return [
+        f"{len(unsafe)} deterministic rule(s) zonder uitvoerbare voorwaarden, betekenisvolle uitkomst of handmatige controle"
+    ] if unsafe else []
+
+
 def evaluate_target(root: Path, target: dict) -> dict:
     reasons = []
     blocking = False
@@ -193,6 +212,8 @@ def evaluate_target(root: Path, target: dict) -> dict:
     ]
     if source_issues:
         reasons.append(f"{len(source_issues)} source-quality issue(s)")
+    semantic_issues = semantic_readiness_reasons(jrem)
+    reasons.extend(semantic_issues)
 
     missing = missing_template_fields(template)
     if missing:
@@ -216,7 +237,7 @@ def evaluate_target(root: Path, target: dict) -> dict:
 
     maturity = jrem.get("maturityLevel", "")
     if maturity.startswith(("L2-", "L3-")):
-        if source_issues:
+        if source_issues or semantic_issues:
             blocking = True
         if (jrem.get("approval") or {}).get("type") == "self":
             reasons.append(f"JREM is self-approved at {maturity}")
