@@ -110,10 +110,12 @@
       "subject": "Duurzame toegankelijkheid en beheer over de informatielifecycle",
       "sourceRefs": [
         {"sourceId": "rijk-mjp-2026-2030", "section": "4.3 Generieke voorzieningen en 4.6 Archiefwet", "pages": "22-25", "relationType": "policy-context"},
-        {"sourceId": "rijk-mjp-2024-2025", "section": "1 Langetermijnperspectief", "pages": "6-11", "relationType": "historical-baseline"}
+        {"sourceId": "rijk-mjp-2024-2025", "section": "1 Langetermijnperspectief", "pages": "6-11", "relationType": "historical-baseline"},
+        {"sourceId": "nationaal-archief-duto-2024", "section": "Ontwerpstelsel modules 3-8: generiek, registreren, vernietigen, bewaren, migreren en ter beschikking stellen", "pages": "web", "relationType": "implementation-requirement"},
+        {"sourceId": "nationaal-archief-mdto", "section": "Norm voor vastleggen en uitwisselen van metagegevens", "pages": "web", "relationType": "metadata-requirement"}
       ],
-      "evidenceRequired": ["informatieclassificatie-en-bewaarbesluit", "vernietigings-en-overdrachtslog", "toegankelijkheidscontrole", "geteste-keten-voor-vinden-lakken-publiceren-en-archiveren"],
-      "falsifiedBy": ["informatie-niet-vindbaar-of-uitleesbaar", "bewaartermijn-zonder-uitvoering", "vernietiging-of-overdracht-niet-herleidbaar", "ketenstap-alleen-handmatig-en-ongecontroleerd"],
+      "evidenceRequired": ["informatieclassificatie-en-bewaarbesluit", "vernietigings-en-overdrachtslog", "toegankelijkheidscontrole", "geteste-keten-voor-vinden-lakken-publiceren-en-archiveren", "duto-contextvertaling", "mdto-conforme-metadata-export"],
+      "falsifiedBy": ["informatie-niet-vindbaar-of-uitleesbaar", "bewaartermijn-zonder-uitvoering", "vernietiging-of-overdracht-niet-herleidbaar", "ketenstap-alleen-handmatig-en-ongecontroleerd", "metadata-zonder-herkomst-versie-of-lifecycle-relatie"],
       "prohibitedInference": "Een DMS, laktool of archiefvoorziening bewijst duurzame toegankelijkheid of rechtmatige lifecycle-uitvoering."
     }
   ]

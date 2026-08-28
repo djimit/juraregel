@@ -1,0 +1,39 @@
+{
+  "profileVersion": "2026.1",
+  "verifiedOn": "2026-08-28",
+  "sources": [
+    {
+      "id": "EU-AI-ACT",
+      "class": "binding-law",
+      "title": "Regulation (EU) 2024/1689 (AI Act)",
+      "version": "2024-06-13",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1689"
+    },
+    {
+      "id": "ALGORITMEKADER-2.5",
+      "class": "authoritative-implementation-guidance",
+      "title": "Algoritmekader versie 2.5",
+      "version": "2026-03-24",
+      "url": "https://algoritmes.overheid.nl/algoritmekader/over-het-algoritmekader/over-het-algoritmekader/"
+    },
+    {
+      "id": "ALGORITMEREGISTER-BZK-01",
+      "class": "authoritative-policy",
+      "title": "Impactvolle algoritmes en hoog-risico-AI-systemen staan in het Nederlandse Algoritmeregister",
+      "version": "2026-03-24",
+      "url": "https://algoritmes.overheid.nl/algoritmekader/voldoen-aan-wetten-en-regels/vereisten/bzk-01-algoritmeregister/"
+    },
+    {
+      "id": "IAMA-2026",
+      "class": "implementation-method",
+      "title": "Impact Assessment Mensenrechten en Algoritmes",
+      "version": "2026-02-17",
+      "url": "https://algoritmes.overheid.nl/algoritmekader/voldoen-aan-wetten-en-regels/hulpmiddelen/IAMA/index.html"
+    }
+  ],
+  "limitations": [
+    "De AI-verordening is de juridische grondslag; het Algoritmekader en IAMA zijn implementatie- en assessmenthulpmiddelen.",
+    "Het Algoritmekader is niet volledig en sectorspecifieke toepasselijkheid vereist afzonderlijke juridische beoordeling.",
+    "Een ingevuld IAMA of een registerpublicatie bewijst niet zelfstandig rechtmatigheid of compliance."
+  ]
+}

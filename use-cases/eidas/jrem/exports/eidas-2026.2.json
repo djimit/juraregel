@@ -72,7 +72,7 @@
       "ruleId": "EID-008",
       "name": "EUDI-wallet productie — verplicht eind 2026",
       "priority": 500,
-      "sourceRefs": [{"type": "wet", "title": "eIDAS 2.0 Verordening (EU) 2024/1183 — Art. 6a", "section": "European Digital Identity Wallet", "url": "https://eur-lex.europa.eu/eli/reg/2024/1183"}],
+      "sourceRefs": [{"type": "wet", "title": "eIDAS 2.0 Verordening (EU) 2024/1183 — Art. 6a", "section": "European Digital Identity Wallet", "url": "https://eur-lex.europa.eu/eli/reg/2024/1183", "bronVersie": "2024-04-11", "bronDatum": "2024-04-11"}, {"type": "standaard", "title": "EUDI Wallet Architecture and Reference Framework v3.0.0", "section": "Chapters 4-7 and Annex 2: ecosystem, lifecycle, architecture, certification and high-level requirements", "url": "https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/releases/tag/v3.0.0", "bronVersie": "2026-07-21", "bronDatum": "2026-07-21"}],
       "conditions": {"vertrouwensdienst": "eudiwallet", "walletStatus": "productie"},
       "outcome": {"compliant": true, "category": "eidas_wallet", "confidence": "deterministic", "deadline": "2026-12-01", "evidenceRequired": "Wallet in productie conform EN 419241 + ISO 18013-5", "article": "eIDAS 2.0 Art. 6a"}
     },
@@ -264,7 +264,7 @@
       "ruleId": "EID-032",
       "name": "Implementing Acts — technische specificaties wallet",
       "priority": 250,
-      "sourceRefs": [{"type": "regeling", "title": "Implementing Regulation (EU) 2024/2977", "section": "Wallet technische specificaties", "url": "https://eur-lex.europa.eu/eli/reg_impl/2024/2977"}],
+      "sourceRefs": [{"type": "regeling", "title": "Implementing Regulation (EU) 2024/2977", "section": "Wallet technische specificaties", "url": "https://eur-lex.europa.eu/eli/reg_impl/2024/2977", "bronVersie": "2024-11-28", "bronDatum": "2024-11-28"}, {"type": "standaard", "title": "EUDI Wallet Architecture and Reference Framework v3.0.0", "section": "Release 3.0.0 alignment with amended implementing regulations and functional conformance", "url": "https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/releases/tag/v3.0.0", "bronVersie": "2026-07-21", "bronDatum": "2026-07-21"}],
       "conditions": {"vertrouwensdienst": "eudiwallet"},
       "outcome": {"compliant": true, "category": "eidas_implementing", "confidence": "deterministic", "deadline": "2026-12-01", "evidenceRequired": "Wallet voldoen aan Implementing Regulation 2024/2977", "article": "Implementing Regulation (EU) 2024/2977"}
     }

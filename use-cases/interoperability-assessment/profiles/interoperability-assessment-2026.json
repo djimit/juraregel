@@ -1,0 +1,48 @@
+{
+  "profileId": "eu-interoperability-assessment",
+  "version": "2026.1",
+  "interpretationStatus": "non-binding-evidence-profile",
+  "disclaimer": "Niet-scorend werkprofiel; het bepaalt geen toepasselijkheid en publiceert geen rapport namens een organisatie.",
+  "aspects": [
+    {
+      "aspectId": "IOPA-01",
+      "subject": "Toepasselijkheid en afbakening",
+      "sourceRefs": [
+        {"sourceId": "EU-INTEROPERABLE-EUROPE-ACT", "section": "Article 3(1) and Article 2"},
+        {"sourceId": "EU-INTEROPERABILITY-ASSESSMENT-GUIDELINES", "section": "Chapters 1 and 2"}
+      ],
+      "evidenceRequired": ["bevoegde-organisatie", "voorgenomen-bindende-eis", "betrokken-trans-europese-dienst", "grensoverschrijdend-effect"],
+      "prohibitedInference": "Een digitale of grensoverschrijdende component bewijst op zichzelf niet dat artikel 3 van toepassing is."
+    },
+    {
+      "aspectId": "IOPA-02",
+      "subject": "Effecten en betrokkenen",
+      "sourceRefs": [
+        {"sourceId": "EU-INTEROPERABLE-EUROPE-ACT", "section": "Article 3(2)(a)-(b) and Annex"},
+        {"sourceId": "EU-INTEROPERABILITY-ASSESSMENT-GUIDELINES", "section": "Chapter 3"}
+      ],
+      "evidenceRequired": ["juridische-effectanalyse", "organisatorische-effectanalyse", "semantische-effectanalyse", "technische-effectanalyse", "stakeholderconsultatie"],
+      "prohibitedInference": "Een checklist zonder onderliggende bronnen en consultatie bewijst geen volledige effectbeoordeling."
+    },
+    {
+      "aspectId": "IOPA-03",
+      "subject": "Oplossingen, barrières en hergebruik",
+      "sourceRefs": [
+        {"sourceId": "EU-INTEROPERABLE-EUROPE-ACT", "section": "Articles 3(2)(c), 4 and 7; Annex"},
+        {"sourceId": "EU-INTEROPERABILITY-ASSESSMENT-TOOLBOX", "section": "Assessment tools, vocabulary and solutions"}
+      ],
+      "evidenceRequired": ["oplossingencatalogusonderzoek", "hergebruikafweging", "resterende-barrieres", "machine-interface-afweging"],
+      "prohibitedInference": "Vermelding in een catalogus bewijst niet dat een oplossing passend, veilig of aanbevolen is."
+    },
+    {
+      "aspectId": "IOPA-04",
+      "subject": "Rapportage en publicatie",
+      "sourceRefs": [
+        {"sourceId": "EU-INTEROPERABLE-EUROPE-ACT", "section": "Article 3(2) and Annex"},
+        {"sourceId": "EU-INTEROPERABILITY-ASSESSMENT-GUIDELINES", "section": "Chapters 3 and 4"}
+      ],
+      "evidenceRequired": ["machineleesbaar-conceptrapport", "bron-en-besluittrace", "beveiligings-en-uitzonderingstoets", "expliciete-menselijke-goedkeuring"],
+      "prohibitedInference": "Een gegenereerd rapport mag niet zonder bevoegde menselijke goedkeuring als organisatiebesluit worden gepubliceerd."
+    }
+  ]
+}

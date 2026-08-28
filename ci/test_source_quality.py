@@ -15,3 +15,18 @@ def test_internal_rule_id_is_not_a_legal_anchor():
     issues = issues_for_rule(rule, {})
     assert any("exact legal anchor" in issue for issue in issues)
     assert any("BWB/CELEX/ELI" in issue for issue in issues)
+
+
+def test_canonical_eli_and_bwb_urls_are_reproducible_legal_identifiers():
+    for url in (
+        "https://eur-lex.europa.eu/eli/reg/2024/1689",
+        "https://wetten.overheid.nl/BWBR0045754/2024-01-01",
+    ):
+        rule = {"ruleId": "R-1", "sourceRefs": [{
+            "type": "wet",
+            "title": "Wet",
+            "section": "Artikel 1",
+            "url": url,
+            "bronDatum": "2024-01-01",
+        }]}
+        assert issues_for_rule(rule, {}) == []

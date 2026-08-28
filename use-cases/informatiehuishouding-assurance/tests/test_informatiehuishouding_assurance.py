@@ -30,11 +30,13 @@ def test_sources_are_versioned_and_current_policy_replaces_historical_baseline()
     register = load("sources/source-register.json")
     sources = {item["sourceId"]: item for item in register["sources"]}
 
-    assert len(sources) == 5
+    assert len(sources) == 7
     assert sources["rijk-mjp-2024-2025"]["status"] == "superseded"
     assert sources["rijk-mjp-2026-2030"]["status"] == "current"
     assert all(len(item["sha256"]) == 64 for item in sources.values())
     assert all(item["url"].startswith("https://") for item in sources.values())
+    assert sources["nationaal-archief-duto-2024"]["class"] == "authoritative-implementation-framework"
+    assert sources["nationaal-archief-mdto"]["class"] == "authoritative-metadata-standard"
 
 
 def test_profile_is_anchored_non_scoring_and_fails_closed_without_evidence():
@@ -63,3 +65,14 @@ def test_profile_is_anchored_non_scoring_and_fails_closed_without_evidence():
     )
     assert result["status"] == "evidence-incomplete"
     assert result["incompleteAspects"] == [item["aspectId"] for item in profile["aspects"]]
+
+
+def test_lifecycle_aspect_uses_duto_and_mdto_without_claiming_compliance():
+    profile = load("profiles/rijk-ihh-2026.json")
+    lifecycle = next(item for item in profile["aspects"] if item["aspectId"] == "rijk-ihh-2026.10")
+    source_ids = {item["sourceId"] for item in lifecycle["sourceRefs"]}
+
+    assert {"nationaal-archief-duto-2024", "nationaal-archief-mdto"} <= source_ids
+    assert "duto-contextvertaling" in lifecycle["evidenceRequired"]
+    assert "mdto-conforme-metadata-export" in lifecycle["evidenceRequired"]
+    assert "bewijst" in lifecycle["prohibitedInference"]

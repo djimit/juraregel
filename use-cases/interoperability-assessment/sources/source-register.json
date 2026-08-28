@@ -1,0 +1,32 @@
+{
+  "profileVersion": "2026.1",
+  "verifiedOn": "2026-08-28",
+  "sources": [
+    {
+      "id": "EU-INTEROPERABLE-EUROPE-ACT",
+      "class": "binding-law",
+      "title": "Regulation (EU) 2024/903 (Interoperable Europe Act)",
+      "version": "2024-03-13",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/903"
+    },
+    {
+      "id": "EU-INTEROPERABILITY-ASSESSMENT-GUIDELINES",
+      "class": "authoritative-implementation-guidance",
+      "title": "Guidelines for interoperability assessments",
+      "version": "2024-12",
+      "url": "https://interoperable-europe.ec.europa.eu/collection/assessments/assessment-guidelines"
+    },
+    {
+      "id": "EU-INTEROPERABILITY-ASSESSMENT-TOOLBOX",
+      "class": "authoritative-living-toolbox",
+      "title": "Assessment Toolbox",
+      "retrievedOn": "2026-08-28",
+      "url": "https://interoperable-europe.ec.europa.eu/collection/assessments/assessment-toolbox"
+    }
+  ],
+  "limitations": [
+    "Alleen Verordening (EU) 2024/903 is hier een bindende rechtsbron; richtsnoeren en toolbox ondersteunen de uitvoering.",
+    "De toolbox is een levende bron en moet voor gebruik opnieuw op versie en beschikbaarheid worden gecontroleerd.",
+    "Toepasselijkheid van artikel 3 vereist een afzonderlijke beoordeling van de organisatie, de bindende eis en het grensoverschrijdende effect."
+  ]
+}

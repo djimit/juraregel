@@ -1,0 +1,33 @@
+{
+  "profileVersion": "2026.3",
+  "verifiedOn": "2026-08-28",
+  "sources": [
+    {
+      "id": "EIDAS-2024-1183",
+      "class": "binding-law",
+      "title": "Regulation (EU) 2024/1183 establishing the European Digital Identity Framework",
+      "version": "2024-04-11",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1183"
+    },
+    {
+      "id": "EUDI-ARF-3.0.0",
+      "class": "authoritative-technical-framework",
+      "title": "EUDI Wallet Architecture and Reference Framework",
+      "version": "2026-07-21",
+      "release": "3.0.0",
+      "url": "https://github.com/eu-digital-identity-wallet/eudi-doc-architecture-and-reference-framework/releases/tag/v3.0.0"
+    },
+    {
+      "id": "EUDI-TECHNICAL-SPECIFICATIONS",
+      "class": "authoritative-technical-guidance",
+      "title": "EU Digital Identity Wallet Technical Specifications",
+      "retrievedOn": "2026-08-28",
+      "url": "https://ec.europa.eu/digital-building-blocks/sites/spaces/EUDIGITALIDENTITYWALLET/pages/869793973/Technical%2BSpecifications"
+    }
+  ],
+  "limitations": [
+    "Alleen de verordening en vastgestelde uitvoerings- en gedelegeerde handelingen zijn bindend.",
+    "De ARF en technische specificaties ondersteunen architectuur- en conformiteitsbewijs maar bewijzen geen juridische compliance.",
+    "Een levende specificatie moet op release, commit of publicatiedatum worden vastgezet voordat zij als bewijs wordt gebruikt."
+  ]
+}

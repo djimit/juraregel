@@ -1,0 +1,24 @@
+{
+  "profileId": "european-case-law-evidence",
+  "version": "2026.1",
+  "interpretationStatus": "non-binding-evidence-profile",
+  "disclaimer": "Niet-scorend bronprofiel; geen geautomatiseerde kwalificatie van gezag, precedentwerking of toepasselijkheid.",
+  "requiredRecord": [
+    "court",
+    "caseIdentifier",
+    "ecliOrApplicationNumber",
+    "decisionDate",
+    "decisionStatus",
+    "officialLanguage",
+    "paragraphOrSection",
+    "sourceUrl",
+    "retrievedOn",
+    "translationStatus"
+  ],
+  "sourceRouting": [
+    {"jurisdiction": "NL", "sourceId": "RECHTSPRAAK-NL", "identifier": "ECLI"},
+    {"jurisdiction": "EU", "sourceId": "CJEU-INFOCURIA", "identifier": "case number and ECLI"},
+    {"jurisdiction": "ECHR", "sourceId": "ECHR-HUDOC", "identifier": "application number or ECLI"}
+  ],
+  "prohibitedInference": "Geen juridische regel, precedentwerking of Nederlandse toepasbaarheid afleiden zonder inhoudelijke menselijke beoordeling van beslissing, context en status."
+}

@@ -1,0 +1,32 @@
+{
+  "profileVersion": "2026.1",
+  "verifiedOn": "2026-08-28",
+  "sources": [
+    {
+      "id": "RECHTSPRAAK-NL",
+      "class": "primary-case-law-database",
+      "title": "Rechtspraak.nl uitspraken en ECLI-register",
+      "retrievedOn": "2026-08-28",
+      "url": "https://www.rechtspraak.nl/Uitspraken"
+    },
+    {
+      "id": "CJEU-INFOCURIA",
+      "class": "primary-case-law-database",
+      "title": "InfoCuria case-law database",
+      "retrievedOn": "2026-08-28",
+      "url": "https://infocuria.curia.europa.eu/tabs/advanced_search"
+    },
+    {
+      "id": "ECHR-HUDOC",
+      "class": "primary-case-law-database",
+      "title": "HUDOC database",
+      "retrievedOn": "2026-08-28",
+      "url": "https://www.echr.coe.int/en/hudoc-database"
+    }
+  ],
+  "limitations": [
+    "Zoekresultaten zijn alleen discovery-evidence; de geïdentificeerde beslissing en relevante overwegingen moeten worden vastgelegd.",
+    "Vertalingen en samenvattingen vervangen de officiële taalversie niet en moeten als afgeleid worden gemarkeerd.",
+    "Een uitspraak bewijst zonder status-, context- en toepasselijkheidstoets geen algemene regel voor een Nederlandse zaak."
+  ]
+}
